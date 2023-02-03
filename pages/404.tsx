@@ -5,10 +5,13 @@ export default function NotFound() {
   return (
     <BasicLayout>
       <div className="flex-1 grid place-content-center bg-black/90 text-center">
-        <h1 className="text-red-600 text-4xl sm:text-6xl font-serif uppercase">
+        <h1 className="text-red-600 text-4xl sm:text-6xl font-serif uppercase you-died-animation">
           You Got Lost
         </h1>
-        <Link href="/" className="text-red-500 font-display font-medium">
+        <Link
+          href="/"
+          className="text-red-500 font-display font-medium you-died-animation-late"
+        >
           Return back to 13vaults
         </Link>
       </div>

@@ -38,3 +38,52 @@
     text-align-last: unset;
   }
 }
+
+.you-died-animation {
+  animation-name: you-died-animation;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+}
+
+.you-died-animation-late {
+  animation-name: you-died-animation-late;
+  animation-duration: 20s;
+  animation-iteration-count: 1;
+}
+
+@keyframes you-died-animation {
+  from {
+    opacity: 0;
+    text-shadow: 0 0 0.6em orange;
+  }
+
+  15% {
+    opacity: 1;
+    text-shadow: 0 0 1em orangered;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes you-died-animation-late {
+  from {
+    opacity: 0;
+    text-shadow: 0 0 0.6em orange;
+  }
+
+  5% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+    text-shadow: 0 0 1em orangered;
+  }
+
+  to {
+    opacity: 1;
+    text-shadow: 0 0 1em orangered;
+  }
+}
