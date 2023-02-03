@@ -9,3 +9,15 @@
     background: url(/images/paper-texture.webp);
   }
 }
+
+@layer components {
+  .home-hero {
+    background-image: linear-gradient(
+        to top,
+        rgb(0 0 0 / 90%) 25%,
+        rgb(0 0 0 / 0%)
+      ),
+      linear-gradient(to top, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+      url(/images/camelot-spire-butteredbap.webp);
+  }
+}
