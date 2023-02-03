@@ -10,7 +10,7 @@ const bottomNavItems = [
       "bg-teal-400/25 hover:bg-teal-400/50 border-teal-400/25 hover:border-teal-400/50",
     large: true,
     body: "All the information you need to play 13th Age games. From combat rules, character creation, to monster stats—it's all here.",
-    href: "/vaults/rules",
+    href: "/compendium/rules",
   },
   {
     title: "Encounter Builder",
@@ -44,7 +44,7 @@ export default function VaultsAppHome() {
           <div className="grid place-content-center">
             <Link
               className="flex gap-3 focus:bg-emerald-500 hover:bg-emerald-500 bg-emerald-600 rounded pl-8 pr-12 py-3 shadow transition-colors font-display font-semibold items-center"
-              href="/vaults/classes/savage"
+              href="/compendium/classes/savage"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

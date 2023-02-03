@@ -44,7 +44,7 @@ export default function BasicLayout({
           </div>
         </div>
       </header>
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 flex flex-col">{children}</main>
       <footer>
         <div className="bg-zinc-900 text-white">
           <div className="p-4 flex gap-2 items-center justify-center">

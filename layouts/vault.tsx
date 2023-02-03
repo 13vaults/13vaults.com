@@ -4,15 +4,12 @@ import { useRouter } from "next/router";
 import BasicLayout from "./basic";
 
 function createPaths(path: string) {
-  const linkPath = filter(
-    path.split("/"),
-    (str) => str !== "" && str !== "vaults"
-  );
+  const linkPath = filter(path.split("/"), (str) => str !== "");
 
   return map(linkPath, (path, i) => {
     return {
       breadcrumb: capitalize(path),
-      href: "/vaults/" + linkPath.slice(0, i + 1).join("/"),
+      href: "/" + linkPath.slice(0, i + 1).join("/"),
     };
   });
 }
