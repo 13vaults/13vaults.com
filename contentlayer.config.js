@@ -3,7 +3,7 @@ import remarkGfm from "remark-gfm";
 
 const Monster = defineDocumentType(() => ({
   name: "Npc",
-  filePathPattern: "monsters/*.yml",
+  filePathPattern: "1e/monsters/*.yml",
   contentType: "data",
   fields: {
     name: { type: "string", required: true },
@@ -20,7 +20,7 @@ const Monster = defineDocumentType(() => ({
 
 const ClassItem = defineDocumentType(() => ({
   name: "ClassItem",
-  filePathPattern: "classes/*.mdx",
+  filePathPattern: "1e/classes/*.mdx",
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
