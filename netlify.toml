@@ -2,7 +2,7 @@
 # all contexts unless otherwise overridden by more specific contexts.
 [build]
   command = "next build && next export"
-  publish = "out"
+  publish = ".next"
 
 [[plugins]]
   # Installs the Lighthouse Build Plugin for all deploy contexts
