@@ -65,7 +65,7 @@ export default function BasicLayout({
                 studios.
               </p>
               <p>
-                <a href="https://codeberg.org/sean/13vaults">
+                <a href="https://github.com/sean-clayton/13vaults">
                   13Vaults.com source code is available here.
                 </a>
               </p>
