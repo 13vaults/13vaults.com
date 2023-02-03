@@ -69,7 +69,7 @@ export default function VaultsAppHome() {
       </section>
       <section className="bg-[rgb(27,10,0)] text-white">
         <nav className="md:max-w-6xl mx-auto">
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-1 p-4">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-1 p-1">
             {map(bottomNavItems, (item) => (
               <li
                 key={item.title}
