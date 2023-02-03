@@ -1,0 +1,9 @@
+# Settings in the [build] context are global and are applied to
+# all contexts unless otherwise overridden by more specific contexts.
+[build]
+  publish = "out/"
+  command = "pnpm build"
+
+[[plugins]]
+  # Installs the Lighthouse Build Plugin for all deploy contexts
+  package = "@netlify/plugin-lighthouse"
