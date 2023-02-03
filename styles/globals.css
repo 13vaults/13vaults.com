@@ -14,10 +14,27 @@
   .home-hero {
     background-image: linear-gradient(
         to top,
-        rgb(0 0 0 / 90%) 25%,
-        rgb(0 0 0 / 0%)
+        rgb(27, 10, 0) 10%,
+        rgb(58 23 3 / 50%)
       ),
-      linear-gradient(to top, rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
       url(/images/camelot-spire-butteredbap.webp);
+  }
+}
+
+@layer utilities {
+  .text-align-last-center {
+    text-align-last: center;
+  }
+  .text-align-last-right {
+    text-align-last: right;
+  }
+  .text-align-last-left {
+    text-align-last: left;
+  }
+  .text-align-last-justify {
+    text-align-last: justify;
+  }
+  .text-align-last-unset {
+    text-align-last: unset;
   }
 }

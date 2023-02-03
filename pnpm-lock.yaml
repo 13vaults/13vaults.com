@@ -11,12 +11,14 @@ specifiers:
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
   autoprefixer: ^10.4.13
+  clsx: ^1.2.1
   contentlayer: ^0.3.0
   eslint: 8.33.0
   eslint-config-next: 13.1.6
   lodash: ^4.17.21
   next: 13.1.6
   next-contentlayer: ^0.3.0
+  next-plausible: ^3.7.1
   postcss: ^8.4.21
   react: 18.2.0
   react-dom: 18.2.0
@@ -30,12 +32,14 @@ dependencies:
   '@types/node': 18.11.18
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
+  clsx: 1.2.1
   contentlayer: 0.3.0
   eslint: 8.33.0
   eslint-config-next: 13.1.6_4vsywjlpuriuw3tl5oq6zy5a64
   lodash: 4.17.21
   next: 13.1.6_biqbaboplfbrettd7655fr4n2y
   next-contentlayer: 0.3.0_3vryta7zmbcsw4rrqf4axjqggm
+  next-plausible: 3.7.1_3vryta7zmbcsw4rrqf4axjqggm
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   typescript: 4.9.5
@@ -1411,6 +1415,11 @@ packages:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
+    dev: false
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert/2.0.1:
@@ -3469,6 +3478,18 @@ packages:
       - '@effect-ts/otel-node'
       - markdown-wasm
       - supports-color
+    dev: false
+
+  /next-plausible/3.7.1_3vryta7zmbcsw4rrqf4axjqggm:
+    resolution: {integrity: sha512-I4WjbuXPfQ3ijbzOC1lv1GNx6TTV0ZevR6YYs5vGZIyMz0z4LuN68x08a+ag2XNb1yy9dA1NkwV2hPzbfx8Gtw==}
+    peerDependencies:
+      next: ^11.1.0 || ^12.0.0 || ^13.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      next: 13.1.6_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /next/13.1.6_biqbaboplfbrettd7655fr4n2y:

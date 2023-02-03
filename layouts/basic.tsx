@@ -46,16 +46,30 @@ export default function BasicLayout({
       </header>
       <main className="flex-1">{children}</main>
       <footer>
-        <div className="bg-sky-600 p-8 text-white">
-          <div className="mx-auto xl:max-w-7xl max-w-6xl">
-            <h1 className="text-xl font-black">13 Vaults</h1>
-            <div>Cool footer content</div>
-          </div>
-        </div>
-        <div className="bg-rose-600 p-8 text-white">
-          <div className="mx-auto xl:max-w-7xl max-w-6xl">
-            <h1 className="text-xl font-black">13 Vaults</h1>
-            <div>Cool footer content</div>
+        <div className="bg-zinc-900 text-white">
+          <div className="p-4 flex gap-2 items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              className="h-6 w-6"
+              viewBox="0 0 34 34"
+            >
+              <path
+                fillRule="evenodd"
+                d="M12.3 34 4.5 11.4 5 8.1 3.2 4.9 0 0l11.4 4.9 6 21.6.4 2.6.5-2.6 6-21.6L21 1.6h9.8L34 5l-3 6.5L23.5 34H12.3Z"
+              />
+            </svg>
+            <div className="text-xs text-white/50 font-display font-medium">
+              <p>
+                13Vaults.com is not affilliated with Pelgrane Press or Fire Opal
+                studios.
+              </p>
+              <p>
+                <a href="https://codeberg.org/sean/13vaults">
+                  13Vaults.com source code is available here.
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </footer>
