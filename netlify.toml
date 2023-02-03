@@ -1,8 +1,8 @@
 # Settings in the [build] context are global and are applied to
 # all contexts unless otherwise overridden by more specific contexts.
 [build]
-  publish = "out/"
-  command = "pnpm build"
+  command = "next build && next export"
+  publish = "out"
 
 [[plugins]]
   # Installs the Lighthouse Build Plugin for all deploy contexts
