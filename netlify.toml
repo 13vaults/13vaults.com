@@ -2,7 +2,8 @@
 # all contexts unless otherwise overridden by more specific contexts.
 [build]
   command = "next build && next export"
-  publish = ".next"
+  publish = "out"
+  environment = { NETLIFY_NEXT_PLUGIN_SKIP = "true" }
 
 [[plugins]]
   # Installs the Lighthouse Build Plugin for all deploy contexts
