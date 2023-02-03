@@ -44,7 +44,7 @@ export default function BasicLayout({
           </div>
         </div>
       </header>
-      <div className="flex-1">{children}</div>
+      <main className="flex-1">{children}</main>
       <footer>
         <div className="bg-sky-600 p-8 text-white">
           <div className="mx-auto xl:max-w-7xl max-w-6xl">

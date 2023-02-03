@@ -1,40 +1,19 @@
 import { allClassItems, ClassItem } from "contentlayer/generated";
 import { flow, find, map, get } from "lodash";
-import { useMDXComponent } from "next-contentlayer/hooks";
-import VaultLayout from "@/layouts/vault";
-import * as Vault from "@/components/vault";
 import { GetStaticPropsResult, NextPageContext } from "next";
+import ContentLayerPage from "@/components/content-layer-page";
 
 interface ClassPageP {
   classItem: ClassItem;
 }
 
 export default function ClassPage({ classItem }: ClassPageP) {
-  const MDXContent = useMDXComponent(classItem.body.code);
   return (
-    <VaultLayout>
-      <hgroup className="not-prose">
-        <h1 className="my-0 font-serif font-bold text-4xl">
-          {classItem.title}
-        </h1>
-        <p className="my-0 font-display italic text-black/50">
-          {classItem.source}
-        </p>
-      </hgroup>
-      <Vault.Quote text={classItem.quote} source={classItem.quote_source} />
-      <p className="lead">{classItem.lead}</p>
-      <MDXContent
-        classItem={classItem}
-        components={{
-          Vault: Vault,
-          table: ({ children }) => (
-            <div className="overflow-auto">
-              <table>{children}</table>
-            </div>
-          ),
-        }}
-      />
-    </VaultLayout>
+    <ContentLayerPage
+      data={classItem}
+      primaryLabel={classItem.title}
+      secondaryLabel={classItem.source}
+    />
   );
 }
 

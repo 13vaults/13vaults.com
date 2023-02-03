@@ -18,6 +18,22 @@ const Monster = defineDocumentType(() => ({
   },
 }));
 
+const Ancestry = defineDocumentType(() => ({
+  name: "Ancestry",
+  filePathPattern: "1e/ancestries/*.mdx",
+  contentType: "mdx",
+  fields: {
+    name: { type: "string", required: true },
+    source: { type: "string", required: true },
+  },
+  computedFields: {
+    slug: {
+      type: "string",
+      resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
+    },
+  },
+}));
+
 const ClassItem = defineDocumentType(() => ({
   name: "ClassItem",
   filePathPattern: "1e/classes/*.mdx",
@@ -39,7 +55,7 @@ const ClassItem = defineDocumentType(() => ({
 
 const contentLayerConfig = makeSource({
   contentDirPath: "vaults",
-  documentTypes: [ClassItem, Monster],
+  documentTypes: [ClassItem, Monster, Ancestry],
   mdx: {
     remarkPlugins: [remarkGfm],
   },

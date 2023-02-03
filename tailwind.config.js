@@ -13,6 +13,7 @@ module.exports = {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
         display: ["Barlow Semi Condensed", ...defaultTheme.fontFamily.sans],
         serif: ["Vollkorn", ...defaultTheme.fontFamily.serif],
+        "display-serif": ["Vollkorn SC", ...defaultTheme.fontFamily.serif],
       },
     },
   },
