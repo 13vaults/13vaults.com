@@ -13,9 +13,9 @@ export default function VaultsAppHome() {
             <p>
               The 13 Vaults is an unofficial community-driven resource site for
               13th Age&mdash;a fun and exciting RPG that innovates on the
-              classic d20 system. Inside you'll find many resources and tools
-              for GMs and players alike, from class reference pages to character
-              guides and much more.
+              classic d20 system. Inside you&lsquo;ll find many resources and
+              tools for GMs and players alike, from class reference pages to
+              character guides and much more.
             </p>
           </div>
           <div className="grid place-content-center">
