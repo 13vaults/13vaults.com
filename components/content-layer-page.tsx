@@ -33,6 +33,7 @@ export default function ContentLayerPage({
           <figcaption>&ndash; {quote.cite}</figcaption>
         </figure>
       ) : null}
+      <hr className="my-8" />
       <Content
         data={data}
         components={{

@@ -38,7 +38,7 @@ const Monster = defineDocumentType(() => ({
   fields: {
     name: { type: "string", required: true },
     system: { type: "json", required: true },
-    items: { type: "list", of: { type: "json" }, required: true },
+    items: { type: "list", of: { type: "json" }, required: false },
   },
   computedFields: {
     slug: {
@@ -55,7 +55,7 @@ const Ancestry = defineDocumentType(() => ({
   fields: {
     name: { type: "string", required: true },
     source: { type: "string", required: true },
-    page_dress: { type: "nested", of: PageDress, required: true },
+    page_dress: { type: "nested", of: PageDress, required: false },
     page_nav: { type: "list", of: PageNav, required: false },
   },
   computedFields: {
