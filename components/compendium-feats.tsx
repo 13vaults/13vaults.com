@@ -1,7 +1,7 @@
 import { map } from "lodash";
 
 interface CompendiumFeat {
-  tier: "adventure" | "champion" | "epic";
+  tier: "adventurer" | "champion" | "epic";
   text: React.ReactNode;
 }
 
@@ -14,12 +14,12 @@ export default function CompendiumFeats({
   feats,
 }: CompendiumFeatsP): JSX.Element {
   const makeLabel = (feat: CompendiumFeat) => {
-    if (feat.tier === "adventure") return "Adventure Feat";
+    if (feat.tier === "adventurer") return "Adventurer Feat";
     if (feat.tier === "champion") return "Champion Feat";
     if (feat.tier === "epic") return "Epic Feat";
   };
   return (
-    <div className="not-prose">
+    <div className="not-prose my-5">
       <ol className="flex flex-col gap-2">
         {map(feats, (feat, i) => (
           <li key={i}>

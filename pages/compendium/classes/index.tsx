@@ -1,11 +1,14 @@
-import { allClassItems, ClassItem } from "contentlayer/generated";
-import { map } from "lodash";
+import { allClassItems } from "contentlayer/generated";
+import { map, pick } from "lodash";
 import { GetStaticPropsResult } from "next";
 import Link from "next/link";
 import CompendiumCategoryIndexLayout from "@/layouts/compendium-category-index";
 
 interface ClassesPageP {
-  classItems: ClassItem[];
+  classItems: {
+    slug: string;
+    name: string;
+  }[];
 }
 
 export default function AncestriesPage({ classItems }: ClassesPageP) {
@@ -29,7 +32,9 @@ export async function getStaticProps(): Promise<
 > {
   return {
     props: {
-      classItems: allClassItems,
+      classItems: map(allClassItems, (classItem) =>
+        pick(classItem, ["slug", "name"])
+      ),
     },
   };
 }

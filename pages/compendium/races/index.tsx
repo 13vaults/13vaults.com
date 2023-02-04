@@ -1,11 +1,14 @@
-import { allAncestries, Ancestry } from "contentlayer/generated";
-import { map } from "lodash";
+import { allAncestries } from "contentlayer/generated";
+import { map, pick } from "lodash";
 import { GetStaticPropsResult } from "next";
 import Link from "next/link";
 import CompendiumCategoryIndexLayout from "@/layouts/compendium-category-index";
 
 interface AncestriesPageP {
-  ancestries: Ancestry[];
+  ancestries: {
+    slug: string;
+    name: string;
+  }[];
 }
 
 export default function AncestriesPage({ ancestries }: AncestriesPageP) {
@@ -29,7 +32,9 @@ export async function getStaticProps(): Promise<
 > {
   return {
     props: {
-      ancestries: allAncestries,
+      ancestries: map(allAncestries, (ancestry) =>
+        pick(ancestry, ["slug", "name"])
+      ),
     },
   };
 }

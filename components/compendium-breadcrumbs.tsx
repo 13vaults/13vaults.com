@@ -1,4 +1,4 @@
-import { capitalize, filter, map } from "lodash";
+import { filter, map, startCase } from "lodash";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -7,7 +7,7 @@ function createPaths(path: string) {
 
   return map(linkPath, (path, i) => {
     return {
-      breadcrumb: capitalize(path),
+      breadcrumb: startCase(path),
       href: "/" + linkPath.slice(0, i + 1).join("/"),
     };
   });

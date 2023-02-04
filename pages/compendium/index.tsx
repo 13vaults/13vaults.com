@@ -13,11 +13,16 @@ export default function CompendiumCategoryIndexLayout(props: any) {
           <main>
             <ul>
               <li>
+                <Link href="/compendium/basic-rules">Basic Rules</Link>
+              </li>
+              <li>
                 <Link href="/compendium/races">Races</Link>
               </li>
               <li>
                 <Link href="/compendium/classes">Classes</Link>
               </li>
+              <li>Monsters</li>
+              <li>Magic Items</li>
             </ul>
           </main>
         </div>
