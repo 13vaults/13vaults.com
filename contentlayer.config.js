@@ -31,6 +31,22 @@ const PageDress = defineNestedType(() => ({
   },
 }));
 
+const RulesDocument = defineDocumentType(() => ({
+  name: "RulesDocument",
+  filePathPattern: "1e/rules/*.mdx",
+  contentType: "mdx",
+  fields: {
+    title: { type: "string", required: true },
+    source: { type: "string", required: true },
+  },
+  computedFields: {
+    slug: {
+      type: "string",
+      resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
+    },
+  },
+}));
+
 const Monster = defineDocumentType(() => ({
   name: "Npc",
   filePathPattern: "1e/monsters/*.yml",
@@ -86,7 +102,7 @@ const ClassItem = defineDocumentType(() => ({
 
 const contentLayerConfig = makeSource({
   contentDirPath: "content",
-  documentTypes: [ClassItem, Monster, Ancestry],
+  documentTypes: [ClassItem, Monster, Ancestry, RulesDocument],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeSlug],
