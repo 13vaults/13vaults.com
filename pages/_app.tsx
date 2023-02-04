@@ -18,7 +18,7 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
         <link
           rel="preload"
           as="script"
-          href="https://plausible.io/js/script.js"
+          href="https://www.13vaults.com/js/script.js"
         />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
