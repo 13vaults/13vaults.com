@@ -2,6 +2,7 @@ import * as Vault from "@/components/vault";
 import VaultLayout from "@/layouts/vault";
 import { get } from "lodash";
 import { useMDXComponent } from "next-contentlayer/hooks";
+import CompendiumFeats from "./compendium-feats";
 import VaultHeader from "./compendium-header";
 
 interface ContentLayerRendererP {
