@@ -66,7 +66,7 @@ export default function BasicLayout({
               </p>
               <p>
                 13Vaults.com is free and open source software.{" "}
-                <a href="https://github.com/sean-clayton/13vaults">
+                <a href="https://github.com/13vaults/13vaults.com">
                   The source code is available here.
                 </a>
               </p>
