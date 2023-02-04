@@ -1,5 +1,6 @@
 import * as Vault from "@/components/vault";
 import VaultLayout from "@/layouts/vault";
+import { get } from "lodash";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import VaultHeader from "./vault-header";
 
@@ -15,12 +16,22 @@ export default function ContentLayerPage({
   secondaryLabel,
 }: ContentLayerRendererP) {
   const Content = useMDXComponent(data.body.code);
+  const pageDress = get(data, "page_dress");
+  const quote = get(pageDress, "quote");
   return (
     <VaultLayout>
       <VaultHeader
         primaryLabel={primaryLabel}
         secondaryLabel={secondaryLabel}
       />
+      {quote ? (
+        <figure>
+          <blockquote>
+            <p>{quote.text}</p>
+          </blockquote>
+          <figcaption>&ndash; {quote.cite}</figcaption>
+        </figure>
+      ) : null}
       <Content
         data={data}
         components={{

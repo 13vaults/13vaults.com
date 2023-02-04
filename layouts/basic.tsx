@@ -62,11 +62,12 @@ export default function BasicLayout({
             <div className="text-xs text-white/50 font-display font-medium">
               <p>
                 13Vaults.com is not affilliated with Pelgrane Press or Fire Opal
-                studios.
+                Media.
               </p>
               <p>
+                13Vaults.com is free and open source software.{" "}
                 <a href="https://github.com/sean-clayton/13vaults">
-                  13Vaults.com source code is available here.
+                  The source code is available here.
                 </a>
               </p>
             </div>

@@ -1,5 +1,25 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import {
+  defineDocumentType,
+  makeSource,
+  defineNestedType,
+} from "contentlayer/source-files";
 import remarkGfm from "remark-gfm";
+
+const PageDressQuote = defineDocumentType(() => ({
+  name: "PageDressQuote",
+  fields: {
+    text: { type: "string", required: true },
+    cite: { type: "string", required: true },
+  },
+}));
+
+const PageDress = defineNestedType(() => ({
+  name: "PageDress",
+  fields: {
+    quote: { type: "nested", of: PageDressQuote, required: false },
+    lead: { type: "string", required: false },
+  },
+}));
 
 const Monster = defineDocumentType(() => ({
   name: "Npc",
@@ -25,6 +45,7 @@ const Ancestry = defineDocumentType(() => ({
   fields: {
     name: { type: "string", required: true },
     source: { type: "string", required: true },
+    page_dress: { type: "nested", of: PageDress, required: true },
   },
   computedFields: {
     slug: {
@@ -39,11 +60,9 @@ const ClassItem = defineDocumentType(() => ({
   filePathPattern: "1e/classes/*.mdx",
   contentType: "mdx",
   fields: {
-    title: { type: "string", required: true },
+    name: { type: "string", required: true },
     source: { type: "string", required: true },
-    quote: { type: "string", required: true },
-    quote_source: { type: "string", required: true },
-    lead: { type: "string", required: true },
+    page_dress: { type: "nested", of: PageDress, required: true },
   },
   computedFields: {
     slug: {

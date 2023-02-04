@@ -11,7 +11,7 @@ export default function ClassPage({ classItem }: ClassPageP) {
   return (
     <ContentLayerPage
       data={classItem}
-      primaryLabel={classItem.title}
+      primaryLabel={classItem.name}
       secondaryLabel={classItem.source}
     />
   );
