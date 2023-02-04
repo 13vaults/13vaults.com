@@ -86,9 +86,9 @@ export default function VaultsAppHome() {
                     )}
                     href={item.href}
                   >
-                    <h3 className="text-3xl font-display-serif font-semibold">
+                    <h2 className="text-3xl font-display-serif font-semibold">
                       {item.title}
-                    </h3>
+                    </h2>
                     <p className="text-sm leading-tight font-display text-justify text-align-last-center font-medium text-white/75">
                       {item.body}
                     </p>
@@ -100,9 +100,9 @@ export default function VaultsAppHome() {
                       "grid place-content-center rounded-sm border h-40 text-center px-8 opacity-60 transition-colors"
                     )}
                   >
-                    <h3 className="text-3xl font-display-serif font-semibold">
+                    <h2 className="text-3xl font-display-serif font-semibold">
                       {item.title}
-                    </h3>
+                    </h2>
                     <p className="text-sm leading-tight font-display text-justify text-align-last-center font-medium text-white/75">
                       {item.body}
                     </p>
