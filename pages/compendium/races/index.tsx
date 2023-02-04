@@ -16,7 +16,7 @@ export default function AncestriesPage({ ancestries }: AncestriesPageP) {
     <CompendiumCategoryIndexLayout>
       <ul>
         {map(ancestries, (ancestry) => (
-          <li>
+          <li key={ancestry.slug}>
             <Link href={`/compendium/races/${ancestry.slug}`}>
               {ancestry.name}
             </Link>

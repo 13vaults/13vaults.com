@@ -16,7 +16,7 @@ export default function AncestriesPage({ classItems }: ClassesPageP) {
     <CompendiumCategoryIndexLayout>
       <ul>
         {map(classItems, (classItem) => (
-          <li>
+          <li key={classItem.slug}>
             <Link href={`/compendium/classes/${classItem.slug}`}>
               {classItem.name}
             </Link>
