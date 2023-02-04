@@ -14,7 +14,6 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <html lang="en-us" />
         <link rel="shortcut icon" href="/favicon.svg" />
         <link
           rel="preload"
