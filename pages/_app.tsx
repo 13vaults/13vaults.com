@@ -15,11 +15,9 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <link rel="shortcut icon" href="/favicon.svg" />
-        <link
-          rel="preload"
-          as="script"
-          href="https://www.13vaults.com/js/script.js"
-        />
+        {process.env.NODE_ENV === "production" ? (
+          <link rel="preload" as="script" href="/js/script.js" />
+        ) : null}
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           rel="preload"
