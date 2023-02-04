@@ -4,8 +4,18 @@ import {
   defineNestedType,
 } from "contentlayer/source-files";
 import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
 
-const PageDressQuote = defineDocumentType(() => ({
+const PageNav = defineNestedType(() => ({
+  name: "PageNav",
+  fields: {
+    label: { type: "string", required: true },
+    id: { type: "string", required: true },
+    children: { type: "list", of: PageNav, required: false },
+  },
+}));
+
+const PageDressQuote = defineNestedType(() => ({
   name: "PageDressQuote",
   fields: {
     text: { type: "string", required: true },
@@ -46,6 +56,7 @@ const Ancestry = defineDocumentType(() => ({
     name: { type: "string", required: true },
     source: { type: "string", required: true },
     page_dress: { type: "nested", of: PageDress, required: true },
+    page_nav: { type: "list", of: PageNav, required: false },
   },
   computedFields: {
     slug: {
@@ -63,6 +74,7 @@ const ClassItem = defineDocumentType(() => ({
     name: { type: "string", required: true },
     source: { type: "string", required: true },
     page_dress: { type: "nested", of: PageDress, required: true },
+    page_nav: { type: "list", of: PageNav, required: false },
   },
   computedFields: {
     slug: {
@@ -73,10 +85,11 @@ const ClassItem = defineDocumentType(() => ({
 }));
 
 const contentLayerConfig = makeSource({
-  contentDirPath: "vaults",
+  contentDirPath: "content",
   documentTypes: [ClassItem, Monster, Ancestry],
   mdx: {
     remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeSlug],
   },
 });
 

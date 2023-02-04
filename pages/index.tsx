@@ -43,7 +43,7 @@ export default function VaultsAppHome() {
           </div>
           <div className="grid place-content-center">
             <Link
-              className="flex gap-3 focus:bg-emerald-500 hover:bg-emerald-500 bg-emerald-600 rounded pl-8 pr-12 py-3 shadow transition-colors font-display font-semibold items-center"
+              className="flex gap-3 focus:bg-teal-500 hover:bg-teal-500 bg-teal-600 border border-teal-400/50 hover:border-teal-400 rounded pl-8 pr-12 py-3 shadow transition-colors font-display font-semibold items-center"
               href="/compendium/classes/savage"
             >
               <svg
