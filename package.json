@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && next-export-optimize-images",
+    "build": "next build && next export && next-image-export-optimizer",
     "start": "next start",
     "lint": "next lint"
   },
@@ -33,7 +33,7 @@
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.13",
     "next-compose-plugins": "^2.2.1",
-    "next-export-optimize-images": "^2.0.0",
+    "next-image-export-optimizer": "^1.2.0",
     "postcss": "^8.4.21",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",

@@ -2,7 +2,7 @@ import BasicLayout from "@/layouts/basic";
 import { map } from "lodash";
 import Link from "next/link";
 import clsx from "clsx";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import heroImage from "@/public/images/camelot-spire-butteredbap.webp";
 
 const bottomNavItems = [
@@ -31,15 +31,13 @@ export default function VaultsAppHome() {
     <BasicLayout>
       <section className="relative min-h-[85vh] text-white grid place-content-center bg-cover bg-top">
         <div className="absolute inset-0 home-hero">
-          <Image
+          <ExportedImage
             className="z-[-1] object-top object-cover h-full w-full home-hero bg-neutral-900"
             fill
             src={heroImage}
             alt="Dragon flying near a tower."
             placeholder="blur"
-            sizes="(max-width: 768px) 75vw,
-              (max-width: 1200px) 80vw,
-              90vw"
+            unoptimized={process.env.NODE_ENV === "development"}
           />
         </div>
         <div className="flex flex-col gap-12 p-8 z-10">

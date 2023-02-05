@@ -1,5 +1,4 @@
 const withPlugins = require("next-compose-plugins");
-const withExportImages = require("next-export-optimize-images");
 const { withContentlayer } = require("next-contentlayer");
 const { withPlausibleProxy } = require("next-plausible");
 
@@ -7,16 +6,25 @@ const { withPlausibleProxy } = require("next-plausible");
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx"],
   trailingSlash: true,
-  imageDir: "_optimized",
+  images: {
+    loader: "custom",
+    imageSizes: [1280],
+    deviceSizes: [640, 1920, 2048],
+    nextImageExportOptimizer: {
+      imageFolderPath: "public/images",
+      exportFolderPath: "out",
+      quality: 75,
+    },
+  },
+  transpilePackages: ["next-image-export-optimizer"],
+  env: {
+    storePicturesInWEBP: true,
+    generateAndUseBlurImages: true,
+  },
 };
 
 module.exports = withPlugins(
   [
-    withExportImages({
-      images: {
-        deviceSizes: [640, 960, 1280, 1600, 1920],
-      },
-    }),
     withContentlayer,
     withPlausibleProxy({ subdirectory: "pa", scriptName: "pa" }),
   ],
