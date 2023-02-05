@@ -30,7 +30,7 @@ const navItems = {
             },
             {
               name: "Character Creation",
-              href: "/compendium/character-creation",
+              href: "/compendium/basic-rules/character-creation",
             },
           ],
         },
