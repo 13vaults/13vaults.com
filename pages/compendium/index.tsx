@@ -2,7 +2,7 @@ import CompendiumBreadcrumbs from "@/components/compendium-breadcrumbs";
 import BasicLayout from "@/layouts/basic";
 import Link from "next/link";
 
-export default function CompendiumCategoryIndexLayout(props: any) {
+export default function CompendiumCategoryIndexLayout() {
   return (
     <BasicLayout>
       <div className="bg-stone-900 px-8">

@@ -10,10 +10,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
-        display: ["Barlow Semi Condensed", ...defaultTheme.fontFamily.sans],
-        serif: ["Vollkorn", ...defaultTheme.fontFamily.serif],
-        "display-serif": ["Vollkorn SC", ...defaultTheme.fontFamily.serif],
+        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+        display: [
+          "var(--font-barlow-condensed)",
+          ...defaultTheme.fontFamily.sans,
+        ],
+        serif: ["var(--font-vollkorn)", ...defaultTheme.fontFamily.serif],
+        "display-serif": [
+          "var(--font-vollkorn-sc)",
+          ...defaultTheme.fontFamily.serif,
+        ],
       },
     },
   },
