@@ -7,4 +7,6 @@ const nextConfig = {
   trailingSlash: true,
 };
 
-module.exports = withPlausibleProxy()(withContentlayer(nextConfig));
+module.exports = withPlausibleProxy({ subdirectory: "pa", scriptName: "pa" })(
+  withContentlayer(nextConfig)
+);
