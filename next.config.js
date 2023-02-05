@@ -1,3 +1,5 @@
+const withPlugins = require("next-compose-plugins");
+const withExportImages = require("next-export-optimize-images");
 const { withContentlayer } = require("next-contentlayer");
 const { withPlausibleProxy } = require("next-plausible");
 
@@ -7,6 +9,11 @@ const nextConfig = {
   trailingSlash: true,
 };
 
-module.exports = withPlausibleProxy({ subdirectory: "pa", scriptName: "pa" })(
-  withContentlayer(nextConfig)
+module.exports = withPlugins(
+  [
+    withExportImages,
+    withContentlayer,
+    withPlausibleProxy({ subdirectory: "pa", scriptName: "pa" }),
+  ],
+  nextConfig
 );
