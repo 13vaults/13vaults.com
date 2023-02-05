@@ -8,7 +8,7 @@ export default function CompendiumCategoryIndexLayout(props: any) {
       <div className="bg-stone-900 px-8">
         <CompendiumBreadcrumbs />
       </div>
-      <main className="p-8">
+      <main className="p-8 dark:text-white">
         <Container>
           <main {...props} />
         </Container>

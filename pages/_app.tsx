@@ -13,24 +13,28 @@ const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
+  preload: false,
 });
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "700"],
   style: ["normal"],
+  preload: false,
 });
 
 const vollkorn = Vollkorn({
   subsets: ["latin"],
   weight: ["400", "700"],
   style: ["normal", "italic"],
+  preload: false,
 });
 
 const vollkornSc = Vollkorn_SC({
   subsets: ["latin"],
   weight: ["400", "700"],
   style: ["normal"],
+  preload: false,
 });
 
 export default function VaultsApp({ Component, pageProps }: AppProps) {

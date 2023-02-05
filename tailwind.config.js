@@ -9,6 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        texture: "url(/texture.webp)",
+        "texture-dark": "url(/texture-dark.webp)",
+      },
       fontFamily: {
         sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
         display: [

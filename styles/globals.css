@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    background-image: url(/texture.webp);
+    @apply bg-texture dark:bg-texture-dark;
   }
 }
 

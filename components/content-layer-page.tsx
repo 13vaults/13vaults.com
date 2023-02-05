@@ -3,7 +3,6 @@ import VaultLayout from "@/layouts/vault";
 import { get } from "lodash";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Head from "next/head";
-import CompendiumFeats from "./compendium-feats";
 import VaultHeader from "./compendium-header";
 
 interface ContentLayerRendererP {
@@ -20,10 +19,11 @@ export default function ContentLayerPage({
   const Content = useMDXComponent(data.body.code);
   const pageDress = get(data, "page_dress");
   const quote = get(pageDress, "quote");
+  const title = `${primaryLabel} - The 13 Vaults`;
   return (
     <>
       <Head>
-        <title>{primaryLabel} - 13Vaults</title>
+        <title>{title}</title>
       </Head>
       <VaultLayout>
         <VaultHeader
@@ -38,7 +38,7 @@ export default function ContentLayerPage({
             <figcaption>&ndash; {quote.cite}</figcaption>
           </figure>
         ) : null}
-        <hr className="my-8" />
+        <hr className="my-8 dark:border-stone-700" />
         <Content
           data={data}
           components={{
