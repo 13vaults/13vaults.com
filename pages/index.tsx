@@ -40,7 +40,7 @@ export default function VaultsAppHome() {
             unoptimized={process.env.NODE_ENV === "development"}
           />
         </div>
-        <div className="flex flex-col gap-12 p-8 z-10">
+        <div className="flex flex-col gap-12 p-8 pb-14 z-10">
           <h1 className="text-4xl md:text-6xl font-display font-bold block text-center text-amber-50">
             Discover the 13 Vaults
           </h1>
