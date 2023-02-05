@@ -16,25 +16,25 @@ import clsx from "clsx";
 const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
   variable: "--font-barlow-condensed",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "700"],
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "700"],
 });
 
 const vollkorn = Vollkorn({
   subsets: ["latin"],
   variable: "--font-vollkorn",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "700"],
 });
 
 const vollkornSc = Vollkorn_SC({
   subsets: ["latin"],
   variable: "--font-vollkorn-sc",
-  weight: ["400", "600", "700", "900"],
+  weight: ["400", "700"],
 });
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
