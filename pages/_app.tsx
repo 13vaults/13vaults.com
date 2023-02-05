@@ -16,7 +16,7 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="shortcut icon" href="/favicon.svg" />
         {process.env.NODE_ENV === "production" ? (
-          <link rel="preload" as="script" href="/pa/pa.js" />
+          <link rel="preload" as="script" href="/pa/js/pa.js" />
         ) : null}
         <title>The 13 Vaults</title>
         <meta
