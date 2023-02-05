@@ -1,4 +1,5 @@
 import CompendiumBreadcrumbs from "@/components/compendium-breadcrumbs";
+import Container from "@/components/container";
 import BasicLayout from "./basic";
 
 export default function VaultLayout(props: any) {
@@ -8,12 +9,18 @@ export default function VaultLayout(props: any) {
         <CompendiumBreadcrumbs />
       </div>
       <main className="p-8">
-        <div className="mx-auto xl:max-w-7xl max-w-6xl">
+        <Container>
           <article
-            className="prose prose-h1:my-0 prose-h2:mt-0 text-justify max-w-none prose-headings:font-serif prose-lead:leading-normal prose-lead:font-display prose-blockquote:border-teal-500 prose-blockquote:bg-white prose-blockquote:font-serif prose-blockquote:shadow-md prose-table:text-sm prose-table:whitespace-nowrap prose-th:font-display prose-thead:whitespace-normal prose-th:p-2 prose-thead:shadow-sm prose-th:align-bottom prose-thead:bg-white"
+            className="
+              prose prose-h1:my-0 prose-h2:mt-0 prose-p:text-justify max-w-none
+              prose-headings:font-serif prose-lead:leading-normal prose-lead:font-display
+            prose-blockquote:border-teal-500 prose-blockquote:bg-white
+              prose-blockquote:font-serif prose-blockquote:shadow-md prose-table:text-sm
+              prose-table:whitespace-nowrap prose-th:font-display prose-thead:whitespace-normal
+              prose-th:p-2 prose-thead:shadow-sm prose-th:align-bottom prose-thead:bg-white prose-blockquote:pr-6"
             {...props}
           />
-        </div>
+        </Container>
       </main>
     </BasicLayout>
   );

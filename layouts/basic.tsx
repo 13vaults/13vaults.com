@@ -1,3 +1,4 @@
+import Container from "@/components/container";
 import Link from "next/link";
 
 export default function BasicLayout({
@@ -9,7 +10,7 @@ export default function BasicLayout({
     <div className="min-h-screen flex flex-col">
       <header>
         <div className="bg-neutral-800 px-8 py-2 text-white">
-          <div className="mx-auto flex xl:max-w-7xl max-w-6xl items-center justify-center">
+          <Container className="mx-auto flex items-center justify-center">
             <h1 className="font-display text-3xl font-black">
               <Link href="/">
                 <span className="sr-only">13 Vaults</span>
@@ -41,7 +42,7 @@ export default function BasicLayout({
                 </svg>
               </Link>
             </h1>
-          </div>
+          </Container>
         </div>
       </header>
       <main className="flex-1 flex flex-col">{children}</main>

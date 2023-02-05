@@ -11,22 +11,26 @@ import {
 
 const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "700"],
+  style: ["normal"],
 });
 
 const vollkorn = Vollkorn({
   subsets: ["latin"],
   weight: ["400", "700"],
+  style: ["normal", "italic"],
 });
 
 const vollkornSc = Vollkorn_SC({
   subsets: ["latin"],
   weight: ["400", "700"],
+  style: ["normal"],
 });
 
 export default function VaultsApp({ Component, pageProps }: AppProps) {
@@ -40,7 +44,7 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
         <title>The 13 Vaults</title>
         <meta
           name="description"
-          content="13Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+          content="The 13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
         ></meta>
       </Head>
       <style jsx global>{`

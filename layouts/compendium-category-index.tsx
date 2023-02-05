@@ -1,4 +1,5 @@
 import CompendiumBreadcrumbs from "@/components/compendium-breadcrumbs";
+import Container from "@/components/container";
 import BasicLayout from "./basic";
 
 export default function CompendiumCategoryIndexLayout(props: any) {
@@ -8,9 +9,9 @@ export default function CompendiumCategoryIndexLayout(props: any) {
         <CompendiumBreadcrumbs />
       </div>
       <main className="p-8">
-        <div className="mx-auto xl:max-w-7xl max-w-6xl">
+        <Container>
           <main {...props} />
-        </div>
+        </Container>
       </main>
     </BasicLayout>
   );

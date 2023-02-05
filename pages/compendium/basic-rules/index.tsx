@@ -2,6 +2,7 @@ import { allRulesDocuments, RulesDocument } from "@/.contentlayer/generated";
 import CompendiumCategoryIndexLayout from "@/layouts/compendium-category-index";
 import { find, map, pick } from "lodash";
 import { GetStaticPropsResult } from "next";
+import Head from "next/head";
 import Link from "next/link";
 
 type PickPartial<T, K extends keyof T> = { [P in K]: Partial<T[P]> };
@@ -25,29 +26,36 @@ export default function BasicRulesPage({ rulesDocuments }: BasicRulesPageP) {
     "slug",
     "character-creation",
   ]) as DocListing;
-  console.log(rulesDocuments);
+
   return (
-    <CompendiumCategoryIndexLayout>
-      <nav>
-        <ol>
-          <li>
-            <Link href={`/compendium/basic-rules/${combatRulesDoc.slug}`}>
-              {combatRulesDoc.title}
-            </Link>
-          </li>
-          <li>
-            <Link href={`/compendium/basic-rules/${runningTheGameDoc.slug}`}>
-              {runningTheGameDoc.title}
-            </Link>
-          </li>
-          <li>
-            <Link href={`/compendium/basic-rules/${characterCreationDoc.slug}`}>
-              {characterCreationDoc.title}
-            </Link>
-          </li>
-        </ol>
-      </nav>
-    </CompendiumCategoryIndexLayout>
+    <>
+      <Head>
+        <title>Basic Rules - The 13 Vaults</title>
+      </Head>
+      <CompendiumCategoryIndexLayout>
+        <nav>
+          <ol>
+            <li>
+              <Link href={`/compendium/basic-rules/${combatRulesDoc.slug}`}>
+                {combatRulesDoc.title}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/compendium/basic-rules/${runningTheGameDoc.slug}`}>
+                {runningTheGameDoc.title}
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`/compendium/basic-rules/${characterCreationDoc.slug}`}
+              >
+                {characterCreationDoc.title}
+              </Link>
+            </li>
+          </ol>
+        </nav>
+      </CompendiumCategoryIndexLayout>
+    </>
   );
 }
 

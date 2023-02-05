@@ -3,6 +3,7 @@ import { map, pick } from "lodash";
 import { GetStaticPropsResult } from "next";
 import Link from "next/link";
 import CompendiumCategoryIndexLayout from "@/layouts/compendium-category-index";
+import Head from "next/head";
 
 interface AncestriesPageP {
   ancestries: {
@@ -13,17 +14,22 @@ interface AncestriesPageP {
 
 export default function AncestriesPage({ ancestries }: AncestriesPageP) {
   return (
-    <CompendiumCategoryIndexLayout>
-      <ul>
-        {map(ancestries, (ancestry) => (
-          <li key={ancestry.slug}>
-            <Link href={`/compendium/races/${ancestry.slug}`}>
-              {ancestry.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </CompendiumCategoryIndexLayout>
+    <>
+      <Head>
+        <title>Races - The 13 Vaults</title>
+      </Head>
+      <CompendiumCategoryIndexLayout>
+        <ul>
+          {map(ancestries, (ancestry) => (
+            <li key={ancestry.slug}>
+              <Link href={`/compendium/races/${ancestry.slug}`}>
+                {ancestry.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </CompendiumCategoryIndexLayout>
+    </>
   );
 }
 

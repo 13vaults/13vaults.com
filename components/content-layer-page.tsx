@@ -2,6 +2,7 @@ import * as Vault from "@/components/vault";
 import VaultLayout from "@/layouts/vault";
 import { get } from "lodash";
 import { useMDXComponent } from "next-contentlayer/hooks";
+import Head from "next/head";
 import CompendiumFeats from "./compendium-feats";
 import VaultHeader from "./compendium-header";
 
@@ -20,31 +21,36 @@ export default function ContentLayerPage({
   const pageDress = get(data, "page_dress");
   const quote = get(pageDress, "quote");
   return (
-    <VaultLayout>
-      <VaultHeader
-        primaryLabel={primaryLabel}
-        secondaryLabel={secondaryLabel}
-      />
-      {quote ? (
-        <figure>
-          <blockquote>
-            <p>{quote.text}</p>
-          </blockquote>
-          <figcaption>&ndash; {quote.cite}</figcaption>
-        </figure>
-      ) : null}
-      <hr className="my-8" />
-      <Content
-        data={data}
-        components={{
-          Vault: Vault,
-          table: ({ children }: any) => (
-            <div className="overflow-auto">
-              <table>{children}</table>
-            </div>
-          ),
-        }}
-      />
-    </VaultLayout>
+    <>
+      <Head>
+        <title>{primaryLabel} - 13Vaults</title>
+      </Head>
+      <VaultLayout>
+        <VaultHeader
+          primaryLabel={primaryLabel}
+          secondaryLabel={secondaryLabel}
+        />
+        {quote ? (
+          <figure>
+            <blockquote>
+              <p>{quote.text}</p>
+            </blockquote>
+            <figcaption>&ndash; {quote.cite}</figcaption>
+          </figure>
+        ) : null}
+        <hr className="my-8" />
+        <Content
+          data={data}
+          components={{
+            Vault: Vault,
+            table: ({ children }: any) => (
+              <div className="overflow-auto">
+                <table>{children}</table>
+              </div>
+            ),
+          }}
+        />
+      </VaultLayout>
+    </>
   );
 }
