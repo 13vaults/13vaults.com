@@ -29,7 +29,7 @@ const bottomNavItems = [
 export default function VaultsAppHome() {
   return (
     <BasicLayout>
-      <section className="relative min-h-[85vh] text-white grid place-content-center bg-cover bg-top">
+      <section className="flex-1 relative min-h-[60vh] text-white grid place-content-center bg-cover bg-top">
         <div className="absolute inset-0 home-hero">
           <ExportedImage
             className="z-[-1] object-top object-cover h-full w-full home-hero bg-neutral-900"

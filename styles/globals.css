@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    background: url(/images/paper-texture.webp);
+    background-image: url(/texture.webp);
   }
 }
 
