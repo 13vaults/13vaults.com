@@ -21,6 +21,11 @@ export default function BasicRulesPage({ rulesDocuments }: BasicRulesPageP) {
     "slug",
     "running-the-game",
   ]) as DocListing;
+  const characterCreationDoc = find(rulesDocuments, [
+    "slug",
+    "character-creation",
+  ]) as DocListing;
+  console.log(rulesDocuments);
   return (
     <CompendiumCategoryIndexLayout>
       <nav>
@@ -33,6 +38,11 @@ export default function BasicRulesPage({ rulesDocuments }: BasicRulesPageP) {
           <li>
             <Link href={`/compendium/basic-rules/${runningTheGameDoc.slug}`}>
               {runningTheGameDoc.title}
+            </Link>
+          </li>
+          <li>
+            <Link href={`/compendium/basic-rules/${characterCreationDoc.slug}`}>
+              {characterCreationDoc.title}
             </Link>
           </li>
         </ol>
