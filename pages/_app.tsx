@@ -24,10 +24,7 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
           content="13Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
         ></meta>
       </Head>
-      <PlausibleProvider
-        customDomain="https://www.13vaults.com"
-        domain="13vaults.com"
-      >
+      <PlausibleProvider domain="13vaults.com">
         <Component {...pageProps} />
       </PlausibleProvider>
     </>

@@ -1,4 +1,5 @@
 const { withContentlayer } = require("next-contentlayer");
+const { withPlausibleProxy } = require("next-plausible");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -6,4 +7,4 @@ const nextConfig = {
   trailingSlash: true,
 };
 
-module.exports = withContentlayer(nextConfig);
+module.exports = withPlausibleProxy()(withContentlayer(nextConfig));
