@@ -31,7 +31,7 @@ function NavLink({
 }
 
 function VisibleSectionHighlight() {
-  let [sections, visibleSections] = useInitialValue(
+  const [sections, visibleSections] = useInitialValue(
     [
       useSectionStore((s: any) => s.sections),
       useSectionStore((s: any) => s.visibleSections),
@@ -39,18 +39,22 @@ function VisibleSectionHighlight() {
     false
   );
 
-  let isPresent = useIsPresent();
-  let firstVisibleSectionIndex = Math.max(
-    0,
-    [{ id: "_top" }, ...sections].findIndex(
-      (section) => section.id === visibleSections[0]
-    )
-  );
-  let itemHeight = remToPx(1.75);
-  let height = isPresent
-    ? Math.max(1, visibleSections.length) * itemHeight
+  const isPresent = useIsPresent();
+  const firstVisibleSectionIndex =
+    visibleSections[0] === "_top"
+      ? 1
+      : Math.max(
+          0,
+          [{ id: "_top" }, ...sections].findIndex(
+            (section) => section.id === visibleSections[0]
+          )
+        );
+  const itemHeight = remToPx(1.75);
+  const height = isPresent
+    ? Math.max(1, visibleSections[0] === "_top" ? 1 : visibleSections.length) *
+      itemHeight
     : itemHeight;
-  let top = 16 + firstVisibleSectionIndex * itemHeight;
+  const top = 16 + firstVisibleSectionIndex * itemHeight;
 
   return (
     <motion.div

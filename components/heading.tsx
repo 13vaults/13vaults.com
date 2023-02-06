@@ -36,7 +36,7 @@ export default function Heading({
 
   useEffect(() => {
     if (level === 2) {
-      registerHeading({ id, ref, offSetRem: 6 });
+      registerHeading({ id, ref, offsetRem: 6 });
     }
   }, []);
 
