@@ -55,6 +55,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                 {map(navigation.main, (navItem) => (
                   <Disclosure
                     as="div"
+                    key={navItem.name}
                     className="text-white flex flex-col border-t border-stone-700"
                   >
                     {({ open }) => (
