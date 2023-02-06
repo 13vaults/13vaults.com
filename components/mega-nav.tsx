@@ -145,7 +145,12 @@ export default function MegaNav() {
                                 id={`mobile-${kebabCase(subnav.name)}-heading`}
                                 className="font-medium text-stone-100"
                               >
-                                <Link href={subnav.href}>{subnav.name}</Link>
+                                <Link
+                                  href={subnav.href}
+                                  onClick={() => setOpen(false)}
+                                >
+                                  {subnav.name}
+                                </Link>
                               </p>
                               <ul
                                 role="list"
@@ -158,6 +163,7 @@ export default function MegaNav() {
                                     <Link
                                       href={item.href}
                                       className="text-stone-400"
+                                      onClick={() => setOpen(false)}
                                     >
                                       {item.name}
                                     </Link>
