@@ -37,6 +37,7 @@ const navItems = {
         {
           name: "Races",
           href: "/compendium/races/",
+          large: true,
           items: [
             {
               name: "Holy One/Aasimar",
@@ -68,6 +69,7 @@ const navItems = {
         {
           name: "Classes",
           href: "/compendium/classes/",
+          large: true,
           items: [{ name: "Savage", href: "/compendium/classes/savage" }],
         },
       ],
@@ -285,11 +287,17 @@ export default function MegaNav() {
                                   <div className="relative bg-stone-800 border-b border-stone-700 rounded-b">
                                     <Container className="text-sm">
                                       <div className="font-sans grid grid-cols-1 items-start gap-y-10 gap-x-8 py-6">
-                                        <div className="grid grid-cols-4 gap-y-10 gap-x-8">
+                                        <div className="grid grid-cols-5 gap-y-10 gap-x-8">
                                           {map(
                                             mainNav.subnavs,
                                             (mainNavItem) => (
-                                              <div key={mainNavItem.name}>
+                                              <div
+                                                key={mainNavItem.name}
+                                                className={clsx({
+                                                  "col-span-2":
+                                                    mainNavItem.large,
+                                                })}
+                                              >
                                                 <Popover.Button
                                                   as={Link}
                                                   id={`desktop-featured-heading-${kebabCase(
@@ -305,15 +313,17 @@ export default function MegaNav() {
                                                   aria-labelledby={`desktop-featured-heading-${kebabCase(
                                                     mainNavItem.name
                                                   )}`}
-                                                  className="mt-6 space-y-2 sm:mt-4"
+                                                  className={clsx(
+                                                    "mt-6 grid gap-1 sm:mt-4",
+                                                    mainNavItem.large
+                                                      ? "grid-cols-2"
+                                                      : "grid-cols-1"
+                                                  )}
                                                 >
                                                   {map(
                                                     mainNavItem.items,
                                                     (subNav) => (
-                                                      <li
-                                                        key={subNav.name}
-                                                        className="flex"
-                                                      >
+                                                      <li key={subNav.name}>
                                                         <Popover.Button
                                                           as={Link}
                                                           href={subNav.href}
