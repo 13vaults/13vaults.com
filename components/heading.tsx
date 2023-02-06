@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Link from "next/link";
 import { ReactNode, SVGProps, useEffect, useRef } from "react";
 import { useSectionStore } from "./section-provider";
@@ -39,8 +40,15 @@ export default function Heading({
     }
   }, []);
 
+  const { className, ...restHeadingProps } = headingProps;
+
   return (
-    <Component id={id} ref={ref} {...headingProps}>
+    <Component
+      id={id}
+      ref={ref}
+      className={clsx("scroll-mt-8", className)}
+      {...restHeadingProps}
+    >
       {children}
     </Component>
   );
