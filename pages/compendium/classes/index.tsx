@@ -1,24 +1,33 @@
-import { allClassItems } from "contentlayer/generated";
+import {
+  allAncestries,
+  allClassItems,
+  allRulesDocuments,
+} from "contentlayer/generated";
 import { map, pick } from "lodash";
 import { GetStaticPropsResult } from "next";
 import Link from "next/link";
 import CompendiumCategoryIndexLayout from "@/layouts/compendium-category-index";
 import Head from "next/head";
+import { buildNav, Navigation } from "@/lib/navigation";
 
 interface ClassesPageP {
   classItems: {
     slug: string;
     name: string;
   }[];
+  navigation: Navigation;
 }
 
-export default function AncestriesPage({ classItems }: ClassesPageP) {
+export default function AncestriesPage({
+  classItems,
+  navigation,
+}: ClassesPageP) {
   return (
     <>
       <Head>
         <title>Classes - 13 Vaults</title>
       </Head>
-      <CompendiumCategoryIndexLayout>
+      <CompendiumCategoryIndexLayout navigation={navigation}>
         <ul>
           {map(classItems, (classItem) => (
             <li key={classItem.slug}>
@@ -41,6 +50,11 @@ export async function getStaticProps(): Promise<
       classItems: map(allClassItems, (classItem) =>
         pick(classItem, ["slug", "name"])
       ),
+      navigation: buildNav({
+        rulesDocuments: allRulesDocuments,
+        classItems: allClassItems,
+        ancestries: allAncestries,
+      }),
     },
   };
 }

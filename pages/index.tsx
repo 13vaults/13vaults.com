@@ -5,6 +5,13 @@ import clsx from "clsx";
 import ExportedImage from "next-image-export-optimizer";
 import heroImage from "@/public/images/camelot-spire-butteredbap.webp";
 import Container from "@/components/container";
+import { buildNav, Navigation } from "@/lib/navigation";
+import { GetStaticPropsResult } from "next";
+import {
+  allAncestries,
+  allClassItems,
+  allRulesDocuments,
+} from "@/.contentlayer/generated";
 
 const bottomNavItems = [
   {
@@ -27,9 +34,13 @@ const bottomNavItems = [
   },
 ];
 
-export default function VaultsAppHome() {
+interface VaultsAppHomeP {
+  navigation: Navigation;
+}
+
+export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
   return (
-    <BasicLayout>
+    <BasicLayout navigation={navigation}>
       <section className="flex-1 relative min-h-[60vh] text-white grid place-content-center bg-cover bg-top">
         <div className="absolute inset-0 home-hero">
           <ExportedImage
@@ -133,4 +144,18 @@ export default function VaultsAppHome() {
       </section>
     </BasicLayout>
   );
+}
+
+export async function getStaticProps(): Promise<
+  GetStaticPropsResult<VaultsAppHomeP>
+> {
+  return {
+    props: {
+      navigation: buildNav({
+        rulesDocuments: allRulesDocuments,
+        classItems: allClassItems,
+        ancestries: allAncestries,
+      }),
+    },
+  };
 }

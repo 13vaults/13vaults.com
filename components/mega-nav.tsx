@@ -10,82 +10,9 @@ import clsx from "clsx";
 import Container from "./container";
 import Link from "next/link";
 import { kebabCase, map } from "lodash";
+import { Navigation } from "@/lib/navigation";
 
-const navItems = {
-  main: [
-    {
-      name: "Compendium",
-      subnavs: [
-        {
-          name: "Basic Rules",
-          href: "/compendium/basic-rules/",
-          items: [
-            {
-              name: "Combat Rules",
-              href: "/compendium/basic-rules/combat-rules",
-            },
-            {
-              name: "Running the Game",
-              href: "/compendium/basic-rules/running-the-game",
-            },
-            {
-              name: "Character Creation",
-              href: "/compendium/basic-rules/character-creation",
-            },
-          ],
-        },
-        {
-          name: "Races",
-          href: "/compendium/races/",
-          large: true,
-          items: [
-            {
-              name: "Holy One/Aasimar",
-              href: "/compendium/races/aasimar",
-            },
-            { name: "Dark Elf", href: "/compendium/races/dark-elf" },
-            {
-              name: "Dragonic/Dragonspawn",
-              href: "/compendium/races/dragonic",
-            },
-            { name: "Dwarf", href: "/compendium/races/dwarf" },
-            {
-              name: "Forgeborn/Dwarf-forged",
-              href: "/compendium/races/forgeborn",
-            },
-            { name: "Gnome", href: "/compendium/races/gnome" },
-            { name: "Half-Elf", href: "/compendium/races/half-elf" },
-            { name: "Half-Orc", href: "/compendium/races/half-orc" },
-            { name: "Halfling", href: "/compendium/races/halfling" },
-            { name: "High Elf", href: "/compendium/races/high-elf" },
-            { name: "Human", href: "/compendium/races/human" },
-            {
-              name: "Tieflings/Demontouched",
-              href: "/compendium/races/tiefling",
-            },
-            { name: "Wood Elf", href: "/compendium/races/wood-elf" },
-          ],
-        },
-        {
-          name: "Classes",
-          href: "/compendium/classes/",
-          large: true,
-          items: [{ name: "Savage", href: "/compendium/classes/savage" }],
-        },
-      ],
-    },
-  ],
-  pages: [
-    {
-      name: "Guides",
-    },
-    {
-      name: "Encounter Builder",
-    },
-  ],
-};
-
-export default function MegaNav() {
+export default function MegaNav({ navigation }: { navigation: Navigation }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -125,7 +52,7 @@ export default function MegaNav() {
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
                 </div>
-                {map(navItems.main, (navItem) => (
+                {map(navigation.main, (navItem) => (
                   <Disclosure
                     as="div"
                     className="text-white flex flex-col border-t border-stone-700"
@@ -160,7 +87,7 @@ export default function MegaNav() {
                                   subnav.name
                                 )}-heading`}
                               >
-                                {subnav.items.map((item) => (
+                                {subnav.items?.map((item) => (
                                   <li key={item.name} className="flex">
                                     <Link
                                       href={item.href}
@@ -170,7 +97,7 @@ export default function MegaNav() {
                                       {item.name}
                                     </Link>
                                   </li>
-                                ))}
+                                )) ?? null}
                               </ul>
                             </div>
                           ))}
@@ -180,7 +107,7 @@ export default function MegaNav() {
                   </Disclosure>
                 ))}
                 <div className="space-y-6 border-t border-stone-700 py-6 px-4">
-                  {navItems.pages.map((page) => (
+                  {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root">
                       <span
                         key={page.name}
@@ -247,7 +174,7 @@ export default function MegaNav() {
                 <div className="hidden h-full lg:flex">
                   <Popover.Group className="ml-8">
                     <div className="flex h-full justify-center space-x-8">
-                      {navItems.main.map((mainNav) => (
+                      {navigation.main.map((mainNav) => (
                         <Popover key={mainNav.name} className="flex">
                           {({ open }) => (
                             <>
@@ -349,7 +276,7 @@ export default function MegaNav() {
                         </Popover>
                       ))}
 
-                      {navItems.pages.map((page) => (
+                      {navigation.pages.map((page) => (
                         <span
                           key={page.name}
                           className="flex items-center font-medium text-stone-600 cursor-not-allowed"

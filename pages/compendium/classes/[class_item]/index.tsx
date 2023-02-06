@@ -1,18 +1,26 @@
-import { allClassItems, ClassItem } from "contentlayer/generated";
+import {
+  allClassItems,
+  ClassItem,
+  allAncestries,
+  allRulesDocuments,
+} from "contentlayer/generated";
 import { flow, find, map, get } from "lodash";
 import { GetStaticPropsResult, NextPageContext } from "next";
 import ContentLayerPage from "@/components/content-layer-page";
+import { buildNav, Navigation } from "@/lib/navigation";
 
 interface ClassPageP {
   classItem: ClassItem;
+  navigation: Navigation;
 }
 
-export default function ClassPage({ classItem }: ClassPageP) {
+export default function ClassPage({ classItem, navigation }: ClassPageP) {
   return (
     <ContentLayerPage
       data={classItem}
       primaryLabel={classItem.name}
       secondaryLabel={classItem.source}
+      navigation={navigation}
     />
   );
 }
@@ -36,6 +44,11 @@ export async function getStaticProps(
   return {
     props: {
       classItem,
+      navigation: buildNav({
+        rulesDocuments: allRulesDocuments,
+        classItems: allClassItems,
+        ancestries: allAncestries,
+      }),
     },
   };
 }

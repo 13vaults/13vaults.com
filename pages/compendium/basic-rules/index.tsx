@@ -1,9 +1,15 @@
-import { allRulesDocuments, RulesDocument } from "@/.contentlayer/generated";
+import {
+  allRulesDocuments,
+  RulesDocument,
+  allAncestries,
+  allClassItems,
+} from "@/.contentlayer/generated";
 import CompendiumCategoryIndexLayout from "@/layouts/compendium-category-index";
 import { find, map, pick } from "lodash";
 import { GetStaticPropsResult } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { buildNav, Navigation } from "@/lib/navigation";
 
 type PickPartial<T, K extends keyof T> = { [P in K]: Partial<T[P]> };
 
@@ -11,9 +17,13 @@ type DocListing = PickPartial<RulesDocument, "slug" | "title">;
 
 interface BasicRulesPageP {
   rulesDocuments: DocListing[];
+  navigation: Navigation;
 }
 
-export default function BasicRulesPage({ rulesDocuments }: BasicRulesPageP) {
+export default function BasicRulesPage({
+  rulesDocuments,
+  navigation,
+}: BasicRulesPageP) {
   const combatRulesDoc = find(rulesDocuments, [
     "slug",
     "combat-rules",
@@ -32,7 +42,7 @@ export default function BasicRulesPage({ rulesDocuments }: BasicRulesPageP) {
       <Head>
         <title>Basic Rules - 13 Vaults</title>
       </Head>
-      <CompendiumCategoryIndexLayout>
+      <CompendiumCategoryIndexLayout navigation={navigation}>
         <nav>
           <ol>
             <li>
@@ -67,6 +77,11 @@ export async function getStaticProps(): Promise<
       rulesDocuments: map(allRulesDocuments, (rulesDocument) =>
         pick(rulesDocument, ["slug", "title"])
       ),
+      navigation: buildNav({
+        rulesDocuments: allRulesDocuments,
+        classItems: allClassItems,
+        ancestries: allAncestries,
+      }),
     },
   };
 }

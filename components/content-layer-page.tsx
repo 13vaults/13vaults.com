@@ -4,17 +4,20 @@ import { get } from "lodash";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Head from "next/head";
 import VaultHeader from "./compendium-header";
+import { Navigation } from "@/lib/navigation";
 
 interface ContentLayerRendererP {
   data: any;
   primaryLabel: string;
   secondaryLabel: string;
+  navigation: Navigation;
 }
 
 export default function ContentLayerPage({
   data,
   primaryLabel,
   secondaryLabel,
+  navigation,
 }: ContentLayerRendererP) {
   const Content = useMDXComponent(data.body.code);
   const pageDress = get(data, "page_dress");
@@ -25,7 +28,7 @@ export default function ContentLayerPage({
       <Head>
         <title>{title}</title>
       </Head>
-      <VaultLayout>
+      <VaultLayout navigation={navigation}>
         <VaultHeader
           primaryLabel={primaryLabel}
           secondaryLabel={secondaryLabel}

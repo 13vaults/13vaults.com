@@ -1,18 +1,26 @@
-import { allAncestries, Ancestry } from "contentlayer/generated";
+import {
+  allAncestries,
+  Ancestry,
+  allClassItems,
+  allRulesDocuments,
+} from "contentlayer/generated";
 import { flow, find, map, get } from "lodash";
 import { GetStaticPropsResult, NextPageContext } from "next";
 import ContentLayerPage from "@/components/content-layer-page";
+import { buildNav, Navigation } from "@/lib/navigation";
 
 interface AncestryPageP {
   ancestry: Ancestry;
+  navigation: Navigation;
 }
 
-export default function AncestryPage({ ancestry }: AncestryPageP) {
+export default function AncestryPage({ ancestry, navigation }: AncestryPageP) {
   return (
     <ContentLayerPage
       data={ancestry}
       primaryLabel={ancestry.name}
       secondaryLabel={ancestry.source}
+      navigation={navigation}
     />
   );
 }
@@ -36,6 +44,11 @@ export async function getStaticProps(
   return {
     props: {
       ancestry,
+      navigation: buildNav({
+        rulesDocuments: allRulesDocuments,
+        classItems: allClassItems,
+        ancestries: allAncestries,
+      }),
     },
   };
 }

@@ -1,16 +1,18 @@
 import Container from "@/components/container";
 import MegaNav from "@/components/mega-nav";
-import Link from "next/link";
+import { Navigation } from "@/lib/navigation";
 
 export default function BasicLayout({
   children,
+  navigation,
 }: {
   children: React.ReactNode;
+  navigation: Navigation;
 }) {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="z-[1]">
-        <MegaNav />
+        <MegaNav navigation={navigation} />
       </header>
       <main className="flex-1 flex flex-col">{children}</main>
       <footer>

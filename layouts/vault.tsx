@@ -1,10 +1,16 @@
 import CompendiumBreadcrumbs from "@/components/compendium-breadcrumbs";
 import Container from "@/components/container";
 import BasicLayout from "./basic";
+import { Navigation } from "@/lib/navigation";
 
-export default function VaultLayout(props: any) {
+interface VaultLayoutP {
+  children: React.ReactNode;
+  navigation: Navigation;
+}
+
+export default function VaultLayout({ children, navigation }: VaultLayoutP) {
   return (
-    <BasicLayout>
+    <BasicLayout navigation={navigation}>
       <div className="bg-stone-900 px-8">
         <CompendiumBreadcrumbs />
       </div>
@@ -19,8 +25,9 @@ export default function VaultLayout(props: any) {
               prose-table:whitespace-nowrap prose-th:font-display prose-thead:whitespace-normal
               prose-th:p-2 prose-thead:shadow-sm prose-th:align-bottom prose-thead:bg-white dark:prose-thead:bg-stone-800
               prose-blockquote:pr-6 dark:prose-invert dark:prose-tr:border-stone-800 dark:prose-thead:border-stone-900"
-            {...props}
-          />
+          >
+            {children}
+          </article>
         </Container>
       </main>
     </BasicLayout>

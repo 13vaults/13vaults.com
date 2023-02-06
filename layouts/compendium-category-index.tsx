@@ -1,16 +1,23 @@
 import CompendiumBreadcrumbs from "@/components/compendium-breadcrumbs";
 import Container from "@/components/container";
+import { Navigation } from "@/lib/navigation";
 import BasicLayout from "./basic";
 
-export default function CompendiumCategoryIndexLayout(props: any) {
+export default function CompendiumCategoryIndexLayout({
+  children,
+  navigation,
+}: {
+  children: React.ReactNode;
+  navigation: Navigation;
+}) {
   return (
-    <BasicLayout>
+    <BasicLayout navigation={navigation}>
       <div className="bg-stone-900 px-8">
         <CompendiumBreadcrumbs />
       </div>
       <main className="p-8 dark:text-white">
         <Container>
-          <main {...props} />
+          <main>{children}</main>
         </Container>
       </main>
     </BasicLayout>

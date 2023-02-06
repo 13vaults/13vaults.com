@@ -1,17 +1,26 @@
-import { allRulesDocuments, RulesDocument } from "@/.contentlayer/generated";
+import {
+  allRulesDocuments,
+  RulesDocument,
+  allAncestries,
+  allClassItems,
+} from "@/.contentlayer/generated";
 import { find, get, map } from "lodash";
 import { GetStaticPropsResult, NextPageContext } from "next";
 import ContentLayerPage from "@/components/content-layer-page";
+import { buildNav, Navigation } from "@/lib/navigation";
 
 interface RulesDocumentPageP {
   rulesDocument: RulesDocument;
+  navigation: Navigation;
 }
 
 export default function RulesDocumentPage({
   rulesDocument,
+  navigation,
 }: RulesDocumentPageP) {
   return (
     <ContentLayerPage
+      navigation={navigation}
       data={rulesDocument}
       primaryLabel={rulesDocument.title}
       secondaryLabel={rulesDocument.source}
@@ -39,6 +48,11 @@ export async function getStaticProps(
   return {
     props: {
       rulesDocument: rulesDocument!,
+      navigation: buildNav({
+        rulesDocuments: allRulesDocuments,
+        classItems: allClassItems,
+        ancestries: allAncestries,
+      }),
     },
   };
 }
