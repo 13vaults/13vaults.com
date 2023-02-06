@@ -22,7 +22,7 @@ export default function VaultLayout({
       <div className="p-4 lg:p-8">
         <Container className="grid grid-cols-1 gap-6 xl:grid-cols-12 relative">
           <aside className="static xl:col-start-1 xl:col-end-4">
-            <div className="sticky overflow-y-scroll top-4 bottom-4 pb-1 dark:bg-stone-800 dark:text-stone-100 dark:border-stone-700 bg-amber-50 border border-stone-400 shadow max-h-[calc(100vh-2rem)]">
+            <div className="sticky overflow-y-scroll top-4 bottom-4 rounded pb-1 dark:bg-stone-800 dark:text-stone-100 dark:border-stone-700 bg-amber-50 border border-stone-400 shadow max-h-[calc(100vh-2rem)]">
               {sideNavigation}
             </div>
           </aside>
