@@ -284,7 +284,8 @@ export default function MegaNav() {
                                             mainNav.subnavs,
                                             (mainNavItem) => (
                                               <div key={mainNavItem.name}>
-                                                <Link
+                                                <Popover.Button
+                                                  as={Link}
                                                   id={`desktop-featured-heading-${kebabCase(
                                                     mainNavItem.name
                                                   )}`}
@@ -292,7 +293,7 @@ export default function MegaNav() {
                                                   href={mainNavItem.href}
                                                 >
                                                   {mainNavItem.name}
-                                                </Link>
+                                                </Popover.Button>
                                                 <ul
                                                   role="list"
                                                   aria-labelledby={`desktop-featured-heading-${kebabCase(
@@ -307,12 +308,13 @@ export default function MegaNav() {
                                                         key={subNav.name}
                                                         className="flex"
                                                       >
-                                                        <Link
+                                                        <Popover.Button
+                                                          as={Link}
                                                           href={subNav.href}
                                                           className="border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
                                                         >
                                                           {subNav.name}
-                                                        </Link>
+                                                        </Popover.Button>
                                                       </li>
                                                     )
                                                   )}
