@@ -30,7 +30,7 @@ export default function BasicRulesPage({ rulesDocuments }: BasicRulesPageP) {
   return (
     <>
       <Head>
-        <title>Basic Rules - The 13 Vaults</title>
+        <title>Basic Rules - 13 Vaults</title>
       </Head>
       <CompendiumCategoryIndexLayout>
         <nav>

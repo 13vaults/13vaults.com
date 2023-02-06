@@ -19,7 +19,7 @@ export default function ContentLayerPage({
   const Content = useMDXComponent(data.body.code);
   const pageDress = get(data, "page_dress");
   const quote = get(pageDress, "quote");
-  const title = `${primaryLabel} - The 13 Vaults`;
+  const title = `${primaryLabel} - 13 Vaults`;
   return (
     <>
       <Head>

@@ -16,7 +16,7 @@ export default function AncestriesPage({ classItems }: ClassesPageP) {
   return (
     <>
       <Head>
-        <title>Classes - The 13 Vaults</title>
+        <title>Classes - 13 Vaults</title>
       </Head>
       <CompendiumCategoryIndexLayout>
         <ul>

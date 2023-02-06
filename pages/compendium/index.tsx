@@ -9,7 +9,7 @@ export default function CompendiumCategoryPage() {
   return (
     <>
       <Head>
-        <title>Compendium - The 13 Vaults</title>
+        <title>Compendium - 13 Vaults</title>
       </Head>
       <CompendiumCategoryIndexLayout>
         <ul>

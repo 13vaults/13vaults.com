@@ -42,15 +42,15 @@ export default function VaultsAppHome() {
         </div>
         <div className="flex flex-col gap-12 p-8 pb-14 z-0">
           <h1 className="text-4xl md:text-6xl font-display font-bold block text-center text-amber-50">
-            Discover the 13 Vaults
+            Discover 13 Vaults
           </h1>
           <div className="prose prose-p:font-display prose-p:font-medium prose-invert prose-p:my-1 prose-p:text-justify prose-p:leading-tight prose-p:text-amber-50">
             <p>
-              The 13 Vaults is an unofficial community-driven resource site for
-              13th Age&mdash;a fun and exciting RPG that innovates on the
-              classic d20 system. Inside you&lsquo;ll find many resources and
-              tools for GMs and players alike, from class pages to the full SRD
-              rules reference and much more.
+              13 Vaults is an unofficial community-driven resource site for 13th
+              Age&mdash;a fun and exciting RPG that innovates on the classic d20
+              system. Inside you&lsquo;ll find many resources and tools for GMs
+              and players alike, from class pages to the full SRD rules
+              reference and much more.
             </p>
           </div>
           <div className="grid place-content-center">
