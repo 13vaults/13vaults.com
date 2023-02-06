@@ -26,7 +26,7 @@ export default function VaultLayout({
               {sideNavigation}
             </div>
           </aside>
-          <main className="xl:col-start-4 xl:col-end-12">
+          <main className="xl:col-start-4 xl:col-end-13">
             <article
               className="prose prose-h1:my-0 prose-h2:mt-0 prose-p:text-justify max-w-none
                        prose-headings:font-serif prose-lead:leading-normal prose-lead:font-display
