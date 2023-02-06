@@ -1,6 +1,5 @@
 _id: "z2gt1gtC6YN1uw6T"
 name: "Drow Soldier"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "0pKCCcW92wqXpUJP"
 name: "Zombie Shuffler"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

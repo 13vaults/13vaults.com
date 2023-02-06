@@ -1,6 +1,5 @@
 _id: "vGoKjhVw0YbIBRGC"
 name: "Ettercap Keeper"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

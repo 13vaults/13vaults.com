@@ -1,6 +1,5 @@
 _id: "fxfyW7uIHagmiB5z"
 name: "Green Bulette"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

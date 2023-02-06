@@ -1,6 +1,5 @@
 _id: "7kXZN2Rn9woTDlWi"
 name: "The Final Devil"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "aCX8HjyvuWck0jAg"
 name: "Dire Boar"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

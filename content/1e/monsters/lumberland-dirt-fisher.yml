@@ -1,6 +1,5 @@
 _id: "QFdtkCZqY8QslGkG"
 name: "Lumberland Dirt-Fisher"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

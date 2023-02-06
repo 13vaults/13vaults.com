@@ -1,6 +1,5 @@
 _id: "TjHK0EnGKSxUfXvx"
 name: "Hell Imp"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

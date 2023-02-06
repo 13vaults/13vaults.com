@@ -1,6 +1,5 @@
 _id: "cFP4zaOlRmaSk6nL"
 name: "Black Pudding"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/ooze.webp"
 system:
   attributes:

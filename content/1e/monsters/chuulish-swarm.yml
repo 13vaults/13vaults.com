@@ -1,6 +1,5 @@
 _id: "1abXzx4IUEgfmOgc"
 name: "Chuulish Swarm"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/aberration.webp"
 system:
   attributes:

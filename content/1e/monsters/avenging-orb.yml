@@ -1,6 +1,5 @@
 _id: "sMhDYM1KPC23VcZp"
 name: "Avenging Orb"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

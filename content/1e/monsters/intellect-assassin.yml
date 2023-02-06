@@ -1,6 +1,5 @@
 _id: "2btXlpzKn05yfoeJ"
 name: "Intellect Assassin"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/aberration.webp"
 system:
   attributes:

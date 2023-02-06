@@ -1,6 +1,5 @@
 _id: "gHpvxvGb5DIUPhgE"
 name: "Zombie Beast"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

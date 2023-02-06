@@ -1,6 +1,5 @@
 _id: "pvCCsyJ9PIt1AgMb"
 name: "Large Copper Dragon (Metallic)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-copper.webp"
 system:
   attributes:

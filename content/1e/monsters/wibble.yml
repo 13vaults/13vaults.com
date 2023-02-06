@@ -1,6 +1,5 @@
 _id: "KmDGXmA1yaxPLe9k"
 name: "Wibble"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

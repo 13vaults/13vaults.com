@@ -1,6 +1,5 @@
 _id: "cYnIt3NJH7OO8Wqy"
 name: "Common Treant"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/plant.webp"
 system:
   attributes:

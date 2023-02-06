@@ -1,6 +1,5 @@
 _id: "hEGryxs5FdeTMVsH"
 name: "Honey Devil, aka Slime Devil"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

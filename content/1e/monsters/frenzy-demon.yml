@@ -1,6 +1,5 @@
 _id: "CGxhEoQh1hHZIeyz"
 name: "Frenzy Demon"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

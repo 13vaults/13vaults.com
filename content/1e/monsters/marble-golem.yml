@@ -1,6 +1,5 @@
 _id: "j05Ko4KXS6V2dZ2l"
 name: "Marble Golem"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

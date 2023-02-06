@@ -1,6 +1,5 @@
 _id: "aMJ8Y30BUkdVvAvw"
 name: "Big Air Elemental"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/elemental-air.webp"
 system:
   attributes:

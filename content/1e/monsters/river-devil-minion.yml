@@ -1,6 +1,5 @@
 _id: "AY4PMtQeSA2li5yX"
 name: "River Devil Minion"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

@@ -1,11 +1,14 @@
-const withPlugins = require("next-compose-plugins");
 const { withContentlayer } = require("next-contentlayer");
 const { withPlausibleProxy } = require("next-plausible");
+const vaultConfig = require("./vault.config");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx"],
   trailingSlash: true,
+  serverRuntimeConfig: {
+    vaultConfig,
+  },
   images: {
     loader: "custom",
     imageSizes: [1280],
@@ -21,12 +24,12 @@ const nextConfig = {
     storePicturesInWEBP: true,
     generateAndUseBlurImages: true,
   },
+  reactStrictMode: true,
+  experimental: {
+    scrollRestoration: true,
+  },
 };
 
-module.exports = withPlugins(
-  [
-    withContentlayer,
-    withPlausibleProxy({ subdirectory: "pa", scriptName: "pa" }),
-  ],
-  nextConfig
+module.exports = withPlausibleProxy({ subdirectory: "pa", scriptName: "pa" })(
+  withContentlayer(nextConfig)
 );

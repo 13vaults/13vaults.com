@@ -1,6 +1,5 @@
 _id: "ZEpelUvJiCTTrnau"
 name: "Five-Headed Hydra"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

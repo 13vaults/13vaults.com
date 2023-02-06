@@ -1,6 +1,5 @@
 _id: "aEhO6Ud88riakSpk"
 name: "Lizardman Savage"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

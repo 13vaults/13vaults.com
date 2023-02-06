@@ -1,6 +1,5 @@
 _id: "mZErP6QotjUwZTZq"
 name: "Medium White Dragon"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-white.webp"
 system:
   attributes:

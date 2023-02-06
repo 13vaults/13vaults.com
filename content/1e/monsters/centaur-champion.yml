@@ -1,6 +1,5 @@
 _id: "JNbV3Qgpq1Zjr8gJ"
 name: "Centaur Champion"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

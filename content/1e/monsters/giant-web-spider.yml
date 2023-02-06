@@ -1,6 +1,5 @@
 _id: "wyYrqm5BJyfSBuIg"
 name: "Giant Web Spider"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

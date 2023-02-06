@@ -1,6 +1,5 @@
 _id: "YWUMZ29u82zpOHMi"
 name: "Zealous Warbanner"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

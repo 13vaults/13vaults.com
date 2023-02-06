@@ -1,6 +1,5 @@
 _id: "8cTzRPlsPBXxpmiT"
 name: "Catacomb Dragon (Black)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-black.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "axFxaEvBkBy9ulkb"
 name: "Lammasu Wizard"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

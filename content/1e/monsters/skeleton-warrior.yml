@@ -1,6 +1,5 @@
 _id: "nXHiCIwKIN6Ly1G6"
 name: "Skeleton Warrior"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

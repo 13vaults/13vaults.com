@@ -1,6 +1,5 @@
 _id: "937WjQgmUUQA5NS1"
 name: "Mummy"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

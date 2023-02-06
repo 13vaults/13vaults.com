@@ -1,6 +1,5 @@
 _id: "V3dfS90T5aSpJe3T"
 name: "Feral Warbanner"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

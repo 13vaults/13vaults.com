@@ -1,6 +1,5 @@
 _id: "U9c2470ucVHL4kyI"
 name: "Small Earth Elemental"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/elemental-earth.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "BHR4rnZKd1qdEf9r"
 name: "Ogre Minion"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

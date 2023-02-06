@@ -1,6 +1,5 @@
 _id: "gKVXn7zkjJSMSPJn"
 name: "Winter Beast"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

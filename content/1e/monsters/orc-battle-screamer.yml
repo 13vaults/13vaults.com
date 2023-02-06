@@ -1,6 +1,5 @@
 _id: "57eUiEVInl6uecB8"
 name: "Orc Battle Screamer"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

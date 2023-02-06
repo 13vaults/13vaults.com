@@ -1,6 +1,5 @@
 _id: "Nhkat9IKTYjDDmpA"
 name: "Ettercap Warrior"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

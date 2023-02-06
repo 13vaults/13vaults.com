@@ -1,6 +1,5 @@
 _id: "ffHA1fJWGbIB44Kz"
 name: "Wendigo Spirit"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

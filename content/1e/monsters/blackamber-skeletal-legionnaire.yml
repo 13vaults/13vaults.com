@@ -1,6 +1,5 @@
 _id: "dTWPeDSevoFRFrgC"
 name: "Blackamber Skeletal Legionnaire"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "4JUQkcWeXyEzbc3y"
 name: "Large Silver Dragon (Metallic)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-silver.webp"
 system:
   attributes:

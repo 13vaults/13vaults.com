@@ -1,6 +1,5 @@
 _id: "RyzWdFRVyrDvHDWG"
 name: "Pixie Pod"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/plant.webp"
 system:
   attributes:

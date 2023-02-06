@@ -2,7 +2,6 @@ _id: "DNHwMQd1AASGQF2V"
 name: "Stirge"
 permission:
   default: 0
-type: "Npc"
 system:
   attributes:
     ac:

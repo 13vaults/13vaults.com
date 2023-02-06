@@ -1,6 +1,5 @@
 _id: "iUm1b4A0ImYbnjV9"
 name: "Shadow Thief"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-black.webp"
 system:
   attributes:

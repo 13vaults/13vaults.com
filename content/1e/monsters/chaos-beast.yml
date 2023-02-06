@@ -1,6 +1,5 @@
 _id: "W7XwFoQiwLTpMpo1"
 name: "Chaos Beast"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/aberration.webp"
 system:
   attributes:

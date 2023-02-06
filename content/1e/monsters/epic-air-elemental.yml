@@ -1,6 +1,5 @@
 _id: "7ikZRRXC0chRAch7"
 name: "Epic Air Elemental"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/elemental-air.webp"
 system:
   attributes:

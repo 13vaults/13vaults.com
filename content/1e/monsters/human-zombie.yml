@@ -1,6 +1,5 @@
 _id: "TrKcccXQgE2Eypup"
 name: "Human Zombie"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

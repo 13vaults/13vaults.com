@@ -1,6 +1,5 @@
 _id: "XXJpiQImBXZa7OxP"
 name: "Hellhound"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

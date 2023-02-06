@@ -1,6 +1,5 @@
 _id: "1lSQAyEPJIRDg6hN"
 name: "Magma Brute"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "mRBoJt1YmeKCG4BC"
 name: "Ice Zombie"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "sCzeJP0e5jLCiZ6h"
 name: "Razor Shark"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

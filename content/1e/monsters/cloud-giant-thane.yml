@@ -1,6 +1,5 @@
 _id: "X7X7ul3wPBkjlCqZ"
 name: "Cloud Giant Thane"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

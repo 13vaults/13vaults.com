@@ -1,6 +1,5 @@
 _id: "9Vc7Yo3n1UW1plLl"
 name: "Orcish Archer"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

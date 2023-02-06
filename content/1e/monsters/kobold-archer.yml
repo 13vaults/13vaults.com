@@ -1,6 +1,5 @@
 _id: "3n01ruWTwsIt8RKr"
 name: "Kobold Archer"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

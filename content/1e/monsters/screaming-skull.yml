@@ -1,6 +1,5 @@
 _id: "vXhzlL9fG6zjwvbe"
 name: "Screaming Skull"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

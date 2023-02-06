@@ -1,6 +1,5 @@
 _id: "2hD2ayqAGPW7EkAB"
 name: "Jest Bones"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

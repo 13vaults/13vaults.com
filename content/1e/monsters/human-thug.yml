@@ -1,6 +1,5 @@
 _id: "Clo9EA67PN4Nm8M4"
 name: "Human Thug"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

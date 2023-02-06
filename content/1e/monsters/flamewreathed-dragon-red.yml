@@ -1,6 +1,5 @@
 _id: "NC2LGEPu81AyTj3X"
 name: "Flamewreathed Dragon (Red)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-red.webp"
 system:
   attributes:

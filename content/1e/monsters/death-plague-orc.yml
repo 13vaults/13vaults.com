@@ -1,6 +1,5 @@
 _id: "Qh2CGKPuUwfYPB0w"
 name: "Death-Plague Orc"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

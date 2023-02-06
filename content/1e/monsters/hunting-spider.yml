@@ -1,6 +1,5 @@
 _id: "9wLbc3ZzTuFdKZq5"
 name: "Hunting Spider"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

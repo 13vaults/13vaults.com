@@ -1,6 +1,5 @@
 _id: "hfAhD1HZv3FPxYXA"
 name: "Clay Golem"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

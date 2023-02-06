@@ -1,6 +1,5 @@
 _id: "vbiGOhGmKykQUBMu"
 name: "Human Rabble"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

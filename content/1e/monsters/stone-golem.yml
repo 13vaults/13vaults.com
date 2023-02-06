@@ -1,6 +1,5 @@
 _id: "bHj1BM922d78837Z"
 name: "Stone Golem"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

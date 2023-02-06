@@ -1,6 +1,5 @@
 _id: "9eFvIDQYNWJY8o0r"
 name: "Bearded Devil (Barbazu)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

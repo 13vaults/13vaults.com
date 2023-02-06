@@ -1,6 +1,5 @@
 _id: "6t1WceFl0n8rOgYp"
 name: "Hoardsong Dragon (Red)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-red.webp"
 system:
   attributes:

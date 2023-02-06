@@ -1,6 +1,5 @@
 _id: "pZnuvB9d3NyAAePq"
 name: "Gelatinous Tetrahedron"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/ooze.webp"
 system:
   attributes:

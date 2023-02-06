@@ -1,6 +1,5 @@
 _id: "jYuvI6eGSM6n0Wno"
 name: "Ogre"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

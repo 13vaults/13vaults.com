@@ -1,6 +1,5 @@
 _id: "BCD5OYYBgE1bkSoL"
 name: "Swarm Prince"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

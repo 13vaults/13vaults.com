@@ -1,6 +1,5 @@
 _id: "fsM10X052LBugz52"
 name: "Bat Demon"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

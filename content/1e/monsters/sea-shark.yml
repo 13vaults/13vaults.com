@@ -1,6 +1,5 @@
 _id: "O3uMvUea7p5GdTCn"
 name: "Sea Shark"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

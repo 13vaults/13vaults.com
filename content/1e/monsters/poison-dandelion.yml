@@ -1,6 +1,5 @@
 _id: "Pmk2onuqSHLiPqa1"
 name: "Poison Dandelion"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "BgnA5UCONHAlU5Kh"
 name: "Dretch"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

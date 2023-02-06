@@ -1,6 +1,5 @@
 _id: "AHweCvDlAvWJjZc3"
 name: "Djinn"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

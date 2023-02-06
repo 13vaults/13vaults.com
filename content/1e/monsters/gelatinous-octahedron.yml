@@ -1,6 +1,5 @@
 _id: "FMx0i9N4bOVCJOmW"
 name: "Gelatinous Octahedron"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/ooze.webp"
 system:
   attributes:

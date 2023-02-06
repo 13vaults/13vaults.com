@@ -1,6 +1,5 @@
 _id: "WYBGeQDA3qCLyh30"
 name: "Newly-Risen Ghoul"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

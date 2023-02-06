@@ -1,6 +1,5 @@
 _id: "kcQCI1bWod0Z5qBH"
 name: "Ankheg"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "qx4dKzHiCKZEI39v"
 name: "Hill Giant"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "XT9Kp19Tfm1f1iQ4"
 name: "Large Bronze Dragon (Metallic)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-bronze.webp"
 system:
   attributes:

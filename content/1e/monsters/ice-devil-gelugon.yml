@@ -1,6 +1,5 @@
 _id: "q6t8Q3HR3vX1zKIu"
 name: "Ice Devil (Gelugon)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

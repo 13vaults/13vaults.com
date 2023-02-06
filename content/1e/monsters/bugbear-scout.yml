@@ -1,6 +1,5 @@
 _id: "5o1zaDDT6HPt0ixY"
 name: "Bugbear Scout"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "ddC1ps4fD9AXQ4Qm"
 name: "Kobold Bravescale"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

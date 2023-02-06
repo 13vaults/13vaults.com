@@ -1,6 +1,5 @@
 _id: "ujYCygji9WkxdQ4e"
 name: "Corpse Dybbuk"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

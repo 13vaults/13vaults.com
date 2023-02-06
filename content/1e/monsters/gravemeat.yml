@@ -1,6 +1,5 @@
 _id: "kCbeSRConIBao6ID"
 name: "Gravemeat"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

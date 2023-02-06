@@ -1,6 +1,5 @@
 _id: "gFyVNR29nobL9tSx"
 name: "Decrepit Skeleton"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

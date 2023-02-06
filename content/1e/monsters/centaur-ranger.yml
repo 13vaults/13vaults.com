@@ -1,6 +1,5 @@
 _id: "7zv0bhbdj3Sy8ypo"
 name: "Centaur Ranger"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

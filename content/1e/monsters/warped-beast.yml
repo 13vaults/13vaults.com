@@ -1,6 +1,5 @@
 _id: "SuoDdY1M7vBRTPx8"
 name: "Warped Beast"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/aberration.webp"
 system:
   attributes:

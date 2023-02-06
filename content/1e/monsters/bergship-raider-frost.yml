@@ -1,6 +1,5 @@
 _id: "Y1eomXamSryinrMI"
 name: "Bergship Raider (Frost)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

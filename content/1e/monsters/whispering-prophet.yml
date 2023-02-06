@@ -1,6 +1,5 @@
 _id: "hl450KWioG8D2lmK"
 name: "Whispering Prophet"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/aberration.webp"
 system:
   attributes:

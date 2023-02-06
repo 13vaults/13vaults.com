@@ -1,6 +1,5 @@
 _id: "mtvu5NoRia9ZK0zM"
 name: "Spider Mount"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

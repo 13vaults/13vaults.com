@@ -1,6 +1,5 @@
 _id: "eOzmybMMK6tezfyO"
 name: "Lich Prince"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

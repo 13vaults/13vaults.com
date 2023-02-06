@@ -1,6 +1,5 @@
 _id: "XnKTLcGHCMtS2OLr"
 name: "Gelatinous Dodecaedron"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/ooze.webp"
 system:
   attributes:

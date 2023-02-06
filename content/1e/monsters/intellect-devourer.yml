@@ -1,6 +1,5 @@
 _id: "i6WPEodUc7I9xujP"
 name: "Intellect devourer"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/aberration.webp"
 system:
   attributes:

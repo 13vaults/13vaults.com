@@ -1,6 +1,5 @@
 _id: "ARlH94tHb7INBir8"
 name: "Chimera"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

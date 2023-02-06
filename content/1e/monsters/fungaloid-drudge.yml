@@ -1,6 +1,5 @@
 _id: "H9CAjvuSiKWDcehg"
 name: "Fungaloid Drudge"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/plant.webp"
 system:
   attributes:

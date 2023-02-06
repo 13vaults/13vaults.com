@@ -1,6 +1,5 @@
 _id: "oAEMq1TPWP4krDgZ"
 name: "Watch Skull"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

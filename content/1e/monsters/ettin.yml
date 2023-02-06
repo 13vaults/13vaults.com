@@ -1,6 +1,5 @@
 _id: "mpfOqaO3FDhLPDXW"
 name: "Ettin"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

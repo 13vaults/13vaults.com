@@ -1,6 +1,5 @@
 _id: "iv1HdE32vrCbA73S"
 name: Cloud Giant Warrior
-type: Npc
 img: systems/archmage/assets/icons/tokens/monsters/giant.webp
 system:
   attributes:

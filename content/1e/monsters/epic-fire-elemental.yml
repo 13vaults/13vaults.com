@@ -1,6 +1,5 @@
 _id: "a4Klpt6gf9DKgzK7"
 name: "Epic Fire Elemental"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/elemental-fire.webp"
 system:
   attributes:

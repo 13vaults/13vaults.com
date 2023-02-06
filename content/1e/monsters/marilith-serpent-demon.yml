@@ -1,6 +1,5 @@
 _id: "Ty3Jq0nPo3fnyrXw"
 name: "Marilith (serpent demon)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

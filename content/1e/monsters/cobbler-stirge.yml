@@ -1,6 +1,5 @@
 _id: "HrY8fcq7rjtpbQ1J"
 name: "Cobbler Stirge"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

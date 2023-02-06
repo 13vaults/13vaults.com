@@ -1,6 +1,5 @@
 _id: "YlcIhsZunTFwe5ol"
 name: "Vicious Warbanner"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "FfG992lOYvyqrjkB"
 name: "Gorge Dragon (Black)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-black.webp"
 system:
   attributes:

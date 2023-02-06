@@ -1,6 +1,5 @@
 _id: "YGm0aLYOxYuDLEBF"
 name: "Aerial Spore"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/plant.webp"
 system:
   attributes:

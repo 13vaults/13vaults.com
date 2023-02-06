@@ -1,6 +1,5 @@
 _id: "ZNlL3LuF3ASgA6W6"
 name: "Huge Brass Dragon (Metallic)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-brass.webp"
 system:
   attributes:

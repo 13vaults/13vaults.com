@@ -1,6 +1,5 @@
 _id: "M5nyJFcL4b7AGiLC"
 name: "Skin Devil"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

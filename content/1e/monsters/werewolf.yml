@@ -1,6 +1,5 @@
 _id: "CNo8unEjBtRuQxvx"
 name: "Werewolf"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "cYucX28Rm9i86R9j"
 name: "Hook Scuttler"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

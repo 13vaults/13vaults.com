@@ -1,6 +1,5 @@
 _id: "c1b0LF2pIJFPlzhm"
 name: "Half-Orc Tribal Champion"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

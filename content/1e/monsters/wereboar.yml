@@ -1,6 +1,5 @@
 _id: "KuBJcAZF0V608T2e"
 name: "Wereboar"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

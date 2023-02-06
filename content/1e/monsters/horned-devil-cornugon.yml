@@ -1,6 +1,5 @@
 _id: "3CwHM0sJIkm5ImgA"
 name: "Horned Devil (Cornugon)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

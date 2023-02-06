@@ -1,6 +1,5 @@
 _id: "TXzNViOwvjgTf2IJ"
 name: "Headless Zombie"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

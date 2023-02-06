@@ -1,6 +1,5 @@
 _id: "EmaL5mH7R4EUTg5H"
 name: "Despoiler"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

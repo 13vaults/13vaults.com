@@ -1,6 +1,5 @@
 _id: "2ayP8nkrJUfbTKxn"
 name: "Braincap"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/plant.webp"
 system:
   attributes:

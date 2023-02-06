@@ -1,6 +1,5 @@
 _id: "jw9ZrZW8zmBzSeBv"
 name: "Hooked Demon"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

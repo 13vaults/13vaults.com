@@ -1,6 +1,5 @@
 _id: "mEZbOR2BrCd8hw9j"
 name: "Gelatinous Cubahedron (aka Cube)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/ooze.webp"
 system:
   attributes:

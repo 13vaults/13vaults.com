@@ -1,6 +1,5 @@
 _id: "7aZQJ3hIvQT276zZ"
 name: "Soul Flenser"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/aberration.webp"
 system:
   attributes:

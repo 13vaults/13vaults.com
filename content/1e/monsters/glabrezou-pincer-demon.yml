@@ -1,6 +1,5 @@
 _id: "pmT7vKf1VxHXoxA8"
 name: "Glabrezou (pincer demon)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

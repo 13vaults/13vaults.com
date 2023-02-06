@@ -1,6 +1,5 @@
 _id: "f0gfVhnPlNW1MIOD"
 name: "Cambion Sickle"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

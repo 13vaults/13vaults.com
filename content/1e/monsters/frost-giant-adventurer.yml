@@ -1,6 +1,5 @@
 _id: "7EG1WR5a6GMqZrck"
 name: "Frost Giant Adventurer"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

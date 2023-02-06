@@ -1,6 +1,5 @@
 _id: "SJSeXsNZBdKzgovK"
 name: "Small Water Elemental"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/elemental-water.webp"
 system:
   attributes:

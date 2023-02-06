@@ -1,6 +1,5 @@
 _id: "yjmVuGPxS0lkoZ3g"
 name: "Sporrior"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/plant.webp"
 system:
   attributes:

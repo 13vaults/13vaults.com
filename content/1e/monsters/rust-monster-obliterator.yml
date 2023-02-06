@@ -1,6 +1,5 @@
 _id: "HMyjkCXU6y3I1EqE"
 name: "Rust Monster Obliterator"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

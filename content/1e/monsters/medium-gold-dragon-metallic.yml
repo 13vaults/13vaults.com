@@ -1,6 +1,5 @@
 _id: "69Dfv726UoabQXq9"
 name: "Medium Gold Dragon (Metallic)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-gold.webp"
 system:
   attributes:

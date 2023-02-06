@@ -1,6 +1,5 @@
 _id: "Vq3qL60t3VHSfCyn"
 name: "Gargoyle"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

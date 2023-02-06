@@ -1,6 +1,5 @@
 _id: "8xzcKhUF6ke727i6"
 name: "Fungaloid Monarch"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/plant.webp"
 system:
   attributes:

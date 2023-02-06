@@ -1,6 +1,5 @@
 _id: "Vfu1rIzPcWUzV48h"
 name: "Bugbear Schemer"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

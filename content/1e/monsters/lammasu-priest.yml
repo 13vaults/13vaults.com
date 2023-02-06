@@ -1,6 +1,5 @@
 _id: "5PJeAZ421xz26Dft"
 name: "Lammasu Priest"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

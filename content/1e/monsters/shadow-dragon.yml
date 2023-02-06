@@ -1,6 +1,5 @@
 _id: "2aX994HRJMOg5RRb"
 name: "Shadow Dragon"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-black.webp"
 system:
   attributes:

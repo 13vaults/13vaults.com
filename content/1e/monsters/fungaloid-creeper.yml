@@ -1,6 +1,5 @@
 _id: "9Pe00XhaTPLbiGMF"
 name: "Fungaloid Creeper"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/plant.webp"
 system:
   attributes:

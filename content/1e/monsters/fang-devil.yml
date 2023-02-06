@@ -1,6 +1,5 @@
 _id: "zgih0GWcaiDOs7iU"
 name: "Fang Devil"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

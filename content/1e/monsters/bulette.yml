@@ -1,6 +1,5 @@
 _id: "F0sQyvqvg3Sv5iy7"
 name: "Bulette"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

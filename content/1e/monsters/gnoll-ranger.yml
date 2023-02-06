@@ -1,6 +1,5 @@
 _id: "dxTwj8RJAtj0khpa"
 name: "Gnoll Ranger"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

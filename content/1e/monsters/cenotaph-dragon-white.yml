@@ -1,6 +1,5 @@
 _id: "jyFDzHVEsQjP2nJ4"
 name: "Cenotaph Dragon (White)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-white.webp"
 system:
   attributes:

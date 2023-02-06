@@ -1,6 +1,5 @@
 _id: "XQSuJf2GeX0vgwQD"
 name: "Hobgoblin Warmage"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

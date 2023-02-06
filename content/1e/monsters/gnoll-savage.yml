@@ -1,6 +1,5 @@
 _id: "YWV41syd0JbYKyfz"
 name: "Gnoll Savage"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

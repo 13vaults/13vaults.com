@@ -2,7 +2,6 @@ _id: "Eh6NWAnhtdODWqzb"
 name: "Stirgelings"
 permission:
   default: 0
-type: "Npc"
 system:
   attributes:
     ac:

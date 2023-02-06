@@ -1,6 +1,5 @@
 _id: "CwO44w2SdkYGhNCi"
 name: "Chaos Glorp"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/aberration.webp"
 system:
   attributes:

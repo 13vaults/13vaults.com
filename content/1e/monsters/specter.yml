@@ -1,6 +1,5 @@
 _id: "C8CfGGumssWMBWdA"
 name: "Specter"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

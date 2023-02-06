@@ -1,6 +1,5 @@
 _id: "0IweiCnXWspTLEAg"
 name: "Void Dragon (Black)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-black.webp"
 system:
   attributes:

@@ -17,7 +17,7 @@ export default function CompendiumCategoryIndexLayout({
       </div>
       <main className="p-4 lg:p-8 dark:text-white">
         <Container>
-          <main>{children}</main>
+          <div>{children}</div>
         </Container>
       </main>
     </BasicLayout>

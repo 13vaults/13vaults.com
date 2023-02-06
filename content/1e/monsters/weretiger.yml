@@ -1,6 +1,5 @@
 _id: "yN6unx7RLeCZddoy"
 name: "Weretiger"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

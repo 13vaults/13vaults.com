@@ -1,6 +1,5 @@
 _id: "erfYruT57tsVWEik"
 name: "Hooded Devil"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

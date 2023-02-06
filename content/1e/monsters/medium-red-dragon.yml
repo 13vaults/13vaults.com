@@ -1,6 +1,5 @@
 _id: "L8N9oasC7gVZaPOi"
 name: "Medium Red Dragon"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-red.webp"
 system:
   attributes:

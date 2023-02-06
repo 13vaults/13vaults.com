@@ -1,6 +1,5 @@
 _id: "zT1X4CLaTCmxo8pn"
 name: "Parasitic Dybbuk"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

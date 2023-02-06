@@ -1,6 +1,5 @@
 _id: "m2cAw8ju6JtfAp1W"
 name: "Fire Giant"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

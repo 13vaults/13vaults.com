@@ -5,6 +5,23 @@ import {
 } from "contentlayer/source-files";
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
+import GithubSlugger from "github-slugger";
+
+const sectionsField = {
+  type: "json",
+  resolve: (doc) => {
+    const slugger = new GithubSlugger();
+    const headingsRegex = /\n(##)\s+(?<content>.+)/g;
+    const headings = Array.from(doc.body.raw.matchAll(headingsRegex));
+    return headings.map(({ groups }) => {
+      const content = groups?.content;
+      return {
+        id: slugger.slug(content),
+        title: content,
+      };
+    });
+  },
+};
 
 const PageNav = defineNestedType(() => ({
   name: "PageNav",
@@ -44,6 +61,7 @@ const RulesDocument = defineDocumentType(() => ({
       type: "string",
       resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
     },
+    sections: sectionsField,
   },
 }));
 
@@ -79,6 +97,7 @@ const Ancestry = defineDocumentType(() => ({
       type: "string",
       resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
     },
+    sections: sectionsField,
   },
 }));
 
@@ -97,12 +116,13 @@ const ClassItem = defineDocumentType(() => ({
       type: "string",
       resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
     },
+    sections: sectionsField,
   },
 }));
 
 const contentLayerConfig = makeSource({
   contentDirPath: "content",
-  documentTypes: [ClassItem, Monster, Ancestry, RulesDocument],
+  documentTypes: [ClassItem, Ancestry, RulesDocument],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeSlug],

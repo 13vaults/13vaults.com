@@ -1,6 +1,5 @@
 _id: "BPIodF4Ja1Fzrq0w"
 name: "Large Black Dragon"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-black.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "W0M2ejIUlD2TxYbx"
 name: "Derro Sage"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

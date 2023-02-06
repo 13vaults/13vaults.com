@@ -1,6 +1,5 @@
 _id: "PfDeh8PVsZmw53Ft"
 name: "Hellwasp"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

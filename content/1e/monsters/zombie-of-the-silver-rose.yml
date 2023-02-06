@@ -1,6 +1,5 @@
 _id: "luBNIwOxHVc0GsOZ"
 name: "Zombie of the Silver Rose"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "xOTIyU0eCfGx6gn2"
 name: "Chaos Behemoth"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/aberration.webp"
 system:
   attributes:

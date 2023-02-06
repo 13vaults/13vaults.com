@@ -1,6 +1,5 @@
 _id: XBuW0KQtlgAKHj8b
 name: Smoke Devil
-type: Npc
 img: systems/archmage/assets/icons/tokens/monsters/devil.webp
 system:
   attributes:

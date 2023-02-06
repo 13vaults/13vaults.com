@@ -1,6 +1,5 @@
 _id: "eJLzKl3r89V7ATUR"
 name: "Fallen Lammasu"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

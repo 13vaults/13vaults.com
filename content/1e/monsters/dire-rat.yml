@@ -1,6 +1,5 @@
 _id: "5xA4KU43DJLTfLWP"
 name: "Dire Rat"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

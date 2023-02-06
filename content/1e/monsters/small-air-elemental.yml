@@ -1,6 +1,5 @@
 _id: "ykSU4aw1oWsISFX6"
 name: "Small Air Elemental"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/elemental-air.webp"
 system:
   attributes:

@@ -1,12 +1,15 @@
-import { filter, map, startCase } from "lodash";
+import { filter, findIndex, map, startCase } from "lodash";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Container from "./container";
 
 function createPaths(path: string) {
   const linkPath = filter(path.split("/"), (str) => str !== "");
+  const hashUrlIdx = findIndex(linkPath, (str) => str.startsWith("#"));
+  const finalLinkPath =
+    hashUrlIdx >= 0 ? filter(linkPath, (_, i) => i < hashUrlIdx) : linkPath;
 
-  return map(linkPath, (path, i) => {
+  return map(finalLinkPath, (path, i) => {
     return {
       breadcrumb: startCase(path),
       href: "/" + linkPath.slice(0, i + 1).join("/"),

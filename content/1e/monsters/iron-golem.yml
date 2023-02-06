@@ -1,6 +1,5 @@
 _id: "GUj1lMVfQYfY9FWU"
 name: "Iron Golem"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

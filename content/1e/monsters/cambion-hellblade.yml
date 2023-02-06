@@ -1,6 +1,5 @@
 _id: "sJFphooMtZVPJKd3"
 name: "Cambion Hellblade"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

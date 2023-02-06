@@ -1,6 +1,5 @@
 _id: "vrrOm7z9dJ5x0fby"
 name: "Kobold Shadow-Warrior"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

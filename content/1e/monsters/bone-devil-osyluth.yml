@@ -1,6 +1,5 @@
 _id: "kIMBOvK9yRdLY32D"
 name: "Bone Devil (Osyluth)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "0DIRBabTKeTVsMxt"
 name: "Lich Baroness"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

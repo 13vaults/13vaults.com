@@ -1,20 +1,22 @@
-import Container from "@/components/container";
 import MegaNav from "@/components/mega-nav";
 import { Navigation } from "@/lib/navigation";
+import clsx from "clsx";
 
 export default function BasicLayout({
   children,
   navigation,
+  className,
 }: {
   children: React.ReactNode;
   navigation: Navigation;
+  className?: string;
 }) {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="z-[1]">
         <MegaNav navigation={navigation} />
       </header>
-      <main className="flex-1 flex flex-col">{children}</main>
+      <div className={clsx("flex flex-col flex-1", className)}>{children}</div>
       <footer>
         <div className="bg-stone-900 text-white">
           <div className="p-4 flex gap-2 items-center justify-center">

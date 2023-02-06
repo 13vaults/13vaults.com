@@ -1,6 +1,5 @@
 _id: "ek0KnUuduPgaNsZ5"
 name: "Treant Titan"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/plant.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "T2GpGMD7RmJJFGGh"
 name: "Large White Dragon"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-white.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "jLd4qMUNwXJbzPhl"
 name: "Ice Sorceress (Frost)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "wOVCQBNUhMZSyjqA"
 name: "Kobold Dungeon-Shaman"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

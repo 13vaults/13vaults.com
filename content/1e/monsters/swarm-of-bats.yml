@@ -1,6 +1,5 @@
 _id: "oaLiCg02ealzuDT1"
 name: "Swarm of Bats"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

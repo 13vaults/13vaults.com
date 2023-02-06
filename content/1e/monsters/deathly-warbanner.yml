@@ -1,6 +1,5 @@
 _id: "CbqHA6AgmgiEm5ae"
 name: "Deathly Warbanner"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

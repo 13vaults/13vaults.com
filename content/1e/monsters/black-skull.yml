@@ -1,6 +1,5 @@
 _id: "wZQL8SQxuOCZMB3D"
 name: "Black Skull"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

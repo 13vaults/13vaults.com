@@ -1,6 +1,5 @@
 _id: "d5QQS8bM938UyRA9"
 name: "Ogre Berserker"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

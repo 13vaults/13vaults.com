@@ -1,6 +1,5 @@
 _id: "YV7RVp2f4ef5fbht"
 name: "Flaming Skull"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

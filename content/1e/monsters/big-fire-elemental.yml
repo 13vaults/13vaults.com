@@ -1,6 +1,5 @@
 _id: "aqbohmuNvVut8pzW"
 name: "Big Fire Elemental"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/elemental-fire.webp"
 system:
   attributes:

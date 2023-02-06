@@ -1,6 +1,5 @@
 _id: "7lQkborFfbe5bhia"
 name: "Epic Earth Elemental"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/elemental-earth.webp"
 system:
   attributes:

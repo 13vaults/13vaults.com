@@ -1,6 +1,5 @@
 _id: "Jwp222BwKTCReiOD"
 name: "Kobold Dog-Rider"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

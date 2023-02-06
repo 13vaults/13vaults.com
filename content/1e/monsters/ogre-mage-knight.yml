@@ -1,6 +1,5 @@
 _id: "w8BypgDqfYlY2qb3"
 name: Ogre Mage Knight
-type: Npc
 img: systems/archmage/assets/icons/tokens/monsters/giant.webp
 system:
   attributes:

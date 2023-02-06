@@ -1,6 +1,5 @@
 _id: "k0iGuUowV5eOMdLZ"
 name: "Medium Blue Dragon"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-blue.webp"
 system:
   attributes:

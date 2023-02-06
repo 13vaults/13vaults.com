@@ -1,6 +1,5 @@
 _id: "D8TLRG83sge5mFJN"
 name: "Lokkris"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

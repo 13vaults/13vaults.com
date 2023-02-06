@@ -1,6 +1,5 @@
 _id: "0qv7c4kXhHdKFWUl"
 name: "Balor (flame demon)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "dYAbELUYbXWsmJL8"
 name: "Trog Chanter"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

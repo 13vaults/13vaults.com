@@ -1,6 +1,5 @@
 _id: "AGRquvxUcuAPpv6i"
 name: "Smoke Minions"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

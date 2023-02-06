@@ -1,6 +1,5 @@
 _id: "YL2AyRNNEsKUdVhT"
 name: "Wyvern"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

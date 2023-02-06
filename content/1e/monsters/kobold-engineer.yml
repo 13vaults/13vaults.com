@@ -1,6 +1,5 @@
 _id: "tMV2PMekFnM91nxb"
 name: "Kobold Engineer"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

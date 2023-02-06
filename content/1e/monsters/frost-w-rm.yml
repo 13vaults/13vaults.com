@@ -1,6 +1,5 @@
 _id: "c3k7IotMuSwEEQkA"
 name: "Frost-Würm"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

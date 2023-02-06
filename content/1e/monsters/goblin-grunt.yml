@@ -1,6 +1,5 @@
 _id: "LEM1INiGQLyu1U05"
 name: "Goblin Grunt"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

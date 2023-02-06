@@ -1,6 +1,5 @@
 _id: "C5MD7oU7MkKNF9VN"
 name: "Big Earth Elemental"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/elemental-earth.webp"
 system:
   attributes:

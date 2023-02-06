@@ -1,6 +1,5 @@
 _id: "Wl6NK0C7MA3xEWRa"
 name: "Medium Silver Dragon (Metallic)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-silver.webp"
 system:
   attributes:

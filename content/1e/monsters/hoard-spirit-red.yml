@@ -1,6 +1,5 @@
 _id: "wPq3ZHZwQQtkHlOV"
 name: "Hoard Spirit (Red)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

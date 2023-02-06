@@ -1,6 +1,5 @@
 _id: "a1CPXigDfNc634RD"
 name: "Drow Spider-Mage"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

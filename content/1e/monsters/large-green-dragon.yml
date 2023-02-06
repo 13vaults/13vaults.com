@@ -1,6 +1,5 @@
 _id: "1QTA8lvKy6tanrLA"
 name: "Large Green Dragon"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-green.webp"
 system:
   attributes:

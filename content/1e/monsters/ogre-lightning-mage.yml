@@ -1,6 +1,5 @@
 _id: "PUvvoYStOBXa7dV5"
 name: "Ogre Lightning Mage"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

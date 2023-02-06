@@ -1,6 +1,5 @@
 _id: "KWbhq0OXT0lENahj"
 name: "Imp"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

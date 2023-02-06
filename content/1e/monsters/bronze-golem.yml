@@ -1,6 +1,5 @@
 _id: "tda4lMHYL8KKDAmp"
 name: "Bronze Golem"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

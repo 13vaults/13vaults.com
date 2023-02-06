@@ -70,7 +70,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                         </Disclosure.Button>
                         <Disclosure.Panel className="p-4 pt-0 bg-stone-800 flex flex-col gap-4">
                           {map(navItem.subnavs, (subnav) => (
-                            <div>
+                            <div key={subnav.href}>
                               <p
                                 id={`mobile-${kebabCase(subnav.name)}-heading`}
                                 className="font-medium text-stone-100"

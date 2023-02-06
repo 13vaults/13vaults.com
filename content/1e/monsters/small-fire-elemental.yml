@@ -1,6 +1,5 @@
 _id: "QoQzUcya0yoSUiTt"
 name: "Small Fire Elemental"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/elemental-fire.webp"
 system:
   attributes:

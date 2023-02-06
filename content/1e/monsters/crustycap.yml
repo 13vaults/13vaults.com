@@ -1,6 +1,5 @@
 _id: "PTbAUuN6KqYw0Kab"
 name: "Crustycap"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

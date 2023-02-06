@@ -1,6 +1,5 @@
 _id: "Es4CNaaB5E76JxLA"
 name: "Barbed Devil (Hamatula)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

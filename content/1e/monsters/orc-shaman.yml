@@ -1,6 +1,5 @@
 _id: "wa079BHEqSiFeU5e"
 name: "Orc Shaman"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

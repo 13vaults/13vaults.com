@@ -1,6 +1,5 @@
 _id: "IiqizvB3zMlWsmj1"
 name: "Big Zombie"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "I7EJYb2eB5bArUz1"
 name: "Large Gold Dragon (Metallic)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-gold.webp"
 system:
   attributes:

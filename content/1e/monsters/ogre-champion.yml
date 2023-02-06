@@ -1,6 +1,5 @@
 _id: "OU4XeKlaZxWoouKp"
 name: "Ogre Champion"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

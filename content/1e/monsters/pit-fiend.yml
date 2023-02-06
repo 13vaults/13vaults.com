@@ -1,6 +1,5 @@
 _id: "V3ZmIvLnyRQltYfP"
 name: "Pit Fiend"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

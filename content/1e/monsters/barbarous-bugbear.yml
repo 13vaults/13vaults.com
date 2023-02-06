@@ -1,6 +1,5 @@
 _id: "SFMSruUvPzJvVVvx"
 name: "Barbarous Bugbear"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

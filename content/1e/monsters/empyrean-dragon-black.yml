@@ -1,6 +1,5 @@
 _id: "MT7D2ZQhiio010YI"
 name: "Empyrean Dragon (Black)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-black.webp"
 system:
   attributes:

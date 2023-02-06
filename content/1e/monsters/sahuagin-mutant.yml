@@ -1,6 +1,5 @@
 _id: "FhAUVoO7zhpHmolX"
 name: "Sahuagin Mutant"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

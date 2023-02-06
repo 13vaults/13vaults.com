@@ -1,6 +1,5 @@
 _id: "xYqA6xGNg3pxuNL5"
 name: "Orc Berserker"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

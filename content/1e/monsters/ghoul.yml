@@ -1,6 +1,5 @@
 _id: "4Qjs7wLjwY8ONzyj"
 name: "Ghoul"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

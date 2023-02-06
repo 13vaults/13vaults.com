@@ -1,6 +1,5 @@
 _id: "cnTkM0fnAWW1k9Vy"
 name: "Wererat"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

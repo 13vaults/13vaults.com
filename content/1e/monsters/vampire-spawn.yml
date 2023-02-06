@@ -1,6 +1,5 @@
 _id: "EAkaJFZZEiiLZUv0"
 name: "Vampire Spawn"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:

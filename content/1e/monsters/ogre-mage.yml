@@ -1,6 +1,5 @@
 _id: "CPFyQu2s90q5oGsp"
 name: "Ogre Mage"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

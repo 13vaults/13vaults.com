@@ -1,6 +1,5 @@
 _id: "lj4VWRHTFpy9fTeU"
 name: "Claw Flower"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/plant.webp"
 system:
   attributes:

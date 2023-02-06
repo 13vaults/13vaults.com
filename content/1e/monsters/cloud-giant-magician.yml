@@ -1,6 +1,5 @@
 _id: "zCM6En98e0rcKNSw"
 name: "Cloud Giant Magician"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

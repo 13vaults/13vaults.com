@@ -1,6 +1,5 @@
 _id: "3zO3zi1oItXUS3vN"
 name: "Apex Zorigami"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/construct.webp"
 system:
   attributes:

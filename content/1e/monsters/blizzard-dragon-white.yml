@@ -1,6 +1,5 @@
 _id: "5Vp1aeQc2jQGNgpy"
 name: "Blizzard Dragon (White)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/dragon-white.webp"
 system:
   attributes:

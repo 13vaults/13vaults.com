@@ -1,6 +1,5 @@
 _id: "vmCMkLagtejjlM0H"
 name: "River Devil"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/devil.webp"
 system:
   attributes:

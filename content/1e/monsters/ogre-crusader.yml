@@ -1,6 +1,5 @@
 _id: "PxurpqleBwFsBC7z"
 name: "Ogre Crusader"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

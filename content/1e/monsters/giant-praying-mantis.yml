@@ -1,6 +1,5 @@
 _id: "IhiR0lQWPtggTsDa"
 name: "Giant Praying Mantis"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

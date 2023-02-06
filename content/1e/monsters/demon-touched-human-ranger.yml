@@ -1,6 +1,5 @@
 _id: "3dlnQkhx8TpCarCt"
 name: "Demon-Touched Human Ranger"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

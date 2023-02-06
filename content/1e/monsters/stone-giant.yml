@@ -1,6 +1,5 @@
 _id: "SJH4MwRqhQHuYLW9"
 name: "Stone Giant"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/giant.webp"
 system:
   attributes:

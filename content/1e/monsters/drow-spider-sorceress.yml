@@ -1,6 +1,5 @@
 _id: "FxGpvVUgRqFo4yh6"
 name: "Drow Spider-Sorceress"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

@@ -1,6 +1,5 @@
 _id: "WXMiBSHV9Kujf46n"
 name: "Goblin Scum"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

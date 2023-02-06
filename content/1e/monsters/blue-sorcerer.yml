@@ -1,6 +1,5 @@
 _id: "z61MzDMbczedGDls"
 name: "Blue Sorcerer"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/humanoid.webp"
 system:
   attributes:

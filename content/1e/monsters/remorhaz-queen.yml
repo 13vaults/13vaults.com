@@ -1,6 +1,5 @@
 _id: "2Epu1Q2NsGWX2CYL"
 name: "Remorhaz Queen"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/beast.webp"
 system:
   attributes:

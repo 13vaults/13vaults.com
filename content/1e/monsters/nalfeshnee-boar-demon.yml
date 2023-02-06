@@ -1,6 +1,5 @@
 _id: "nQT9e80C9Mrd5VgW"
 name: "Nalfeshnee (boar demon)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

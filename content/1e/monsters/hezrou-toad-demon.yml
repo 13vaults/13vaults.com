@@ -1,6 +1,5 @@
 _id: "S98GOa9Kag5C7UlB"
 name: "Hezrou (toad demon)"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/demon.webp"
 system:
   attributes:

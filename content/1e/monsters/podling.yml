@@ -1,6 +1,5 @@
 _id: "XXHMDfM6cwaV2ubB"
 name: "Podling"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/plant.webp"
 system:
   attributes:

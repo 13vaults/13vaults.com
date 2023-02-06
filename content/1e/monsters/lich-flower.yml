@@ -1,6 +1,5 @@
 _id: "Cxj3C6U7rE63sYSW"
 name: "Lich Flower"
-type: "Npc"
 img: "systems/archmage/assets/icons/tokens/monsters/undead.webp"
 system:
   attributes:
