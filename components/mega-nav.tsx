@@ -127,7 +127,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
 
       <div className="relative">
         <nav aria-label="Top">
-          <div className="bg-stone-800 px-8 border-b border-stone-700">
+          <div className="bg-stone-800 px-4 lg:px-8 border-b border-stone-700">
             <Container>
               <div className="flex py-1 lg:py-2 items-center justify-start">
                 <div className="flex lg:hidden">
@@ -277,14 +277,24 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                         </Popover>
                       ))}
 
-                      {navigation.pages.map((page) => (
-                        <span
-                          key={page.name}
-                          className="flex items-center font-medium text-stone-600 cursor-not-allowed"
-                        >
-                          {page.name}
-                        </span>
-                      ))}
+                      {navigation.pages.map((page) =>
+                        page.href ? (
+                          <Link
+                            key={page.href}
+                            href={page.href}
+                            className="text-stone-400 border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
+                          >
+                            {page.name}
+                          </Link>
+                        ) : (
+                          <span
+                            key={page.name}
+                            className="flex items-center font-medium text-stone-600 cursor-not-allowed"
+                          >
+                            {page.name}
+                          </span>
+                        )
+                      )}
                     </div>
                   </Popover.Group>
                 </div>

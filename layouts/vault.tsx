@@ -11,10 +11,10 @@ interface VaultLayoutP {
 export default function VaultLayout({ children, navigation }: VaultLayoutP) {
   return (
     <BasicLayout navigation={navigation}>
-      <div className="bg-stone-900 px-8">
+      <div className="bg-stone-900 px-4 lg:px-8">
         <CompendiumBreadcrumbs />
       </div>
-      <main className="p-8">
+      <main className="p-4 lg:p-8">
         <Container>
           <article
             className="

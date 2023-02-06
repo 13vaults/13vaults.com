@@ -52,7 +52,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
             unoptimized={process.env.NODE_ENV === "development"}
           />
         </div>
-        <div className="flex flex-col gap-12 p-8 pb-14 z-0">
+        <div className="flex flex-col gap-12 p-4 lg:p-8 pb-14 z-0">
           <h1 className="text-4xl md:text-6xl font-display font-bold block text-center text-amber-50">
             Discover 13 Vaults
           </h1>
@@ -110,7 +110,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
                     <Link
                       className={clsx(
                         item.classes,
-                        "grid place-content-center rounded-sm border h-40 text-center px-8 transition-colors"
+                        "grid place-content-center rounded-sm border h-40 text-center px-4 lg:px-8 transition-colors"
                       )}
                       href={item.href}
                     >
@@ -125,7 +125,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
                     <div
                       className={clsx(
                         item.classes,
-                        "grid place-content-center rounded-sm border h-40 text-center px-8 opacity-60 transition-colors"
+                        "grid place-content-center rounded-sm border h-40 text-center px-4 lg:px-8 opacity-60 transition-colors"
                       )}
                     >
                       <h2 className="text-3xl font-display-serif font-semibold">

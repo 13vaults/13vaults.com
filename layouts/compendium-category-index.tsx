@@ -12,10 +12,10 @@ export default function CompendiumCategoryIndexLayout({
 }) {
   return (
     <BasicLayout navigation={navigation}>
-      <div className="bg-stone-900 px-8">
+      <div className="bg-stone-900 px-4 lg:px-8">
         <CompendiumBreadcrumbs />
       </div>
-      <main className="p-8 dark:text-white">
+      <main className="p-4 lg:p-8 dark:text-white">
         <Container>
           <main>{children}</main>
         </Container>
