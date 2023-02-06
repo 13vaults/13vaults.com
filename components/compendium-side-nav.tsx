@@ -42,13 +42,15 @@ function VisibleSectionHighlight() {
   let isPresent = useIsPresent();
   let firstVisibleSectionIndex = Math.max(
     0,
-    [...sections].findIndex((section) => section.id === visibleSections[0])
+    [{ id: "_top" }, ...sections].findIndex(
+      (section) => section.id === visibleSections[0]
+    )
   );
   let itemHeight = remToPx(1.75);
   let height = isPresent
     ? Math.max(1, visibleSections.length) * itemHeight
     : itemHeight;
-  let top = 44 + firstVisibleSectionIndex * itemHeight;
+  let top = 16 + firstVisibleSectionIndex * itemHeight;
 
   return (
     <motion.div

@@ -2,9 +2,6 @@ import CompendiumBreadcrumbs from "@/components/compendium-breadcrumbs";
 import Container from "@/components/container";
 import BasicLayout from "./basic";
 import { Navigation } from "@/lib/navigation";
-import useMediaQuery from "@/lib/useMediaQuery";
-import useIsMounted from "@/lib/useIsMounted";
-import { useEffect, useState } from "react";
 
 interface VaultLayoutP {
   children: React.ReactNode;
@@ -17,18 +14,6 @@ export default function VaultLayout({
   navigation,
   sideNavigation,
 }: VaultLayoutP) {
-  const isMounted = useIsMounted();
-  const [showSideNavigation, setShowSideNavigation] = useState(false);
-  const isWide = useMediaQuery("(min-width: 1280px)");
-
-  useEffect(() => {
-    if (isMounted() && isWide) {
-      setShowSideNavigation(true);
-    } else {
-      setShowSideNavigation(false);
-    }
-  }, [isMounted, isWide]);
-
   return (
     <BasicLayout navigation={navigation}>
       <div className="bg-stone-900 px-4 lg:px-8">
