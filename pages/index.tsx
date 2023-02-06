@@ -4,6 +4,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import ExportedImage from "next-image-export-optimizer";
 import heroImage from "@/public/images/camelot-spire-butteredbap.webp";
+import Container from "@/components/container";
 
 const bottomNavItems = [
   {
@@ -80,50 +81,55 @@ export default function VaultsAppHome() {
         </p>
       </section>
       <section className="bg-[rgb(27,10,0)] text-white">
-        <nav className="md:max-w-6xl mx-auto">
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-1 p-1">
-            {map(bottomNavItems, (item) => (
-              <li
-                key={item.title}
-                className={clsx({
-                  "md:col-span-2": item.large,
-                  "md:col-span-1": !item.large,
-                })}
-              >
-                {item.href ? (
-                  <Link
-                    className={clsx(
-                      item.classes,
-                      "grid place-content-center rounded-sm border h-40 text-center px-8 transition-colors"
-                    )}
-                    href={item.href}
-                  >
-                    <h2 className="text-3xl font-display-serif font-semibold">
-                      {item.title}
-                    </h2>
-                    <p className="text-sm leading-tight font-display text-justify text-align-last-center font-medium text-white/75">
-                      {item.body}
-                    </p>
-                  </Link>
-                ) : (
-                  <div
-                    className={clsx(
-                      item.classes,
-                      "grid place-content-center rounded-sm border h-40 text-center px-8 opacity-60 transition-colors"
-                    )}
-                  >
-                    <h2 className="text-3xl font-display-serif font-semibold">
-                      {item.title}
-                    </h2>
-                    <p className="text-sm leading-tight font-display text-justify text-align-last-center font-medium text-white/75">
-                      {item.body}
-                    </p>
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <Container>
+          <nav>
+            <ul
+              role="list"
+              className="grid grid-cols-1 md:grid-cols-2 gap-1 p-1"
+            >
+              {map(bottomNavItems, (item) => (
+                <li
+                  key={item.title}
+                  className={clsx({
+                    "md:col-span-2": item.large,
+                    "md:col-span-1": !item.large,
+                  })}
+                >
+                  {item.href ? (
+                    <Link
+                      className={clsx(
+                        item.classes,
+                        "grid place-content-center rounded-sm border h-40 text-center px-8 transition-colors"
+                      )}
+                      href={item.href}
+                    >
+                      <h2 className="text-3xl font-display-serif font-semibold">
+                        {item.title}
+                      </h2>
+                      <p className="text-sm leading-tight font-display text-justify text-align-last-center font-medium text-white/75">
+                        {item.body}
+                      </p>
+                    </Link>
+                  ) : (
+                    <div
+                      className={clsx(
+                        item.classes,
+                        "grid place-content-center rounded-sm border h-40 text-center px-8 opacity-60 transition-colors"
+                      )}
+                    >
+                      <h2 className="text-3xl font-display-serif font-semibold">
+                        {item.title}
+                      </h2>
+                      <p className="text-sm leading-tight font-display text-justify text-align-last-center font-medium text-white/75">
+                        {item.body}
+                      </p>
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </Container>
       </section>
     </BasicLayout>
   );
