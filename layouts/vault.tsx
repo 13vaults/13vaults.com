@@ -32,7 +32,7 @@ export default function VaultLayout({
 
   return (
     <BasicLayout navigation={navigation}>
-      <div className="bg-stone-900 px-4 lg:px-8 sticky top-14 z-10 shadow">
+      <div className="bg-stone-900 px-4 lg:px-8 lg:sticky top-14 z-10 shadow">
         <CompendiumBreadcrumbs />
       </div>
       <div className="p-4 lg:p-8">
