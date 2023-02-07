@@ -70,8 +70,12 @@ function VisibleSectionHighlight() {
         );
   const itemHeight = remToPx(1.75);
   const height = isPresent
-    ? Math.max(1, visibleSections[0] === "_top" ? 1 : visibleSections.length) *
-      itemHeight
+    ? Math.max(
+        1,
+        visibleSections[0] === "_top"
+          ? visibleSections.length - 1
+          : visibleSections.length
+      ) * itemHeight
     : itemHeight;
   const top = 16 + firstVisibleSectionIndex * itemHeight;
 
