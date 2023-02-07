@@ -13,7 +13,7 @@ export default function BasicLayout({
 }) {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="z-[1]">
+      <header className="z-[1] sticky top-0 shadow">
         <MegaNav navigation={navigation} />
       </header>
       <div className={clsx("flex flex-col flex-1", className)}>{children}</div>

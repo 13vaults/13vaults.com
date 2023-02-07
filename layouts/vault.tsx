@@ -32,13 +32,13 @@ export default function VaultLayout({
 
   return (
     <BasicLayout navigation={navigation}>
-      <div className="bg-stone-900 px-4 lg:px-8">
+      <div className="bg-stone-900 px-4 lg:px-8 sticky top-14 z-10 shadow">
         <CompendiumBreadcrumbs />
       </div>
       <div className="p-4 lg:p-8">
         <Container className="grid grid-cols-1 gap-6 xl:grid-cols-12 relative">
           <aside className="static xl:col-start-1 xl:col-end-4">
-            <div className="sticky overflow-y-auto top-4 bottom-4 rounded pb-1 dark:bg-stone-800 dark:text-stone-100 dark:border-stone-700 bg-stone-50 border border-stone-400 shadow max-h-[calc(100vh-2rem)]">
+            <div className="sticky overflow-y-auto top-24 bottom-4 rounded pb-1 dark:bg-stone-800 dark:text-stone-100 dark:border-stone-700 bg-stone-50 border border-stone-400 shadow max-h-[calc(100vh-6.5rem)]">
               {sideNavigation}
             </div>
           </aside>

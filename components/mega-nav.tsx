@@ -127,8 +127,8 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
 
       <div className="relative">
         <nav aria-label="Top">
-          <div className="bg-stone-800 px-4 lg:px-8 border-b border-stone-700">
-            <Container>
+          <div className="bg-stone-800 px-4 lg:px-8 border-b border-stone-700 h-14 flex items-center">
+            <Container className="flex-1">
               <div className="flex py-1 lg:py-2 items-center justify-start">
                 <div className="flex lg:hidden">
                   <button
