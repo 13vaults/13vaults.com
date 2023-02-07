@@ -23,15 +23,6 @@ const sectionsField = {
   },
 };
 
-const PageNav = defineNestedType(() => ({
-  name: "PageNav",
-  fields: {
-    label: { type: "string", required: true },
-    id: { type: "string", required: true },
-    children: { type: "list", of: PageNav, required: false },
-  },
-}));
-
 const PageDressQuote = defineNestedType(() => ({
   name: "PageDressQuote",
   fields: {
@@ -105,7 +96,6 @@ const Ancestry = defineDocumentType(() => ({
     name: { type: "string", required: true },
     source: { type: "string", required: true },
     page_dress: { type: "nested", of: PageDress, required: false },
-    page_nav: { type: "list", of: PageNav, required: false },
   },
   computedFields: {
     slug: {
@@ -124,7 +114,6 @@ const ClassItem = defineDocumentType(() => ({
     name: { type: "string", required: true },
     source: { type: "string", required: true },
     page_dress: { type: "nested", of: PageDress, required: true },
-    page_nav: { type: "list", of: PageNav, required: false },
   },
   computedFields: {
     slug: {
