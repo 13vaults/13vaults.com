@@ -82,7 +82,7 @@ export default function ContentLayerPage({
                 </Heading>
               ),
               table: (props: any) => (
-                <div className="overflow-auto">
+                <div className="overflow-auto border dark:border-stone-700 rounded shadow border-stone-300 my-2">
                   <table {...props} />
                 </div>
               ),
