@@ -46,7 +46,7 @@ export default function Heading({
     <Component
       id={id}
       ref={ref}
-      className={clsx("scroll-mt-28", className)}
+      className={clsx("scroll-mt-24", className)}
       {...restHeadingProps}
     >
       {children}
