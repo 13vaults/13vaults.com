@@ -16,7 +16,9 @@ export default function BasicLayout({
       <header className="z-[1] sticky top-0 shadow">
         <MegaNav navigation={navigation} />
       </header>
-      <div className={clsx("flex flex-col flex-1", className)}>{children}</div>
+      <div className={clsx("flex flex-col flex-1 relative z-0", className)}>
+        {children}
+      </div>
       <footer>
         <div className="bg-stone-900 text-white">
           <div className="p-4 flex gap-2 items-center justify-center">

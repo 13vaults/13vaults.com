@@ -36,7 +36,7 @@ export default function Heading({
 
   useEffect(() => {
     if (level === 2) {
-      registerHeading({ id, ref, offsetRem: 6 });
+      registerHeading({ id, ref, offsetRem: 10 });
     }
   }, []);
 
@@ -46,7 +46,7 @@ export default function Heading({
     <Component
       id={id}
       ref={ref}
-      className={clsx("scroll-mt-8", className)}
+      className={clsx("scroll-mt-28", className)}
       {...restHeadingProps}
     >
       {children}

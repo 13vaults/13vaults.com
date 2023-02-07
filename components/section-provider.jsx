@@ -56,7 +56,8 @@ function useVisibleSections(sectionStore) {
       ) {
         const { id, headingRef, offsetRem } = sections[sectionIndex];
         const offset = remToPx(offsetRem);
-        const top = headingRef.current.getBoundingClientRect().top + scrollY;
+        const top =
+          headingRef.current?.getBoundingClientRect().top ?? offset + scrollY;
 
         if (sectionIndex === 0 && top - offset > scrollY) {
           newVisibleSections.push("_top");
