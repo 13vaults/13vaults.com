@@ -59,10 +59,6 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
           --font-vollkorn-sc: ${vollkornSc.style.fontFamily};
         }
 
-        html {
-          overflow-y: auto !important;
-        }
-
         html,
         body {
           scroll-behavior: smooth;

@@ -38,7 +38,7 @@ export default function Heading({
     if (level === 2) {
       registerHeading({ id, ref, offsetRem: 10 });
     }
-  }, []);
+  }, [{ id, level, registerHeading }]);
 
   const { className, ...restHeadingProps } = headingProps;
 
