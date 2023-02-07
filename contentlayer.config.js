@@ -48,6 +48,21 @@ const PageDress = defineNestedType(() => ({
   },
 }));
 
+const BasicPage = defineDocumentType(() => ({
+  name: "BasicPage",
+  filePathPattern: "pages/*.mdx",
+  contentType: "mdx",
+  fields: {
+    title: { type: "string", required: true },
+  },
+  computedFields: {
+    slug: {
+      type: "string",
+      resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
+    },
+  },
+}));
+
 const RulesDocument = defineDocumentType(() => ({
   name: "RulesDocument",
   filePathPattern: "1e/rules/*.mdx",
@@ -122,7 +137,7 @@ const ClassItem = defineDocumentType(() => ({
 
 const contentLayerConfig = makeSource({
   contentDirPath: "content",
-  documentTypes: [ClassItem, Ancestry, RulesDocument],
+  documentTypes: [BasicPage, ClassItem, Ancestry, RulesDocument],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeSlug],
