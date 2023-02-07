@@ -58,6 +58,11 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
           --font-vollkorn: ${vollkorn.style.fontFamily};
           --font-vollkorn-sc: ${vollkornSc.style.fontFamily};
         }
+
+        html,
+        body {
+          scroll-behavior: smooth;
+        }
       `}</style>
       <PlausibleProvider domain="13vaults.com">
         <Component {...pageProps} />

@@ -1,9 +1,12 @@
 import { remToPx } from "@/lib/remToPx";
 import useInitialValue from "@/lib/useInitialValue";
+import { ChevronUpIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
 import { AnimatePresence, useIsPresent, motion } from "framer-motion";
+import { get } from "lodash";
 import Link from "next/link";
-import { ReactNode, useEffect } from "react";
+import { useRouter } from "next/router";
+import { MouseEvent, ReactNode, useCallback, useEffect } from "react";
 import { useSectionStore } from "./section-provider";
 
 function NavLink({
@@ -15,9 +18,27 @@ function NavLink({
   active?: boolean;
   children: ReactNode;
 }) {
+  const router = useRouter();
+
+  const handleClick = useCallback((e: any) => {
+    const hash = get(e, "target.hash");
+    const el = document.querySelector(hash);
+    if (el) {
+      e.preventDefault();
+      history.replaceState(
+        "",
+        document.title,
+        window.location.pathname + window.location.search + hash
+      );
+      el.scrollIntoView({ smooth: true });
+    }
+  }, []);
+
   return (
     <Link
+      scroll={false}
       href={href}
+      onClick={handleClick}
       aria-current={active ? "page" : undefined}
       className={clsx(
         "flex justify-between gap-2 py-1 pr-3 text-sm transition",
@@ -25,7 +46,7 @@ function NavLink({
         "text-stone-600 hover:text-stone-900 dark:text-stone-300 dark:hover:text-white"
       )}
     >
-      <span className="truncate">{children}</span>
+      <span className="pointer-events-none truncate">{children}</span>
     </Link>
   );
 }
@@ -82,25 +103,57 @@ export default function CompendiumSideNav({
   primaryLabel: string;
 }): JSX.Element | null {
   const sections = useSectionStore((store: any) => store.sections);
+  const [firstVisible] = useSectionStore((store: any) => store.visibleSections);
+  const isAtTop = firstVisible === "_top";
+
+  const handleScrollToTop = useCallback((e: any) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    history.replaceState(
+      "",
+      document.title,
+      window.location.pathname + window.location.search
+    );
+  }, []);
 
   return (
-    <motion.div layout="position">
-      <AnimatePresence initial={false}>
-        <VisibleSectionHighlight />
-      </AnimatePresence>
-      <p className="font-medium font-display text-xl m-2">{primaryLabel}</p>
-      <AnimatePresence mode="popLayout" initial={false}>
-        <motion.ul
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 0.1 } }}
-          role="list"
-          className="flex flex-col"
-        >
-          {sections.map((section: any) => (
-            <NavigationGroup key={section.id} section={section} />
-          ))}
-        </motion.ul>
-      </AnimatePresence>
-    </motion.div>
+    <>
+      <motion.div layout="position">
+        <AnimatePresence initial={false}>
+          <VisibleSectionHighlight />
+        </AnimatePresence>
+        <div className="flex justify-between items-center">
+          <p className="font-medium font-display text-xl m-2">{primaryLabel}</p>
+          <AnimatePresence>
+            {isAtTop ? null : (
+              <motion.button
+                onClick={handleScrollToTop}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="hidden relative xl:flex gap-1 items-center px-2 py-1 text-xs"
+              >
+                To Top <ChevronUpIcon className="h-4 w-4" />
+              </motion.button>
+            )}
+          </AnimatePresence>
+        </div>
+        <AnimatePresence mode="popLayout" initial={false}>
+          <motion.ul
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 0.1 } }}
+            role="list"
+            className="flex flex-col"
+          >
+            {sections.map((section: any) => (
+              <NavigationGroup key={section.id} section={section} />
+            ))}
+          </motion.ul>
+        </AnimatePresence>
+      </motion.div>
+    </>
   );
 }

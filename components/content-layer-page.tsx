@@ -1,4 +1,4 @@
-import * as Vault from "@/components/vault";
+import * as Vault from "@/components/vault-components";
 import VaultLayout from "@/layouts/vault";
 import { get } from "lodash";
 import { useMDXComponent } from "next-contentlayer/hooks";
