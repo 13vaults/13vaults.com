@@ -5,8 +5,7 @@ import clsx from "clsx";
 import { AnimatePresence, useIsPresent, motion } from "framer-motion";
 import { get } from "lodash";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { MouseEvent, ReactNode, useCallback, useEffect } from "react";
+import { ReactNode, useCallback } from "react";
 import { useSectionStore } from "./section-provider";
 
 function NavLink({
@@ -18,18 +17,11 @@ function NavLink({
   active?: boolean;
   children: ReactNode;
 }) {
-  const router = useRouter();
-
   const handleClick = useCallback((e: any) => {
     const hash = get(e, "target.hash");
     const el = document.querySelector(hash);
     if (el) {
       e.preventDefault();
-      history.replaceState(
-        "",
-        document.title,
-        window.location.pathname + window.location.search + hash
-      );
       el.scrollIntoView({ smooth: true });
     }
   }, []);
@@ -112,11 +104,6 @@ export default function CompendiumSideNav({
       top: 0,
       behavior: "smooth",
     });
-    history.replaceState(
-      "",
-      document.title,
-      window.location.pathname + window.location.search
-    );
   }, []);
 
   return (
