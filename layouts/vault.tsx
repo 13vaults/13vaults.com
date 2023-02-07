@@ -44,11 +44,11 @@ export default function VaultLayout({
           </aside>
           <main className="xl:col-start-4 xl:col-end-13 flex flex-col ">
             <article
-              className="prose prose-sm prose-h1:my-0 prose-h2:mt-4 prose-p:text-justify max-w-none
-                         prose-headings:font-serif prose-lead:leading-normal prose-lead:font-display prose-table:my-2
+              className="prose prose-sm prose-h1:my-0 prose-h2:mt-8 prose-p:text-justify max-w-none
+                         prose-headings:font-serif prose-lead:leading-normal prose-lead:font-serif prose-table:my-2
                          prose-blockquote:border-teal-500 prose-blockquote:bg-white dark:prose-blockquote:bg-stone-800
-                         dark:prose-blockquote:text-white prose-blockquote:font-serif prose-blockquote:shadow-md
-                         prose-th:font-display prose-th:font-medium prose-table:whitespace-nowrap
+                         dark:prose-blockquote:text-white prose-blockquote:font-serif prose-blockquote:shadow-md prose-h2:text-2xl lg:prose-h2:text-3xl
+                         prose-th:font-display prose-th:font-medium prose-table:whitespace-nowrap prose-h2:border-b-2 prose-h2:border-stone-300 dark:prose-h2:border-stone-600
                          prose-th:p-2 prose-thead:shadow-sm prose-th:align-bottom prose-thead:bg-white dark:prose-thead:bg-stone-800
                          prose-blockquote:pr-6 dark:prose-invert dark:prose-tr:border-stone-800 dark:prose-thead:border-stone-900
                          prose-teal prose-table:bg-stone-50 dark:prose-table:bg-stone-900 prose-td:px-2 even:prose-tr:bg-stone-100 dark:even:prose-tr:bg-stone-800"

@@ -27,6 +27,7 @@ export default function ContentLayerPage({
   const quote = get(pageDress, "quote");
   const title = `${primaryLabel} - 13 Vaults`;
   const sections = get(data, "sections", []);
+  const lead = get(pageDress, "lead");
   return (
     <>
       <Head>
@@ -49,7 +50,8 @@ export default function ContentLayerPage({
               <figcaption>&ndash; {quote.cite}</figcaption>
             </figure>
           ) : null}
-          <hr className="my-8 dark:border-stone-700" />
+          <hr className="my-8 border-stone-300 dark:border-stone-700" />
+          {lead ? <p className="lead text-lg">{lead}</p> : null}
           <Content
             data={data}
             components={{
