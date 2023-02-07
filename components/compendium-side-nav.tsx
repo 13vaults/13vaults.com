@@ -124,7 +124,7 @@ export default function CompendiumSideNav({
   return (
     <>
       <motion.div layout="position">
-        <AnimatePresence initial={false}>
+        <AnimatePresence initial={true}>
           <VisibleSectionHighlight />
         </AnimatePresence>
         <div className="flex justify-between items-center">
