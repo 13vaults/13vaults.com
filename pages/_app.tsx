@@ -45,7 +45,7 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
         {process.env.NODE_ENV === "production" ? (
           <link rel="preload" as="script" href="/pa/js/pa.js" />
         ) : null}
-        <title>13 Vaults: A 13th Age Reference Site</title>
+        <title>13 Vaults</title>
         <meta
           name="description"
           content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
