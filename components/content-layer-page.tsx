@@ -79,9 +79,9 @@ export default function ContentLayerPage({
                   {children}
                 </Heading>
               ),
-              table: ({ children }: any) => (
+              table: (props: any) => (
                 <div className="overflow-auto">
-                  <table>{children}</table>
+                  <table {...props} />
                 </div>
               ),
             }}
