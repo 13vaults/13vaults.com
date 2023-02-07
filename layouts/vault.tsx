@@ -23,11 +23,6 @@ export default function VaultLayout({
       top: 0,
       behavior: "smooth",
     });
-    history.replaceState(
-      "",
-      document.title,
-      window.location.pathname + window.location.search
-    );
   }, []);
 
   return (

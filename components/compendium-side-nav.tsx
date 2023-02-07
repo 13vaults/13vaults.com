@@ -23,11 +23,6 @@ function NavLink({
     const el = document.querySelector(hash);
     if (el) {
       e.preventDefault();
-      history.replaceState(
-        "",
-        document.title,
-        window.location.pathname + window.location.search + hash
-      );
       el.scrollIntoView({ smooth: true });
     }
   }, []);
@@ -110,11 +105,6 @@ export default function CompendiumSideNav({
       top: 0,
       behavior: "smooth",
     });
-    history.replaceState(
-      "",
-      document.title,
-      window.location.pathname + window.location.search
-    );
   }, []);
 
   return (
