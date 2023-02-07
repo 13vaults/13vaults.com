@@ -1,5 +1,7 @@
 # 13Vaults
 
+[![Deployment Status](https://img.shields.io/github/deployments/13vaults/13vaults.com/production?label=Production)](https://github.com/13vaults/13vaults.com/deployments/activity_log?environment=Production)
+
 An unofficial, community-driven resource for the 13th Age RPG.
 
 ## License Information
