@@ -5,7 +5,6 @@ import clsx from "clsx";
 import { AnimatePresence, useIsPresent, motion } from "framer-motion";
 import { get } from "lodash";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { ReactNode, useCallback } from "react";
 import { useSectionStore } from "./section-provider";
 
@@ -36,6 +35,7 @@ function NavLink({
     <Link
       scroll={false}
       href={href}
+      prefetch={false}
       onClick={handleClick}
       aria-current={active ? "page" : undefined}
       className={clsx(
