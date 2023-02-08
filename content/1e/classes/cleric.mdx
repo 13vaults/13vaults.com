@@ -1,25 +1,206 @@
 ---
 name: Cleric
 source: 13th Age, p.92
+abilities:
+  - name: Melee Attack
+    _type: Basic Attack
+    description: |-
+      At-Will
+
+      ---
+
+      **Target:**
+      One enemy
+
+      **Attack:**
+      Strength + Level vs. AC
+
+      **Hit:**
+      WEAPON + Strength damage
+
+      **Miss:**
+      Damage equal to your level
+  - name: Ranged Attack
+    _type: Basic Attack
+    description: |-
+      At-Will
+
+      ---
+
+      **Target:** One enemy
+
+      **Attack:** Dexterity + Level vs. AC
+
+      **Hit:** WEAPON + Dexterity damage
+
+      **Miss:** —
+  - name: Heal
+    _type: Class Feature
+    description: |-
+      **Range:** Close-quarters spell
+
+      **Special:**
+      You can use this spell twice per battle.
+
+      Quick action to cast (1/round)
+
+      **Target:**
+      You or one ally you are next to
+
+      **Effect:** The target can heal using a recovery.
+    feats:
+      - tier: adventurer
+        description: The target can now be a nearby ally instead of an ally you are next to.
+      - tier: champion
+        description: If the target of your heal spell is an ally with 0 hp or below, that ally also adds hit points equal to 1d10 x your Charisma modifier to the recovery.
+      - tier: epic
+        description: When you cast heal on an ally you are next to, that ally adds +30 hp to the recovery.
+  - name: Ritual Magic
+    _type: Class Feature
+    description: Clerics can cast their spells as rituals. (See Rituals.)
+  - name: Healing
+    _type: Domain
+  - name: Justice/Vengeance
+    _type: Domain
+  - name: Knowledge/Lore
+    _type: Domain
+  - name: Life/Death
+    _type: Domain
+  - name: Love/Beauty
+    _type: Domain
+  - name: Protection/Community
+    _type: Domain
+  - name: Strength
+    _type: Domain
+  - name: Sun/Anti-Undead
+    _type: Domain
+  - name: Trickery/Illusion
+    _type: Domain
+  - name: War/Leadership
+    _type: Domain
+  - name: Bless
+    _type: Spell
+  - name: Cure Wounds
+    _type: Spell
+  - name: Hammer of Faith
+    _type: Spell
+  - name: Javelin of Faith
+    _type: Spell
+  - name: Shield of Faith
+    _type: Spell
+  - name: Spirits of the Righteous
+    _type: Spell
+  - name: Turn Undead
+    _type: Spell
+  - name: Vigilant Light
+    _type: Spell
+  - name: Cause Fear
+    _type: Spell
+  - name: Combat Boon
+    _type: Spell
+  - name: Divine Endurance
+    _type: Spell
+  - name: Judgment
+    _type: Spell
+  - name: Mighty Healing
+    _type: Spell
+  - name: Strength of the Gods
+    _type: Spell
+  - name: Crisis of Faith
+    _type: Spell
+  - name: Light of Revelation
+    _type: Spell
+  - name: Sanctuary
+    _type: Spell
+  - name: Sphere of Radiance
+    _type: Spell
+  - name: Circle of Protection
+    _type: Spell
+  - name: Divine Intervention
+    _type: Spell
+  - name: Resurrection
+    _type: Spell
+  - name: Overworld Travel
+    _type: Spell
+  - name: Prayer for Readiness
+    _type: Spell
 ---
 
 ## Ability Scores
 
+Clerics gain a +2 class bonus to Wisdom or Strength, as long as it isn’t the same ability you increase with your +2 racial bonus.
+
 ## Backgrounds
+
+Possible backgrounds include: healer, archivist, military chaplain, temple guard, bartender, reformed thief, dwarven hierophant, initiate, and bishop.
 
 ## Gear
 
+At 1st level, a cleric starts with a melee weapon, decent armor, a holy symbol, and other minor possessions suggested by their backgrounds.
+They might even have a crossbow.
+
 ### Gold Pieces
+
+Clerics may start with either 25 gp or 1d6 x 10 gp.
 
 ### Armor
 
+| Armor Type | Base AC | Atk Penalty |
+| ---------- | ------- | ----------- |
+| None       | 10      | —           |
+| Light      | 12      | —           |
+| Heavy      | 14      | —           |
+| Shield     | +1      | —           |
+
 ### Melee Weapons
+
+| &nbsp;           | One-Handed                        | Two-Handed                           |
+| ---------------- | --------------------------------- | ------------------------------------ |
+| Small            | 1d4 dagger                        | 1d6 club                             |
+| Light or Simple  | 1d6 mace, shortsword              | 1d8 spear                            |
+| Heavy or Martial | 1d8 (-2 atk) longsword, warhammer | 1d10 (–2 atk) greatsword, dire flail |
 
 ### Ranged Weapons
 
+| &nbsp;           | Thrown           | Crossbow                    | Bow                   |
+| ---------------- | ---------------- | --------------------------- | --------------------- |
+| Small            | 1d4 dagger       | 1d4 hand crossbow           | —                     |
+| Light or Simple  | 1d6 javelin, axe | 1d6 light crossbow          | 1d6 (-2 atk) shortbow |
+| Heavy or Martial | —                | 1d8 (–1 atk) heavy crossbow | 1d8 (–5 atk) longbow  |
+
 ## Level Progression
 
+| Cleric Level | Total Hit Points   | Total Feats                      | 1st level spell | 3rd level spell | 5th level spell | 7th level spell | 9th level spell | Level-up Ability Bonuses | Damage Bonus From Ability Score |
+| ------------ | ------------------ | -------------------------------- | --------------- | --------------- | --------------- | --------------- | --------------- | ------------------------ | ------------------------------- |
+| Level 1      | (7 + CON mod) x 3  | 1 adventurer                     | 4               | —               | —               | —               | —               | —                        | ability modifier                |
+| Level 2      | (7 + CON mod) x 4  | 2 adventurer                     | 5               | —               | —               | —               | —               | —                        | ability modifier                |
+| Level 3      | (7 + CON mod) x 5  | 3 adventurer                     | 2               | 3               | —               | —               | —               | —                        | ability modifier                |
+| Level 4      | (7 + CON mod) x 6  | 4 adventurer                     | 1               | 5               | —               | —               | —               | +1 to 3 abilities        | ability modifier                |
+| Level 5      | (7 + CON mod) x 8  | 4 adventurer, 1 champion         | —               | 2               | 4               | —               | —               | —                        | 2 x ability modifier            |
+| Level 6      | (7 + CON mod) x 10 | 4 adventurer, 2 champion         | —               | 1               | 6               | —               | —               | —                        | 2 x ability modifier            |
+| Level 7      | (7 + CON mod) x 12 | 4 adventurer, 3 champion         | —               | —               | 2               | 5               | —               | +1 to 3 abilities        | 2 x ability modifier            |
+| Level 8      | (7 + CON mod) x 16 | 4 adventurer, 3 champion, 1 epic | —               | —               | 1               | 7               | —               | —                        | 3 x ability modifier            |
+| Level 9      | (7 + CON mod) x 20 | 4 adventurer, 3 champion, 2 epic | —               | —               | —               | 2               | 6               | —                        | 3 x ability modifier            |
+| Level 10     | (7 + CON mod) x 24 | 4 adventurer, 3 champion, 3 epic | —               | —               | —               | 1               | 8               | +1 to 3 abilities        | 3 x ability modifier            |
+
+Although not listed on the table, this class gets three talents. It does not gain more at higher levels.
+
 ## Stats
+
+| Stat                                 | Value                                                        |
+| ------------------------------------ | ------------------------------------------------------------ |
+| Ability Bonus                        | +2 Strength or Wisdom (different from racial bonus)          |
+| Initiative                           | Dex mod + Level                                              |
+| Armor Class (heavy armor)            | 14 + middle mod of Con/Dex/Wis + Level                       |
+| Armor Class (shield and heavy armor) | 15 + middle mod of Con/Dex/Wis + Level                       |
+| Physical Defense                     | 11 + middle mod of Str/Con/Dex + Level                       |
+| Mental Defense                       | 11 + middle mod of Int/Wis/Cha + Level                       |
+| Hit Points                           | (7 + Con mod) x Level modifier (see level progression chart) |
+| Recoveries                           | 8                                                            |
+| Recovery Dice                        | (1d8 x Level) + Con mod                                      |
+| Backgrounds                          | 8 points, max 5 in any one background                        |
+| Icon Relationships                   | 3 points                                                     |
+| Talents                              | 3                                                            |
 
 ## Basic Attacks
 
@@ -29,8 +210,93 @@ source: 13th Age, p.92
 
 ## Class Features
 
+All clerics have the Ritual Magic class feature. They also receive a bonus spell: _heal_.
+
+There are certain abilities specific to the cleric that can affect their powers:
+
+- _Cast for power and cast for broad effect:_
+  The spell can be used one of two ways—either as a more powerful effect on one target (power) or as a weaker effect on multiple targets (broad).
+  Spells cast for power cannot target the caster.
+  Spells cast for broad effect can.
+- _Free recovery:_
+  The cleric can recover hit points as if they were using a recovery (without actually spending the recovery).
+- _Heal using a recovery:_
+  The character targeted with a healing effect uses one of their recoveries and rolls their own recovery dice.
+- _Invocation:_
+  A quick action that offers advantages in battle.
+  It can be made once a day.
+  More than one cleric in a party cannot use the same invocation during a battle.
+
 <Vault.AbilityList abilities={props.getAbilities([])} />
 
 ## Class Talents
 
-<Vault.AbilityList abilities={props.getAbilities([])} />
+<Vault.AbilityList
+  abilities={props.getAbilities([
+    "Healing",
+    "Justice/Vengeance",
+    "Knowledge/Lore",
+    "Life/Death",
+    "Love/Beauty",
+    "Protection/Community",
+    "Strength",
+    "Sun/Anti-Undead",
+    "Trickery/Illusion",
+    "War/Leadership",
+  ])}
+/>
+
+## 1st Level Spells
+
+<Vault.AbilityList
+  abilities={props.getAbilities([
+    "Bless",
+    "Cure Wounds",
+    "Hammer of Faith",
+    "Javelin of Faith",
+    "Shield of Faith",
+    "Spirits of the Righteous",
+    "Turn Undead",
+    "Vigilant Light",
+  ])}
+/>
+
+## 3rd Level Spells
+
+<Vault.AbilityList
+  abilities={props.getAbilities([
+    "Cause Fear",
+    "Combat Boon",
+    "Divine Endurance",
+    "Judgment",
+    "Mighty Healing",
+    "Strength of the Gods",
+  ])}
+/>
+
+## 5th Level Spells
+
+<Vault.AbilityList
+  abilities={props.getAbilities([
+    "Crisis of Faith",
+    "Light of Revelation",
+    "Sanctuary",
+    "Sphere of Radiance",
+  ])}
+/>
+
+## 7th Level Spells
+
+<Vault.AbilityList
+  abilities={props.getAbilities([
+    "Circle of Protection",
+    "Divine Intervention",
+    "Resurrection",
+  ])}
+/>
+
+## 9th Level Spells
+
+<Vault.AbilityList
+  abilities={props.getAbilities(["Overworld Travel", "Prayer for Readiness"])}
+/>

@@ -69,7 +69,7 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
             className="p-2 prose max-w-none prose-p:text-justify dark:prose-invert prose-headings:font-display
                      text-xs first:prose-p:mt-0 last:prose-p:mb-0 prose-hr:my-2 prose-p:my-2 prose-hr:border-stone-300 prose-hr:dark:border-stone-700"
           >
-            <ReactMarkdown>{ability.description}</ReactMarkdown>
+            <ReactMarkdown skipHtml>{ability.description}</ReactMarkdown>
           </div>
         ) : null}
         {ability.feats ? (
