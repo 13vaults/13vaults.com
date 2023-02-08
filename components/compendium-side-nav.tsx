@@ -3,7 +3,7 @@ import useInitialValue from "@/lib/useInitialValue";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
 import { AnimatePresence, useIsPresent, motion } from "framer-motion";
-import { get, size } from "lodash";
+import { size } from "lodash";
 import { ReactNode, useCallback } from "react";
 import { useSectionStore } from "./section-provider";
 
@@ -16,24 +16,9 @@ function NavLink({
   active?: boolean;
   children: ReactNode;
 }) {
-  const handleClick = useCallback((e: any) => {
-    const hash = get(e, "target.hash");
-    const el = document.querySelector(hash);
-    if (el) {
-      e.preventDefault();
-      history.replaceState(
-        "",
-        document.title,
-        window.location.pathname + window.location.search + hash
-      );
-      el.scrollIntoView({ smooth: true });
-    }
-  }, []);
-
   return (
     <a
       href={href}
-      onClick={handleClick}
       aria-current={active ? "page" : undefined}
       className={clsx(
         "flex justify-between gap-2 py-1 pr-3 text-sm transition",
@@ -142,18 +127,11 @@ export default function CompendiumSideNav({
         </AnimatePresence>
       </div>
       <nav role="navigation" aria-label="Side navigation">
-        <AnimatePresence mode="popLayout" initial={false}>
-          <motion.ul
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { delay: 0.1 } }}
-            role="list"
-            className="flex flex-col"
-          >
-            {sections.map((section: any) => (
-              <NavigationGroup key={section.id} section={section} />
-            ))}
-          </motion.ul>
-        </AnimatePresence>
+        <ul role="list" className="flex flex-col">
+          {sections.map((section: any) => (
+            <NavigationGroup key={section.id} section={section} />
+          ))}
+        </ul>
       </nav>
     </div>
   );

@@ -1,6 +1,6 @@
 import { Ability } from "@/.contentlayer/generated";
 import clsx from "clsx";
-import { map } from "lodash";
+import { map, size } from "lodash";
 import { ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 
@@ -9,7 +9,10 @@ interface AbilityListP {
   maxCols?: 1 | 2 | 3;
 }
 
-export default function AbilityList({ abilities, maxCols = 3 }: AbilityListP) {
+export default function AbilityList({
+  abilities,
+  maxCols = 3,
+}: AbilityListP): JSX.Element | null {
   const cols = {
     3: "sm:grid-cols-2 2xl:grid-cols-3",
     2: "sm:grid-cols-2",
@@ -18,7 +21,7 @@ export default function AbilityList({ abilities, maxCols = 3 }: AbilityListP) {
 
   const colsClasses = cols[maxCols];
 
-  if (!abilities) return null;
+  if (size(abilities) === 0) return null;
 
   return (
     <div
