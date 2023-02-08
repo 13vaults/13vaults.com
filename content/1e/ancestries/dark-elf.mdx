@@ -1,6 +1,28 @@
 ---
 name: Dark Elf
 source: 13th Age, p.66
+abilities:
+  - name: Cruel
+    description: |-
+      Once per battle, deal ongoing damage to a target you hit with a natural even attack roll as a free action.
+      The ongoing damage equals 5 times your level.
+      (For example, at 3rd level you would deal 15 ongoing damage against a single target.)
+      As usual, a normal save (11+) ends the damage.
+
+      A critical hit doesn’t double this ongoing damage.
+    feats:
+      - tier: adventurer
+        description: |-
+          Once per day, you can instead use _cruel_ to deal 5 ongoing
+          damage per level against an enemy you miss or that you roll a natural
+          odd attack against.
+  - name: Heritage of the Sword (Elf)
+    feats:
+      - tier: adventurer
+        description: |-
+          If you can already use swords that deal d6 and d8 damage without attack penalties, you gain a +2 damage bonus with them.
+          (This bonus doesn’t increase miss damage.)
+          Otherwise, if your class would ordinarily have an attack penalty with such swords, you can now use them without penalties.
 ---
 
 ## Racial Bonus
@@ -9,48 +31,10 @@ source: 13th Age, p.66
 
 ## Racial Powers
 
-<Vault.Ability.AbilityList>
-  <Vault.Ability
-    name="Cruel"
-    feats={
-      <Vault.Ability.FeatList>
-        <Vault.Ability.Feat tier="adventurer">
-          Once per day, you can instead use <em>cruel</em> to deal 5 ongoing
-          damage per level against an enemy you miss or that you roll a natural
-          odd attack against.
-        </Vault.Ability.Feat>
-      </Vault.Ability.FeatList>
-    }>
-
-Once per battle, deal ongoing damage to a target you hit with a natural even attack roll as a free action.
-The ongoing damage equals 5 times your level.
-(For example, at 3rd level you would deal 15 ongoing damage against a single target.)
-As usual, a normal save (11+) ends the damage.
-
-A critical hit doesn’t double this ongoing damage.
-
-  </Vault.Ability>
-</Vault.Ability.AbilityList>
+<Vault.AbilityList abilities={props.getAbilities(["Cruel"])} />
 
 ## Racial Feats
 
-<Vault.Ability.AbilityList>
-  <Vault.Ability
-    name="Heritage of the Sword (Elf)"
-    feats={
-      <Vault.Ability.FeatList>
-        <Vault.Ability.Feat tier="adventurer">
-
-If you can already use swords that deal d6 and d8 damage without
-attack penalties, you gain a +2 damage bonus with them. (This bonus
-doesn’t increase miss damage.) Otherwise, if your class would
-ordinarily have an attack penalty with such swords, you can now use
-them without penalties.
-
-        </Vault.Ability.Feat>
-      </Vault.Ability.FeatList>
-    }
-
+<Vault.AbilityList
+  abilities={props.getAbilities(["Heritage of the Sword (Elf)"])}
 />
-
-</Vault.Ability.AbilityList>

@@ -1,6 +1,6 @@
 import * as Vault from "@/components/vault-components";
 import VaultLayout from "@/layouts/vault";
-import { get } from "lodash";
+import { get, intersectionWith } from "lodash";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Head from "next/head";
 import VaultHeader from "./compendium-header";
@@ -56,6 +56,13 @@ export default function ContentLayerPage({
           {lead ? <p className="lead text-lg">{lead}</p> : null}
           <Content
             data={data}
+            getAbilities={(names: string[]) =>
+              intersectionWith(
+                get(data, "abilities"),
+                names,
+                (o: any, name) => o.name === name
+              )
+            }
             components={{
               Vault: Vault,
               h2: ({ id, children, ...rest }) => (

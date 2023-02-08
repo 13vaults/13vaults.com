@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-export { default as Ability } from "./compendium-ability";
+export { default as AbilityList } from "./compendium-ability";
 export { default as CompendiumFeats } from "./compendium-feats";
 
 export function Dice({ className = "", ...props }: any) {

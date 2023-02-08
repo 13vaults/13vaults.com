@@ -8,6 +8,7 @@ import {
   Vollkorn,
   Vollkorn_SC,
 } from "@next/font/google";
+import { useLiveReload } from "next-contentlayer/hooks";
 
 const barlowSemiCondensed = Barlow_Semi_Condensed({
   subsets: ["latin"],
@@ -38,6 +39,8 @@ const vollkornSc = Vollkorn_SC({
 });
 
 export default function VaultsApp({ Component, pageProps }: AppProps) {
+  useLiveReload();
+
   return (
     <>
       <Head>

@@ -39,6 +39,33 @@ const PageDress = defineNestedType(() => ({
   },
 }));
 
+const Feat = defineNestedType(() => ({
+  name: "Feat",
+  fields: {
+    tier: {
+      type: "enum",
+      options: ["adventurer", "champion", "epic"],
+      required: true,
+    },
+    description: { type: "string", required: true },
+  },
+}));
+
+const Ability = defineNestedType(() => ({
+  name: "Ability",
+  fields: {
+    name: { type: "string", required: true },
+    _type: { type: "string", required: false },
+    usage: {
+      type: "enum",
+      options: ["at-will", "per-day", "recharge", "per-battle"],
+      required: false,
+    },
+    description: { type: "string", required: false },
+    feats: { type: "list", of: Feat, required: false },
+  },
+}));
+
 const BasicPage = defineDocumentType(() => ({
   name: "BasicPage",
   filePathPattern: "pages/*.mdx",
@@ -96,6 +123,7 @@ const Ancestry = defineDocumentType(() => ({
     name: { type: "string", required: true },
     source: { type: "string", required: true },
     page_dress: { type: "nested", of: PageDress, required: false },
+    abilities: { type: "list", of: Ability, required: false },
   },
   computedFields: {
     slug: {
@@ -114,6 +142,7 @@ const ClassItem = defineDocumentType(() => ({
     name: { type: "string", required: true },
     source: { type: "string", required: true },
     page_dress: { type: "nested", of: PageDress, required: false },
+    abilities: { type: "list", of: Ability, required: true },
   },
   computedFields: {
     slug: {

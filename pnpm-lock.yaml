@@ -29,6 +29,7 @@ specifiers:
   postcss: ^8.4.21
   react: 18.2.0
   react-dom: 18.2.0
+  react-markdown: ^8.0.5
   rehype-slug: ^5.1.0
   remark-gfm: ^3.0.1
   tailwindcss: ^3.2.4
@@ -68,6 +69,7 @@ devDependencies:
   next-compose-plugins: 2.2.1
   next-image-export-optimizer: 1.2.0_next@13.1.6+react@18.2.0
   postcss: 8.4.21
+  react-markdown: 8.0.5_3stiutgnnbnfnf3uowm5cip22i
   rehype-slug: 5.1.0
   remark-gfm: 3.0.1
   tailwindcss: 3.2.4_postcss@8.4.21
@@ -4091,7 +4093,6 @@ packages:
   /object-assign/4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
-    dev: false
 
   /object-hash/3.0.0:
     resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}
@@ -4392,7 +4393,6 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
-    dev: false
 
   /property-information/6.2.0:
     resolution: {integrity: sha512-kma4U7AFCTwpqq5twzC1YVIDXSqg6qQK6JN0smOw8fgRy1OkMi0CYSzFmsy6dnqSenamAtj0CyXMUJ1Mf6oROg==}
@@ -4482,7 +4482,37 @@ packages:
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
-    dev: false
+
+  /react-is/18.2.0:
+    resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+    dev: true
+
+  /react-markdown/8.0.5_3stiutgnnbnfnf3uowm5cip22i:
+    resolution: {integrity: sha512-jGJolWWmOWAvzf+xMdB9zwStViODyyFQhNB/bwCerbBKmrTmgmA599CGiOlP58OId1IMoIRsA8UdI1Lod4zb5A==}
+    peerDependencies:
+      '@types/react': '>=16'
+      react: '>=16'
+    dependencies:
+      '@types/hast': 2.3.4
+      '@types/prop-types': 15.7.5
+      '@types/react': 18.0.27
+      '@types/unist': 2.0.6
+      comma-separated-tokens: 2.0.3
+      hast-util-whitespace: 2.0.1
+      prop-types: 15.8.1
+      property-information: 6.2.0
+      react: 18.2.0
+      react-is: 18.2.0
+      remark-parse: 10.0.1
+      remark-rehype: 10.1.0
+      space-separated-tokens: 2.0.2
+      style-to-object: 0.4.1
+      unified: 10.1.2
+      unist-util-visit: 4.1.2
+      vfile: 5.3.6
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
