@@ -3,7 +3,7 @@ import useInitialValue from "@/lib/useInitialValue";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
 import { AnimatePresence, useIsPresent, motion } from "framer-motion";
-import { get } from "lodash";
+import { get, size } from "lodash";
 import { ReactNode, useCallback } from "react";
 import { useSectionStore } from "./section-provider";
 
@@ -81,7 +81,7 @@ function VisibleSectionHighlight() {
       layout
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2 } }}
-      exit={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className="hidden xl:block absolute inset-x-1 top-0 bg-black/5 will-change-transform dark:bg-white/5 pointer-events-none"
       style={{ borderRadius: 3, height, top }}
     />
@@ -119,27 +119,29 @@ export default function CompendiumSideNav({
   }, []);
 
   return (
-    <>
-      <motion.div layout="position">
+    <div>
+      {size(sections) > 0 ? (
         <AnimatePresence initial={true}>
           <VisibleSectionHighlight />
         </AnimatePresence>
-        <div className="flex justify-between items-center">
-          <p className="font-medium font-display text-xl m-2">{primaryLabel}</p>
-          <AnimatePresence>
-            {isAtTop ? null : (
-              <motion.button
-                onClick={handleScrollToTop}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="hidden relative xl:flex gap-1 items-center px-2 py-1 text-xs"
-              >
-                To Top <ChevronUpIcon className="h-4 w-4" />
-              </motion.button>
-            )}
-          </AnimatePresence>
-        </div>
+      ) : null}
+      <div className="flex justify-between items-center">
+        <p className="font-medium font-display text-xl m-2">{primaryLabel}</p>
+        <AnimatePresence>
+          {size(sections) === 0 || isAtTop ? null : (
+            <motion.button
+              onClick={handleScrollToTop}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="hidden relative xl:flex gap-1 items-center px-2 py-1 text-xs"
+            >
+              To Top <ChevronUpIcon className="h-4 w-4" />
+            </motion.button>
+          )}
+        </AnimatePresence>
+      </div>
+      <nav role="navigation" aria-label="Side navigation">
         <AnimatePresence mode="popLayout" initial={false}>
           <motion.ul
             initial={{ opacity: 0 }}
@@ -152,7 +154,7 @@ export default function CompendiumSideNav({
             ))}
           </motion.ul>
         </AnimatePresence>
-      </motion.div>
-    </>
+      </nav>
+    </div>
   );
 }

@@ -6,15 +6,27 @@ import ReactMarkdown from "react-markdown";
 
 interface AbilityListP {
   abilities?: Ability[];
+  maxCols?: 1 | 2 | 3;
 }
 
-export default function AbilityList({ abilities }: AbilityListP) {
+export default function AbilityList({ abilities, maxCols = 3 }: AbilityListP) {
+  const cols = {
+    3: "sm:grid-cols-2 2xl:grid-cols-3",
+    2: "sm:grid-cols-2",
+    1: "",
+  };
+
+  const colsClasses = cols[maxCols];
+
   if (!abilities) return null;
 
   return (
     <div
       role="list"
-      className="my-4 list-none m-0 p-0 flex flex-col sm:grid sm:grid-cols-2 2xl:grid-cols-3 grid-rows-[masonry] gap-2"
+      className={clsx(
+        "my-4 list-none m-0 p-0 flex flex-col sm:grid grid-rows-[masonry] gap-4",
+        colsClasses
+      )}
     >
       {map(abilities, (ability) => (
         <div role="listitem" key={ability.name}>
@@ -35,7 +47,16 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
       role="figure"
       className="text-xs m-0 rounded shadow border border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-800"
     >
-      <header className="not-prose p-2 gap-2 shadow-sm font-display font-medium text-sm sm:text-base bg-white dark:bg-stone-700 border-b dark:text-stone-200 dark:border-stone-900 border-stone-300 rounded-t flex justify-between">
+      <header
+        className={clsx(
+          {
+            "rounded-b": !ability.description && !ability.feats,
+            "border-b": ability.description,
+            "sm:border-b": ability.description || ability.feats,
+          },
+          "not-prose p-2 gap-2 shadow-sm font-display font-medium text-sm sm:text-base bg-white dark:bg-stone-700 dark:text-stone-200 dark:border-stone-900 border-stone-300 rounded-t flex justify-between"
+        )}
+      >
         <h1 className="text-left">{ability.name}</h1>
         <h2 className="text-right ordinal">{ability._type}</h2>
       </header>
@@ -88,7 +109,7 @@ function Feat({ tier, children }: FeatP): JSX.Element {
     epic: "Epic Feat:",
   };
   return (
-    <li className="my-0 odd:bg-sky-50/100 bg-sky-200/50 dark:odd:bg-sky-900/50 dark:bg-sky-800/50 border-t sm:border-r sm:border-l sm:last:border-b dark:border-sky-900/75 border-sky-300 p-2 sm:first:rounded-t sm:last:rounded-b">
+    <li className="my-0 odd:bg-sky-50/100 bg-sky-200/50 dark:odd:bg-sky-900/50 dark:bg-sky-800/50 border-t sm:border-r sm:border-l sm:last:border-b dark:border-sky-900/75 border-sky-300 p-2 sm:first:rounded-t last:rounded-b">
       <div>
         <p className="font-bold">{tierLabels[tier]}</p>
         <div>{children}</div>

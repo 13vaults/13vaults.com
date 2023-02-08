@@ -1,0 +1,132 @@
+---
+name: Paladin
+source: 13th Age, p.110
+abilities:
+  - name: Melee Attack
+    _type: Basic Attack
+  - name: Ranged Attack
+    _type: Basic Attack
+  - name: Smite Evil
+    _type: Class Feature
+  - name: Bastion
+    _type: Talent
+  - name: Cleric Training
+    _type: Talent
+  - name: Divine Domain
+    _type: Talent
+  - name: Fearless
+    _type: Talent
+  - name: Holy Strike
+    _type: Talent
+  - name: Implacable
+    _type: Talent
+  - name: Lay on Hands
+    _type: Talent
+  - name: Paladin's Challenge
+    _type: Talent
+  - name: Path of Righteous Endeavour
+    _type: Talent
+  - name: Way of Evil Bastards
+    _type: Talent
+---
+
+## Ability Scores
+
+Paladins gain a +2 class bonus to Strength or Charisma, as long as it isn’t the same ability you increase with your +2 racial bonus.
+
+## Backgrounds
+
+Possible backgrounds include: city guardsman, combat medic, bodyguard, outlaw hunter, and inquisitor.
+
+## Gear
+
+At 1st level, a paladin starts with a melee weapon or two, a ranged weapon if they want it, armor, a shield, and standard non-magical gear that is suggested by the character’s backgrounds.
+
+### Gold Pieces
+
+Paladins may start with either 25 gp or 1d6 &times; 10 gp.
+
+### Armor
+
+| Armor Type | Base AC | Atk Penalty |
+| ---------- | ------- | ----------- |
+| None       | 10      | —           |
+| Light      | 12      | —           |
+| Heavy      | 16      | —           |
+| Shield     | +1      | —           |
+
+### Melee Weapons
+
+| &nbsp;           | One-Handed               | Two-Handed               |
+| ---------------- | ------------------------ | ------------------------ |
+| Small            | 1d4 dagger               | 1d6 club                 |
+| Light or Simple  | 1d6 scimitar, shortsword | 1d8 spear                |
+| Heavy or Martial | 1d8 longsword, battleaxe | 1d10 greatsword, halberd |
+
+### Ranged Weapons
+
+| &nbsp;           | Thrown           | Crossbow           | Bow          |
+| ---------------- | ---------------- | ------------------ | ------------ |
+| Small            | 1d4 dagger       | 1d4 hand crossbow  | —            |
+| Light or Simple  | 1d6 javelin, axe | 1d6 light crossbow | 1d6 shortbow |
+| Heavy or Martial | —                | 1d8 heavy crossbow | 1d8 longbow  |
+
+## Level Progression
+
+| paladin Level | Total Hit Points   | Total Feats                      | Class Talents | Level-up Ability Bonuses | Damage Bonus From Ability Score |
+| ------------- | ------------------ | -------------------------------- | ------------- | ------------------------ | ------------------------------- |
+| Level 1       | (8 + CON mod) x 3  | 1 adventurer                     | 3             | &nbsp;                   | ability modifier                |
+| Level 2       | (8 + CON mod) x 4  | 2 adventurer                     | 3             | &nbsp;                   | ability modifier                |
+| Level 3       | (8 + CON mod) x 5  | 3 adventurer                     | 3             | &nbsp;                   | ability modifier                |
+| Level 4       | (8 + CON mod) x 6  | 4 adventurer                     | 3             | +1 to 3 abilities        | ability modifier                |
+| Level 5       | (8 + CON mod) x 8  | 4 adventurer; 1 champion         | 4             | &nbsp;                   | 2 x ability modifier            |
+| Level 6       | (8 + CON mod) x 10 | 4 adventurer; 2 champion         | 4             | &nbsp;                   | 2 x ability modifier            |
+| Level 7       | (8 + CON mod) x 12 | 4 adventurer; 3 champion         | 4             | +1 to 3 abilities        | 2 x ability modifier            |
+| Level 8       | (8 + CON mod) x 16 | 4 adventurer; 3 champion; 1 epic | 5             | &nbsp;                   | 3 x ability modifier            |
+| Level 9       | (8 + CON mod) x 20 | 4 adventurer; 3 champion; 2 epic | 5             | &nbsp;                   | 3 x ability modifier            |
+| Level 10      | (8 + CON mod) x 24 | 4 adventurer; 3 champion; 3 epic | 5             | +1 to 3 abilities        | 3 x ability modifier            |
+
+## Stats
+
+| Stat                                 | Value                                                        |
+| ------------------------------------ | ------------------------------------------------------------ |
+| Ability Bonus                        | +2 Strength or Charisma (different from racial bonus)        |
+| Initiative                           | Dex mod + Level                                              |
+| Armor Class (heavy armor)            | 16 + middle mod of Con/Dex/Wis + Level                       |
+| Armor Class (shield and heavy armor) | 17 + middle mod of Con/Dex/Wis + Level                       |
+| Physical Defense                     | 10 + middle mod of Str/Con/Dex + Level                       |
+| Mental Defense                       | 12 + middle mod of Int/Wis/Cha + Level                       |
+| hit points                           | (8 + Con mod) x Level modifier (see level progression chart) |
+| Recoveries                           | 8                                                            |
+| Recovery Dice                        | (1d10 x Level) + Con mod                                     |
+| Backgrounds                          | 8 points, max 5 in any one background                        |
+| Icon Relationships                   | 3 points                                                     |
+| Talents                              | 3 (see level progression chart)                              |
+| Feats                                | 1 per Level                                                  |
+
+## Basic Attacks
+
+<Vault.AbilityList
+  abilities={props.getAbilities(["Melee Attack", "Ranged Attack"])}
+/>
+
+## Class Features
+
+<Vault.AbilityList abilities={props.getAbilities(["Smite Evil"])} />
+
+## Class Talents
+
+<Vault.AbilityList
+  abilities={props.getAbilities([
+    "Bastion",
+    "Cleric Training",
+    "Divine Domain",
+    "Fearless",
+    "Holy Strike",
+    "Implacable",
+    "Lay on Hands",
+    "Paladin's Challenge",
+    "Path of Righteous Endeavour",
+    "Way of Evil Bastards",
+  ])}
+/>
