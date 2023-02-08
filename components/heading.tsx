@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import Link from "next/link";
 import { ReactNode, SVGProps, useEffect, useRef } from "react";
 import { useSectionStore } from "./section-provider";
 
@@ -38,7 +37,7 @@ export default function Heading({
     if (level === 2) {
       registerHeading({ id, ref, offsetRem: 10 });
     }
-  }, [{ id, level, registerHeading }]);
+  }, [id, level, registerHeading]);
 
   const { className, ...restHeadingProps } = headingProps;
 
