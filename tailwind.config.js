@@ -16,7 +16,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
         display: [
-          "var(--font-barlow-condensed)",
+          "var(--font-barlow-semi-condensed)",
           ...defaultTheme.fontFamily.sans,
         ],
         serif: ["var(--font-vollkorn)", ...defaultTheme.fontFamily.serif],

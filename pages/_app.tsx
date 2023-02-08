@@ -3,13 +3,13 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import PlausibleProvider from "next-plausible";
 import {
-  Barlow_Condensed,
+  Barlow_Semi_Condensed,
   Inter,
   Vollkorn,
   Vollkorn_SC,
 } from "@next/font/google";
 
-const barlowCondensed = Barlow_Condensed({
+const barlowSemiCondensed = Barlow_Semi_Condensed({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
@@ -54,7 +54,7 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
       <style jsx global>{`
         :root {
           --font-inter: ${inter.style.fontFamily};
-          --font-barlow-condensed: ${barlowCondensed.style.fontFamily};
+          --font-barlow-semi-condensed: ${barlowSemiCondensed.style.fontFamily};
           --font-vollkorn: ${vollkorn.style.fontFamily};
           --font-vollkorn-sc: ${vollkornSc.style.fontFamily};
         }
