@@ -48,7 +48,7 @@ export default function BasicLayout({
               </p>
               <div className="flex gap-1 flex-1 justify-center">
                 <p>
-                  <Link href="/privacy/">Privacy Policty.</Link>
+                  <Link href="/privacy/">Privacy Policy.</Link>
                 </p>
                 <span>&middot;</span>
                 <p>

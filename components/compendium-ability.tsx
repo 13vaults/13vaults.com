@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { map } from "lodash";
 import { Children, ReactNode } from "react";
 
@@ -48,13 +49,9 @@ function Feat({ tier, children }: FeatP): JSX.Element {
 interface CompendiumAbilityP {
   name: string;
   type?: string;
-  children: ReactNode;
+  children?: ReactNode;
   feats?: ReactNode;
   usage?: "at-will" | "daily" | "recharge" | "battle";
-}
-
-export function CompendiumAbilityList(): JSX.Element | null {
-  return null;
 }
 
 export default function CompendiumAbility({
@@ -73,14 +70,20 @@ export default function CompendiumAbility({
         <h2 className="text-right ordinal">{type}</h2>
       </header>
       <div className="rounded-b flex-col">
-        <div
-          className="p-2 prose max-w-none prose-p:text-justify dark:prose-invert prose-headings:font-display
+        {children ? (
+          <div
+            className="p-2 prose max-w-none prose-p:text-justify dark:prose-invert prose-headings:font-display
                      text-xs first:prose-p:mt-0 last:prose-p:mb-0 prose-hr:my-2 prose-p:my-2 prose-hr:border-stone-300 prose-hr:dark:border-stone-700"
-        >
-          {children}
-        </div>
+          >
+            {children}
+          </div>
+        ) : null}
         {feats ? (
-          <div className="not-prose sm:rounded sm:px-2 sm:pb-2 mt-0">
+          <div
+            className={clsx("not-prose sm:rounded sm:px-2 sm:pb-2 mt-0", {
+              "pt-0 sm:pt-2": !children,
+            })}
+          >
             <FeatList>{feats}</FeatList>
           </div>
         ) : null}
