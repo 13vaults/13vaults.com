@@ -70,9 +70,9 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
 
 function FeatList({ children }: { children: ReactNode }) {
   return (
-    <ol role="list" className="flex flex-col rounded sm:shadow-sky-900">
+    <ul role="list" className="flex flex-col rounded sm:shadow-sky-900">
       {children}
-    </ol>
+    </ul>
   );
 }
 
