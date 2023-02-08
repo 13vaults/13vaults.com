@@ -4,7 +4,6 @@ import { ChevronUpIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
 import { AnimatePresence, useIsPresent, motion } from "framer-motion";
 import { get } from "lodash";
-import Link from "next/link";
 import { ReactNode, useCallback } from "react";
 import { useSectionStore } from "./section-provider";
 
@@ -32,10 +31,8 @@ function NavLink({
   }, []);
 
   return (
-    <Link
-      scroll={false}
+    <a
       href={href}
-      prefetch={false}
       onClick={handleClick}
       aria-current={active ? "page" : undefined}
       className={clsx(
@@ -45,7 +42,7 @@ function NavLink({
       )}
     >
       <span className="pointer-events-none truncate">{children}</span>
-    </Link>
+    </a>
   );
 }
 
