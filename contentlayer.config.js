@@ -113,7 +113,7 @@ const ClassItem = defineDocumentType(() => ({
   fields: {
     name: { type: "string", required: true },
     source: { type: "string", required: true },
-    page_dress: { type: "nested", of: PageDress, required: true },
+    page_dress: { type: "nested", of: PageDress, required: false },
   },
   computedFields: {
     slug: {

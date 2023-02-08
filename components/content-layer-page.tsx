@@ -50,7 +50,9 @@ export default function ContentLayerPage({
               <figcaption>&ndash; {quote.cite}</figcaption>
             </figure>
           ) : null}
-          <hr className="my-8 border-stone-300 dark:border-stone-700" />
+          {pageDress ? (
+            <hr className="my-8 border-stone-300 dark:border-stone-700" />
+          ) : null}
           {lead ? <p className="lead text-lg">{lead}</p> : null}
           <Content
             data={data}
