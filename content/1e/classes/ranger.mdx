@@ -1,25 +1,160 @@
 ---
 name: Ranger
 source: 13th Age, p.116
+abilities:
+  - name: Melee Attack
+    _type: Basic Attack
+  - name: Ranged Attack
+    _type: Basic Attack
+  - name: Animal Companion
+    _type: Talent
+  - name: Archery
+    _type: Talent
+  - name: Double Melee Attack
+    _type: Talent
+  - name: Double Ranged Attack
+    _type: Talent
+  - name: Favored Enemy
+    _type: Talent
+  - name: Fey Queen's Enchantments
+    _type: Talent
+  - name: First Strike
+    _type: Talent
+  - name: Green Bandit's Secret
+    _type: Talent
+  - name: Lethal Hunter
+    _type: Talent
+  - name: Ranger ex Cathedral
+    _type: Talent
+  - name: Ranger's Pet
+    _type: Talent
+  - name: Tracker
+    _type: Talent
+  - name: Two Weapon Mastery
+    _type: Talent
+  - name: Bear
+    _type: Animal Companion
+    description: |-
+      _(also Giant Badger, Wolverine)_
+  - name: Boar
+    _type: Animal Companion
+    description: |-
+      _(also Spiky Lizard)_
+  - name: Eagle
+    _type: Animal Companion
+    description: |-
+      _(also Falcon, Hawk, Owl, Vulture)_
+  - name: Panther
+    _type: Animal Companion
+    description: |-
+      _(also Lion, Tiger)_
+  - name: Snake
+    _type: Animal Companion
+    description: |-
+      _(also Giant Spider, Poison Toad)_
+  - name: Wolf
+    _type: Animal Companion
+    description: |-
+      _(also Big Dog, Coyote, Hyena, Jackal)_
+  - name: Animal Companion Feats
+    description: |-
+      Ranger animal companion feats are designed so that they do not build on each other.
+      Unlike other feats, you don't have to take animal companion feats progressively, one after the other as long as you qualify for the correct tier.
+    feats:
+      - tier: adventurer
+        description: Once per day, your animal companion can attack twice in a round with a standard action.
+      - tier: adventurer
+        description: Once per battle, your animal companion can turn a disengage success by an enemy it is engaged with into a failure.
+      - tier: adventurer
+        description: Once per day, reroll one of your animal companion's missed attack rolls.
+      - tier: adventurer
+        description: Your animal companion adds the escalation die to its attacks.
+      - tier: champion
+        description: Once per day, your animal companion can force an enemy to reroll an attack that hit it.
+      - tier: champion
+        description: Your Lethal Hunter talent also applies to your animal companion.
+      - tier: champion
+        description: Increase your animal companion's Physical Defense and Mental Defense by +1.
+      - tier: epic
+        description: Increase your animal companion's damage die by one size (for example, from d6s to d8s, or d8s to d10s)
+      - tier: epic
+        description: Increase your animal companion's AC by +1.
 ---
 
 ## Ability Scores
 
+Rangers gain a +2 class bonus to Dexterity or Strength, as long as it isn't the same ability you increase with your +2 racial bonus.
+
 ## Backgrounds
+
+Possible backgrounds include: trackers, bounty hunters, beast slayers, woodsy assassins, orc slayers, and wanderers.
 
 ## Gear
 
+At 1st level, a ranger starts with light armor, a melee weapon or two, a ranged weapon or two, and other mundane gear as suggested by their backgrounds.
+
 ### Gold Pieces
+
+Rangers may start with either 25 gp or 1d6 x 10 gp.
 
 ### Armor
 
+| Armor Type | Base AC | Atk Penalty |
+| ---------- | ------- | ----------- |
+| None       | 10      | —           |
+| Light      | 14      | —           |
+| Heavy      | 15      | -2          |
+| Shield     | +1      | -2          |
+
 ### Melee Weapons
+
+| &nbsp;           | One-Handed               | Two-Handed                |
+| ---------------- | ------------------------ | ------------------------- |
+| Small            | 1d4 dagger               | 1d6 club                  |
+| Light or Simple  | 1d6 shortsword, hand axe | 1d8 spear                 |
+| Heavy or Martial | 1d8 longsword, warhammer | 1d10 greatsword, greataxe |
 
 ### Ranged Weapons
 
+| &nbsp;           | Thrown           | Crossbow           | Bow          |
+| ---------------- | ---------------- | ------------------ | ------------ |
+| Small            | 1d4 dagger       | 1d4 hand crossbow  | —            |
+| Light or Simple  | 1d6 javelin, axe | 1d6 light crossbow | 1d6 shortbow |
+| Heavy or Martial | —                | 1d8 heavy crossbow | 1d8 longbow  |
+
 ## Level Progression
 
+| Ranger Level | Total Hit Points   | Total Feats                      | Class Talents | Level-up Ability Bonuses | Damage Bonus From Ability Score |
+| ------------ | ------------------ | -------------------------------- | ------------- | ------------------------ | ------------------------------- |
+| Level 1      | (7 + CON mod) x 3  | 1 adventurer                     | 3             | &nbsp;                   | ability modifier                |
+| Level 2      | (7 + CON mod) x 4  | 2 adventurer                     | 3             | &nbsp;                   | ability modifier                |
+| Level 3      | (7 + CON mod) x 5  | 3 adventurer                     | 3             | &nbsp;                   | ability modifier                |
+| Level 4      | (7 + CON mod) x 6  | 4 adventurer                     | 3             | +1 to 3 abilities        | ability modifier                |
+| Level 5      | (7 + CON mod) x 8  | 4 adventurer; 1 champion         | 4             | &nbsp;                   | 2 x ability modifier            |
+| Level 6      | (7 + CON mod) x 10 | 4 adventurer; 2 champion         | 4             | &nbsp;                   | 2 x ability modifier            |
+| Level 7      | (7 + CON mod) x 12 | 4 adventurer; 3 champion         | 4             | +1 to 3 abilities        | 2 x ability modifier            |
+| Level 8      | (7 + CON mod) x 16 | 4 adventurer; 3 champion; 1 epic | 5             | &nbsp;                   | 3 x ability modifier            |
+| Level 9      | (7 + CON mod) x 20 | 4 adventurer; 3 champion; 2 epic | 5             | &nbsp;                   | 3 x ability modifier            |
+| Level 10     | (7 + CON mod) x 24 | 4 adventurer; 3 champion; 3 epic | 5             | +1 to 3 abilities        | 3 x ability modifier            |
+
 ## Stats
+
+Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are level dependent.
+
+| Stat                      | Value                                                           |
+| ------------------------- | --------------------------------------------------------------- |
+| Ability Bonus             | +2 Strength, Dexterity, or Wisdom (different from racial bonus) |
+| Initiative                | Dex mod + Level                                                 |
+| Armor Class (light armor) | 14 + middle mod of Con/Dex/Wis + Level                          |
+| Physical Defense          | 11 + middle mod of Str/Con/Dex + Level                          |
+| Mental Defense            | 10 + middle mod of Int/Wis/Cha + Level                          |
+| Hit Points                | (7 + Con mod) x Level modifier (see level progression chart)    |
+| Recoveries                | 8                                                               |
+| Recovery Dice             | (1d8 x Level) + Con mod                                         |
+| Backgrounds               | 8 points, max 5 in any one background                           |
+| Icon Relationships        | 3 points                                                        |
+| Talents                   | 3 (see level progression chart)                                 |
+| Feats                     | 1 per Level                                                     |
 
 ## Basic Attacks
 
@@ -27,10 +162,99 @@ source: 13th Age, p.116
   abilities={props.getAbilities(["Melee Attack", "Ranged Attack"])}
 />
 
-## Class Features
-
-<Vault.AbilityList abilities={props.getAbilities([])} />
-
 ## Class Talents
 
-<Vault.AbilityList abilities={props.getAbilities([])} />
+<Vault.AbilityList
+  abilities={props.getAbilities([
+    "Animal Companion",
+    "Archery",
+    "Double Melee Attack",
+    "Double Ranged Attack",
+    "Favored Enemy",
+    "Fey Queen's Enchantments",
+    "First Strike",
+    "Green Bandit's Secret",
+    "Lethal Hunter",
+    "Ranger ex Cathedral",
+    "Ranger's Pet",
+    "Tracker",
+    "Two Weapon Mastery",
+  ])}
+/>
+
+## Animal Companion Rules
+
+You have a devoted animal companion who fights alongside you like a member of your adventuring party.
+
+### Recoveries
+
+Add two recoveries to your total recoveries. You can use a recovery on yourself or your animal companion.
+
+### Actions
+
+Your animal companion acts on your initiative turn, either immediately before or after you, depending on the animal type.
+
+Your animal companion moves gets a move action and a standard action, but not a quick action.
+
+If you have powers that care about the 'first time you attack an enemy,' an attack by your animal companion counts as your attack.
+
+### Animal Harm
+
+Your animal companion can be healed like an ally.
+If it gets healed without you being healed, it uses one of your recoveries. When you use a recovery while next to your animal companion (including being engaged with the same enemy), your animal companion is also healed using a free recovery.
+
+Instead of dying like a monster or NPC at 0 hp, your animal companion follows PC rules for falling unconscious at 0 hp and dying after four failed death saves or when its negative hit points equal half its normal hit points.
+If your animal companion dies, you can summon another one.
+If you're still on the same adventure, you can call a new animal companion the next day, but it will be one level lower than an animal companion would normally be.
+At the start of a new adventure, or when you gain a level, bump the companion up to its proper level.
+
+### Stats &amp; Levels
+
+Each animal companion has roughly the same base stats as listed below.
+
+Your animal companion is always one level lower than you.
+As a 1st level ranger, you'll have a level 0 animal companion.
+Once you gain a level, your animal companion rises to 1st level.
+
+On top of the base stats, each type of animal has a zoologically appropriate power or advantage.
+
+### Companion Bonuses
+
+Each type of animal companion is a little different.
+
+<Vault.AbilityList
+  abilities={props.getAbilities([
+    "Bear",
+    "Boar",
+    "Eagle",
+    "Panther",
+    "Snake",
+    "Wolf",
+  ])}
+/>
+
+### Baseline Stats
+
+Use the following stats as the baseline for your animal companion. Remember that your companion stays a level lower than you.
+Generally your companion's Physical Defense should be higher than its Mental Defense, but you could flip that if you have a good explanation.
+
+| Level | Attack     | Damage | AC  | PD (or MD) | MD (or PD) | HP        |
+| ----- | ---------- | ------ | --- | ---------- | ---------- | --------- |
+| 0     | +5 vs. AC  | d8     | 16  | 14         | 10         | 20 (10)   |
+| 1     | +6 vs. AC  | d10    | 17  | 15         | 11         | 27 (13)   |
+| 2     | +7 vs. AC  | 2d6    | 18  | 16         | 12         | 36 (18)   |
+| 3     | +9 vs. AC  | 3d6    | 19  | 17         | 13         | 45 (22)   |
+| 4     | +10 vs. AC | 4d6    | 21  | 19         | 15         | 54 (27)   |
+| 5     | +11 vs. AC | 5d6    | 22  | 20         | 16         | 72 (36)   |
+| 6     | +13 vs. AC | 6d6    | 23  | 21         | 17         | 90 (45)   |
+| 7     | +14 vs. AC | 7d6    | 25  | 23         | 19         | 108 (54)  |
+| 8     | +15 vs. AC | 8d6    | 26  | 24         | 20         | 144 (72)  |
+| 9     | +17 vs. AC | 9d6    | 27  | 25         | 21         | 180 (90)  |
+| 10    | +18 vs. AC | 10d6   | 28  | 26         | 22         | 216 (108) |
+
+### Animal Companion Feats
+
+<Vault.AbilityList
+  abilities={props.getAbilities(["Animal Companion Feats"])}
+  maxCols={1}
+/>
