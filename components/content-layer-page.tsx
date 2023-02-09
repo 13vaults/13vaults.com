@@ -1,6 +1,6 @@
 import * as Vault from "@/components/vault-components";
 import VaultLayout from "@/layouts/vault";
-import { filter, get, intersectionWith } from "lodash";
+import { filter, get, includes, intersectionWith } from "lodash";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Head from "next/head";
 import VaultHeader from "./compendium-header";
@@ -65,6 +65,11 @@ export default function ContentLayerPage({
             }
             getAbilitiesByType={(type: string) =>
               filter(get(data, "abilities"), ["_type", type])
+            }
+            getAbilitiesByTypes={(types: string[]) =>
+              filter(get(data, "abilities"), (ability) =>
+                includes(types, get(ability, "_type"))
+              )
             }
             components={{
               Vault: Vault,

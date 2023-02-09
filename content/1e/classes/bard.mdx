@@ -37,17 +37,17 @@ abilities:
   - name: We Need You!
     _type: Battle Cry 1
   - name: Song of Heroes
-    _type: Song/Spell 1
+    _type: Song 1
   - name: Song of Spilt Blood
-    _type: Song/Spell 1
+    _type: Song 1
   - name: Battle Chant
-    _type: Song/Spell 1
+    _type: Spell 1
   - name: Befuddle
-    _type: Song/Spell 1
+    _type: Spell 1
   - name: Charm Person
-    _type: Song/Spell 1
+    _type: Spell 1
   - name: Soundburst
-    _type: Song/Spell 1
+    _type: Spell 1
   - name: Hang Tough!
     _type: Battle Cry 3
   - name: It’s All Yours!
@@ -55,37 +55,37 @@ abilities:
   - name: Take Heart!
     _type: Battle Cry 3
   - name: Song of Aid
-    _type: Song/Spell 3
+    _type: Song 3
   - name: Song of Thunder
-    _type: Song/Spell 3
+    _type: Song 3
   - name: Vicious Mockery
-    _type: Song/Spell 3
+    _type: Spell 3
   - name: Wild Heal
-    _type: Song/Spell 3
+    _type: Spell 3
   - name: Stay True!
     _type: Battle Cry 5
   - name: Victory Is Ours!
     _type: Battle Cry 5
   - name: Song of Magic
-    _type: Song/Spell 5
+    _type: Song 5
   - name: Arrow of Verse
-    _type: Song/Spell 5
+    _type: Spell 5
   - name: Discombobulate
-    _type: Song/Spell 5
+    _type: Spell 5
   - name: They Fall Before Us!
     _type: Battle Cry 7
   - name: Song of Blood & Legends
-    _type: Song/Spell 7
+    _type: Song 7
   - name: Song of Victory
-    _type: Song/Spell 7
+    _type: Song 7
   - name: The Overworld Two-Step
-    _type: Song/Spell 7
+    _type: Spell 7
   - name: The Time Is Now!
     _type: Battle Cry 9
   - name: Song of Destinies
-    _type: Song/Spell 9
+    _type: Song 9
   - name: Inspire Legends
-    _type: Song/Spell 9
+    _type: Spell 9
 ---
 
 ## Ability Scores
@@ -183,7 +183,9 @@ Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are l
 
 ## 1st Level Songs & Spells
 
-<Vault.AbilityList abilities={props.getAbilitiesByType("Song/Spell 1")} />
+<Vault.AbilityList
+  abilities={props.getAbilitiesByTypes(["Song 1", "Spell 1"])}
+/>
 
 ## 3rd Level Battle Cries
 
@@ -191,7 +193,9 @@ Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are l
 
 ## 3rd Level Songs & Spells
 
-<Vault.AbilityList abilities={props.getAbilitiesByType("Song/Spell 3")} />
+<Vault.AbilityList
+  abilities={props.getAbilitiesByTypes(["Song 3", "Spell 3"])}
+/>
 
 ## 5th Level Battle Cries
 
@@ -199,7 +203,9 @@ Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are l
 
 ## 5th Level Songs & Spells
 
-<Vault.AbilityList abilities={props.getAbilitiesByType("Song/Spell 5")} />
+<Vault.AbilityList
+  abilities={props.getAbilitiesByTypes(["Song 5", "Spell 5"])}
+/>
 
 ## 7th Level Battle Cries
 
@@ -207,7 +213,9 @@ Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are l
 
 ## 7th Level Songs & Spells
 
-<Vault.AbilityList abilities={props.getAbilitiesByType("Song/Spell 7")} />
+<Vault.AbilityList
+  abilities={props.getAbilitiesByTypes(["Song 7", "Spell 7"])}
+/>
 
 ## 9th Level Battle Cries
 
@@ -215,4 +223,6 @@ Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are l
 
 ## 9th Level Songs & Spells
 
-<Vault.AbilityList abilities={props.getAbilitiesByType("Song/Spell 9")} />
+<Vault.AbilityList
+  abilities={props.getAbilitiesByTypes(["Song 9", "Spell 9"])}
+/>
