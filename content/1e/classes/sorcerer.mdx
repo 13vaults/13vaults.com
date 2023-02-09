@@ -1,36 +1,278 @@
 ---
 name: Sorcerer
 source: 13th Age, p.132
+abilities:
+  - name: Melee Attack
+    _type: Basic Attack
+  - name: Ranged Attack
+    _type: Basic Attack
+  - name: Access to Wizardry
+    _type: Class Feature
+  - name: Breath Weapon
+    _type: Class Feature
+  - name: Chain
+    _type: Class Feature
+  - name: Dancing Lights
+    _type: Class Feature
+  - name: Gather Power
+    _type: Class Feature
+    description: |-
+      Once initiative has been rolled and a battle is underway, a sorcerer can spend a standard action to gather magical power, preparing themselves for casting a double-strength spell with their next standard action.
+      Gathering power is loud and very noticeable.
+
+      Sorcerers who want to gather power before initiative has been rolled can go through the motions but won’t get any benefit from the act.
+
+      When a sorcerer gathers power, it does not count as casting a spell;
+      you can gather power without taking opportunity attacks.
+
+      In addition, because you spend your standard action to gather power, you generate a small magical benefit.
+      Like many of your powers, this benefit is chaotic rather than perfectly reliable, so you must make a random check to see what benefit you get.
+      Roll a d6 and consult the appropriate table below.
+
+      If you get a benefit that deals damage to enemies, you can choose the type of damage (cold, fire, lightning, or thunder).
+
+      ### Chaotic Benefit, Adventurer Tier (levels 1–4)
+
+      | Roll (d6) | Effect                                                           |
+      |-----------|------------------------------------------------------------------|
+      | 1-2       | You gain a +1 bonus to AC until the start of your next turn.     |
+      | 3-4       | Deal damage equal to your level to all nearby staggered enemies. |
+      | 5-6       | Deal damage equal to your level to one nearby enemy.             |
+
+      ### Chaotic Benefit, Champion Tier (levels 5–7)
+
+      | Roll (d6) | Effect                                                                                    |
+      |-----------|-------------------------------------------------------------------------------------------|
+      | 1-2       | You gain a +1 bonus to AC and Physical Defense until the start of your next turn.         |
+      | 3-4       | Deal damage equal to your level + your Charisma modifier to all nearby staggered enemies. |
+      | 5-6       | Deal damage equal to your level + your Charisma modifier to one nearby enemy.             |
+
+      ### Chaotic Benefit, Epic Tier (levels 8–10)
+
+      | Roll (d6) | Effect                                                                                          |
+      |-----------|-------------------------------------------------------------------------------------------------|
+      | 1-2       | You gain a +1 bonus to all defenses until the start of your next turn.                          |
+      | 3-4       | Deal damage equal to your level + twice your Charisma modifier to all nearby staggered enemies. |
+      | 5-6       | Deal damage equal to your level + twice your Charisma modifier to one nearby enemy.             |
+
+      After you have gathered power, you can use your next standard action to cast an empowered sorcerer spell.
+      Empowered sorcerer spells deal double the damage of a normal sorcerer spell.
+      This means that you double the damage results of the hit or a miss from the single spell.
+      Non-attack spells generally don’t improve when cast empowered; use empowered casting for attacks.
+
+      If you do not or are not able to use your next standard action to cast a sorcerer attack spell, you lose the power you’ve gathered.
+      You can use another standard action to gather power again, but the spell you eventually cast will still only do double damage.
+
+      You can spend your move actions and quick actions any way you like after you gather power and before casting your next empowered spell.
+      Yes, once a battle has started it’s possible to perform the magical firefight trick of gathering power while hiding to the side of the cave entrance, then jumping into the cave opening on your next turn and blasting with the empowered spell.
+
+      Breath weapon spells add an extra wrinkle.
+      Of course you can gather power the first time you cast a breath weapon spell in a battle.
+      Later in the fight it’s a question of whether you gathered power the turn before a breath weapon spell roll goes your way.
+      You can be all ready with gathered power but roll too low to use the breath weapon spell, forcing you to cast a different spell with the gathered power.
+
+      If you’ve gathered power for a spell that deals ongoing damage, the ongoing damage is doubled the first time it is dealt, but not on subsequent rounds, if any.
+    feats:
+      - tier: adventurer
+        description: Once per battle, you can choose the chaotic benefit you want instead of rolling for it.
+      - tier: champion
+        description: Once per battle when the escalation die is 4+, you can gather power as a quick action.
+      - tier: epic
+        description: When you gather power, if the escalation die is 2+, you can roll two chaotic benefits. Unlike most effects, the benefits stack if you roll the same result twice.
+  - name: Random Energy
+    _type: Class Feature
+    description: |-
+      Some sorcerer spells deal damage of a random type. If it matters for the situation, use a d4 to determine which type of damage the spell deals.
+
+      | Roll (d4) | Energy Type |
+      |-----------|-------------|
+      | 1         | Cold        |
+      | 2         | Fire        |
+      | 3         | Lightning   |
+      | 4         | Thunder     |
+  - name: Arcane Heritage
+    _type: Talent
+  - name: Blood Link
+    _type: Talent
+  - name: Chromatic Destroyer Heritage
+    _type: Talent
+  - name: Fey Heritage
+    _type: Talent
+  - name: Green Heritage
+    _type: Talent
+  - name: Infernal Heritage
+    _type: Talent
+  - name: Metallic Protector Heritage
+    _type: Talent
+  - name: Necroblast
+    _type: Talent
+  - name: Rumble Grumble Rumble
+    _type: Talent
+  - name: Sorcerer’s Familiar
+    _type: Talent
+  - name: Spell Fist
+    _type: Talent
+  - name: Undead Remnant Heritage
+    _type: Talent
+  - name: Breath of the White
+    _type: Spell 1
+  - name: Burning Hands
+    _type: Spell 1
+  - name: Chaos Bolt
+    _type: Spell 1
+  - name: Lightning Fork
+    _type: Spell 1
+  - name: Resist Energy
+    _type: Spell 1
+  - name: Scorching Ray
+    _type: Spell 1
+  - name: Breath of the Green
+    _type: Spell 3
+  - name: Chaos Pulse
+    _type: Spell 3
+  - name: Dragon’s Leap
+    _type: Spell 3
+  - name: Echoing Thunder
+    _type: Spell 3
+  - name: Breath of the Beast
+    _type: Spell 5
+  - name: Breath of the Black
+    _type: Spell 5
+  - name: The Elven Shadows
+    _type: Spell 5
+  - name: Three Dooms
+    _type: Spell 5
+  - name: Unearthly Glamour
+    _type: Spell 5
+  - name: Breath of the Blue
+    _type: Spell 7
+  - name: Stolen Faces
+    _type: Spell 7
+  - name: Touch of Evil
+    _type: Spell 7
+  - name: Breath of the Void
+    _type: Spell 9
+  - name: Calling the Blood
+    _type: Spell 9
+  - name: Silver Flame
+    _type: Spell 9
 ---
 
 ## Ability Scores
 
+Sorcerers gain a +2 class bonus to Charisma or Constitution, as long as it isn’t the same ability you increase with your +2 racial bonus.
+
 ## Backgrounds
+
+Possible backgrounds include: tribal shaman, pirate captain, spell-arena gladiator, failed wizard, sahuagin hunter.
 
 ## Gear
 
+At 1st level, a sorcerer usually has a simple melee weapon, a few changes of clothing, a wand or staff, and other paraphernalia suggested by their backgrounds.
+
 ### Gold Pieces
+
+Sorcerers may start with either 25 gp or 1d6 x 10 gp.
 
 ### Armor
 
+| Armor Type | Base AC | Atk Penalty |
+| ---------- | ------- | ----------- |
+| None       | 10      | —           |
+| Light      | 10      | —           |
+| Heavy      | 11      | –2          |
+| Shield     | +1      | -2          |
+
 ### Melee Weapons
+
+| &nbsp;           | One-Handed             | Two-Handed                 |
+| ---------------- | ---------------------- | -------------------------- |
+| Small            | 1d4 dagger             | 1d6 staff                  |
+| Light or Simple  | 1d6 shortsword         | 1d8 spear                  |
+| Heavy or Martial | 1d8 (-2 atk) longsword | 1d10 (-2 atk) greatsword\* |
 
 ### Ranged Weapons
 
+| &nbsp;           | Thrown      | Crossbow                      | Bow                     |
+| ---------------- | ----------- | ----------------------------- | ----------------------- |
+| Small            | 1d4 dagger  | 1d4 hand crossbow             | —                       |
+| Light or Simple  | 1d6 javelin | 1d6 (–1 atk) light crossbow\* | 1d6 (-2 atk) shortbow\* |
+| Heavy or Martial | —           | 1d8 (–3 atk) heavy crossbow\* | 1d8 (-4 atk) longbow\*  |
+
+\* A sorcerer needs one free hand to cast spells. As such, they suffer a penalty for using a two-handed weapon. (The penalty applies to spells also.)
+
 ## Level Progression
+
+| Sorcerer Level | Total Hit Points   | Total Feats                      | 1st level spell | 3rd level spell | 5th level spell | 7th level spell | 9th level spell | Level-up Ability Bonuses | Damage Bonus From Ability Score |
+| -------------- | ------------------ | -------------------------------- | --------------- | --------------- | --------------- | --------------- | --------------- | ------------------------ | ------------------------------- |
+| Level 1        | (6 + CON mod) x 3  | 1 adventurer                     | 4               | —               | —               | —               | —               | —                        | ability modifier                |
+| Level 2        | (6 + CON mod) x 4  | 2 adventurer                     | 5               | —               | —               | —               | —               | —                        | ability modifier                |
+| Level 3        | (6 + CON mod) x 5  | 3 adventurer                     | 3               | 3               | —               | —               | —               | —                        | ability modifier                |
+| Level 4        | (6 + CON mod) x 6  | 4 adventurer;                    | —               | 6               | —               | —               | —               | +1 to 3 abilities        | ability modifier                |
+| Level 5        | (6 + CON mod) x 8  | 4 adventurer; 1 champion         | —               | 3               | 4               | —               | —               | —                        | 2 x ability modifier            |
+| Level 6        | (6 + CON mod) x 10 | 4 adventurer; 2 champion         | —               | —               | 7               | —               | —               | —                        | 2 x ability modifier            |
+| Level 7        | (6 + CON mod) x 12 | 4 adventurer; 3 champion         | —               | —               | 3               | 5               | —               | +1 to 3 abilities        | 2 x ability modifier            |
+| Level 8        | (6 + CON mod) x 16 | 4 adventurer; 3 champion; 1 epic | —               | —               | —               | 8               | —               | —                        | 3 x ability modifier            |
+| Level 9        | (6 + CON mod) x 20 | 4 adventurer; 3 champion; 2 epic | —               | —               | —               | 3               | 6               | —                        | 3 x ability modifier            |
+| Level 10       | (6 + CON mod) x 24 | 4 adventurer; 3 champion; 3 epic | —               | —               | —               | —               | 9               | +1 to 3 abilities        | 3 x ability modifier            |
+
+Note: Although not listed on the table, this class gets three talents. It does not gain more at higher levels.
 
 ## Stats
 
+Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are level dependent.
+
+| Stat                      | Value                                                        |
+| ------------------------- | ------------------------------------------------------------ |
+| Ability Bonus             | +2 Charisma or Constitution (different from racial bonus)    |
+| Initiative                | Dex mod + Level                                              |
+| Armor Class (light armor) | 10 + middle mod of Con/Dex/Wis + Level                       |
+| Physical Defense          | 11 + middle mod of Str/Con/Dex + Level                       |
+| Mental Defense            | 10 + middle mod of Int/Wis/Cha + Level                       |
+| Hit Points                | (6 + Con mod) x Level modifier (see level progression chart) |
+| Recoveries                | 8                                                            |
+| Recovery Dice             | (1d6 x Level) + Con mod                                      |
+| Backgrounds               | 8 points, max 5 in any one background                        |
+| Icon Relationships        | 3 points                                                     |
+| Talents                   | 3                                                            |
+| Feats                     | 1 per Level                                                  |
+
 ## Basic Attacks
 
-<Vault.AbilityList
-  abilities={props.getAbilities(["Melee Attack", "Ranged Attack"])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Basic Attack")} />
 
 ## Class Features
 
-<Vault.AbilityList abilities={props.getAbilities([])} />
+<Vault.AbilityList
+  abilities={props.getAbilitiesByType("Class Feature")}
+  maxCols={1}
+/>
 
 ## Class Talents
 
-<Vault.AbilityList abilities={props.getAbilities([])} />
+### About Heritage Talents
+
+Sorcerers possess innate talent for magic that is impulsive and chaotic where wizardry is measured and studied.
+Most sorcerers have strong magical links to one of the icons.
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Talent")} />
+
+## 1st Level Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 1")} />
+
+## 3rd Level Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 3")} />
+
+## 5th Level Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 5")} />
+
+## 7th Level Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 7")} />
+
+## 9th Level Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 9")} />
