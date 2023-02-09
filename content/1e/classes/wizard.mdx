@@ -1,36 +1,295 @@
 ---
 name: Wizard
 source: 13th Age, p.144
+abilities:
+  - name: Cantrips
+    _type: Class Feature
+  - name: Cyclic Spells
+    _type: Class Feature
+  - name: Overworld Advantage
+    _type: Class Feature
+  - name: Ritual Magic
+    _type: Class Feature
+  - name: Abjuration
+    _type: Talent
+  - name: Cantrip Mastery
+    _type: Talent
+  - name: Destiny Manipulation
+    _type: Talent
+  - name: Evocation
+    _type: Talent
+  - name: High Arcana
+    _type: Talent
+  - name: Necroblast
+    _type: Talent
+  - name: Polysyllabic Verbalizations
+    _type: Talent
+  - name: Wizard’s Familiar
+    _type: Talent
+  - name: Feat Tiers
+  - name: Disguise Self
+    _type: Utility Spell 1
+  - name: Feather Fall
+    _type: Utility Spell 1
+  - name: Hold Portal
+    _type: Utility Spell 1
+  - name: Levitate
+    _type: Utility Spell 3
+  - name: Message
+    _type: Utility Spell 3
+  - name: Speak with Item
+    _type: Utility Spell 3
+  - name: Water Breathing
+    _type: Utility Spell 5
+  - name: Scrying
+    _type: Utility Spell 7
+  - name: Acid Arrow
+    _type: Spell 1
+  - name: Blur
+    _type: Spell 1
+  - name: Charm Person
+    _type: Spell 1
+  - name: Color Spray
+    _type: Spell 1
+  - name: Magic Missile
+    _type: Spell 1
+  - name: Ray of Frost
+    _type: Spell 1
+  - name: Shield
+    _type: Spell 1
+  - name: Shocking Grasp
+    _type: Spell 1
+  - name: Confusion
+    _type: Spell 3
+  - name: Crescendo
+    _type: Spell 3
+  - name: Force Salvo
+    _type: Spell 3
+  - name: Hold Monster
+    _type: Spell 3
+  - name: Lightning Bolt
+    _type: Spell 3
+  - name: Rebuke
+    _type: Spell 3
+  - name: Sleep
+    _type: Spell 3
+  - name: Teleport Shield
+    _type: Spell 3
+  - name: Denial
+    _type: Spell 5
+  - name: Dimension Door
+    _type: Spell 5
+  - name: Fireball
+    _type: Spell 5
+  - name: Invisibility
+    _type: Spell 5
+  - name: Blink
+    _type: Spell 7
+  - name: Flight
+    _type: Spell 7
+  - name: Haste
+    _type: Spell 7
+  - name: Invisibility Purge
+    _type: Spell 7
+  - name: Overcome Resistance
+    _type: Spell 7
+  - name: Time Travel
+    _type: Spell 7
+  - name: Transfer Enchantment
+    _type: Spell 7
+  - name: Disintegrate
+    _type: Spell 9
+  - name: Meteor Swarm
+    _type: Spell 9
+  - name: Teleport
+    _type: Spell 9
 ---
 
 ## Ability Scores
 
+Wizards gain a +2 class bonus to Intelligence or Wisdom, as long as it isn’t the same ability you increase with your +2 racial bonus.
+
 ## Backgrounds
+
+Possible backgrounds include: magical prodigy, spell thief, hedge wizard, transformed familiar, ship’s wizard, royal poisoner.
 
 ## Gear
 
+At 1st level, a wizard usually has a dagger, a robe or two, a wand, ritual components in pouches, and other minor accouterments suggested by their backgrounds.
+
 ### Gold Pieces
+
+Wizards may start with either 25 gp or 1d6 x 10 gp.
 
 ### Armor
 
+| Armor Type | Base AC | Atk Penalty |
+| ---------- | ------- | ----------- |
+| None       | 10      | —           |
+| Light      | 10      | —           |
+| Heavy      | 11      | –2          |
+| Shield     | +1      | -2          |
+
 ### Melee Weapons
+
+| &nbsp;           | One-Handed              | Two-Handed                 |
+| ---------------- | ----------------------- | -------------------------- |
+| Small            | 1d4 dagger              | 1d6 staff                  |
+| Light or Simple  | 1d6 (-2 atk) shortsword | 1d8 (-2 atk) spear\*       |
+| Heavy or Martial | 1d8 (-5 atk) longsword  | 1d10 (-5 atk) greatsword\* |
 
 ### Ranged Weapons
 
+| &nbsp;           | Thrown           | Crossbow                      | Bow                     |
+| ---------------- | ---------------- | ----------------------------- | ----------------------- |
+| Small            | 1d4 dagger       | 1d4 hand crossbow             | —                       |
+| Light or Simple  | 1d6 (-2) javelin | 1d6 (–1 atk) light crossbow\* | 1d6 (-2 atk) shortbow\* |
+| Heavy or Martial | —                | 1d8 (–4 atk) heavy crossbow\* | 1d8 (-5 atk) longbow\*  |
+
+\* A wizard needs one free hand on a spellcasting implement to cast spells.
+As such, they suffer a penalty for using a two-handed weapon.
+(The penalty applies to spells also.)
+
 ## Level Progression
+
+| Wizard Level | Total Hit Points   | Total Feats                      | 1st level spell | 3rd level spell | 5th level spell | 7th level spell | 9th level spell | Level-up Ability Bonuses |
+| ------------ | ------------------ | -------------------------------- | --------------- | --------------- | --------------- | --------------- | --------------- | ------------------------ |
+| Level 1      | (6 + CON mod) x 3  | 1 adventurer                     | 5               | —               | —               | —               | —               | —                        |
+| Level 2      | (6 + CON mod) x 4  | 2 adventurer                     | 6               | —               | —               | —               | —               | —                        |
+| Level 3      | (6 + CON mod) x 5  | 3 adventurer                     | 3               | 4               | —               | —               | —               | —                        |
+| Level 4      | (6 + CON mod) x 6  | 4 adventurer                     | 2               | 6               | —               | —               | —               | +1 to 3 abilities        |
+| Level 5      | (6 + CON mod) x 8  | 4 adventurer; 1 champion         | 1               | 4               | 4               | —               | —               | —                        |
+| Level 6      | (6 + CON mod) x 10 | 4 adventurer; 2 champion         | —               | 2               | 8               | —               | —               | —                        |
+| Level 7      | (6 + CON mod) x 12 | 4 adventurer; 3 champion         | —               | 1               | 4               | 5               | —               | +1 to 3 abilities        |
+| Level 8      | (6 + CON mod) x 16 | 4 adventurer; 3 champion; 1 epic | —               | —               | 3               | 8               | —               | —                        |
+| Level 9      | (6 + CON mod) x 20 | 4 adventurer; 3 champion; 2 epic | —               | —               | 1               | 5               | 6               | —                        |
+| Level 10     | (6 + CON mod) x 24 | 4 adventurer; 3 champion; 3 epic | —               | —               | —               | 3               | 9               | +1 to 3 abilities        |
+
+Note: Although not listed on the table, this class gets three talents. It does not gain more at higher levels.
 
 ## Stats
 
+Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are level dependent.
+
+| Stat                      | Value                                                        |
+| ------------------------- | ------------------------------------------------------------ |
+| Ability Bonus             | +2 Intelligence or Wisdom (different from racial bonus)      |
+| Initiative                | Dex mod + Level                                              |
+| Armor Class (light armor) | 10 + middle mod of Con/Dex/Wis + Level                       |
+| Physical Defense          | 10 + middle mod of Str/Con/Dex + Level                       |
+| Mental Defense            | 12 + middle mod of Int/Wis/Cha + Level                       |
+| Hit Points                | (6 + Con mod) x Level modifier (see level progression chart) |
+| Recoveries                | 8                                                            |
+| Recovery Dice             | (1d6 x Level) + Con mod                                      |
+| Backgrounds               | 8 points, max 5 in any one background                        |
+| Icon Relationships        | 3 points                                                     |
+| Talents                   | 3                                                            |
+| Feats                     | 1 per Level                                                  |
+
 ## Basic Attacks
 
-<Vault.AbilityList
-  abilities={props.getAbilities(["Melee Attack", "Ranged Attack"])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Basic Attack")} />
 
 ## Class Features
 
-<Vault.AbilityList abilities={props.getAbilities([])} />
+Wizards have four class features: Cantrips, Cyclic Spells, Overworld Advantage, and Ritual Magic.
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Class Feature")} />
 
 ## Class Talents
 
-<Vault.AbilityList abilities={props.getAbilities([])} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Talent")} />
+
+## Cantrips
+
+### Alarm (standard duration)
+
+The cantrip creates a minor watch-sprite that can be instructed to scream if someone comes through an area or touches an object.
+Watch-sprites are notoriously stupid and sleepy, but with the right talking-to they might stay focused for the duration of the spell.
+At higher levels, the spell might summon little fanged spirits buzzing back and forth serving as both visual and actual deterrents.
+
+### Arcane Mark (standard duration)
+
+The cantrip creates a magical sigil on an object or person.
+These sigils are usually plain to see, though a deliberately invisible mark can be made.
+It takes a difficult perception or magic check to notice.
+
+### Ghost Sound
+
+This spell creates false noises emanating from somewhere nearby.
+The effect is like an exceptionally good version of throwing your voice, if your voice could create a wide variety of sounds.
+Attempted distractions with the cantrip are DC 15 challenges in adventurer environments, higher as you move into champion and epic environments.
+If someone is using ghost sound against the PCs, a Wisdom-based skill check can identify the sound as a magical fake.
+
+### Knock
+
+This cantrip summons a magical servitor three to four times as big as your closed fist that swarms around the door and attempts to punch or push it open (depending on whether you want to be quiet or announce your presence).
+Success is determined with an Intelligence check against the environment’s DC using an appropriate magical background.
+This cantrip does nothing to avoid any traps that might exist.
+
+### Light (standard duration)
+
+This cantrip creates a fairly wide and consistent field of light, up to 30 feet in diameter, though it isn’t bright enough to dazzle.
+
+### Mage Hand
+
+This cantrip creates a small telekinetic effect that lasts a round at most.
+At best it’s about half as strong as the wizard’s own strongest hand.
+At worst it’s half as strong as the wizard when they’re weak from a bad fever.
+
+### Mending
+
+This cantrip summons a variety of tiny (hand-sized and smaller) magical sprites who swarm over a chosen broken object attempting to mend it (over the course of 1–6 rounds).
+Small-scale repairs like torn wineskins, muddy clothing, a broken handgrip on a sword, and similar repairs that anyone could fix with two to four hours of devoted work gets handled in seconds.
+More elaborate repairs to complicated objects might require an Intelligence check, or at the GM’s discretion could only be possible if the wizard has taken the Cantrip Mastery talent.
+
+### Prestidigitation
+
+This cantrip produces magic tricks and small illusions.
+One casting usually gives you a minute of fun.
+The magic has nowhere near as much real world force as mage hand.
+
+### Spark
+
+This is a minor fire creation spell, enough to light a pipe, or a campfire, or even a page or two of an unprotected spellbook.
+It doesn’t work against living beings or against things that couldn’t easily be set on fire with a few seconds of steady application of a candle.
+The target of the spark has to be nearby and in sight.
+
+## Utility Spell
+
+When you choose spells during a full heal-up, instead of taking a standard spell, you can choose to give up a spell slot to memorize the _utility spell_ at the same level.
+When you take the utility spell, you gain access to a range of useful non-combat spells of the level you memorized it or below.
+You cast each _utility spell_ at the level of the spell slot you gave up for it.
+You can give up multiple spell slots to take _utility spell_ multiple times.
+
+Choose from among the following utility spells:
+
+<Vault.AbilityList abilities={props.getAbilities(["Feat Tiers"])} maxCols={1} />
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Utility Spell 1")} />
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Utility Spell 3")} />
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Utility Spell 5")} />
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Utility Spell 7")} />
+
+## 1st Level Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 1")} />
+
+## 3rd Level Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 3")} />
+
+## 5th Level Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 5")} />
+
+## 7th Level Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 7")} />
+
+## 9th Level Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 9")} />
