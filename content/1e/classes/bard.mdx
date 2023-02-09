@@ -1,36 +1,218 @@
 ---
 name: Bard
 source: 13th Age, p.82
+abilities:
+  - name: Melee Attack
+    _type: Basic Attack
+  - name: Ranged Attack
+    _type: Basic Attack
+  - name: Bardic Songs
+    _type: Class Feature
+  - name: Battle Cries
+    _type: Class Feature
+  - name: Spells
+    _type: Class Feature
+  - name: Balladeer
+    _type: Talent
+  - name: Battle Skald
+    _type: Talent
+  - name: Jack of Spells
+    _type: Talent
+  - name: Loremaster
+    _type: Talent
+  - name: Mythkenner
+    _type: Talent
+  - name: Songmaster
+    _type: Talent
+  - name: Spellsinger
+    _type: Talent
+  - name: Storyteller
+    _type: Talent
+  - name: Move It!
+    _type: Battle Cry 1
+  - name: Pull It Together!
+    _type: Battle Cry 1
+  - name: Stay Strong!
+    _type: Battle Cry 1
+  - name: We Need You!
+    _type: Battle Cry 1
+  - name: Song of Heroes
+    _type: Song/Spell 1
+  - name: Song of Spilt Blood
+    _type: Song/Spell 1
+  - name: Battle Chant
+    _type: Song/Spell 1
+  - name: Befuddle
+    _type: Song/Spell 1
+  - name: Charm Person
+    _type: Song/Spell 1
+  - name: Soundburst
+    _type: Song/Spell 1
+  - name: Hang Tough!
+    _type: Battle Cry 3
+  - name: It’s All Yours!
+    _type: Battle Cry 3
+  - name: Take Heart!
+    _type: Battle Cry 3
+  - name: Song of Aid
+    _type: Song/Spell 3
+  - name: Song of Thunder
+    _type: Song/Spell 3
+  - name: Vicious Mockery
+    _type: Song/Spell 3
+  - name: Wild Heal
+    _type: Song/Spell 3
+  - name: Stay True!
+    _type: Battle Cry 5
+  - name: Victory Is Ours!
+    _type: Battle Cry 5
+  - name: Song of Magic
+    _type: Song/Spell 5
+  - name: Arrow of Verse
+    _type: Song/Spell 5
+  - name: Discombobulate
+    _type: Song/Spell 5
+  - name: They Fall Before Us!
+    _type: Battle Cry 7
+  - name: Song of Blood & Legends
+    _type: Song/Spell 7
+  - name: Song of Victory
+    _type: Song/Spell 7
+  - name: The Overworld Two-Step
+    _type: Song/Spell 7
+  - name: The Time Is Now!
+    _type: Battle Cry 9
+  - name: Song of Destinies
+    _type: Song/Spell 9
+  - name: Inspire Legends
+    _type: Song/Spell 9
 ---
 
 ## Ability Scores
 
+Bards gain a +2 class bonus to Dexterity or Charisma, as long as it isn’t the same ability you increase with your +2 racial bonus.
+
 ## Backgrounds
+
+Possible backgrounds include: wandering minstrel, cathedral musician, court jester, mercenary, tavern owner, failed hedge wizard, diplomat, spy, royal taster, caravan guide, smuggler, and battle skald.
 
 ## Gear
 
+At 1st level, bards start with non-magical musical instruments, a melee and ranged weapon of their choice, some form of light armor, and any other minor elements of gear their backgrounds suggest.
+
 ### Gold Pieces
+
+Bards may start with either 25 gp or 1d6 x 10 gp.
 
 ### Armor
 
+| Armor Type | Base AC | Atk Penalty |
+| ---------- | ------- | ----------- |
+| None       | 10      | —           |
+| Light      | 12      | —           |
+| Heavy      | 13      | –2          |
+| Shield     | +1      | –1          |
+
 ### Melee Weapons
+
+| &nbsp;           | One-Handed              | Two-Handed                           |
+| ---------------- | ----------------------- | ------------------------------------ |
+| Small            | 1d4 dagger              | 1d6 club                             |
+| Light or Simple  | 1d6 mace, shortsword    | 1d8 spear                            |
+| Heavy or Martial | 1d8 longsword, scimitar | 1d10 (–2 atk) greatsword, dire flail |
 
 ### Ranged Weapons
 
+| &nbsp;           | Thrown           | Crossbow                    | Bow                  |
+| ---------------- | ---------------- | --------------------------- | -------------------- |
+| Small            | 1d4 dagger       | 1d4 hand crossbow           | —                    |
+| Light or Simple  | 1d6 javelin, axe | 1d6 light crossbow          | 1d6 shortbow         |
+| Heavy or Martial | —                | 1d8 (–1 atk) heavy crossbow | 1d8 (–2 atk) longbow |
+
 ## Level Progression
+
+| Bard Level | Total Hit Points   | Total Feats                  | Battle Cries       | Spells & Songs, 1st level | Spells & Songs, 3rd level | Spells & Songs, 5th level | Spells & Songs, 7th level | Spells & Songs, 9th level | Level-up Ability Bonuses | Damage Bonus From Ability Score |
+| ---------- | ------------------ | ---------------------------- | ------------------ | ------------------------- | ------------------------- | ------------------------- | ------------------------- | ------------------------- | ------------------------ | ------------------------------- |
+| Level 1    | (7 + CON mod) x 3  | 1 adventurer                 | 2                  | 2                         | —                         | —                         | —                         | —                         | &nbsp;                   | ability modifier                |
+| Level 2    | (7 + CON mod) x 4  | 2 adventurer                 | 2, up to 1st level | 3                         | —                         | —                         | —                         | —                         | &nbsp;                   | ability modifier                |
+| Level 3    | (7 + CON mod) x 5  | 3 adventurer                 | 3, up to 3rd level | 1                         | 2                         | —                         | —                         | —                         | &nbsp;                   | ability modifier                |
+| Level 4    | (7 + CON mod) x 6  | 4 adventurer                 | 3, up to 3rd level | —                         | 4                         | —                         | —                         | —                         | +1 to 3 abilities        | ability modifier                |
+| Level 5    | (7 + CON mod) x 8  | 4 adventurer1 champion       | 3, up to 5th level | —                         | 3                         | 2                         | —                         | —                         | &nbsp;                   | 2 x ability modifier            |
+| Level 6    | (7 + CON mod) x 10 | 4 adventurer2 champion       | 4, up to 5th level | —                         | —                         | 5                         | —                         | —                         | &nbsp;                   | 2 x ability modifier            |
+| Level 7    | (7 + CON mod) x 12 | 4 adventurer3 champion       | 4, up to 7th level | —                         | —                         | 3                         | 3                         | —                         | +1 to 3 abilities        | 2 x ability modifier            |
+| Level 8    | (7 + CON mod) x 16 | 4 adventurer3 champion1 epic | 5, up to 7th level | —                         | —                         | —                         | 6                         | —                         | &nbsp;                   | 3 x ability modifier            |
+| Level 9    | (7 + CON mod) x 20 | 4 adventurer3 champion2 epic | 5, up to 9th level | —                         | —                         | —                         | 4                         | 3                         | &nbsp;                   | 3 x ability modifier            |
+| Level 10   | (7 + CON mod) x 24 | 4 adventurer3 champion3 epic | 6, up to 9th level | —                         | —                         | —                         | —                         | 7                         | +1 to 3 abilities        | 3 x ability modifier            |
+
+Although not listed on the table, this class gets three talents. It does not gain more at higher levels
 
 ## Stats
 
+Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are level dependent.
+
+| Stat                      | Value                                                        |
+| ------------------------- | ------------------------------------------------------------ |
+| Ability Bonus             | +2 Dexterity or Charisma (different from racial bonus)       |
+| Initiative                | Dex mod + Level                                              |
+| Armor Class (light armor) | 12 + middle mod of Con/Dex/Wis + Level                       |
+| Physical Defense          | 10 + middle mod of Str/Con/Dex + Level                       |
+| Mental Defense            | 11 + middle mod of Int/Wis/Cha + Level                       |
+| Hit Points                | (7 + Con mod) x Level modifier (see level progression chart) |
+| Recoveries                | 8                                                            |
+| Recovery Dice             | (1d8 x Level) + Con mod                                      |
+| Backgrounds               | 8 points, max 5 in any one background                        |
+| Icon Relationships        | 3 points                                                     |
+| Talents                   | 3                                                            |
+| Feats                     | 1 per Level                                                  |
+
 ## Basic Attacks
 
-<Vault.AbilityList
-  abilities={props.getAbilities(["Melee Attack", "Ranged Attack"])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Basic Attack")} />
 
 ## Class Features
 
-<Vault.AbilityList abilities={props.getAbilities([])} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Class Feature")} />
 
 ## Class Talents
 
-<Vault.AbilityList abilities={props.getAbilities([])} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Talent")} />
+
+## 1st Level Battle Cries
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Battle Cry 1")} />
+
+## 1st Level Songs & Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Song/Spell 1")} />
+
+## 3rd Level Battle Cries
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Battle Cry 3")} />
+
+## 3rd Level Songs & Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Song/Spell 3")} />
+
+## 5th Level Battle Cries
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Battle Cry 5")} />
+
+## 5th Level Songs & Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Song/Spell 5")} />
+
+## 7th Level Battle Cries
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Battle Cry 7")} />
+
+## 7th Level Songs & Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Song/Spell 7")} />
+
+## 9th Level Battle Cries
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Battle Cry 9")} />
+
+## 9th Level Songs & Spells
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Song/Spell 9")} />
