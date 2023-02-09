@@ -37,11 +37,21 @@ export default function VaultLayout({
       </div>
       <div className="p-4 lg:p-8">
         <Container className="grid grid-cols-1 gap-6 xl:grid-cols-12 relative">
-          <aside className="static xl:col-start-1 xl:col-end-4">
+          <motion.aside
+            initial={{ opacity: 0, translateY: 10 }}
+            animate={{ opacity: 1, translateY: 0, transition: { delay: 0.2 } }}
+            exit={{ opacity: 0, translateY: 10 }}
+            key={
+              typeof window !== "undefined"
+                ? window.location.pathname
+                : undefined
+            }
+            className="static xl:col-start-1 xl:col-end-4"
+          >
             <div className="sticky overflow-y-auto top-24 bottom-4 rounded pb-1 dark:bg-stone-800 dark:text-stone-100 dark:border-stone-700 bg-stone-50 border border-stone-300 shadow max-h-[calc(100vh-6.5rem)]">
               {sideNavigation}
             </div>
-          </aside>
+          </motion.aside>
           <main className="xl:col-start-4 xl:col-end-13 flex flex-col ">
             <article
               className="prose prose-sm prose-h1:my-0 prose-h2:mt-8 prose-p:text-justify max-w-none

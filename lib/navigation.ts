@@ -56,7 +56,7 @@ export function buildNav({
           },
           {
             name: "Classes",
-            href: "/compendium/basic-rules",
+            href: "/compendium/classes",
             large: true,
             items: map(classItems, (classItem) => ({
               name: classItem.name,
