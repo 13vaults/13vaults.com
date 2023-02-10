@@ -4,88 +4,381 @@ source: 13th Age, p.82
 abilities:
   - name: Melee Attack
     _type: Basic Attack
+    usage: at-will
+    description: |-
+      At-Will
+
+      - - -
+
+      **Target:** One enemy
+
+      **Attack:** Strength OR Dexterity + Level vs. AC
+
+      **Hit:** WEAPON + Strength OR Dexterity damage
+
+      **Miss:** Damage equal to your level
   - name: Ranged Attack
     _type: Basic Attack
+    usage: at-will
+    description: |-
+      At-Will
+
+      - - -
+
+      **Target:** One enemy
+
+      **Attack:** Dexterity + Level vs. AC
+
+      **Hit:** WEAPON + Dexterity damage
+
+      **Miss:** —
   - name: Bardic Songs
     _type: Class Feature
+    description: |-
+      Bardic songs last for one or more rounds and end with a final verse that carries a big payoff.
+      Although magical, bardic songs don’t count as spells;
+      they don’t force the bard to suffer opportunity attacks from engaged enemies, and they can’t be canceled by effects that can cancel spells.
+      In fact, bards can cast spells while in the middle of singing a bardic song.
+
+      Each song specifies what type of action starts it.
+      To sustain it during the next round, it requires an action and a d20 check against its sustain target.
+      If successful, the song can continue with its sustained effect for that round.
+      (The next round will require another sustain check.)
+      If your attempt to sustain a song fails, the song’s final verse effect resolves immediately, and then the song’s power ends.
+      You can start another song on your next round.
+
+      You don’t have to try to sustain the song at the start of your turn.
+      If you choose not to sustain a song, its effects end immediately and you choose whether to use the song’s final verse effect in the current round or to start a new song.
+      You can’t do both.
+
+      Some songs have an immediate effect that happens each time you start or sustain the song.
+      Others have effects that continue throughout the entire round.
+
+      Most songs stop when a bard is knocked unconscious, silenced, or stunned.
+      Having your song stopped this way prevents you from getting the final verse effect.
+
+      You can only sing one bardic song at a time.
+      If you are singing a song (or spend an action to try to sustain a song), you can’t start another song that round.
+
+      Bardic songs are loud, and cancel any of stealth effects you may have.
+    feats:
+      - tier: adventurer
+        description:
+          Your bardic songs don’t stop immediately when you are knocked unconscious, stunned, or silenced.
+          Instead, they continue for one round, giving you the chance to sustain the song on your next turn.
   - name: Battle Cries
     _type: Class Feature
+    description: |-
+      Bards use battle cries to encourage, inspire, warn, and magically aid their allies.
+      Battle cries are triggered by flexible melee attacks.
+      The bard makes a melee attack and is able to use a battle cry that corresponds to the attack’s natural result, sometimes whether or not the attack hits.
+
+      Bonuses provided by battle cries can help a bard’s allies but not the bard.
+    feats:
+      - tier: adventurer
+        description:
+          You can generate the effect of any 1st or 3rd level battle cry you know as a standard action (instead of making a flexible melee attack to see which battle cry you are able to trigger).
+          This allows you to choose the particular battle cry you want, at the expense of taking your standard action.
   - name: Spells
     _type: Class Feature
+    description: |-
+      Bards use arcane spells that function like those of other spell-casting classes. Some spells are daily, some recharge, and others are at-will.
+      Unlike most character classes, bards use two different ability scores for their attacks. Their melee and ranged weapon attacks use Strength or Dexterity, while their spells use Charisma.
   - name: Balladeer
     _type: Talent
+    description: |-
+      At each level, including 1st level, you may learn a great ballad of your choice.
+      Each day you can sing one of these songs to give you a positive relationship with an icon that you would not ordinarily have…as well as increasing a negative relationship with another icon.
+
+      Song choices for the great ballad are up to the role-player.
+
+      It takes at least a few rounds to sing a great ballad, so ideally it happens outside of combat.
+      As you sing the ballad, it’s an opportunity to tell the GM what’s special about the story you are telling.
+
+      Make a Charisma skill check using your best singing or musical background.
+      If you succeed, you gain 2 points of positive relationship with the chosen icon for the rest of the day (until the next full heal-up).
+      The DC depends on the environment:
+
+      **DC 15:** Adventurer environment
+
+      **DC 20:** Champion environment
+
+      **DC 25:** Epic environment
+
+      You can use these points to roll relationship dice the way you roll your normal icon relationships (see Icon Relationships).
+      If you already have positive or conflicted dice with the icon you’ve sung about, add them to your new bonus dice.
+      If you have negative dice with the icon you’ve sung a ballad to, they can be temporarily overruled by the ballad, but the GM should feel free to interpret any 5s rolled with a heavy hand.
+
+      When your great ballad magically compliments an icon, another icon should take a hit.
+      As you explain the story of your ballad to the GM, you should account for at least one icon who is being mocked, vilified, or referred to in unflattering terms.
+      You get an equal number of cursed dice for that icon.
+      Cursed dice aren’t like negative relationship dice—they never help you.
+      At the GM’s option, you’ll have to roll these cursed dice at least once and interpret them as possible problems for you: rolls of 1 are a definite problem; rolls of 2 mean there are story complications connected to the temporary enemy icon.
+    feats:
+      - tier: adventurer
+        description: The first time you use your ballad-created relationship, any 5s you roll become 6s. You also gain a +2 bonus to your Balladeer checks.
+      - tier: champion
+        description: You can sing two great songs a day. You can’t sing positively about an icon that you’ve already sung about as an enemy earlier in the day.
+      - tier: epic
+        description: If you are willing to gain an equal number of cursed relationship dice with all of the listed enemies for a song, increase the positive bonus dice you gain from a successful ballad to 3 or 4.
   - name: Battle Skald
     _type: Talent
+    description: |-
+      You cannot take this talent if you have taken the Spellsinger talent.
+
+      Increase the number of battle cries you know by one.
+      The bonus battle cry can be from your highest possible level.
+    feats:
+      - tier: adventurer
+        description: One battle per day, you can use your battle cries to help yourself.
+      - tier: champion
+        description: When you use a battle cry on yourself, it also helps an ally.
+      - tier: epic
+        description: Once per battle, reroll an attack that was meant to trigger a battle cry but didn’t.
   - name: Jack of Spells
     _type: Talent
+    description: |-
+      Choose another spell-casting character class.
+      You can choose one spell from the spell list (but not the talent list) of that class, of your own level or lower, as an extra spell you know how to cast.
+      You can even take its feats up to your tier, if it has any. You may only choose from the spell list—not from talents.
+
+      This spell is a bonus spell, not included in your bard class count.
+    feats:
+      - tier: adventurer
+        description: |-
+          You can use your Charisma as the ability score that provides
+          spell's attack bonus and damage bonus (if any). Other ability score
+          references remain unchanged.
+
+          If the spell is a wizard spell, you also gain three cantrips of your choice from the wizard. You can cast them like a wizard who lacks the Cantrip Mastery talent.
+
+          If you choose a spell from the sorcerer class, you also gain the sorcerer's _dancing lights_ class feature.
+      - tier: champion
+        description: Choose a second spell-casting class. Choose another spell from that class as well.
+      - tier: epic
+        description: Choose a third spell-casting class. Gain a spell from that class also.
   - name: Loremaster
     _type: Talent
+    description: |-
+      You cannot take this talent if you have taken the _Mythkenner_ talent.
+
+      Choose two of the following three bonuses:
+
+      - Your bardic skills and magic are now based on your Intelligence rather than Charisma.
+        Any time an element of the bard class refers to Charisma, you can replace that element with a reference to Intelligence.
+      - Take two additional points of backgrounds.
+        You can use these additional points to raise a background that has something to do with history, bardic lore, or magical knowledge up to the usually impossible rating of +6.
+      - Take a single point of relationship with an icon.
+        Add the point to a relationship you already have up to your normal maximum, or start a new one—positive, conflicted, or negative.
   - name: Mythkenner
     _type: Talent
+    description: |-
+      You cannot take this talent if you have taken the Loremaster talent.
+
+      Choose two of the following three bonuses:
+
+      1. Your bardic skills and magic are now based on your Wisdom rather than Charisma.
+         Any time an element of the bard class refers to Charisma, you can replace that element with a reference to Wisdom. 
+
+      2. Take two additional points of backgrounds;
+         you can use these additional points to raise a background that has something to do with religion, mythology, or history up to the usually impossible rating of +6. 
+
+      3. Take a single point of relationship with an icon.
+         Add the point to a relationship you already have up to your normal maximum, or start a new one—positive, conflicted, or negative.
   - name: Songmaster
     _type: Talent
+    description: |-
+      When you attempt to maintain a bardic song, if you describe it in a fashion that entertains the GM, or at least a couple of the players, you get a bonus of +1 to +3 to maintain the song.
+
+      This talent is for those that enjoy improvisation.
   - name: Spellsinger
     _type: Talent
+    description: |-
+      You cannot take this talent if you have taken the _Battle Skald_ talent.
+
+      You can choose an extra bardic song or bard spell at the highest level you know.
   - name: Storyteller
     _type: Talent
+    description: |-
+      Once per scene when one of your allies rolls relationship dice for an icon, you can roleplay a one or two sentence story (usually related to the icon, but perhaps otherwise pivotal) that allows them to reroll the relationship check if they don’t like the first result.
   - name: Move It!
     _type: Battle Cry 1
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Triggering Roll:** Natural even roll
+
+      **Effect:** Choose either…
+
+      - One of your unengaged allies can move as a free action 
+      - One of your engaged allies can make a disengage check as a free action.name: Move It!
+    feats:
+      - tier: adventurer
+        description: The disengage check gains a +2 bonus.
+      - tier: champion
+        description: The bonus increases to +5.
+      - tier: epic
+        description: An engaged ally you target with this battle cry can pop free from one enemy as a free action before making the disengage check.
   - name: Pull It Together!
     _type: Battle Cry 1
+    description: |-
+      Flexible melee attack
+
+      - - -
+
+      **Triggering Roll:** Natural 11+; use only twice per battle
+
+      **Effect:** One nearby ally can heal using a recovery.
+    feats:
+      - tier: adventurer
+        description: The target adds +1d4 healing per point on the escalation die.
+      - tier: champion
+        description: The attack can now also trigger on any natural even roll; the extra healing is now +1d6 per point.
+      - tier: epic
+        description: You can use _pull it together_ three times per battle; the extra healing is now +1d10 per point.
   - name: Stay Strong!
     _type: Battle Cry 1
+    description: |-
+      Flexible melee attack
+
+      - - -
+
+      **Triggering Roll:** Natural 16+
+
+      **Effect:** Give a nearby ally a +2 bonus to AC until the start of your next turn.
+    feats:
+      - tier: adventurer
+        description: Bonus also applies to PD.
+      - tier: champion
+        description: Bonus also applies to MD.
+      - tier: epic
+        description: Bonus increases to +4.
   - name: We Need You!
     _type: Battle Cry 1
+    description: |-
+      Flexible melee attack
+
+      - - -
+
+      **Triggering Roll:** Natural even hit
+
+      **Effect:** A nearby conscious ally can roll a save against a save ends effect.
+    feats:
+      - tier: adventurer
+        description: The save gains a +1 bonus.
+      - tier: champion
+        description: The bonus increases to +2.
+      - tier: epic
+        description: If the escalation die is 3+, two nearby conscious allies (instead of one) can each roll a save (with bonuses).
   - name: Song of Heroes
     _type: Song 1
+    description: |-
+      Recharge 11+ after battle
+
+      Quick action each turn; 11+ to sustain
+
+      **Opening & Sustained Effect:** You and your nearby allies gain a +1 attack bonus until the start of your next turn.
+
+      **Final Verse:** The effect ends immediately, but one ally of your choice gains a +2 bonus to their next attack roll this battle.
+
+      **3rd level song:** The effect also provides a +1 bonus to saves.
+
+      **5th level song:** Sustain the song on a 9+.
+
+      **7th level song:** Recharge check is now 6+.
+
+      **9th level song:** The effect also provides a +1 bonus to Mental Defense.
   - name: Song of Spilt Blood
     _type: Song 1
+    description: |-
+      Daily
+
+      - - -
+
+      Quick action each turn; 6+ to sustain
+
+      **Opening & Sustained Effect:** Any attack against you takes a penalty equal to the number of your allies in the battle who have more hit points than you.
+
+      **Final Verse:** The effect ends immediately, and you or one ally of your choice can heal using a recovery.
+
+      **3rd level song:** Sustain the song on a 4+.
+
+      **5th level song:** Add +5 hp to the recovery.
+
+      **7th level song:** Add +10 hp to the recovery.
+
+      **9th level song:** Add +15 hp to the recovery.
   - name: Battle Chant
     _type: Spell 1
+    description: null
   - name: Befuddle
     _type: Spell 1
+    description: null
   - name: Charm Person
     _type: Spell 1
+    description: null
   - name: Soundburst
     _type: Spell 1
+    description: null
   - name: Hang Tough!
     _type: Battle Cry 3
+    description: null
   - name: It’s All Yours!
     _type: Battle Cry 3
+    description: null
   - name: Take Heart!
     _type: Battle Cry 3
+    description: null
   - name: Song of Aid
     _type: Song 3
+    description: null
   - name: Song of Thunder
     _type: Song 3
+    description: null
   - name: Vicious Mockery
     _type: Spell 3
+    description: null
   - name: Wild Heal
     _type: Spell 3
+    description: null
   - name: Stay True!
     _type: Battle Cry 5
+    description: null
   - name: Victory Is Ours!
     _type: Battle Cry 5
+    description: null
   - name: Song of Magic
     _type: Song 5
+    description: null
   - name: Arrow of Verse
     _type: Spell 5
+    description: null
   - name: Discombobulate
     _type: Spell 5
+    description: null
   - name: They Fall Before Us!
     _type: Battle Cry 7
+    description: null
   - name: Song of Blood & Legends
     _type: Song 7
+    description: null
   - name: Song of Victory
     _type: Song 7
+    description: null
   - name: The Overworld Two-Step
     _type: Spell 7
+    description: null
   - name: The Time Is Now!
     _type: Battle Cry 9
+    description: null
   - name: Song of Destinies
     _type: Song 9
+    description: null
   - name: Inspire Legends
     _type: Spell 9
+    description: null
 ---
 
 ## Ability Scores
@@ -170,6 +463,8 @@ Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are l
 <Vault.AbilityList abilities={props.getAbilitiesByType("Basic Attack")} />
 
 ## Class Features
+
+As a bard advances in level, they have three different types of powers to choose in combat: bardic songs, battle cries, and spells.
 
 <Vault.AbilityList abilities={props.getAbilitiesByType("Class Feature")} />
 

@@ -12,7 +12,7 @@ interface AbilityListP {
 
 export default function AbilityList({
   abilities,
-  maxCols = 3,
+  maxCols = 1,
 }: AbilityListP): JSX.Element | null {
   const cols = {
     3: "sm:grid-cols-2 2xl:grid-cols-3",
@@ -47,10 +47,7 @@ interface AbilityItemP {
 
 function AbilityItem({ ability }: AbilityItemP): JSX.Element {
   return (
-    <figure
-      role="figure"
-      className="text-xs m-0 rounded shadow border border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-800"
-    >
+    <section className="text-xs m-0 rounded shadow border border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-800">
       <header
         className={clsx(
           {
@@ -91,7 +88,7 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
           </div>
         ) : null}
       </div>
-    </figure>
+    </section>
   );
 }
 
