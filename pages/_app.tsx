@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import PlausibleProvider from "next-plausible";
 import {
   Barlow_Semi_Condensed,
   Inter,
@@ -45,6 +44,12 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
         {process.env.NODE_ENV === "production" ? (
           <link rel="preload" as="script" href="/pa/js/pa.js" />
         ) : null}
+        <script
+          defer
+          data-domain="13vaults.com"
+          data-api="/pa/api/event"
+          src="/pa/js/script.js"
+        ></script>
         <title>13 Vaults</title>
         <meta
           name="description"
@@ -64,9 +69,7 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
           scroll-behavior: smooth;
         }
       `}</style>
-      <PlausibleProvider domain="13vaults.com">
-        <Component {...pageProps} />
-      </PlausibleProvider>
+      <Component {...pageProps} />
     </>
   );
 }

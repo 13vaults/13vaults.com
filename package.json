@@ -23,7 +23,6 @@
     "lodash": "^4.17.21",
     "next": "13.1.6",
     "next-contentlayer": "^0.3.0",
-    "next-plausible": "^3.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-markdown": "^8.0.5",

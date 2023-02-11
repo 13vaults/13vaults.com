@@ -57,73 +57,124 @@ abilities:
         description: When you cast heal on an ally you are next to, that ally adds +30 hp to the recovery.
   - name: Ritual Magic
     _type: Class Feature
-    description: Clerics can cast their spells as rituals. (See Rituals.)
+    description: Clerics can cast their spells as rituals. (See [Rituals](/compendium/basic-rules/running-the-game/#rituals).)
   - name: Healing
     _type: Domain
+    description: |-
+      When you cast a spell that lets you or an ally heal using a recovery, the target also adds hit points equal to double your level to the recovery.
+
+      **Invocation of Healing:**
+      This battle, you gain an additional use of the heal spell (see Class Features, left).
+      The first heal spell you cast after using this invocation allows the target to heal using a free recovery instead of spending a recovery.
+    feats:
+      - tier: adventurer
+        description:
+          When you cast a spell that allows an ally to heal using a recovery, you can let them use one of your recoveries instead.
+          (If you also have the Protection/Community domain, any nearby ally can expend the recovery instead of you.)
+      - tier: champion
+        description: The invocation of healing gives you two additional uses of heal this battle instead of only one.
+      - tier: epic
+        description: Increase the additional hit points the target heals to triple your level.
   - name: Justice/Vengeance
     _type: Domain
+    description: |-
+      Once per turn when an enemy scores a critical hit against you or a nearby ally, or drops you or a nearby ally to 0 hp or below, you gain an attack-reroll blessing.
+      Immediately choose a nearby ally and give them the blessing as a free action.
+
+      An ally with this blessing can use it to reroll an attack as a free action this battle. An ally can only have one such blessing on them at a time.
   - name: Knowledge/Lore
     _type: Domain
+    description: null
   - name: Life/Death
     _type: Domain
+    description: null
   - name: Love/Beauty
     _type: Domain
+    description: null
   - name: Protection/Community
     _type: Domain
+    description: null
   - name: Strength
     _type: Domain
+    description: null
   - name: Sun/Anti-Undead
     _type: Domain
+    description: null
   - name: Trickery/Illusion
     _type: Domain
+    description: null
   - name: War/Leadership
     _type: Domain
+    description: null
   - name: Bless
     _type: Spell
+    description: null
   - name: Cure Wounds
     _type: Spell
+    description: null
   - name: Hammer of Faith
     _type: Spell
+    description: null
   - name: Javelin of Faith
     _type: Spell
+    description: null
   - name: Shield of Faith
     _type: Spell
+    description: null
   - name: Spirits of the Righteous
     _type: Spell
+    description: null
   - name: Turn Undead
     _type: Spell
+    description: null
   - name: Vigilant Light
     _type: Spell
+    description: null
   - name: Cause Fear
     _type: Spell
+    description: null
   - name: Combat Boon
     _type: Spell
+    description: null
   - name: Divine Endurance
     _type: Spell
+    description: null
   - name: Judgment
     _type: Spell
+    description: null
   - name: Mighty Healing
     _type: Spell
+    description: null
   - name: Strength of the Gods
     _type: Spell
+    description: null
   - name: Crisis of Faith
     _type: Spell
+    description: null
   - name: Light of Revelation
     _type: Spell
+    description: null
   - name: Sanctuary
     _type: Spell
+    description: null
   - name: Sphere of Radiance
     _type: Spell
+    description: null
   - name: Circle of Protection
     _type: Spell
+    description: null
   - name: Divine Intervention
     _type: Spell
+    description: null
   - name: Resurrection
     _type: Spell
+    description: null
   - name: Overworld Travel
     _type: Spell
+    description: null
   - name: Prayer for Readiness
     _type: Spell
+    description: null
 ---
 
 ## Ability Scores
@@ -227,24 +278,11 @@ There are certain abilities specific to the cleric that can affect their powers:
   It can be made once a day.
   More than one cleric in a party cannot use the same invocation during a battle.
 
-<Vault.AbilityList abilities={props.getAbilities([])} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Class Feature")} />
 
 ## Class Talents
 
-<Vault.AbilityList
-  abilities={props.getAbilities([
-    "Healing",
-    "Justice/Vengeance",
-    "Knowledge/Lore",
-    "Life/Death",
-    "Love/Beauty",
-    "Protection/Community",
-    "Strength",
-    "Sun/Anti-Undead",
-    "Trickery/Illusion",
-    "War/Leadership",
-  ])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Domain")} />
 
 ## 1st Level Spells
 

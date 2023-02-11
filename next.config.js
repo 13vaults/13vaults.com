@@ -1,11 +1,6 @@
 const { withContentlayer } = require("next-contentlayer");
 const vaultConfig = require("./vault.config");
 
-const withPlausibleProxy = require("next-plausible").withPlausibleProxy({
-  subdirectory: "pa",
-  scriptName: "pa",
-});
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx"],
@@ -34,4 +29,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPlausibleProxy(withContentlayer(nextConfig));
+module.exports = withContentlayer(nextConfig);
