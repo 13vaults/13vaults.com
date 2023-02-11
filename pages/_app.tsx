@@ -48,7 +48,7 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
           defer
           data-domain="13vaults.com"
           data-api="/pa/api/event"
-          src="/pa/js/script.js"
+          src="/pa/js/pa.js"
         ></script>
         <title>13 Vaults</title>
         <meta
