@@ -118,14 +118,14 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                       </span>
                     </div>
                   ))}
-                  <div className="flow-root">
-                    <a
-                      href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
-                      className="flex items-center bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-medium rounded p-2 focus:bg-amber-400 hover:bg-amber-400 transition-colors"
-                    >
-                      Buy 13th Age
-                    </a>
-                  </div>
+                </div>
+                <div className="flex-1 flex-col">
+                  <a
+                    href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
+                    className="flex items-center bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-medium p-4 focus:bg-amber-400 hover:bg-amber-400 transition-colors"
+                  >
+                    Buy 13th Age
+                  </a>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
