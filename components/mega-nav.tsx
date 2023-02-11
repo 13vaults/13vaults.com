@@ -118,6 +118,14 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                       </span>
                     </div>
                   ))}
+                  <div className="flow-root">
+                    <a
+                      href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
+                      className="flex items-center bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-medium rounded p-2 focus:bg-amber-400 hover:bg-amber-400 transition-colors"
+                    >
+                      Buy 13th Age
+                    </a>
+                  </div>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
@@ -129,7 +137,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
         <nav aria-label="Top">
           <div className="bg-stone-800 px-4 lg:px-8 border-b border-stone-700 h-14 flex items-center z-40">
             <Container className="flex-1">
-              <div className="flex py-1 lg:py-2 items-center justify-start">
+              <div className="flex py-1 lg:py-2 items-center justify-start gap-8">
                 <div className="flex lg:hidden">
                   <button
                     type="button"
@@ -172,8 +180,8 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                   </Link>
                 </div>
 
-                <div className="hidden h-full lg:flex">
-                  <Popover.Group className="ml-8">
+                <div className="hidden h-full lg:flex gap-8 flex-1">
+                  <Popover.Group>
                     <div className="flex h-full justify-center space-x-8">
                       {navigation.main.map((mainNav) => (
                         <Popover key={mainNav.name} className="flex">
@@ -276,13 +284,17 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                           )}
                         </Popover>
                       ))}
+                    </div>
+                  </Popover.Group>
 
+                  <div className="flex flex-1 gap-8 justify-between">
+                    <div className="flex gap-8">
                       {navigation.pages.map((page) =>
                         page.href ? (
                           <Link
                             key={page.href}
                             href={page.href}
-                            className="text-stone-400 border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
+                            className="text-stone-400 font-medium border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
                           >
                             {page.name}
                           </Link>
@@ -296,7 +308,15 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                         )
                       )}
                     </div>
-                  </Popover.Group>
+                    <div className="flex gap-8">
+                      <a
+                        href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
+                        className=" bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-medium rounded px-2 py-1 focus:bg-amber-400 hover:bg-amber-400 transition-colors"
+                      >
+                        Buy 13th Age
+                      </a>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="lg:hidden mx-auto text-white absolute inset-0 grid place-content-center pointer-events-none">
