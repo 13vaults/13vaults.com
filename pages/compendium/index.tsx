@@ -7,7 +7,6 @@ import {
   allAncestries,
   allClassItems,
   allRulesDocuments,
-  allDocuments,
 } from "@/.contentlayer/generated";
 
 interface CompendiumCategoryPageP {
