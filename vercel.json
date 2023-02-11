@@ -6,7 +6,13 @@
     {
       "source": "/pa/js/pa.js",
       "destination": "https://plausible.io/js/script.js",
-      "statusCode": 200
+      "statusCode": 200,
+      "headers": [
+        {
+          "key": "content-type",
+          "value": "application/javascript"
+        }
+      ]
     },
     {
       "source": "/pa/api/event",
