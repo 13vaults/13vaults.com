@@ -469,8 +469,6 @@ abilities:
   - name: Song of Aid
     _type: Song 3
     description: |-
-      Bardic song
-
       Daily
 
       Quick action each turn; 11+ to sustain
@@ -489,8 +487,6 @@ abilities:
   - name: Song of Thunder
     _type: Song 3
     description: |-
-      Bardic song
-
       Daily
 
       Standard action each turn; 11+ to sustain
@@ -594,34 +590,162 @@ abilities:
         description: The damage bonus is now +3d12.
   - name: Song of Magic
     _type: Song 5
-    description: null
+    description: |-
+      Daily
+
+      Quick action each turn; 16+ to sustain
+
+      - - -
+
+      **Opening & Sustained Effect:** Until the start of your next turn, you and your nearby allies who cast spells that are normally expended by being cast can roll a d20 after casting the spell. On a 16+, the spell is not expended.
+
+      **Final Verse:** All spells you and your allies cast before the start of your next turn gain a +2 attack bonus.
+
+      7th level song: Gain a bonus to song of magic’s sustain check equal to the escalation die.
+
+      9th level song: Rolls to retain expended spells gain a bonus equal to the escalation die.
   - name: Arrow of Verse
     _type: Spell 5
-    description: null
+    description: |-
+      Ranged spell; Recharge 16+ after battle
+
+      - - -
+
+      **Target:** One nearby enemy
+
+      **Attack:** Charisma + Level vs. MD
+
+      **Hit:** 8d8 + Charisma psychic damage + Xd6 bonus damage, where X = escalation die.
+
+      **Miss:** Xd6 psychic damage, where X = escalation die.
+
+      7th level spell: 10d10 damage.
+
+      9th level spell: 2d10 x 10 damage.
+    feats:
+      - tier: champion
+        description: Recharge check is now 11+.
+      - tier: epic
+        description: Bonus dice and miss dice are now d12s.
   - name: Discombobulate
     _type: Spell 5
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      - - -
+
+      **Target:** One nearby creature with 100 hp or fewer
+
+      **Attack:** Charisma + Level vs. MD
+
+      **Hit:** The target is confused until it rolls two successful saves.
+
+      **Miss:** The target is dazed until the end of your next turn.
+
+      7th level spell: Target with 140 hp or fewer.
+
+      9th level spell: Target with 240 hp or fewer.
   - name: They Fall Before Us!
     _type: Battle Cry 7
-    description: null
+    description: |-
+      Flexible melee attack
+
+      - - -
+
+      **Special:** You can use this battle cry only on your turn.
+
+      **Triggering Roll:** Natural 20
+
+      **Effect:** A nearby ally can make a basic attack as a free action.
+    feats:
+      - tier: epic
+        description: The battle cry can now trigger on a natural 19+.
   - name: Song of Blood & Legends
     _type: Song 7
-    description: null
+    description: |-
+      Daily
+
+      Standard action each turn; 16+ to sustain
+
+      - - -
+
+      **Opening & Sustained Effect:** Each nearby ally who hits at least one enemy with an attack during their turn can heal using a recovery.
+
+      **Final Verse:** One nearby ally can make a basic attack as a free action and heal using a recovery if the attack hits at least one target.
+
+      9th level song: The recovery granted by the final verse attack is free.
   - name: Song of Victory
     _type: Song 7
-    description: null
+    description: |-
+      Daily
+
+      Quick action each turn; 16+ to sustain
+
+      - - -
+
+      **Opening & Sustained Effect:** Each nearby enemy that has fewer hit points than you is dazed until the end of your next turn.
+
+      **Final Verse:** Each nearby enemy takes 5d6 + Charisma psychic damage.
+
+      9th level song: 7d6 damage.
   - name: The Overworld Two-Step
     _type: Spell 7
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Quick action to cast
+
+      **Recharge:** 16+ after battle
+
+      **Effect:** You can swap your position and the positions of all your nearby allies, even if you can’t see them when you cast the spell.
+      Each position presently occupied by you or an ally must end up occupied after the swap, but otherwise you can swap freely.
+    feats:
+      - tier: champion
+        description: Recharge check is now 11+.
+      - tier: epic
+        description: You can now also swap the positions of far-away allies you can see, up to a maximum of 9 creatures.
   - name: The Time Is Now!
     _type: Battle Cry 9
-    description: null
+    description: |-
+      Flexible melee attack
+
+      - - -
+
+      **Triggering Roll:** Natural 19+
+
+      **Effect**: Choose one nearby ally. That ally can expend a recovery to regain a daily power or spell.
+    feats:
+      - tier: epic
+        description: The battle cry can now trigger on natural 18+.
   - name: Song of Destinies
     _type: Song 9
-    description: null
+    description: |-
+      Daily
+
+      Quick action each turn; 11+ to sustain
+
+      - - -
+
+      **Opening & Sustained Effect:** Later this turn, you can add 1 to the natural result of one ally’s d20 roll.
+      Then, afterwards, you can subtract 1 from the natural result of an enemy’s d20 roll.
+
+      **Final Verse:** The GM chooses an icon relevant to the situation; you choose the PC who will make an icon relationship check.
+      That player makes the check and joins the GM in a duet of improvisation as to how the icon relationship roll has some impact on the current battle.
   - name: Inspire Legends
     _type: Spell 9
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      **Special:** Escalation die must be 4+.
+
+      Daily
+
+      - - -
+
+      **Targets:** You and all nearby allies
+
+      **Effect:** Each target can roll a d20 for each of its expended daily, recharge, and per battle powers and spells other than inspire legends.
+      If the roll is 11+, the character regains the use of that power or spell.
 ---
 
 ## Ability Scores
