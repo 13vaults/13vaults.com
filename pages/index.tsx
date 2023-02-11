@@ -108,11 +108,15 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
               </Link>
             </div>
           </div>
-          <p className="absolute bottom-5 left-5 text-sm text-amber-700/50">
-            <a href="https://www.deviantart.com/butteredbap/art/Camelot-spire-358955566">
-              Camelot Spire by butteredbap
-            </a>
-          </p>
+          <div className="absolute bottom-4 left-4 right-4">
+            <Container>
+              <p className="text-sm text-amber-700/50">
+                <a href="https://www.deviantart.com/butteredbap/art/Camelot-spire-358955566">
+                  Camelot Spire by butteredbap
+                </a>
+              </p>
+            </Container>
+          </div>
         </section>
         <section className="bg-[rgb(27,10,0)] text-white">
           <Container>
@@ -148,7 +152,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
                       <div
                         className={clsx(
                           item.classes,
-                          "grid place-content-center rounded-sm border h-40 text-center px-4 lg:px-8 opacity-60 transition-colors"
+                          "grid place-content-center rounded-sm border h-40 text-center px-4 lg:px-8 opacity-30 transition-colors"
                         )}
                       >
                         <h2 className="text-3xl font-display-serif font-semibold">
