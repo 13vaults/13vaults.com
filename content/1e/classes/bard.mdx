@@ -113,7 +113,8 @@ abilities:
       As you explain the story of your ballad to the GM, you should account for at least one icon who is being mocked, vilified, or referred to in unflattering terms.
       You get an equal number of cursed dice for that icon.
       Cursed dice aren’t like negative relationship dice—they never help you.
-      At the GM’s option, you’ll have to roll these cursed dice at least once and interpret them as possible problems for you: rolls of 1 are a definite problem; rolls of 2 mean there are story complications connected to the temporary enemy icon.
+      At the GM’s option, you’ll have to roll these cursed dice at least once and interpret them as possible problems for you: rolls of 1 are a definite problem;
+      rolls of 2 mean there are story complications connected to the temporary enemy icon.
     feats:
       - tier: adventurer
         description: The first time you use your ballad-created relationship, any 5s you roll become 6s. You also gain a +2 bonus to your Balladeer checks.
@@ -312,31 +313,210 @@ abilities:
       **9th level song:** Add +15 hp to the recovery.
   - name: Battle Chant
     _type: Spell 1
-    description: null
+    description: |-
+      Ranged spell; At-Will
+
+      - - -
+
+      **Special:** When you use battle chant, you can choose any battle cry effect you know as if you were making a basic melee attack, with the battle chant attack roll taking the place of the basic melee attack roll.
+
+      **Target:** One nearby enemy
+
+      **Attack:** Charisma + Level vs. MD
+
+      **Hit:** 1d4 + Charisma thunder damage.
+
+      3rd level spell: 2d4 damage.
+
+      5th level spell: 4d4 damage.
+
+      7th level spell: 6d4 damage.
+
+      9th level spell: 10d4 damage.
+    feats:
+      - tier: adventurer
+        description: Your battle chant damage dice are now d6s instead of d4s.
+      - tier: champion
+        description: Once per day, you can expend one of your recoveries to reroll a battle chant attack roll.
+      - tier: epic
+        description: One battle per day, your battle chant damage dice become d10s.
   - name: Befuddle
     _type: Spell 1
-    description: null
+    description: |-
+      Ranged spell; Recharge 11+ after battle
+
+      - - -
+
+      **Target:** One nearby creature with 40 hp or fewer
+
+      **Attack:** Charisma + Level vs. MD
+
+      **Hit:** The target is confused until the end of your next turn.
+
+      **Natural Even Miss:** The target is dazed until the end of your next turn.
+
+      3rd level spell: Target with 64 hp or fewer.
+
+      5th level spell: Target with 96 hp or fewer.
+
+      7th level spell: Target with 160 hp or fewer.
+
+      9th level spell: Target with 266 hp or fewer.
+    feats:
+      - tier: adventurer
+        description: Recharge check is now 6+.
+      - tier: champion
+        description: The target of the spell doesn’t have to be nearby, just in line of sight.
+      - tier: epic
+        description: On a hit, the confusion effect is now save ends.
   - name: Charm Person
     _type: Spell 1
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      - - -
+
+      **Target:** One nearby creature with 40 hp or fewer
+
+      **Special:** This spell cannot be cast during combat or on a target that has rolled initiative to fight.
+
+      **Attack:** Charisma + Level vs. MD
+
+      **Hit:** The target believes you are their friend until you or your allies take hostile action against them. (Attacking their normal allies is okay.)
+      If you or your allies attack the target or order the target to attack its normal allies, the target can roll a normal save to break the charm effect during its turn each round.
+
+      **Special:** On a miss, the spell is not detectable by most others unless you miss by 4+ or roll a natural 1, in which case the target and its allies knows what you tried to do and will usually be angry about it.
+
+      3rd level spell: Target with 64 hp or fewer.
+
+      5th level spell: Target with 96 hp or fewer.
+
+      7th level spell: Target with 160 hp or fewer.
+
+      9th level spell: Target with 266 hp or fewer.
   - name: Soundburst
     _type: Spell 1
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      - - -
+
+      **Target:** 1d4 nearby enemies in a group
+
+      **Attack:** Charisma + Level vs. PD
+
+      **Hit:** 5d6 + Charisma thunder damage, and the target is dazed until end of your next turn.
+
+      **Miss:** Half damage, and deal thunder damage equal to your level to each of your allies engaged with the target.
+
+      3rd level spell: 6d8 damage.
+
+      5th level spell: 8d10 damage.
+
+      7th level spell: 2d6 x 10 damage.
+
+      9th level spell: 3d6 x 10 damage.
+    feats:
+      - tier: adventurer
+        description: On a natural even hit, the dazed effect is now save ends.
+      - tier: champion
+        description: The spell is now recharge 16+ after battle instead of daily.
+      - tier: epic
+        description: You can now target 1d4 + 1 enemies in a group with the spell.
   - name: Hang Tough!
     _type: Battle Cry 3
-    description: null
+    description: |-
+      Flexible melee attack
+
+      **Triggering Roll:** Natural odd roll
+
+      **Effect:** Give a nearby ally temporary hit points equal to your Charisma modifier.
+    feats:
+      - tier: adventurer
+        description: If the ally is staggered, double the temporary hit points.
+      - tier: champion
+        description: Add your level to the temporary hit points given (add before any doubling).
+      - tier: epic
+        description: You can choose yourself instead of an ally as the target of the battle cry.
   - name: It’s All Yours!
     _type: Battle Cry 3
-    description: null
+    description: |-
+      Flexible melee attack
+
+      - - -
+
+      **Triggering Roll:** Natural even miss
+
+      **Effect:** This battle, your next ally to attack the target you missed gains a +2 attack bonus with that attack.
+    feats:
+      - tier: adventurer
+        description: That ally’s attack also deals +1d6 damage.
+      - tier: champion
+        description: The damage bonus increases to +3d6.
+      - tier: epic
+        description: The damage bonus increases to +3d12.
   - name: Take Heart!
     _type: Battle Cry 3
-    description: null
+    description: |-
+      Flexible melee attack
+
+      - - -
+
+      **Triggering Roll:** Any hit
+
+      **Effect:** Choose a nearby ally.
+      That ally can either roll a save against a save ends effect or roll a normal save against a condition that has a duration that lasts until the end or beginning of a turn.
   - name: Song of Aid
     _type: Song 3
-    description: null
+    description: |-
+      Bardic song
+
+      Daily
+
+      Quick action each turn; 11+ to sustain
+
+      - - -
+
+      **Opening & Sustained Effect:** You or a nearby ally gains 3d6 temporary hit points.
+
+      **Final Verse:** One target that gained temporary hit points can also heal using a recovery.
+
+      5th level song: 5d6 temporary hit points; sustain the song on a 9+.
+
+      7th level song: 7d6 temporary hit points, and the recovery from the final verse is free.
+
+      9th level song: 9d8 temporary hit points; sustain the song on a 7+.
   - name: Song of Thunder
     _type: Song 3
-    description: null
+    description: |-
+      Bardic song
+
+      Daily
+
+      Standard action each turn; 11+ to sustain
+
+      - - -
+
+      **Opening & Sustained Effect:** Make the following attack against 1d4 + 1 nearby enemies.
+
+      **Attack:** Charisma + Level vs. PD
+
+      **Hit:** 5d6 + Charisma thunder damage.
+
+      **Miss:** —
+
+      **Final Verse:** Make the attack again, but this time it deals half damage on a miss.
+
+      5th level song: 7d6 damage.
+
+      7th level song: 9d8 damage.
+
+      9th level song: 10d12 damage.
+    feats:
+      - tier: champion
+        description: The number of targets increases to 2d4.
+      - tier: epic
+        description: Two of the targets can now be far away instead of nearby.
   - name: Vicious Mockery
     _type: Spell 3
     description: null
