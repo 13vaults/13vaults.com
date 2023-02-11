@@ -2,17 +2,22 @@
   "github": {
     "silent": true
   },
-  "redirects": [
+  "headers": [
     {
       "source": "/pa/js/pa.js",
-      "destination": "https://plausible.io/js/script.js",
-      "statusCode": 200,
       "headers": [
         {
           "key": "content-type",
           "value": "application/javascript"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/pa/js/pa.js",
+      "destination": "https://plausible.io/js/script.js",
+      "statusCode": 200
     },
     {
       "source": "/pa/api/event",
