@@ -7,6 +7,7 @@ import {
   Vollkorn,
   Vollkorn_SC,
 } from "@next/font/google";
+import Script from "next/script";
 
 const barlowSemiCondensed = Barlow_Semi_Condensed({
   subsets: ["latin"],
@@ -44,18 +45,20 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
         {process.env.NODE_ENV === "production" ? (
           <link rel="preload" as="script" href="/pa/js/pa.js" />
         ) : null}
-        <script
-          defer
-          data-domain="13vaults.com"
-          data-api="/pa/api/event"
-          src="/pa/js/pa.js"
-        ></script>
         <title>13 Vaults</title>
         <meta
           name="description"
           content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
         ></meta>
       </Head>
+      {process.env.NODE_ENV === "production" ? (
+        <Script
+          defer
+          data-domain="13vaults.com"
+          data-api="/pa/api/event"
+          src="/pa/js/pa.js"
+        />
+      ) : null}
       <style jsx global>{`
         :root {
           --font-inter: ${inter.style.fontFamily};
