@@ -519,16 +519,79 @@ abilities:
         description: Two of the targets can now be far away instead of nearby.
   - name: Vicious Mockery
     _type: Spell 3
-    description: null
+    description: |-
+      Ranged spell; Recharge 11+ after battle
+
+      - - -
+
+      **Target:** One nearby enemy
+
+      **Attack:** Charisma + Level vs. MD
+
+      **Hit:** 6d6 + Charisma psychic damage, and until the end of your next turn, when the target misses with one of its attacks, it takes half the damage its attack would have dealt.
+
+      **Miss:** Damage equal to your level.
+
+      5th level spell: 9d6 damage.
+
+      7th level spell: 10d8 damage.
+
+      9th level spell: 2d8 x 10 damage.
+    feats:
+      - tier: adventurer
+        description: On a hit, the effect that damages the target when it misses is now save ends.
+      - tier: champion
+        description: Recharge check is now 6+.
+      - tier: epic
+        description: A natural even miss does not expend the spell.
   - name: Wild Heal
     _type: Spell 3
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      - - -
+
+      **Targets:** Two random nearby allies. Choose the targets randomly from all nearby allies (including you) who are damaged.
+
+      **Effect:** Each target can heal using a recovery.
+
+      5th level spell: Add +5 hp to the recovery.
+
+      7th level spell: Add +15 hp to the recovery.
+
+      9th level spell: Add +25 hp to the recovery.
+    feats:
+      - tier: adventurer
+        description: The spell is now recharge 16+ after battle instead of daily.
+      - tier: champion
+        description: Add a third random target.
+      - tier: epic
+        description: The recoveries the targets use are now free.
   - name: Stay True!
     _type: Battle Cry 5
-    description: null
+    description: |-
+      Flexible melee attack
+
+      - - -
+
+      **Triggering Roll:** Natural 16+ if the escalation die is 3+; otherwise natural 20
+
+      **Effect:** A nearby ally regains the use of a once-per-battle racial ability that was expended this battle.
   - name: Victory Is Ours!
     _type: Battle Cry 5
-    description: null
+    description: |-
+      Flexible melee attack
+
+      - - -
+
+      **Triggering Roll:** Natural 16+ if the escalation die is 5+; otherwise natural 20
+
+      **Effect:** A nearby ally can heal using a recovery, and three nearby allies gain a +3d6 damage bonus to their next damage roll this battle.
+    feats:
+      - tier: champion
+        description: The battle cry can now trigger when the escalation die is 3+ instead of 5+.
+      - tier: epic
+        description: The damage bonus is now +3d12.
   - name: Song of Magic
     _type: Song 5
     description: null
