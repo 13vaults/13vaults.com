@@ -4,15 +4,17 @@ import { useRouter } from "next/router";
 import Container from "./container";
 
 function createPaths(path: string) {
-  const linkPath = filter(path.split("/"), (str) => str !== "");
-  const hashUrlIdx = findIndex(linkPath, (str) => str.startsWith("#"));
+  const linkPath = filter(path.split("/"), (path) => path !== "");
+  const hashUrlIndex = findIndex(linkPath, (path) => path.startsWith("#"));
   const finalLinkPath =
-    hashUrlIdx >= 0 ? filter(linkPath, (_, i) => i < hashUrlIdx) : linkPath;
+    hashUrlIndex >= 0
+      ? filter(linkPath, (_, index) => index < hashUrlIndex)
+      : linkPath;
 
-  return map(finalLinkPath, (path, i) => {
+  return map(finalLinkPath, (path, index) => {
     return {
       breadcrumb: startCase(path),
-      href: "/" + linkPath.slice(0, i + 1).join("/"),
+      href: "/" + linkPath.slice(0, index + 1).join("/"),
     };
   });
 }

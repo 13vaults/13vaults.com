@@ -40,9 +40,9 @@ export function buildNav({
           {
             name: "Basic Rules",
             href: "/compendium/basic-rules/",
-            items: map(rulesDocuments, (doc) => ({
-              name: doc.title,
-              href: `/compendium/basic-rules/${doc.slug}`,
+            items: map(rulesDocuments, (rulesDocument) => ({
+              name: rulesDocument.title,
+              href: `/compendium/basic-rules/${rulesDocument.slug}`,
             })),
           },
           {

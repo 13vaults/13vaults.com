@@ -10,7 +10,6 @@ import {
   BasicPage,
 } from "@/.contentlayer/generated";
 import Head from "next/head";
-import { MDXProvider } from "@mdx-js/react";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Container from "@/components/container";
 
@@ -56,7 +55,7 @@ export default function VaultsBasicPage({
 export async function getStaticPaths() {
   return {
     paths: map(allBasicPages, (basicPage) => ({
-      params: { basic_page: basicPage.slug },
+      params: { "basic-page": basicPage.slug },
     })),
     fallback: false,
   };
@@ -67,7 +66,7 @@ export async function getStaticProps(
 ): Promise<GetStaticPropsResult<VaultsBasicPageP>> {
   const pageData = find(allBasicPages, [
     "slug",
-    get(context, "params.basic_page"),
+    get(context, "params.basic-page"),
   ])!;
   return {
     props: {

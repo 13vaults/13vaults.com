@@ -72,8 +72,8 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
               remarkPlugins={[remarkGfm]}
               skipHtml
               components={{
-                a: ({ href, ...props }) => (
-                  <Link href={href || "#"} {...props} />
+                a: ({ href, ...properties }) => (
+                  <Link href={href || "#"} {...properties} />
                 ),
               }}
             >
@@ -88,8 +88,8 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
             })}
           >
             <FeatList>
-              {map(ability.feats, (feat, idx) => (
-                <Feat key={idx} tier={feat.tier}>
+              {map(ability.feats, (feat, index) => (
+                <Feat key={index} tier={feat.tier}>
                   <ReactMarkdown>{feat.description}</ReactMarkdown>
                 </Feat>
               ))}

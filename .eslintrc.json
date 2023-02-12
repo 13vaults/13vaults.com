@@ -1,3 +1,6 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "plugin:unicorn/recommended"],
+  "rules": {
+    "unicorn/no-null": 0
+  }
 }

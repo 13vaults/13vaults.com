@@ -13,10 +13,10 @@ import { buildNav, Navigation } from "@/lib/navigation";
 
 type PickPartial<T, K extends keyof T> = { [P in K]: Partial<T[P]> };
 
-type DocListing = PickPartial<RulesDocument, "slug" | "title">;
+type DocumentListing = PickPartial<RulesDocument, "slug" | "title">;
 
 interface BasicRulesPageP {
-  rulesDocuments: DocListing[];
+  rulesDocuments: DocumentListing[];
   navigation: Navigation;
 }
 
@@ -24,18 +24,18 @@ export default function BasicRulesPage({
   rulesDocuments,
   navigation,
 }: BasicRulesPageP) {
-  const combatRulesDoc = find(rulesDocuments, [
+  const combatRulesDocument = find(rulesDocuments, [
     "slug",
     "combat-rules",
-  ]) as DocListing;
-  const runningTheGameDoc = find(rulesDocuments, [
+  ]) as DocumentListing;
+  const runningTheGameDocument = find(rulesDocuments, [
     "slug",
     "running-the-game",
-  ]) as DocListing;
-  const characterCreationDoc = find(rulesDocuments, [
+  ]) as DocumentListing;
+  const characterCreationDocument = find(rulesDocuments, [
     "slug",
     "character-creation",
-  ]) as DocListing;
+  ]) as DocumentListing;
 
   return (
     <>
@@ -46,20 +46,20 @@ export default function BasicRulesPage({
         <nav>
           <ol>
             <li>
-              <Link href={`/compendium/basic-rules/${combatRulesDoc.slug}`}>
-                {combatRulesDoc.title}
+              <Link href={`/compendium/basic-rules/${combatRulesDocument.slug}`}>
+                {combatRulesDocument.title}
               </Link>
             </li>
             <li>
-              <Link href={`/compendium/basic-rules/${runningTheGameDoc.slug}`}>
-                {runningTheGameDoc.title}
+              <Link href={`/compendium/basic-rules/${runningTheGameDocument.slug}`}>
+                {runningTheGameDocument.title}
               </Link>
             </li>
             <li>
               <Link
-                href={`/compendium/basic-rules/${characterCreationDoc.slug}`}
+                href={`/compendium/basic-rules/${characterCreationDocument.slug}`}
               >
-                {characterCreationDoc.title}
+                {characterCreationDocument.title}
               </Link>
             </li>
           </ol>

@@ -1,5 +1,5 @@
-import { remToPx } from "@/lib/remToPx";
-import useInitialValue from "@/lib/useInitialValue";
+import { remToPx } from "@/lib/rem-to-px";
+import useInitialValue from "@/lib/use-initial-value";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
 import { AnimatePresence, useIsPresent, motion } from "framer-motion";
@@ -90,8 +90,8 @@ export default function CompendiumSideNav({
   const [firstVisible] = useSectionStore((store: any) => store.visibleSections);
   const isAtTop = firstVisible === "_top";
 
-  const handleScrollToTop = useCallback((e: any) => {
-    e.preventDefault();
+  const handleScrollToTop = useCallback((event: any) => {
+    event.preventDefault();
     window.scrollTo({
       top: 0,
       behavior: "smooth",

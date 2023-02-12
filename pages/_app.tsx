@@ -44,7 +44,7 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/favicon.svg" />
         {process.env.NODE_ENV === "production" ? (
           <link rel="preload" as="script" href="/pa/js/pa.js" />
-        ) : null}
+        ) : undefined}
         <title>13 Vaults</title>
         <meta
           name="description"
@@ -58,7 +58,7 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
           data-api="/pa/api/event"
           src="/pa/js/pa.js"
         />
-      ) : null}
+      ) : undefined}
       <style jsx global>{`
         :root {
           --font-inter: ${inter.style.fontFamily};

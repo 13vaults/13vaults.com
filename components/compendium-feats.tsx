@@ -12,21 +12,22 @@ interface CompendiumFeatsP {
   className?: string;
 }
 
+const makeLabel = (feat: CompendiumFeat) => {
+  if (feat.tier === "adventurer") return "Adventurer Feat";
+  if (feat.tier === "champion") return "Champion Feat";
+  if (feat.tier === "epic") return "Epic Feat";
+};
+
 export default function CompendiumFeats({
   feats,
   noMargin = true,
   className,
 }: CompendiumFeatsP): JSX.Element {
-  const makeLabel = (feat: CompendiumFeat) => {
-    if (feat.tier === "adventurer") return "Adventurer Feat";
-    if (feat.tier === "champion") return "Champion Feat";
-    if (feat.tier === "epic") return "Epic Feat";
-  };
   return (
     <div className={clsx(className, "not-prose", { "my-5": !noMargin })}>
       <ol className="flex flex-col gap-2">
-        {map(feats, (feat, i) => (
-          <li key={i}>
+        {map(feats, (feat, index) => (
+          <li key={index}>
             <div className="bg-gradient-to-r from-blue-500/20 to-blue-500/0">
               <p className="p-1 whitespace-pre-wrap">
                 <span className="inline-block font-bold italic">

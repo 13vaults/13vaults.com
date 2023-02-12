@@ -89,7 +89,9 @@ export default function ContentLayerPage({
                   {children}
                 </Heading>
               ),
-              a: ({ href, ...props }: any) => <Link href={href} {...props} />,
+              a: ({ href, ...properties }: any) => (
+                <Link href={href} {...properties} />
+              ),
               h5: ({ id, children, ...rest }) => (
                 <Heading level={5} id={id!} headingProps={rest}>
                   {children}
@@ -100,9 +102,9 @@ export default function ContentLayerPage({
                   {children}
                 </Heading>
               ),
-              table: (props: any) => (
+              table: (properties: any) => (
                 <div className="overflow-auto border dark:border-stone-700 rounded shadow bg-white dark:bg-stone-700 border-stone-300 my-2">
-                  <table {...props} />
+                  <table {...properties} />
                 </div>
               ),
             }}

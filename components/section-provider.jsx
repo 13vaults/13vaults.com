@@ -14,7 +14,7 @@ function createSectionStore(sections) {
     visibleSections: [],
     setVisibleSections: (newVisibleSections) => {
       set((state) =>
-        state.visibleSections.join() === newVisibleSections.join()
+        state.visibleSections.join(',') === newVisibleSections.join(',')
           ? {}
           : { visibleSections: newVisibleSections }
       );
@@ -65,7 +65,7 @@ function useVisibleSections(sectionStore) {
         const nextSection = sections[sectionIndex + 1];
         const bottom =
           (nextSection?.headingRef?.current?.getBoundingClientRect().top ??
-            Infinity) +
+            Number.POSITIVE_INFINITY) +
           scrollY -
           remToPx(nextSection?.offsetRem ?? 0);
 
