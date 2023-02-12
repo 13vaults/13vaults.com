@@ -9,10 +9,10 @@ import GithubSlugger from "github-slugger";
 
 const sectionsField = {
   type: "json",
-  resolve: (doc) => {
+  resolve: (document_) => {
     const slugger = new GithubSlugger();
     const headingsRegex = /\n(##)\s+(?<content>.+)/g;
-    const headings = Array.from(doc.body.raw.matchAll(headingsRegex));
+    const headings = [...document_.body.raw.matchAll(headingsRegex)];
     return headings.map(({ groups }) => {
       const content = groups?.content;
       return {
@@ -76,7 +76,8 @@ const BasicPage = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
+      resolve: (document_) =>
+        document_._raw.sourceFileName.replace(/\.mdx$/, ""),
     },
   },
 }));
@@ -92,7 +93,8 @@ const RulesDocument = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
+      resolve: (document_) =>
+        document_._raw.sourceFileName.replace(/\.mdx$/, ""),
     },
     sections: sectionsField,
   },
@@ -110,7 +112,8 @@ const Monster = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (doc) => doc._raw.sourceFileName.replace(/\.yml$/, ""),
+      resolve: (document_) =>
+        document_._raw.sourceFileName.replace(/\.yml$/, ""),
     },
   },
 }));
@@ -128,7 +131,8 @@ const Ancestry = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
+      resolve: (document_) =>
+        document_._raw.sourceFileName.replace(/\.mdx$/, ""),
     },
     sections: sectionsField,
   },
@@ -147,7 +151,8 @@ const ClassItem = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
+      resolve: (document_) =>
+        document_._raw.sourceFileName.replace(/\.mdx$/, ""),
     },
     sections: sectionsField,
   },
