@@ -318,7 +318,7 @@ items:
       default: 0
   - _id: "QalQ8gXY9Lfulqb9"
     flags: {}
-    name: "Devil’s due (Weakness)"
+    name: "Devil's due (Weakness)"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:

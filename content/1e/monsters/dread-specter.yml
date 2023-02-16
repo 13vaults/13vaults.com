@@ -368,7 +368,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "While a specter is in the battle, the PCs don’t add the escalation die to attack rolls, but it does."
+        value: "While a specter is in the battle, the PCs don't add the escalation die to attack rolls, but it does."
       group:
         type: "String"
         label: "Group"
@@ -390,7 +390,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "At the start of each of the specter’s turns, if any enemy in the battle has 60 hp or fewer, the specter can make a death grasp attack against one of those enemies as a free action. Be sure to let players see this one coming."
+        value: "At the start of each of the specter's turns, if any enemy in the battle has 60 hp or fewer, the specter can make a death grasp attack against one of those enemies as a free action. Be sure to let players see this one coming."
       group:
         type: "String"
         label: "Group"

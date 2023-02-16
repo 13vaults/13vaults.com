@@ -220,7 +220,7 @@ items:
       default: 0
   - _id: "WhCMfpcA44cvsEPm"
     flags: {}
-    name: "You shouldn’t have done that"
+    name: "You shouldn't have done that"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:

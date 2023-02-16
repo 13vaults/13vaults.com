@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 14-15"
-        value: "The target is *dazed* until the end of the chimera’s next turn from a headbutt."
+        value: "The target is *dazed* until the end of the chimera's next turn from a headbutt."
       hit2:
         type: ""
         label: "Hit"
@@ -283,7 +283,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Limited use: Once the chimera has damaged an enemy with this attack, it can’t use tusk charge again until it drops an enemy to 0 hp or lower."
+        value: "Limited use: Once the chimera has damaged an enemy with this attack, it can't use tusk charge again until it drops an enemy to 0 hp or lower."
       group:
         type: "String"
         label: "Group"
@@ -331,7 +331,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "At the start of battle each PC rolls one icon relationship die of their choice and one die chosen from their relationships by the GM. A roll of 6 means the chimera has shifted in a manner that gives it a chimerical flaw (F) that the adventurers can exploit. A roll of a 5 indicates that the chimera gains both a flaw and a benefit associated with that icon. A result of 1 or 2 means that the chimera gains the icon’s chimerical benefit (B) without the flaw. Actual benefits and flaws are up to the GM, and should reflect the icons with which the players have relationships."
+        value: "At the start of battle each PC rolls one icon relationship die of their choice and one die chosen from their relationships by the GM. A roll of 6 means the chimera has shifted in a manner that gives it a chimerical flaw (F) that the adventurers can exploit. A roll of a 5 indicates that the chimera gains both a flaw and a benefit associated with that icon. A result of 1 or 2 means that the chimera gains the icon's chimerical benefit (B) without the flaw. Actual benefits and flaws are up to the GM, and should reflect the icons with which the players have relationships."
       group:
         type: "String"
         label: "Group"
@@ -507,7 +507,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The chimera won’t willingly disengage from a creature engaged with it."
+        value: "The chimera won't willingly disengage from a creature engaged with it."
       group:
         type: "String"
         label: "Group"
@@ -551,7 +551,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The chimera’s form is unusually frail, and any damage dice that roll 1s against the chimera count as 2s."
+        value: "The chimera's form is unusually frail, and any damage dice that roll 1s against the chimera count as 2s."
       group:
         type: "String"
         label: "Group"
@@ -573,7 +573,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Enemies engaged with the chimera who are below 48 hit points are *dazed* and can’t use the escalation die."
+        value: "Enemies engaged with the chimera who are below 48 hit points are *dazed* and can't use the escalation die."
       group:
         type: "String"
         label: "Group"
@@ -595,7 +595,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The chimera has transformed itself into a form that’s gem encrusted with golden fur. When slain it will yield [[1d6]] x 100 gp per adventurer in gems and precious metals. At the GM’s say-so, knowledge of this bounty may grant particularly mercenary characters a +1 attack bonus against the chimera once it’s staggered."
+        value: "The chimera has transformed itself into a form that's gem encrusted with golden fur. When slain it will yield [[1d6]] x 100 gp per adventurer in gems and precious metals. At the GM's say-so, knowledge of this bounty may grant particularly mercenary characters a +1 attack bonus against the chimera once it's staggered."
       group:
         type: "String"
         label: "Group"
@@ -749,7 +749,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "As a standard action, the chimera can make a tusk charge attack. It can’t make any other attacks the same turn."
+        value: "As a standard action, the chimera can make a tusk charge attack. It can't make any other attacks the same turn."
       group:
         type: "String"
         label: "Group"

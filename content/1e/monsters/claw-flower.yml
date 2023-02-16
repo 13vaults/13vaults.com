@@ -282,7 +282,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The claw flower has roots and normally can’t move, but when it takes [[10]] or more damage from a single attack it can move normally during its next turn."
+        value: "The claw flower has roots and normally can't move, but when it takes [[10]] or more damage from a single attack it can move normally during its next turn."
       group:
         type: "String"
         label: "Group"

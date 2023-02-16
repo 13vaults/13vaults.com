@@ -226,7 +226,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "While a troll is damaged, its rubbery flesh heals 10 hit points at the start of the troll’s turn. It can regenerate five times per battle. If it heals to its maximum hit points, then that use of regeneration doesn’t count against the five-use limit."
+        value: "While a troll is damaged, its rubbery flesh heals 10 hit points at the start of the troll's turn. It can regenerate five times per battle. If it heals to its maximum hit points, then that use of regeneration doesn't count against the five-use limit."
       group:
         type: "String"
         label: "Group"
@@ -238,7 +238,7 @@ items:
       default: 0
   - _id: "P1Z1FWj3OHrBl4Ub"
     flags: {}
-    name: "When the troll is hit by an attack that deals fire or acid damage, it loses one use of its regeneration, and it can’t regenerate during its next turn."
+    name: "When the troll is hit by an attack that deals fire or acid damage, it loses one use of its regeneration, and it can't regenerate during its next turn."
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -248,7 +248,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the troll is hit by an attack that deals fire or acid damage, it loses one use of its regeneration, and it can’t regenerate during its next turn."
+        value: "When the troll is hit by an attack that deals fire or acid damage, it loses one use of its regeneration, and it can't regenerate during its next turn."
       group:
         type: "String"
         label: "Group"
@@ -260,7 +260,7 @@ items:
       default: 0
   - _id: "K6Z8whrTSUzU6Dnh"
     flags: {}
-    name: "Dropping a troll to 0 hp doesn’t kill it if it has any uses of regeneration left."
+    name: "Dropping a troll to 0 hp doesn't kill it if it has any uses of regeneration left."
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -270,7 +270,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Dropping a troll to 0 hp doesn’t kill it if it has any uses of regeneration left."
+        value: "Dropping a troll to 0 hp doesn't kill it if it has any uses of regeneration left."
       group:
         type: "String"
         label: "Group"
@@ -292,7 +292,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Increase the troll’s regeneration dice; the baseline amount a troll regenerates should run about 1/9 of its total hp, but you can go higher to be nasty."
+        value: "Increase the troll's regeneration dice; the baseline amount a troll regenerates should run about 1/9 of its total hp, but you can go higher to be nasty."
       group:
         type: "String"
         label: "Group"
@@ -314,7 +314,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Fire and acid don’t hurt the troll’s regeneration; lightning does instead."
+        value: "Fire and acid don't hurt the troll's regeneration; lightning does instead."
       group:
         type: "String"
         label: "Group"

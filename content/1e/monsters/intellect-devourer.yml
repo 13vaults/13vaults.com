@@ -303,7 +303,7 @@ items:
       hit:
         type: "String"
         label: "Hit"
-        value: "The target can neither detect the intellect devourer’s presence nor remember it was ever there to begin with. If no enemy in the battle remembers the devourer is there, remove it from play. Each nearby enemy immediately detects the devourer’s presence if it makes an attack or if it doesn’t leave the battle by the end of its next turn."
+        value: "The target can neither detect the intellect devourer's presence nor remember it was ever there to begin with. If no enemy in the battle remembers the devourer is there, remove it from play. Each nearby enemy immediately detects the devourer's presence if it makes an attack or if it doesn't leave the battle by the end of its next turn."
       hit1:
         type: "String"
         label: "Hit"

@@ -322,7 +322,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When an enemy intercepts the sahuagin mutant, it takes [[4d8]] damage from the mutant’s claws and teeth."
+        value: "When an enemy intercepts the sahuagin mutant, it takes [[4d8]] damage from the mutant's claws and teeth."
       group:
         type: "String"
         label: "Group"

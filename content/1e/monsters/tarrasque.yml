@@ -273,7 +273,7 @@ items:
         type: "String"
         label: "Hit"
         name: "Natural 16+"
-        value: "The target takes [[9d6]] extra damage and pops free from the tarrasque as it’s hurled far away."
+        value: "The target takes [[9d6]] extra damage and pops free from the tarrasque as it's hurled far away."
       hit2:
         type: "String"
         label: "Hit"

@@ -280,7 +280,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "All nearby derro gain a +1 bonus to attacks and defenses until the end of the derro maniac’s next turn (cumulative)."
+        value: "All nearby derro gain a +1 bonus to attacks and defenses until the end of the derro maniac's next turn (cumulative)."
       group:
         type: "String"
         label: "Group"

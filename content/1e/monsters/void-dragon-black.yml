@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 5, 10, 15, or 20"
-        value: "The dragon regains the use of its ensorceling breath if it’s expended and can use it during its next turn."
+        value: "The dragon regains the use of its ensorceling breath if it's expended and can use it during its next turn."
       hit2:
         type: "String"
         label: "Hit"
@@ -242,7 +242,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[24]] damage, and the dragon’s breath coalesces into two small void beasts of rapidly shifting form (see below)"
+        value: "[[24]] damage, and the dragon's breath coalesces into two small void beasts of rapidly shifting form (see below)"
       hit1:
         type: "String"
         label: "Hit"
@@ -262,7 +262,7 @@ items:
         type: ""
         label: "Hit"
         name: "Miss"
-        value: "The dragon’s breath coalesces into one small void beast (see below)."
+        value: "The dragon's breath coalesces into one small void beast (see below)."
     sort: 100000
     effects: []
     folder: null
@@ -352,7 +352,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "At the start of each of the void dragon’s turns, roll a [[d6]] to see if it gets an extra standard action. If the roll is equal to or less than the escalation die, the void dragon can take an extra standard action that turn. After the first success, the grace die bumps up to a d8. After the second success, it’s a d10, then a d12 after the third success, and finally a d20 after the fourth one."
+        value: "At the start of each of the void dragon's turns, roll a [[d6]] to see if it gets an extra standard action. If the roll is equal to or less than the escalation die, the void dragon can take an extra standard action that turn. After the first success, the grace die bumps up to a d8. After the second success, it's a d10, then a d12 after the third success, and finally a d20 after the fourth one."
       group:
         type: "String"
         label: "Group"

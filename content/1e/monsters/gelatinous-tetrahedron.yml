@@ -168,7 +168,7 @@ token:
 items:
   - _id: "xf7RsOPVxHAXZZeH"
     flags: {}
-    name: "Shlup’n’schlorp"
+    name: "Shlup'n'schlorp"
     type: "action"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -190,7 +190,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[22]] acid damage, and the tetrahedron engulfs the target (functions like a grab<SEMICOLON> see below) if it’s smaller than the tetrahedron"
+        value: "[[22]] acid damage, and the tetrahedron engulfs the target (functions like a grab<SEMICOLON> see below) if it's smaller than the tetrahedron"
       hit1:
         type: "String"
         label: "Hit"
@@ -420,7 +420,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Targets engulfed/grabbed by the tetrahedron take [[22]] acid damage at the start of the cube’s turn but are not viable targets for additional attacks by the tetrahedron. Multiple targets can be held within the tetrahedron simultaneously. Any engulfed creature that is also staggered must begin making last gasp saves or become paralyzed as the tetrahedron’s toxins overwhelm it."
+        value: "Targets engulfed/grabbed by the tetrahedron take [[22]] acid damage at the start of the cube's turn but are not viable targets for additional attacks by the tetrahedron. Multiple targets can be held within the tetrahedron simultaneously. Any engulfed creature that is also staggered must begin making last gasp saves or become paralyzed as the tetrahedron's toxins overwhelm it."
       group:
         type: "String"
         label: "Group"

@@ -228,7 +228,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "While at least one creature in the battle is staggered or *unconscious*, the bulette gains a bonus to its attacks and damage equal to the escalation die. Creatures that have no blood (constructs, oozes, plant creatures, etc.) don’t trigger this ability."
+        value: "While at least one creature in the battle is staggered or *unconscious*, the bulette gains a bonus to its attacks and damage equal to the escalation die. Creatures that have no blood (constructs, oozes, plant creatures, etc.) don't trigger this ability."
       group:
         type: "String"
         label: "Group"
@@ -250,7 +250,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Whenever the bumoorah takes damage from an attack, it rolls a save; on a 16+ it can immediately dive beneath the ground, preventing further attacks against it until it surfaces at the start of its next turn. Force attacks and opportunity attacks don’t trigger this ability."
+        value: "Whenever the bumoorah takes damage from an attack, it rolls a save; on a 16+ it can immediately dive beneath the ground, preventing further attacks against it until it surfaces at the start of its next turn. Force attacks and opportunity attacks don't trigger this ability."
       group:
         type: "String"
         label: "Group"

@@ -226,7 +226,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "At the start of its turn, a skin devil heals 8 hp. If it doesn’t heal up to its maximum hit points, it loses its ability to heal from this ability until the end of the battle."
+        value: "At the start of its turn, a skin devil heals 8 hp. If it doesn't heal up to its maximum hit points, it loses its ability to heal from this ability until the end of the battle."
       group:
         type: "String"
         label: "Group"
@@ -292,7 +292,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The skin devil is routinely able to pass through civilized areas without alerting dogs, bouncers, city guards, or passersby. If the thing attacks, that’s when you notice that it’s not a human but a monstrous pile of flesh. In addition to passing unnoticed in crowds, it uses its fluid shape to sneak through hidden places, and it doesn’t make much noise unless it wants to. PCs looking for the devil won’t find it unless they have some special information or advantage, and even then it’s a hard check (DC 25). Normally when PCs think they have the devil cornered, it escapes through a tight exit that it had previously identified."
+        value: "The skin devil is routinely able to pass through civilized areas without alerting dogs, bouncers, city guards, or passersby. If the thing attacks, that's when you notice that it's not a human but a monstrous pile of flesh. In addition to passing unnoticed in crowds, it uses its fluid shape to sneak through hidden places, and it doesn't make much noise unless it wants to. PCs looking for the devil won't find it unless they have some special information or advantage, and even then it's a hard check (DC 25). Normally when PCs think they have the devil cornered, it escapes through a tight exit that it had previously identified."
       group:
         type: "String"
         label: "Group"

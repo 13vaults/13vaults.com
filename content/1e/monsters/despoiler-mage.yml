@@ -336,7 +336,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "one target makes an at-will melee attack against this power’s other target"
+        value: "one target makes an at-will melee attack against this power's other target"
       hit1:
         type: "String"
         label: "Hit"
@@ -372,7 +372,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "At the start of each of the despoiler mage’s turns, choose a random nearby enemy. Until the start of the despoiler mage’s next turn, that creature’s allies no longer consider it an ally, though its enemies’ powers can still target it as an enemy. The creature isn’t compelled to attack its former friends."
+        value: "At the start of each of the despoiler mage's turns, choose a random nearby enemy. Until the start of the despoiler mage's next turn, that creature's allies no longer consider it an ally, though its enemies' powers can still target it as an enemy. The creature isn't compelled to attack its former friends."
       group:
         type: "String"
         label: "Group"

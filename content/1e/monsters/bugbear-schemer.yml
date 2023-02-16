@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit or miss"
-        value: "Each of the bugbear schemer’s nearby humanoid allies gains a +2 bonus to melee attacks until the start of the schemer’s next turn."
+        value: "Each of the bugbear schemer's nearby humanoid allies gains a +2 bonus to melee attacks until the start of the schemer's next turn."
       hit2:
         type: ""
         label: "Hit"
@@ -328,7 +328,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "During the bugbear schemer’s turn, if it doesn’t engage an enemy or move, it regains a use of ridiculously heavy crossbow if it’s expended as it reloads the crossbow."
+        value: "During the bugbear schemer's turn, if it doesn't engage an enemy or move, it regains a use of ridiculously heavy crossbow if it's expended as it reloads the crossbow."
       group:
         type: "String"
         label: "Group"
@@ -372,7 +372,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the bugbear schemer thinks the battle is out of reach and it isn’t engaged, it can try to flee once per battle. As a move action, roll a hard save. On a success, the bugbear schemer had a bolt-hole or escape plan ready and it gets away (though it’s probably just getting more troops)."
+        value: "When the bugbear schemer thinks the battle is out of reach and it isn't engaged, it can try to flee once per battle. As a move action, roll a hard save. On a success, the bugbear schemer had a bolt-hole or escape plan ready and it gets away (though it's probably just getting more troops)."
       group:
         type: "String"
         label: "Group"

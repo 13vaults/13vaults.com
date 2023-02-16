@@ -245,7 +245,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit"
-        value: "If target is staggered after taking the damage, it’s also *hampered* until the end of its next turn."
+        value: "If target is staggered after taking the damage, it's also *hampered* until the end of its next turn."
       hit2:
         type: ""
         label: "Hit"
@@ -280,7 +280,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When a ranged attack targets this creature while it’s flying, the attacker must roll a natural 16+ on the attack roll or it only deals half damage."
+        value: "When a ranged attack targets this creature while it's flying, the attacker must roll a natural 16+ on the attack roll or it only deals half damage."
       group:
         type: "String"
         label: "Group"

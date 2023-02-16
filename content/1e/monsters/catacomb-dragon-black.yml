@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 5, 10, 15, or 20"
-        value: "The dragon regains the use of its caustic breath if it’s expended and can use it during its next turn."
+        value: "The dragon regains the use of its caustic breath if it's expended and can use it during its next turn."
       hit2:
         type: "String"
         label: "Hit"
@@ -322,7 +322,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "the mist can be burned, condensed/frozen, blown away, absorbed, transmuted, etc. At the GM’s discretion, there may be physical ways to remove the haze, but it should require a hard DC."
+        value: "the mist can be burned, condensed/frozen, blown away, absorbed, transmuted, etc. At the GM's discretion, there may be physical ways to remove the haze, but it should require a hard DC."
       group:
         type: "String"
         label: "Group"
@@ -344,7 +344,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "A catacomb dragon flies reasonably well, powerful and fast in a straight line though it’s not as maneuverable as more agile flyers. It can also burrow quickly and effectively due to the acidic coating on its skin."
+        value: "A catacomb dragon flies reasonably well, powerful and fast in a straight line though it's not as maneuverable as more agile flyers. It can also burrow quickly and effectively due to the acidic coating on its skin."
       group:
         type: "String"
         label: "Group"

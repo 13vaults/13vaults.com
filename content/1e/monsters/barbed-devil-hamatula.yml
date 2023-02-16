@@ -340,7 +340,7 @@ items:
       default: 0
   - _id: "z2ZTT5ThHl6jy5wr"
     flags: {}
-    name: "Devil’s due (Loot)"
+    name: "Devil's due (Loot)"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -350,7 +350,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When you choose to add the escalation die to an attack against a barbed devil, you must expend one of your unused true magic item powers as the item gets a close encounter with the barbed devil’s “soul.” If you can’t expend such a power, no escalation die for you."
+        value: "When you choose to add the escalation die to an attack against a barbed devil, you must expend one of your unused true magic item powers as the item gets a close encounter with the barbed devil's “soul.” If you can't expend such a power, no escalation die for you."
       group:
         type: "String"
         label: "Group"

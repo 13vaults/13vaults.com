@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural odd hit or miss"
-        value: "The demon bow eats at the ranger’s arm and the ranger takes [[1d6]] damage."
+        value: "The demon bow eats at the ranger's arm and the ranger takes [[1d6]] damage."
       hit2:
         type: "String"
         label: "Hit"

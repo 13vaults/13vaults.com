@@ -370,7 +370,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the treant titan hits with a titanic rend attack, the target is pulled into a hollow chamber within the treant. While grabbed by the treant this way, the target can’t be the target of its allies’ powers or spells."
+        value: "When the treant titan hits with a titanic rend attack, the target is pulled into a hollow chamber within the treant. While grabbed by the treant this way, the target can't be the target of its allies' powers or spells."
       group:
         type: "String"
         label: "Group"

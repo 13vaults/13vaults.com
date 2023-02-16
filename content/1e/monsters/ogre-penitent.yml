@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 5, 10, 15, or 20"
-        value: "Until the end of the battle, when an enemy engaged with the ogre attacks it, that enemy can’t target other enemies with that attack."
+        value: "Until the end of the battle, when an enemy engaged with the ogre attacks it, that enemy can't target other enemies with that attack."
       hit2:
         type: "String"
         label: "Hit"

@@ -190,7 +190,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[25]] damage, and one of the shredder’s allies engaged with the target can pop free"
+        value: "[[25]] damage, and one of the shredder's allies engaged with the target can pop free"
       hit1:
         type: "String"
         label: "Hit"

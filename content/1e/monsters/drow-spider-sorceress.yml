@@ -226,7 +226,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Limited use: Once the sorceress hits with darkfire, she can’t use it again until the target saves."
+        value: "Limited use: Once the sorceress hits with darkfire, she can't use it again until the target saves."
       group:
         type: "String"
         label: "Group"

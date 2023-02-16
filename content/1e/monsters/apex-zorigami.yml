@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit or miss"
-        value: "The target can’t use the bonuses and powers of one of its randomly determined true magic items until the end of the battle."
+        value: "The target can't use the bonuses and powers of one of its randomly determined true magic items until the end of the battle."
       hit2:
         type: "String"
         label: "Hit"

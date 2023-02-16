@@ -336,7 +336,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "The target stops its movement or loses its ranged attack that turn, and the wall of ice remains until the end of the battle (GM’s choice on its size, but it shouldn’t be too large or thick; normal DC to break through it)"
+        value: "The target stops its movement or loses its ranged attack that turn, and the wall of ice remains until the end of the battle (GM's choice on its size, but it shouldn't be too large or thick; normal DC to break through it)"
       hit1:
         type: "String"
         label: "Hit"
@@ -394,7 +394,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Once per round as a free action, the giant can make an ice wall attack to conjure forth a wall of ice that stops one enemy’s movement or ranged attack. The giant can’t use this ability to target creatures making fire attacks or wielding weapons that deal fire damage."
+        value: "Once per round as a free action, the giant can make an ice wall attack to conjure forth a wall of ice that stops one enemy's movement or ranged attack. The giant can't use this ability to target creatures making fire attacks or wielding weapons that deal fire damage."
       group:
         type: "String"
         label: "Group"

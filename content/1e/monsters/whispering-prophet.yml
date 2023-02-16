@@ -238,7 +238,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[5]] psychic damage, and the target’s mind is filled with a delusional scene from its past that depends on the roll"
+        value: "[[5]] psychic damage, and the target's mind is filled with a delusional scene from its past that depends on the roll"
       hit1:
         type: ""
         label: "Hit"
@@ -278,7 +278,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "So long as the attack hits one or more targets, one ally of the prophet’s choice gains a cumulative +1 attack bonus until the end of the battle that increases that ally’s natural attack roll (so a roll of natural 15 becomes a roll of natural 16 with a +1 bonus, or a natural 17 with a +2 bonus, etc.). The ally can choose not to use the bonus."
+        value: "So long as the attack hits one or more targets, one ally of the prophet's choice gains a cumulative +1 attack bonus until the end of the battle that increases that ally's natural attack roll (so a roll of natural 15 becomes a roll of natural 16 with a +1 bonus, or a natural 17 with a +2 bonus, etc.). The ally can choose not to use the bonus."
       group:
         type: "String"
         label: "Group"
@@ -322,7 +322,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Twice per battle as a move action, the prophet can teleport to anywhere it can see, or to a location it can’t see but that has the correct geometry and that it has previously prepared (a lair)."
+        value: "Twice per battle as a move action, the prophet can teleport to anywhere it can see, or to a location it can't see but that has the correct geometry and that it has previously prepared (a lair)."
       group:
         type: "String"
         label: "Group"
@@ -344,7 +344,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When an enemy has dropped to 0 hp or lower since the prophet’s last turn, as a quick action it can get a glimpse of the near-future. It grants [[1d3]] nearby allies a +4 bonus to attacks and to all defenses until the start of its next turn."
+        value: "When an enemy has dropped to 0 hp or lower since the prophet's last turn, as a quick action it can get a glimpse of the near-future. It grants [[1d3]] nearby allies a +4 bonus to attacks and to all defenses until the start of its next turn."
       group:
         type: "String"
         label: "Group"

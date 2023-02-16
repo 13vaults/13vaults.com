@@ -274,7 +274,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The marilith’s crit range with melee attacks expands by a number equal to the escalation die."
+        value: "The marilith's crit range with melee attacks expands by a number equal to the escalation die."
       group:
         type: "String"
         label: "Group"

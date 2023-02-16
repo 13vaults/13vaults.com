@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 16+"
-        value: "If this is the devil’s first attack during its turn, it can make a telepathic harry attack as a free action."
+        value: "If this is the devil's first attack during its turn, it can make a telepathic harry attack as a free action."
       hit2:
         type: "String"
         label: "Hit"
@@ -245,7 +245,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 16+"
-        value: "If this is the devil’s first attack during its turn, it can make a crushing punch or kick attack as a free action."
+        value: "If this is the devil's first attack during its turn, it can make a crushing punch or kick attack as a free action."
       hit2:
         type: "String"
         label: "Hit"
@@ -268,7 +268,7 @@ items:
       default: 0
   - _id: "dHqEVB7F5QwCWCNi"
     flags: {}
-    name: "Devil’s due (Mastery)"
+    name: "Devil's due (Mastery)"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -322,7 +322,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "At the start of a hooded devil’s turn, it can roll a save against each save ends effect affecting it if it doesn’t attack that turn (so it could successfully save against *confused* or *stunned* conditions and still move that turn, for example.)"
+        value: "At the start of a hooded devil's turn, it can roll a save against each save ends effect affecting it if it doesn't attack that turn (so it could successfully save against *confused* or *stunned* conditions and still move that turn, for example.)"
       group:
         type: "String"
         label: "Group"
@@ -344,7 +344,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "the furniture, terrain, conversations, and people. If the PCs attempt to overcome a hooded devil through skill checks, the check is DC 30. Good luck if you need to win an argument, get to an exit first, use terrain to your advantage, or pressure one of the devil’s thugs to rat it out. The name of this ability is a verb."
+        value: "the furniture, terrain, conversations, and people. If the PCs attempt to overcome a hooded devil through skill checks, the check is DC 30. Good luck if you need to win an argument, get to an exit first, use terrain to your advantage, or pressure one of the devil's thugs to rat it out. The name of this ability is a verb."
       group:
         type: "String"
         label: "Group"

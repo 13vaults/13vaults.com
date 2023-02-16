@@ -330,7 +330,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When an enemy targets the swaysong naga with a spell, the naga regains the use of song of reversals if it’s expended. In addition, if that spell is a recharge spell, roll its recharge check immediately after the spell is cast. If the spell is a per-battle or daily spell, roll a hard save (16+) immediately after the spell is cast; on a success, the spellcaster doesn’t expend the spell."
+        value: "When an enemy targets the swaysong naga with a spell, the naga regains the use of song of reversals if it's expended. In addition, if that spell is a recharge spell, roll its recharge check immediately after the spell is cast. If the spell is a per-battle or daily spell, roll a hard save (16+) immediately after the spell is cast; on a success, the spellcaster doesn't expend the spell."
       group:
         type: "String"
         label: "Group"
@@ -352,7 +352,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The naga and each of its nearby allies can use the escalation die unless the naga has been targeted by an enemy’s spell since its last turn."
+        value: "The naga and each of its nearby allies can use the escalation die unless the naga has been targeted by an enemy's spell since its last turn."
       group:
         type: "String"
         label: "Group"

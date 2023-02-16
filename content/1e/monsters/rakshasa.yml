@@ -290,7 +290,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[15]] psychic damage, and the target is *confused* (make a basic or at-will attack vs. ally) until the end of the rakshasa’s next turn"
+        value: "[[15]] psychic damage, and the target is *confused* (make a basic or at-will attack vs. ally) until the end of the rakshasa's next turn"
       hit1:
         type: "String"
         label: "Hit"
@@ -370,7 +370,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Once per day as a quick action, the rakshasa steals the escalation die; until the end of the battle, the rakshasa gains an attack bonus equal to the die’s value when it was stolen. Reset the escalation die to 0 for the players and increase it normally with each new round."
+        value: "Once per day as a quick action, the rakshasa steals the escalation die; until the end of the battle, the rakshasa gains an attack bonus equal to the die's value when it was stolen. Reset the escalation die to 0 for the players and increase it normally with each new round."
       group:
         type: "String"
         label: "Group"

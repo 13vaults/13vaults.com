@@ -276,7 +276,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "At the end of the ankheg’s turn, roll a [[d6]]. If it’s equal to or less than the escalation die, the ankheg can move again as a free action."
+        value: "At the end of the ankheg's turn, roll a [[d6]]. If it's equal to or less than the escalation die, the ankheg can move again as a free action."
       group:
         type: "String"
         label: "Group"

@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 5, 10, 15, or 20"
-        value: "The dragon regains the use of its dazzling breath if it’s expended and can use it during its next turn."
+        value: "The dragon regains the use of its dazzling breath if it's expended and can use it during its next turn."
       hit2:
         type: "String"
         label: "Hit"
@@ -236,7 +236,7 @@ items:
       attack:
         type: ""
         label: "Attack Roll"
-        value: "[[d20 + 13]] vs. AC ([[1]] enemy it’s grabbing)"
+        value: "[[d20 + 13]] vs. AC ([[1]] enemy it's grabbing)"
       hit:
         type: ""
         label: "Hit"
@@ -290,7 +290,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[14]] damage, and if the target has 40 HP or fewer after being hit, it’s *weakened* until the end of its next turn"
+        value: "[[14]] damage, and if the target has 40 HP or fewer after being hit, it's *weakened* until the end of its next turn"
       hit1:
         type: "String"
         label: "Hit"
@@ -326,7 +326,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "A creature that is swallowed whole must start making last gasp saves during its next turn. An ally can assist with the save as normal, but the save remains hard (16+) in that case. A roll of 16-19 causes the creature to be regurgitated from the dragon’s gut, while a 20 means that the creature cuts/rips a hole through the dragon’s flesh to escape (dealing basic attack damage automatically)."
+        value: "A creature that is swallowed whole must start making last gasp saves during its next turn. An ally can assist with the save as normal, but the save remains hard (16+) in that case. A roll of 16-19 causes the creature to be regurgitated from the dragon's gut, while a 20 means that the creature cuts/rips a hole through the dragon's flesh to escape (dealing basic attack damage automatically)."
       group:
         type: "String"
         label: "Group"

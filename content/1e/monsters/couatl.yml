@@ -286,7 +286,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[50]] damage of the following type (couatl’s choice): fire, holy, or lightning"
+        value: "[[50]] damage of the following type (couatl's choice): fire, holy, or lightning"
       hit1:
         type: ""
         label: "Hit"
@@ -456,7 +456,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Choose each appropriate ability from the couatl’s Icon-centered Abilities list."
+        value: "Choose each appropriate ability from the couatl's Icon-centered Abilities list."
       group:
         type: "String"
         label: "Group"

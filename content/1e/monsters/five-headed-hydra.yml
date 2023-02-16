@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit or miss"
-        value: "The hydra’s next gnashing teeth attack, if it has an attack left this turn, can be against any nearby enemy instead of against a creature engaged with it."
+        value: "The hydra's next gnashing teeth attack, if it has an attack left this turn, can be against any nearby enemy instead of against a creature engaged with it."
       hit2:
         type: "String"
         label: "Hit"
@@ -274,7 +274,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The first time the hydra is staggered, as a free action it gains 40 hit points and a sixth gnashing teeth attack, and is considered undamaged at its new hit point total. Using the hydra’s current hit points as a new baseline, the hydra will be staggered again when it drops below 50% of that total."
+        value: "The first time the hydra is staggered, as a free action it gains 40 hit points and a sixth gnashing teeth attack, and is considered undamaged at its new hit point total. Using the hydra's current hit points as a new baseline, the hydra will be staggered again when it drops below 50% of that total."
       group:
         type: "String"
         label: "Group"

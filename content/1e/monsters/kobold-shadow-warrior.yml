@@ -322,7 +322,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "If a shadow-warrior hasn’t been attacked since the end of its last turn, it can spend all of its actions on its turn to disappear from sight (remove it from play as it gets into position). At the start of its next turn, it reappears (dropping down from the ceiling or springing out of cover and re-entering play) and can make an elusive strike attack as a standard action."
+        value: "If a shadow-warrior hasn't been attacked since the end of its last turn, it can spend all of its actions on its turn to disappear from sight (remove it from play as it gets into position). At the start of its next turn, it reappears (dropping down from the ceiling or springing out of cover and re-entering play) and can make an elusive strike attack as a standard action."
       group:
         type: "String"
         label: "Group"

@@ -190,7 +190,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[25]] negative energy damage, and the target takes +[[1d8]] negative energy damage for each relationship point it has with the bat’s associated icon."
+        value: "[[25]] negative energy damage, and the target takes +[[1d8]] negative energy damage for each relationship point it has with the bat's associated icon."
       hit1:
         type: "String"
         label: "Hit"
@@ -274,7 +274,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "This creature has resist damage 16+ to all damage except force damage, which damages it normally. A wraith bat can move through solid objects but it can’t end its movement inside them."
+        value: "This creature has resist damage 16+ to all damage except force damage, which damages it normally. A wraith bat can move through solid objects but it can't end its movement inside them."
       group:
         type: "String"
         label: "Group"

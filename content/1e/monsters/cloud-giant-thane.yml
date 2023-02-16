@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit"
-        value: "The target loses any flight abilities and can’t gain flight in any way (save ends)."
+        value: "The target loses any flight abilities and can't gain flight in any way (save ends)."
       hit2:
         type: ""
         label: "Hit"

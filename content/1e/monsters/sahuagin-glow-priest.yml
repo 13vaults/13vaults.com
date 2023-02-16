@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit or miss"
-        value: "The priest teleports the target next to one of its nearby allies that it can see, who engages it as a free action. It can’t teleport the target to a location that causes it direct damage (so into a pool of flaming oil is out, but off a ship into the sea is fine)."
+        value: "The priest teleports the target next to one of its nearby allies that it can see, who engages it as a free action. It can't teleport the target to a location that causes it direct damage (so into a pool of flaming oil is out, but off a ship into the sea is fine)."
       hit2:
         type: "String"
         label: "Hit"
@@ -218,7 +218,7 @@ items:
       default: 0
   - _id: "kaa8CT7LCufZb89l"
     flags: {}
-    name: "R: Glowpriest’s prayer"
+    name: "R: Glowpriest's prayer"
     type: "action"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -240,7 +240,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[12]] psychic damage, and if the attack hits 2 or more targets, roll [[1d8]] after the attack for the prayer’s effect"
+        value: "[[12]] psychic damage, and if the attack hits 2 or more targets, roll [[1d8]] after the attack for the prayer's effect"
       hit1:
         type: "String"
         label: "Hit"
@@ -320,7 +320,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Until the start of the glowpriest’s next turn, each sahuagin and demon in the battle adds the escalation die to its attacks and the PCs don’t."
+        value: "Until the start of the glowpriest's next turn, each sahuagin and demon in the battle adds the escalation die to its attacks and the PCs don't."
       group:
         type: "String"
         label: "Group"

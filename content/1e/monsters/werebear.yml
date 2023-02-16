@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 16+"
-        value: "The werebear grabs the target. As a standard action, it can make a head chomp attack against an enemy it’s grabbing."
+        value: "The werebear grabs the target. As a standard action, it can make a head chomp attack against an enemy it's grabbing."
       hit2:
         type: "String"
         label: "Hit"
@@ -236,7 +236,7 @@ items:
       attack:
         type: ""
         label: "Attack Roll"
-        value: "[[d20 + 14]] vs. AC ([[1]] enemy it’s grabbing)"
+        value: "[[d20 + 14]] vs. AC ([[1]] enemy it's grabbing)"
       hit:
         type: ""
         label: "Hit"
@@ -370,7 +370,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Instead of chomping on a grabbed enemy’s head, the werebear can make an arm crunch attack against an enemy it’s grabbing."
+        value: "Instead of chomping on a grabbed enemy's head, the werebear can make an arm crunch attack against an enemy it's grabbing."
       group:
         type: "String"
         label: "Group"

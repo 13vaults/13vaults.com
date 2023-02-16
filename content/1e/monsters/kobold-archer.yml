@@ -296,7 +296,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When one of the kobold’s allies engages a creature engaged with the kobold, the kobold can pop free as a free action."
+        value: "When one of the kobold's allies engages a creature engaged with the kobold, the kobold can pop free as a free action."
       group:
         type: "String"
         label: "Group"

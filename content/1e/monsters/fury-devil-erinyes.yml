@@ -332,7 +332,7 @@ items:
       default: 0
   - _id: "xuWYGM2Xwm9rIaSB"
     flags: {}
-    name: "Devil’s due (Fury)"
+    name: "Devil's due (Fury)"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:

@@ -240,7 +240,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "The target is *hampered* until the start of the mummy’s next turn"
+        value: "The target is *hampered* until the start of the mummy's next turn"
       hit1:
         type: "String"
         label: "Hit"
@@ -324,7 +324,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The target’s flesh begins to rot and the ongoing damage increases by +40 (cumulative). Saves granted by special powers don’t increase this damage if they fail, only end of turn failures."
+        value: "The target's flesh begins to rot and the ongoing damage increases by +40 (cumulative). Saves granted by special powers don't increase this damage if they fail, only end of turn failures."
       group:
         type: "String"
         label: "Group"
@@ -346,7 +346,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "If the target is already affected by mummy rot, increase the ongoing negative energy damage by 40. If the target isn’t affected by mummy rot already, it takes [[40]] ongoing negative energy damage and is affected by mummy rot (save ends both)"
+        value: "If the target is already affected by mummy rot, increase the ongoing negative energy damage by 40. If the target isn't affected by mummy rot already, it takes [[40]] ongoing negative energy damage and is affected by mummy rot (save ends both)"
       group:
         type: "String"
         label: "Group"
@@ -368,7 +368,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The presence of a mummy unnerves opponents, giving it an unusual *fear* aura. While engaged with this creature, enemies that have 200 hp or fewer are *dazed* (-4 attack) and do not add the escalation die to their attacks. Each time an enemy with 200 hp or fewer attacks the mummy, hit or miss, it must roll a save. On a success, it’s no longer affected by the fear aura effects of any mummy in the battle."
+        value: "The presence of a mummy unnerves opponents, giving it an unusual *fear* aura. While engaged with this creature, enemies that have 200 hp or fewer are *dazed* (-4 attack) and do not add the escalation die to their attacks. Each time an enemy with 200 hp or fewer attacks the mummy, hit or miss, it must roll a save. On a success, it's no longer affected by the fear aura effects of any mummy in the battle."
       group:
         type: "String"
         label: "Group"

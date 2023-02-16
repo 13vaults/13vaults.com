@@ -168,7 +168,7 @@ token:
 items:
   - _id: "52KJPnFFTkIuxoVK"
     flags: {}
-    name: "Champion’s battle-axe"
+    name: "Champion's battle-axe"
     type: "action"
     img: "icons/svg/mystery-man.svg"
     system:

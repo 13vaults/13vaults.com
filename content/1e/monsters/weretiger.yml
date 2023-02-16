@@ -226,7 +226,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Limited use: When an enemy engages the weretiger, if weretiger isn’t already engaged, it can make a springing strike attack against that enemy as an interrupt action before the attack."
+        value: "Limited use: When an enemy engages the weretiger, if weretiger isn't already engaged, it can make a springing strike attack against that enemy as an interrupt action before the attack."
       group:
         type: "String"
         label: "Group"
@@ -362,7 +362,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the weretiger hits with a springing strike attack, the target pops free from it and can’t take any more actions that turn unless it succeeds on a save."
+        value: "When the weretiger hits with a springing strike attack, the target pops free from it and can't take any more actions that turn unless it succeeds on a save."
       group:
         type: "String"
         label: "Group"

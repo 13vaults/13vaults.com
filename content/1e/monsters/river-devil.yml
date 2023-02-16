@@ -292,7 +292,7 @@ items:
       default: 0
   - _id: "sXbWI9VFXnP9EeTH"
     flags: {}
-    name: "Devil’s due (Foreshadowed weakness)"
+    name: "Devil's due (Foreshadowed weakness)"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -302,7 +302,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When you choose to add the escalation die to an attack against a river devil, you only heal half the normal hit points the next time you heal using a recovery this battle. The effect is cumulative (so the second time you heal, the third time, etc.) if you pay the devil’s due more than once before using a recovery."
+        value: "When you choose to add the escalation die to an attack against a river devil, you only heal half the normal hit points the next time you heal using a recovery this battle. The effect is cumulative (so the second time you heal, the third time, etc.) if you pay the devil's due more than once before using a recovery."
       group:
         type: "String"
         label: "Group"

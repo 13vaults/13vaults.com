@@ -200,7 +200,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural roll is equal to or lower than the escalation die"
-        value: "[[1d3]] nearby enemies hear the alarm and join the battle. The creatures attracted by the constant screeching are (usually) level 1 mooks of a type that would be appropriate for the skull’s location."
+        value: "[[1d3]] nearby enemies hear the alarm and join the battle. The creatures attracted by the constant screeching are (usually) level 1 mooks of a type that would be appropriate for the skull's location."
       hit3:
         type: "String"
         label: "Hit"
@@ -230,7 +230,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The skull can’t hop, jump, roll, or fly. It can’t even move its jaw."
+        value: "The skull can't hop, jump, roll, or fly. It can't even move its jaw."
       group:
         type: "String"
         label: "Group"
@@ -252,7 +252,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "This creature can’t make opportunity attacks."
+        value: "This creature can't make opportunity attacks."
       group:
         type: "String"
         label: "Group"
@@ -274,7 +274,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Creatures that have been mystically “keyed” to the skull aren’t affected by its screech attack."
+        value: "Creatures that have been mystically “keyed” to the skull aren't affected by its screech attack."
       group:
         type: "String"
         label: "Group"

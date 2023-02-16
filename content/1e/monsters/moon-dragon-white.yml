@@ -276,7 +276,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "If the full moon is within seven days, the moon dragon’s next ice breath attack this battle will deal double damage."
+        value: "If the full moon is within seven days, the moon dragon's next ice breath attack this battle will deal double damage."
       group:
         type: "String"
         label: "Group"

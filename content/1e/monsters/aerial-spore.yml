@@ -248,7 +248,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "A creature choking from puffball exploder can use a standard action to wash the spores off itself and/or cough them up, preventing further choking effects until it’s affected by puffball exploder again."
+        value: "A creature choking from puffball exploder can use a standard action to wash the spores off itself and/or cough them up, preventing further choking effects until it's affected by puffball exploder again."
       group:
         type: "String"
         label: "Group"

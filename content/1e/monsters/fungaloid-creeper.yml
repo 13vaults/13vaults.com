@@ -230,7 +230,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When a fungaloid creeper scores a critical hit with an attack, all nearby fungaloids move to engage the fungaloid’s target, even if that target has dropped to 0 hp. The move is a free action, and engaged creepers can roll disengage attempts instead of taking opportunity attacks."
+        value: "When a fungaloid creeper scores a critical hit with an attack, all nearby fungaloids move to engage the fungaloid's target, even if that target has dropped to 0 hp. The move is a free action, and engaged creepers can roll disengage attempts instead of taking opportunity attacks."
       group:
         type: "String"
         label: "Group"

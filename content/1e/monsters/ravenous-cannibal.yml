@@ -243,7 +243,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit"
-        value: "Add another ravenous cannibal mook to the mob (it must have been hiding somewhere nearby, or wasn’t really dead when it dropped earlier in the battle)."
+        value: "Add another ravenous cannibal mook to the mob (it must have been hiding somewhere nearby, or wasn't really dead when it dropped earlier in the battle)."
       hit2:
         type: "String"
         label: "Hit"

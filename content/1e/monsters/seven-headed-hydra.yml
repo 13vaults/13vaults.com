@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit or miss"
-        value: "The hydra’s next gnashing teeth attack, if it has an attack left this turn, can be against any nearby enemy instead of against a creature engaged with it."
+        value: "The hydra's next gnashing teeth attack, if it has an attack left this turn, can be against any nearby enemy instead of against a creature engaged with it."
       hit2:
         type: "String"
         label: "Hit"
@@ -270,7 +270,7 @@ items:
       default: 0
   - _id: "FyWgiJWlyyV1gdwG"
     flags: {}
-    name: "Let’s not waste space"
+    name: "Let's not waste space"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -324,7 +324,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the hydra gets a natural even attack roll with a gnashing teeth attack, its next attack that turn (if it has one) is a flame breath attack instead. Note that flame breath attacks don’t lead to other flaming breaths; the hydra has to return to making a gnashing teeth attack first."
+        value: "When the hydra gets a natural even attack roll with a gnashing teeth attack, its next attack that turn (if it has one) is a flame breath attack instead. Note that flame breath attacks don't lead to other flaming breaths; the hydra has to return to making a gnashing teeth attack first."
       group:
         type: "String"
         label: "Group"

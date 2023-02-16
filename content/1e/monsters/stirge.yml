@@ -134,7 +134,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[2]] damage, and the stirge can make a draining probe attack against the target during its next turn if it’s still engaged with the target"
+        value: "[[2]] damage, and the stirge can make a draining probe attack against the target during its next turn if it's still engaged with the target"
       hit1:
         type: "String"
         label: "Hit"

@@ -318,7 +318,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "This creature can’t make opportunity attacks."
+        value: "This creature can't make opportunity attacks."
       group:
         type: "String"
         label: "Group"

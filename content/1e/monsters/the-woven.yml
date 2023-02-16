@@ -216,7 +216,7 @@ items:
       default: 0
   - _id: "8rmrzoWuMj8tHFav"
     flags: {}
-    name: "R: Why aren’t you happy for ussss"
+    name: "R: Why aren't you happy for ussss"
     type: "action"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -238,7 +238,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[5]] psychic damage as the target’s mind reels against the horror of the truth"
+        value: "[[5]] psychic damage as the target's mind reels against the horror of the truth"
       hit1:
         type: "String"
         label: "Hit"

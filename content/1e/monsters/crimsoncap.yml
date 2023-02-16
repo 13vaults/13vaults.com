@@ -266,7 +266,7 @@ items:
       default: 0
   - _id: "ScCLEGDNxsMjSoJk"
     flags: {}
-    name: "[Special trigger] C: Pop-out and slash ‘em"
+    name: "[Special trigger] C: Pop-out and slash 'em"
     type: "action"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -326,7 +326,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the crimsoncap scores a critical hit OR when a PC or a player at the table says the bad word, the crimsoncap can teleport to a nearby hidden location it can see or can’t see (like inside a closet) as a free action."
+        value: "When the crimsoncap scores a critical hit OR when a PC or a player at the table says the bad word, the crimsoncap can teleport to a nearby hidden location it can see or can't see (like inside a closet) as a free action."
       group:
         type: "String"
         label: "Group"
@@ -348,7 +348,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the crimsoncap starts its turn and no enemy can see it, it can make a pop-out and slash ’em attack that turn as a standard action"
+        value: "When the crimsoncap starts its turn and no enemy can see it, it can make a pop-out and slash 'em attack that turn as a standard action"
       group:
         type: "String"
         label: "Group"
@@ -370,7 +370,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The crimsoncap has two bad words instead of one. And the PCs find that out the hard way. Write the words down ahead of time to prove you’re not just being a mean GM."
+        value: "The crimsoncap has two bad words instead of one. And the PCs find that out the hard way. Write the words down ahead of time to prove you're not just being a mean GM."
       group:
         type: "String"
         label: "Group"

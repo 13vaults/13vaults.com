@@ -210,7 +210,7 @@ items:
         type: ""
         label: "Hit"
         name: "Miss"
-        value: "Damage equal to three times the penalty the trog’s stench currently imposes on the target."
+        value: "Damage equal to three times the penalty the trog's stench currently imposes on the target."
     sort: 0
     effects: []
     folder: null
@@ -276,7 +276,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Underground, or in swamps and rivers, attacks against troglodytes by enemies who aren’t engaged with them take a -4 penalty."
+        value: "Underground, or in swamps and rivers, attacks against troglodytes by enemies who aren't engaged with them take a -4 penalty."
       group:
         type: "String"
         label: "Group"

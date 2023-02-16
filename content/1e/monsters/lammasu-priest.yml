@@ -190,7 +190,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[40]] damage, and the target can’t attack the lammasu priest until the end of its next turn"
+        value: "[[40]] damage, and the target can't attack the lammasu priest until the end of its next turn"
       hit1:
         type: "String"
         label: "Hit"
@@ -284,7 +284,7 @@ items:
       attack:
         type: ""
         label: "Attack Roll"
-        value: "[[d20 + 14]] vs. MD (each nearby conscious enemy that’s staggered)"
+        value: "[[d20 + 14]] vs. MD (each nearby conscious enemy that's staggered)"
       hit:
         type: ""
         label: "Hit"
@@ -316,7 +316,7 @@ items:
       default: 0
   - _id: "tdHQ5CaKEJhDbMOj"
     flags: {}
-    name: "[Special trigger] C: Overworld’s rebuke"
+    name: "[Special trigger] C: Overworld's rebuke"
     type: "action"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -338,7 +338,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[25]] holy or lightning damage, and the target can’t move to engage an enemy until the end of its next turn (it can move if it doesn’t engage)"
+        value: "[[25]] holy or lightning damage, and the target can't move to engage an enemy until the end of its next turn (it can move if it doesn't engage)"
       hit1:
         type: ""
         label: "Hit"
@@ -376,7 +376,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Once per battle, the lammasu priest can make this invocation as a quick action. At the start of each of the lammasu priest’s turns until the roll succeeds, roll a [[d4]]. If the roll is less than or equal to the escalation die, each nearby enemy is *hampered* (easy save ends, 6+)."
+        value: "Once per battle, the lammasu priest can make this invocation as a quick action. At the start of each of the lammasu priest's turns until the roll succeeds, roll a [[d4]]. If the roll is less than or equal to the escalation die, each nearby enemy is *hampered* (easy save ends, 6+)."
       group:
         type: "String"
         label: "Group"
@@ -398,7 +398,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Once per battle, the lammasu priest can make this invocation as a quick action if it has used invocation of the world unseen. At the start of each of the lammasu priest’s turns, roll a [[d8]]. If the roll is less than or equal to the escalation die, the lammasu can make an overworld’s rebuke attack as a free action that turn."
+        value: "Once per battle, the lammasu priest can make this invocation as a quick action if it has used invocation of the world unseen. At the start of each of the lammasu priest's turns, roll a [[d8]]. If the roll is less than or equal to the escalation die, the lammasu can make an overworld's rebuke attack as a free action that turn."
       group:
         type: "String"
         label: "Group"
@@ -420,7 +420,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the lammasu fails a save, it becomes a creature of living stone until the end of its next turn. While made of living stone, the lammasu wizard gains resist damage 16+ to all attacks against AC and PD. If it’s flying when it becomes living stone, its magic allows it to remain in the air if it wishes."
+        value: "When the lammasu fails a save, it becomes a creature of living stone until the end of its next turn. While made of living stone, the lammasu wizard gains resist damage 16+ to all attacks against AC and PD. If it's flying when it becomes living stone, its magic allows it to remain in the air if it wishes."
       group:
         type: "String"
         label: "Group"

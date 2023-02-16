@@ -214,7 +214,7 @@ items:
         type: ""
         label: "Hit"
         name: "Miss"
-        value: "The chaos beast pops free from all enemies and moves to engage a random nearby enemy as a free action, preferably one it wasn’t just engaged with."
+        value: "The chaos beast pops free from all enemies and moves to engage a random nearby enemy as a free action, preferably one it wasn't just engaged with."
     sort: 0
     effects: []
     folder: null
@@ -232,7 +232,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Once a chaos beast is staggered, it can combine with another chaos beast next to it as a quick action to become a full-strength chaos brute acting on this beast’s initiative. Replace the other beast with a chaos glorp mook."
+        value: "Once a chaos beast is staggered, it can combine with another chaos beast next to it as a quick action to become a full-strength chaos brute acting on this beast's initiative. Replace the other beast with a chaos glorp mook."
       group:
         type: "String"
         label: "Group"

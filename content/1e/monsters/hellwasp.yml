@@ -272,7 +272,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The save versus the stinger’s ongoing acid damage is a normal save (11+) instead of an easy save."
+        value: "The save versus the stinger's ongoing acid damage is a normal save (11+) instead of an easy save."
       group:
         type: "String"
         label: "Group"

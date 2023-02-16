@@ -250,7 +250,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Although its podlings occasionally pick up and move it around out of combat, in battle the pixie pod can’t move and is *stuck* except for its teleport ability."
+        value: "Although its podlings occasionally pick up and move it around out of combat, in battle the pixie pod can't move and is *stuck* except for its teleport ability."
       group:
         type: "String"
         label: "Group"
@@ -272,7 +272,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "This creature can’t make opportunity attacks."
+        value: "This creature can't make opportunity attacks."
       group:
         type: "String"
         label: "Group"
@@ -338,7 +338,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The pixie pod is normally accompanied by five active podlings that don’t count toward the total when building a battle with the pod. Additional podlings do count, however."
+        value: "The pixie pod is normally accompanied by five active podlings that don't count toward the total when building a battle with the pod. Additional podlings do count, however."
       group:
         type: "String"
         label: "Group"

@@ -406,7 +406,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the chuul scores a critical hit against a *weakened* or *helpless* foe, it bites off one of that enemy’s hands. An adventurer with no hands might have trouble casting spells or holding weapons. (A cleric might be able to restore the missing appendage with a ritual.)"
+        value: "When the chuul scores a critical hit against a *weakened* or *helpless* foe, it bites off one of that enemy's hands. An adventurer with no hands might have trouble casting spells or holding weapons. (A cleric might be able to restore the missing appendage with a ritual.)"
       group:
         type: "String"
         label: "Group"

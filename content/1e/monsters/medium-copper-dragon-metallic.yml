@@ -390,7 +390,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Once per battle as a free action when an attack targets the dragon’s MD, it can force the attacker to reroll the attack."
+        value: "Once per battle as a free action when an attack targets the dragon's MD, it can force the attacker to reroll the attack."
       group:
         type: "String"
         label: "Group"

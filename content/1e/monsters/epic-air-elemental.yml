@@ -378,7 +378,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "It’s quick and forceful."
+        value: "It's quick and forceful."
       group:
         type: "String"
         label: "Group"

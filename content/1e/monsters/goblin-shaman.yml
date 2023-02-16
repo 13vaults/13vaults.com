@@ -238,12 +238,12 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[8]] damage, and until the end of the shaman’s next turn, the target takes [[2]] damage whenever an enemy engages it or disengages from it"
+        value: "[[8]] damage, and until the end of the shaman's next turn, the target takes [[2]] damage whenever an enemy engages it or disengages from it"
       hit1:
         type: ""
         label: "Hit"
         name: "Natural even hit or miss"
-        value: "Choose another nearby enemy; it also suffers from the engage/disengage effect until the end of the shaman’s next turn."
+        value: "Choose another nearby enemy; it also suffers from the engage/disengage effect until the end of the shaman's next turn."
       hit2:
         type: "String"
         label: "Hit"

@@ -226,7 +226,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Wibbles gain a +5 bonus to disengage checks. They also don’t remain engaged with their foes and will move every turn in battle. When they fail a disengage check, a wibble moves away anyway."
+        value: "Wibbles gain a +5 bonus to disengage checks. They also don't remain engaged with their foes and will move every turn in battle. When they fail a disengage check, a wibble moves away anyway."
       group:
         type: "String"
         label: "Group"

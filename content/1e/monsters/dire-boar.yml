@@ -240,7 +240,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "The target is *weakened* (-4 to attacks and defenses) until the end of the boar’s next turn"
+        value: "The target is *weakened* (-4 to attacks and defenses) until the end of the boar's next turn"
       hit1:
         type: "String"
         label: "Hit"
@@ -276,7 +276,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When an enemy’s attack has an effect on the dire boar other than damage, the boar can roll an immediate hard save (16+); on a success, it negates that effect."
+        value: "When an enemy's attack has an effect on the dire boar other than damage, the boar can roll an immediate hard save (16+); on a success, it negates that effect."
       group:
         type: "String"
         label: "Group"
@@ -342,7 +342,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the dire boar can make a bash attack, if it isn’t engaged with a different enemy, as a free action it can pop free of the enemy engaged with it and move to a nearby enemy to make that bash attack."
+        value: "When the dire boar can make a bash attack, if it isn't engaged with a different enemy, as a free action it can pop free of the enemy engaged with it and move to a nearby enemy to make that bash attack."
       group:
         type: "String"
         label: "Group"

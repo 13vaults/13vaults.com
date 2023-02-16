@@ -228,7 +228,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Roll a [[d8]] at the start of each of the earth elemental’s turns. If you roll less than or equal to the escalation die, it shifts into boulder guardian form until the end of the battle. While in this form, it gains a +2 bonus to AC and the relentless pursuit ability (and you stop rolling boulder up checks)."
+        value: "Roll a [[d8]] at the start of each of the earth elemental's turns. If you roll less than or equal to the escalation die, it shifts into boulder guardian form until the end of the battle. While in this form, it gains a +2 bonus to AC and the relentless pursuit ability (and you stop rolling boulder up checks)."
       group:
         type: "String"
         label: "Group"
@@ -250,7 +250,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The elemental must be in boulder guardian form to use this ability. Staggered enemies can’t disengage from the earth elemental. (They can pop free, but they can’t roll disengage checks.)"
+        value: "The elemental must be in boulder guardian form to use this ability. Staggered enemies can't disengage from the earth elemental. (They can pop free, but they can't roll disengage checks.)"
       group:
         type: "String"
         label: "Group"

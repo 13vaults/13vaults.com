@@ -235,7 +235,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The monarch’s attacks deal +1 damage for each other allied creature with the plant type in the battle (max +10)."
+        value: "The monarch's attacks deal +1 damage for each other allied creature with the plant type in the battle (max +10)."
       group:
         type: "String"
         label: "Group"

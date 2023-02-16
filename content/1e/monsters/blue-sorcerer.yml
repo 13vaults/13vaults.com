@@ -363,7 +363,7 @@ items:
         type: "String"
         label: "Hit"
         name: "Natural even hit"
-        value: "The sorcerer gains one use of the target’s racial power, if any. It must use that power by the end of the battle or lose it, and it can’t use the power this turn."
+        value: "The sorcerer gains one use of the target's racial power, if any. It must use that power by the end of the battle or lose it, and it can't use the power this turn."
       hit2:
         type: "String"
         label: "Hit"

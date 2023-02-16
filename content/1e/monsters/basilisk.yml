@@ -218,7 +218,7 @@ items:
       default: 0
   - _id: "RSITmVbqHx3CEjT2"
     flags: {}
-    name: "[Special trigger] C: Basilisk’s stare"
+    name: "[Special trigger] C: Basilisk's stare"
     type: "action"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -240,7 +240,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[5]] ongoing poison damage, and the target must start making last gasp saves depending on the basilisk’s type (see below) as it accidentally takes a full look at the basilisk. Constructs and undead are immune to this effect."
+        value: "[[5]] ongoing poison damage, and the target must start making last gasp saves depending on the basilisk's type (see below) as it accidentally takes a full look at the basilisk. Constructs and undead are immune to this effect."
       hit1:
         type: "String"
         label: "Hit"
@@ -266,7 +266,7 @@ items:
       default: 0
   - _id: "70vsKUvErvhvnrqJ"
     flags: {}
-    name: "Basilisk’s stare"
+    name: "Basilisk's stare"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -276,7 +276,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When a basilisk hits an enemy that is already taking ongoing poison damage, the basilisk can make a basilisk’s stare attack against the target as a free action."
+        value: "When a basilisk hits an enemy that is already taking ongoing poison damage, the basilisk can make a basilisk's stare attack against the target as a free action."
       group:
         type: "String"
         label: "Group"
@@ -320,7 +320,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The target’s body liquefies and they die."
+        value: "The target's body liquefies and they die."
       group:
         type: "String"
         label: "Group"
@@ -342,7 +342,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The target takes [[15]] fire damage, and each of the target’s nearby allies takes [[5]] fire damage as the target’s blood boils under their skin and sprays outward in gouts of liquid fire."
+        value: "The target takes [[15]] fire damage, and each of the target's nearby allies takes [[5]] fire damage as the target's blood boils under their skin and sprays outward in gouts of liquid fire."
       group:
         type: "String"
         label: "Group"
@@ -364,7 +364,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The target’s body ignites as their flaming skull shoots upward on a jet of burning blood, killing them."
+        value: "The target's body ignites as their flaming skull shoots upward on a jet of burning blood, killing them."
       group:
         type: "String"
         label: "Group"
@@ -386,7 +386,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The target’s blood begins to coagulate and harden, and dust puffs out of their lungs through their mouth."
+        value: "The target's blood begins to coagulate and harden, and dust puffs out of their lungs through their mouth."
       group:
         type: "String"
         label: "Group"
@@ -408,7 +408,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The target’s body turns to stone and they die."
+        value: "The target's body turns to stone and they die."
       group:
         type: "String"
         label: "Group"
@@ -452,7 +452,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The target’s body explodes into a fine red mist and they die."
+        value: "The target's body explodes into a fine red mist and they die."
       group:
         type: "String"
         label: "Group"
@@ -474,7 +474,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When a melee attack targets this creature, the attacker must roll a natural 18+ on the attack roll or it only deals half damage. An attacker can ignore this resistance by declaring they are looking directly at the basilisk during the attack. If they do, the basilisk can make a basilisk’s stare attack against them as a free action before the attack. Constructs and undead are not affected by this resistance."
+        value: "When a melee attack targets this creature, the attacker must roll a natural 18+ on the attack roll or it only deals half damage. An attacker can ignore this resistance by declaring they are looking directly at the basilisk during the attack. If they do, the basilisk can make a basilisk's stare attack against them as a free action before the attack. Constructs and undead are not affected by this resistance."
       group:
         type: "String"
         label: "Group"
@@ -496,7 +496,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When an enemy makes a ranged attack against the basilisk, the basilisk can make a basilisk’s stare attack against them as a free action before the attack."
+        value: "When an enemy makes a ranged attack against the basilisk, the basilisk can make a basilisk's stare attack against them as a free action before the attack."
       group:
         type: "String"
         label: "Group"
@@ -518,7 +518,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Each creature engaged with the basilisk at the end of the basilisk’s turn takes [[10]] poison damage."
+        value: "Each creature engaged with the basilisk at the end of the basilisk's turn takes [[10]] poison damage."
       group:
         type: "String"
         label: "Group"

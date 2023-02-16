@@ -274,7 +274,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "If an ettin’s first save against an effect fails, it can roll a second save."
+        value: "If an ettin's first save against an effect fails, it can roll a second save."
       group:
         type: "String"
         label: "Group"

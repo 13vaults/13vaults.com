@@ -190,7 +190,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[36]] psychic damage, and the target is affected by wendigo’s hunger (save ends)"
+        value: "[[36]] psychic damage, and the target is affected by wendigo's hunger (save ends)"
       hit1:
         type: "String"
         label: "Hit"
@@ -266,7 +266,7 @@ items:
       default: 0
   - _id: "YG9wLm0HA5aRlxqi"
     flags: {}
-    name: "Wendigo’s hunger"
+    name: "Wendigo's hunger"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -386,7 +386,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The wendigo has resist damage 16+ to all damage except thunder damage. A wendigo spirit can move through solid objects but it can’t end its movement inside them."
+        value: "The wendigo has resist damage 16+ to all damage except thunder damage. A wendigo spirit can move through solid objects but it can't end its movement inside them."
       group:
         type: "String"
         label: "Group"
@@ -408,7 +408,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The wendigo is invisible to far away creatures. When the wendigo attacks, if its target couldn’t see it at the start of its turn, the wendigo gains a +2 attack bonus that turn."
+        value: "The wendigo is invisible to far away creatures. When the wendigo attacks, if its target couldn't see it at the start of its turn, the wendigo gains a +2 attack bonus that turn."
       group:
         type: "String"
         label: "Group"
@@ -430,7 +430,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "If a creature subject to wendigo’s hunger drops itself (through biting) or an ally (with a basic attack) to 0 hp or lower, that creature also begins making last gasp saves. Failing the fourth last gasp save turns the creature into a raving cannibal; it loses all its normal abilities and becomes an NPC until the PCs find a way to restore their ally (at GM’s discretion)."
+        value: "If a creature subject to wendigo's hunger drops itself (through biting) or an ally (with a basic attack) to 0 hp or lower, that creature also begins making last gasp saves. Failing the fourth last gasp save turns the creature into a raving cannibal; it loses all its normal abilities and becomes an NPC until the PCs find a way to restore their ally (at GM's discretion)."
       group:
         type: "String"
         label: "Group"

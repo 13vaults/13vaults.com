@@ -240,7 +240,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[15]] psychic damage, and the target can’t cast spells or speak (save ends)"
+        value: "[[15]] psychic damage, and the target can't cast spells or speak (save ends)"
       hit1:
         type: "String"
         label: "Hit"

@@ -240,7 +240,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[60]] damage, and [[4d10]] lightning damage to the target and to one other nearby enemy of the dragon’s choice"
+        value: "[[60]] damage, and [[4d10]] lightning damage to the target and to one other nearby enemy of the dragon's choice"
       hit1:
         type: "String"
         label: "Hit"
@@ -293,7 +293,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit"
-        value: "The target is also *dazed* (save ends). After the target saves, it takes a -1 attack penalty (non-cumulative) until its next full heal-up (because it’s vibrating slightly out of synch with the rest of the world)."
+        value: "The target is also *dazed* (save ends). After the target saves, it takes a -1 attack penalty (non-cumulative) until its next full heal-up (because it's vibrating slightly out of synch with the rest of the world)."
       hit2:
         type: "String"
         label: "Hit"

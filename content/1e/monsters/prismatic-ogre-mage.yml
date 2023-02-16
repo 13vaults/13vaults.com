@@ -480,7 +480,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The target is transported into the future. Remove that creature from play, returning it to the battle in (or near) its previous location at the end of its next turn. No time seems to pass for the target while it’s gone."
+        value: "The target is transported into the future. Remove that creature from play, returning it to the battle in (or near) its previous location at the end of its next turn. No time seems to pass for the target while it's gone."
       group:
         type: "String"
         label: "Group"
@@ -524,7 +524,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "“Yellow hair,” “Afraid of spiders,” “Prefers white wine to red,” or “Tattoo of a halfling on left bicep.” These personal traits are shuffled and randomly distributed equally by the GM after the battle is over. Whichever trait each player receives is now true for their character as well as for the character of the player who wrote it down (unless there has somehow turned out to be a swap…). These traits don’t alter game mechanics (feats, powers, backgrounds, icon relationships, attributes, bonuses, etc.). They are personal details that have been warped and scrambled by the prismatic ogre mage’s magic."
+        value: "“Yellow hair,” “Afraid of spiders,” “Prefers white wine to red,” or “Tattoo of a halfling on left bicep.” These personal traits are shuffled and randomly distributed equally by the GM after the battle is over. Whichever trait each player receives is now true for their character as well as for the character of the player who wrote it down (unless there has somehow turned out to be a swap…). These traits don't alter game mechanics (feats, powers, backgrounds, icon relationships, attributes, bonuses, etc.). They are personal details that have been warped and scrambled by the prismatic ogre mage's magic."
       group:
         type: "String"
         label: "Group"

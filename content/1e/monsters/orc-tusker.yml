@@ -168,7 +168,7 @@ token:
 items:
   - _id: "kTKKj8S7lZWOBrWi"
     flags: {}
-    name: "Club’n’tusk"
+    name: "Club'n'tusk"
     type: "action"
     img: "icons/svg/mystery-man.svg"
     system:

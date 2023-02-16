@@ -348,7 +348,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The target slips into madness and becomes a cannibal cultist or wendigo or some other terrible demon-thing of the GM’s or player’s choice in [[2d10]] hours."
+        value: "The target slips into madness and becomes a cannibal cultist or wendigo or some other terrible demon-thing of the GM's or player's choice in [[2d10]] hours."
       group:
         type: "String"
         label: "Group"
@@ -414,7 +414,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the elder wendigo scores a critical hit against a target or drops a target to 0 hp or lower, that creature must permanently change one of its icon relationship points to a relationship with a different icon—one of a few that the GM chooses. Alternatively, a point the character already has with one of those icons changes to involve another icon (of the PC’s choice)."
+        value: "When the elder wendigo scores a critical hit against a target or drops a target to 0 hp or lower, that creature must permanently change one of its icon relationship points to a relationship with a different icon—one of a few that the GM chooses. Alternatively, a point the character already has with one of those icons changes to involve another icon (of the PC's choice)."
       group:
         type: "String"
         label: "Group"

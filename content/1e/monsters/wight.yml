@@ -228,7 +228,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The wight’s attacks against enemies taking ongoing negative energy damage are against PD instead of AC and have an expanded crit range of 18+."
+        value: "The wight's attacks against enemies taking ongoing negative energy damage are against PD instead of AC and have an expanded crit range of 18+."
       group:
         type: "String"
         label: "Group"

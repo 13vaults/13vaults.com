@@ -226,7 +226,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Creatures that can’t hear or that have attempted to reduce their hearing are only affected by a jest bones’ puns attack if the natural roll is odd."
+        value: "Creatures that can't hear or that have attempted to reduce their hearing are only affected by a jest bones' puns attack if the natural roll is odd."
       group:
         type: "String"
         label: "Group"
@@ -270,7 +270,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "This creature can’t make opportunity attacks."
+        value: "This creature can't make opportunity attacks."
       group:
         type: "String"
         label: "Group"

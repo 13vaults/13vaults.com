@@ -238,7 +238,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[38]] damage, and the target is *hampered* while it’s engaged with the tiger"
+        value: "[[38]] damage, and the target is *hampered* while it's engaged with the tiger"
       hit1:
         type: "String"
         label: "Hit"
@@ -274,7 +274,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When an enemy moves to engage the dire tiger while it’s unengaged, it can meet that enemy halfway and make a pounce atStack as an interrupt action before the target’s attack."
+        value: "When an enemy moves to engage the dire tiger while it's unengaged, it can meet that enemy halfway and make a pounce atStack as an interrupt action before the target's attack."
       group:
         type: "String"
         label: "Group"

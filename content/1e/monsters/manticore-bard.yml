@@ -293,7 +293,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 16+"
-        value: "In addition, the target can’t use the escalation die until it saves."
+        value: "In addition, the target can't use the escalation die until it saves."
       hit2:
         type: "String"
         label: "Hit"
@@ -396,7 +396,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Each time the manticore uses its volley of tail spikes attack, it takes [[1d6]] damage, or [[2d6]] damage if it’s staggered."
+        value: "Each time the manticore uses its volley of tail spikes attack, it takes [[1d6]] damage, or [[2d6]] damage if it's staggered."
       group:
         type: "String"
         label: "Group"
@@ -440,7 +440,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Fortissimo—Each of the manticore’s allies gains a +[[2d6]] damage bonus with attacks that hit until the end of the battle (non-cumulative)."
+        value: "Fortissimo—Each of the manticore's allies gains a +[[2d6]] damage bonus with attacks that hit until the end of the battle (non-cumulative)."
       group:
         type: "String"
         label: "Group"
@@ -462,7 +462,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Profundo—The manticore’s musical voice attack now deals [[40]] psychic damage instead of 20 until the end of the battle."
+        value: "Profundo—The manticore's musical voice attack now deals [[40]] psychic damage instead of 20 until the end of the battle."
       group:
         type: "String"
         label: "Group"
@@ -506,7 +506,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Largo—The manticore can make a musical voice attack during its next turn as a free action, but with a +3 attack bonus. This free attack won’t trigger another battle music effect."
+        value: "Largo—The manticore can make a musical voice attack during its next turn as a free action, but with a +3 attack bonus. This free attack won't trigger another battle music effect."
       group:
         type: "String"
         label: "Group"

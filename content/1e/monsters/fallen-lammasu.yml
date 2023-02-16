@@ -352,7 +352,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the fallen lammasu makes an attack that deals fire damage and the attack roll beats the target’s fire resistance, the target loses its fire resistance until the end of the battle."
+        value: "When the fallen lammasu makes an attack that deals fire damage and the attack roll beats the target's fire resistance, the target loses its fire resistance until the end of the battle."
       group:
         type: "String"
         label: "Group"

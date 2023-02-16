@@ -288,7 +288,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[20]] damage, and the target can’t disengage until the end of its next turn."
+        value: "[[20]] damage, and the target can't disengage until the end of its next turn."
       hit1:
         type: "String"
         label: "Hit"
@@ -358,7 +358,7 @@ items:
       default: 0
   - _id: "048KjgGEfw2Gm7tP"
     flags: {}
-    name: "Winter’s bite"
+    name: "Winter's bite"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:

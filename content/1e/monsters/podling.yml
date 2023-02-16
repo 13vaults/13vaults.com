@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit"
-        value: "The target can’t choose to search for the pixie-pod plant until all podlings in the battle are slain."
+        value: "The target can't choose to search for the pixie-pod plant until all podlings in the battle are slain."
       hit2:
         type: "String"
         label: "Hit"

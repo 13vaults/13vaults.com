@@ -278,7 +278,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The beetles fly badly, usually just enough to get back to the worm when they’ve been shaken off from their hiding spots in its segments."
+        value: "The beetles fly badly, usually just enough to get back to the worm when they've been shaken off from their hiding spots in its segments."
       group:
         type: "String"
         label: "Group"

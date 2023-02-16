@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit or miss"
-        value: "The cambion becomes cloaked until it’s hit by an attack against MD or until it misses with a natural odd attack roll."
+        value: "The cambion becomes cloaked until it's hit by an attack against MD or until it misses with a natural odd attack roll."
       hit2:
         type: "String"
         label: "Hit"

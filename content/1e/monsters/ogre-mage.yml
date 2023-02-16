@@ -228,7 +228,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Limited use: 1/day, and the attack affects the ogre’s allies engaged with or between enemy targets."
+        value: "Limited use: 1/day, and the attack affects the ogre's allies engaged with or between enemy targets."
       group:
         type: "String"
         label: "Group"
@@ -288,7 +288,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "the target is *confused* until the end of the ogre mage’s next turn"
+        value: "the target is *confused* until the end of the ogre mage's next turn"
       hit1:
         type: "String"
         label: "Hit"
@@ -368,7 +368,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "If the ogre mage is not engaged, it can turn invisible as an at-will standard action. It becomes visible when it attacks. The ogre mage takes [[1d10]] damage each time it uses invisibility while it’s staggered."
+        value: "If the ogre mage is not engaged, it can turn invisible as an at-will standard action. It becomes visible when it attacks. The ogre mage takes [[1d10]] damage each time it uses invisibility while it's staggered."
       group:
         type: "String"
         label: "Group"
@@ -412,7 +412,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "While an ogre mage is damaged, its uncanny flesh heals 20 hit points at the start of the ogre mage’s turn. It can regenerate five times per battle. If it heals to its maximum hit points, then that use of regeneration doesn’t count against the five-use limit."
+        value: "While an ogre mage is damaged, its uncanny flesh heals 20 hit points at the start of the ogre mage's turn. It can regenerate five times per battle. If it heals to its maximum hit points, then that use of regeneration doesn't count against the five-use limit."
       group:
         type: "String"
         label: "Group"
@@ -424,7 +424,7 @@ items:
       default: 0
   - _id: "uFrpQbxUe1zFgx3d"
     flags: {}
-    name: "When the ogre mage is hit by an attack that deals fire or acid damage, it loses one use of its regeneration, and it can’t regenerate during its next turn."
+    name: "When the ogre mage is hit by an attack that deals fire or acid damage, it loses one use of its regeneration, and it can't regenerate during its next turn."
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -434,7 +434,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the ogre mage is hit by an attack that deals fire or acid damage, it loses one use of its regeneration, and it can’t regenerate during its next turn."
+        value: "When the ogre mage is hit by an attack that deals fire or acid damage, it loses one use of its regeneration, and it can't regenerate during its next turn."
       group:
         type: "String"
         label: "Group"
@@ -446,7 +446,7 @@ items:
       default: 0
   - _id: "7Jpf0ziB8xeaaPvl"
     flags: {}
-    name: "Dropping an ogre mage to 0 hp doesn’t kill it if it has any uses of regeneration left."
+    name: "Dropping an ogre mage to 0 hp doesn't kill it if it has any uses of regeneration left."
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -456,7 +456,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Dropping an ogre mage to 0 hp doesn’t kill it if it has any uses of regeneration left."
+        value: "Dropping an ogre mage to 0 hp doesn't kill it if it has any uses of regeneration left."
       group:
         type: "String"
         label: "Group"

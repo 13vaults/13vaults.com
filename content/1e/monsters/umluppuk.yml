@@ -290,7 +290,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[50]] damage, and the target takes [[10]] ongoing acid damage and is absorbed into the umluppuk (hard save ends both, 16+); while inside the umluppuk, the target is *vulnerable* to the umluppuk’s pods of mouths and eyes attacks (attacks vs. it have crit range expanded by 2), and it’s *stuck*."
+        value: "[[50]] damage, and the target takes [[10]] ongoing acid damage and is absorbed into the umluppuk (hard save ends both, 16+); while inside the umluppuk, the target is *vulnerable* to the umluppuk's pods of mouths and eyes attacks (attacks vs. it have crit range expanded by 2), and it's *stuck*."
       hit1:
         type: "String"
         label: "Hit"

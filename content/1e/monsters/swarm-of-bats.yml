@@ -228,7 +228,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The swarm of bats can’t make opportunity attacks, and enemies can’t make opportunity attacks against it."
+        value: "The swarm of bats can't make opportunity attacks, and enemies can't make opportunity attacks against it."
       group:
         type: "String"
         label: "Group"

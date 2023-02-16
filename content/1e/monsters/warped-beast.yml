@@ -280,7 +280,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "At the start of each of the warped beast’s turns, roll a [[d6]]. The warped beast gains the corresponding ability until the start of its next turn."
+        value: "At the start of each of the warped beast's turns, roll a [[d6]]. The warped beast gains the corresponding ability until the start of its next turn."
       group:
         type: "String"
         label: "Group"
@@ -368,7 +368,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When an enemy ends its turn engaged with the warped beast, it’s *confused* until the end of its next turn."
+        value: "When an enemy ends its turn engaged with the warped beast, it's *confused* until the end of its next turn."
       group:
         type: "String"
         label: "Group"
@@ -390,7 +390,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the warped beast makes a tentacle maw attack during its turn, roll a [[d4]]. That many additional limbs or tentacles spontaneously erupt from the creature and make an additional basic attack that turn (special abilities/effects don’t trigger on those extra attacks). Each of those attacks only deals half damage."
+        value: "When the warped beast makes a tentacle maw attack during its turn, roll a [[d4]]. That many additional limbs or tentacles spontaneously erupt from the creature and make an additional basic attack that turn (special abilities/effects don't trigger on those extra attacks). Each of those attacks only deals half damage."
       group:
         type: "String"
         label: "Group"

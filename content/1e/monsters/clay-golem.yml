@@ -226,7 +226,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "A non-dwarf creature damaged by a clay golem can’t be healed to above half its maximum hit points until after the battle."
+        value: "A non-dwarf creature damaged by a clay golem can't be healed to above half its maximum hit points until after the battle."
       group:
         type: "String"
         label: "Group"
@@ -248,7 +248,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Non-organic golems are immune to effects. They can’t be *dazed*, *weakened*, *confused*, made *vulnerable*, or touched by ongoing damage. You can damage a golem, but that’s about it."
+        value: "Non-organic golems are immune to effects. They can't be *dazed*, *weakened*, *confused*, made *vulnerable*, or touched by ongoing damage. You can damage a golem, but that's about it."
       group:
         type: "String"
         label: "Group"
@@ -270,7 +270,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When an attack hits this creature, the attacker must roll a natural 11+ on the attack roll or it misses instead. That’s all attacks."
+        value: "When an attack hits this creature, the attacker must roll a natural 11+ on the attack roll or it misses instead. That's all attacks."
       group:
         type: "String"
         label: "Group"

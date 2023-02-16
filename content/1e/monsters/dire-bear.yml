@@ -250,7 +250,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Roll randomly unless you know this beast’s story already."
+        value: "Roll randomly unless you know this beast's story already."
       group:
         type: "String"
         label: "Group"

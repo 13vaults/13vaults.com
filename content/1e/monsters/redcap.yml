@@ -268,7 +268,7 @@ items:
       default: 0
   - _id: "ykLy066Ty2zH1IRa"
     flags: {}
-    name: "[Special trigger] C: Pop-out and ride ‘em"
+    name: "[Special trigger] C: Pop-out and ride 'em"
     type: "action"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -328,7 +328,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "While the target is taking ongoing damage from this attack, the redcap is riding the target’s shoulders with its knives in the target’s ears, and once during its turn the redcap can use a move action to make the target move anywhere nearby that won’t directly cause it harm (but opportunity attacks are fair game)."
+        value: "While the target is taking ongoing damage from this attack, the redcap is riding the target's shoulders with its knives in the target's ears, and once during its turn the redcap can use a move action to make the target move anywhere nearby that won't directly cause it harm (but opportunity attacks are fair game)."
       group:
         type: "String"
         label: "Group"
@@ -372,7 +372,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the redcap starts its turn and no enemy can see it, it can make a pop-out and ride ‘em attack that turn as a standard action"
+        value: "When the redcap starts its turn and no enemy can see it, it can make a pop-out and ride 'em attack that turn as a standard action"
       group:
         type: "String"
         label: "Group"

@@ -298,7 +298,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "While a specter is in the battle, the PCs don’t add the escalation die to attack rolls, but it does."
+        value: "While a specter is in the battle, the PCs don't add the escalation die to attack rolls, but it does."
       group:
         type: "String"
         label: "Group"

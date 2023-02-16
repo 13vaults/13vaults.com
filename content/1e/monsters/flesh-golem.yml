@@ -226,7 +226,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Limited use: The flesh golem can only use this attack while it’s staggered."
+        value: "Limited use: The flesh golem can only use this attack while it's staggered."
       group:
         type: "String"
         label: "Group"
@@ -276,7 +276,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Whenever a spell that causes cold, fire, force, lightning, or negative energy damage targets one of the flesh golem’s nearby allies, the flesh golem has a 50% chance of becoming the main target instead. Therefore, spells that affect groups would spread out from the flesh golem."
+        value: "Whenever a spell that causes cold, fire, force, lightning, or negative energy damage targets one of the flesh golem's nearby allies, the flesh golem has a 50% chance of becoming the main target instead. Therefore, spells that affect groups would spread out from the flesh golem."
       group:
         type: "String"
         label: "Group"

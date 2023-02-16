@@ -278,7 +278,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When a ranged attack targets this creature while it’s flying, the attacker must roll a natural 16+ on the attack roll or it only deals half damage."
+        value: "When a ranged attack targets this creature while it's flying, the attacker must roll a natural 16+ on the attack roll or it only deals half damage."
       group:
         type: "String"
         label: "Group"

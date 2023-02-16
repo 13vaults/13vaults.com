@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit"
-        value: "The target pops free from each enemy and moves next to the Devil, which engages and grabs it. (The Devil can grab any number of enemies simultaneously.) If it has quick actions left, it will use its devil’s beak and cutting talon attacks."
+        value: "The target pops free from each enemy and moves next to the Devil, which engages and grabs it. (The Devil can grab any number of enemies simultaneously.) If it has quick actions left, it will use its devil's beak and cutting talon attacks."
       hit2:
         type: "String"
         label: "Hit"
@@ -272,7 +272,7 @@ items:
       default: 0
   - _id: "qXgmUH00B6TS8bGW"
     flags: {}
-    name: "[Special trigger] Devil’s beak"
+    name: "[Special trigger] Devil's beak"
     type: "action"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -290,7 +290,7 @@ items:
       attack:
         type: ""
         label: "Attack Roll"
-        value: "[[d20 + 22]] vs. AC ([[1]] enemy it’s grabbing; includes +4 grab bonus)"
+        value: "[[d20 + 22]] vs. AC ([[1]] enemy it's grabbing; includes +4 grab bonus)"
       hit:
         type: ""
         label: "Hit"
@@ -366,7 +366,7 @@ items:
       default: 0
   - _id: "dDVllYcWnZUbMbST"
     flags: {}
-    name: "Devil’s due (Destiny)"
+    name: "Devil's due (Destiny)"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -376,7 +376,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When you choose to add the escalation die to an attack against the Final Devil, one of the Final Devil’s nearby allies can make an attack as an interrupt action before your attack."
+        value: "When you choose to add the escalation die to an attack against the Final Devil, one of the Final Devil's nearby allies can make an attack as an interrupt action before your attack."
       group:
         type: "String"
         label: "Group"
@@ -420,7 +420,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Icon relationship dice don’t provide any help in a battle (or even an adventure) that involves the Final Devil. The Devil broke the icons’ hold on it, and it’s up to pure mortals to solve this problem, because the icons can’t cope."
+        value: "Icon relationship dice don't provide any help in a battle (or even an adventure) that involves the Final Devil. The Devil broke the icons' hold on it, and it's up to pure mortals to solve this problem, because the icons can't cope."
       group:
         type: "String"
         label: "Group"
@@ -442,7 +442,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "If the Final Devil is fighting in a sea or river, when a nearby enemy rolls a normal save, it’s a hard save (16+) instead. The same goes for easy saves; they’re normal saves instead."
+        value: "If the Final Devil is fighting in a sea or river, when a nearby enemy rolls a normal save, it's a hard save (16+) instead. The same goes for easy saves; they're normal saves instead."
       group:
         type: "String"
         label: "Group"

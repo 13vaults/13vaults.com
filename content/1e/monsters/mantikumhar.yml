@@ -212,7 +212,7 @@ items:
         type: ""
         label: "Hit"
         name: "Miss"
-        value: "The target must roll an immediate save; on a failure, it’s *dazed* until the end of its next turn from dirt or sand thrown in its face"
+        value: "The target must roll an immediate save; on a failure, it's *dazed* until the end of its next turn from dirt or sand thrown in its face"
     sort: 0
     effects: []
     folder: null
@@ -386,7 +386,7 @@ items:
       default: 0
   - _id: "mH5zitHhkImplaAQ"
     flags: {}
-    name: "Can’t be blinded"
+    name: "Can't be blinded"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -396,7 +396,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Between nictitating membranes that keep its eyes from being scratched out by the sand and its weird burrowing echolocation sense, the mantikumhar can’t be blinded."
+        value: "Between nictitating membranes that keep its eyes from being scratched out by the sand and its weird burrowing echolocation sense, the mantikumhar can't be blinded."
       group:
         type: "String"
         label: "Group"
@@ -418,7 +418,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Each time the mantikumhar uses its serpent sting attack, it takes [[1d6]] damage, or [[2d6]] damage if it’s staggered."
+        value: "Each time the mantikumhar uses its serpent sting attack, it takes [[1d6]] damage, or [[2d6]] damage if it's staggered."
       group:
         type: "String"
         label: "Group"
@@ -440,7 +440,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "A mantikumhar can burrow into the soil as a move action, concealing itself from attacks. A hunkered mantikumhar gains a +3 bonus to AC and PD, but it can’t use crushing leonine jaws."
+        value: "A mantikumhar can burrow into the soil as a move action, concealing itself from attacks. A hunkered mantikumhar gains a +3 bonus to AC and PD, but it can't use crushing leonine jaws."
       group:
         type: "String"
         label: "Group"
@@ -462,7 +462,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The mantikumhar’s extensible tail can strike by surprise like a cobra from anywhere in its pit."
+        value: "The mantikumhar's extensible tail can strike by surprise like a cobra from anywhere in its pit."
       group:
         type: "String"
         label: "Group"

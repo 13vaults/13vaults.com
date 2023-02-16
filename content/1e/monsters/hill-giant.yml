@@ -209,7 +209,7 @@ items:
       miss:
         type: ""
         label: "Hit"
-        name: "Miss that’s a natural 6+"
+        name: "Miss that's a natural 6+"
         value: "Half damage (sometimes close is good enough)."
     sort: 0
     effects: []

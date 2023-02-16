@@ -298,7 +298,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Once per battle when an attack crits the azer but doesn’t kill it, the azer can heal [[4d6]] hp."
+        value: "Once per battle when an attack crits the azer but doesn't kill it, the azer can heal [[4d6]] hp."
       group:
         type: "String"
         label: "Group"

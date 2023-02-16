@@ -212,5 +212,5 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "They aren’t strong fliers but they are quick and agile."
+        value: "They aren't strong fliers but they are quick and agile."
     sort: 400000

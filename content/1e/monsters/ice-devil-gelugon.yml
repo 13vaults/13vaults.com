@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit"
-        value: "As a free action, one of the ice devil’s nearby allies of its level or lower can make a basic attack as the ice devil sets the battlefield. That attack only deals half damage."
+        value: "As a free action, one of the ice devil's nearby allies of its level or lower can make a basic attack as the ice devil sets the battlefield. That attack only deals half damage."
       hit2:
         type: ""
         label: "Hit"
@@ -222,7 +222,7 @@ items:
       default: 0
   - _id: "cMkMLmA86r1SVyH7"
     flags: {}
-    name: "Devil’s due (Rime)"
+    name: "Devil's due (Rime)"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -254,7 +254,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When a lower level nearby ally of the ice devil attacks a creature that’s *stuck*, the crit range of that attack expands by the escalation die."
+        value: "When a lower level nearby ally of the ice devil attacks a creature that's *stuck*, the crit range of that attack expands by the escalation die."
       group:
         type: "String"
         label: "Group"

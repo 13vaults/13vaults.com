@@ -194,7 +194,7 @@ items:
       hit1:
         type: ""
         label: "Hit"
-        name: "Natural roll is above target’s Wisdom (trapster)"
+        name: "Natural roll is above target's Wisdom (trapster)"
         value: "The kobold pushes or trips the target into a trap. See Trapster Kobold ability."
       hit2:
         type: "String"

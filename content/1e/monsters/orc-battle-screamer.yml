@@ -268,7 +268,7 @@ items:
       hit:
         type: "String"
         label: "Hit"
-        value: "[[8]] damage, and as a free action, one nearby orc ally can move or make a basic attack (doesn’t trigger special abilities)"
+        value: "[[8]] damage, and as a free action, one nearby orc ally can move or make a basic attack (doesn't trigger special abilities)"
       hit1:
         type: "String"
         label: "Hit"

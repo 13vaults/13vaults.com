@@ -326,7 +326,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "It’s quick and direct."
+        value: "It's quick and direct."
       group:
         type: "String"
         label: "Group"

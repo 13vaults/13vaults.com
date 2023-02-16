@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit"
-        value: "The spider can make a rummage and filch attack against the target as a free action, even if the target isn’t staggered."
+        value: "The spider can make a rummage and filch attack against the target as a free action, even if the target isn't staggered."
       hit2:
         type: "String"
         label: "Hit"
@@ -276,7 +276,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "As long as it didn’t just return from being out of phase, at the start of the phase spider’s turn, roll a [[d6]] to see which of its phase and teleport abilities it can access that turn. The spider doesn’t have to use the available ability and can attack normally, if it wishes."
+        value: "As long as it didn't just return from being out of phase, at the start of the phase spider's turn, roll a [[d6]] to see which of its phase and teleport abilities it can access that turn. The spider doesn't have to use the available ability and can attack normally, if it wishes."
       group:
         type: "String"
         label: "Group"
@@ -342,7 +342,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Phase out—As a move action, the spider can remove itself from the battlefield, returning on its next initiative turn anywhere it chooses nearby. It doesn’t get to make a phase roll at the start of its next turn though."
+        value: "Phase out—As a move action, the spider can remove itself from the battlefield, returning on its next initiative turn anywhere it chooses nearby. It doesn't get to make a phase roll at the start of its next turn though."
       group:
         type: "String"
         label: "Group"
@@ -364,7 +364,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Teleport away—If the spider has stolen at least one magic item, as a move action it can teleport back to its lair, or to its master if it has one. It leaves the battle. If it hasn’t stolen an item yet, it won’t leave and can use its choice of the other abilities this turn."
+        value: "Teleport away—If the spider has stolen at least one magic item, as a move action it can teleport back to its lair, or to its master if it has one. It leaves the battle. If it hasn't stolen an item yet, it won't leave and can use its choice of the other abilities this turn."
       group:
         type: "String"
         label: "Group"

@@ -238,7 +238,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[20]] damage, and the target can’t use recoveries, even involuntarily (save ends)"
+        value: "[[20]] damage, and the target can't use recoveries, even involuntarily (save ends)"
       hit1:
         type: "String"
         label: "Hit"
@@ -312,7 +312,7 @@ items:
       default: 0
   - _id: "GE3uDdDh6ydX2DNf"
     flags: {}
-    name: "Devil’s due (Free!)"
+    name: "Devil's due (Free!)"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -366,7 +366,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The devil’s doom venom sting attack also negates one spell effect created by the target until the target is able to use recoveries again. (The effect isn’t canceled, only suppressed until the target saves.)"
+        value: "The devil's doom venom sting attack also negates one spell effect created by the target until the target is able to use recoveries again. (The effect isn't canceled, only suppressed until the target saves.)"
       group:
         type: "String"
         label: "Group"

@@ -290,7 +290,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "The target can’t attack the dybbuk until the end of its next turn."
+        value: "The target can't attack the dybbuk until the end of its next turn."
       hit1:
         type: "String"
         label: "Hit"
@@ -422,7 +422,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "As a standard action, the dybbuk can change its host’s form to that of another humanoid, or back to its own shape. Seeing through the shapechange requires a DC 25 skill check. When the dybbuk is driven out of the host body, the body reverts to its original form."
+        value: "As a standard action, the dybbuk can change its host's form to that of another humanoid, or back to its own shape. Seeing through the shapechange requires a DC 25 skill check. When the dybbuk is driven out of the host body, the body reverts to its original form."
       group:
         type: "String"
         label: "Group"

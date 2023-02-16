@@ -288,7 +288,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "one target makes an at-will melee attack against this power’s other target"
+        value: "one target makes an at-will melee attack against this power's other target"
       hit1:
         type: "String"
         label: "Hit"

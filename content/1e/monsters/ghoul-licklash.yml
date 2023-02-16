@@ -253,7 +253,7 @@ items:
         type: "String"
         label: "Hit"
         name: "Natural even hit"
-        value: "The target pops free from each enemy it’s engaged with and is pulled to the ghoul licklash, who engages it."
+        value: "The target pops free from each enemy it's engaged with and is pulled to the ghoul licklash, who engages it."
       hit2:
         type: "String"
         label: "Hit"

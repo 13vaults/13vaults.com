@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 11+"
-        value: "The target can’t make opportunity attacks until the end of the turn (making it easier for the wererat to move away from the target)."
+        value: "The target can't make opportunity attacks until the end of the turn (making it easier for the wererat to move away from the target)."
       hit2:
         type: "String"
         label: "Hit"

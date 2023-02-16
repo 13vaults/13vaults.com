@@ -226,7 +226,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Limited use: Once the spider-mage hits with shadowfire, she can’t use it again until the target saves against it."
+        value: "Limited use: Once the spider-mage hits with shadowfire, she can't use it again until the target saves against it."
       group:
         type: "String"
         label: "Group"

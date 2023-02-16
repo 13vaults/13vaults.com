@@ -240,7 +240,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[5]] damage, and the lizardman savage can make a ripping frenzy attack against the target as a standard action during its next turn if it’s engaged with that target"
+        value: "[[5]] damage, and the lizardman savage can make a ripping frenzy attack against the target as a standard action during its next turn if it's engaged with that target"
       hit1:
         type: "String"
         label: "Hit"

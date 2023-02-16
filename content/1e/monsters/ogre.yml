@@ -168,7 +168,7 @@ token:
 items:
   - _id: "poXqt2bbrwJYdjZ7"
     flags: {}
-    name: "Big honkin’ club"
+    name: "Big honkin' club"
     type: "action"
     img: "icons/svg/mystery-man.svg"
     system:

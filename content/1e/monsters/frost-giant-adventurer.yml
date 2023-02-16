@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit"
-        value: "The target loses its next move action, and if it’s engaged with the giant, it pops free."
+        value: "The target loses its next move action, and if it's engaged with the giant, it pops free."
       hit2:
         type: "String"
         label: "Hit"

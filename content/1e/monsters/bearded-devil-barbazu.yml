@@ -288,7 +288,7 @@ items:
       default: 0
   - _id: "WRg4S6zjdm89t38t"
     flags: {}
-    name: "Devil’s due (Solidity)"
+    name: "Devil's due (Solidity)"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -386,7 +386,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The target of the bearded devil’s filthy beard attack now takes [[10]] ongoing poison damage and is *weakened* (save ends both) instead."
+        value: "The target of the bearded devil's filthy beard attack now takes [[10]] ongoing poison damage and is *weakened* (save ends both) instead."
       group:
         type: "String"
         label: "Group"

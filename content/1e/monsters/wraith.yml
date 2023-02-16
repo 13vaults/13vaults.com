@@ -298,7 +298,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "This creature has resist damage 16+ to all damage (including holy damage) except force damage, which damages it normally. A wraith can move through solid objects, but it can’t end its movement inside them."
+        value: "This creature has resist damage 16+ to all damage (including holy damage) except force damage, which damages it normally. A wraith can move through solid objects, but it can't end its movement inside them."
       group:
         type: "String"
         label: "Group"

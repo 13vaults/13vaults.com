@@ -412,7 +412,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Once per round when the chuul is engaged with one or more enemies and is the target of an attack, it can try to interpose one of those enemies between itself and the attack as a free action after seeing the attack roll. That enemy rolls a normal save; on a failure, it becomes the target of the attack instead of the chuul. If the chuul tries to interpose an enemy it’s grabbing, the save is hard (16+) instead."
+        value: "Once per round when the chuul is engaged with one or more enemies and is the target of an attack, it can try to interpose one of those enemies between itself and the attack as a free action after seeing the attack roll. That enemy rolls a normal save; on a failure, it becomes the target of the attack instead of the chuul. If the chuul tries to interpose an enemy it's grabbing, the save is hard (16+) instead."
       group:
         type: "String"
         label: "Group"
@@ -478,7 +478,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When an enemy is engaged with the chuul at the start of its turn, that creature must roll a normal save; on a failure, it’s *hampered* (easy save ends, 6+)."
+        value: "When an enemy is engaged with the chuul at the start of its turn, that creature must roll a normal save; on a failure, it's *hampered* (easy save ends, 6+)."
       group:
         type: "String"
         label: "Group"

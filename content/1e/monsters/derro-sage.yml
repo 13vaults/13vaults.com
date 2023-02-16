@@ -240,7 +240,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[12]] psychic damage, and the target is *confused* (make a basic or at-will attack vs. ally) until the end of the derro sage’s next turn"
+        value: "[[12]] psychic damage, and the target is *confused* (make a basic or at-will attack vs. ally) until the end of the derro sage's next turn"
       hit1:
         type: ""
         label: "Hit"
@@ -278,7 +278,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "All nearby derro gain a +1 bonus to attacks and defenses until end of the derro sage’s next turn (cumulative)."
+        value: "All nearby derro gain a +1 bonus to attacks and defenses until end of the derro sage's next turn (cumulative)."
       group:
         type: "String"
         label: "Group"

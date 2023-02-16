@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit"
-        value: "The target is *vulnerable* (attacks vs. it have crit range expanded by 2) to attacks by undead until the end of the ghoul’s next turn."
+        value: "The target is *vulnerable* (attacks vs. it have crit range expanded by 2) to attacks by undead until the end of the ghoul's next turn."
       hit2:
         type: "String"
         label: "Hit"
@@ -228,7 +228,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The ghoul’s claws and bite attack deals +4 damage against *vulnerable* targets."
+        value: "The ghoul's claws and bite attack deals +4 damage against *vulnerable* targets."
       group:
         type: "String"
         label: "Group"

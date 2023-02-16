@@ -280,7 +280,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Non-organic golems are immune to effects. They can’t be *dazed*, *weakened*, *confused*, made *vulnerable*, or touched by ongoing damage. You can damage a golem, but that’s about it."
+        value: "Non-organic golems are immune to effects. They can't be *dazed*, *weakened*, *confused*, made *vulnerable*, or touched by ongoing damage. You can damage a golem, but that's about it."
       group:
         type: "String"
         label: "Group"
@@ -302,7 +302,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Evoke the powers of an ancient culture’s strange rites by giving the stone golem any weird power you wish. If you’re *stuck* for inspiration, consider starting with random abilities from the demons that aren’t related to energy or the cone of cold from the ogre mage."
+        value: "Evoke the powers of an ancient culture's strange rites by giving the stone golem any weird power you wish. If you're *stuck* for inspiration, consider starting with random abilities from the demons that aren't related to energy or the cone of cold from the ogre mage."
       group:
         type: "String"
         label: "Group"

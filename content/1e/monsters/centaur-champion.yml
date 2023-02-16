@@ -264,7 +264,7 @@ items:
       default: 0
   - _id: "rhskmlh7bPWgDP7b"
     flags: {}
-    name: "Champion’s challenge"
+    name: "Champion's challenge"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -352,7 +352,7 @@ items:
       default: 0
   - _id: "cFIqVQURDg2RRsTA"
     flags: {}
-    name: "Chief’s challenge"
+    name: "Chief's challenge"
     type: "nastierSpecial"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -362,7 +362,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the champion issues a champion’s challenge, it only takes a -2 attack penalty against other enemies than its chosen foe, but that enemy still takes the -4 attack penalty. In addition, the champion can use champion’s challenge as a free action when it becomes staggered."
+        value: "When the champion issues a champion's challenge, it only takes a -2 attack penalty against other enemies than its chosen foe, but that enemy still takes the -4 attack penalty. In addition, the champion can use champion's challenge as a free action when it becomes staggered."
       group:
         type: "String"
         label: "Group"
@@ -374,7 +374,7 @@ items:
       default: 0
   - _id: "CCVdWGJuhUEOhyj0"
     flags: {}
-    name: "Champion’s scorn"
+    name: "Champion's scorn"
     type: "nastierSpecial"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -384,7 +384,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Each of the champion’s centaur allies in the battle gains a +5 damage bonus with ranged attacks."
+        value: "Each of the champion's centaur allies in the battle gains a +5 damage bonus with ranged attacks."
       group:
         type: "String"
         label: "Group"

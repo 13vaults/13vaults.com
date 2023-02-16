@@ -244,7 +244,7 @@ items:
       hit1:
         type: ""
         label: "Hit"
-        name: "Natural roll is above target’s Wisdom (trapster)"
+        name: "Natural roll is above target's Wisdom (trapster)"
         value: "There is line tied to the barbed dart, pulling/tripping the target into a trap. See Trapster Kobold ability."
       hit2:
         type: "String"
@@ -300,7 +300,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The steed can’t be targeted separately from the kobold. If the kobold dies the dog runs away."
+        value: "The steed can't be targeted separately from the kobold. If the kobold dies the dog runs away."
       group:
         type: "String"
         label: "Group"

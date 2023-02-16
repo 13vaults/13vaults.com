@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 16+"
-        value: "The target is now considered to be wearing no armor (the armor is damaged beyond repair; adjust defenses accordingly). If the target’s armor is magical, the target must roll a hard save (16+). On a success, the armor isn’t affected. This effect is permanent until the creature obtains new armor."
+        value: "The target is now considered to be wearing no armor (the armor is damaged beyond repair; adjust defenses accordingly). If the target's armor is magical, the target must roll a hard save (16+). On a success, the armor isn't affected. This effect is permanent until the creature obtains new armor."
       hit2:
         type: "String"
         label: "Hit"
@@ -240,7 +240,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[1]] damage, and the target is now considered to be wearing no armor (the armor is damaged beyond repair; adjust defenses accordingly). If the target’s armor is magical, the target must roll a hard save (16+). On a success, the armor isn’t affected. This effect is permanent until the creature obtains new armor."
+        value: "[[1]] damage, and the target is now considered to be wearing no armor (the armor is damaged beyond repair; adjust defenses accordingly). If the target's armor is magical, the target must roll a hard save (16+). On a success, the armor isn't affected. This effect is permanent until the creature obtains new armor."
       hit1:
         type: "String"
         label: "Hit"
@@ -288,7 +288,7 @@ items:
       default: 0
   - _id: "5WgakhSDFx5nMinp"
     flags: {}
-    name: "Rust’s targets"
+    name: "Rust's targets"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -298,7 +298,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Magic items wielded by creatures with 60 hp or more are not affected by the rust monster’s ability to destroy items (but the target still takes damage)."
+        value: "Magic items wielded by creatures with 60 hp or more are not affected by the rust monster's ability to destroy items (but the target still takes damage)."
       group:
         type: "String"
         label: "Group"
@@ -320,7 +320,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Before rolling a save for a magic item, a PC can gain a +5 bonus to the save by agreeing to roleplay the item’s quirk as a huge element of their personality until the next full heal-up. Failure to live up to this roleplaying agreement means that the item hasn’t received the support it needs from its owner to survive the rust monster’s destructive effects, and the item is destroyed at the end of the next battle even if its owner successfully saved."
+        value: "Before rolling a save for a magic item, a PC can gain a +5 bonus to the save by agreeing to roleplay the item's quirk as a huge element of their personality until the next full heal-up. Failure to live up to this roleplaying agreement means that the item hasn't received the support it needs from its owner to survive the rust monster's destructive effects, and the item is destroyed at the end of the next battle even if its owner successfully saved."
       group:
         type: "String"
         label: "Group"
@@ -342,7 +342,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the rust monster scores a critical hit, it can try to destroy another random magic item in the target’s possession (or a random normal item if the target has no other magic items). The creature must roll a save for the item, as usual."
+        value: "When the rust monster scores a critical hit, it can try to destroy another random magic item in the target's possession (or a random normal item if the target has no other magic items). The creature must roll a save for the item, as usual."
       group:
         type: "String"
         label: "Group"

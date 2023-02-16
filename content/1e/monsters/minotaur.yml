@@ -190,7 +190,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[27]] damage, and one of the minotaur’s allies can pop free from the target as a free action"
+        value: "[[27]] damage, and one of the minotaur's allies can pop free from the target as a free action"
       hit1:
         type: "String"
         label: "Hit"

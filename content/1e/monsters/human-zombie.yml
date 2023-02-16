@@ -250,7 +250,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "More dangerous zombies don’t try to kill the moving targets before feasting on brains; they keep attacking any enemy they’ve knocked *unconscious*, rolling attacks against the *helpless* enemy until it’s dead."
+        value: "More dangerous zombies don't try to kill the moving targets before feasting on brains; they keep attacking any enemy they've knocked *unconscious*, rolling attacks against the *helpless* enemy until it's dead."
       group:
         type: "String"
         label: "Group"

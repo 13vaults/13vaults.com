@@ -200,7 +200,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 18+"
-        value: "The hag triggers two hag abilities as a free action (can’t be the same ability twice)."
+        value: "The hag triggers two hag abilities as a free action (can't be the same ability twice)."
       hit3:
         type: "String"
         label: "Hit"
@@ -247,12 +247,12 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 16+"
-        value: "The attack roll also targets a second different enemy of the hag’s choice (but not a third with another 16+)."
+        value: "The attack roll also targets a second different enemy of the hag's choice (but not a third with another 16+)."
       hit2:
         type: ""
         label: "Hit"
         name: "Natural 18+"
-        value: "As above, and the attack roll also targets a third different enemy of the hag’s choice (but not a fourth with another 18+)."
+        value: "As above, and the attack roll also targets a third different enemy of the hag's choice (but not a fourth with another 18+)."
       hit3:
         type: "String"
         label: "Hit"

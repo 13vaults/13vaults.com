@@ -190,7 +190,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[21]] damage, and the beast’s special ability triggers"
+        value: "[[21]] damage, and the beast's special ability triggers"
       hit1:
         type: "String"
         label: "Hit"
@@ -226,7 +226,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The target takes [[10]] extra damage, and if the target makes an opportunity attack against the polar bear before the start of the bear’s next turn, the bear can make a fang, claw, or tusk attack against the target as a free action."
+        value: "The target takes [[10]] extra damage, and if the target makes an opportunity attack against the polar bear before the start of the bear's next turn, the bear can make a fang, claw, or tusk attack against the target as a free action."
       group:
         type: "String"
         label: "Group"

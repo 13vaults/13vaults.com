@@ -197,7 +197,7 @@ items:
         type: "String"
         label: "Hit"
         name: "Natural 14+"
-        value: "The target is now considered to be wearing no armor (the armor is damaged beyond repair; adjust defenses accordingly). If the target’s armor is magical, the target must roll a hard save (16+). On a success, the armor isn’t affected. This effect is permanent until the creature obtains new armor."
+        value: "The target is now considered to be wearing no armor (the armor is damaged beyond repair; adjust defenses accordingly). If the target's armor is magical, the target must roll a hard save (16+). On a success, the armor isn't affected. This effect is permanent until the creature obtains new armor."
       hit2:
         type: "String"
         label: "Hit"
@@ -247,7 +247,7 @@ items:
       hit:
         type: "String"
         label: "Hit"
-        value: "[[10]] damage, and the target is now considered to be wearing no armor (the armor is damaged beyond repair; adjust defenses accordingly). If the target’s armor is magical, the target must roll a hard save (16+). On a success, the armor isn’t affected. This effect is permanent until the creature obtains new armor."
+        value: "[[10]] damage, and the target is now considered to be wearing no armor (the armor is damaged beyond repair; adjust defenses accordingly). If the target's armor is magical, the target must roll a hard save (16+). On a success, the armor isn't affected. This effect is permanent until the creature obtains new armor."
       hit1:
         type: "String"
         label: "Hit"

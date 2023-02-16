@@ -280,7 +280,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When a nearby enemy taking ongoing damage drops to 0 hp or below, add +15 to the amount of ongoing damage that enemy is taking as its body melts and warps. At the GM’s option, a creature slain in a battle involving a chaos behemoth might transform into a chaos glorp or chaos beast instead of having the decency to just die."
+        value: "When a nearby enemy taking ongoing damage drops to 0 hp or below, add +15 to the amount of ongoing damage that enemy is taking as its body melts and warps. At the GM's option, a creature slain in a battle involving a chaos behemoth might transform into a chaos glorp or chaos beast instead of having the decency to just die."
       group:
         type: "String"
         label: "Group"

@@ -226,7 +226,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "At the end of each of the empress’ turns, if there are fewer than two elder spores (see below) per enemy, add a number of elder spores to the battle so that there are two spores per enemy. A spore can “sprout” already engaged with a nearby or far away enemy or on its own, it’s up to you."
+        value: "At the end of each of the empress' turns, if there are fewer than two elder spores (see below) per enemy, add a number of elder spores to the battle so that there are two spores per enemy. A spore can “sprout” already engaged with a nearby or far away enemy or on its own, it's up to you."
       group:
         type: "String"
         label: "Group"

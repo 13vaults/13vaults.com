@@ -220,7 +220,7 @@ items:
       default: 0
   - _id: "UpK8KizE3Q69kUz2"
     flags: {}
-    name: "Devil’s due (Obsession)"
+    name: "Devil's due (Obsession)"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:

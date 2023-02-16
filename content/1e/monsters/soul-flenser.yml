@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit, or any hit against a *weakened*, *stunned*, or *confused* target"
-        value: "Randomly select one of the target’s limited-use powers or spells. The soul flenser flenses it away, removing it from the target until that creature regains it via a successful connection to the oversoul (see below)."
+        value: "Randomly select one of the target's limited-use powers or spells. The soul flenser flenses it away, removing it from the target until that creature regains it via a successful connection to the oversoul (see below)."
       hit2:
         type: ""
         label: "Hit"
@@ -252,7 +252,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural odd hit"
-        value: "If the target is already *weakened*, it’s also *stunned* until end of its next turn."
+        value: "If the target is already *weakened*, it's also *stunned* until end of its next turn."
       hit3:
         type: "String"
         label: "Hit"
@@ -331,7 +331,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "A soul flenser that has successfully flensed at least once can (and usually will, provided some of its enemies are *confused*, *weakened*, or *stunned*) use a standard action to prepare itself to teleport. Once it does this, during its next turn it can use a move action to teleport back to its home underkraken, no matter how distant, leaving the battle behind. Soul flensers fighting beside or within their underkraken can’t use this ability; they’re already home."
+        value: "A soul flenser that has successfully flensed at least once can (and usually will, provided some of its enemies are *confused*, *weakened*, or *stunned*) use a standard action to prepare itself to teleport. Once it does this, during its next turn it can use a move action to teleport back to its home underkraken, no matter how distant, leaving the battle behind. Soul flensers fighting beside or within their underkraken can't use this ability; they're already home."
       group:
         type: "String"
         label: "Group"
@@ -375,7 +375,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "While *confused* by a soul flenser’s effect, a creature that has had a power flensed away can use and re-use that limited power against their erstwhile allies, if the GM sees how to use the power in a useful way."
+        value: "While *confused* by a soul flenser's effect, a creature that has had a power flensed away can use and re-use that limited power against their erstwhile allies, if the GM sees how to use the power in a useful way."
       group:
         type: "String"
         label: "Group"

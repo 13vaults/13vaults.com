@@ -290,7 +290,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "The target’s ongoing fire damage increases by 5 and becomes hard save ends (16+) as the dragon fans the flames"
+        value: "The target's ongoing fire damage increases by 5 and becomes hard save ends (16+) as the dragon fans the flames"
       hit1:
         type: "String"
         label: "Hit"
@@ -392,7 +392,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The dragon’s will and magic are so powerful that it ignores the fire resistance of creatures battling it."
+        value: "The dragon's will and magic are so powerful that it ignores the fire resistance of creatures battling it."
       group:
         type: "String"
         label: "Group"
@@ -414,7 +414,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The dragon’s lair is wreathed in smoke and fumes, and through its magic the dragon has some control over those hot gases. Once per round as a quick action, the flamewreathed dragon can summon [[1d4]] smoke minions that take humanoid or bestial form and defend the dragon’s lair. Roll initiative for the minions once and use that count for all additional minions."
+        value: "The dragon's lair is wreathed in smoke and fumes, and through its magic the dragon has some control over those hot gases. Once per round as a quick action, the flamewreathed dragon can summon [[1d4]] smoke minions that take humanoid or bestial form and defend the dragon's lair. Roll initiative for the minions once and use that count for all additional minions."
       group:
         type: "String"
         label: "Group"

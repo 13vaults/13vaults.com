@@ -276,7 +276,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Creatures hit by the vrock’s demonic screech attack that are already *vulnerable* are also *hampered* (save ends)."
+        value: "Creatures hit by the vrock's demonic screech attack that are already *vulnerable* are also *hampered* (save ends)."
       group:
         type: "String"
         label: "Group"

@@ -190,7 +190,7 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[140]] damage, and until the end of the battle the target takes a -2 penalty to attacks, defenses, and level-based [[d20]] rolls. Hit points, feats, weapon damage, and other level-based benefits don’t change. (The penalty isn’t cumulative.)"
+        value: "[[140]] damage, and until the end of the battle the target takes a -2 penalty to attacks, defenses, and level-based [[d20]] rolls. Hit points, feats, weapon damage, and other level-based benefits don't change. (The penalty isn't cumulative.)"
       hit1:
         type: ""
         label: "Hit"
@@ -386,7 +386,7 @@ items:
       default: 0
   - _id: "LQUp42BYOrZAsmuY"
     flags: {}
-    name: "Devil’s due (Menace)"
+    name: "Devil's due (Menace)"
     type: "trait"
     img: "icons/svg/mystery-man.svg"
     system:

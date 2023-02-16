@@ -228,7 +228,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the escalation die is even, one enemy of the skull’s choice that is *stuck* from its telekinetic grasp takes [[18]] force damage at the start of the skull’s turn. When the escalation die is odd, one such stuck enemy of its choice is *hampered* (save ends)."
+        value: "When the escalation die is even, one enemy of the skull's choice that is *stuck* from its telekinetic grasp takes [[18]] force damage at the start of the skull's turn. When the escalation die is odd, one such stuck enemy of its choice is *hampered* (save ends)."
       group:
         type: "String"
         label: "Group"
@@ -272,7 +272,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "This creature can’t make opportunity attacks."
+        value: "This creature can't make opportunity attacks."
       group:
         type: "String"
         label: "Group"

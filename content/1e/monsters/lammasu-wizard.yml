@@ -238,12 +238,12 @@ items:
       hit:
         type: ""
         label: "Hit"
-        value: "[[40]] damage of an energy type of the lammasu’s choice: cold, fire, lightning, or thunder"
+        value: "[[40]] damage of an energy type of the lammasu's choice: cold, fire, lightning, or thunder"
       hit1:
         type: ""
         label: "Hit"
         name: "Natural 18+"
-        value: "The target can’t cast spells (easy save ends, 6+)."
+        value: "The target can't cast spells (easy save ends, 6+)."
       hit2:
         type: "String"
         label: "Hit"
@@ -293,7 +293,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural even hit"
-        value: "One spell or effect created by the target this battle is canceled (lammasu’s choice)."
+        value: "One spell or effect created by the target this battle is canceled (lammasu's choice)."
       hit2:
         type: "String"
         label: "Hit"
@@ -316,7 +316,7 @@ items:
       default: 0
   - _id: "xV0BdfYLrB4wdzRP"
     flags: {}
-    name: "[Special trigger] C: Master wizard’s rejoinder"
+    name: "[Special trigger] C: Master wizard's rejoinder"
     type: "action"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -374,7 +374,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the lammasu fails a save, it becomes a creature of living stone until the end of its next turn. While made of living stone, the lammasu wizard gains resist damage 16+ to all attacks against AC and PD. If it’s flying when it becomes living stone, its magic allows it to remain in the air if it wishes."
+        value: "When the lammasu fails a save, it becomes a creature of living stone until the end of its next turn. While made of living stone, the lammasu wizard gains resist damage 16+ to all attacks against AC and PD. If it's flying when it becomes living stone, its magic allows it to remain in the air if it wishes."
       group:
         type: "String"
         label: "Group"

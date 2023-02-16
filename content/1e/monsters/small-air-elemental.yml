@@ -276,7 +276,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "It’s quick and lively."
+        value: "It's quick and lively."
       group:
         type: "String"
         label: "Group"

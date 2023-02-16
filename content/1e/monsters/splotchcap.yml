@@ -245,7 +245,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 18+"
-        value: "The target can’t cast a spell until the end of its next turn or until the splotchcap drops to 0 hp, whichever comes first."
+        value: "The target can't cast a spell until the end of its next turn or until the splotchcap drops to 0 hp, whichever comes first."
       hit2:
         type: "String"
         label: "Hit"
@@ -268,7 +268,7 @@ items:
       default: 0
   - _id: "2Epg8Jfy9uP62ORX"
     flags: {}
-    name: "[Special trigger] C: Pop-out and stab ‘em"
+    name: "[Special trigger] C: Pop-out and stab 'em"
     type: "action"
     img: "icons/svg/mystery-man.svg"
     system:
@@ -350,7 +350,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the splotchcap starts its turn and no enemy can see it, it can make a pop-out and stab ‘em attack that turn as a standard action."
+        value: "When the splotchcap starts its turn and no enemy can see it, it can make a pop-out and stab 'em attack that turn as a standard action."
       group:
         type: "String"
         label: "Group"

@@ -318,7 +318,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The wereboar can roll normal saves against effects that aren’t save ends (until end of turn or battle, for example)."
+        value: "The wereboar can roll normal saves against effects that aren't save ends (until end of turn or battle, for example)."
       group:
         type: "String"
         label: "Group"

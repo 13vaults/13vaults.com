@@ -195,7 +195,7 @@ items:
         type: ""
         label: "Hit"
         name: "Natural 16+"
-        value: "The engineer’s kobold allies gain a +2 attack bonus against the target until the start of the engineer’s next turn."
+        value: "The engineer's kobold allies gain a +2 attack bonus against the target until the start of the engineer's next turn."
       hit2:
         type: "String"
         label: "Hit"
@@ -244,7 +244,7 @@ items:
       hit1:
         type: ""
         label: "Hit"
-        name: "Natural roll is above target’s Wisdom (trapster)"
+        name: "Natural roll is above target's Wisdom (trapster)"
         value: "The blast knocks the target into a trap. See Trapster Kobold ability."
       hit2:
         type: "String"

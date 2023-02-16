@@ -306,7 +306,7 @@ items:
         type: "String"
         label: "Hit"
         name: "Critical hit"
-        value: "The target can now only save against the confusion with a natural 20 (or until the warbanner drops) and can’t flee if the rest of the PCs choose to do so."
+        value: "The target can now only save against the confusion with a natural 20 (or until the warbanner drops) and can't flee if the rest of the PCs choose to do so."
       hit2:
         type: "String"
         label: "Hit"

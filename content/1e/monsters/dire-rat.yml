@@ -226,7 +226,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "This creature gains a +1 attack bonus per other dire rat engaged with the target it’s attacking."
+        value: "This creature gains a +1 attack bonus per other dire rat engaged with the target it's attacking."
       group:
         type: "String"
         label: "Group"

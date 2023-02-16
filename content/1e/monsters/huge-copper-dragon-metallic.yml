@@ -390,7 +390,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Once per battle as a free action when an enemy rolls a natural even attack against the dragon, the dragon negates the attack (no damage or effects). In addition, this effect against natural even attacks lasts against the dragon’s enemies until the start of the dragon’s next turn."
+        value: "Once per battle as a free action when an enemy rolls a natural even attack against the dragon, the dragon negates the attack (no damage or effects). In addition, this effect against natural even attacks lasts against the dragon's enemies until the start of the dragon's next turn."
       group:
         type: "String"
         label: "Group"
@@ -412,7 +412,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Once per battle as a free action when an attack targets the dragon’s MD, it can force the attacker to reroll the attack."
+        value: "Once per battle as a free action when an attack targets the dragon's MD, it can force the attacker to reroll the attack."
       group:
         type: "String"
         label: "Group"

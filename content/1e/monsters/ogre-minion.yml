@@ -298,7 +298,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The ogre minion mook counts as two 9th level mooks when you’re building battles."
+        value: "The ogre minion mook counts as two 9th level mooks when you're building battles."
       group:
         type: "String"
         label: "Group"

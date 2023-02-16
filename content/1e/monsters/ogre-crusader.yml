@@ -326,7 +326,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "When the ogre crusader attacks an enemy that has a positive or conflicted relationship with an icon that is aligned opposite to the Ogre’s aligned icon, it adds the escalation die to the attack roll."
+        value: "When the ogre crusader attacks an enemy that has a positive or conflicted relationship with an icon that is aligned opposite to the Ogre's aligned icon, it adds the escalation die to the attack roll."
       group:
         type: "String"
         label: "Group"

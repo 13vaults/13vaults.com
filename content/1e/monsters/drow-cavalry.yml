@@ -296,7 +296,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Reduce the drow cavalry’s attack damage by 50 when it’s not riding a spider."
+        value: "Reduce the drow cavalry's attack damage by 50 when it's not riding a spider."
       group:
         type: "String"
         label: "Group"

@@ -298,7 +298,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "Add the escalation die to the wyvern’s ongoing poison damage whenever that damage is dealt."
+        value: "Add the escalation die to the wyvern's ongoing poison damage whenever that damage is dealt."
       group:
         type: "String"
         label: "Group"

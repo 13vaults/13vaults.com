@@ -298,7 +298,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "The bulette’s crit range expands to 16+ while the escalation die is 4+."
+        value: "The bulette's crit range expands to 16+ while the escalation die is 4+."
       group:
         type: "String"
         label: "Group"
@@ -320,7 +320,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "A bulette can burrow incredibly quickly for short distances. They’re renowned for the mounds of dirt and rock they push above them as they surge through the ground like land torpedoes."
+        value: "A bulette can burrow incredibly quickly for short distances. They're renowned for the mounds of dirt and rock they push above them as they surge through the ground like land torpedoes."
       group:
         type: "String"
         label: "Group"

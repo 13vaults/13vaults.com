@@ -280,7 +280,7 @@ items:
       description:
         type: ""
         label: "Description"
-        value: "A blizzard dragon can use blizzard breath as its standard action during the round after it uses the breath as a free action. Blizzard breath doesn’t deal miss damage to the dragon when used as a standard action."
+        value: "A blizzard dragon can use blizzard breath as its standard action during the round after it uses the breath as a free action. Blizzard breath doesn't deal miss damage to the dragon when used as a standard action."
       group:
         type: "String"
         label: "Group"
