@@ -32,40 +32,172 @@ abilities:
       **Miss:** Damage equal to your level
   - name: Animal Companion
     _type: Talent
-    description: null
+    description: |-
+      **Special:** Unlike most class talents, this talent takes up two ranger class talent slots.
+
+      You have a normal-sized animal companion that fights alongside you in battle. See Animal Companion Rules.
+
+      If you would rather have a smaller beast as a pet, see the Ranger’s Pet talent.
   - name: Archery
     _type: Talent
-    description: null
+    description: Once per battle, reroll one of your missed ranged attacks.
+    feats:
+      - tier: adventurer
+        description: Your Archery rerolls gain a +2 attack bonus and the attack’s crit range expands by 1.
+      - tier: champion
+        description: Once per day, you can use Archery twice in the same battle.
+      - tier: epic
+        description: Once per day, you can turn a normal hit with a ranger ranged attack into a critical hit.
   - name: Double Melee Attack
     _type: Talent
-    description: null
+    description: |-
+      When fighting with two one-handed melee weapons, your default option is to make a double melee attack.
+
+      Your weapon damage die drops one notch, usually from d8s to d6s.
+      If your first attack is a natural even roll (hit or miss), you can make a second attack as a free action.
+
+      If you decide you don’t want to try for a double melee attack while fighting with two one-handed weapons,
+      declare it before rolling your attack; the single attack will deal the normal damage dice instead of using reduced damage dice.
+    feats:
+      - tier: Adventurer
+        description: Your second attack gains a +2 attack bonus if it is against a different target.
+      - tier: Champion
+        description: Once per battle, use Double Melee Attack after an odd attack roll.
+      - tier: Epic
+        description: Each turn, you can pop free of one enemy before one attack roll that is part of a Double Melee Attack. You can also use your move action in between your two attacks if you wish.
   - name: Double Ranged Attack
     _type: Talent
-    description: null
+    description: |-
+      When you attack with a ranged weapon that does not need to be reloaded, your default option is to make a double ranged attack.
+
+      Your weapon damage die drops one notch, usually from d8s to d6s.
+      If your first attack is a natural even roll (hit or miss), you can make a second attack as a free action.
+
+      If you decide you don’t want to try for a double ranged attack when firing your bow or other ranged weapon, declare it before rolling your attack;
+      the single attack will deal the normal damage dice instead of using reduced damage dice.
+    feats:
+      - tier: adventurer
+        description: Your second attack gains a +2 attack bonus if it is against a different target.
+      - tier: champion
+        description: Once per battle, you can use Double Ranged Attack after an odd attack roll.
+      - tier: epic
+        description: Each turn, you can pop free of one enemy before one attack roll that is part of a Double Ranged Attack. You can also use your move action in between your two attacks if you wish.
   - name: Favored Enemy
     _type: Talent
-    description: null
+    description: |-
+      Choose a specific monster type (e.g. aberration, beast, construct, demon, dragon, giant, humanoid\*, ooze, plant, or undead). The crit range of your ranger attacks against that type of enemy expands by 2.
+
+      \*Choosing humanoid: Unlike other favored enemies, choosing humanoid as your favored enemy takes up two ranger class talent slots.
+    feats:
+      - tier: adventurer
+        description: You can change your favored enemy by meditating when you take a full heal-up.
+      - tier: champion
+        description: Your crit range for attacks against favored enemies expands by 1 (to +3).
+      - tier: epic
+        description: Choose a second non-humanoid monster type as a favored enemy.
   - name: Fey Queen's Enchantments
     _type: Talent
-    description: null
+    description: |-
+      Choose one daily or recharge spell of your level or lower from the sorcerer class.
+      You can cast this spell as if you were a sorcerer (though you can’t gather power).
+    feats:
+      - tier: adventurer
+        description: You can choose which ability score you want to use as the attack ability for sorcerer spells you can cast.
+      - tier: champion
+        description: You can now choose from sorcerer at-will spells.
+      - tier: epic
+        description: You gain an additional sorcerer spell of your choice that is your level or lower; a total of two from this talent.
   - name: First Strike
     _type: Talent
-    description: null
+    description: |-
+      The first time you attack an enemy during a battle, your crit range for that attack expands by 2 (usually to 18+).
+      A mob of mooks counts as a single enemy.
+    feats:
+      - tier: adventurer
+        description: The crit range of your First Strike attacks expands by 1 (to +3).
+      - tier: champion
+        description: Once per day, deal triple damage with a First Strike crit instead of double damage.
+      - tier: epic
+        description: Whenever you hit with a First Strike attack, you can reroll your damage once and use the higher roll.
   - name: Lethal Hunter
     _type: Talent
-    description: null
+    description: |-
+      Once per battle as a free action, choose an enemy.
+      The crit range of your attacks against that enemy expands by 2 for the rest of the battle.
+      A mob of mooks counts as a single enemy.
+    feats:
+      - tier: adventurer
+        description: The crit range of your Lethal Hunter attacks expands by 1 (to +3).
+      - tier: champion
+        description: One battle per day, you can use Lethal Hunter against two different enemies.
+      - tier: epic
+        description: Your Lethal Hunter crits deal triple damage instead of double damage while the escalation die is 3+.
   - name: Ranger ex Cathedral
     _type: Talent
-    description: null
+    description: |-
+      Choose one daily or recharge spell of your level or lower from the cleric class.
+      You can cast this spell as if you were a cleric.
+      You can change your chosen spell each time you take a full heal-up.
+    feats:
+      - tier: adventurer
+        description: You can cast the cleric class feature heal spell once per battle.
+      - tier: champion
+        description: You can now choose from cleric at-will spells.
+      - tier: epic
+        description: You gain an additional cleric spell of your choice that is your level or lower; a total of two from this talent.
   - name: Ranger's Pet
     _type: Talent
-    description: null
+    description: |-
+      You have a small animal or beast that accompanies you on your adventures.
+      Use the rules from the Wizard’s Familiar talent with the following differences:
+
+      1. The creature is your pet or friend instead of your familiar.
+      2. Your pet is fully natural rather than partially magical.
+      3. Your pet can end up with more abilities, if you choose.
+    feats:
+      - tier: adventurer
+        description: Your pet gains a third ability.
+      - tier: champion
+        description: Your pet gains a fourth ability.
+      - tier: epic
+        description: Your pet gains a fifth ability.
   - name: Tracker
     _type: Talent
-    description: null
+    description: |-
+      You have the Tracker background at its full possible bonus of +5, without having to spend your normal background points on it.
+      You are an expert wilderness tracker, capable of reading clues from the environment that others can’t perceive.
+      Tracking doesn’t work well, however, in heavily traveled urban environments.
+
+      In addition, you have the terrain stunt power.
+
+      **Terrain stunt:** At the start of each battle in a non-urban environment, roll a d6.
+      Any time after the escalation die reaches that number, you’ll be able to use a quick action to execute a terrain stunt.
+      Normally you can only use terrain stunt once per battle, but circumstances, geography, or excellent planning may suggest that you can pull it off more than once.
+
+      Terrain stunts are improvisational effects that play off your preternatural understanding of the wilderness and all the diverse forms of the natural world.
+      Things like knocking a hornets nest no one had noticed onto your enemy’s head,
+      maneuvering a foe onto a soggy patch of ground that slows them down,
+      shooting the cap off a mushroom spore in a dungeon that erupts on your enemies,
+      getting your enemy’s sword wedged into a stalactite,
+      finding the tree branch that lets you vault up to attack the flying demon that thought it was out of axe range,
+      and similar types of actions.
+    feats:
+      - tier: adventurer
+        description: Your grasp of the way the world is put together increases; you now can use terrain stunt in urban environments.
+      - tier: champion
+        description: You can track as well in urban areas as you do in the wilderness.
+      - tier: epic
+        description: You can track flying creatures and creatures that normally wouldn’t be trackable, and there’s the possibility that even teleports give you a sense of direction.
   - name: Two Weapon Mastery
     _type: Talent
-    description: null
+    description: You gain a +1 attack bonus when fighting with a one-handed melee weapon in each hand.
+    feats:
+      - tier: adventurer
+        description: When you fight with two one-handed melee weapons, increase the damage you deal with missed attacks by adding your level to it. Most of your basic melee attacks, therefore, will deal double your level as miss damage.
+      - tier: champion
+        description: If you fight with two one-handed melee weapons, whenever an enemy makes a melee attack against you and rolls a natural 1, you can make an opportunity attack against that foe as a free action.
+      - tier: epic
+        description: One battle per day, increase the damage you deal with missed attacks to triple your level instead of double your level (from Two-Weapon Mastery).
   - name: Bear
     _type: Animal Companion
     description: |-
