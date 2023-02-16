@@ -6,7 +6,7 @@ import {
   useState,
 } from "react";
 import { createStore, useStore } from "zustand";
-import { remToPx } from "@/lib/remToPx";
+import { remToPx } from "@/lib/rem-to-px";
 
 function createSectionStore(sections) {
   return createStore((set) => ({
@@ -14,7 +14,7 @@ function createSectionStore(sections) {
     visibleSections: [],
     setVisibleSections: (newVisibleSections) => {
       set((state) =>
-        state.visibleSections.join(',') === newVisibleSections.join(',')
+        state.visibleSections.join(",") === newVisibleSections.join(",")
           ? {}
           : { visibleSections: newVisibleSections }
       );
