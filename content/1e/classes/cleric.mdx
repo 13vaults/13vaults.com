@@ -189,73 +189,434 @@ abilities:
         description: Allies now also get a damage bonus against such enemies equal to double your Charisma modifier.
   - name: Bless
     _type: Spell
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      Quick action to cast
+
+      - - -
+
+      **Effect:** You can cast this spell for power or for broad effect.
+
+      **Cast for power:** One nearby ally gains a +2 attack bonus until the end of the battle.
+
+      **Cast for broad Effect:** Choose up to three nearby creatures (including you); each target gains a +1 attack bonus until the end of the battle.
+
+      3rd level spell: Each target also gains 1d10 temporary hit points per point of the attack bonus.
+
+      5th level spell: Each target also gains 2d10 temporary hit points instead of 1d10 per point of the attack bonus.
+
+      7th level spell: All attack bonuses granted by the spell increase by +1.
+
+      9th level spell: Each target also gains 3d10 temporary hit points instead of 2d10 per point of the attack bonus.
   - name: Cure Wounds
     _type: Spell
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      Quick action to cast
+
+      - - -
+
+      **Effect:** You or a nearby ally can heal using a free recovery.
+
+      3rd level spell: The target can also roll a save against each save ends effect.
+
+      5th level spell: This spell is now recharge 16+ after battle instead of daily.
+
+      7th level spell: The target can heal using two free recoveries instead of one.
+
+      9th level spell: This spell is now recharge 11+ instead.
   - name: Hammer of Faith
     _type: Spell
-    description: null
+    description: |-
+      Range: Close-quarters spell
+
+      Daily
+
+      - - -
+
+      **Effect:** Until the end of the battle, your basic melee attacks use d12s as their base weapon damage dice.
+
+      3rd level spell: The spell now requires only a quick action to cast.
+
+      5th level spell: You deal half damage on misses with basic melee attacks this battle.
+
+      7th level spell: Once during the battle, you can reroll a basic melee attack.
+
+      9th level spell: For the rest of the battle, change any of your basic melee attack damage dice rolls that are less than the escalation die to the escalation die value.
   - name: Javelin of Faith
     _type: Spell
-    description: null
+    description: |-
+      Ranged spell; At-Will
+
+      - - -
+
+      **Target:** One nearby enemy
+
+      **Attack:** Wisdom + Level vs. PD
+
+      **Hit:** 1d6 + Wisdom holy damage.
+
+      **Miss:** Damage equal to your level.
+
+      3rd level spell: 3d6 damage.
+
+      5th level spell: 6d6 damage.
+
+      7th level spell: 6d10 damage.
+
+      9th level spell: 8d10 damage.
+    feats:
+      - tier: adventurer
+        description: The spell also deals +1d6 damage against an undamaged target. At 5th level that increases to +2d6 damage; at 8th level it increases to +4d6 damage.
+      - tier: champion
+        description: You can now target a far away enemy with the spell at a –2 attack penalty.
+      - tier: epic
+        description: If your natural attack roll is an 18+, make the attack a second time against a different target as a free action.
   - name: Shield of Faith
     _type: Spell
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      Quick action to cast
+
+      - - -
+
+      **Effect:** You can cast this spell for power or for broad effect.
+
+      **Cast for power:** One nearby ally gains a +2 bonus to AC this battle.
+
+      **Cast for broad Effect:** Choose up to three nearby creatures (including you); each target gains a +1 bonus to AC this battle.
+
+      3rd level spell: The bonus also applies to PD.
+
+      5th level spell: The bonus increases by +1 while the target is staggered.
+
+      7th level spell: The bonus also applies to MD.
+
+      9th level spell: The bonus when cast for power increases to +4. The bonus when cast for broad effect increases to +2.
   - name: Spirits of the Righteous
     _type: Spell
-    description: null
+    description: |-
+      Ranged spell; Once per battle
+
+      - - -
+
+      **Target:** One nearby enemy
+
+      **Attack:** Wisdom + Level vs. MD
+
+      **Hit:** 4d6 + Wisdom holy damage, and your nearby ally with the fewest hit points gains a +4 bonus to AC until the end of your next turn.
+
+      **Miss:** Your nearby ally with the fewest hit points gains a +2 bonus to AC until the end of your next turn.
+
+      3rd level spell: 7d6 damage.
+
+      5th level spell: 7d10 damage.
+
+      7th level spell: 10d12 damage.
+
+      9th level spell: 2d8 x 10 damage.
+    feats:
+      - tier: champion
+        description: You also gain the bonus to AC until the end of your next turn on a hit.
   - name: Turn Undead
     _type: Spell
-    description: null
-  - name: Vigilant Light
-    _type: Spell
-    description: null
+    description: |-
+      Range: Close-quarters spell
+
+      Daily
+
+      - - -
+
+      **Target**: 1d4 nearby undead creatures, each with 55 hp or fewer.
+
+      **Attack**: Wisdom + Charisma + Level vs. MD
+
+      **Hit**: The target is dazed until end of your next turn.
+
+      **Hit by 4+**: 1d10 x your level holy damage, and the target is dazed until end of your next turn.
+
+      **Hit by 8+**: Against non-mooks, holy damage equal to half the target’s maximum hit points, and the target is dazed (save ends). Against mooks, the +8 result now deals 4d10 x your level holy damage.
+
+      **Hit by 12+ or Natural 20**: Against non-mooks, the target is destroyed. Against mooks, the +12 result now deals 4d20 x your level holy damage
+
+      3rd level spell: Target with 90 hp or fewer.
+
+      5th level spell: Target with 150 hp or fewer.
+
+      7th level spell: Target with 240 hp or fewer.
+
+      9th level spell: Target with 400 hp or fewer.
+    feats:
+      - tier: adventurer
+        description: You can expend your daily use of turn undead to gain an additional use of heal in one battle.
+      - tier: champion
+        description: You can choose to target either demons or undead with the spell (but not both with the same casting).
+      - tier: epic
+        description: Increase the targeting limit by 100 hp.
   - name: Cause Fear
     _type: Spell
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      - - -
+
+      **Target:** One nearby enemy with 75 hp or fewer
+
+      **Attack:** Wisdom + Level vs. MD
+
+      **Hit:** The target is weakened until the end of its next turn. On its next turn, if it’s unengaged, it does not attack and moves away from you. If it’s engaged, the target attempts to disengage as its first action, and moves away if it succeeds. If it fails, it moves away as its second action (drawing opportunity attacks). In either case, it will not attack unless it has no options for escape.
+
+      **Miss:** The target hates you for having tried to scare it, and it wants to hurt you most of all, but it won’t be any stupider than usual in pursuing that goal.
+
+      5th level spell: Target with 120 hp or fewer.
+
+      7th level spell: Target with 190 hp or fewer.
+
+      9th level spell: Target with 300 hp or fewer.
   - name: Combat Boon
     _type: Spell
-    description: null
+    description: |-
+      Range: Close-quarters spell
+
+      At-Will
+
+      - - -
+
+      **Effect:** Make a basic melee attack. If the attack hits, you or one conscious nearby ally can roll a save against a save ends effect.
+
+      5th level spell: The save gains a +1 bonus.
+
+      7th level spell: If the attack hits, you and your nearby conscious allies can roll a total of two saves (one per character).
+
+      9th level spell: The save bonus increases to +2.
+    feats:
+      - tier: adventurer
+        description: If you score a critical hit with the combat boon attack, the subsequent save automatically succeeds.
+      - tier: champion
+        description: One nearby conscious ally can roll a save even if your attack misses.
   - name: Divine Endurance
     _type: Spell
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      Quick action to cast
+
+      - - -
+
+      **Effect:** You can cast this spell for power or for broad effect.
+
+      **Cast for power:** One nearby ally gains 40 temporary hit points.
+
+      **Cast for broad Effect:** Choose up to three nearby creatures (including you); each target gains 20 temporary hit points.
+
+      5th level spell: Temporary hp = 60/30.
+
+      7th level spell: Temporary hp = 80/40.
+
+      9th level spell: Temporary hp = 100/50.
   - name: Judgment
     _type: Spell
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      - - -
+
+      **Targets:** All nearby staggered enemies
+
+      **Attack:** Wisdom + Level vs. MD
+
+      **Hit:** 5d10 + Wisdom holy damage.
+
+      **Miss:** Holy damage equal to your level.
+
+      5th level spell: 8d10 damage.
+
+      7th level spell: 2d6 x 10 damage.
+
+      9th level spell: 2d10 x 10 damage.
+    feats:
+      - tier: champion
+        description: The spell now deals half damage on a miss.
+      - tier: epic
+        description: The spell is now recharge 16+ after battle instead of daily.
   - name: Mighty Healing
     _type: Spell
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      - - -
+
+      **Effect:** You can cast this spell for power or for broad effect.
+
+      **Cast for power:** One nearby ally can heal using a single recovery and regain double the usual number of hit points.
+
+      **Cast for broad Effect:** Choose up to three nearby creatures (including you); each target can heal using a recovery.
+
+      5th level spell: The spell can now target far away allies.
+
+      7th level spell: Power equals triple the usual hp for one recovery; broad equals 150% the usual hp per recovery.
+
+      9th level spell: Recoveries provided by the spell are now free.
+    feats:
+      - tier: champion
+        description: This spell is now a close-quarters spell.
   - name: Strength of the Gods
     _type: Spell
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      Quick action to cast
+
+      - - -
+
+      **Effect:** You can cast this spell for power or for broad effect.
+
+      **Cast for power:** One nearby ally deals +2d8 damage with melee attacks this battle.
+
+      **Cast for broad Effect:** Choose up to three nearby creatures (including you); each target deals +1d8 damage with melee attacks this battle.
+
+      5th level spell: Power +4d6, Broad +2d6.
+
+      7th level spell: Power +4d10, Broad +2d10.
+
+      9th level spell: Power +6d10, Broad +3d10.
   - name: Crisis of Faith
     _type: Spell
-    description: null
-  - name: Light of Revelation
-    _type: Spell
-    description: null
+    description: |-
+      Range: Close-quarters spell
+
+      Daily
+
+      Quick action to cast
+
+      - - -
+
+      **Effect:** For the rest of this battle, all enemies near you with 100 hp or fewer take a penalty to their Mental Defense equal to your Charisma modifier. Whenever one of those enemies misses with an attack roll, it takes holy damage equal to double your level.
+
+      7th level spell: 160 hp or fewer.
+
+      9th level spell: 250 hp or fewer.
   - name: Sanctuary
     _type: Spell
-    description: null
+    description: |-
+      Range: Close-quarters spell
+
+      Daily
+
+      - - -
+
+      **Effect:** Choose yourself or a nearby ally. Enemies with 100 hp or fewer cannot attack the chosen target until that creature attacks or the escalation die reaches 6+.
+
+      7th level spell: 160 hp or fewer.
+
+      9th level spell: 250 hp or fewer.
   - name: Sphere of Radiance
     _type: Spell
-    description: null
+    description: |-
+      Range: Close-quarters spell
+
+      Daily
+
+      - - -
+
+      **Effect:** You or one nearby ally can heal using a free recovery. Then make the following attack.
+
+      **Target:** Up to two nearby enemies
+
+      **Attack:** Wisdom + Level vs. MD
+
+      **Hit:** 7d8 + Charisma holy damage.
+
+      **Miss:** Half damage.
+
+      7th level spell: 8d12 damage.
+
+      9th level spell: 2d8 x 10 damage.
   - name: Circle of Protection
     _type: Spell
-    description: null
-  - name: Divine Intervention
-    _type: Spell
-    description: null
+    description: |-
+      Range: Close-quarters spell
+
+      Daily
+
+      Quick action to cast
+
+      - - -
+
+      **Effect:** Choose a defense: AC, PD, or MD. For the rest of the battle while you are conscious, you and each ally near you gains a +1 bonus to that defense.
+      Each enemy that misses you or one of your nearby allies with an attack against the defense you chose is hampered until the end of its next turn.
+
+      9th level spell: Attacks against the chosen defense cannot score critical hits.
+    feats:
+      - tier: epic
+        description: The spell is now (recharge 16+) after battle instead of daily.
   - name: Resurrection
     _type: Spell
-    description: null
+    description: |-
+      Ranged spell; **Special:** You can cast this spell only once per level, and a limited number of times in your life.
+      You must have most of the corpse available to cast the spell.
+      There’s no time limit on resurrecting a dead PC, so long as you have the corpse.
+
+      Effect: You can bring a creature back to life in more or less normal condition, with varying levels of recovery.
+
+      **Limited Casting:** The first time in your life that you use the spell, you can cast it with a single standard action.
+      Using the spell removes one of your spell slots until you gain a level.
+      (You get one less spell per full heal-up.)
+      The person you are resurrecting comes back at roughly half strength, e.g. expending half their recoveries, being dazed (save ends), and, for each ability, having a 50% chance that it is expended.
+
+      The second time in your life you cast the spell, it takes at least three or four rounds and costs you roughly half your hit points and daily powers/spells.
+      The person you are resurrecting comes back at something like one-quarter strength.
+
+      The third time you cast the spell it has to be as a ritual.
+      The spell chews you up and leaves you with only a few hit points, then gnaws at the person you have resurrected, who takes days to recover well enough to qualify as an adventurer or combatant.
+
+      The fourth time you cast the spell it nearly kills you.
+      The resurrection succeeds but the person you’ve resurrected is going to be a mess for a month or more, regardless of any other magic you use.
+
+      The fifth time you resurrect someone, that’s the end of your story and you die.
+      There’s only a 50% chance that the resurrection spell works on the target.
+      You’ve used up your quota of resurrection magic. You’re not coming back via this spell, either.
+
+      **Limited Resurrection:** If the target of your resurrection spell has been resurrected more times than you have cast the spell, there is a 50% chance that the experience will play out using their higher number of resurrections instead of the number of times you have cast the spell.
+
+      9th level spell: You no longer need to have most of the corpse to perform this spell.
   - name: Overworld Travel
     _type: Spell
-    description: null
+    description: |-
+      Range: Close-quarters spell
+
+      Daily
+
+      - - -
+
+      **Special:** You must cast this spell outdoors.
+      It enables you and a group of nearby allies to travel to most any location in the world that you can name.
+
+      Travel takes between an hour and a day, depending on distance and the amount of effort the exerted.
+
+      The destination can be in the overworld or in the land. It can’t be in the underworld.
   - name: Prayer for Readiness
     _type: Spell
-    description: null
+    description: |-
+      Range: Close-quarters spell
+
+      Daily
+
+      - - -
+
+      **Targets:** Up to 5 allies
+
+      **Effect:** You utter a powerful prayer upon your comrades, giving each a special blessing.
+      At any point later this battle, each blessed ally can acknowledge the blessing by saying ‘thank you’ to your god, gods, or pantheon as a free action to reroll a d20 roll.
+      That ally must take the reroll result.
+
+      Note that you are giving the blessing and don’t receive it yourself.
+    feats:
+      - tier: epic
+        description: This spell is now a quick action to cast.
 ---
 
 ## Ability Scores
