@@ -139,79 +139,335 @@ abilities:
     description: Once per battle, you can rally using a quick action instead of a standard action.
   - name: Brace for It
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Triggering Roll:** Any miss
+
+      **Effect:** Until the end of your next turn, the first critical hit you take from a melee attack becomes a normal hit instead.
+    feats:
+      - tier: adventurer
+        description: Brace for it now works against a critical hit from any type of attack.
+      - tier: champion
+        description: Brace for it works against any number of critical hits before your next turn.
   - name: Carve an Opening
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Triggering Roll:** Any natural odd roll
+
+      **Effect:** Your crit range with melee attacks expands by a cumulative +1 this battle until you score a melee critical hit.
+      When you score a melee critical hit, your crit range drops back to normal.
+    feats:
+      - tier: champion
+        description: Feat The crit range bonus from carve an opening is +2 instead of +1.
   - name: Deadly Assault
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee or ranged attack
+
+      ---
+
+      **Triggering Roll:** Any natural even hit
+
+      **Effect:** Reroll any 1s from your damage roll. You’re stuck with the rerolls.
+    feats:
+      - tier: adventurer
+        description: Now you can reroll both 1s and 2s with deadly assault.
+      - tier: champion
+        description: Deadly assault now also triggers on a natural 17+.
   - name: Defensive Fighting
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Triggering Roll:** Natural 16+; if you fight with a shield, also any natural even roll
+
+      **Effect:** Gain a +2 bonus to AC until the end of your next turn.
+    feats:
+      - tier: adventurer
+        description: You also gain the bonus to Physical Defense.
+      - tier: champion
+        description: The bonus increases to +3.
+      - tier: epic
+        description: You also gain the bonus to Mental Defense.
   - name: Grim Intent
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Triggering Roll:** Any natural even miss
+
+      **Effect:** The next time you would deal miss damage with a melee attack, add a WEAPON die to that damage.
+      At 5th level, instead add 2 total WEAPON dice; at 8th level, instead add 3 total WEAPON dice.
   - name: Heavy Blows
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Triggering Roll:** Any natural even miss
+
+      **Effect:** You gain a bonus to your miss damage with that attack equal to the escalation die.
+    feats:
+      - tier: champion
+        description: If you attacked with a two-handed weapon, heavy blows can trigger on any miss, odd or even.
+      - tier: epic
+        description: The bonus instead equals double the escalation die with a one-handed weapon, or triple it with a two-handed weapon.
   - name: Precision Attack
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Triggering Roll:** Any hit with a natural 16+
+
+      **Effect:** You gain a bonus to the damage roll equal to your Dexterity modifier.
+      At 5th level, the damage bonus increases to double your Dexterity modifier; at 8th level the damage bonus increases to triple it.
+    feats:
+      - tier: adventurer
+        description: You can now use precision attack with a ranged attack.
   - name: Second Shot
     _type: Maneuver
-    description: null
-  - name: Tail Whip
-    _type: Maneuver
-    description: null
+    description: |-
+      Flexible ranged attack
+
+      ---
+
+      **Triggering Roll:** Natural 16+
+
+      **Effect:** After this attack, you can make a basic ranged attack with the same weapon (as long as it’s not a weapon that takes a quick action to reload or draw) with a –4 attack penalty.
+
+      You can’t use any maneuvers with the second attack.
+    feats:
+      - tier: champion
+        description: The second shot attack penalty is –2 instead.
   - name: Shield Bash
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Special:** You must be using a shield.
+
+      **Triggering Roll:** Any natural even roll
+
+      **Effect:** The target pops free from you after the attack (does not allow opportunity attacks).
+    feats:
+      - tier: adventurer
+        description: If the target is also engaged with any of your allies, you can have it pop free from them as well.
+      - tier: champion
+        description: Once per battle, you can also daze the target (save ends) of your shield bash attack, if that enemy is staggered.
   - name: Two-Weapon Pressure
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Special:** You must be using a weapon in each hand.
+
+      **Triggering Roll:** Any miss
+
+      **Effect:** Until the end of your next turn, you gain a +2 melee attack bonus against the target.
+    feats:
+      - tier: champion
+        description: The bonus increases to +4.
   - name: Hack & Slash
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Special:** You can use this maneuver only once per round.
+
+      **Triggering Roll:** Any natural even roll, when the escalation die is 2+
+
+      **Effect:** Make another melee weapon attack against a different target.
   - name: Make 'em Flinch
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible ranged attack
+
+      ---
+
+      **Triggering Roll:** Any natural even miss
+
+      **Effect:** Add the higher modifier from your Strength or Dexterity to the miss damage.
+      At 5th level the damage bonus increases to double your chosen modifier;
+      at 8th level the damage bonus increases to triple it.
   - name: Punish Them
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Special:** You can use this maneuver only when you make an opportunity attack.
+
+      **Triggering Roll:** Any hit with a natural 16+
+
+      **Effect:** The target is dazed until the end of its turn.
+    feats:
+      - tier: adventurer
+        description: If the target was moving, it stops moving and loses the rest of its move action.
+      - tier: champion
+        description: The dazed effect is now save ends.
+      - tier: epic
+        description: The target is now weakened (save ends) instead of dazed.
   - name: Steady Now
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Triggering Roll:** Any natural even miss
+
+      **Effect:** You gain temporary hit points equal to your Constitution modifier.
+    feat:
+      - tier: champion
+        description: The temporary hit points increase to double your Constitution modifier.
   - name: Strong Guard
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Special:** You must be using a shield.
+
+      **Triggering Roll:** Any miss
+
+      **Effect:** One ally next to you (including an ally engaged with the same enemy as you) gains a +2 AC bonus until the start of your next turn or until you are no longer next to them.
+    feats:
+      - tier: champion
+        description: Bonus also applies to PD.
+      - tier: epic
+        description: Bonus increases to +3.
   - name: A Dozen Cuts
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Triggering Roll:** Any natural even hit
+
+      **Effect:** The target also takes ongoing damage equal to double your Dexterity modifier, or triple it at 8th level.
+    feats:
+      - tier: champion
+        description: Once per battle, you can trigger a dozen cuts with a natural odd hit.
   - name: Hero's Skill
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee or ranged attack
+
+      ---
+
+      **Triggering Roll:** Any natural even miss
+
+      **Effect:** Add +2 to the attack roll, then halve any damage dealt by the attack if it hits.
+    feats:
+      - tier: champion
+        description: Add +4 to the attack roll instead of +2.
+      - tier: epic
+        description: The damage is no longer halved on a hit after using hero’s skill.
   - name: Sword Master's Anticipation
     _type: Maneuver
-    description: null
-  - name: Gather Breath
-    _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Special:** You must have the Skilled Intercept talent to use this maneuver.
+
+      **Triggering Roll:** Any natural even roll
+
+      **Effect:** The next time you use Skilled Intercept this battle, your Skilled Intercept save automatically succeeds.
   - name: Never Surrender
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Triggering Roll:** Any natural even roll
+
+      **Effect:** You can roll a save against a save ends effect.
+    feats:
+      - tier: epic
+        description: You gain a +2 bonus to the save.
   - name: Spinning Charge
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Special:** You must have moved before the attack.
+
+      **Triggering Roll:** Any natural even hit
+
+      **Effect:** You deal 1/2 your normal basic attack damage to your target and any other enemies who are engaged with the same creature as your target.
+      However, the maximum number of affected targets may not exceed your Dexterity modifier.
+    feats:
+      - tier: epic
+        description: If the escalation die is 3+, the second spinning charge attack deals full damage.
   - name: Sword of Destiny
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Triggering Roll:** Natural 20
+
+      **Effect:** You can heal using a free recovery.
+    feats:
+      - tier: epic
+        description: If the escalation die is 3+, you can now trigger sword of destiny with a natural 18+.
   - name: Combat Mastery
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Special:** You can use this maneuver only once per battle.
+
+      **Triggering Roll:** Natural 16+
+
+      **Effect:** Increase the escalation die by 1.
+    feats:
+      - tier: epic
+        description: Combat mastery now also triggers on any natural even hit.
   - name: Set 'em Up
     _type: Maneuver
-    description: null
+    description: |-
+      Flexible melee attack
+
+      ---
+
+      **Triggering Roll:** Any hit with a natural 16+
+
+      **Effect:** The crit range of your attacks against the target expands by 3 (generally 17+) until the end of the battle (cumulative).
+    feats:
+      - tier: epic
+        description: The crit range bonus from set ’em up now also applies to any ally who attacks the target while you are engaged with it.
 ---
 
 ## Ability Scores
