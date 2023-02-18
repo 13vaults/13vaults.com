@@ -197,22 +197,133 @@ abilities:
         description: Whenever you take critical hit damage, roll a hard save (16+). If you succeed, you somehow tumbled out of the way of whatever was about to hit you, and instead only take damage equal to the attacker’s level.
   - name: Evasive Strike
     _type: Power 1
-    description: null
+    description: |-
+      Melee attack
+
+      At-Will
+
+      ---
+
+      **Target:** One enemy
+
+      **Attack:** Dexterity + Level vs. AC
+
+      **Hit:** WEAPON + Dexterity damage, and you can pop free from the target.
+
+      **Miss:** Damage equal to your level.
+    feats:
+      - tier: adventurer
+        description: If you drop the target with your evasive strike attack, you can pop free from all enemies instead.
+      - tier: champion
+        description: If you hit with evasive strike and the natural attack roll was even, you gain a +2 bonus to AC and PD against the next attack that targets you this battle (no joy if it’s an attack vs. MD).
+      - tier: epic
+        description: Ok. Thanks to your slippery mind, the champion feat benefit also provides a +2 bonus to MD.
   - name: Deadly Thrust
     _type: Power 1
-    description: null
+    description: |-
+      Melee attack
+
+      At-Will
+
+      ---
+
+      **Target:** One staggered non-mook enemy
+
+      **Attack:** Dexterity + Strength + Level vs. AC
+
+      **Hit:** WEAPON + Dexterity damage.
+
+      **Miss:** Damage equal to your level.
+    feats:
+      - tier: adventurer
+        description: Add your Strength modifier to the miss damage.
+      - tier: champion
+        description: You can now target mooks with deadly thrust.
+      - tier: epic
+        description: If you don’t add your Sneak Attack damage to the attack, you also deal damage equal to five times your Strength modifier to your deadly thrust target when you hit.
   - name: Flying Blade
     _type: Power 1
-    description: null
+    description: |-
+      Ranged attack
+
+      At-Will
+
+      ---
+
+      **Special:** You must use a small bladed weapon with this attack.
+
+      **Target:** One nearby creature
+
+      **Attack:** Dexterity + Level vs. AC
+
+      **Hit:** WEAPON + Dexterity damage, and if your natural attack roll is even and one of your allies is engaged with the target, you can use your Sneak Attack damage for the round.
+
+      **Miss:** Damage equal to your level.
+    feats:
+      - tier: adventurer
+        description: If you score a critical hit with flying blade, the target is also dazed (–4 attack) until the end of your next turn.
+      - tier: champion
+        description: As long as one of your allies is engaged with the target, your flying blade attack rolls no longer need to be even to add your Sneak Attack damage.
+      - tier: epic
+        description: You can use flying blade with any ranged weapon.
   - name: Roll With It
     _type: Power 1
-    description: null
+    description: |-
+      Momentum power
+
+      At-Will (once per round)
+
+      Interrupt action; requires momentum
+
+      ---
+
+      Trigger: A melee attack that targets AC hits you.
+
+      Effect: You take half damage from that attack.
+    feats:
+      - tier: adventurer
+        description: The power also triggers on an attack against PD.
+      - tier: champion
+        description: The power also triggers on a ranged attack.
+      - tier: epic
+        description: Once per day, you can use roll with it to take damage equal to the attacker’s level instead of half damage.
   - name: Sure Cut
     _type: Power 1
-    description: null
+    description: |-
+      Melee attack
+
+      At-Will
+
+      ---
+
+      **Special:** You must have momentum and be able to deal your Sneak Attack damage to the target if you hit.
+
+      **Target:** One enemy
+
+      **Attack:** Dexterity + Level vs. AC
+
+      **Hit:** WEAPON + Dexterity damage.
+
+      **Miss:** Deal your Sneak Attack damage + damage equal to your level.
+    feats:
+      - tier: champion
+        description: Missing with sure cut no longer counts as a use of Sneak Attack for the round.
   - name: Tumbling Strike
     _type: Power 1
-    description: null
+    description: |-
+      Melee attack
+
+      At-Will
+
+      ---
+
+      Always: You gain a +5 bonus to all disengage checks you attempt this turn. You can also move to engage an enemy, make this attack against it, and then use a quick action to attempt to disengage from it (the quick action disengage lets you move again if you succeed).
+
+      **Attack:** Dexterity + Level vs. AC
+
+      **Hit:** WEAPON + Dexterity damage.
+
+      **Miss:** Damage equal to your level.
   - name: Bleeding Strike
     _type: Power 3
     description: null
