@@ -142,40 +142,129 @@ abilities:
       | 4         | Thunder     |
   - name: Arcane Heritage
     _type: Talent
-    description: null
+    description: |-
+      Although magic is in the blood of every sorcerer, you have a greater understanding of magic than most sorcerers and even some wizards.
+
+      You gain a +2 bonus to a background that involves or suggests magical knowledge or talent, up to your normal maximum background point limit.
+
+      You can also use one of your sorcerer spell choices to choose any wizard spell of the same level.
+      You get only one such equal-level wizard spell at a time; all others have to be purchased using the 2-level penalty in the Access to Wizardry class feature described above.
+    feats:
+      - tier: adventurer
+        description: Use your Charisma as the attack ability for the wizard spell you choose with your Arcane Heritage talent.
+      - tier: champion
+        description: You can cast your wizard spells empowered as if they were sorcerer powers. Generally, empowering wizard spells only helps by doubling the damage.
   - name: Blood Link
     _type: Talent
-    description: null
+    description: |-
+      Choose one of your sorcerous heritage talents. You gain 1 relationship point with the icon associated with that heritage; you choose whether the point is positive, conflicted, or negative.
+      This point can add to your normal relationship points but you can’t exceed the normal relationship maximums with it.
+      (Remember that positive relationships with villainous icons are limited to 1 point.)
+    feats:
+      - tier: champion
+        description: Gain another relationship point with an icon associated with one of your heritage talents. As above, you must follow the relationship maximums.
   - name: Chromatic Destroyer Heritage
     _type: Talent
-    description: null
+    description: |-
+      You can have multiple breath weapon spells active at the same time.
+      You don’t gain extra actions, so if you succeed with multiple breath weapon spells, you’ll generally have to choose which one to use.
+    feats:
+      - tier: adventurer
+        description: You gain a +2 attack bonus with empowered breath weapon spells.
+      - tier: champion
+        description: Once per day, turn a failed breath weapon re-use roll into a success.
+      - tier: epic
+        description: One battle per day, gain resist dragon attack 16+ (all attacks made by dragons; dragon must roll natural 16+ with the attack or it deals only half damage).
   - name: Fey Heritage
     _type: Talent
-    description: null
-  - name: Green Heritage
-    _type: Talent
-    description: null
+    description: |-
+      One battle per day, when you roll initiative, you can choose to invoke your Fey Heritage and gain the racial power of one the elven races in addition to your own racial power.
+      Roll on the table below.
+      If you roll your own race’s power, you gain the half-elf’s surprising racial power instead.
+
+      | Roll (d6) | Racial Power                  |
+      |-----------|-------------------------------|
+      | 1-2       | Cruel (drow)                  |
+      | 3-4       | Highblood teleport (high elf) |
+      | 5-6       | Elven grace (wood elf)        |
+    feats:
+      - tier: adventurer
+        description: You can now invoke your Fey Heritage talent in two battles each day.
+      - tier: champion
+        description: You gain a +2 attack bonus against elves and monsters in the elven sphere of influence (including the Drider, Storm Giant, and Medusa).
+      - tier: epic
+        description: Once per battle when the escalation die reaches 6+, as a free action, you can gain an elf racial power that you have not already used in this battle.
   - name: Infernal Heritage
     _type: Talent
-    description: null
+    description: |-
+      Once per day, as a quick action when the escalation die is 1+, you can enter a spell frenzy until the end of the battle.
+
+      While in a spell frenzy, you roll 2d20 for each of your sorcerer spell attacks.
+      Use the highest die as your attack roll, but track whether the other die hits.
+
+      For each die that misses, you take damage equal to double the level of the target of your attack.
+    feats:
+      - tier: adventurer
+        description: "You gain resist energy damage 12+ to fire and to one of the following types of energy of your choice: acid, cold, lightning, psychic, thunder."
+      - tier: champion
+        description: Increase one of your resistances to 16+.
+      - tier: epic
+        description: In addition to your normal use of spell frenzy, you can also enter a spell frenzy as a free action while the escalation die is 5+.
   - name: Metallic Protector Heritage
     _type: Talent
-    description: null
-  - name: Necroblast
-    _type: Talent
-    description: null
-  - name: Rumble Grumble Rumble
-    _type: Talent
-    description: null
+    description: Your rolls to re-use breath weapon spells during a fight gain a +2 bonus.
+    feats:
+      - tier: adventurer
+        description: "As a quick action at the start of each battle, you can gain resist energy 12+ to one of the following types of energy of your choice: acid, cold, fire, lightning, or poison."
+      - tier: champion
+        description: When you gather power and your chaotic benefit increases your defenses, you can choose one nearby ally to gain the same defense bonus.
+      - tier: epic
+        description: One battle per day, you can choose to gain resist demon attack 16+ instead of resist energy 12+ from your Metallic Protector Heritage talent.
   - name: Sorcerer's Familiar
     _type: Talent
-    description: null
+    description: |-
+      You have a familiar much like a wizard’s familiar, but more changeable.
+      Unlike the wizard, you don’t choose two abilities for your familiar.
+      Instead you choose one permanent ability that suits your familiar’s nature;
+      the only limitation is that you can’t choose tough as the permanent ability.
+      Each time you get a full heal-up, randomly determine two other abilities your familiar will possess until your next full heal-up.
+    feats:
+      - tier: adventurer
+        description: Your familiar gains another randomly changing ability.
+      - tier: champion
+        description: Once per level, if your familiar is close to you, it can cast one of your spells as a free action on your initiative count, even if you have already expended the spell. The spell functions as if you had cast it.
+      - tier: epic
+        description: Your familiar gains another randomly changing ability.
   - name: Spell Fist
     _type: Talent
-    description: null
+    description: |-
+      Your style of sorcery emphasizes close-range fighting.
+      There are two advantages and one possible drawback to your style.
+
+      You gain a +2 bonus to AC.
+
+      You can use ranged spells while engaged with enemies without taking opportunity attacks.
+
+      You use your Constitution modifier instead of your Charisma modifier to determine the damage you add to all your sorcerer spells.
+    feats:
+      - tier: adventurer
+        description: When you miss with a sorcerer spell against an enemy you are engaged with, add your Charisma modifier to the damage you deal. At 5th level, add double your Charisma modifier; at 8th level, triple it.
+      - tier: champion
+        description: Once per battle, you can include one enemy engaged with you as an additional target of any attack spell you cast that targets other enemies.
+      - tier: epic
+        description: Once per day when you cast an empowered spell, each enemy engaged with you becomes an additional target of that spell if it’s not already targeted by the spell.
   - name: Undead Remnant Heritage
     _type: Talent
-    description: null
+    description: |-
+      You have resist negative energy 12+ and gain a +1 attack bonus against undead.
+      You can also include negative energy damage on your personal random energy damage type table, swapping out an energy type you don’t want to access randomly.
+    feats:
+      - tier: adventurer
+        description: Decrease your total recoveries by 1; you gain a +2 bonus to death saves.
+      - tier: champion
+        description: Your resist negative energy power improves to 16+, and the attack bonus against undead increases to +2.
+      - tier: epic
+        description: If you put out one of your eyes and cut off one of your hands, you gain a +1 bonus to all attacks.
   - name: Breath of the White
     _type: Spell 1
     description: null
