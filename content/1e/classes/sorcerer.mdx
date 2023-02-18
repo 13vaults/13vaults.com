@@ -524,39 +524,219 @@ abilities:
     feats:
       - tier: champion
         description: The spell’s aftershock damage is now also doubled when echoing thunder is empowered.
-  - name: Breath of the Beast
-    _type: Spell 5
-    description: null
   - name: Breath of the Black
     _type: Spell 5
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      **Target:** One nearby enemy; breath weapon
+
+      **Attack:** Charisma + Level vs. MD
+
+      **Hit:** 10d6 + Charisma acid damage, and 20 ongoing acid damage.
+
+      **Miss:** 10 ongoing acid damage.
+
+      7th level spell: 10d10 damage, and 40 ongoing damage; 20 ongoing on a miss.
+
+      9th level spell: 2d6 x 10 damage, and 60 ongoing damage; 30 ongoing on a miss.
+
+      _Breath Weapon:_ For the rest of the battle, roll a d20 at the start of each of your turns; on a 16+, you can use breath of the black that turn if you wish.
+    feats:
+      - tier: epic
+        description: Double the spell’s ongoing damage on a miss.
   - name: The Elven Shadows
     _type: Spell 5
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Special:** Once you cast this spell in a battle, you can cast it at-will for the rest of that battle.
+
+      **Target:** One nearby enemy
+
+      **Attack:** Charisma + Level vs. MD
+
+      **Hit:** 8d6 + Charisma psychic damage, and if the natural attack roll is even, you can teleport to a nearby location you can see.
+
+      **Miss:** Damage equal to your level.
+
+      7th level spell: 9d10 damage.
+
+      9th level spell: 10d12 damage.
+    feats:
+      - tier: epic
+        description: Once per battle, the teleport from a hit with the elven shadows can be to a far away location you can see.
   - name: Three Dooms
     _type: Spell 5
-    description: null
+    description: |-
+      Ranged spell; Recharge 16+ after battle
+
+      ---
+
+      **Target:** One nearby enemy; chain spell
+
+      **Attack:** Charisma + Level vs. PD
+
+      **Hit:** 2d4 x 10 random energy damage, and you take damage of the same type equal to the unmodified dice roll (2d4, 2d8, or 2d12). (Note that there’s no Charisma bonus to damage.)
+
+      **Miss:** Half damage, and you still take random energy damage equal to the unmodified dice roll.
+
+      7th level spell: 2d8 x 10 damage.
+
+      9th level spell: 2d12 x 10 damage.
+
+      _Chain Spell:_ Each time you make a natural even attack roll, you can attack a different target with the spell.
   - name: Unearthly Glamour
     _type: Spell 5
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Effect:** You gain a +5 bonus to all Charisma skill checks for the next five minutes.
+      If you fail a Charisma skill check during this time, however,
+      anyone you were attempting to convince or influence with the check is freaked out or disgusted by the supernatural glamour attached to you and has extremely negative reactions to you.
+
+      7th level spell: The effect lasts for 1 hour.
+
+      9th level spell: The effect lasts for 2 hours.
   - name: Breath of the Blue
     _type: Spell 7
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      ---
+
+      **Target:** One nearby enemy; breath spell
+
+      **Attack:** Charisma + Level vs. PD
+
+      **Hit:** 10d12 + Charisma lightning damage, and at the start of the target’s next turn, 1d6 of its nearby allies take 20 lightning damage.
+
+      **Miss:** Half damage, and no damage to target’s allies.
+
+      9th level spell: 2d10 x 10 damage; 25 lightning damage to nearby allies.
+
+      _Breath Spell:_ For the rest of the battle, roll a d20 at the start of each of your turns; on a 16+, you can use breath of the blue this turn if you wish.
+    feats:
+      - tier: epic
+        description: You can now target a far away enemy with the spell (no attack penalty).
   - name: Stolen Faces
     _type: Spell 7
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      Free action to cast, before initiative is rolled
+
+      ---
+
+      **Targets:** 1d4 + 1 nearby allies
+
+      **Effect:** You steal the once-per-battle racial powers of your allies this battle, but you don’t get the advantage of your allies’ feats or items that improve those powers.
+
+      Each ally you steal a racial power from can roll an easy save (6+). Success means they get to use their power also this battle. Failure means they can’t; you took it fully.
+
+      You can’t steal racial powers you already possess.
+
+      **9th level spell:** You get to use your allies’ powers as if you also had any of their feats that improve those powers.
   - name: Touch of Evil
     _type: Spell 7
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      Quick action to cast
+      
+      ---
+
+      **Special:** If you are fighting one or more demons, roll an easy save (6+) at the start of each of your turns. Failure means that you are confused that turn.
+
+      **Target:** You
+
+      **Effect:** You gain a random demon-style power for the rest of the battle, similar to the abilities demons possess but not identical.
+
+      Roll a d8 to see which power you gain:
+
+      | Roll (d8) | Power                              | Description                                                                                                                                                                                                                    |
+      |-----------|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+      | 1         | Resist energy 16+                  | When an attack that deals energy damage targets you, the attacker must roll a natural 16+ on the attack roll or it only deals half damage.                                                                                     |
+      | 2         | Infernal battery                   | Until the end of the battle, you can use a quick action once each round to make recharge rolls for your expended recharge spells. Each time you do so, you take damage equal to half the natural result of your recharge roll. |
+      | 3         | Backlash                           | The first time you are staggered this battle, the enemy who staggered you becomes confused (save ends).                                                                                                                        |
+      | 4         | Spell frenzy                       | You enter a spell frenzy (see Infernal Heritage talent). If you were already in a spell frenzy, you now roll 3d20 for each attack and take damage equal to triple the target’s level for each roll that misses.                |
+      | 5         | Fear aura                          | Enemies engaged with you that have fewer hit points than double your current hit points are dazed. They cannot use the escalation die.                                                                                         |
+      | 6         | Teleport 1d3 + 1 times this battle | As a move action, you can teleport anywhere you can see nearby.                                                                                                                                                                |
+      | 7         | Demonic speed                      | You can take an extra standard action each turn that the escalation die is even. You lose 2d10 hit points each time you use the extra action.                                                                                  |
+      | 8         | Eye of the demon                   | Choose any two features you want. For the rest of this day, all your icon relationships disappear and are replaced by an identical number of conflicted points with a villainous icon (preferably one that is demonic).        |
   - name: Breath of the Void
     _type: Spell 9
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      ---
+
+      **Target:** One nearby enemy; breath spell
+
+      **Attack:** Charisma + Level vs. MD
+
+      **Hit:** 2d12 x 10 + Charisma negative energy damage, and the target moves down 2d6 points in initiative order, to a minimum of 1.
+
+      **Miss:** Half damage.
+
+      _Breath Spell:_ For the rest of the battle, roll a d20 at the start of each of your turns; on a 16+, you can use breath of the void this turn if you wish.
   - name: Calling the Blood
     _type: Spell 9
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      ---
+
+      **Effect:** Randomly select an icon (preferably a sorcerous one).
+      You gain some surprising or bizarre magical effect associated with the power of that icon to assist you.
+      The effect is entirely up to the GM, though the immediate impact of the spell should always be favorable for you.
+      The long-term consequences of randomly invoking the power of an icon that may be an enemy might not be favorable for you,
+      and should be played for narrative interest by the GM, particularly if the impact of the spell was huge for you.
+      Since this is a daily spell, sizeable impact is fine, but don’t award any extra effect for empowered casting,
+      especially since the spell can be cast effectively out of combat.
+    feats:
+      - tier: epic
+        description: Randomly choose twice, then choose the single result you prefer.
   - name: Silver Flame
     _type: Spell 9
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      Quick action to cast
+
+      ---
+
+      **Effect:** Roll your relationship dice that you have with a sorcerous heroic icon.
+
+      For each 6 you roll, you gain one 7th level or lower spell from any spellcasting class that you can cast this battle.
+      For each 5 you roll, you gain one 5th level or lower spell from any spellcasting class that you can cast this battle.
+
+      If the escalation die is 5+, you can swap the escalation die for one or your rolls.
+      If you get no successes, you regain the spell after this battle.
+
+      You can acquire one of the new spells the same round you cast this spell.
+      Then select and acquire any other gained spells at the start of your next turn.
+
+      You can use your Charisma as the ability score that provides the acquired spells’ attack bonuses and damage bonuses (if any).
+      Other ability score references remain unchanged.
+
+      As you might expect, each 5 you roll also invokes an icon-related complication or obligation in the tradition of rolling 5s on relationship checks.
 ---
 
 ## Ability Scores
