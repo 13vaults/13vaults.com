@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/prefer-module */
+
 const { withContentlayer } = require("next-contentlayer");
 const vaultConfig = require("./vault.config");
 

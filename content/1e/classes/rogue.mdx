@@ -414,25 +414,132 @@ abilities:
       **Miss:** —
   - name: Harmless Misdirection
     _type: Power 5
-    description: null
+    description: |-
+      Momentum power
+
+      At-Will (once per round)
+
+      Interrupt action; requires momentum
+
+      ---
+
+      **Trigger:** You miss with a melee attack while an ally is engaged with the target.
+
+      **Effect:** You can pop free from the target, and the target can’t attack you during its next turn as long as your ally remains engaged with it.
   - name: Spiky Bastard
     _type: Power 5
-    description: null
+    description: |-
+      Daily
+
+      Quick action
+
+      ---
+
+      **Effect:** You go all-out to hurt anyone who tries to get a piece of you.
+      For the rest of the battle, while you’re conscious, using at least one bladed weapon,
+      and are not staggered or stunned, you deal 10 damage to each enemy that makes a melee attack against you and rolls a natural odd attack roll.
+      The damage hits the enemy before their attack damages you.
+    feats:
+      - tier: champion
+        description: _Spiky bastard_ damage now applies when you are staggered, though obviously not while you are unconscious.
+      - tier: epic
+        description: If the escalation die is 3+, the damage increases to 15 instead of 10.
   - name: Swift Dodge
     _type: Power 5
-    description: null
+    description: |-
+      Momentum power
+
+      At-Will (once per round)
+
+      Interrupt action; requires momentum
+
+      ---
+
+      **Trigger:** You are hit by an attack against AC.
+
+      **Effect:** The attacker must reroll the attack.
+
+    feats:
+      - tier: champion
+        description: The power also triggers on an attack against PD.
+      - tier: epic
+        description: The attack reroll takes a –2 penalty.
   - name: Assassin's Gambit
     _type: Power 7
-    description: null
+    description: |-
+      Melee attack
+
+      At-Will
+
+      ---
+
+      **Target:** One enemy
+
+      **Attack:** Dexterity + Level vs. AC
+
+      **Hit:** Half of WEAPON + Dexterity damage (including Sneak Attack damage if any), and if you drop a non-mook target to 0 hp, you can take another standard action this turn.
+
+      **Miss:** Damage equal to your level.
+    feats:
+      - tier: epic
+        description: Once a turn, you can get the extra standard action when this attack drops a mook target.
   - name: Swift Riposte
     _type: Power 7
-    description: null
+    description: |-
+      Momentum power
+
+      At-Will (once per round)
+
+      Interrupt action; you must spend your momentum
+
+      ---
+
+      **Trigger:** An enemy targets you with a melee attack.
+
+      **Effect:** You can make a basic attack against your attacker.
+      If your natural attack roll equals or beats your attacker’s roll, resolve your basic attack against that enemy first.
+      If your attack roll is lower, your attack has no effect, regardless of whether it hits or misses.
+
+      **Special:** You can’t gain momentum from hitting with swift riposte.
+    feats:
+      - tier: champion
+        description: If your swift riposte attack is a critical hit, the enemy’s attack misses.
+      - tier: epic
+        description: You gain a +2 attack bonus with swift riposte attacks.
   - name: Death's Twin
     _type: Power 9
-    description: null
+    description: |-
+      Momentum power
+
+      At-Will
+
+      Standard action on your turn; you must spend your momentum
+
+      ---
+
+      **Effect:** You can make two basic attacks at any point during your turn, each against a different target.
+      You only regain momentum if your second attack hits.
+    feats:
+      - tier: epic
+        description: If your attack against your first death’s twin target is a natural 18+, you can make your second basic attack against that same target.
   - name: True Targeting
     _type: Power 9
-    description: null
+    description: |-
+      Momentum power
+
+      At-Will
+
+      Interrupt action OR free action on your turn; you must spend your momentum
+
+      ---
+
+      **Trigger:** An invisible or otherwise hidden enemy attacks you, or you try to attack an invisible or hidden enemy.
+
+      **Effect:** The attacker’s invisibility isn’t going to work on you.
+      It might work against your allies, but you see through it and can tell where the creature is well enough to target it normally or be aware of its imminent attack.
+    feats:
+      - tier: epic
+        description: If the enemy’s attack misses, you regain momentum.
 ---
 
 ## Ability Scores
