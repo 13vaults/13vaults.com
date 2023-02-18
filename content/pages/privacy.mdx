@@ -8,12 +8,13 @@ The privacy of our website visitors is important to us so we do not track any in
 
 - No personal information is collected
 - No information such as cookies is stored in the browser
-- No information is shared with, sent to or sold to third-parties
+- No information is shared with or sold to third-parties
 - No information is shared with advertising companies
 - No information is mined and harvested for personal and behavioral trends
 - No information is monetized
 
 We run the Plausible Analytics script to collect some anonymous usage data for statistical purposes.
+This script sends to and stores anonymous usage data with Plausible only for 13 Vaults usage.
 The goal is to track overall trends in our website traffic, it is not to track individual visitors or to gather information to sell to advertisers.
 All the data is in aggregate only.
 No personal data is collected.
@@ -22,3 +23,12 @@ Everything you can see there is what we can see.
 
 Data collected includes referral sources, top pages, visit duration, information from the devices (device type, operating system, country and browser) used during the visit and more.
 You can see full details in [the Plausible Analytics Data Policy](https://plausible.io/data-policy).
+
+If you wish to stop this script from being used, you can disable JavaScript in your browser (not recommended) or block the following script from being accessed:
+`www.13vaults.com/pa/js/pa.js`.
+
+The easiest way to block this script is by using the [uBlock Origin browser extension](https://github.com/gorhill/uBlock) and adding this line to your filters:
+
+```
+||www.13vaults.com/pa/js/pa.js$script,1p
+```
