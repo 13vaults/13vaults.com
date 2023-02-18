@@ -326,16 +326,92 @@ abilities:
       **Miss:** Damage equal to your level.
   - name: Bleeding Strike
     _type: Power 3
-    description: null
+    description: |-
+      Melee attack
+
+      At-Will
+
+      ---
+
+      **Target:** One enemy who is not taking ongoing damage
+
+      **Attack:** Dexterity + Level vs. AC
+
+      **Hit:** WEAPON + Dexterity damage, and if your natural attack roll was even, the target takes ongoing damage equal to 1d4 times your level.
+
+      **Miss:** Damage equal to your level.
+    feats:
+      - tier: adventurer
+        description: The ongoing damage against large or huge targets increases to 1d6 times your level.
+      - tier: champion
+        description: A natural even miss also deals ongoing damage equal to your level.
+      - tier: epic
+        description: You can now use bleeding strike against enemies taking ongoing damage.
   - name: Deflection
     _type: Power 3
-    description: null
+    description: |-
+      Momentum power
+
+      At-Will (once per round)
+
+      Interrupt action; you must spend your momentum
+
+      ---
+
+      **Trigger:** A melee attack misses you.
+
+      **Effect:** The attack hits a different enemy you are engaged with instead, but deals only half damage.
+    feats:
+      - tier: adventurer
+        description: The power also triggers on a ranged attack against AC.
+      - tier: champion
+        description: The deflected attack now deals full damage instead of half damage.
+      - tier: epic
+        description: Using deflection no longer spends your momentum.
   - name: Slick Feint
     _type: Power 3
-    description: null
+    description: |-
+      Melee attack
+
+      At-Will
+
+      ---
+
+      **First Target:** One enemy engaged with you
+
+      **Attack:** Charisma + Level vs. MD
+
+      **Hit:** The target is dazed until the end of your next turn, and you can make an improved attack against a second target.
+
+      **Miss (First Target):** Your attack action is over; the feint was a screw-up.
+
+      **Second Target:** A different enemy from the first target that is engaged with you
+
+      **Attack:** Dexterity + Level +2 vs. AC
+
+      **Hit:** WEAPON + Dexterity damage.
+
+      **Miss (Second Target):** Damage equal to your level.
   - name: Thief's Strike
     _type: Power 3
-    description: null
+    description: |-
+      Note: This is a bonus 3rd-level power for rogues with the Thievery talent. Other rogues can choose it if they like.
+
+      Melee attack
+
+      At-Will
+
+      ---
+
+      **Target:** One enemy
+
+      **Attack:** Dexterity + Level vs. PD
+
+      **Hit:** Half of WEAPON + Dexterity damage (including Sneak Attack damage if any), and roll a normal save.
+      If you succeed, you can pickpocket an item from the target that they are not holding.
+      (If you roll 16+, the target doesn’t realize you pickpocketed them.)
+
+      **Miss:** —
   - name: Harmless Misdirection
     _type: Power 5
     description: null
