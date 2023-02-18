@@ -267,22 +267,169 @@ abilities:
         description: If you put out one of your eyes and cut off one of your hands, you gain a +1 bonus to all attacks.
   - name: Breath of the White
     _type: Spell 1
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      ---
+
+      **Target:** 1d2 nearby enemies in a group; breath weapon
+
+      **Attack:** Charisma + Level vs. PD
+
+      **Hit:** 3d6 + Charisma cold damage.
+
+      **Miss:** Half damage.
+
+      3rd level spell: 5d6 damage.
+
+      5th level spell: 4d10 damage.
+
+      7th level spell: 6d12 damage.
+
+      9th level spell: 10d12 damage.
+
+      _Breath Weapon:_ For the rest of the battle, roll a d20 at the start of each of your turns. On a 16+, you can use breath of the white dragon that turn if you wish.
   - name: Burning Hands
     _type: Spell 1
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      At-Will
+
+      ---
+
+      **Targets:** Up to two nearby enemies in a group
+
+      **Attack:** Charisma + Level vs. PD
+
+      **Hit:** 1d6 + Charisma fire damage.
+
+      3rd level spell: 1d8 damage.
+
+      5th level spell: 2d8 damage.
+
+      7th level spell: 3d8 damage.
+
+      9th level spell: 5d8 damage.
+    feats:
+      - tier: adventurer
+        description: When you miss with burning hands, you deal fire damage to the target equal to each damage die that rolled its maximum possible result.
+      - tier: champion
+        description: When you roll a natural 18+ with a burning hands attack roll, you can choose another nearby target for the spell. The new target doesn’t have to be part of the original group.
+      - tier: epic
+        description: You can now target each enemy engaged with you with your burning hands spell in addition to any other targets.
   - name: Chaos Bolt
     _type: Spell 1
-    description: null
+    description: |-
+      Ranged spell; At-Will
+
+      ---
+
+      **Special:** The first time you use chaos bolt each battle, determine a random energy type. The spell deals that type of damage each time you use it that battle.
+
+      **Target:** Either a single nearby enemy or a single far away enemy with a –2 attack penalty
+
+      **Attack:** Charisma + Level vs. PD
+
+      **Hit:** 1d8 + Charisma random energy damage, and if the natural attack roll was even, you gain a chaotic benefit as if you had gathered power.
+
+      **Miss:** Damage equal to your level.
+
+      3rd level spell: 3d8 damage.
+
+      5th level spell: 5d8 damage.
+
+      7th level spell: 7d8 damage.
+
+      9th level spell: 9d8 damage.
+    feats:
+      - tier: adventurer
+        description: You don’t take the –2 penalty for attacking a far away enemy with the spell.
+      - tier: champion
+        description: If you are a champion-tier sorcerer, roll any chaotic benefit gained with this spell on the epic chaotic benefits table. If you are an epic-tier sorcerer, choose the epic chaotic benefit you want instead of rolling.
   - name: Lightning Fork
     _type: Spell 1
-    description: null
+    description: |-
+      Ranged spell; Recharge 16+ after battle
+
+      ---
+
+      **Target:** One nearby enemy; chain spell
+
+      **Attack:** Charisma + Level vs. PD
+
+      **Hit:** 3d6 + Charisma lightning damage.
+
+      **Miss:** Half damage.
+
+      3rd level spell: 7d6 damage.
+
+      5th level spell: 6d10 damage.
+
+      7th level spell: 10d10 damage.
+
+      9th level spell: 2d8 x 10 damage.
+
+      _Chain Spell:_ Each time you make a natural even attack roll, you can attack a different target with the spell.
+    feats:
+      - tier: adventurer
+        description: Once per battle, you can reroll one of your lightning fork attacks rolls.
+      - tier: champion
+        description: If you miss all targets with lightning fork, you don’t expend it.
+      - tier: epic
+        description: The recharge roll for lightning fork is now 11+.
   - name: Resist Energy
     _type: Spell 1
-    description: null
+    description: |-
+      Ranged spell; Recharge 16+ after battle
+
+      ---
+
+      **Target:** You or one nearby ally
+
+      **Effect:** Until the end of the battle, the target gains resist damage 12+ to the following energy type of your choice: cold, fire, lightning, thunder.
+
+      3rd level spell: Choose two types of energy the target gains resistance to.
+
+      5th level spell: Resistance is now 16+.
+
+      7th level spell: The spell now affects two targets.
+
+      9th level spell: Recharge roll is now 11+.
+    feats:
+      - tier: adventurer
+        description: You can target an additional creature with the spell.
   - name: Scorching Ray
     _type: Spell 1
-    description: null
+    description: |-
+      Ranged spell; At-Will
+
+      ---
+
+      **Target:** One nearby enemy
+
+      **Attack:** Charisma + Level vs. PD
+
+      **Hit:** 1d6 + Charisma fire damage, and if the natural attack roll is even, the target also takes 1d8 ongoing fire damage.
+
+      **Miss:** Damage equal to your level.
+
+      3rd level spell: 3d6 damage; 2d4 ongoing.
+
+      5th level spell: 4d6 damage; 2d6 ongoing.
+
+      7th level spell: 6d6 damage; 3d6 ongoing.
+
+      9th level spell: 10d6 damage; 5d6 ongoing.
+    feats:
+      - tier: adventurer
+        description: You can now use the spell against a far away target, but with a –2 attack penalty.
+      - tier: champion
+        description: Each time you cast the spell, you can have the attack deal random energy damage instead of fire damage. Replace the fire entry on the random energy table with your choice of negative energy or acid.
+      - tier: epic
+        description: You don’t take the –2 penalty for attacking a far away enemy with the spell.
   - name: Breath of the Green
     _type: Spell 3
     description: null
