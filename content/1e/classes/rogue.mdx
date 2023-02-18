@@ -4,46 +4,197 @@ source: 13th Age, p.124
 abilities:
   - name: Melee Attack
     _type: Basic Attack
-    description: null
+    description: |-
+      At-Will
+
+      ---
+
+      **Target:** One enemy
+
+      **Attack:** Dexterity + Level vs. AC
+
+      **Hit:** WEAPON + Dexterity damage
+
+      **Miss:** Damage equal to your level
   - name: Ranged Attack
     _type: Basic Attack
-    description: null
+    description: |-
+      At-Will
+
+      Target: One enemy
+
+      **Attack:** Dexterity + Level vs. AC
+
+      **Hit:** WEAPON + Dexterity damage
+
+      **Miss:** Damage equal to your level
   - name: Momentum
     _type: Class Feature
-    description: null
+    description: |-
+      Many of the rogue’s powers function only when the rogue has momentum.
+
+      You gain momentum by hitting an enemy with an attack.
+
+      You lose momentum when you are hit by an attack.
+
+      The default is that you can use momentum powers without losing momentum, but a few powers specify that you must spend your momentum to use them.
+      You don’t have to use attacks that require momentum against the foe you hit to gain that momentum.
+
+      Momentum powers that do not require you to spend your momentum are generally classified as interrupt actions.
+      You can only use one interrupt action a round, which keeps your momentum powers from dominating the battle.
   - name: Sneak Attack
     _type: Class Feature
-    description: null
+    description: |-
+      Once per round when you make a rogue melee weapon attack against an enemy engaged with one or more of your allies, you can deal extra damage if your attack hits.
+
+      | Rogue Level | Extra Damage |
+      |-------------|--------------|
+      | 1           | +1d4         |
+      | 2           | +1d6         |
+      | 4           | +2d6         |
+      | 6           | +3d6         |
+      | 8           | +5d6         |
+      | 10          | +7d6         |
+    feats:
+      - tier: adventurer
+        description: Your Sneak Attack feature also works the first round of combat against enemies with a lower initiative than you.
+      - tier: champion
+        description: Your Sneak Attack feature also works against enemies who are confused, dazed, stunned, vulnerable to your attack, or weakened.
+      - tier: epic
+        description: Once per battle when you miss with an attack that would have allowed you to deal Sneak Attack damage, replace the normal miss damage with your full Sneak Attack damage.
   - name: Trap Sense
     _type: Class Feature
-    description: null
+    description: |-
+      Even rogues whose backgrounds don’t have anything to do with noticing, avoiding, or disarming traps have a unique knack for dealing with traps.
+
+      If a rogue’s skill check involving a trap is a natural even failure, the rogue can reroll the skill check once.
+      If a trap’s attack roll against a rogue is a natural odd roll, the rogue can force the trap to reroll the attack once.
+    feats:
+      - tier: adventurer
+        description: The trap attack reroll can also apply to a nearby ally of the rogue as the rogue shouts a warning or acts to prevent the trap from hitting.
+      - tier: champion
+        description: You gain a +3 bonus to skill check rerolls you make against traps.
+      - tier: epic
+        description: You only take half damage from trap attacks.
   - name: Cunning
     _type: Talent
-    description: null
+    description: |-
+      You can use your Intelligence in place of your Charisma for any rogue attacks, talents, or powers that use Charisma (e.g. shadow walk and slick feint).
+      You also gain two extra points of backgrounds to spend on knowledge-related backgrounds and gain a +2 bonus to skill checks involving traps.
+    feats:
+      - tier: adventurer
+        description: You gain a +1 bonus to Mental Defense.
+      - tier: champion
+        description: Once per battle, reroll a save against an effect from an attack that originally hit your Mental Defense.
+      - tier: epic
+        description: Your once-per-battle save reroll is now once per save.
   - name: Improved Sneak Attack
     _type: Talent
-    description: null
+    description: |-
+      Your Sneak Attack damage is better than other rogues.
+      Use the following Sneak Attack bonus damage progression instead.
+
+      | Rogue Level | Extra Damage |
+      |-------------|--------------|
+      | 1           | +1d6         |
+      | 2           | +1d8         |
+      | 4           | +2d8         |
+      | 6           | +3d8         |
+      | 8           | +5d8         |
+      | 10          | +7d8         |
+    feats:
+      - tier: adventurer
+        description: Once per day as a free action, you can add your Sneak Attack damage to any hit against one target that would not otherwise have qualified for the damage.
+      - tier: champion
+        description: Once per day, roll d20s for your Sneak Attack damage instead of d8s.
+      - tier: epic
+        description: One battle per day, ignore the limitation that you can use Sneak Attack damage only once per round.
   - name: Murderous
     _type: Talent
-    description: null
-  - name: Poison Master
-    _type: Talent
-    description: null
+    description: Against staggered enemies, your crit range with rogue attacks expands by 2.
+    feats:
+      - tier: adventurer
+        description: You gain a +2 attack bonus against staggered enemies.
+      - tier: champion
+        description: Your crit range against staggered enemies expands by 2 (now +4).
+      - tier: epic
+        description: Whenever a staggered enemy misses you with a melee attack, it’s vulnerable to your attacks for the rest of the battle.
   - name: Shadow Walk
     _type: Talent
-    description: null
+    description: |-
+      You gain the shadow walk at-will power:
+
+      As a move action before you have used your standard action this turn,
+      if you are not engaged, you can make the following ‘attack’ against all nearby enemies, targeting the enemy among them with the highest Mental Defense.
+
+      **Attack:** Charisma + Level vs. MD
+
+      **Hit:** Remove yourself from play.
+      At the start of your next turn, return anywhere nearby that you could have moved to normally during your turn, and deal double damage with your first rogue attack that turn.
+
+      **Miss:** No effect. You can’t attempt to shadow walk again until your next turn, but you still have your standard action this turn.
+    feats:
+      - tier: adventurer
+        description: On a miss, you can still use your move action normally (but still can’t shadow walk this turn).
+      - tier: champion
+        description: Twice per day, you can reroll the rogue attack that follows your successful use of shadow walk.
+      - tier: epic
+        description: Twice per day, you can reappear from your shadow walk in a nearby location you wouldn’t have been able to reach unimpeded physically, for instance, on the other side of a portcullis or door, or high up a wall.
   - name: Smooth Talk
     _type: Talent
-    description: null
+    description: |-
+      Once per day, convince your GM with an amazing line of patter while you are using social skills to speak or interact with NPCs associated with a particular icon.
+      If the GM is convinced by your patter, roll a normal save (11+).
+      If you succeed, for the rest of the day you can function as if you have a 2-point positive relationship with the icon who seems to be in play.
+      Thanks to your amazing gift of gab, for a short time, it’s more or less true. (Note that these points replace any points you normally have with the icon rather than adding to them.)
+
+      Failure on the Smooth Talk save generally arouses suspicions.
+    feats:
+      - tier: adventurer
+        description: Add your Charisma modifier to your Smooth Talk save rolls.
+      - tier: champion
+        description: Success with your Smooth Talk talent gives you a 3-point positive relationship instead.
+      - tier: epic
+        description: Even if you fail your Smooth Talk save, you get a 2-point conflicted relationship with the icon because the people you’re speaking with can’t be sure.
   - name: Swashbuckle
     _type: Talent
-    description: null
+    description: |-
+      Once per battle as a quick action, you can spend your momentum to pull off a daring stunt the likes of which others could scarcely conceive.
+      You may make an attack as part of the stunt, but you’ll need to roll normally for the attack.
+      This is an improvisational talent.
+
+      As a swashbuckler, you do not need a difficult skill check to pull the stunt off.
   - name: Thievery
     _type: Talent
-    description: null
+    description: |-
+      You have the Thief background at its full possible bonus of +5, without having to spend your normal background points on it.
+    feats:
+      - tier: adventurer
+        description: Regardless of your level, you gain the bonus power thief’s strike in addition to your normal number of powers.
+
+      - tier: champion
+        description: Once per day, you can deal full damage with thief’s strike instead of half damage.
+
+      - tier: epic
+        description:
+          Twice per level, you can steal something with a successful thief’s strike that you would not be able to steal ordinarily, but that would require a bit of magic, e.g. a dream, a spell, someone’s hope, a memory.
+          The theft won’t be permanent.
+          Every day, roll a hard save to determine whether you can keep what you stole for that day.
+          Also, you can never steal the same thing twice.
   - name: Tumble
     _type: Talent
-    description: null
+    description: |-
+      You gain a +5 bonus to disengage checks.
+      In addition, while you are moving, if an enemy moves to intercept you,
+      you can make one disengage roll per intercepting enemy as a free action to avoid that enemy,
+      but you must stop the first time you fail any of those disengage checks.
+    feats:
+      - tier: adventurer
+        description: You ignore the penalty for disengaging from more than one enemy at a time.
+      - tier: champion
+        description: One battle per day as a free action, you can declare that you’re a tumbling fool and automatically succeed on your first disengage check each turn.
+      - tier: epic
+        description: Whenever you take critical hit damage, roll a hard save (16+). If you succeed, you somehow tumbled out of the way of whatever was about to hit you, and instead only take damage equal to the attacker’s level.
   - name: Evasive Strike
     _type: Power 1
     description: null
