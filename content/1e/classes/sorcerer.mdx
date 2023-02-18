@@ -290,7 +290,8 @@ abilities:
 
       9th level spell: 10d12 damage.
 
-      _Breath Weapon:_ For the rest of the battle, roll a d20 at the start of each of your turns. On a 16+, you can use breath of the white dragon that turn if you wish.
+      _Breath Weapon:_ For the rest of the battle, roll a d20 at the start of each of your turns.
+      On a 16+, you can use breath of the white dragon that turn if you wish.
   - name: Burning Hands
     _type: Spell 1
     description: |-
@@ -317,7 +318,8 @@ abilities:
       - tier: adventurer
         description: When you miss with burning hands, you deal fire damage to the target equal to each damage die that rolled its maximum possible result.
       - tier: champion
-        description: When you roll a natural 18+ with a burning hands attack roll, you can choose another nearby target for the spell. The new target doesn’t have to be part of the original group.
+        description: When you roll a natural 18+ with a burning hands attack roll, you can choose another nearby target for the spell.
+        The new target doesn’t have to be part of the original group.
       - tier: epic
         description: You can now target each enemy engaged with you with your burning hands spell in addition to any other targets.
   - name: Chaos Bolt
@@ -327,7 +329,8 @@ abilities:
 
       ---
 
-      **Special:** The first time you use chaos bolt each battle, determine a random energy type. The spell deals that type of damage each time you use it that battle.
+      **Special:** The first time you use chaos bolt each battle, determine a random energy type.
+      The spell deals that type of damage each time you use it that battle.
 
       **Target:** Either a single nearby enemy or a single far away enemy with a –2 attack penalty
 
@@ -348,7 +351,8 @@ abilities:
       - tier: adventurer
         description: You don’t take the –2 penalty for attacking a far away enemy with the spell.
       - tier: champion
-        description: If you are a champion-tier sorcerer, roll any chaotic benefit gained with this spell on the epic chaotic benefits table. If you are an epic-tier sorcerer, choose the epic chaotic benefit you want instead of rolling.
+        description: If you are a champion-tier sorcerer, roll any chaotic benefit gained with this spell on the epic chaotic benefits table.
+        If you are an epic-tier sorcerer, choose the epic chaotic benefit you want instead of rolling.
   - name: Lightning Fork
     _type: Spell 1
     description: |-
@@ -427,21 +431,99 @@ abilities:
       - tier: adventurer
         description: You can now use the spell against a far away target, but with a –2 attack penalty.
       - tier: champion
-        description: Each time you cast the spell, you can have the attack deal random energy damage instead of fire damage. Replace the fire entry on the random energy table with your choice of negative energy or acid.
+        description: Each time you cast the spell, you can have the attack deal random energy damage instead of fire damage.
+        Replace the fire entry on the random energy table with your choice of negative energy or acid.
       - tier: epic
         description: You don’t take the –2 penalty for attacking a far away enemy with the spell.
   - name: Breath of the Green
     _type: Spell 3
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      ---
+
+      **Target:** 1d4 nearby enemies in a group; breath weapon
+
+      **Attack:** Charisma + Level vs. PD
+
+      **Hit:** 15 + Charisma ongoing poison damage.
+
+      **Miss:** 5 ongoing poison damage.
+
+      5th level spell: 25 + Charisma ongoing poison damage; 10 ongoing on a miss.
+
+      7th level spell: 35 + Charisma ongoing poison damage; 15 ongoing on a miss.
+
+      9th level spell: 50 + Charisma ongoing poison damage; 25 ongoing on a miss.
+
+      _Breath Weapon:_ For the rest of the battle, roll a d20 at the start of each of your turns; on a 16+, you can use breath of the green that turn if you wish.
   - name: Chaos Pulse
     _type: Spell 3
-    description: null
+    description: |-
+      Ranged spell; At-Will
+
+      ---
+
+      **Target:** One random nearby enemy
+
+      **Attack:** Charisma + Level vs. PD
+
+      **Hit:** 3d10 + Charisma random energy damage.
+
+      **Even Miss:** Half damage.
+
+      **Odd Miss:** Damage equal to your level.
+
+      5th level spell: 5d10 damage.
+
+      7th level spell: 7d10 damage.
+
+      9th level spell: 9d10 damage.
   - name: Dragon's Leap
     _type: Spell 3
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      Quick action to cast
+
+      ---
+
+      **Target:** You; breath weapon
+
+      **Effect:** You can fly at the rate you normally move until the end of your turn. (So if you don’t land or find someplace to hang from, you’ll fall.)
+
+      5th level spell: You can now fly until the end of your next turn.
+
+      7th level spell: You can now fly twice as fast as you normally move on the ground. You also gain a +5 bonus to disengage checks.
+
+      9th level spell: The spell is now recharge 16+ after battle instead of daily.
+
+      _Breath Weapon:_ For the rest of the battle, roll a d20 at the start of each of your turns; on a 16+, you can use dragon’s leap this turn if you wish.
+      (Yeah, we know it’s not actually a breath weapon, but it works as part of the draconic sorcerer package.)
   - name: Echoing Thunder
     _type: Spell 3
-    description: null
+    description: |-
+      Ranged spell; At-Will
+
+      **Target:** One nearby enemy
+
+      **Attack:** Charisma + Level vs. PD
+
+      **Hit:** 3d6 + Charisma thunder damage, and the first enemy that hits you with a melee attack before the start of your next turn takes 2d6 thunder damage.
+      (An empowered spell does not double this aftershock damage.)
+
+      **Miss:** Damage equal to your level.
+
+      5th level spell: 5d6 damage; 2d6 aftershock damage.
+
+      7th level spell: 7d6 damage; 3d6 aftershock damage.
+
+      9th level spell: 9d6 damage; 4d6 aftershock damage.
+    feats:
+      - tier: champion
+        description: The spell’s aftershock damage is now also doubled when echoing thunder is empowered.
   - name: Breath of the Beast
     _type: Spell 5
     description: null
