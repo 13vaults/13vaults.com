@@ -17,8 +17,8 @@ export default function VaultLayout({
   navigation,
   sideNavigation,
 }: VaultLayoutP) {
-  const handleScrollToTop = useCallback((e: any) => {
-    e.preventDefault();
+  const handleScrollToTop = useCallback((event: any) => {
+    event.preventDefault();
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -39,9 +39,9 @@ export default function VaultLayout({
         <Container className="grid grid-cols-1 gap-6 xl:grid-cols-12 relative">
           <aside
             key={
-              typeof window !== "undefined"
-                ? window.location.pathname
-                : undefined
+              typeof window === "undefined"
+                ? undefined
+                : window.location.pathname
             }
             className="static xl:col-start-1 xl:col-end-4"
           >
@@ -56,7 +56,7 @@ export default function VaultLayout({
                          prose-blockquote:border-teal-500 prose-blockquote:bg-white dark:prose-blockquote:bg-stone-800
                          dark:prose-blockquote:text-white prose-blockquote:font-serif prose-blockquote:shadow-md prose-h2:text-2xl lg:prose-h2:text-3xl
                          prose-th:font-display prose-th:font-medium prose-h2:border-b-2 prose-h2:border-stone-300 dark:prose-h2:border-stone-600
-                         prose-th:p-2 prose-thead:shadow-sm prose-th:align-bottom prose-thead:bg-white dark:prose-thead:bg-stone-700
+                         prose-th:p-2 prose-thead:shadow-sm prose-th:align-bottom prose-thead:bg-white dark:prose-thead:bg-stone-700 prose-table:whitespace-nowrap
                          prose-blockquote:pr-6 dark:prose-invert dark:prose-tr:border-stone-800 dark:prose-thead:border-stone-900 prose-lead:text-stone-700 dark:prose-lead:text-stone-200
                          prose-teal prose-table:bg-stone-50 dark:prose-table:bg-stone-800 prose-td:px-2 even:prose-tr:bg-stone-100 dark:even:prose-tr:bg-stone-900"
             >
