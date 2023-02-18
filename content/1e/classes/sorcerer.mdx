@@ -4,22 +4,66 @@ source: 13th Age, p.132
 abilities:
   - name: Melee Attack
     _type: Basic Attack
-    description: null
+    description: |-
+      At-Will
+
+      ---
+
+      **Target:** One enemy
+
+      **Attack:** Strength + Level vs. AC
+
+      **Hit:** WEAPON + Strength damage
+
+      **Miss:** Damage equal to your level
   - name: Ranged Attack
     _type: Basic Attack
-    description: null
+    description: |-
+      At-Will
+
+      ---
+
+      **Target:** One enemy
+
+      **Attack:** Dexterity + Level vs. AC
+
+      **Hit:** WEAPON + Dexterity damage
+
+      **Miss:** —
   - name: Access to Wizardry
     _type: Class Feature
-    description: null
+    description: Starting at 3rd level, you can take a wizard spell in place of a sorcerer spell. The wizard spell must be two levels lower than the sorcerer spell.
   - name: Breath Weapon
     _type: Class Feature
-    description: null
+    description: |-
+      Spells with the breath weapon keyword have a chance to be re-used during battle.
+      Each breath weapon spell lists the chance of re-using it (usually 16+).
+      At the start of each round after you’ve cast the breath weapon spell, make the re-use roll.
+      Success indicates that you may re-use that spell as a standard action, but for that round only.
+      If you fail the re-use roll, you don’t have the option to re-use the spell, but you get another chance at the beginning of the next round.
+
+      The breath weapon power lasts for a single battle only.
+
+      You can have only one breath weapon spell active at a time.
+      If you cast a different breath weapon spell when you have an earlier spell active, the new spell cancels the earlier spell.
+      (See the Chromatic Destroyer Heritage talent for the path to multiple breath weapon spells.)
+
+      Failing a death save cancels any breath weapon spells you have active.
+    feats:
+      - tier: adventurer
+        description: Failing a death save no longer cancels your breath weapon spells. Keep rolling the entire battle.
   - name: Chain
     _type: Class Feature
-    description: null
+    description: |-
+      When you attack with a chain spell and get a natural even roll, you can roll another attack against a different enemy within range.
+      Keep on rolling attacks as long as you get even rolls and don’t run out of new targets.
+      Each enemy can be targeted only once.
   - name: Dancing Lights
     _type: Class Feature
-    description: null
+    description: |-
+      All sorcerers can cast the dancing lights spell as a standard action.
+      Unlike the wizard’s light cantrip, the sorcerer’s dancing lights spell produces a number of varicolored light globes that bloom within 5 to 30 feet of the sorcerer every two to five seconds.
+      The sorcerer has very little control over the exact location or illumination provided by the lights, meaning that they can occasionally be used for dramatic plot purposes.
   - name: Gather Power
     _type: Class Feature
     description: |-
