@@ -34,7 +34,7 @@ export default function AbilityList({
       )}
     >
       {map(abilities, (ability) => (
-        <div role="listitem" key={ability.name}>
+        <div role="listitem" key={ability.name} className="overflow-x-scroll">
           <AbilityItem ability={ability} />
         </div>
       ))}
@@ -72,8 +72,13 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
               remarkPlugins={[remarkGfm]}
               skipHtml
               components={{
-                a: ({ href, ...properties }) => (
+                a: ({ node, href, ...properties }) => (
                   <Link href={href || "#"} {...properties} />
+                ),
+                table: ({ node, ...properties }: any) => (
+                  <div className="overflow-auto border dark:border-stone-700 rounded shadow bg-white dark:bg-stone-700 border-stone-300 my-2">
+                    <table {...properties} />
+                  </div>
                 ),
               }}
             >
