@@ -66,77 +66,482 @@ abilities:
         description: You can cast full rituals by using all your actions each round to focus on the ritual for 1d3 + 1 rounds. As with standard rituals, your fast rituals are not meant to replace combat spells; they’re a means of acquiring and improvising wondrous magical effects rather than a means of inflicting damage and conditions.
   - name: Abjuration
     _type: Talent
-    description: null
+    description: Whenever you cast a daily wizard spell, you gain a +4 AC bonus until the end of your next turn.
+    feats:
+      - tier: adventurer
+        description: The bonus also applies to your Physical Defense.
+      - tier: champion
+        description: You gain 2d12 temporary hit points each time you cast a daily spell.
+      - tier: epic
+        description: The bonus also applies to Mental Defense.
   - name: Cantrip Mastery
     _type: Talent
-    description: null
-  - name: Destiny Manipulation
-    _type: Talent
-    description: null
+    description: |-
+      Cantrips are at-will spells for you.
+
+      Unlike normal wizards, who use a standard action to cast a cantrip, you can cast a cantrip as a quick action.
+
+      To do something particularly cunning or surprising with one of your cantrips where the GM isn’t sure whether you could pull off that use of the spell, roll a normal save (11+) to cast the spell the way you envision it.
+
+      Additionally, you can expend a 3rd level spell slot or higher to choose one cantrip per spell slot you have given up and create a once-per-day related effect with it that is much greater, if you and your GM can agree on a cool effect that suits the cantrip.
+
+      The Cantrip Mastery talent is more about enhance the roleplaying and less about combat usefulness.
+    feats:
+      - tier: adventurer
+        description: You can use cantrip-style versions of any wizard spell you have memorized. When you expend a spell, however, you can’t make cantrip-style use of it any more. The key is that none of these uses should be combat relevant or deal damage.
   - name: Evocation
     _type: Talent
-    description: null
+    description: |-
+      Once per battle, when you cast a spell that targets Physical Defense, before rolling for the number of targets or making the spell’s attack roll, you can expend your quick action to evoke the spell.
+      Hit or miss, you’ll max out the spell’s damage dice (except on a natural one, which deals no damage to the target and likely damages the caster in some manner).
+    feats:
+      - tier: champion
+        description: Whenever you evoke a spell, you can reroll one of the attack rolls if that natural roll was less than or equal to the escalation die. You must take the new result.
   - name: High Arcana
     _type: Talent
-    description: null
-  - name: Necroblast
-    _type: Talent
-    description: null
+    description: |-
+      Your study of the highest orders of magic gives you options that lesser wizards cannot match: Memorization and a bonus spell: counter-magic
+
+      ### Memorization
+
+      When you pick your spells, you can choose any daily wizard spell twice (instead of once). This doesn’t apply to spells that start as recharge spells. For example, at 7th level when you have five 7th level spells and four 5th level spells, you could choose fireball twice as a 7th level spell, or once as a 7th level spell and once as a 5th level spell. (Your 3rd level spell slot can’t be used for fireball because fireball starts as a 5th level spell.)
+
+      ### Counter-magic
+
+      Close-quarters spell
+
+      Once per battle
+
+      Free action to cast
+
+      ---
+
+      **Trigger:** A nearby creature you can see casts a spell.
+
+      **Target:** The nearby creature casting a spell.
+
+      **Attack:** Intelligence + Level vs. MD
+
+      **Hit:** The target’s spell is canceled, and the caster loses the action they were using for the spell. If the spell had a limited use, that use is expended if your natural attack roll is even.
+    feats:
+      - tier: champion
+        description: You can now cast counter-magic twice per battle.
+      - tier: epic
+        description: You can now cast counter-magic in reaction to a creature using any magical ability, not just casting a spell.
   - name: Polysyllabic Verbalizations
     _type: Talent
-    description: null
+    description: |-
+      Rename each of your daily and recharge spells. Think up the most over-the-top and extravagant names you can muster. Since these alternate spells are so lengthy, they take an additional quick action to cast. While the regular effects of the spells are the same as the more common versions, they have a small bonus effect appropriate to the situation.
+
+      The bonus effect is determined by the GM, or by a collaboration between the GM and the player. It should add to the storytelling power of the situation.
+
+      The bonus effect should suit the name of the spell or the way it’s delivered, and shouldn’t precisely match up with what the spell normally accomplishes.
   - name: Wizard's Familiar
     _type: Talent
-    description: null
+    description: |-
+      Your familiar is a tiny or small animal or creature that aids your magic and provides companionship. It also provides opportunities for improvisation between you and the GM.
+
+      Your familiar is as intelligent as a normal person. It can communicate with you and will stay close you unless you’ve chosen abilities that let it roam. Your familiar is on your side but it’s not perfectly in your control.
+
+      If your familiar dies, it can come back to you the next time you get a full heal-up. (The method or story used is between you and the GM.) Alternatively, you can get a new familiar.
+
+      Familiars are useless in combat, except as indicated by their abilities. Ordinarily they aren’t damaged by enemy attacks and spells unless the story calls for it.
+
+      ### Familiar Abilities
+
+      Choose two of the following abilities for your familiar.
+
+      #### Agile
+
+      You gain a +2 bonus to Dexterity skill checks.
+
+      #### Alert, Maybe Even Insightful
+
+      You gain a +2 bonus to Wisdom skill checks.
+
+      #### Counter-bite
+
+      Each battle, if your familiar is close to you, it bites the first enemy that hits you with a melee attack after that attack, dealing 1d4 damage per level (no attack roll) to that enemy.
+
+      #### Flight
+
+      Your familiar flies as well as a hawk. It doesn’t fly that often and usually sticks with you, but it can do so when its other abilities allow.
+
+      #### Mimic
+
+      One battle per day, you gain the use of the racial power (without feats) of one nearby ally.
+
+      #### Poisonous
+
+      Once per battle, when you hit an enemy engaged with you, you can add 5 ongoing poison damage per tier to the damage roll.
+
+      #### Scout
+
+      Once per day, your familiar can separate itself from you and make a reconnaissance run of an area or location. Roll an easy skill check for the environment to get your familiar to scout unseen.
+
+      #### Tough
+
+      You gain a +1 save bonus. Tough counts as two familiar abilities.
+
+      #### Talkative
+
+      Your familiar can talk like a person (but the GM speaks for the familiar more than you do).
+    feats:
+      - tier: adventurer
+        description: Your familiar gains another ability.
+      - tier: champion
+        description: Once per level, if your familiar is close to you, it can cast one of your spells as a free action on your initiative count, even if you have already expended the spell. The spell functions as if you had cast it.
+      - tier: epic
+        description: Your familiar gains another ability.
   - name: Feat Tiers
+    feats:
+      - tier: adventurer
+        description: Each _utility spell_ you take lets you cast two spells from the available options instead of one.
+      - tier: champion
+        description: As above, but you can cast three _utility spells_ instead of one.
   - name: Disguise Self
     _type: Utility Spell 1
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      ---
+
+      **Effect:** This spell provides you with an effective magical disguise that lasts about ten minutes, making the skill check to avoid unmasking one step easier: easy if it would have been a normal task, normal if it would have been a hard task, and hard if it would have been a ridiculously hard task. The spell only affects your general appearance, not your size. It can be used to hide your features behind the generic features of another person or race. Using it to impersonate a specific creature makes it less effective as a disguise (-2 to -5 penalty).
+
+      3rd level spell: The spell lasts for 1 hour.
+
+      5th level spell: The spell also provides smell; +2 bonus to any checks.
+
+      7th level spell: The spell also handles correct-sounding vocal patterns and rough mannerisms; +4 bonus to any checks.
+
+      9th level spell: You can now target an ally with the spell; you can also now use it on up to two creatures at once.
   - name: Feather Fall
     _type: Utility Spell 1
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      Free action to cast
+
+      ---
+
+      **Effect:** When you cast this spell, it arrests your fall, letting you glide down the ground over a round or two.
+
+      3rd level spell: You can now target a nearby ally with the spell.
+
+      5th level spell: You can now target up to two nearby creatures with the spell.
+
+      7th level spell: You can now target up to five nearby creatures with the spell.
+
+      9th level spell: You gain some control over where a target falls, like a quickly gliding feather.
   - name: Hold Portal
     _type: Utility Spell 1
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Effect:** You cast this spell on a door. For ten minutes, adventurer-tier creatures can’t get through the door. Champion-tier creatures can batter it down; each attempt requires a DC 20 Intelligence skill check (including an applicable background) by the caster to resist the battering and keep the spell going. Epic-tier creatures can walk right through.
+
+      3rd level spell: The spell now lasts for an hour. Adventurer-tier creatures are stymied. Champion-tier creatures can batter the door down or destroy it after three failed DC 20 skill checks by the spellcaster. Epic creatures notice that the now-busted door had magic on it.
+
+      5th level spell: Champion-tier creatures take a few minutes to force the door open. Epic creatures can force it open after one failed DC 25 skill check by the spellcaster.
+
+      7th level spell: Champion-tier creatures are stymied for up to an hour by the door. Epic tier creatures get through after three failed DC 25 skill checks by the spellcaster.
+
+      9th level spell: Champion-tier creatures can’t enter. Epic-tier creatures can’t get through for an hour.
   - name: Levitate
     _type: Utility Spell 3
-    description: null
+    description: |-
+      Ranged spell
+
+      Daily
+
+      ---
+
+      **Effect:** Until the end of the battle, you can use a move action to rise straight up into the air or descend straight down. The spell itself won’t move you horizontally. The up-or-down movement is about half as fast as your normal movement. While levitating, you take a –2 penalty to your attacks and are vulnerable to attacks against you.
+
+      5th level spell: You can now cast the spell on a nearby willing ally instead of yourself.
+
+      7th level spell: You can now cast the spell as a quick action, and the spell can now affect two targets.
+
+      9th level spell: The spell can now affect five targets.
   - name: Message
     _type: Utility Spell 3
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      Quick action to cast
+
+      ---
+
+      **Effect:** You send a one to two sentence message to another person you know and have touched in the last week. Sending a message to a person you can see is always easy. Sending a message to a person you can’t see requires a skill check using Intelligence against the highest-tier environment that you or the sender are occupying.
+
+      The maximum distance you can send a message depends on the spell’s level.
+
+      3rd level spell: Across half a city, at most.
+
+      5th level spell: Across the entire city and a bit into the countryside.
+
+      7th level spell: Between cities near to each other.
+
+      9th level spell: From any city to any other city, or across a sea.
   - name: Speak with Item
     _type: Utility Spell 3
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      Quick action to cast
+
+      ---
+
+      **Effect:** Speak briefly, mind-to-mind, with a magic item you are touching that is owned by you or one of your allies. The item’s owner gets a free power recharge roll if that item’s power has been expended.
+
+      5th level spell: You no longer need to be touching the item; it only has to be nearby.
+
+      7th level spell: The item’s owner gains a +2 bonus to the item recharge roll.
+
+      9th level spell: If the item recharge roll fails, you keep this spell, but the item won’t talk to you until after your next full heal-up.
   - name: Water Breathing
     _type: Utility Spell 5
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      Quick action to cast
+
+      ---
+
+      **Effect:** You can breathe underwater for the rest of the battle (or about five minutes). You become aware a couple of rounds ahead of when the magic of the spell is about to end.
+
+      7th level spell: You and 1d4 + 2 nearby allies can breathe underwater this battle.
+
+      9th level spell: The spell affects you and 1d6 + 2 nearby allies for 4d6 hours.
   - name: Scrying
     _type: Utility Spell 7
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Effect:** You can use this spell to get information you shouldn’t be able to get, peering in on other people’s lives for a short period of time, usually no more than ten minutes at a time. Some areas may be warded at the GM’s discretion. You must have touched the person you wish to spy on in the last month, or, at 9th level, within the last a year.
+
+      Scrying as a single standard action won’t yield much. Concentrating on the spell for a while with props like a scrying pool or a crystal ball will work better.
   - name: Acid Arrow
     _type: Spell 1
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Target:** One nearby or far away creature
+
+      **Attack:** Intelligence + Level vs. PD
+
+      **Hit:** 4d10 acid damage, and 5 ongoing acid damage.
+
+      **Miss:** 5 ongoing acid damage, and you regain the spell during your next quick rest.
+
+      3rd level spell: 5d10 damage, and 10 ongoing damage; 10 ongoing on a miss.
+
+      5th level spell: 8d10 damage, and 15 ongoing damage; 15 ongoing on a miss.
+
+      7th level spell: 3d4 x 10 damage, and 25 ongoing damage; 25 ongoing on a miss.
+
+      9th level spell: 5d4 x 10 damage, and 40 ongoing damage; 40 ongoing on a miss.
   - name: Blur
     _type: Spell 1
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Target:** You or one nearby ally
+
+      **Effect:** For the rest of the battle (or for five minutes), attacks against the target miss 20% of the time.
+
+      3rd level spell: The spell is now a quick action to cast.
+
+      5th level spell: Miss 25% of the time.
+
+      7th level spell: Miss 30% of the time, and you can now target 1d2 creatures with the spell.
+
+      9th level spell: Miss 30% of the time, and you can now target two creatures with the spell.
   - name: Charm Person
     _type: Spell 1
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Target:** One nearby creature with 40 hp or fewer
+
+      **Special:** This spell cannot be cast during combat or on a target that has rolled initiative to fight.
+
+      **Attack:** Intelligence + Level vs. MD
+
+      **Hit:** The target believes you are their friend until you or your allies take hostile action against them. (Attacking their normal allies is okay.) If you or your allies attack the target or order the target to attack its normal allies, the target can roll a normal save to break the charm effect during its turn each round.
+
+      **Special:** On a miss, the spell is not detectible by most others unless you miss by 4+ or roll a natural 1, in which case the target and its allies knows what you tried to do and will usually be angry about it.
+
+      3rd level spell: Target with 64 hp or fewer.
+
+      5th level spell: Target with 96 hp or fewer.
+
+      7th level spell: Target with 160 hp or fewer.
+
+      9th level spell: Target with 266 hp or fewer.
   - name: Color Spray
     _type: Spell 1
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Cyclic (cast once per battle OR at-will when the escalation die is even)
+
+      ---
+
+      **Target:** 1d4 nearby enemies in a group
+
+      **Attack:** Intelligence + Level vs. MD
+
+      **Hit:** 2d8 psychic damage, and if the target has 10 hp or fewer after the damage, it is weakened until the end of your next turn.
+
+      3rd level spell: 4d6 damage, 20 hp or fewer.
+
+      5th level spell: 6d8 damage, 30 hp or fewer.
+
+      7th level spell: 10d6 damage, 40 hp or fewer.
+
+      9th level spell: 10d12 damage, 60 hp or fewer.
+    feats:
+      - tier: adventurer
+        description: Increase the hit point threshold of the weakened effect by 5 hp.
+      - tier: champion
+        description: On a miss, the spell deals damage equal to your level.
+      - tier: epic
+        description: The spell now targets 1d4 + 1 nearby enemies in a group.
   - name: Magic Missile
     _type: Spell 1
-    description: null
+    description: |-
+      Ranged spell; At-Will
+
+      ---
+
+      **Target:** One nearby or far away enemy.
+
+      **Attack:** Automatic hit
+
+      **Effect:** 2d4 force damage.
+
+      3rd level spell: 2d8 damage.
+
+      5th level spell: 4d6 damage.
+
+      7th level spell: 6d6 damage.
+
+      9th level spell: 10d6 damage.
+    feats:
+      - tier: adventurer
+        description: You can choose two targets; roll half the damage dice for one missile and half the damage dice for the other, then assign one set of damage dice to each of the two targets.
+      - tier: champion
+        description: Roll a d20 when you use the spell; if you roll a natural 20, the magic missile crits and deals double damage. (Rolling a 1 is not a fumble; this roll checks only to see if you can crit.)
+      - tier: epic
+        description: The 7th and 9th level versions of the spell now use d8s as damage dice.
   - name: Ray of Frost
     _type: Spell 1
-    description: null
+    description: |-
+      Ranged spell; At-Will
+
+      ---
+
+      **Target:** One nearby enemy
+
+      **Attack:** Intelligence + Level vs. PD
+
+      **Hit:** 3d6 cold damage
+
+      **Miss:** Damage equal to your level.
+
+      3rd level spell: 4d8 damage.
+
+      5th level spell: 6d8 damage.
+
+      7th level spell: 7d10 damage.
+
+      9th level spell: 10d12 damage.
+    feats:
+      - tier: adventurer
+        description: When your ray of frost attack roll is a natural even hit, if the target is staggered after taking the damage, it is also dazed until the end of your next turn.
+      - tier: champion
+        description: The target of the spell can also be far away.
+      - tier: epic
+        description: When you cast the spell you can change the damage type to lightning or negative energy.
   - name: Shield
     _type: Spell 1
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      **Recharge:** 11+ after battle
+
+      Free action to cast, when an attack hits your AC.
+
+      ---
+
+      **Effect:** The attacker must reroll the attack. You must accept the new result.
+
+      3rd level spell: You gain a +2 AC bonus against the rerolled attack.
+
+      5th level spell: You can also use the spell against attacks that target your Physical Defense; replace references to AC with PD.
+
+      7th level spell: The bonus to AC/PD on the rerolled attack increases to +4.
+
+      9th level spell: The bonus to AC/PD on the rerolled attack increases to +6.
+    feats:
+      - tier: adventurer
+        description: You can now choose either of the attack rolls, in case the second one crits or is otherwise bad for you.
+      - tier: champion
+        description: Recharge roll after battle is now 6+.
+      - tier: epic
+        description: Hit or miss, you take only half damage from any attack you use shield against.
   - name: Shocking Grasp
     _type: Spell 1
-    description: null
+    description: |-
+      Range: Close-quarters spell
+
+      At-Will
+
+      ---
+
+      **Target:** One creature engaged with you
+
+      **Attack:** Intelligence + Level vs. PD
+
+      **Hit:** 1d4 lightning damage, and the target pops free from you.
+
+      **Miss:** You take damage equal to the target’s level from botched feedback.
+
+      3rd level spell: 1d6 damage.
+
+      5th level spell: 2d6 damage.
+
+      7th level spell: 3d6 damage.
+
+      9th level spell: 4d6 damage.
+    feats:
+      - tier: adventurer
+        description: The spell now requires only a quick action to cast (once per round).
+      - tier: champion
+        description: Once per battle, when you hit the target of the spell, you can also daze it until the end of your next turn.
+      - tier: epic
+        description: The damage dice of the spell increase to d8s.
   - name: Confusion
     _type: Spell 3
     description: null
