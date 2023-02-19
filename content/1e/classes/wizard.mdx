@@ -746,16 +746,88 @@ abilities:
         description: You can now teleport the enemy somewhere far away that you can see; other restrictions still apply.
   - name: Denial
     _type: Spell 5
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Target:** 1d4 nearby enemies in a group
+
+      **Attack:** Intelligence + Level vs. MD
+
+      **Hit:** 9d10 psychic damage, and the target is hampered until the end of your next turn.
+
+      **Miss:** Half damage.
+
+      7th level spell: 3d4 x 10 damage.
+
+      9th level spell: 3d6 x 10 damage.
+    feats:
+      - tier: champion
+        description: When you roll a natural even miss with the spell, the target is also hampered until the end of your next turn.
+      - tier: epic
+        description: Increase the number of targets to 1d4 + 1.
   - name: Dimension Door
     _type: Spell 5
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Move action to cast
+
+      Daily
+
+      ---
+
+      **Target:** You
+
+      **Effect:** You teleport somewhere nearby that you can see.
+
+      7th level spell: Your destination can now be far away, but not so far that it is out of range of enemy attacks that can hit far away targets.
+
+      9th level spell: You can take one ally who is next to you along with you as you teleport.
   - name: Fireball
     _type: Spell 5
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Special:** When you cast this spell, you can choose to cast it recklessly.
+
+      **Target:** 1d3 nearby enemies in a group. If you cast recklessly, you can target 1d3 additional enemies, but then your allies engaged with the target may also take damage (see below).
+
+      **Attack:** Intelligence + Level vs. PD
+
+      **Hit:** 10d10 fire damage.
+
+      **Miss:** Half damage.
+
+      Reckless miss: Your allies engaged with the target take one-fourth damage.
+
+      7th level spell 12d10 damage.
+
+      9th level spell 20d10 damage.
+    feats:
+      - tier: champion
+        description: Casting the spell recklessly increases the number of additional targets to 1d4 instead of 1d3.
+      - tier: epic
+        description: Increase the number of targets to 1d3 + 1 instead of 1d3.
   - name: Invisibility
     _type: Spell 5
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Target:** You or one nearby ally
+
+      **Effect:** Until the end of the battle (or for five minutes out of combat), the target becomes invisible until it attacks or uses some ridiculously flashy action.
+
+      **High Arcana:** The duration out of combat is 1 hour instead.
+
+      7th level spell: You can now target 1d3 nearby allies (including you) with the spell.
+
+      9th level spell: Creatures made invisible by the spell have a 25% chance of remaining invisible the first time (and first time only) they attack or get flashy.
   - name: Blink
     _type: Spell 7
     description: null
