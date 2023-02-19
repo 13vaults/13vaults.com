@@ -28,6 +28,7 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     scrollRestoration: true,
+    largePageDataBytes: 256 * 1024,
   },
 };
 
