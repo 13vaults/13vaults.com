@@ -544,28 +544,206 @@ abilities:
         description: The damage dice of the spell increase to d8s.
   - name: Confusion
     _type: Spell 3
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Target:** One nearby enemy with 100 hp or fewer
+
+      **Attack:** Intelligence + Level vs. MD
+
+      **Hit:** The target is confused (save ends).
+
+      **Miss:** If you miss all targets, you regain this spell during your next quick rest.
+
+      5th level spell: Target with 160 hp or fewer, and the target can be far away.
+
+      7th level spell: Target with 250 hp or fewer, or two targets each with 125 hp or fewer.
+
+      9th level spell: Target with 500 hp or fewer, or two targets each with 250 hp or fewer.
+    feats:
+      - tier: adventurer
+        description: On a miss against all targets with this spell, you can choose to daze those targets (save ends). If you do, you do not regain the spell.
+      - tier: champion
+        description: Each failed save against the spell deals 6d10 psychic damage to the target.
+      - tier: epic
+        description: The save against confused is now a difficult save (16+).
   - name: Crescendo
     _type: Spell 3
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      At-Will
+
+      ---
+
+      **Target:** One or more enemies engaged with you (but see below)
+
+      **Special:** You can choose more than one target for this spell, but you take a –2 penalty when attacking two targets, a –3 penalty for three targets, and so on.
+
+      **Attack:** Intelligence + Level vs. PD
+
+      **Hit:** 4d6 thunder damage, and the target pops free from you.
+
+      **Miss:** Damage equal to your level.
+
+      5th level spell: 4d12 damage.
+
+      7th level spell: 7d10 damage.
+
+      9th level spell: 10d12 damage.
   - name: Force Salvo
     _type: Spell 3
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Targets:** One or more nearby or far away enemies (see below)
+
+      **Special:** The spell creates a number of force bolts equal to 1 + your Intelligence modifier. You must target a different creature with each bolt; any extras can’t be used.
+
+      **Attack:** Intelligence + Level vs. PD
+
+      **Hit:** 4d10 force damage.
+
+      5th level spell: 7d10 damage.
+
+      7th level spell: 10d12 damage.
+
+      9th level spell: 3d6 x 10 damage.
+    feats:
+      - tier: adventurer
+        description: You can now target a specific creature with more than one bolt. Once you hit that target, you must target a different creature, and so on. (Roll your attack after each bolt before picking a target for the next bolt.)
+      - tier: champion
+        description: On a miss, a bolt now deals miss damage equal to your level.
+      - tier: epic
+        description: Increase the number of bolts by 1.
   - name: Hold Monster
     _type: Spell 3
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Target:** One nearby enemy with 60 hp or fewer
+
+      **Attack:** Intelligence + Level vs. MD
+
+      **Hit:** The target cannot move or use move actions (hard save ends, 16+).
+
+      **Miss:** The target is dazed until the end of your next turn.
+
+      5th level spell: Target with 100 hp or fewer.
+
+      7th level spell: Target with 160 hp or fewer.
+
+      9th level spell: Target with 250 hp or fewer.
+    feats:
+      - tier: adventurer
+        description: If the spell misses all targets, you regain the spell during your next quick rest.
+      - tier: champion
+        description: The spell can target up to 2 nearby enemies whose total hit points don’t exceed the limit.
+      - tier: epic
+        description: Increase the limit by +50 hp.
   - name: Lightning Bolt
     _type: Spell 3
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      ---
+
+      **Targets:** 1d3 + 1 nearby enemies in a group or in a (rough) line
+
+      **Attack:** Intelligence + Level vs. PD
+
+      **Hit:** 7d8 lightning damage.
+
+      **Miss:** Half damage.
+
+      5th level spell: 10d10 damage.
+
+      7th level spell: 2d8 x 10 damage.
+
+      9th level spell: 3d8 x 10 damage.
+    feats:
+      - tier: champion
+        description: A natural even hit also deals 10 ongoing lightning damage.
+      - tier: epic
+        description: A natural even hit now deals 20 ongoing lightning damage (hard save ends, 16+).
   - name: Rebuke
     _type: Spell 3
-    description: null
+    description: |-
+      Ranged spell; Cyclic (once per battle OR at-will when the escalation die is even)
+
+      ---
+
+      **Target:** One nearby enemy with 100 hp or fewer
+
+      **Attack:** Intelligence + Level vs. MD
+
+      **Hit:** The target is hampered (only makes basic attacks) until the end of your next turn.
+
+      5th level spell: Target with 160 hp or fewer.
+
+      7th level spell: Target with 266 hp or fewer.
+
+      9th level spell: Target with 400 hp or fewer.
+    feats:
+      - tier: adventurer
+        description: When you roll a natural even hit with the spell, you also deal psychic damage equal to double your level to the target.
+      - tier: champion
+        description: When you hit the target with the spell, you also daze it until the end of your next turn.
+      - tier: epic
+        description: When you roll a natural even miss against the target, you daze it until the end of your next turn.
   - name: Sleep
     _type: Spell 3
-    description: null
+    description: |-
+      Ranged spell; Daily
+
+      ---
+
+      **Target:** Before making the attack, roll 3d20 + 45 to determine the maximum number of hit points of enemies you can target with the spell. The spell can affect multiple enemies. You must target nearby enemies with the current lowest hit points first, and you don’t get to choose the exact targets (except in the case of ties). If adding a creature would exceed the spell’s hit point maximum, that enemy can’t be a target.
+
+      **Attack:** Intelligence + Level vs. MD
+
+      **Hit:** The target falls unconscious (hard save ends, 16+; it also ends if the target takes 10+ damage).
+
+      **Miss:** The target is dazed until the end of your next turn.
+
+      5th level spell: Targets 5d20 +50 max hp.
+
+      7th level spell: Targets 7d20 + 100 max hp.
+
+      9th level spell: Targets 9d20 + 200 max hp
   - name: Teleport Shield
     _type: Spell 3
-    description: null
+    description: |-
+      **Range:** Close-quarters spell
+
+      Daily
+
+      ---
+
+      **Always:** For the rest of the battle, once per round when an enemy moves to engage you, you can make the following attack against it as a free action before it has the chance to attack in melee.
+
+      **Attack:** Intelligence + Level vs. PD
+
+      **Hit:** Teleport the enemy somewhere nearby you can see. You can place them in combat with one of your allies, but you can’t place them in a dangerous location. (It’s a defensive tool).
+
+      5th level spell: The teleported enemy also takes 4d10 damage.
+
+      7th level spell: 6d10 damage.
+
+      9th level spell: 10d10 damage.
+    feats:
+      - tier: champion
+        description: When your teleport shield attack misses, the spell’s attack is not expended that round.
+      - tier: epic
+        description: You can now teleport the enemy somewhere far away that you can see; other restrictions still apply.
   - name: Denial
     _type: Spell 5
     description: null
