@@ -1,6 +1,26 @@
 ---
-name: Tieflings/Demontouched
+name: Tiefling
 source: 13th Age, p.72
+page_dress:
+  quote:
+    text: |-
+      Many histories would have you believe that Tieflings are simply humans who made a deal with dark powers, but the truth is far more complicated than that;
+      the blood of demons runs through their veins, and their power comes from an ancient and mysterious source that we have yet to fully understand.
+    cite: |
+      "Lore of the Planes: A Comprehensive Study of the Multiverse" - by Valeria Zephyrus, Master Scholar of the Arcane and a caretaker of the 13 Vaults, circa 13a.38
+  lead: Born with the blood of infernal heritage, Tieflings are granted chaotic power which often makes them distrusted by those around them.
+abilities:
+  - name: Curse of Chaos
+    _type: Racial Power
+    description: |-
+      Once per battle as a free action when a nearby enemy rolls a natural 1–5 on an attack or a save, turn their roll into a natural 1 and improvise a further curse that shows how their attempt backfires horribly.
+
+      A curse should have about the same impact as a typical once-per-battle ability.
+      For example, a typical curse might lead to the cursed attacker dealing half damage to themself with their fumbled attack and being dazed until the end of their next turn.
+      The GM may reward storytelling flair and/or limit the suggested effects of the curse.
+    feats:
+      - tier: champion
+        description: Whenever a nearby enemy rolls a natural 1 on an attack against you, you can use curse of chaos against them without expending it.
 ---
 
 ## Racial Bonus
@@ -9,24 +29,4 @@ source: 13th Age, p.72
 
 ## Racial Powers
 
-### Curse of Chaos
-
-Once per battle as a free action when a nearby enemy rolls a natural 1–5 on an attack or a save, turn their roll into a natural 1 and improvise a further curse that shows how their attempt backfires horribly.
-
-A curse should have about the same impact as a typical once-per-battle ability.
-For example, a typical curse might lead to the cursed attacker dealing half damage to themself with their fumbled attack and being dazed until the end of their next turn.
-The GM may reward storytelling flair and/or limit the suggested effects of the curse.
-
-<Vault.CompendiumFeats
-  feats={[
-    {
-      tier: "champion",
-      text: (
-        <>
-          Whenever a nearby enemy rolls a natural 1 on an attack against you,
-          you can use curse of chaos against them without expending it.
-        </>
-      ),
-    },
-  ]}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />

@@ -1,6 +1,23 @@
 ---
 name: Half-Orc
 source: 13th Age, p.65
+page_dress:
+  quote:
+    text: |
+      As I lay on the ground, beaten and bruised, I looked up to see 'im standin over me.
+      I had always heard they were brutish and cruel, but he was the one who saved my life that day, and I learned to never judge someone based on rumors and hearsay.
+    cite: Edith Alderly, during an interview of survivors in the aftermath of a dragon attack, circa 13a.42
+  lead: Not necessarily the offspring of orcs and humans, but rather a distinct species of their own, they boast exceptional endurance and strength to keep on fighting in the heat of battle.
+abilities:
+  - name: Lethal
+    _type: Racial Power
+    description: |-
+      Once per battle, reroll a melee attack and use the roll you prefer as the result.
+
+      Note that you can't use this ability if the attack drops you to 0 hp or below. You've got to be on your feet to sneer at their attack and recover.
+    feats:
+      - tier: champion
+        description: If the lethal attack reroll is a natural 16+, you can use _lethal_ again later this battle.
 ---
 
 ## Racial Bonus
@@ -9,22 +26,4 @@ source: 13th Age, p.65
 
 ## Racial Powers
 
-### Lethal
-
-Once per battle, reroll a melee attack and use the roll you prefer as the result.
-
-Note that you can't use this ability if the attack drops you to 0 hp or below. You've got to be on your feet to sneer at their attack and recover.
-
-<Vault.CompendiumFeats
-  feats={[
-    {
-      tier: "champion",
-      text: (
-        <>
-          If the lethal attack reroll is a natural 16+, you can use{" "}
-          <em>lethal</em> again later this battle.
-        </>
-      ),
-    },
-  ]}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />

@@ -1,8 +1,14 @@
 ---
 name: Dark Elf
 source: 13th Age, p.66
+page_dress:
+  quote:
+    text: Those who think all Dark Elves are deceitful and treacherous have never met my friend, Valtor. He's as loyal and true as any dwarf, and twice as skilled with a blade.
+    cite: A speech given by the legendary paladin Sir Roland during his retirement banquet, sometime during the 11th age.
+  lead: An agile and quick-witted elven folk known for their mastery of swords.
 abilities:
   - name: Cruel
+    _type: Racial Power
     description: |-
       Once per battle, deal ongoing damage to a target you hit with a natural even attack roll as a free action.
       The ongoing damage equals 5 times your level.
@@ -17,6 +23,7 @@ abilities:
           damage per level against an enemy you miss or that you roll a natural
           odd attack against.
   - name: Heritage of the Sword (Elf)
+    _type: Racial Feat
     feats:
       - tier: adventurer
         description: |-
@@ -31,10 +38,8 @@ abilities:
 
 ## Racial Powers
 
-<Vault.AbilityList abilities={props.getAbilities(["Cruel"])} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />
 
 ## Racial Feats
 
-<Vault.AbilityList
-  abilities={props.getAbilities(["Heritage of the Sword (Elf)"])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Feat")} />

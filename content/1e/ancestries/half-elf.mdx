@@ -1,6 +1,29 @@
 ---
 name: Half-Elf
 source: 13th Age, p.69
+page_dress:
+  quote:
+    text: Half-elves may be the children of two worlds, but in their own right, they are a unique creation that embodies the best of both human and elven races--and they'll always find a way to astonish you.
+    cite: |
+      "Observations on Half-Elves," by Scholar Hestia Windrider, a caretaker of the 13 Vaults, circa 13a.52
+abilities:
+  - name: Surprising
+    _type: Racial Power
+    description: |-
+      Once per battle, subtract one from the natural result of one of your own d20 rolls.
+    feats:
+      - tier: champion
+        description: You gain an additional use of surprising each battle, but you can only use it to affect a nearby ally's d20 roll.
+  - name: Heritage of the Sword (Elf)
+    _type: Racial Feat
+    feats:
+      - tier: champion
+        description: |-
+          If you can already use swords that deal d6 and d8 damage without
+          attack penalties, you gain a +2 damage bonus with them. (This bonus
+          doesn't increase miss damage.) Otherwise, if your class would
+          ordinarily have an attack penalty with such swords, you can now use
+          them without penalties.
 ---
 
 ## Racial Bonus
@@ -9,41 +32,8 @@ source: 13th Age, p.69
 
 ## Racial Powers
 
-### Surprising
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />
 
-Once per battle, subtract one from the natural result of one of your own d20 rolls.
+## Racial Feats
 
-<Vault.CompendiumFeats
-  feats={[
-    {
-      tier: "champion",
-      text: (
-        <>
-          You gain an additional use of surprising each battle, but you can only
-          use it to affect a nearby ally's d20 roll.
-        </>
-      ),
-    },
-  ]}
-/>
-
-## Racial feats
-
-### Heritage of the Sword (Elf)
-
-<Vault.CompendiumFeats
-  feats={[
-    {
-      tier: "adventurer",
-      text: (
-        <>
-          If you can already use swords that deal d6 and d8 damage without
-          attack penalties, you gain a +2 damage bonus with them. (This bonus
-          doesn't increase miss damage.) Otherwise, if your class would
-          ordinarily have an attack penalty with such swords, you can now use
-          them without penalties.
-        </>
-      ),
-    },
-  ]}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Feat")} />

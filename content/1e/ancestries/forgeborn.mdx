@@ -1,6 +1,25 @@
 ---
-name: Forgeborn/Dwarf-forged
+name: Forgeborn
 source: 13th Age, p.72
+page_dress:
+  quote:
+    text: |-
+      As I stood there, watching the flames of the forge roar higher and higher,
+      I knew that something wondrous was about to happen - and then, with a burst of heat and light,
+      the first Forgeborn was made, its body gleaming like the very metal it was made from.
+    cite: Kragdum Stonefist, "The Creation of the Forgeborn," The Annals of Dwarven History, vol. 2, pp. 25-27, first published during the 7th age.
+  lead: |-
+    Constructs of metal and magic created by the Dwarves long ago with the intent of using them as loyal servants, Forgeborn are a danger to those who desire to harm the ones they protect.
+abilities:
+  - name: Never Say Die
+    _type: Racial Power
+    description: |-
+      Whenever you drop to 0 hp or below, roll a normal save if you have a recovery available.
+      On an 11+, instead of falling unconscious, you stay on your feet and can heal using a recovery.
+      Add the recovery hit points to 0 hp to determine your hp total.
+    feats:
+      - tier: champion
+        description: If you roll a 16+ on your _never-say-die_ save, you gain an additional standard action during your next turn.
 ---
 
 ## Racial Bonus
@@ -9,22 +28,4 @@ source: 13th Age, p.72
 
 ## Racial Powers
 
-### Never Say Die
-
-Whenever you drop to 0 hp or below, roll a normal save if you have a recovery available.
-On an 11+, instead of falling unconscious, you stay on your feet and can heal using a recovery.
-Add the recovery hit points to 0 hp to determine your hp total.
-
-<Vault.CompendiumFeats
-  feats={[
-    {
-      tier: "champion",
-      text: (
-        <>
-          If you roll a 16+ on your <em>never-say-die</em> save, you gain an
-          additional standard action during your next turn.
-        </>
-      ),
-    },
-  ]}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />

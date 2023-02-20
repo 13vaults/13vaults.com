@@ -4,11 +4,18 @@ source: 13th Age, p.63
 page_dress:
   quote:
     text: |
-      When I first laid eyes on a savage...
-      I knew my time was over.
-    cite: The last words of a dying man along the road, circa 13a.53
+      Crafty and ambitious, these humans are a restless bunch, always striving for more and never content with their lot in life.
+    cite: The Dwarven King Thorrad on humans, circa 13a.21
   lead: |
-    Low armor, extremely high damage. A martial who just keeps on hitting—literally.
+    A versatile and ambitious race, with a wide range of backgrounds and abilities that make them well-suited to any class or role.
+abilities:
+  - name: Quick to Fight
+    _type: Racial Power
+    description: |-
+      At the start of each battle, roll initiative twice and choose the result you want.
+    feats:
+      - tier: champion
+        description: If you roll a natural 19 or 20 for initiative, increase the escalation die by 1 (usually from 0 to 1 since it's the start of the battle).
 ---
 
 ## Racial Bonus
@@ -21,20 +28,4 @@ At 1st level, human PCs start with two feats instead of one.
 
 ## Racial Powers
 
-### Quick to Fight (Racial Power)
-
-At the start of each battle, roll initiative twice and choose the result you want.
-
-<Vault.CompendiumFeats
-  feats={[
-    {
-      tier: "champion",
-      text: (
-        <>
-          If you roll a natural 19 or 20 for initiative, increase the escalation
-          die by 1 (usually from 0 to 1 since it's the start of the battle).
-        </>
-      ),
-    },
-  ]}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />

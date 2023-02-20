@@ -1,6 +1,21 @@
 ---
-name: Dragonic/Dragonspawn
+name: Dragonic
 source: 13th Age, p.71
+page_dress:
+  quote:
+    text: Once, a wise old dragon told me a story about how the Dragonic came to be, born of the blood of dragons and shaped by the hand of the earth, and I have always believed that they are a testament to the greatness of both.
+    cite: Lady Oliander Coppercoil in "Tales of my Path," her autobiography, circa 13a.33
+  lead: |-
+    A race of dragon-human hybrids, possessing incredible strength, resilience, and affinity with the elements, as well as the ability to wield their own breath weapons.
+abilities:
+  - name: Breath Weapon
+    _type: Racial Power
+    description: |-
+      Once per battle, make a close-quarters breath weapon attack as a quick action using your highest ability score against one nearby enemy's Physical Defense.
+      On a hit, the attack deals 1d6 damage per your level of an energy type that makes sense for your character.
+    feats:
+      - tier: champion
+        description: Your breath weapon attack targets 1d3 nearby enemies in a group instead.
 ---
 
 ## Racial Bonus
@@ -9,21 +24,4 @@ source: 13th Age, p.71
 
 ## Racial Powers
 
-### Breath Weapon
-
-Once per battle, make a close-quarters breath weapon attack as a quick action using your highest ability score against one nearby enemy's Physical Defense.
-On a hit, the attack deals 1d6 damage per your level of an energy type that makes sense for your character.
-
-<Vault.CompendiumFeats
-  feats={[
-    {
-      tier: "champion",
-      text: (
-        <>
-          Your breath weapon attack targets 1d3 nearby enemies in a group
-          instead.
-        </>
-      ),
-    },
-  ]}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />

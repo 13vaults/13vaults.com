@@ -1,6 +1,20 @@
 ---
 name: Halfling
 source: 13th Age, p.70
+page_dress:
+  quote:
+    text: |
+      Never underestimate a halfling, for I once saw one take on a dragon with nothing more than a spoon and walk away unscathed.
+    cite: Ulgar the Terrible, Bandit Lord, circa 11a.232
+  lead: A simple and hearty folk who enjoy the comforts of home and quiet, but surprisingly find themselves in the legendary tales of history.
+abilities:
+  - name: Evasive
+    _type: Racial Power
+    description: |-
+      Once per battle, force an enemy that hits you with an attack to reroll the attack with a –2 penalty.
+    feats:
+      - tier: champion
+        description: The enemy's reroll takes a –5 penalty instead.
 ---
 
 ## Racial Bonus
@@ -9,15 +23,4 @@ source: 13th Age, p.70
 
 ## Racial Powers
 
-### Evasive
-
-Once per battle, force an enemy that hits you with an attack to reroll the attack with a –2 penalty.
-
-<Vault.CompendiumFeats
-  feats={[
-    {
-      tier: "champion",
-      text: <>The enemy's reroll takes a –5 penalty instead.</>,
-    },
-  ]}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />

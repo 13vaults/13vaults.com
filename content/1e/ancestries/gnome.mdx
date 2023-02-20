@@ -1,6 +1,27 @@
 ---
 name: Gnome
 source: 13th Age, p.68
+page_dress:
+  quote:
+    text: |
+      The Siege of Silverhold was a turning point in the war, thanks in no small part to the efforts of the gnomish illusionists, who conjured up a phantom army to distract the enemy and allow our forces to break through their lines.
+    cite: |
+      Lady Thalindra Windrider, "Reflections on the Elven Wars", Silverwood Press circa 12a.453
+  lead: A small and nimble race, known for their love of trickery, their affinity for illusion magic, and their skill at tinkering with clockwork and other devices.
+abilities:
+  - name: Confounding
+    _type: Racial Power
+    description: |-
+      Once per battle, when you roll a natural 16+ with an attack, you can also daze the target until the end of your next turn.
+    feats:
+      - tier: champion
+        description: Instead of being dazed, the target of your confounding ability is weakened until the end of your next turn.
+  - name: Minor Illusions
+    _type: Racial Power
+    description: |-
+      As a standard action, at-will, you can create a strong smell or a sound nearby.
+      Nearby creatures that fail a normal save notice the smell or sound.
+      Creatures that make the save may notice it but recognize it as not exactly real.
 ---
 
 ## Racial Bonus
@@ -13,26 +34,4 @@ Gnomes have a +2 AC bonus against opportunity attacks.
 
 ## Racial Powers
 
-### Confounding
-
-Once per battle, when you roll a natural 16+ with an attack, you can also daze the target until the end of your next turn.
-
-<Vault.CompendiumFeats
-  feats={[
-    {
-      tier: "champion",
-      text: (
-        <>
-          Instead of being dazed, the target of your confounding ability is
-          weakened until the end of your next turn.
-        </>
-      ),
-    },
-  ]}
-/>
-
-### Minor Illusions
-
-As a standard action, at-will, you can create a strong smell or a sound nearby.
-Nearby creatures that fail a normal save notice the smell or sound.
-Creatures that make the save may notice it but recognize it as not exactly real.
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />

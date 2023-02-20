@@ -3,12 +3,23 @@ name: Dwarf
 source: 13th Age, p.64
 page_dress:
   quote:
-    text: |
-      When I first laid eyes on a savage...
-      I knew my time was over.
-    cite: The last words of a dying man along the road, circa 13a.53
+    text: As the saying goes, never challenge a dwarf to a drinking contest, unless you enjoy waking up with bruises, a hangover, and a beard braided into intricate knots.
+    cite: Korgoth Ironbelly, a legendary dwarf warrior and renowned drinker, circa 13a.68
   lead: |
-    Low armor, extremely high damage. A martial who just keeps on hitting—literally.
+    A proud and hardy folk known for their toughness and resilience, their deep connection to the earth, and their fierce loyalty to their kin and traditions.
+abilities:
+  - name: That's Your Best Shot?
+    _type: Racial Power
+    description: |-
+      Once per battle as a free action after you have been hit by an enemy attack, you can heal using a recovery.
+      If the escalation die is less than 2, you only get half the usual healing from the recovery.
+      Unlike other recoveries that might allow you to take an average result, you have to roll this one!
+
+      Note that you can't use this ability if the attack drops you to 0 hp or below.
+      You've got to be on your feet to sneer at their attack and recover.
+    feats:
+      - tier: champion
+        description: If the escalation die is 2+ when you use that's your best shot, the recovery is free.
 ---
 
 ## Racial Bonus
@@ -17,22 +28,4 @@ page_dress:
 
 ## Racial Powers
 
-### That's Your Best Shot?
-
-Once per battle as a free action after you have been hit by an enemy attack, you can heal using a recovery. If the escalation die is less than 2, you only get half the usual healing from the recovery. Unlike other recoveries that might allow you to take an average result, you have to roll this one!
-
-Note that you can't use this ability if the attack drops you to 0 hp or below. You've got to be on your feet to sneer at their attack and recover.
-
-<Vault.CompendiumFeats
-  feats={[
-    {
-      tier: "adventurer",
-      text: (
-        <>
-          If the escalation die is 2+ when you use that's your best shot, the
-          recovery is free.
-        </>
-      ),
-    },
-  ]}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />
