@@ -48,11 +48,17 @@ export default function BasicLayout({
               </p>
               <div className="flex gap-1 flex-1 justify-center">
                 <p>
-                  <Link href="/privacy/">Privacy Policy.</Link>
+                  <a rel="me" href="https://dice.camp/@13vaults">
+                    Mastodon
+                  </a>
                 </p>
                 <span>&middot;</span>
                 <p>
-                  <Link href="/legal/">Legal Information.</Link>
+                  <Link href="/privacy/">Privacy Policy</Link>
+                </p>
+                <span>&middot;</span>
+                <p>
+                  <Link href="/legal/">Legal Information</Link>
                 </p>
               </div>
             </div>
