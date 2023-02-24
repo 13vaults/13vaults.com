@@ -1,18 +1,24 @@
 import BasicLayout from "@/layouts/basic";
-import { map } from "lodash";
+import { get, map } from "lodash";
 import Link from "next/link";
 import clsx from "clsx";
 import ExportedImage from "next-image-export-optimizer";
 import heroImage from "@/public/images/camelot-spire-butteredbap.webp";
 import Container from "@/components/container";
 import { buildNav, Navigation } from "@/lib/navigation";
-import { GetStaticPropsResult } from "next";
+import {
+  GetStaticPathsContext,
+  GetStaticPropsContext,
+  GetStaticPropsResult,
+} from "next";
 import {
   allAncestries,
   allClassItems,
   allRulesDocuments,
 } from "@/.contentlayer/generated";
 import Head from "next/head";
+import { defaultLocale, supportedLocales } from "@/lib/locales";
+import { useRouter } from "next/router";
 
 const bottomNavItems = [
   {
@@ -40,6 +46,9 @@ interface VaultsAppHomeP {
 }
 
 export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
+  const router = useRouter();
+  const { locale = defaultLocale } = router.query;
+  const localeString = String(locale);
   return (
     <>
       <Head>
@@ -91,7 +100,8 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
             <div className="grid place-content-center">
               <Link
                 className="flex gap-3 focus:bg-teal-500 hover:bg-teal-500 bg-teal-600 border border-teal-400/50 hover:border-teal-400 rounded pl-8 pr-12 py-3 shadow transition-colors font-display font-semibold items-center"
-                href="/compendium/"
+                hrefLang={localeString}
+                href={`/${localeString}/compendium`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +149,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
                           item.classes,
                           "grid place-content-center rounded-sm border h-40 text-center px-4 lg:px-8 transition-colors"
                         )}
-                        href={item.href}
+                        href={`${localeString}${item.href}`}
                       >
                         <h2 className="text-3xl font-display-serif font-semibold">
                           {item.title}
@@ -174,12 +184,20 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
   );
 }
 
-export async function getStaticProps(): Promise<
-  GetStaticPropsResult<VaultsAppHomeP>
-> {
+export async function getStaticPaths() {
+  return {
+    paths: map(supportedLocales, (locale) => `/${locale}/`),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps(
+  context: GetStaticPropsContext
+): Promise<GetStaticPropsResult<VaultsAppHomeP>> {
   return {
     props: {
       navigation: buildNav({
+        locale: String(get(context, "params.locale")),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

@@ -2,12 +2,15 @@ import CompendiumCategoryIndexLayout from "@/layouts/compendium-category-index";
 import Head from "next/head";
 import Link from "next/link";
 import { buildNav, Navigation } from "@/lib/navigation";
-import { GetStaticPropsResult } from "next";
+import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import {
   allAncestries,
   allClassItems,
   allRulesDocuments,
 } from "@/.contentlayer/generated";
+import { get, map } from "lodash";
+import { useRouter } from "next/router";
+import { defaultLocale, supportedLocales } from "@/lib/locales";
 
 interface CompendiumCategoryPageP {
   navigation: Navigation;
@@ -16,6 +19,9 @@ interface CompendiumCategoryPageP {
 export default function CompendiumCategoryPage({
   navigation,
 }: CompendiumCategoryPageP) {
+  const router = useRouter();
+  const { locale = defaultLocale } = router.query;
+  const localeString = String(locale);
   return (
     <>
       <Head>
@@ -24,13 +30,15 @@ export default function CompendiumCategoryPage({
       <CompendiumCategoryIndexLayout navigation={navigation}>
         <ul>
           <li>
-            <Link href="/compendium/basic-rules">Basic Rules</Link>
+            <Link href={`/${localeString}/compendium/basic-rules`}>
+              Basic Rules
+            </Link>
           </li>
           <li>
-            <Link href="/compendium/races">Races</Link>
+            <Link href={`/${localeString}/compendium/races`}>Races</Link>
           </li>
           <li>
-            <Link href="/compendium/classes">Classes</Link>
+            <Link href={`/${localeString}/compendium/classes`}>Classes</Link>
           </li>
           <li>Monsters</li>
           <li>Magic Items</li>
@@ -40,12 +48,20 @@ export default function CompendiumCategoryPage({
   );
 }
 
-export async function getStaticProps(): Promise<
-  GetStaticPropsResult<CompendiumCategoryPageP>
-> {
+export async function getStaticPaths() {
+  return {
+    paths: map(supportedLocales, (locale) => `/${locale}/compendium/`),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps(
+  context: GetStaticPropsContext
+): Promise<GetStaticPropsResult<CompendiumCategoryPageP>> {
   return {
     props: {
       navigation: buildNav({
+        locale: String(get(context, "params.locale")),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

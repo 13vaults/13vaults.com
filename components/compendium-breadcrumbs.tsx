@@ -1,10 +1,14 @@
-import { filter, findIndex, map, startCase } from "lodash";
+import { defaultLocale } from "@/lib/locales";
+import { filter, findIndex, map, slice, startCase } from "lodash";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Container from "./container";
 
 function createPaths(path: string) {
-  const linkPath = filter(path.split("/"), (path) => path !== "");
+  const linkPath = slice(
+    filter(path.split("/"), (path) => path !== ""),
+    1
+  );
   const hashUrlIndex = findIndex(linkPath, (path) => path.startsWith("#"));
   const finalLinkPath =
     hashUrlIndex >= 0
@@ -21,6 +25,8 @@ function createPaths(path: string) {
 
 export default function CompendiumBreadcrumbs() {
   const router = useRouter();
+  const { locale = defaultLocale } = router.query;
+  const localeString = String(locale);
   const paths = createPaths(router.asPath);
 
   return (
@@ -29,7 +35,11 @@ export default function CompendiumBreadcrumbs() {
         <ol role="list" className="flex gap-2 py-1">
           <li className="flex items-center">
             <div className="flex items-center">
-              <Link href="/" className="text-teal-500 hover:text-teal-300">
+              <Link
+                hrefLang={localeString}
+                href={`/${localeString}`}
+                className="text-teal-500 hover:text-teal-300"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -62,7 +72,8 @@ export default function CompendiumBreadcrumbs() {
                 </svg>
 
                 <Link
-                  href={path.href}
+                  hrefLang={localeString}
+                  href={`/${localeString}${path.href}`}
                   className="ml-2 text-sm font-medium text-stone-400 hover:text-stone-200"
                 >
                   {path.breadcrumb}

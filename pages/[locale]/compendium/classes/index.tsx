@@ -3,12 +3,14 @@ import {
   allClassItems,
   allRulesDocuments,
 } from "contentlayer/generated";
-import { map, pick } from "lodash";
-import { GetStaticPropsResult } from "next";
+import { get, map, pick } from "lodash";
+import { GetStaticPathsContext, GetStaticPropsResult } from "next";
 import Link from "next/link";
 import CompendiumCategoryIndexLayout from "@/layouts/compendium-category-index";
 import Head from "next/head";
 import { buildNav, Navigation } from "@/lib/navigation";
+import { useRouter } from "next/router";
+import { defaultLocale, supportedLocales } from "@/lib/locales";
 
 interface ClassesPageP {
   classItems: {
@@ -22,6 +24,9 @@ export default function AncestriesPage({
   classItems,
   navigation,
 }: ClassesPageP) {
+  const router = useRouter();
+  const { locale = defaultLocale } = router.query;
+  const localeString = String(locale);
   return (
     <>
       <Head>
@@ -31,7 +36,10 @@ export default function AncestriesPage({
         <ul>
           {map(classItems, (classItem) => (
             <li key={classItem.slug}>
-              <Link href={`/compendium/classes/${classItem.slug}`}>
+              <Link
+                hrefLang={localeString}
+                href={`/${localeString}/compendium/classes/${classItem.slug}`}
+              >
                 {classItem.name}
               </Link>
             </li>
@@ -42,15 +50,23 @@ export default function AncestriesPage({
   );
 }
 
-export async function getStaticProps(): Promise<
-  GetStaticPropsResult<ClassesPageP>
-> {
+export async function getStaticPaths() {
+  return {
+    paths: map(supportedLocales, (locale) => `/${locale}/compendium/classes/`),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps(
+  context: GetStaticPathsContext
+): Promise<GetStaticPropsResult<ClassesPageP>> {
   return {
     props: {
       classItems: map(allClassItems, (classItem) =>
         pick(classItem, ["slug", "name"])
       ),
       navigation: buildNav({
+        locale: get(context, "params.locale"),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

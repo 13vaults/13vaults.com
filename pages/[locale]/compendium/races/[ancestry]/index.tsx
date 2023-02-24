@@ -28,7 +28,7 @@ export default function AncestryPage({ ancestry, navigation }: AncestryPageP) {
 export async function getStaticPaths() {
   return {
     paths: map(allAncestries, (ancestry) => ({
-      params: { ancestry: ancestry.slug },
+      params: { locale: ancestry.locale, ancestry: ancestry.slug },
     })),
     fallback: false,
   };
@@ -45,6 +45,7 @@ export async function getStaticProps(
     props: {
       ancestry,
       navigation: buildNav({
+        locale: get(context, "params.locale"),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

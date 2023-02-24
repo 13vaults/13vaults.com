@@ -11,9 +11,14 @@ import Container from "./container";
 import Link from "next/link";
 import { kebabCase, map } from "lodash";
 import { Navigation } from "@/lib/navigation";
+import { useRouter } from "next/router";
+import { defaultLocale } from "@/lib/locales";
 
 export default function MegaNav({ navigation }: { navigation: Navigation }) {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+  const { locale = defaultLocale } = router.query;
+  const localeString = String(locale);
 
   return (
     <div className="bg-stone-800 font-display">
@@ -149,7 +154,11 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                   </button>
                 </div>
                 <div className="hidden lg:flex lg:items-center">
-                  <Link href="/" className="text-white">
+                  <Link
+                    hrefLang={localeString}
+                    href={`/${localeString}/`}
+                    className="text-white"
+                  >
                     <span className="sr-only">13 Vaults</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -320,7 +329,11 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                 </div>
 
                 <div className="lg:hidden mx-auto text-white absolute inset-0 grid place-content-center pointer-events-none">
-                  <Link href="/" className="pointer-events-auto">
+                  <Link
+                    hrefLang={localeString}
+                    href={`/${localeString}/`}
+                    className="pointer-events-auto"
+                  >
                     <span className="sr-only">13 Vaults</span>
 
                     <svg

@@ -6,6 +6,12 @@ import {
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import GithubSlugger from "github-slugger";
+import { defaultLocale } from "./lib/locales";
+
+function getLocaleFromPath(path) {
+  const pathArray = path.split(".");
+  return pathArray.length > 2 ? pathArray.slice(-2)[0] : defaultLocale;
+}
 
 const sectionsField = {
   type: "json",
@@ -79,6 +85,12 @@ const BasicPage = defineDocumentType(() => ({
       resolve: (document_) =>
         document_._raw.sourceFileName.replace(/\.mdx$/, ""),
     },
+    locale: {
+      type: "string",
+      resolve: (document_) => {
+        return getLocaleFromPath(document_._raw.sourceFilePath);
+      },
+    },
   },
 }));
 
@@ -97,6 +109,12 @@ const RulesDocument = defineDocumentType(() => ({
         document_._raw.sourceFileName.replace(/\.mdx$/, ""),
     },
     sections: sectionsField,
+    locale: {
+      type: "string",
+      resolve: (document_) => {
+        return getLocaleFromPath(document_._raw.sourceFilePath);
+      },
+    },
   },
 }));
 
@@ -131,8 +149,20 @@ const Ancestry = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (document_) =>
-        document_._raw.sourceFileName.replace(/\.mdx$/, ""),
+      resolve: (document_) => {
+        console.log(document_._raw.sourceFileName);
+        return document_._raw.sourceFileName.split(".").length === 3
+          ? // handle filenames with locale in the name
+            document_._raw.sourceFileName.split(".")[0]
+          : // handle filenames without locale in the name
+            document_._raw.sourceFileName.replace(/\.mdx$/, "");
+      },
+    },
+    locale: {
+      type: "string",
+      resolve: (document_) => {
+        return getLocaleFromPath(document_._raw.sourceFilePath);
+      },
     },
     sections: sectionsField,
   },
@@ -153,6 +183,12 @@ const ClassItem = defineDocumentType(() => ({
       type: "string",
       resolve: (document_) =>
         document_._raw.sourceFileName.replace(/\.mdx$/, ""),
+    },
+    locale: {
+      type: "string",
+      resolve: (document_) => {
+        return getLocaleFromPath(document_._raw.sourceFilePath);
+      },
     },
     sections: sectionsField,
   },

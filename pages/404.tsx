@@ -7,12 +7,17 @@ import {
   allClassItems,
   allRulesDocuments,
 } from "@/.contentlayer/generated";
+import { useRouter } from "next/router";
+import { defaultLocale } from "@/lib/locales";
 
 interface NotFoundP {
   navigation: Navigation;
 }
 
 export default function NotFound({ navigation }: NotFoundP) {
+  const router = useRouter();
+  const { locale = defaultLocale } = router.query;
+  const localeString = String(locale);
   return (
     <BasicLayout navigation={navigation}>
       <div className="flex-1 grid place-content-center bg-black/90 text-center">
@@ -20,7 +25,8 @@ export default function NotFound({ navigation }: NotFoundP) {
           You Got Lost
         </h1>
         <Link
-          href="/"
+          hrefLang={localeString}
+          href={`/${localeString}/`}
           className="text-red-500 font-display font-medium you-died-animation-late"
         >
           Return back to 13vaults

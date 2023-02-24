@@ -28,7 +28,11 @@ export default function ClassPage({ classItem, navigation }: ClassPageP) {
 export async function getStaticPaths() {
   return {
     paths: map(allClassItems, (classItem) => ({
-      params: { slug: classItem.slug, class_item: classItem.slug },
+      params: {
+        locale: classItem.locale,
+        slug: classItem.slug,
+        class_item: classItem.slug,
+      },
     })),
     fallback: false,
   };
@@ -45,6 +49,7 @@ export async function getStaticProps(
     props: {
       classItem,
       navigation: buildNav({
+        locale: get(context, "params.locale"),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

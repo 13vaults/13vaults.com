@@ -1,7 +1,9 @@
 import MegaNav from "@/components/mega-nav";
+import { defaultLocale } from "@/lib/locales";
 import { Navigation } from "@/lib/navigation";
 import clsx from "clsx";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function BasicLayout({
   children,
@@ -12,6 +14,9 @@ export default function BasicLayout({
   navigation: Navigation;
   className?: string;
 }) {
+  const router = useRouter();
+  const { locale = defaultLocale } = router.query;
+  const localeString = String(locale);
   return (
     <div className="min-h-screen flex flex-col">
       <header className="z-[1] lg:sticky top-0 shadow">
@@ -42,9 +47,9 @@ export default function BasicLayout({
               <p>
                 13Vaults.com is free and open source software (FOSS).
                 <br />
-                <Link href="https://github.com/13vaults/13vaults.com">
+                <a href="https://github.com/13vaults/13vaults.com">
                   The source code is available here.
-                </Link>
+                </a>
               </p>
               <div className="flex gap-1 flex-1 justify-center">
                 <p>
@@ -54,11 +59,21 @@ export default function BasicLayout({
                 </p>
                 <span>&middot;</span>
                 <p>
-                  <Link href="/privacy/">Privacy Policy</Link>
+                  <Link
+                    hrefLang={localeString}
+                    href={`/${localeString}/privacy/`}
+                  >
+                    Privacy Policy
+                  </Link>
                 </p>
                 <span>&middot;</span>
                 <p>
-                  <Link href="/legal/">Legal Information</Link>
+                  <Link
+                    hrefLang={localeString}
+                    href={`/${localeString}/legal/`}
+                  >
+                    Legal Information
+                  </Link>
                 </p>
               </div>
             </div>

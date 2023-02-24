@@ -31,7 +31,10 @@ export default function RulesDocumentPage({
 export async function getStaticPaths() {
   return {
     paths: map(allRulesDocuments, (rulesDocument) => ({
-      params: { rules_document: rulesDocument.slug },
+      params: {
+        locale: rulesDocument.locale,
+        rules_document: rulesDocument.slug,
+      },
     })),
     fallback: false,
   };

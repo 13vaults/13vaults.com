@@ -1,5 +1,6 @@
 import { RulesDocument, ClassItem, Ancestry } from "@/.contentlayer/generated";
-import { map } from "lodash";
+import { filter, map } from "lodash";
+import { defaultLocale } from "./locales";
 
 interface SubNav {
   name: string;
@@ -24,10 +25,12 @@ export interface Navigation {
 }
 
 export function buildNav({
+  locale = defaultLocale,
   rulesDocuments,
   classItems,
   ancestries,
 }: {
+  locale?: string;
   rulesDocuments: RulesDocument[];
   classItems: ClassItem[];
   ancestries: Ancestry[];
@@ -39,28 +42,31 @@ export function buildNav({
         subnavs: [
           {
             name: "Basic Rules",
-            href: "/compendium/basic-rules/",
-            items: map(rulesDocuments, (rulesDocument) => ({
-              name: rulesDocument.title,
-              href: `/compendium/basic-rules/${rulesDocument.slug}`,
-            })),
+            href: `/${locale}/compendium/basic-rules/`,
+            items: map(
+              filter(rulesDocuments, ["locale", locale]),
+              (rulesDocument) => ({
+                name: rulesDocument.title,
+                href: `/${locale}/compendium/basic-rules/${rulesDocument.slug}`,
+              })
+            ),
           },
           {
             name: "Races",
-            href: "/compendium/races/",
+            href: `/${locale}/compendium/races/`,
             large: true,
-            items: map(ancestries, (ancestry) => ({
+            items: map(filter(ancestries, ["locale", locale]), (ancestry) => ({
               name: ancestry.name,
-              href: `/compendium/races/${ancestry.slug}`,
+              href: `/${locale}/compendium/races/${ancestry.slug}`,
             })),
           },
           {
             name: "Classes",
-            href: "/compendium/classes",
+            href: `/${locale}/compendium/classes`,
             large: true,
-            items: map(classItems, (classItem) => ({
+            items: map(filter(classItems, ["locale", locale]), (classItem) => ({
               name: classItem.name,
-              href: `/compendium/classes/${classItem.slug}`,
+              href: `/${locale}/compendium/classes/${classItem.slug}`,
             })),
           },
         ],

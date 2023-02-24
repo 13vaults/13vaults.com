@@ -10,6 +10,8 @@ import { GetStaticPropsResult } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { buildNav, Navigation } from "@/lib/navigation";
+import { useRouter } from "next/router";
+import { defaultLocale, supportedLocales } from "@/lib/locales";
 
 type PickPartial<T, K extends keyof T> = { [P in K]: Partial<T[P]> };
 
@@ -24,6 +26,9 @@ export default function BasicRulesPage({
   rulesDocuments,
   navigation,
 }: BasicRulesPageP) {
+  const router = useRouter();
+  const { locale = defaultLocale } = router.query;
+  const localeString = String(locale);
   const combatRulesDocument = find(rulesDocuments, [
     "slug",
     "combat-rules",
@@ -46,18 +51,22 @@ export default function BasicRulesPage({
         <nav>
           <ol>
             <li>
-              <Link href={`/compendium/basic-rules/${combatRulesDocument.slug}`}>
+              <Link
+                href={`/${localeString}/compendium/basic-rules/${combatRulesDocument.slug}`}
+              >
                 {combatRulesDocument.title}
               </Link>
             </li>
             <li>
-              <Link href={`/compendium/basic-rules/${runningTheGameDocument.slug}`}>
+              <Link
+                href={`/${localeString}/compendium/basic-rules/${runningTheGameDocument.slug}`}
+              >
                 {runningTheGameDocument.title}
               </Link>
             </li>
             <li>
               <Link
-                href={`/compendium/basic-rules/${characterCreationDocument.slug}`}
+                href={`/${localeString}/compendium/basic-rules/${characterCreationDocument.slug}`}
               >
                 {characterCreationDocument.title}
               </Link>
@@ -67,6 +76,16 @@ export default function BasicRulesPage({
       </CompendiumCategoryIndexLayout>
     </>
   );
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: map(
+      supportedLocales,
+      (locale) => `/${locale}/compendium/basic-rules/`
+    ),
+    fallback: false,
+  };
 }
 
 export async function getStaticProps(): Promise<
