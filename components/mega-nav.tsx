@@ -318,7 +318,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                         )
                       )}
                     </div>
-                    <div className="flex gap-8">
+                    <div className="flex gap-2">
                       <a
                         href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
                         className=" bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-medium rounded px-2 py-1 focus:bg-amber-400 hover:bg-amber-400 transition-colors"
