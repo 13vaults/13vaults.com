@@ -16,7 +16,7 @@ specifiers:
   clsx: ^1.2.1
   contentlayer: ^0.3.0
   eslint: 8.33.0
-  eslint-config-next: 13.1.6
+  eslint-config-next: 13.2.0
   eslint-plugin-unicorn: ^45.0.2
   framer-motion: ^9.0.1
   github-slugger: ^2.0.0
@@ -42,7 +42,7 @@ dependencies:
   clsx: 1.2.1
   contentlayer: 0.3.0
   eslint: 8.33.0
-  eslint-config-next: 13.1.6_4vsywjlpuriuw3tl5oq6zy5a64
+  eslint-config-next: 13.2.0_4vsywjlpuriuw3tl5oq6zy5a64
   lodash: 4.17.21
   next: 13.2.0_biqbaboplfbrettd7655fr4n2y
   next-contentlayer: 0.3.0_f4d7icgk4i3oippbo5yzyh5rhq
@@ -754,8 +754,8 @@ packages:
   /@next/env/13.2.0:
     resolution: {integrity: sha512-yv9oaRVa+AxFa27uQOVecS931NrE+GcQSqcL2HaRxL8NunStLtPiyNm/VixvdzfiWLabMz4dXvbXfwCNaECzcw==}
 
-  /@next/eslint-plugin-next/13.1.6:
-    resolution: {integrity: sha512-o7cauUYsXjzSJkay8wKjpKJf2uLzlggCsGUkPu3lP09Pv97jYlekTC20KJrjQKmSv5DXV0R/uks2ZXhqjNkqAw==}
+  /@next/eslint-plugin-next/13.2.0:
+    resolution: {integrity: sha512-/UW29MPgX5P1J1AVIj9g1TCv4BKzUTBB54wgtEp7X15pEKerACGYv9iny44KGZxSJDizWD2+Zaw6+E7do4kwRA==}
     dependencies:
       glob: 7.1.7
     dev: false
@@ -2184,8 +2184,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /eslint-config-next/13.1.6_4vsywjlpuriuw3tl5oq6zy5a64:
-    resolution: {integrity: sha512-0cg7h5wztg/SoLAlxljZ0ZPUQ7i6QKqRiP4M2+MgTZtxWwNKb2JSwNc18nJ6/kXBI6xYvPraTbQSIhAuVw6czw==}
+  /eslint-config-next/13.2.0_4vsywjlpuriuw3tl5oq6zy5a64:
+    resolution: {integrity: sha512-nZfIQG5m82xwgGO8EjakbF5qjnXADcveGxOxlg5J1jZ9MQlESvqqRrvl4+KHE+JKRgFD2h0q5xwDDWfFbtZmMA==}
     peerDependencies:
       eslint: ^7.23.0 || ^8.0.0
       typescript: '>=3.3.1'
@@ -2193,7 +2193,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@next/eslint-plugin-next': 13.1.6
+      '@next/eslint-plugin-next': 13.2.0
       '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/parser': 5.50.0_4vsywjlpuriuw3tl5oq6zy5a64
       eslint: 8.33.0
