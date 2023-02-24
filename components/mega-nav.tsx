@@ -47,7 +47,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
               leaveTo="-translate-x-full"
             >
               <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-stone-900 border-r border-stone-700 pb-12 shadow-xl">
-                <div className="flex px-4 pt-5 pb-2">
+                <div className="flex px-4 pt-3 pb-2">
                   <button
                     type="button"
                     className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-stone-300"
