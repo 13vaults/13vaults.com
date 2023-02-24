@@ -18,8 +18,8 @@ export default function BasicLayout({
   const { locale = defaultLocale } = router.query;
   const localeString = String(locale);
   return (
-    <div className="min-h-screen flex flex-col">
-      <header className="z-[1] lg:sticky top-0 shadow">
+    <div className="min-h-screen min-h-screen-wk flex flex-col">
+      <header className="z-[1] sticky top-0 shadow">
         <MegaNav navigation={navigation} />
       </header>
       <div className={clsx("flex flex-col flex-1 relative z-0", className)}>

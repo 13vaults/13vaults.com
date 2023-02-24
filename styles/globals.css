@@ -34,6 +34,9 @@
   .text-align-last-unset {
     text-align-last: unset;
   }
+  .min-h-screen-wk {
+    min-height: -webkit-fill-available;
+  }
 }
 
 .you-died-animation {
