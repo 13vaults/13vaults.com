@@ -58,7 +58,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
         </title>
       </Head>
       <BasicLayout navigation={navigation}>
-        <section className="flex-1 relative min-h-[60vh] text-white grid place-content-center bg-cover bg-top">
+        <section className="flex-1 relative min-h-[30vh] text-white grid place-content-center bg-cover bg-top">
           <div className="absolute inset-0 home-hero">
             <ExportedImage
               className="z-[-1] object-top object-cover h-full w-full home-hero bg-neutral-900"
@@ -69,7 +69,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
               unoptimized={process.env.NODE_ENV === "development"}
             />
           </div>
-          <div className="flex flex-col gap-12 p-4 lg:p-8 pb-14 z-0">
+          <div className="flex flex-col gap-12 px-4 py-8 lg:p-8 pb-14 z-0">
             <h1 className="text-amber-50">
               <span className="sr-only">13 Vaults</span>
               <svg

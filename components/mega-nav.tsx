@@ -61,7 +61,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                   <Disclosure
                     as="div"
                     key={navItem.name}
-                    className="text-white flex flex-col border-t border-stone-700"
+                    className="text-white flex flex-col border-t border-stone-700 font-display font-medium"
                   >
                     {({ open }) => (
                       <>
@@ -78,10 +78,11 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                             <div key={subnav.href}>
                               <p
                                 id={`mobile-${kebabCase(subnav.name)}-heading`}
-                                className="font-medium text-stone-100"
+                                className="text-stone-100 font-bold"
                               >
                                 <Link
                                   href={subnav.href}
+                                  className="block py-2"
                                   onClick={() => setOpen(false)}
                                 >
                                   {subnav.name}
@@ -97,7 +98,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                   <li key={item.name} className="flex">
                                     <Link
                                       href={item.href}
-                                      className="text-stone-400"
+                                      className="text-stone-400 py-4 block"
                                       onClick={() => setOpen(false)}
                                     >
                                       {item.name}
@@ -114,7 +115,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                 ))}
                 <div className="space-y-6 border-t border-stone-700 py-6 px-4">
                   {navigation.pages.map((page) => (
-                    <div key={page.name} className="flow-root">
+                    <div key={page.name} className="flow-root font-display">
                       <span
                         key={page.name}
                         className="flex items-center font-medium text-stone-600 cursor-not-allowed"
@@ -127,7 +128,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                 <div className="flex-1 flex-col">
                   <a
                     href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
-                    className="flex items-center bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-medium p-4 focus:bg-amber-400 hover:bg-amber-400 transition-colors"
+                    className="flex items-center bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-medium p-4 focus:bg-amber-400 hover:bg-amber-400 transition-colors font-display"
                   >
                     Buy 13th Age
                   </a>

@@ -12,8 +12,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        texture: "url(/blueprint-texture.webp)",
-        "texture-dark": "url(/blueprint-texture-dark.webp)",
+        texture: "url(/texture.webp)",
+        "texture-dark": "url(/texture-dark.webp)",
       },
       fontFamily: {
         sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
