@@ -8,7 +8,7 @@ import { Navigation } from "@/lib/navigation";
 import Heading from "./heading";
 import { SectionProvider } from "./section-provider";
 import CompendiumSideNav from "./compendium-side-nav";
-import Link from "next/link";
+import ContentLink from "./content-link";
 
 interface ContentLayerRendererP {
   data: any;
@@ -90,7 +90,7 @@ export default function ContentLayerPage({
                 </Heading>
               ),
               a: ({ href, ...properties }: any) => (
-                <Link href={href} {...properties} />
+                <ContentLink href={href} {...properties} />
               ),
               h5: ({ id, children, ...rest }) => (
                 <Heading level={5} id={id!} headingProps={rest}>
