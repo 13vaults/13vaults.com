@@ -3,6 +3,16 @@
 const { withContentlayer } = require("next-contentlayer");
 const vaultConfig = require("./vault.config");
 
+async function redirects() {
+  return [
+    {
+      source: "/",
+      destination: "/en/",
+      permanent: true,
+    },
+  ];
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx"],
@@ -30,6 +40,7 @@ const nextConfig = {
     scrollRestoration: true,
     largePageDataBytes: 256 * 1024,
   },
+  redirects: process.env.NODE_ENV === "development" ? redirects : undefined,
 };
 
 module.exports = withContentlayer(nextConfig);
