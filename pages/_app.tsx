@@ -66,6 +66,14 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
           --font-vollkorn: ${vollkorn.style.fontFamily};
           --font-vollkorn-sc: ${vollkornSc.style.fontFamily};
         }
+
+        /* CSS for other than iOS devices */
+        @supports not (-webkit-touch-callout: none) {
+          html,
+          body {
+            scroll-behavior: smooth;
+          }
+        }
       `}</style>
       <Component {...pageProps} />
     </>
