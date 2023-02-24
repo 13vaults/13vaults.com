@@ -6,7 +6,7 @@ import {
   Inter,
   Vollkorn,
   Vollkorn_SC,
-} from "@next/font/google";
+} from "next/font/google";
 import Script from "next/script";
 
 const barlowSemiCondensed = Barlow_Semi_Condensed({

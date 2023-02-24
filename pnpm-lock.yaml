@@ -5,7 +5,6 @@ specifiers:
   '@heroicons/react': ^2.0.14
   '@mdx-js/loader': ^2.2.1
   '@mdx-js/react': ^2.2.1
-  '@next/font': 13.1.6
   '@next/mdx': ^13.1.6
   '@tailwindcss/forms': ^0.5.3
   '@tailwindcss/typography': ^0.5.9
@@ -40,7 +39,6 @@ specifiers:
 dependencies:
   '@headlessui/react': 1.7.9_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 2.0.14_react@18.2.0
-  '@next/font': 13.1.6
   clsx: 1.2.1
   contentlayer: 0.3.0
   eslint: 8.33.0
@@ -760,10 +758,6 @@ packages:
     resolution: {integrity: sha512-o7cauUYsXjzSJkay8wKjpKJf2uLzlggCsGUkPu3lP09Pv97jYlekTC20KJrjQKmSv5DXV0R/uks2ZXhqjNkqAw==}
     dependencies:
       glob: 7.1.7
-    dev: false
-
-  /@next/font/13.1.6:
-    resolution: {integrity: sha512-AITjmeb1RgX1HKMCiA39ztx2mxeAyxl4ljv2UoSBUGAbFFMg8MO7YAvjHCgFhD39hL7YTbFjol04e/BPBH5RzQ==}
     dev: false
 
   /@next/mdx/13.1.6_vvg67iglxhejglpl7nsv3pjzui:
