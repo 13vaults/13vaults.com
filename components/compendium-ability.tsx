@@ -8,33 +8,17 @@ import remarkGfm from "remark-gfm";
 
 interface AbilityListP {
   abilities?: Ability[];
-  maxCols?: 1 | 2 | 3;
 }
 
 export default function AbilityList({
   abilities,
-  maxCols = 1,
 }: AbilityListP): JSX.Element | null {
-  const cols = {
-    3: "sm:grid-cols-2 2xl:grid-cols-3",
-    2: "sm:grid-cols-2",
-    1: "",
-  };
-
-  const colsClasses = cols[maxCols];
-
   if (size(abilities) === 0) return null;
 
   return (
-    <div
-      role="list"
-      className={clsx(
-        "my-4 list-none m-0 p-0 flex flex-col sm:grid grid-rows-[masonry] gap-4",
-        colsClasses
-      )}
-    >
+    <div role="list" className="my-4 list-none m-0 p-0 flex flex-col gap-4">
       {map(abilities, (ability) => (
-        <div role="listitem" key={ability.name} className="overflow-x-scroll">
+        <div role="listitem" key={ability.name}>
           <AbilityItem ability={ability} />
         </div>
       ))}
