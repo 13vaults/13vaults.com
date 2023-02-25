@@ -12,6 +12,7 @@ import {
 import Head from "next/head";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Container from "@/components/container";
+import { getI18nProperties } from "@/lib/get-static";
 
 interface VaultsBasicPageP {
   pageData: BasicPage;
@@ -77,6 +78,7 @@ export async function getStaticProps(
         classItems: allClassItems,
         ancestries: allAncestries,
       }),
+      ...(await getI18nProperties(context, ["common"])),
     },
   };
 }

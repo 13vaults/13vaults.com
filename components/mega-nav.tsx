@@ -13,12 +13,14 @@ import { kebabCase, map } from "lodash";
 import { Navigation } from "@/lib/navigation";
 import { useRouter } from "next/router";
 import { defaultLocale } from "@/lib/locales";
+import { useTranslation } from "next-i18next";
 
 export default function MegaNav({ navigation }: { navigation: Navigation }) {
   const [open, setOpen] = useState(false);
   const router = useRouter();
   const { locale = defaultLocale } = router.query;
   const localeString = String(locale);
+  const { t } = useTranslation("common");
 
   return (
     <div className="bg-stone-800 font-display">
@@ -53,20 +55,20 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                     className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-stone-300"
                     onClick={() => setOpen(false)}
                   >
-                    <span className="sr-only">Close menu</span>
+                    <span className="sr-only">{t("nav.close-menu-label")}</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
                 </div>
                 {map(navigation.main, (navItem) => (
                   <Disclosure
                     as="div"
-                    key={navItem.name}
+                    key={navItem.labelKey}
                     className="text-white flex flex-col border-t border-stone-700 font-display font-medium"
                   >
                     {({ open }) => (
                       <>
                         <Disclosure.Button className="text-left flex items-center gap-1 p-4 bg-stone-800">
-                          {navItem.name}
+                          {t(navItem.labelKey)}
                           {open ? (
                             <ChevronUpIcon className="h-4 w-4" />
                           ) : (
@@ -77,7 +79,9 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                           {map(navItem.subnavs, (subnav) => (
                             <div key={subnav.href}>
                               <p
-                                id={`mobile-${kebabCase(subnav.name)}-heading`}
+                                id={`mobile-${kebabCase(
+                                  subnav.labelKey
+                                )}-heading`}
                                 className="text-stone-100 font-bold"
                               >
                                 <Link
@@ -85,13 +89,13 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                   className="block py-2"
                                   onClick={() => setOpen(false)}
                                 >
-                                  {subnav.name}
+                                  {t(subnav.labelKey)}
                                 </Link>
                               </p>
                               <ul
                                 role="list"
                                 aria-labelledby={`mobile-${kebabCase(
-                                  subnav.name
+                                  subnav.labelKey
                                 )}-heading`}
                               >
                                 {subnav.items?.map((item) => (
@@ -115,12 +119,12 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                 ))}
                 <div className="space-y-6 border-t border-stone-700 py-6 px-4">
                   {navigation.pages.map((page) => (
-                    <div key={page.name} className="flow-root font-display">
+                    <div key={page.labelKey} className="flow-root font-display">
                       <span
-                        key={page.name}
+                        key={page.labelKey}
                         className="flex items-center font-medium text-stone-600 cursor-not-allowed"
                       >
-                        {page.name}
+                        {t(page.labelKey)}
                       </span>
                     </div>
                   ))}
@@ -130,7 +134,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                     href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
                     className="flex items-center bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-medium p-4 focus:bg-amber-400 hover:bg-amber-400 transition-colors font-display"
                   >
-                    Buy 13th Age
+                    {t("nav.buy-13th-age-label")}
                   </a>
                 </div>
               </Dialog.Panel>
@@ -150,7 +154,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                     className="text-stone-300"
                     onClick={() => setOpen(true)}
                   >
-                    <span className="sr-only">Open menu</span>
+                    <span className="sr-only">{t("nav.open-menu-label")}</span>
                     <Bars3Icon className="h-8 w-8" aria-hidden="true" />
                   </button>
                 </div>
@@ -194,7 +198,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                   <Popover.Group>
                     <div className="flex h-full justify-center space-x-8">
                       {navigation.main.map((mainNav) => (
-                        <Popover key={mainNav.name} className="flex">
+                        <Popover key={mainNav.labelKey} className="flex">
                           {({ open }) => (
                             <>
                               <div className="relative flex">
@@ -206,7 +210,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                     "relative items-center gap-1 z-20 -mb-px flex border-b-2 pt-px font-medium transition-colors duration-200 ease-out"
                                   )}
                                 >
-                                  {mainNav.name}
+                                  {t(mainNav.labelKey)}
                                   {open ? (
                                     <ChevronUpIcon className="h-4 w-4" />
                                   ) : (
@@ -238,7 +242,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                             mainNav.subnavs,
                                             (mainNavItem) => (
                                               <div
-                                                key={mainNavItem.name}
+                                                key={mainNavItem.labelKey}
                                                 className={clsx({
                                                   "col-span-2":
                                                     mainNavItem.large,
@@ -247,17 +251,17 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                                 <Popover.Button
                                                   as={Link}
                                                   id={`desktop-featured-heading-${kebabCase(
-                                                    mainNavItem.name
+                                                    mainNavItem.labelKey
                                                   )}`}
                                                   className="text-stone-400 border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
                                                   href={mainNavItem.href}
                                                 >
-                                                  {mainNavItem.name}
+                                                  {t(mainNavItem.labelKey)}
                                                 </Popover.Button>
                                                 <ul
                                                   role="list"
                                                   aria-labelledby={`desktop-featured-heading-${kebabCase(
-                                                    mainNavItem.name
+                                                    mainNavItem.labelKey
                                                   )}`}
                                                   className={clsx(
                                                     "mt-6 grid gap-1 sm:mt-4",
@@ -306,14 +310,14 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                             href={page.href}
                             className="text-stone-400 font-medium border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
                           >
-                            {page.name}
+                            {t(page.labelKey)}
                           </Link>
                         ) : (
                           <span
-                            key={page.name}
+                            key={page.labelKey}
                             className="flex items-center font-medium text-stone-600 cursor-not-allowed"
                           >
-                            {page.name}
+                            {t(page.labelKey)}
                           </span>
                         )
                       )}
@@ -323,7 +327,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                         href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
                         className=" bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-medium rounded px-2 py-1 focus:bg-amber-400 hover:bg-amber-400 transition-colors"
                       >
-                        Buy 13th Age
+                        {t("nav.buy-13th-age-label")}
                       </a>
                     </div>
                   </div>

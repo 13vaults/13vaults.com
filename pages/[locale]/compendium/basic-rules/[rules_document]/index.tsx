@@ -8,6 +8,7 @@ import { find, get, map } from "lodash";
 import { GetStaticPropsResult, NextPageContext } from "next";
 import ContentLayerPage from "@/components/content-layer-page";
 import { buildNav, Navigation } from "@/lib/navigation";
+import { getI18nProperties } from "@/lib/get-static";
 
 interface RulesDocumentPageP {
   rulesDocument: RulesDocument;
@@ -56,6 +57,7 @@ export async function getStaticProps(
         classItems: allClassItems,
         ancestries: allAncestries,
       }),
+      ...(await getI18nProperties(context, ["common"])),
     },
   };
 }

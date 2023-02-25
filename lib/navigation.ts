@@ -4,18 +4,23 @@ import { defaultLocale } from "./locales";
 
 interface SubNav {
   name: string;
+  labelKey: string;
   href: string;
   large?: boolean;
-  items?: SubNav[];
+  items?: SubNavWithName[];
 }
 
+type SubNavWithName = Omit<SubNav, "labelKey">;
+
+type SubNavWithLabel = Omit<SubNav, "name">;
+
 interface MainNavItem {
-  name: string;
-  subnavs: SubNav[];
+  labelKey: string;
+  subnavs: SubNavWithLabel[];
 }
 
 interface Page {
-  name: string;
+  labelKey: string;
   href?: string;
 }
 
@@ -38,10 +43,10 @@ export function buildNav({
   return {
     main: [
       {
-        name: "Compendium",
+        labelKey: "nav.compendium-label",
         subnavs: [
           {
-            name: "Basic Rules",
+            labelKey: "nav.compendium-basic-rules-label",
             href: `/${locale}/compendium/basic-rules/`,
             items: map(
               filter(rulesDocuments, ["locale", locale]),
@@ -52,7 +57,7 @@ export function buildNav({
             ),
           },
           {
-            name: "Races",
+            labelKey: "nav.compendium-ancestries-label",
             href: `/${locale}/compendium/races/`,
             large: true,
             items: map(filter(ancestries, ["locale", locale]), (ancestry) => ({
@@ -61,7 +66,7 @@ export function buildNav({
             })),
           },
           {
-            name: "Classes",
+            labelKey: "nav.compendium-classes-label",
             href: `/${locale}/compendium/classes`,
             large: true,
             items: map(filter(classItems, ["locale", locale]), (classItem) => ({
@@ -74,10 +79,10 @@ export function buildNav({
     ],
     pages: [
       {
-        name: "Guides",
+        labelKey: "nav.guides-label",
       },
       {
-        name: "Encounter Builder",
+        labelKey: "nav.encounter-builder-label",
       },
     ],
   };

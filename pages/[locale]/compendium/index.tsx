@@ -11,6 +11,7 @@ import {
 import { get, map } from "lodash";
 import { useRouter } from "next/router";
 import { defaultLocale, supportedLocales } from "@/lib/locales";
+import { getI18nProperties } from "@/lib/get-static";
 
 interface CompendiumCategoryPageP {
   navigation: Navigation;
@@ -66,6 +67,7 @@ export async function getStaticProps(
         classItems: allClassItems,
         ancestries: allAncestries,
       }),
+      ...(await getI18nProperties(context, ["common"])),
     },
   };
 }

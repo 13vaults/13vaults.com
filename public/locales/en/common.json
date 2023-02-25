@@ -1,0 +1,18 @@
+{
+  "nav.buy-13th-age-label": "Buy 13th Age",
+  "nav.compendium-label": "Compendium",
+  "nav.compendium-basic-rules-label": "Basic Rules",
+  "nav.compendium-ancestries-label": "Races",
+  "nav.compendium-classes-label": "Classes",
+  "nav.guides-label": "Guides",
+  "nav.encounter-builder-label": "Encounter Builder",
+  "nav.close-menu-label": "Close menu",
+  "nav.open-menu-label": "Open menu",
+  "not-found.title-label": "You Got Lost",
+  "not-found.return-label": "Return back to 13 Vaults",
+  "footer.not-affiliated": "13Vaults.com is not affilliated with Pelgrane Press or Fire Opal Media.",
+  "footer.foss": "13Vaults.com is free and open source software (FOSS).<br /><github>The source code is available here.</github>",
+  "footer.mastodon-link": "<mastodon>Mastodon</mastodon>",
+  "footer.privacy-link": "<privacy>Privacy Policy</privacy>",
+  "footer.legal-link": "<legal>Legal</legal>"
+}

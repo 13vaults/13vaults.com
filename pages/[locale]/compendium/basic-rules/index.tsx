@@ -6,12 +6,13 @@ import {
 } from "@/.contentlayer/generated";
 import CompendiumCategoryIndexLayout from "@/layouts/compendium-category-index";
 import { find, map, pick } from "lodash";
-import { GetStaticPropsResult } from "next";
+import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { buildNav, Navigation } from "@/lib/navigation";
 import { useRouter } from "next/router";
 import { defaultLocale, supportedLocales } from "@/lib/locales";
+import { getI18nProperties } from "@/lib/get-static";
 
 type PickPartial<T, K extends keyof T> = { [P in K]: Partial<T[P]> };
 
@@ -88,9 +89,9 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps(): Promise<
-  GetStaticPropsResult<BasicRulesPageP>
-> {
+export async function getStaticProps(
+  context: GetStaticPropsContext
+): Promise<GetStaticPropsResult<BasicRulesPageP>> {
   return {
     props: {
       rulesDocuments: map(allRulesDocuments, (rulesDocument) =>
@@ -101,6 +102,7 @@ export async function getStaticProps(): Promise<
         classItems: allClassItems,
         ancestries: allAncestries,
       }),
+      ...(await getI18nProperties(context, ["common"])),
     },
   };
 }

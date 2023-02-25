@@ -11,6 +11,7 @@ import Head from "next/head";
 import { buildNav, Navigation } from "@/lib/navigation";
 import { useRouter } from "next/router";
 import { defaultLocale, supportedLocales } from "@/lib/locales";
+import { getI18nProperties } from "@/lib/get-static";
 
 interface AncestriesPageP {
   ancestries: {
@@ -71,6 +72,7 @@ export async function getStaticProps(
         classItems: allClassItems,
         ancestries: allAncestries,
       }),
+      ...(await getI18nProperties(context, ["common"])),
     },
   };
 }

@@ -2,6 +2,7 @@ import MegaNav from "@/components/mega-nav";
 import { defaultLocale } from "@/lib/locales";
 import { Navigation } from "@/lib/navigation";
 import clsx from "clsx";
+import { Trans, useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -17,6 +18,8 @@ export default function BasicLayout({
   const router = useRouter();
   const { locale = defaultLocale } = router.query;
   const localeString = String(locale);
+  const { t } = useTranslation("common");
+
   return (
     <div className="min-h-screen min-h-screen-wk flex flex-col">
       <header className="z-[1] sticky top-0 shadow">
@@ -45,35 +48,58 @@ export default function BasicLayout({
                 Media.
               </p>
               <p>
-                13Vaults.com is free and open source software (FOSS).
-                <br />
-                <a href="https://github.com/13vaults/13vaults.com">
-                  The source code is available here.
-                </a>
+                <Trans
+                  t={t}
+                  i18nKey="footer.foss"
+                  components={{
+                    br: <br />,
+                    github: (
+                      <Link href="https://github.com/13vaults/13vaults.com" />
+                    ),
+                  }}
+                />
               </p>
               <div className="flex gap-1 flex-1 justify-center">
                 <p>
-                  <a rel="me" href="https://dice.camp/@13vaults">
-                    Mastodon
-                  </a>
+                  <Trans
+                    t={t}
+                    i18nKey="footer.mastodon-link"
+                    components={{
+                      mastodon: (
+                        <a rel="me" href="https://dice.camp/@13vaults" />
+                      ),
+                    }}
+                  />
                 </p>
                 <span>&middot;</span>
                 <p>
-                  <Link
-                    hrefLang={localeString}
-                    href={`/${localeString}/privacy/`}
-                  >
-                    Privacy Policy
-                  </Link>
+                  <Trans
+                    t={t}
+                    i18nKey="footer.privacy-link"
+                    components={{
+                      privacy: (
+                        <Link
+                          hrefLang={localeString}
+                          href={`/${localeString}/privacy/`}
+                        />
+                      ),
+                    }}
+                  />
                 </p>
                 <span>&middot;</span>
                 <p>
-                  <Link
-                    hrefLang={localeString}
-                    href={`/${localeString}/legal/`}
-                  >
-                    Legal Information
-                  </Link>
+                  <Trans
+                    t={t}
+                    i18nKey="footer.legal-link"
+                    components={{
+                      legal: (
+                        <Link
+                          hrefLang={localeString}
+                          href={`/${localeString}/legal/`}
+                        />
+                      ),
+                    }}
+                  />
                 </p>
               </div>
             </div>

@@ -6,11 +6,7 @@ import ExportedImage from "next-image-export-optimizer";
 import heroImage from "@/public/images/camelot-spire-butteredbap.webp";
 import Container from "@/components/container";
 import { buildNav, Navigation } from "@/lib/navigation";
-import {
-  GetStaticPathsContext,
-  GetStaticPropsContext,
-  GetStaticPropsResult,
-} from "next";
+import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import {
   allAncestries,
   allClassItems,
@@ -19,25 +15,27 @@ import {
 import Head from "next/head";
 import { defaultLocale, supportedLocales } from "@/lib/locales";
 import { useRouter } from "next/router";
+import { getI18nProperties } from "@/lib/get-static";
+import { useTranslation } from "next-i18next";
 
 const bottomNavItems = [
   {
-    title: "Compendium",
+    title_label: "compendium",
     classes:
       "bg-teal-400/25 hover:bg-teal-400/50 border-teal-400/25 hover:border-teal-400/50",
     large: true,
-    body: "All the information you need to play 13th Age games. From combat rules, character creation, to monster stats—it's all here.",
+    body_label: "compendium-body",
     href: "/compendium/",
   },
   {
-    title: "Guides",
+    title_label: "guides",
     classes: "bg-blue-400/25 cursor-not-allowed border-blue-400/25",
-    body: "Coming Soon!",
+    body_label: "guides-body",
   },
   {
-    title: "Encounter Builder",
+    title_label: "encounter-builder",
     classes: "bg-red-400/25 cursor-not-allowed border-red-400/25",
-    body: "Coming Soon!",
+    body_label: "encounter-builder-body",
   },
 ];
 
@@ -49,6 +47,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
   const router = useRouter();
   const { locale = defaultLocale } = router.query;
   const localeString = String(locale);
+  const { t } = useTranslation("home");
   return (
     <>
       <Head>
@@ -89,13 +88,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
               </svg>
             </h1>
             <div className="prose prose-p:font-display prose-p:font-medium prose-invert prose-p:my-1 prose-p:text-justify prose-p:leading-tight prose-p:text-amber-50">
-              <p>
-                13 Vaults is an unofficial community-driven resource site for
-                13th Age&mdash;a fun and exciting RPG that innovates on the
-                classic d20 system. Inside you&lsquo;ll find many resources and
-                tools for GMs and players alike, from class pages to the full
-                SRD rules reference and much more.
-              </p>
+              <p>{t("intro")}</p>
             </div>
             <div className="flex gap-2 mx-auto">
               <Link
@@ -133,7 +126,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
                     />
                   </g>
                 </svg>
-                <span>Join the Discord</span>
+                <span>{t("join-discord-label")}</span>
               </a>
             </div>
           </div>
@@ -141,7 +134,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
             <Container>
               <p className="text-sm text-amber-700/50">
                 <a href="https://www.deviantart.com/butteredbap/art/Camelot-spire-358955566">
-                  Camelot Spire by butteredbap
+                  {t("image-cite")}
                 </a>
               </p>
             </Container>
@@ -156,7 +149,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
               >
                 {map(bottomNavItems, (item) => (
                   <li
-                    key={item.title}
+                    key={item.title_label}
                     className={clsx({
                       "md:col-span-2": item.large,
                       "md:col-span-1": !item.large,
@@ -171,10 +164,10 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
                         href={`${localeString}${item.href}`}
                       >
                         <h2 className="text-3xl font-display-serif font-semibold">
-                          {item.title}
+                          {t(item.title_label)}
                         </h2>
                         <p className="text-sm leading-tight font-display text-justify text-align-last-center font-medium text-white/75">
-                          {item.body}
+                          {t(item.body_label)}
                         </p>
                       </Link>
                     ) : (
@@ -185,10 +178,10 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
                         )}
                       >
                         <h2 className="text-3xl font-display-serif font-semibold">
-                          {item.title}
+                          {t(item.title_label)}
                         </h2>
                         <p className="text-sm leading-tight font-display text-justify text-align-last-center font-medium text-white/75">
-                          {item.body}
+                          {t(item.body_label)}
                         </p>
                       </div>
                     )}
@@ -221,6 +214,7 @@ export async function getStaticProps(
         classItems: allClassItems,
         ancestries: allAncestries,
       }),
+      ...(await getI18nProperties(context, ["home", "common"])),
     },
   };
 }

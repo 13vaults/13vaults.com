@@ -8,6 +8,7 @@ import {
   Vollkorn_SC,
 } from "next/font/google";
 import Script from "next/script";
+import { appWithTranslation } from "next-i18next";
 
 const barlowSemiCondensed = Barlow_Semi_Condensed({
   subsets: ["latin"],
@@ -37,7 +38,7 @@ const vollkornSc = Vollkorn_SC({
   preload: false,
 });
 
-export default function VaultsApp({ Component, pageProps }: AppProps) {
+function VaultsApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -79,3 +80,5 @@ export default function VaultsApp({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
+export default appWithTranslation(VaultsApp);
