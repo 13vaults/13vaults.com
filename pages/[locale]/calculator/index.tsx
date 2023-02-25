@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { supportedLocales } from "@/lib/locales";
 import { buildNav, Navigation } from "@/lib/navigation";
 import Head from "next/head";
@@ -18,6 +19,12 @@ interface EncounterCalculatorP {
 export default function EncounterCalculator({
   navigation,
 }: EncounterCalculatorP) {
+  const [state, setState] = useState(() => ({
+    playerCount: 4,
+    level: 1,
+    battlecount: 4,
+  }));
+
   return (
     <>
       <Head>
@@ -28,11 +35,57 @@ export default function EncounterCalculator({
         navigation={navigation}
         sideNavigation={
           <>
-            <h1>Nav yo</h1>
+            <p>
+              <label htmlFor="playercount">Players: {state.playerCount}</label>
+            </p>
+            <input
+              type="range"
+              min="1"
+              max="7"
+              value={state.playerCount}
+              onChange={(ev) =>
+                setState((state) => ({
+                  ...state,
+                  playerCount: parseInt(ev.target.value),
+                }))
+              }
+            />
+
+            <p>
+              <label htmlFor="level">Level: {state.level}</label>
+            </p>
+            <input
+              type="range"
+              min="1"
+              max="10"
+              value={state.level}
+              onChange={(ev) =>
+                setState((state) => ({
+                  ...state,
+                  level: parseInt(ev.target.value),
+                }))
+              }
+            />
+
+            <p>
+              <label htmlFor="level">Battles/day: {state.battlecount}</label>
+            </p>
+            <input
+              type="range"
+              min="3"
+              max="4"
+              value={state.battlecount}
+              onChange={(ev) =>
+                setState((state) => ({
+                  ...state,
+                  battlecount: parseInt(ev.target.value),
+                }))
+              }
+            />
           </>
         }
       >
-        <h1>abc</h1>
+        <h1>Player count: {state.playerCount}</h1>
       </VaultLayout>
     </>
   );
