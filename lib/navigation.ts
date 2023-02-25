@@ -83,6 +83,7 @@ export function buildNav({
       },
       {
         labelKey: "nav.encounter-builder-label",
+        href: `/${locale}/calculator`,
       },
     ],
   };
