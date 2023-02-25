@@ -1,7 +1,6 @@
 import { supportedLocales } from "@/lib/locales";
 import { buildNav, Navigation } from "@/lib/navigation";
 import Head from "next/head";
-import BasicLayout from "@/layouts/basic";
 import {
   allAncestries,
   allRulesDocuments,
@@ -10,6 +9,7 @@ import {
 import { map, get } from "lodash";
 import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import { getI18nProperties } from "@/lib/get-static";
+import VaultLayout from "@/layouts/vault";
 
 interface EncounterCalculatorP {
   navigation: Navigation;
@@ -24,11 +24,16 @@ export default function EncounterCalculator({
         <title>Encounter Calculator - 13 Vaults</title>
       </Head>
 
-      <BasicLayout navigation={navigation}>
-        <div className="bg-stone-900 px-4 lg:px-8">
-          <h1>abc</h1>
-        </div>
-      </BasicLayout>
+      <VaultLayout
+        navigation={navigation}
+        sideNavigation={
+          <>
+            <h1>Nav yo</h1>
+          </>
+        }
+      >
+        <h1>abc</h1>
+      </VaultLayout>
     </>
   );
 }
