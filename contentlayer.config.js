@@ -118,24 +118,6 @@ const RulesDocument = defineDocumentType(() => ({
   },
 }));
 
-const Monster = defineDocumentType(() => ({
-  name: "Npc",
-  filePathPattern: "1e/monsters/*.yml",
-  contentType: "data",
-  fields: {
-    name: { type: "string", required: true },
-    system: { type: "json", required: true },
-    items: { type: "list", of: { type: "json" }, required: false },
-  },
-  computedFields: {
-    slug: {
-      type: "string",
-      resolve: (document_) =>
-        document_._raw.sourceFileName.replace(/\.yml$/, ""),
-    },
-  },
-}));
-
 const Ancestry = defineDocumentType(() => ({
   name: "Ancestry",
   filePathPattern: "1e/ancestries/*.mdx",
