@@ -1,7 +1,16 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:unicorn/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:unicorn/recommended"
+  ],
   "rules": {
     "unicorn/no-null": 0,
-    "unicorn/no-nested-ternary": 0
+    "unicorn/no-nested-ternary": 0,
+    "unicorn/no-null": 0
+  },
+  "globals": {
+    "JSX": true,
+    "React": true
   }
 }

@@ -3,3 +3,6 @@
 
 @install:
   pnpm install
+
+@lint:
+  pnpm lint

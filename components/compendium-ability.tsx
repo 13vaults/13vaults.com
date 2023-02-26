@@ -56,10 +56,10 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
               remarkPlugins={[remarkGfm]}
               skipHtml
               components={{
-                a: ({ node, href, ...properties }) => (
+                a: ({ href, ...properties }) => (
                   <Link href={href || "#"} {...properties} />
                 ),
-                table: ({ node, ...properties }: any) => (
+                table: ({ ...properties }: any) => (
                   <div className="overflow-auto border dark:border-stone-700 rounded shadow bg-white dark:bg-stone-700 border-stone-300 my-2">
                     <table {...properties} />
                   </div>
