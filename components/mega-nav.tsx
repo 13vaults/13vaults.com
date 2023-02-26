@@ -117,15 +117,22 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                     )}
                   </Disclosure>
                 ))}
-                <div className="space-y-6 border-t border-stone-700 py-6 px-4">
+                <div className="flex flex-col border-t border-stone-700 py-2">
                   {navigation.pages.map((page) => (
                     <div key={page.labelKey} className="flow-root font-display">
-                      <span
-                        key={page.labelKey}
-                        className="flex items-center font-medium text-stone-600 cursor-not-allowed"
-                      >
-                        {t(page.labelKey)}
-                      </span>
+                      {page.href ? (
+                        <Link
+                          className="flex p-4 items-center font-medium text-stone-200 hover:bg-stone-800 transition-colors"
+                          href={page.href}
+                          onClick={() => setOpen(false)}
+                        >
+                          {t(page.labelKey)}
+                        </Link>
+                      ) : (
+                        <span className="flex p-4 items-center font-medium text-stone-600 cursor-not-allowed">
+                          {t(page.labelKey)}
+                        </span>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -308,7 +315,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                           <Link
                             key={page.href}
                             href={page.href}
-                            className="text-stone-400 font-medium border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
+                            className="items-center -mb-px flex pt-px transition-colors duration-200 ease-out text-stone-400 font-medium border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
                           >
                             {t(page.labelKey)}
                           </Link>
