@@ -90,7 +90,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
             <div className="prose prose-p:font-display prose-p:font-medium prose-invert prose-p:my-1 prose-p:text-justify prose-p:leading-tight prose-p:text-amber-50">
               <p>{t("intro")}</p>
             </div>
-            <div className="flex gap-2 mx-auto">
+            <div className="flex flex-col sm:flex-row gap-2 mx-auto">
               <Link
                 className="flex gap-3 focus:bg-teal-500 hover:bg-teal-500 bg-teal-600 border border-teal-400/50 hover:border-teal-400 rounded pl-8 pr-12 py-3 shadow transition-colors font-display font-semibold items-center"
                 hrefLang={localeString}
