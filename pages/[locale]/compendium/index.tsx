@@ -38,11 +38,13 @@ export default function CompendiumCategoryPage({
                 key={subnav.href}
                 header={<Link href={subnav.href}>{t(subnav.labelKey)}</Link>}
               >
-                {map(subnav.items ?? [], (item) => (
-                  <div key={item.href} className="font-medium">
-                    <Link href={item.href}>{item.name}</Link>
-                  </div>
-                ))}
+                <div className="grid grid-cols-2">
+                  {map(subnav.items ?? [], (item) => (
+                    <div key={item.href} className="font-medium">
+                      <Link href={item.href}>{item.name}</Link>
+                    </div>
+                  ))}
+                </div>
               </CompendiumContentSection>
             ))}
           </div>
