@@ -7,7 +7,7 @@ import {
   allRulesDocuments,
   allClassItems,
 } from "@/.contentlayer/generated";
-import { map, get, toInteger } from "lodash";
+import { map, get } from "lodash";
 import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import { getI18nProperties } from "@/lib/get-static";
 import VaultLayout from "@/layouts/vault";
@@ -118,7 +118,7 @@ export async function getStaticProps(
         classItems: allClassItems,
         ancestries: allAncestries,
       }),
-      ...(await getI18nProperties(context, ["home", "common"])),
+      ...(await getI18nProperties(context, ["common", "calculator"])),
     },
   };
 }

@@ -1,0 +1,11 @@
+{
+  "budget": "Budget for a standard battle:",
+  "budgetresult": "{{meq}} MEQ",
+  "monsterlevel": "Monster level",
+  "standard": "Standard / {{mooks}} mooks",
+  "elite": "Elite / {{mooks}} mooks",
+  "large": "2x / large / {{mooks}} mooks",
+  "huge": "3x / huge / {{mooks}} mooks",
+  "footnote1": "* Be careful. A monster like this might pack an uncomfortable amount of damage into a single swing.",
+  "footnote2": "** Probably a mistake to build a battle around monsters that dish out damage like these do."
+}

@@ -1,4 +1,7 @@
+import { getI18nProperties } from "@/lib/get-static";
 import { toInteger } from "lodash";
+import { GetStaticPropsContext, GetStaticPropsResult } from "next";
+import { useTranslation } from "next-i18next";
 
 interface EncounterTableP {
   playerCount: number;
@@ -21,21 +24,23 @@ export default function EncounterTable({
   const parLevelBase = level < 5 ? level : level < 8 ? level + 1 : level + 2;
   const parLevel = battlecount === 4 ? parLevelBase : parLevelBase + 1;
 
+  const { t } = useTranslation("calculator");
+
   return (
     <>
       <p>
-        Budget for a standard battle: <strong>{meqBudget} MEQ</strong>
+        {t("budget")} <strong>{t("budgetresult", { meq: meqBudget })}</strong>
       </p>
 
       <div className="overflow-auto border dark:border-stone-700 rounded shadow bg-white dark:bg-stone-700 border-stone-300 my-2">
         <table>
           <thead>
             <tr>
-              <th>Monster level</th>
-              <th>Standard / {mookFactor} mooks</th>
-              <th>Elite / {eliteMookFactor} mooks</th>
-              <th>2x / large / {mookFactor * 2} mooks</th>
-              <th>3x / huge / {mookFactor * 3} mooks</th>
+              <th>{t("monsterlevel")}</th>
+              <th>{t("standard", { mooks: mookFactor })}</th>
+              <th>{t("elite", { mooks: eliteMookFactor })}</th>
+              <th>{t("large", { mooks: mookFactor * 2 })}</th>
+              <th>{t("huge", { mooks: mookFactor * 3 })}</th>
             </tr>
           </thead>
           <tbody>
@@ -89,16 +94,10 @@ export default function EncounterTable({
       </div>
 
       <p>
-        <em>
-          * Be careful. A monster like this might pack an uncomfortable amount
-          of damage into a single swing.
-        </em>
+        <em>{t("footnote1")}</em>
       </p>
       <p>
-        <em>
-          ** Probably a mistake to build a battle around monsters that dish out
-          damage like these do.
-        </em>
+        <em>{t("footnote2")}</em>
       </p>
     </>
   );
