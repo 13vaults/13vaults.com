@@ -92,7 +92,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
             </div>
             <div className="flex flex-col sm:flex-row gap-2 mx-auto">
               <Link
-                className="flex gap-3 focus:bg-teal-500 hover:bg-teal-500 bg-teal-600 border border-teal-400/50 hover:border-teal-400 rounded pl-6 md:pl-8 pr-10 md:pr-12 py-2 md:py-3 shadow transition-colors font-display font-semibold items-center"
+                className="flex gap-3 focus:bg-teal-500 hover:bg-teal-500 bg-teal-600 border border-teal-400/50 hover:border-teal-400 rounded pl-8 pr-12 py-3 shadow transition-colors font-display font-semibold items-center"
                 hrefLang={localeString}
                 href={`/${localeString}/compendium`}
               >
@@ -110,13 +110,13 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
                 <span>Enter the Vaults</span>
               </Link>
               <a
-                className="flex gap-3 focus:bg-indigo-600/50 hover:bg-indigo-600/50 bg-indigo-600/20 border border-indigo-500/50 hover:border-indigo-500 rounded pl-6 md:pl-8 pr-10 md:pr-12 py-2 md:py-3 shadow transition-colors font-display font-semibold items-center"
+                className="flex gap-3 focus:bg-indigo-600/50 hover:bg-indigo-600/50 bg-indigo-600/20 border border-indigo-500/50 hover:border-indigo-500 rounded pl-8 pr-12 py-3 shadow transition-colors font-display font-semibold items-center"
                 href="https://discord.gg/m9DbPC6RsC"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 127.14 96.36"
-                  className="h-5"
+                  className="h-5 w-5"
                   fill="currentColor"
                 >
                   <g>
