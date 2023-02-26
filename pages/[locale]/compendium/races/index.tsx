@@ -16,6 +16,7 @@ import CompendiumContentHero from "@/components/compendium-content-hero";
 import { Trans, useTranslation } from "next-i18next";
 import { useMemo } from "react";
 import { PickPartial } from "@/utils";
+import CompendiumTitle from "@/components/compendium-title";
 
 type AncestryListing = PickPartial<
   Ancestry,
@@ -58,6 +59,7 @@ export default function AncestriesPage({
         <title>Races - 13 Vaults</title>
       </Head>
       <CompendiumCategoryIndexLayout navigation={navigation}>
+        <CompendiumTitle className="mt-2 mb-6">{t("title")}</CompendiumTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {map(ancestries, (ancestry) => (
             <CompendiumContentHero
