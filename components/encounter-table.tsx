@@ -1,6 +1,4 @@
-import { getI18nProperties } from "@/lib/get-static";
 import { toInteger } from "lodash";
-import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import { useTranslation } from "next-i18next";
 
 interface EncounterTableP {

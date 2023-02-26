@@ -1,6 +1,7 @@
 {
   "extends": ["next/core-web-vitals", "plugin:unicorn/recommended"],
   "rules": {
-    "unicorn/no-null": 0
+    "unicorn/no-null": 0,
+    "unicorn/no-nested-ternary": 0
   }
 }

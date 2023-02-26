@@ -46,10 +46,10 @@ export default function EncounterCalculator({
               min="1"
               max="7"
               value={state.playerCount}
-              onChange={(ev) =>
+              onChange={(event) =>
                 setState((state) => ({
                   ...state,
-                  playerCount: parseInt(ev.target.value),
+                  playerCount: Number.parseInt(event.target.value),
                 }))
               }
             />
@@ -62,10 +62,10 @@ export default function EncounterCalculator({
               min="1"
               max="10"
               value={state.level}
-              onChange={(ev) =>
+              onChange={(event) =>
                 setState((state) => ({
                   ...state,
-                  level: parseInt(ev.target.value),
+                  level: Number.parseInt(event.target.value),
                 }))
               }
             />
@@ -78,10 +78,10 @@ export default function EncounterCalculator({
               min="3"
               max="4"
               value={state.battleCount}
-              onChange={(ev) =>
+              onChange={(event) =>
                 setState((state) => ({
                   ...state,
-                  battleCount: parseInt(ev.target.value),
+                  battleCount: Number.parseInt(event.target.value),
                 }))
               }
             />
