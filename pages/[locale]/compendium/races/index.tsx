@@ -2,22 +2,28 @@ import {
   allAncestries,
   allClassItems,
   allRulesDocuments,
+  Ancestry,
 } from "contentlayer/generated";
 import { get, map, pick } from "lodash";
 import { GetStaticPathsContext, GetStaticPropsResult } from "next";
-import Link from "next/link";
 import CompendiumCategoryIndexLayout from "@/layouts/compendium-category-index";
 import Head from "next/head";
 import { buildNav, Navigation } from "@/lib/navigation";
 import { useRouter } from "next/router";
 import { defaultLocale, supportedLocales } from "@/lib/locales";
 import { getI18nProperties } from "@/lib/get-static";
+import CompendiumContentHero from "@/components/compendium-content-hero";
+import { Trans, useTranslation } from "next-i18next";
+import { useMemo } from "react";
+import { PickPartial } from "@/utils";
+
+type AncestryListing = PickPartial<
+  Ancestry,
+  "slug" | "name" | "abilities" | "ability_scores" | "page_dress"
+>;
 
 interface AncestriesPageP {
-  ancestries: {
-    slug: string;
-    name: string;
-  }[];
+  ancestries: AncestryListing[];
   navigation: Navigation;
 }
 
@@ -28,24 +34,93 @@ export default function AncestriesPage({
   const router = useRouter();
   const { locale = defaultLocale } = router.query;
   const localeString = String(locale);
+  const { t } = useTranslation("ancestries");
+  const listFormatter = useMemo(
+    () =>
+      new Intl.ListFormat(localeString, {
+        style: "short",
+        type: "disjunction",
+      }),
+    [localeString]
+  );
+  const powerListFormatter = useMemo(
+    () =>
+      new Intl.ListFormat(localeString, {
+        style: "narrow",
+        type: "conjunction",
+      }),
+    [localeString]
+  );
+
   return (
     <>
       <Head>
         <title>Races - 13 Vaults</title>
       </Head>
       <CompendiumCategoryIndexLayout navigation={navigation}>
-        <ul>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {map(ancestries, (ancestry) => (
-            <li key={ancestry.slug}>
-              <Link
-                hrefLang={localeString}
-                href={`/${localeString}/compendium/races/${ancestry.slug}`}
-              >
-                {ancestry.name}
-              </Link>
-            </li>
+            <CompendiumContentHero
+              key={ancestry.slug}
+              title={ancestry.name}
+              description={
+                ancestry.page_dress?.lead ? (
+                  <p className="text-sm">{ancestry.page_dress.lead}</p>
+                ) : null
+              }
+              detailsHref={`/${localeString}/compendium/races/${ancestry.slug}`}
+              detailsLabel={t("ancestry-details-button-label", {
+                ancestry: ancestry.name,
+              })}
+            >
+              <ul>
+                {ancestry.ability_scores ? (
+                  <li>
+                    <Trans
+                      t={t}
+                      i18nKey="ability-scores-label"
+                      values={{
+                        abilityScores: listFormatter.format(
+                          map(
+                            map(
+                              ancestry.ability_scores,
+                              (score) => score || ""
+                            ),
+                            (ability) => t(ability)
+                          )
+                        ),
+                      }}
+                      components={{ strong: <strong /> }}
+                    />
+                  </li>
+                ) : (
+                  <li>
+                    <Trans
+                      t={t}
+                      i18nKey="ability-scores-any-label"
+                      components={{ strong: <strong /> }}
+                    />
+                  </li>
+                )}
+                <li>
+                  <Trans
+                    t={t}
+                    i18nKey="powers-label"
+                    values={{
+                      powers: powerListFormatter.format(
+                        map(
+                          ancestry.abilities,
+                          (ability) => ability?.name || ""
+                        )
+                      ),
+                    }}
+                    components={{ strong: <strong /> }}
+                  />
+                </li>
+              </ul>
+            </CompendiumContentHero>
           ))}
-        </ul>
+        </div>
       </CompendiumCategoryIndexLayout>
     </>
   );
@@ -64,7 +139,13 @@ export async function getStaticProps(
   return {
     props: {
       ancestries: map(allAncestries, (ancestry) =>
-        pick(ancestry, ["slug", "name"])
+        pick(ancestry, [
+          "slug",
+          "name",
+          "ability_scores",
+          "abilities",
+          "page_dress",
+        ])
       ),
       navigation: buildNav({
         locale: get(context, "params.locale"),
@@ -72,7 +153,7 @@ export async function getStaticProps(
         classItems: allClassItems,
         ancestries: allAncestries,
       }),
-      ...(await getI18nProperties(context, ["common"])),
+      ...(await getI18nProperties(context, ["ancestries", "common"])),
     },
   };
 }

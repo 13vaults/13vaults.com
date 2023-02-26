@@ -1,0 +1,13 @@
+{
+  "title": "Ancestries",
+  "ancestry-details-button-label": "{{ancestry}} details",
+  "ability-scores-label": "<strong>Ability scores:</strong> {{abilityScores}}",
+  "ability-scores-any-label": "<strong>Ability scores:</strong> Any",
+  "powers-label": "<strong>Racial powers:</strong> {{powers}}",
+  "strength": "Strength",
+  "dexterity": "Dexterity",
+  "constitution": "Constitution",
+  "intelligence": "Intelligence",
+  "wisdom": "Wisdom",
+  "charisma": "Charisma"
+}

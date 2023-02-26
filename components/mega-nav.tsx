@@ -309,20 +309,20 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                   </Popover.Group>
 
                   <div className="flex flex-1 gap-8 justify-between">
-                    <div className="flex gap-8">
+                    <div className="flex gap-8 font-medium">
                       {navigation.pages.map((page) =>
                         page.href ? (
                           <Link
                             key={page.href}
                             href={page.href}
-                            className="items-center -mb-px flex pt-px transition-colors duration-200 ease-out text-stone-400 font-medium border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
+                            className="items-center -mb-px flex pt-px transition-colors duration-200 ease-out text-stone-400 border-b-2 hover:text-teal-600 focus:text-teal-600 border-transparent focus:hover:border-teal-600 hover:border-teal-600"
                           >
                             {t(page.labelKey)}
                           </Link>
                         ) : (
                           <span
                             key={page.labelKey}
-                            className="flex items-center font-medium text-stone-600 cursor-not-allowed"
+                            className="flex items-center text-stone-600 cursor-not-allowed"
                           >
                             {t(page.labelKey)}
                           </span>

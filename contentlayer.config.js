@@ -127,6 +127,21 @@ const Ancestry = defineDocumentType(() => ({
     source: { type: "string", required: true },
     page_dress: { type: "nested", of: PageDress, required: false },
     abilities: { type: "list", of: Ability, required: false },
+    ability_scores: {
+      type: "list",
+      of: {
+        type: "enum",
+        options: [
+          "strength",
+          "dexterity",
+          "constitution",
+          "intelligence",
+          "wisdom",
+          "charisma",
+        ],
+      },
+      required: false,
+    },
   },
   computedFields: {
     slug: {
@@ -159,6 +174,32 @@ const ClassItem = defineDocumentType(() => ({
     source: { type: "string", required: true },
     page_dress: { type: "nested", of: PageDress, required: false },
     abilities: { type: "list", of: Ability, required: false },
+    ability_scores: {
+      type: "list",
+      of: {
+        type: "enum",
+        options: [
+          "strength",
+          "dexterity",
+          "constitution",
+          "intelligence",
+          "wisdom",
+          "charisma",
+        ],
+      },
+      required: true,
+    },
+    recoveries: { type: "number", required: true },
+    recovery_die: {
+      type: "enum",
+      options: ["d4", "d6", "d8", "d10", "d12"],
+      required: true,
+    },
+    best_damage_die: {
+      type: "enum",
+      options: ["d4", "d6", "d8", "d10", "d12"],
+      required: true,
+    },
   },
   computedFields: {
     slug: {

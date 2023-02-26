@@ -9,9 +9,10 @@ import {
   allRulesDocuments,
 } from "@/.contentlayer/generated";
 import { get, map } from "lodash";
-import { useRouter } from "next/router";
-import { defaultLocale, supportedLocales } from "@/lib/locales";
+import { supportedLocales } from "@/lib/locales";
 import { getI18nProperties } from "@/lib/get-static";
+import { useTranslation } from "next-i18next";
+import CompendiumContentSection from "@/components/compendium-content-section";
 
 interface CompendiumCategoryPageP {
   navigation: Navigation;
@@ -20,30 +21,32 @@ interface CompendiumCategoryPageP {
 export default function CompendiumCategoryPage({
   navigation,
 }: CompendiumCategoryPageP) {
-  const router = useRouter();
-  const { locale = defaultLocale } = router.query;
-  const localeString = String(locale);
+  const { t } = useTranslation("common");
   return (
     <>
       <Head>
         <title>Compendium - 13 Vaults</title>
       </Head>
       <CompendiumCategoryIndexLayout navigation={navigation}>
-        <ul>
-          <li>
-            <Link href={`/${localeString}/compendium/basic-rules`}>
-              Basic Rules
-            </Link>
-          </li>
-          <li>
-            <Link href={`/${localeString}/compendium/races`}>Races</Link>
-          </li>
-          <li>
-            <Link href={`/${localeString}/compendium/classes`}>Classes</Link>
-          </li>
-          <li>Monsters</li>
-          <li>Magic Items</li>
-        </ul>
+        {map(navigation.main, (mainNavItem) => (
+          <div
+            key={mainNavItem.labelKey}
+            className="flex flex-col gap-4 text-stone-900"
+          >
+            {map(mainNavItem.subnavs, (subnav) => (
+              <CompendiumContentSection
+                key={subnav.href}
+                header={<Link href={subnav.href}>{t(subnav.labelKey)}</Link>}
+              >
+                {map(subnav.items ?? [], (item) => (
+                  <div key={item.href} className="font-medium">
+                    <Link href={item.href}>{item.name}</Link>
+                  </div>
+                ))}
+              </CompendiumContentSection>
+            ))}
+          </div>
+        ))}
       </CompendiumCategoryIndexLayout>
     </>
   );

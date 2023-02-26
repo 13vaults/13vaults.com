@@ -43,10 +43,10 @@ export function buildNav({
   return {
     main: [
       {
-        labelKey: "nav.compendium-label",
+        labelKey: "compendium-label",
         subnavs: [
           {
-            labelKey: "nav.compendium-basic-rules-label",
+            labelKey: "compendium-basic-rules-label",
             href: `/${locale}/compendium/basic-rules/`,
             items: map(
               filter(rulesDocuments, ["locale", locale]),
@@ -57,7 +57,7 @@ export function buildNav({
             ),
           },
           {
-            labelKey: "nav.compendium-ancestries-label",
+            labelKey: "compendium-ancestries-label",
             href: `/${locale}/compendium/races/`,
             large: true,
             items: map(filter(ancestries, ["locale", locale]), (ancestry) => ({
@@ -66,7 +66,7 @@ export function buildNav({
             })),
           },
           {
-            labelKey: "nav.compendium-classes-label",
+            labelKey: "compendium-classes-label",
             href: `/${locale}/compendium/classes`,
             large: true,
             items: map(filter(classItems, ["locale", locale]), (classItem) => ({
@@ -79,13 +79,13 @@ export function buildNav({
     ],
     pages: [
       {
-        labelKey: "nav.guides-label",
+        labelKey: "guides-label",
       },
       {
-        labelKey: "nav.encounter-builder-label",
+        labelKey: "encounter-builder-label",
       },
       {
-        labelKey: "nav.battle-calculator-label",
+        labelKey: "battle-calculator-label",
         href: `/${locale}/calculator`,
       },
     ],

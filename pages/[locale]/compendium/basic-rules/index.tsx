@@ -5,7 +5,7 @@ import {
   allClassItems,
 } from "@/.contentlayer/generated";
 import CompendiumCategoryIndexLayout from "@/layouts/compendium-category-index";
-import { find, map, pick } from "lodash";
+import { chunk, get, map, pick } from "lodash";
 import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -13,10 +13,13 @@ import { buildNav, Navigation } from "@/lib/navigation";
 import { useRouter } from "next/router";
 import { defaultLocale, supportedLocales } from "@/lib/locales";
 import { getI18nProperties } from "@/lib/get-static";
+import CompendiumContentSection from "@/components/compendium-content-section";
+import { PickPartial } from "@/utils";
 
-type PickPartial<T, K extends keyof T> = { [P in K]: Partial<T[P]> };
-
-type DocumentListing = PickPartial<RulesDocument, "slug" | "title">;
+type DocumentListing = PickPartial<
+  RulesDocument,
+  "slug" | "title" | "sections"
+>;
 
 interface BasicRulesPageP {
   rulesDocuments: DocumentListing[];
@@ -30,18 +33,6 @@ export default function BasicRulesPage({
   const router = useRouter();
   const { locale = defaultLocale } = router.query;
   const localeString = String(locale);
-  const combatRulesDocument = find(rulesDocuments, [
-    "slug",
-    "combat-rules",
-  ]) as DocumentListing;
-  const runningTheGameDocument = find(rulesDocuments, [
-    "slug",
-    "running-the-game",
-  ]) as DocumentListing;
-  const characterCreationDocument = find(rulesDocuments, [
-    "slug",
-    "character-creation",
-  ]) as DocumentListing;
 
   return (
     <>
@@ -49,31 +40,51 @@ export default function BasicRulesPage({
         <title>Basic Rules - 13 Vaults</title>
       </Head>
       <CompendiumCategoryIndexLayout navigation={navigation}>
-        <nav>
-          <ol>
-            <li>
-              <Link
-                href={`/${localeString}/compendium/basic-rules/${combatRulesDocument.slug}`}
-              >
-                {combatRulesDocument.title}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={`/${localeString}/compendium/basic-rules/${runningTheGameDocument.slug}`}
-              >
-                {runningTheGameDocument.title}
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={`/${localeString}/compendium/basic-rules/${characterCreationDocument.slug}`}
-              >
-                {characterCreationDocument.title}
-              </Link>
-            </li>
-          </ol>
-        </nav>
+        <div className="flex flex-col gap-4">
+          {map(rulesDocuments, (document) => (
+            <CompendiumContentSection
+              key={document.slug}
+              header={
+                <Link
+                  href={`/${localeString}/compendium/basic-rules/${document.slug}`}
+                >
+                  {document.title}
+                </Link>
+              }
+            >
+              <ol role="list" className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {map(
+                  chunk(
+                    document.sections,
+                    Math.ceil(document.sections.length / 2)
+                  ),
+                  (sectionChunk, index) => (
+                    <li key={index}>
+                      <ol
+                        className="list-decimal list-inside flex flex-col gap-4"
+                        start={
+                          index * Math.ceil(document.sections.length / 2) + 1
+                        }
+                      >
+                        {map(sectionChunk, (section) => (
+                          <li key={get(section, "id")}>
+                            <Link
+                              href={`/${localeString}/compendium/basic-rules/${
+                                document.slug
+                              }#${get(section, "id")}`}
+                            >
+                              {get(section, "title")}
+                            </Link>
+                          </li>
+                        ))}
+                      </ol>
+                    </li>
+                  )
+                )}
+              </ol>
+            </CompendiumContentSection>
+          ))}
+        </div>
       </CompendiumCategoryIndexLayout>
     </>
   );
@@ -95,7 +106,7 @@ export async function getStaticProps(
   return {
     props: {
       rulesDocuments: map(allRulesDocuments, (rulesDocument) =>
-        pick(rulesDocument, ["slug", "title"])
+        pick(rulesDocument, ["slug", "title", "sections"])
       ),
       navigation: buildNav({
         rulesDocuments: allRulesDocuments,
