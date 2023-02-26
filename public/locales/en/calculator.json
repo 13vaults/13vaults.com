@@ -1,4 +1,8 @@
 {
+  "title": "Battle Budget Calculator",
+  "form-players-label": "Players: {{players}}",
+  "form-level-label": "Level: {{level}}",
+  "form-daily-battles-label": "Battles/day: {{battles}}",
   "budget": "Budget for a standard battle:",
   "budgetresult": "{{meq}} MEQ",
   "monsterlevel": "Monster level",

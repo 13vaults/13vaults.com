@@ -12,6 +12,7 @@ import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import { getI18nProperties } from "@/lib/get-static";
 import VaultLayout from "@/layouts/vault";
 import EncounterTable from "@/components/encounter-table";
+import { useTranslation } from "next-i18next";
 
 interface EncounterCalculatorP {
   navigation: Navigation;
@@ -26,6 +27,8 @@ export default function EncounterCalculator({
     level: 1,
   }));
 
+  const { t } = useTranslation("calculator");
+
   // Calculate the values
 
   return (
@@ -39,12 +42,15 @@ export default function EncounterCalculator({
         sideNavigation={
           <>
             <p>
-              <label htmlFor="playercount">Players: {state.playerCount}</label>
+              <label htmlFor="playercount">
+                {t("form-players-label", { players: state.playerCount })}
+              </label>
             </p>
             <input
               type="range"
               min="1"
               max="7"
+              id="playercount"
               value={state.playerCount}
               onChange={(event) =>
                 setState((state) => ({
@@ -55,9 +61,12 @@ export default function EncounterCalculator({
             />
 
             <p>
-              <label htmlFor="level">Level: {state.level}</label>
+              <label htmlFor="level">
+                {t("form-level-label", { level: state.level })}
+              </label>
             </p>
             <input
+              id="level"
               type="range"
               min="1"
               max="10"
@@ -71,9 +80,12 @@ export default function EncounterCalculator({
             />
 
             <p>
-              <label htmlFor="level">Battles/day: {state.battleCount}</label>
+              <label htmlFor="battle-count">
+                {t("form-daily-battles-label", { battles: state.battleCount })}
+              </label>
             </p>
             <input
+              id="battle-count"
               type="range"
               min="3"
               max="4"
@@ -88,7 +100,7 @@ export default function EncounterCalculator({
           </>
         }
       >
-        <h1>Battle Budget Calculator</h1>
+        <h1>{t("title")}</h1>
 
         <EncounterTable
           playerCount={state.playerCount}
