@@ -83,6 +83,9 @@ export function buildNav({
       },
       {
         labelKey: "nav.encounter-builder-label",
+      },
+      {
+        labelKey: "nav.battle-calculator-label",
         href: `/${locale}/calculator`,
       },
     ],
