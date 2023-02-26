@@ -38,7 +38,7 @@ export default function CompendiumCategoryPage({
                 key={subnav.href}
                 header={<Link href={subnav.href}>{t(subnav.labelKey)}</Link>}
               >
-                <div className="grid grid-cols-2">
+                <div className="grid grid-cols-2 gap-2">
                   {map(subnav.items ?? [], (item) => (
                     <div key={item.href} className="font-medium">
                       <Link href={item.href}>{item.name}</Link>
