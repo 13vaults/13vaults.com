@@ -79,6 +79,10 @@ export function buildNav({
     ],
     pages: [
       {
+        labelKey: "blog-label",
+        href: `/${locale}/blog`,
+      },
+      {
         labelKey: "guides-label",
       },
       {

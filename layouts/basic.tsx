@@ -43,10 +43,7 @@ export default function BasicLayout({
               />
             </svg>
             <div className="prose prose-sm prose-invert prose-p:my-0 prose-p:leading-tight text-xs text-justify text-align-last-center text-white/50 font-display font-medium">
-              <p>
-                13Vaults.com is not affilliated with Pelgrane Press or Fire Opal
-                Media.
-              </p>
+              <p>{t("footer.not-affiliated")}</p>
               <p>
                 <Trans
                   t={t}

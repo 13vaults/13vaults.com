@@ -7,6 +7,7 @@ import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import GithubSlugger from "github-slugger";
 import { defaultLocale } from "./lib/locales";
+import remarkSmartypants from "remark-smartypants";
 
 function getLocaleFromPath(path) {
   const pathArray = path.split(".");
@@ -147,7 +148,6 @@ const Ancestry = defineDocumentType(() => ({
     slug: {
       type: "string",
       resolve: (document_) => {
-        console.log(document_._raw.sourceFileName);
         return document_._raw.sourceFileName.split(".").length === 3
           ? // handle filenames with locale in the name
             document_._raw.sourceFileName.split(".")[0]
@@ -217,11 +217,40 @@ const ClassItem = defineDocumentType(() => ({
   },
 }));
 
+const BlogPost = defineDocumentType(() => ({
+  name: "BlogPost",
+  filePathPattern: "blog/*.mdx",
+  contentType: "mdx",
+  fields: {
+    title: { type: "string", required: true },
+    date: { type: "date", required: true },
+    excerpt: { type: "string", required: true },
+    published: {
+      type: "boolean",
+      default: false,
+      description: "Set to `true` when publishing.",
+    },
+  },
+  computedFields: {
+    slug: {
+      type: "string",
+      resolve: (document_) =>
+        document_._raw.sourceFileName.replace(/\.mdx$/, ""),
+    },
+    locale: {
+      type: "string",
+      resolve: (document_) => {
+        return getLocaleFromPath(document_._raw.sourceFilePath);
+      },
+    },
+  },
+}));
+
 const contentLayerConfig = makeSource({
   contentDirPath: "content",
-  documentTypes: [BasicPage, ClassItem, Ancestry, RulesDocument],
+  documentTypes: [BlogPost, BasicPage, ClassItem, Ancestry, RulesDocument],
   mdx: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm, remarkSmartypants],
     rehypePlugins: [rehypeSlug],
   },
 });

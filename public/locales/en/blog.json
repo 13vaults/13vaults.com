@@ -1,0 +1,7 @@
+{
+  "html-title": "13 Vaults Blog",
+  "post-html-title": "{{title}} - 13 Vaults Blog",
+  "title": "13 Vaults Blog",
+  "published-on-label": "Published on {{date}}",
+  "no-posts": "No posts ☹️"
+}

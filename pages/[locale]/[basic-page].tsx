@@ -27,7 +27,7 @@ export default function VaultsBasicPage({
   return (
     <>
       <Head>
-        <title>{pageData.title}</title>
+        <title>{pageData.title} - 13 Vaults</title>
       </Head>
       <BasicLayout navigation={navigation}>
         <div className="p-4 lg:p-8 bg-stone-50 dark:bg-stone-900 flex-1">
