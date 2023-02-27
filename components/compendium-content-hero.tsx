@@ -15,14 +15,14 @@ export default function CompendiumContentHero({
   detailsLabel: ReactNode;
 }) {
   return (
-    <section className="flex flex-col gap-4 p-4 bg-stone-50 dark:bg-stone-600 bg-gradient-to-tl from-amber-50/25 to-stone-50 dark:from-amber-900/25 dark:to-stone-700 shadow relative content-center justify-center rounded text-stone-900 dark:text-stone-50">
+    <section className="flex flex-col gap-4 p-4 bg-stone-50 dark:bg-stone-900 bg-gradient-to-tl from-teal-50/25 to-stone-50 dark:from-teal-900/25 dark:to-transparent shadow relative content-center justify-center rounded text-stone-900 dark:text-stone-50">
       <header>
         <h1 className="text-xl font-display-serif font-semibold">{title}</h1>
       </header>
       <div className="flex-1">{description}</div>
       <div className="text-sm">{children}</div>
       <Link
-        className="p-2 bg-sky-500 dark:bg-sky-700 text-white block rounded shadow shadow-sky-600 dark:shadow-sky-800 transition-colors hover:bg-sky-400 dark:hover:bg-sky-600 text-shadow uppercase font-display font-medium text-center"
+        className="p-2 bg-teal-500 dark:bg-teal-700 text-white block rounded shadow shadow-teal-600 dark:shadow-teal-800 transition-colors hover:bg-teal-400 dark:hover:bg-teal-600 text-shadow uppercase font-display font-medium text-center"
         href={detailsHref}
       >
         {detailsLabel}
