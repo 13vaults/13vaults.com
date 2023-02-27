@@ -99,14 +99,12 @@ export async function getStaticProps(
 ): Promise<GetStaticPropsResult<BlogIndexPageP>> {
   return {
     props: {
-      blogPosts:
-        [] ||
-        map(
-          process.env.NODE_ENV === "production"
-            ? filter(allBlogPosts, ["published", true])
-            : allBlogPosts,
-          (post) => pick(post, ["title", "date", "excerpt", "slug"])
-        ),
+      blogPosts: map(
+        process.env.NODE_ENV === "production"
+          ? filter(allBlogPosts, ["published", true])
+          : allBlogPosts,
+        (post) => pick(post, ["title", "date", "excerpt", "slug"])
+      ),
       navigation: buildNav({
         locale: String(get(context, "params.locale")),
         rulesDocuments: allRulesDocuments,
