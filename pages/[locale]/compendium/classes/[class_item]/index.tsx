@@ -46,7 +46,10 @@ export async function getStaticProps(
   context: NextPageContext
 ): Promise<GetStaticPropsResult<ClassPageP>> {
   const classItem = flow((classes) =>
-    find(classes, ["slug", get(context, "params.class_item")])
+    find(classes, {
+      slug: get(context, "params.class_item"),
+      locale: get(context, "params.locale", defaultLocale),
+    })
   )(allClassItems);
 
   return {

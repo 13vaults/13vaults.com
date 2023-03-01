@@ -42,7 +42,10 @@ export async function getStaticProps(
   context: NextPageContext
 ): Promise<GetStaticPropsResult<AncestryPageP>> {
   const ancestry = flow((ancestries) =>
-    find(ancestries, ["slug", get(context, "params.ancestry")])
+    find(ancestries, {
+      slug: get(context, "params.ancestry"),
+      locale: get(context, "params.locale", defaultLocale),
+    })
   )(allAncestries);
 
   return {

@@ -47,10 +47,10 @@ export async function getStaticPaths() {
 export async function getStaticProps(
   context: NextPageContext
 ): Promise<GetStaticPropsResult<RulesDocumentPageP>> {
-  const rulesDocument = find(allRulesDocuments, [
-    "slug",
-    get(context, "params.rules_document"),
-  ]);
+  const rulesDocument = find(allRulesDocuments, {
+    slug: get(context, "params.rules_document"),
+    locale: get(context, "params.locale", defaultLocale),
+  });
 
   return {
     props: {
