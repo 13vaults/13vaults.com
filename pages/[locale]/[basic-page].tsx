@@ -66,10 +66,15 @@ export async function getStaticPaths() {
 export async function getStaticProps(
   context: NextPageContext
 ): Promise<GetStaticPropsResult<VaultsBasicPageP>> {
-  const pageData = find(allBasicPages, {
-    slug: get(context, "params.basic-page"),
-    locale: get(context, "params.locale", defaultLocale),
-  })!;
+  const pageData =
+    find(allBasicPages, {
+      slug: get(context, "params.basic-page"),
+      locale: get(context, "params.locale"),
+    }) ||
+    find(allBasicPages, {
+      slug: get(context, "params.basic-page"),
+      locale: defaultLocale,
+    })!;
   return {
     props: {
       pageData,

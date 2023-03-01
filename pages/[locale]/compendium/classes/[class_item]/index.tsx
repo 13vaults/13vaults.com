@@ -4,7 +4,7 @@ import {
   allAncestries,
   allRulesDocuments,
 } from "contentlayer/generated";
-import { flow, find, map, get, flatMap } from "lodash";
+import { find, map, get, flatMap } from "lodash";
 import { GetStaticPropsResult, NextPageContext } from "next";
 import ContentLayerPage from "@/components/content-layer-page";
 import { buildNav, Navigation } from "@/lib/navigation";
@@ -45,12 +45,15 @@ export async function getStaticPaths() {
 export async function getStaticProps(
   context: NextPageContext
 ): Promise<GetStaticPropsResult<ClassPageP>> {
-  const classItem = flow((classes) =>
-    find(classes, {
+  const classItem =
+    find(allClassItems, {
       slug: get(context, "params.class_item"),
-      locale: get(context, "params.locale", defaultLocale),
-    })
-  )(allClassItems);
+      locale: get(context, "params.locale"),
+    }) ||
+    find(allClassItems, {
+      slug: get(context, "params.class_item"),
+      locale: defaultLocale,
+    })!;
 
   return {
     props: {

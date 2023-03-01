@@ -47,14 +47,19 @@ export async function getStaticPaths() {
 export async function getStaticProps(
   context: NextPageContext
 ): Promise<GetStaticPropsResult<RulesDocumentPageP>> {
-  const rulesDocument = find(allRulesDocuments, {
-    slug: get(context, "params.rules_document"),
-    locale: get(context, "params.locale", defaultLocale),
-  });
+  const rulesDocument =
+    find(allRulesDocuments, {
+      slug: get(context, "params.rules_document"),
+      locale: get(context, "params.locale"),
+    }) ||
+    find(allRulesDocuments, {
+      slug: get(context, "params.rules_document"),
+      locale: defaultLocale,
+    });
 
   return {
     props: {
-      rulesDocument: rulesDocument!,
+      rulesDocument: rulesDocument || null!,
       navigation: buildNav({
         locale: String(get(context, "params.locale", defaultLocale)),
         rulesDocuments: allRulesDocuments,
