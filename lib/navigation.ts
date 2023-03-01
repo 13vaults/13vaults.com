@@ -1,5 +1,6 @@
 import { RulesDocument, ClassItem, Ancestry } from "@/.contentlayer/generated";
-import { filter, map } from "lodash";
+import { map } from "lodash";
+import { localeContentLayerList } from "./locale-utils";
 import { defaultLocale } from "./locales";
 
 interface SubNav {
@@ -49,7 +50,11 @@ export function buildNav({
             labelKey: "compendium-basic-rules-label",
             href: `/${locale}/compendium/basic-rules/`,
             items: map(
-              filter(rulesDocuments, ["locale", locale]),
+              localeContentLayerList<RulesDocument>(
+                locale,
+                defaultLocale,
+                rulesDocuments
+              ),
               (rulesDocument) => ({
                 name: rulesDocument.title,
                 href: `/${locale}/compendium/basic-rules/${rulesDocument.slug}`,
@@ -60,19 +65,33 @@ export function buildNav({
             labelKey: "compendium-ancestries-label",
             href: `/${locale}/compendium/races/`,
             large: true,
-            items: map(filter(ancestries, ["locale", locale]), (ancestry) => ({
-              name: ancestry.name,
-              href: `/${locale}/compendium/races/${ancestry.slug}`,
-            })),
+            items: map(
+              localeContentLayerList<Ancestry>(
+                locale,
+                defaultLocale,
+                ancestries
+              ),
+              (ancestry) => ({
+                name: ancestry.name,
+                href: `/${locale}/compendium/races/${ancestry.slug}`,
+              })
+            ),
           },
           {
             labelKey: "compendium-classes-label",
             href: `/${locale}/compendium/classes`,
             large: true,
-            items: map(filter(classItems, ["locale", locale]), (classItem) => ({
-              name: classItem.name,
-              href: `/${locale}/compendium/classes/${classItem.slug}`,
-            })),
+            items: map(
+              localeContentLayerList<ClassItem>(
+                locale,
+                defaultLocale,
+                classItems
+              ),
+              (classItem) => ({
+                name: classItem.name,
+                href: `/${locale}/compendium/classes/${classItem.slug}`,
+              })
+            ),
           },
         ],
       },

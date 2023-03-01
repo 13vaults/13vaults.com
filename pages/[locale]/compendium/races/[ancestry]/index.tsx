@@ -4,11 +4,12 @@ import {
   allClassItems,
   allRulesDocuments,
 } from "contentlayer/generated";
-import { flow, find, map, get } from "lodash";
+import { flow, find, map, get, flatMap } from "lodash";
 import { GetStaticPropsResult, NextPageContext } from "next";
 import ContentLayerPage from "@/components/content-layer-page";
 import { buildNav, Navigation } from "@/lib/navigation";
 import { getI18nProperties } from "@/lib/get-static";
+import { defaultLocale, supportedLocales } from "@/lib/locales";
 
 interface AncestryPageP {
   ancestry: Ancestry;
@@ -28,9 +29,11 @@ export default function AncestryPage({ ancestry, navigation }: AncestryPageP) {
 
 export async function getStaticPaths() {
   return {
-    paths: map(allAncestries, (ancestry) => ({
-      params: { locale: ancestry.locale, ancestry: ancestry.slug },
-    })),
+    paths: flatMap(supportedLocales, (locale) =>
+      map(allAncestries, (ancestry) => ({
+        params: { locale: locale, ancestry: ancestry.slug },
+      }))
+    ),
     fallback: false,
   };
 }
@@ -46,7 +49,7 @@ export async function getStaticProps(
     props: {
       ancestry,
       navigation: buildNav({
-        locale: get(context, "params.locale"),
+        locale: String(get(context, "params.locale", defaultLocale)),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

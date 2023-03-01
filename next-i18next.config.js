@@ -1,9 +1,11 @@
 /* eslint-disable unicorn/prefer-module */
 
+const { supportedLocales, defaultLocale } = require("./lib/locales");
+
 module.exports = {
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: defaultLocale,
+    locales: supportedLocales,
     reloadOnPrerender: true,
   },
 };

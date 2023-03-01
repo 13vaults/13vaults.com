@@ -17,10 +17,11 @@ import { Trans, useTranslation } from "next-i18next";
 import { useMemo } from "react";
 import { PickPartial } from "@/utils";
 import CompendiumTitle from "@/components/compendium-title";
+import { localeContentLayerList } from "@/lib/locale-utils";
 
 type AncestryListing = PickPartial<
   Ancestry,
-  "slug" | "name" | "abilities" | "ability_scores" | "page_dress"
+  "slug" | "name" | "abilities" | "ability_scores" | "page_dress" | "locale"
 >;
 
 interface AncestriesPageP {
@@ -61,67 +62,74 @@ export default function AncestriesPage({
       <CompendiumCategoryIndexLayout navigation={navigation}>
         <CompendiumTitle className="mt-2 mb-6">{t("title")}</CompendiumTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {map(ancestries, (ancestry) => (
-            <CompendiumContentHero
-              key={ancestry.slug}
-              title={ancestry.name}
-              description={
-                ancestry.page_dress?.lead ? (
-                  <p className="text-sm">{ancestry.page_dress.lead}</p>
-                ) : null
-              }
-              detailsHref={`/${localeString}/compendium/races/${ancestry.slug}`}
-              detailsLabel={t("ancestry-details-button-label", {
-                ancestry: ancestry.name,
-              })}
-            >
-              <ul>
-                {ancestry.ability_scores ? (
+          {map(
+            localeContentLayerList<AncestryListing>(
+              localeString,
+              defaultLocale,
+              ancestries
+            ),
+            (ancestry) => (
+              <CompendiumContentHero
+                key={ancestry.slug}
+                title={ancestry.name}
+                description={
+                  ancestry.page_dress?.lead ? (
+                    <p className="text-sm">{ancestry.page_dress.lead}</p>
+                  ) : null
+                }
+                detailsHref={`/${localeString}/compendium/races/${ancestry.slug}`}
+                detailsLabel={t("ancestry-details-button-label", {
+                  ancestry: ancestry.name,
+                })}
+              >
+                <ul>
+                  {ancestry.ability_scores ? (
+                    <li>
+                      <Trans
+                        t={t}
+                        i18nKey="ability-scores-label"
+                        values={{
+                          abilityScores: listFormatter.format(
+                            map(
+                              map(
+                                ancestry.ability_scores,
+                                (score) => score || ""
+                              ),
+                              (ability) => t(ability)
+                            )
+                          ),
+                        }}
+                        components={{ strong: <strong /> }}
+                      />
+                    </li>
+                  ) : (
+                    <li>
+                      <Trans
+                        t={t}
+                        i18nKey="ability-scores-any-label"
+                        components={{ strong: <strong /> }}
+                      />
+                    </li>
+                  )}
                   <li>
                     <Trans
                       t={t}
-                      i18nKey="ability-scores-label"
+                      i18nKey="powers-label"
                       values={{
-                        abilityScores: listFormatter.format(
+                        powers: powerListFormatter.format(
                           map(
-                            map(
-                              ancestry.ability_scores,
-                              (score) => score || ""
-                            ),
-                            (ability) => t(ability)
+                            ancestry.abilities,
+                            (ability) => ability?.name || ""
                           )
                         ),
                       }}
                       components={{ strong: <strong /> }}
                     />
                   </li>
-                ) : (
-                  <li>
-                    <Trans
-                      t={t}
-                      i18nKey="ability-scores-any-label"
-                      components={{ strong: <strong /> }}
-                    />
-                  </li>
-                )}
-                <li>
-                  <Trans
-                    t={t}
-                    i18nKey="powers-label"
-                    values={{
-                      powers: powerListFormatter.format(
-                        map(
-                          ancestry.abilities,
-                          (ability) => ability?.name || ""
-                        )
-                      ),
-                    }}
-                    components={{ strong: <strong /> }}
-                  />
-                </li>
-              </ul>
-            </CompendiumContentHero>
-          ))}
+                </ul>
+              </CompendiumContentHero>
+            )
+          )}
         </div>
       </CompendiumCategoryIndexLayout>
     </>
@@ -147,10 +155,11 @@ export async function getStaticProps(
           "ability_scores",
           "abilities",
           "page_dress",
+          "locale",
         ])
       ),
       navigation: buildNav({
-        locale: get(context, "params.locale"),
+        locale: String(get(context, "params.locale", defaultLocale)),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

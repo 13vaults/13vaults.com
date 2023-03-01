@@ -7,7 +7,7 @@ import {
   allBlogPosts,
   BlogPost,
 } from "@/.contentlayer/generated";
-import { map, get, find } from "lodash";
+import { map, get, find, flatMap } from "lodash";
 import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import { getI18nProperties } from "@/lib/get-static";
 import { useTranslation } from "next-i18next";
@@ -18,6 +18,7 @@ import * as Vault from "@/components/vault-components";
 import ContentLink from "@/components/content-link";
 import Prose from "@/components/prose";
 import dayjs from "dayjs";
+import { supportedLocales } from "@/lib/locales";
 
 interface BlogPostPageP {
   blogPost: BlogPost;
@@ -70,12 +71,14 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
 
 export async function getStaticPaths() {
   return {
-    paths: map(allBlogPosts, (post) => ({
-      params: {
-        locale: post.locale,
-        "blog-post": post.slug,
-      },
-    })),
+    paths: flatMap(supportedLocales, (locale) =>
+      map(allBlogPosts, (post) => ({
+        params: {
+          locale: locale,
+          "blog-post": post.slug,
+        },
+      }))
+    ),
     fallback: false,
   };
 }

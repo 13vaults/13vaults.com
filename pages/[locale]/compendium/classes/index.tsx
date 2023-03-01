@@ -17,6 +17,7 @@ import { Trans, useTranslation } from "next-i18next";
 import CompendiumTitle from "@/components/compendium-title";
 import { useMemo } from "react";
 import CompendiumContentHero from "@/components/compendium-content-hero";
+import { localeContentLayerList } from "@/lib/locale-utils";
 
 type ClassItemListing = PickPartial<
   ClassItem,
@@ -27,6 +28,7 @@ type ClassItemListing = PickPartial<
   | "recoveries"
   | "recovery_die"
   | "page_dress"
+  | "locale"
 >;
 
 interface ClassesPageP {
@@ -59,65 +61,75 @@ export default function AncestriesPage({
       <CompendiumCategoryIndexLayout navigation={navigation}>
         <CompendiumTitle className="mt-2 mb-6">{t("title")}</CompendiumTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {map(classItems, (classItem) => (
-            <CompendiumContentHero
-              key={classItem.slug}
-              title={classItem.name}
-              description={
-                classItem.page_dress?.lead ? (
-                  <p className="text-sm">{classItem.page_dress.lead}</p>
-                ) : null
-              }
-              detailsHref={`/${localeString}/compendium/classes/${classItem.slug}`}
-              detailsLabel={t("class-details-button-label", {
-                class: classItem.name,
-              })}
-            >
-              <ul>
-                <li>
-                  <Trans
-                    t={t}
-                    i18nKey="damage-die-label"
-                    values={{ die: classItem.best_damage_die }}
-                    components={{ strong: <strong /> }}
-                  />
-                </li>
-                <li>
-                  <Trans
-                    t={t}
-                    i18nKey="recovery-die-label"
-                    values={{ die: classItem.recovery_die }}
-                    components={{ strong: <strong /> }}
-                  />
-                </li>
-                {classItem.recoveries === 8 ? null : (
+          {map(
+            localeContentLayerList<ClassItemListing>(
+              localeString,
+              defaultLocale,
+              classItems
+            ),
+            (classItem) => (
+              <CompendiumContentHero
+                key={classItem.slug}
+                title={classItem.name}
+                description={
+                  classItem.page_dress?.lead ? (
+                    <p className="text-sm">{classItem.page_dress.lead}</p>
+                  ) : null
+                }
+                detailsHref={`/${localeString}/compendium/classes/${classItem.slug}`}
+                detailsLabel={t("class-details-button-label", {
+                  class: classItem.name,
+                })}
+              >
+                <ul>
                   <li>
                     <Trans
                       t={t}
-                      i18nKey="recoveries-label"
-                      values={{ recoveries: classItem.recoveries }}
+                      i18nKey="damage-die-label"
+                      values={{ die: classItem.best_damage_die }}
                       components={{ strong: <strong /> }}
                     />
                   </li>
-                )}
-                <li>
-                  <Trans
-                    t={t}
-                    i18nKey="ability-scores-label"
-                    values={{
-                      abilityScores: listFormatter.format(
-                        map(
-                          map(classItem.ability_scores, (score) => score || ""),
-                          (ability) => t(ability)
-                        )
-                      ),
-                    }}
-                    components={{ strong: <strong /> }}
-                  />
-                </li>
-              </ul>
-            </CompendiumContentHero>
-          ))}
+                  <li>
+                    <Trans
+                      t={t}
+                      i18nKey="recovery-die-label"
+                      values={{ die: classItem.recovery_die }}
+                      components={{ strong: <strong /> }}
+                    />
+                  </li>
+                  {classItem.recoveries === 8 ? null : (
+                    <li>
+                      <Trans
+                        t={t}
+                        i18nKey="recoveries-label"
+                        values={{ recoveries: classItem.recoveries }}
+                        components={{ strong: <strong /> }}
+                      />
+                    </li>
+                  )}
+                  <li>
+                    <Trans
+                      t={t}
+                      i18nKey="ability-scores-label"
+                      values={{
+                        abilityScores: listFormatter.format(
+                          map(
+                            map(
+                              classItem.ability_scores,
+                              (score) => score || ""
+                            ),
+                            (ability) => t(ability)
+                          )
+                        ),
+                      }}
+                      components={{ strong: <strong /> }}
+                    />
+                  </li>
+                </ul>
+              </CompendiumContentHero>
+            )
+          )}
         </div>
       </CompendiumCategoryIndexLayout>
     </>
@@ -145,10 +157,11 @@ export async function getStaticProps(
           "recoveries",
           "recovery_die",
           "page_dress",
+          "locale",
         ])
       ),
       navigation: buildNav({
-        locale: get(context, "params.locale"),
+        locale: String(get(context, "params.locale", defaultLocale)),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

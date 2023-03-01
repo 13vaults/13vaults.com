@@ -83,8 +83,13 @@ const BasicPage = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (document_) =>
-        document_._raw.sourceFileName.replace(/\.mdx$/, ""),
+      resolve: (document_) => {
+        return document_._raw.sourceFileName.split(".").length === 3
+          ? // handle filenames with locale in the name
+            document_._raw.sourceFileName.split(".")[0]
+          : // handle filenames without locale in the name
+            document_._raw.sourceFileName.replace(/\.mdx$/, "");
+      },
     },
     locale: {
       type: "string",
@@ -106,8 +111,13 @@ const RulesDocument = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (document_) =>
-        document_._raw.sourceFileName.replace(/\.mdx$/, ""),
+      resolve: (document_) => {
+        return document_._raw.sourceFileName.split(".").length === 3
+          ? // handle filenames with locale in the name
+            document_._raw.sourceFileName.split(".")[0]
+          : // handle filenames without locale in the name
+            document_._raw.sourceFileName.replace(/\.mdx$/, "");
+      },
     },
     sections: sectionsField,
     locale: {
@@ -204,8 +214,13 @@ const ClassItem = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (document_) =>
-        document_._raw.sourceFileName.replace(/\.mdx$/, ""),
+      resolve: (document_) => {
+        return document_._raw.sourceFileName.split(".").length === 3
+          ? // handle filenames with locale in the name
+            document_._raw.sourceFileName.split(".")[0]
+          : // handle filenames without locale in the name
+            document_._raw.sourceFileName.replace(/\.mdx$/, "");
+      },
     },
     locale: {
       type: "string",
@@ -234,8 +249,13 @@ const BlogPost = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: "string",
-      resolve: (document_) =>
-        document_._raw.sourceFileName.replace(/\.mdx$/, ""),
+      resolve: (document_) => {
+        return document_._raw.sourceFileName.split(".").length === 3
+          ? // handle filenames with locale in the name
+            document_._raw.sourceFileName.split(".")[0]
+          : // handle filenames without locale in the name
+            document_._raw.sourceFileName.replace(/\.mdx$/, "");
+      },
     },
     locale: {
       type: "string",

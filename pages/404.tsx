@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 import { defaultLocale } from "@/lib/locales";
 import { getI18nProperties } from "@/lib/get-static";
 import { useTranslation } from "next-i18next";
+import { get } from "lodash";
 
 interface NotFoundP {
   navigation: Navigation;
@@ -45,6 +46,7 @@ export async function getStaticProps(
   return {
     props: {
       navigation: buildNav({
+        locale: String(get(context, "params.locale", defaultLocale)),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

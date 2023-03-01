@@ -31,7 +31,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated",
-    "components/section-provider.jsx"
+    "components/section-provider.jsx",
+    "lib/locales.js"
   ],
   "exclude": ["node_modules"]
 }

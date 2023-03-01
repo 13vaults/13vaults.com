@@ -6,7 +6,8 @@
   ],
   "rules": {
     "unicorn/no-null": 0,
-    "unicorn/no-nested-ternary": 0
+    "unicorn/no-nested-ternary": 0,
+    "no-unused-vars": ["error", { "destructuredArrayIgnorePattern": "^_" }]
   },
   "globals": {
     "JSX": true,

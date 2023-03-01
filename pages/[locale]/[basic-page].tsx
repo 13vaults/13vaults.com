@@ -13,6 +13,7 @@ import Head from "next/head";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Container from "@/components/container";
 import { getI18nProperties } from "@/lib/get-static";
+import { defaultLocale } from "@/lib/locales";
 
 interface VaultsBasicPageP {
   pageData: BasicPage;
@@ -73,7 +74,7 @@ export async function getStaticProps(
     props: {
       pageData,
       navigation: buildNav({
-        locale: get(context, "params.locale"),
+        locale: String(get(context, "params.locale", defaultLocale)),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

@@ -2,12 +2,13 @@
 
 const { withContentlayer } = require("next-contentlayer");
 const vaultConfig = require("./vault.config");
+const { defaultLocale } = require("./lib/locales");
 
 async function redirects() {
   return [
     {
       source: "/",
-      destination: "/en/",
+      destination: `/${defaultLocale}/`,
       permanent: true,
     },
   ];

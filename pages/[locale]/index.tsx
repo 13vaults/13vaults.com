@@ -107,7 +107,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
                     d="M12.3 34 4.5 11.4 5 8.1 3.2 4.9 0 0l11.4 4.9 6 21.6.4 2.6.5-2.6 6-21.6L21 1.6h9.8L34 5l-3 6.5L23.5 34H12.3Z"
                   />
                 </svg>
-                <span>Enter the Vaults</span>
+                <span>{t("cta-label")}</span>
               </Link>
               <a
                 className="flex gap-3 focus:bg-indigo-600/50 hover:bg-indigo-600/50 bg-indigo-600/20 border border-indigo-500/50 hover:border-indigo-500 rounded pl-8 pr-12 py-3 shadow transition-colors font-display font-semibold items-center"

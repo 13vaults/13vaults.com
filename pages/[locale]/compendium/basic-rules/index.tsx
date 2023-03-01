@@ -15,10 +15,11 @@ import { defaultLocale, supportedLocales } from "@/lib/locales";
 import { getI18nProperties } from "@/lib/get-static";
 import CompendiumContentSection from "@/components/compendium-content-section";
 import { PickPartial } from "@/utils";
+import { localeContentLayerList } from "@/lib/locale-utils";
 
 type DocumentListing = PickPartial<
   RulesDocument,
-  "slug" | "title" | "sections"
+  "slug" | "title" | "sections" | "locale"
 >;
 
 interface BasicRulesPageP {
@@ -41,49 +42,59 @@ export default function BasicRulesPage({
       </Head>
       <CompendiumCategoryIndexLayout navigation={navigation}>
         <div className="flex flex-col gap-4">
-          {map(rulesDocuments, (document) => (
-            <CompendiumContentSection
-              key={document.slug}
-              header={
-                <Link
-                  href={`/${localeString}/compendium/basic-rules/${document.slug}`}
+          {map(
+            localeContentLayerList<DocumentListing>(
+              localeString,
+              defaultLocale,
+              rulesDocuments
+            ),
+            (document) => (
+              <CompendiumContentSection
+                key={document.slug}
+                header={
+                  <Link
+                    href={`/${localeString}/compendium/basic-rules/${document.slug}`}
+                  >
+                    {document.title}
+                  </Link>
+                }
+              >
+                <ol
+                  role="list"
+                  className="grid grid-cols-1 md:grid-cols-2 gap-4"
                 >
-                  {document.title}
-                </Link>
-              }
-            >
-              <ol role="list" className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {map(
-                  chunk(
-                    document.sections,
-                    Math.ceil(document.sections.length / 2)
-                  ),
-                  (sectionChunk, index) => (
-                    <li key={index}>
-                      <ol
-                        className="list-decimal list-inside flex flex-col gap-4"
-                        start={
-                          index * Math.ceil(document.sections.length / 2) + 1
-                        }
-                      >
-                        {map(sectionChunk, (section) => (
-                          <li key={get(section, "id")}>
-                            <Link
-                              href={`/${localeString}/compendium/basic-rules/${
-                                document.slug
-                              }#${get(section, "id")}`}
-                            >
-                              {get(section, "title")}
-                            </Link>
-                          </li>
-                        ))}
-                      </ol>
-                    </li>
-                  )
-                )}
-              </ol>
-            </CompendiumContentSection>
-          ))}
+                  {map(
+                    chunk(
+                      document.sections,
+                      Math.ceil(document.sections.length / 2)
+                    ),
+                    (sectionChunk, index) => (
+                      <li key={index}>
+                        <ol
+                          className="list-decimal list-inside flex flex-col gap-4"
+                          start={
+                            index * Math.ceil(document.sections.length / 2) + 1
+                          }
+                        >
+                          {map(sectionChunk, (section) => (
+                            <li key={get(section, "id")}>
+                              <Link
+                                href={`/${localeString}/compendium/basic-rules/${
+                                  document.slug
+                                }#${get(section, "id")}`}
+                              >
+                                {get(section, "title")}
+                              </Link>
+                            </li>
+                          ))}
+                        </ol>
+                      </li>
+                    )
+                  )}
+                </ol>
+              </CompendiumContentSection>
+            )
+          )}
         </div>
       </CompendiumCategoryIndexLayout>
     </>
@@ -106,9 +117,10 @@ export async function getStaticProps(
   return {
     props: {
       rulesDocuments: map(allRulesDocuments, (rulesDocument) =>
-        pick(rulesDocument, ["slug", "title", "sections"])
+        pick(rulesDocument, ["slug", "title", "sections", "locale"])
       ),
       navigation: buildNav({
+        locale: String(get(context, "params.locale", defaultLocale)),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,
