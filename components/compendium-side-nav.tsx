@@ -1,10 +1,9 @@
 import { remToPx } from "@/lib/rem-to-px";
 import useInitialValue from "@/lib/use-initial-value";
-import { ChevronUpIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
 import { AnimatePresence, useIsPresent, motion } from "framer-motion";
 import { size } from "lodash";
-import { ReactNode, useCallback } from "react";
+import { ReactNode } from "react";
 import { useSectionStore } from "./section-provider";
 
 function NavLink({
@@ -87,22 +86,6 @@ export default function CompendiumSideNav({
   primaryLabel: string;
 }): JSX.Element | null {
   const sections = useSectionStore((store: any) => store.sections);
-  const [firstVisible] = useSectionStore((store: any) => store.visibleSections);
-  const isAtTop = firstVisible === "_top";
-
-  const handleScrollToTop = useCallback((event: any) => {
-    event.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-    history.replaceState(
-      "",
-      document.title,
-      window.location.pathname + window.location.search
-    );
-  }, []);
-
   return (
     <div>
       {size(sections) > 0 ? (
