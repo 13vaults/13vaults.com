@@ -110,23 +110,10 @@ export default function CompendiumSideNav({
           <VisibleSectionHighlight />
         </AnimatePresence>
       ) : null}
-      <div className="flex justify-between items-center">
+      <div>
         <p className="font-medium font-display text-xl m-2 truncate">
           {primaryLabel}
         </p>
-        <AnimatePresence>
-          {size(sections) === 0 || isAtTop ? null : (
-            <motion.button
-              onClick={handleScrollToTop}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="hidden relative xl:flex gap-1 items-center px-2 py-1 text-xs"
-            >
-              To Top <ChevronUpIcon className="h-4 w-4" />
-            </motion.button>
-          )}
-        </AnimatePresence>
       </div>
       <nav role="navigation" aria-label="Side navigation">
         <ul role="list" className="flex flex-col">
