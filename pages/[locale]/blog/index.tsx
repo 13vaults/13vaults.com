@@ -8,7 +8,7 @@ import {
   allBlogPosts,
   BlogPost,
 } from "@/.contentlayer/generated";
-import { map, get, filter, pick, size } from "lodash";
+import { map, get, filter, pick, size, orderBy } from "lodash";
 import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import { getI18nProperties } from "@/lib/get-static";
 import { useTranslation } from "next-i18next";
@@ -39,6 +39,8 @@ export default function BlogIndexPage({
   const localeString = String(locale);
   const { t } = useTranslation("blog");
 
+  console.log(orderBy(blogPosts));
+
   return (
     <>
       <Head>
@@ -54,29 +56,31 @@ export default function BlogIndexPage({
             <div>
               {size(blogPosts) > 0 ? (
                 <ol role="list" className="flex flex-col gap-4">
-                  {map(blogPosts, (post) => (
-                    <li role="listitem" key={post.slug}>
-                      <Link
-                        href={`/${localeString}/blog/${post.slug}`}
-                        className="flex flex-col gap-4 shadow p-4 rounded text-stone-900 dark:text-stone-50 bg-stone-50 dark:bg-stone-800 transition-shadow hover:shadow-lg"
-                      >
-                        <div className="flex flex-col">
-                          <h2 className="font-display font-bold text-2xl">
-                            {post.title}
-                          </h2>
-                          <time className="text-xs">
-                            {t("published-on-label", {
-                              date: dayjs(post.date).format("YYYY-MM-DD"),
-                            })}
-                          </time>
-                        </div>
-                        <div className="text-sm">
-                          <p className="mb-2">{post.excerpt}</p>
-                          <p className="italic">{t("read-more")}</p>
-                        </div>
-                      </Link>
-                    </li>
-                  ))}
+                  {orderBy(
+                    map(orderBy(blogPosts, ["date"], ["desc"]), (post) => (
+                      <li role="listitem" key={post.slug}>
+                        <Link
+                          href={`/${localeString}/blog/${post.slug}`}
+                          className="flex flex-col gap-4 shadow p-4 rounded text-stone-900 dark:text-stone-50 bg-stone-50 dark:bg-stone-800 transition-shadow hover:shadow-lg"
+                        >
+                          <div className="flex flex-col">
+                            <h2 className="font-display font-bold text-2xl">
+                              {post.title}
+                            </h2>
+                            <time className="text-xs">
+                              {t("published-on-label", {
+                                date: dayjs(post.date).format("YYYY-MM-DD"),
+                              })}
+                            </time>
+                          </div>
+                          <div className="text-sm">
+                            <p className="mb-2">{post.excerpt}</p>
+                            <p className="italic">{t("read-more")}</p>
+                          </div>
+                        </Link>
+                      </li>
+                    ))
+                  )}
                 </ol>
               ) : (
                 <div>{t("no-posts")}</div>
