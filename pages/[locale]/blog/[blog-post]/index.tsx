@@ -37,33 +37,34 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
       </Head>
 
       <BasicLayout navigation={navigation}>
-        <div className="px-4 pt-4 pb-8 lg:px-8 lg:pt-8 lg:pb-12">
-          <Container as="article" className="flex flex-col gap-8">
-            <h1 className="font-display font-bold text-3xl md:text-4xl text-stone-900 dark:text-stone-200 my-2 md:my-4">
-              {blogPost.title}
-            </h1>
-            <Prose>
-              <p>
-                {t("published-on-label", {
-                  date: dayjs(blogPost.date).format("YYYY-MM-DD"),
-                })}
-              </p>
-              <Content
-                components={{
-                  Vault: Vault,
-                  a: ({ href, ...properties }: any) => (
-                    <ContentLink href={href} {...properties} />
-                  ),
-                  table: (properties: any) => (
-                    <div className="overflow-auto border dark:border-stone-700 rounded shadow bg-white dark:bg-stone-700 border-stone-300 my-2">
-                      <table {...properties} />
-                    </div>
-                  ),
-                }}
-              />
-            </Prose>
-          </Container>
-        </div>
+        <Container
+          as="article"
+          className="flex flex-col gap-8 bg-white/50 dark:bg-black/50 px-4 pt-4 pb-8 lg:px-8 lg:pt-8 lg:pb-12 shadow"
+        >
+          <h1 className="font-display font-bold text-3xl md:text-4xl text-stone-900 dark:text-stone-200 my-2 md:my-4">
+            {blogPost.title}
+          </h1>
+          <Prose>
+            <p>
+              {t("published-on-label", {
+                date: dayjs(blogPost.date).format("YYYY-MM-DD"),
+              })}
+            </p>
+            <Content
+              components={{
+                Vault: Vault,
+                a: ({ href, ...properties }: any) => (
+                  <ContentLink href={href} {...properties} />
+                ),
+                table: (properties: any) => (
+                  <div className="overflow-auto border dark:border-stone-700 rounded shadow bg-white dark:bg-stone-700 border-stone-300 my-2">
+                    <table {...properties} />
+                  </div>
+                ),
+              }}
+            />
+          </Prose>
+        </Container>
       </BasicLayout>
     </>
   );
