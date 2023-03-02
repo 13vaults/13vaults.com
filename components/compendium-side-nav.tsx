@@ -111,7 +111,9 @@ export default function CompendiumSideNav({
         </AnimatePresence>
       ) : null}
       <div className="flex justify-between items-center">
-        <p className="font-medium font-display text-xl m-2">{primaryLabel}</p>
+        <p className="font-medium font-display text-xl m-2 truncate">
+          {primaryLabel}
+        </p>
         <AnimatePresence>
           {size(sections) === 0 || isAtTop ? null : (
             <motion.button
