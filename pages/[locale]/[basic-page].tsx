@@ -25,10 +25,11 @@ export default function VaultsBasicPage({
   pageData,
 }: VaultsBasicPageP) {
   const Content = useMDXComponent(pageData.body.code);
+  const titleString = `${pageData.title} - 13 Vaults`;
   return (
     <>
       <Head>
-        <title>{pageData.title} - 13 Vaults</title>
+        <title>{titleString}</title>
       </Head>
       <BasicLayout navigation={navigation}>
         <div className="p-4 lg:p-8 bg-stone-50 dark:bg-stone-900 flex-1">

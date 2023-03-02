@@ -53,7 +53,7 @@ export default function BlogIndexPage({
             </CompendiumTitle>
             <div>
               {size(blogPosts) > 0 ? (
-                <ol role="list">
+                <ol role="list" className="flex flex-col gap-4">
                   {map(blogPosts, (post) => (
                     <li role="listitem" key={post.slug}>
                       <Link

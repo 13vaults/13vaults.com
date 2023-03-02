@@ -8,6 +8,7 @@ import rehypeSlug from "rehype-slug";
 import GithubSlugger from "github-slugger";
 import { defaultLocale } from "./lib/locales";
 import remarkSmartypants from "remark-smartypants";
+import remarkUnwrapImages from "remark-unwrap-images";
 
 function getLocaleFromPath(path) {
   const pathArray = path.split(".");
@@ -270,7 +271,7 @@ const contentLayerConfig = makeSource({
   contentDirPath: "content",
   documentTypes: [BlogPost, BasicPage, ClassItem, Ancestry, RulesDocument],
   mdx: {
-    remarkPlugins: [remarkGfm, remarkSmartypants],
+    remarkPlugins: [remarkGfm, remarkSmartypants, remarkUnwrapImages],
     rehypePlugins: [rehypeSlug],
   },
 });

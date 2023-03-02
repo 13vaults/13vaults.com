@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import { buildNav, Navigation } from "@/lib/navigation";
 import Head from "next/head";
 import {
@@ -39,7 +41,7 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
       <BasicLayout navigation={navigation}>
         <Container
           as="article"
-          className="flex flex-col gap-8 bg-white/50 dark:bg-black/50 px-4 pt-4 pb-8 lg:px-8 lg:pt-8 lg:pb-12 shadow"
+          className="flex flex-col gap-8 bg-white/50 dark:bg-black/50 px-4 pt-4 pb-8 lg:px-8 lg:pt-8 lg:pb-12 shadow w-full flex-1"
         >
           <h1 className="font-display font-bold text-3xl md:text-4xl text-stone-900 dark:text-stone-200 my-2 md:my-4">
             {blogPost.title}
@@ -59,6 +61,19 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
                 table: (properties: any) => (
                   <div className="overflow-auto border dark:border-stone-700 rounded shadow bg-white dark:bg-stone-700 border-stone-300 my-2">
                     <table {...properties} />
+                  </div>
+                ),
+                img: ({ alt, ...rest }) => (
+                  <div className="p-4 bg-white/50 rounded dark:bg-black/50 border border-stone-200 dark:border-stone-700">
+                    <figure>
+                      <img
+                        alt={alt}
+                        {...rest}
+                        className="mx-auto rounded shadow"
+                        loading="lazy"
+                      />
+                    </figure>
+                    <figcaption>{alt}</figcaption>
                   </div>
                 ),
               }}
