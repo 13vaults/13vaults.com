@@ -1,0 +1,14 @@
+{
+  "title": "Klassen",
+  "class-details-button-label": "{{class}}-Details",
+  "ability-scores-label": "<strong>Attributswerte:</strong> {{abilityScores}}",
+  "damage-die-label": "<strong>Schadenswürfel:</strong> {{die}}",
+  "recovery-die-label": "<strong>Erholungswürfel:</strong> {{die}}",
+  "recoveries-label": "<strong>Erholungen:</strong> {{recoveries}}",
+  "strength": "Stärke",
+  "dexterity": "Geschick",
+  "constitution": "Konstitution",
+  "intelligence": "Intelligenz",
+  "wisdom": "Weisheit",
+  "charisma": "Charisma"
+}
