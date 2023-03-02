@@ -56,12 +56,13 @@ export default function BlogIndexPage({
                 <ol role="list">
                   {map(blogPosts, (post) => (
                     <li role="listitem" key={post.slug}>
-                      <div className="flex flex-col gap-4 shadow p-4 rounded text-stone-900 dark:text-stone-50 bg-stone-50 dark:bg-stone-800">
+                      <Link
+                        href={`/${localeString}/blog/${post.slug}`}
+                        className="flex flex-col gap-4 shadow p-4 rounded text-stone-900 dark:text-stone-50 bg-stone-50 dark:bg-stone-800 transition-shadow hover:shadow-lg"
+                      >
                         <div className="flex flex-col">
                           <h2 className="font-display font-bold text-2xl">
-                            <Link href={`/${localeString}/blog/${post.slug}`}>
-                              {post.title}
-                            </Link>
+                            {post.title}
                           </h2>
                           <time className="text-xs">
                             {t("published-on-label", {
@@ -70,9 +71,10 @@ export default function BlogIndexPage({
                           </time>
                         </div>
                         <div className="text-sm">
-                          <p>{post.excerpt}</p>
+                          <p className="mb-2">{post.excerpt}</p>
+                          <p className="italic">{t("read-more")}</p>
                         </div>
-                      </div>
+                      </Link>
                     </li>
                   ))}
                 </ol>

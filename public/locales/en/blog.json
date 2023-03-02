@@ -3,5 +3,6 @@
   "post-html-title": "{{title}} - 13 Vaults Blog",
   "title": "13 Vaults Blog",
   "published-on-label": "Published on {{date}}",
-  "no-posts": "No posts ☹️"
+  "no-posts": "No posts ☹️",
+  "read-more": "Read more..."
 }
