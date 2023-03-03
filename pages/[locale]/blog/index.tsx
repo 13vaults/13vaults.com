@@ -39,8 +39,6 @@ export default function BlogIndexPage({
   const localeString = String(locale);
   const { t } = useTranslation("blog");
 
-  console.log(orderBy(blogPosts));
-
   return (
     <>
       <Head>
