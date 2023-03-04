@@ -39,6 +39,35 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
       <Head>
         <title>{t("post-html-title", { title: blogPost.title })}</title>
         <meta name="description" content={blogPost.excerpt} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={
+            t("post-html-title", { title: blogPost.title }) || blogPost.title
+          }
+        />
+        <meta name="twitter:description" content={blogPost.excerpt} />
+        <meta
+          name="twitter:image"
+          content={`https://www.13vaults.com/api/og-image/?title=${blogPost.title}`}
+        />
+        <meta property="og:site_name" content="13 Vaults" />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content={blogPost.locale} />
+        <meta
+          property="og:title"
+          content={
+            t("post-html-title", { title: blogPost.title }) || blogPost.title
+          }
+        />
+        <meta property="og:description" content={blogPost.excerpt} />
+        <meta property="og:url" content="https://www.13vaults.com/" />
+        <meta
+          property="og:image"
+          content={`https://www.13vaults.com/api/og-image/?title=${blogPost.title}`}
+        />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="article:published_time" content={blogPost.date} />
       </Head>
 
       <BasicLayout navigation={navigation}>
