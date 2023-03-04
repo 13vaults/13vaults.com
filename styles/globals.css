@@ -34,9 +34,6 @@
   .text-align-last-unset {
     text-align-last: unset;
   }
-  .min-h-screen-wk {
-    min-height: -webkit-fill-available;
-  }
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -48,6 +45,12 @@
   }
   .text-shadow-none {
     text-shadow: none;
+  }
+
+  @supports (min-height: -webkit-fill-available;) {
+    .min-h-screen-wk {
+      min-height: -webkit-fill-available;
+    }
   }
 }
 
