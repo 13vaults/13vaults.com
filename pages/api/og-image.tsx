@@ -11,7 +11,6 @@ export default async function handler(request: NextRequest) {
   const allowedTitles = allBlogPosts.map((post) => post.title);
   const { searchParams } = request.nextUrl;
   const title = searchParams.get("title");
-  const hero = Boolean(searchParams.get("hero"));
 
   if (title && allowedTitles.includes(title)) {
     const fontData = await fetch(
@@ -19,10 +18,10 @@ export default async function handler(request: NextRequest) {
     ).then((response) => response.arrayBuffer());
 
     return new ImageResponse(
-      <SocialHero fontFamily="Vollkorn SC" title={title} hero={hero} />,
+      <SocialHero fontFamily="Vollkorn SC" title={title} />,
       {
-        width: hero ? 1280 : 800,
-        height: hero ? 640 : 400,
+        width: 800,
+        height: 400,
         fonts: [
           {
             name: "Vollkorn SC",
