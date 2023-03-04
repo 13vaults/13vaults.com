@@ -58,6 +58,32 @@ export default function AncestriesPage({
     <>
       <Head>
         <title>Races - 13 Vaults</title>
+        <meta
+          name="description"
+          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+        />
+        <meta property="og:locale" content={localeString} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Races - 13 Vaults" />
+        <meta
+          name="twitter:description"
+          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.13vaults.com/images/13v-social-banner.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Races - 13 Vaults" />
+        <meta
+          property="og:description"
+          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+        />
+        <meta property="og:url" content="https://www.13vaults.com/" />
+        <meta
+          property="og:image"
+          content="https://www.13vaults.com/images/13v-social-banner.jpg"
+        />
       </Head>
       <CompendiumCategoryIndexLayout navigation={navigation}>
         <CompendiumTitle className="mt-2 mb-6">{t("title")}</CompendiumTitle>

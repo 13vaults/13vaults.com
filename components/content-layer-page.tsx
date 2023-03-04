@@ -9,6 +9,7 @@ import Heading from "./heading";
 import { SectionProvider } from "./section-provider";
 import CompendiumSideNav from "./compendium-side-nav";
 import ContentLink from "./content-link";
+import { defaultLocale } from "@/lib/locales";
 
 interface ContentLayerRendererP {
   data: any;
@@ -33,6 +34,44 @@ export default function ContentLayerPage({
     <>
       <Head>
         <title>{title}</title>
+        <meta
+          name="description"
+          content={
+            lead ||
+            "13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+          }
+        />
+        <meta
+          property="og:locale"
+          content={get(data, "locale", defaultLocale)}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta
+          name="twitter:description"
+          content={
+            lead ||
+            "13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+          }
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.13vaults.com/images/13v-social-banner.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta
+          property="og:description"
+          content={
+            lead ||
+            "13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+          }
+        />
+        <meta property="og:url" content="https://www.13vaults.com/" />
+        <meta
+          property="og:image"
+          content="https://www.13vaults.com/images/13v-social-banner.jpg"
+        />
       </Head>
       <SectionProvider sections={sections}>
         <VaultLayout

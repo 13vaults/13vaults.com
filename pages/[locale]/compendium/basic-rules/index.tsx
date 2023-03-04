@@ -39,6 +39,32 @@ export default function BasicRulesPage({
     <>
       <Head>
         <title>Basic Rules - 13 Vaults</title>
+        <meta
+          name="description"
+          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+        />
+        <meta property="og:locale" content={localeString} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Basic Rules - 13 Vaults" />
+        <meta
+          name="twitter:description"
+          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.13vaults.com/images/13v-social-banner.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Basic Rules - 13 Vaults" />
+        <meta
+          property="og:description"
+          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+        />
+        <meta property="og:url" content="https://www.13vaults.com/" />
+        <meta
+          property="og:image"
+          content="https://www.13vaults.com/images/13v-social-banner.jpg"
+        />
       </Head>
       <CompendiumCategoryIndexLayout navigation={navigation}>
         <div className="flex flex-col gap-4">

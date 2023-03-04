@@ -46,32 +46,6 @@ function VaultsApp({ Component, pageProps }: AppProps) {
         {process.env.NODE_ENV === "production" ? (
           <link rel="preload" as="script" href="/pa/js/pa.js" />
         ) : undefined}
-        <title>13 Vaults</title>
-        <meta
-          name="description"
-          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="13 Vaults" />
-        <meta
-          name="twitter:description"
-          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.13vaults.com/images/13v-social-banner.jpg"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="13 Vaults" />
-        <meta
-          property="og:description"
-          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
-        />
-        <meta property="og:url" content="https://www.13vaults.com/" />
-        <meta
-          property="og:image"
-          content="https://www.13vaults.com/images/13v-social-banner.jpg"
-        />
       </Head>
       {process.env.NODE_ENV === "production" ? (
         <Script

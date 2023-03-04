@@ -9,10 +9,11 @@ import {
   allRulesDocuments,
 } from "@/.contentlayer/generated";
 import { get, map } from "lodash";
-import { supportedLocales } from "@/lib/locales";
+import { defaultLocale, supportedLocales } from "@/lib/locales";
 import { getI18nProperties } from "@/lib/get-static";
 import { useTranslation } from "next-i18next";
 import CompendiumContentSection from "@/components/compendium-content-section";
+import { useRouter } from "next/router";
 
 interface CompendiumCategoryPageP {
   navigation: Navigation;
@@ -21,11 +22,40 @@ interface CompendiumCategoryPageP {
 export default function CompendiumCategoryPage({
   navigation,
 }: CompendiumCategoryPageP) {
+  const router = useRouter();
+  const { locale = defaultLocale } = router.query;
+  const localeString = String(locale);
   const { t } = useTranslation("common");
   return (
     <>
       <Head>
         <title>Compendium - 13 Vaults</title>
+        <meta
+          name="description"
+          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+        />
+        <meta property="og:locale" content={localeString} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Compendium - 13 Vaults" />
+        <meta
+          name="twitter:description"
+          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.13vaults.com/images/13v-social-banner.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Compendium - 13 Vaults" />
+        <meta
+          property="og:description"
+          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+        />
+        <meta property="og:url" content="https://www.13vaults.com/" />
+        <meta
+          property="og:image"
+          content="https://www.13vaults.com/images/13v-social-banner.jpg"
+        />
       </Head>
       <CompendiumCategoryIndexLayout navigation={navigation}>
         {map(navigation.main, (mainNavItem) => (

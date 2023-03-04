@@ -55,6 +55,33 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
           13 Vaults - An unofficial reference site and toolkit for 13th Age
           roleplaying game (RPG) players and game masters (GMs).
         </title>
+        <title>13 Vaults</title>
+        <meta
+          name="description"
+          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+        />
+        <meta property="og:locale" content={localeString} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="13 Vaults" />
+        <meta
+          name="twitter:description"
+          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.13vaults.com/images/13v-social-banner.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="13 Vaults" />
+        <meta
+          property="og:description"
+          content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
+        />
+        <meta property="og:url" content="https://www.13vaults.com/" />
+        <meta
+          property="og:image"
+          content="https://www.13vaults.com/images/13v-social-banner.jpg"
+        />
       </Head>
       <BasicLayout navigation={navigation}>
         <section className="flex-1 relative min-h-[30vh] text-white flex flex-col bg-cover bg-top">
