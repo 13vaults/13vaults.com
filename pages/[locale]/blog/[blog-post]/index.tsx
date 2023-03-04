@@ -74,8 +74,8 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
         <Container
           as="article"
           maxWidth="max-w-prose"
-          maxWidthXl="max-w-prose"
-          maxWidth2xl="max-w-prose"
+          maxWidthXl="max-w-4xl"
+          maxWidth2xl="max-w-4xl"
           className="flex flex-col gap-8 bg-white/50 dark:bg-black/50 px-4 pt-4 pb-8 lg:px-8 lg:pt-8 lg:pb-12 shadow w-full flex-1"
         >
           <h1 className="font-display font-bold text-3xl md:text-4xl text-stone-900 dark:text-stone-200 my-2 md:my-4">
