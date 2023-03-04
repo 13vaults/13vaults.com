@@ -21,16 +21,6 @@ const nextConfig = {
   serverRuntimeConfig: {
     vaultConfig,
   },
-  images: {
-    loader: "custom",
-    imageSizes: [1280],
-    deviceSizes: [640, 1920, 2048],
-    nextImageExportOptimizer: {
-      imageFolderPath: "public/images",
-      exportFolderPath: "out",
-      quality: 75,
-    },
-  },
   transpilePackages: ["next-image-export-optimizer"],
   env: {
     storePicturesInWEBP: true,

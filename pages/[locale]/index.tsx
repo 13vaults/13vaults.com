@@ -2,7 +2,6 @@ import BasicLayout from "@/layouts/basic";
 import { get, map } from "lodash";
 import Link from "next/link";
 import clsx from "clsx";
-import ExportedImage from "next-image-export-optimizer";
 import heroImage from "@/public/images/camelot-spire-butteredbap.webp";
 import Container from "@/components/container";
 import { buildNav, Navigation } from "@/lib/navigation";
@@ -17,6 +16,7 @@ import { defaultLocale, supportedLocales } from "@/lib/locales";
 import { useRouter } from "next/router";
 import { getI18nProperties } from "@/lib/get-static";
 import { useTranslation } from "next-i18next";
+import Image from "next/image";
 
 const bottomNavItems = [
   {
@@ -59,7 +59,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
       <BasicLayout navigation={navigation}>
         <section className="flex-1 relative min-h-[30vh] text-white flex flex-col bg-cover bg-top">
           <div className="absolute inset-0 home-hero">
-            <ExportedImage
+            <Image
               className="z-[-1] object-top object-cover h-full w-full home-hero bg-neutral-900"
               fill
               src={heroImage}
