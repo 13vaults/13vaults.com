@@ -1,8 +1,8 @@
 export default function SocialHero({
-  title = "YOOOO YOOOO YOOOO YOOOO YOOOO YOOOO YOOOO YOOOO ",
+  title,
   fontFamily,
 }: {
-  title?: string;
+  title: string | null;
   fontFamily: string;
 }) {
   return (
