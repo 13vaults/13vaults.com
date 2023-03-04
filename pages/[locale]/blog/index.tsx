@@ -15,7 +15,6 @@ import { useTranslation } from "next-i18next";
 import BasicLayout from "@/layouts/basic";
 import Container from "@/components/container";
 import CompendiumTitle from "@/components/compendium-title";
-import dayjs from "dayjs";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { PickPartial } from "@/utils";
@@ -67,7 +66,7 @@ export default function BlogIndexPage({
                             </h2>
                             <time className="text-xs">
                               {t("published-on-label", {
-                                date: dayjs(post.date).format("YYYY-MM-DD"),
+                                date: post.date,
                               })}
                             </time>
                           </div>
