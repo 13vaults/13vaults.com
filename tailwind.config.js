@@ -15,6 +15,9 @@ module.exports = {
         texture: "url(/texture.webp)",
         "texture-dark": "url(/texture-dark.webp)",
       },
+      aspectRatio: {
+        wide: "2 / 1",
+      },
       fontFamily: {
         sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
         display: [
