@@ -7,7 +7,7 @@ export const config = {
 
 export default async function handler() {
   const fontData = await fetch(
-    new URL("../../assets/VollkornSC-Bold.TTF", import.meta.url)
+    new URL("../../assets/VollkornSC-Bold.ttf", import.meta.url)
   ).then((response) => response.arrayBuffer());
 
   return new ImageResponse(<SocialHero fontFamily="Vollkorn SC" />, {
