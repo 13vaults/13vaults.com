@@ -16,9 +16,12 @@ import BasicLayout from "@/layouts/basic";
 import Container from "@/components/container";
 import CompendiumTitle from "@/components/compendium-title";
 import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { PickPartial } from "@/utils";
+
+dayjs.extend(utc);
 
 type BlogPostItem = PickPartial<
   BlogPost,
@@ -67,9 +70,9 @@ export default function BlogIndexPage({
                             </h2>
                             <time className="text-xs">
                               {t("published-on-label", {
-                                date: dayjs(Date.parse(post.date)).format(
-                                  "YYYY-MM-DD"
-                                ),
+                                date: dayjs(Date.parse(post.date))
+                                  .utc()
+                                  .format("YYYY-MM-DD"),
                               })}
                             </time>
                           </div>
