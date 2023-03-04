@@ -1,0 +1,215 @@
+---
+title: Foundry 13th Age System Update 1.25.0
+date: 2023-03-03
+excerpt: The 13th Age system on Foundry just got an iconic update!
+published: true
+---
+
+**Update 1.25.0** for the [Foundry 13th Age system](https://foundryvtt.com/packages/archmage)
+was just released, fresh out of the Archmage's spell forges!
+
+Among the changes in this huge update are
+better **Resources** and automation options for custom resources and powers,
+more support for **embedded macros**, **token improvements**,
+**more configurable sheets** and other **UI features**,
+further work on the **2e integration**, improved **Active Effects**,
+**localization support** and even more stability, thanks to **dozens of fixes**!
+
+Read a summary of the most important changes below, head to Foundry
+for the update (remember to **always make backups** before updating your system!)
+&ndash; or read the [full changelog here](https://gitlab.com/asacolips-projects/foundry-mods/archmage/-/releases/1.25.0)
+if you care about all the arcane details.
+
+## But first: an official announcement
+
+Before getting into the exciting improvements,
+we're proud to announce that as of this update,
+the community developed Toolkit13 system is becoming the **official**
+system for [13th Age](https://pelgranepress.com/13th-age/).
+You can expect more news on this soon!
+
+Now, let's dig into the update...
+
+## Terrain type display
+
+This one is for you, *Terrain Caster* druids! Scenes can now have terrain types,
+which get shown in a nifty new display next to the *Escalation Die* if enabled.
+
+![Koru Behemoth and Ruins as an example. Those ruins are probably the behemoth's fault.](/images/blog/foundry-13th-age-system-update-1-25-0/terraintypes.png)
+
+## Improved tokens: temporary HP bars, oh my!
+
+Tokens now display things like temporary HP correctly on their bars.
+This was ~~yoinked~~ taken with love from the 5E system.
+
+![A default token showing off the new temporary HP health bar.](/images/blog/foundry-13th-age-system-update-1-25-0/temphp.png)
+
+## Automation: Resources and Embedded Macros
+
+### Resources
+
+Resources (like *Ki*, *Momentum* but also custom created ones)
+were reworked and are now more powerful:
+- Powers can automatically manipulate resources with a new syntax
+  (see [this Gitlab MR](https://gitlab.com/asacolips-projects/foundry-mods/archmage/-/merge_requests/292)
+  for details) to increase, decrease, set or unset them.
+- They support handling multiple (comma-separated resources) in the resource field.
+- They support inline rolls in the resource field.
+- They support recoveries as a resource.
+- They support the new *Combat Rhythm* resource (for **2e**).
+- System powers were updated to reflect these (use them for inspiration!),
+  existing legacy powers should have their *Cost* field migrated automatically.
+
+Note that the former *Cost* field for referencing resources in powers is now named *Resources*.
+
+### Embedded Macros
+
+In step with the above changes around better automation,
+the recently added support for embedded macros
+got even further improved:
+- Embedded Macros are now supported for traits, equipment (magic items) and nastier specials.
+- Embedded Macros can now alter most outcomes from item usage.
+- New system-provided embedded macros were added (like for *Whirlwind*)
+  and issues with existing ones fixed. 
+
+## Improved Night Mode
+
+This is a small (but nice!) one. *Night Mode* (dark mode) is now a per-client system setting,
+so it needs to be set in Foundry's settings and is global for all sheets. Previously,
+it was a per-sheet setting, meaning you'd need to manually enable it for each sheet.
+(Fine for a player, but fun if you got lots of summons or are a GM,
+and need to enable it for each monster!)
+
+We also improved *Night Mode* styling a bit and added it in a few previously missed places.
+
+## Player sheets
+
+### Tooltips: Rules and tips at your fingertips
+
+The player sheet now has optional tooltips you can turn on in the system settings,
+containing relevant SRD rules, explanations and tips for each sheet element.
+These also include Foundry-specific hints where appriopriate (for example,
+explaining what is automatically handled by the *Quick Rest* button, or how
+multiclassing works with the class name input).
+
+We anticipate these will likely be more useful for new players when first learning
+the system or creating a character, as they take up quite a bit of screen space.
+Or maybe for GMs, who only look at PC sheets for reference anyway,
+and having the relevant rules referenced may be useful!
+For this reason, these are a per-client setting and off by default.
+
+![Kin tooltip for 2e. Helpful, right? This is one of the shorter ones though. Please don't look at the tooltips for Death Saves or HP.](/images/blog/foundry-13th-age-system-update-1-25-0/kintooltip.png)
+
+### Customize and hide parts of the sheets you don't use
+
+The sheet settings now allow you to hide parts of the sheet.
+Your group doesn't care to count different coins, uses another currency system or none at all?
+No problem, check the option and the currency part of the inventory is hidden!
+Don't use *Incremental Advances* or *One Unique Thing*s? (Heretic!)
+Tick the setting and they vanish from the sheet, no longer taking up that space.
+
+Also comes with an option to **hide empty power sections** in the *Powers* tab. So if the
+character doesn't have any *Flexible Attacks*, that section is hidden. This one
+is probably worth considering for everyone.
+
+![Screenshot showing off the new sheet settings.](/images/blog/foundry-13th-age-system-update-1-25-0/sheetsettings.png)
+
+### Lock sheet settings and Import Powers
+
+As you may have noticed in the image above, you can now hide the
+**Import Powers** button sheet settings tab for players.
+Whether you've got new and inexperienced (or young!) players,
+ones that tend to fiddle and break stuff, or play with people you just don't
+know that well or for whatever other reason:
+You can now lock sheets down a bit. Use this responsibly, trusting players
+and granting them freedom over their sheets is usually a good idea,
+there is a reason these new settings are off by default!
+
+### More player sheet improvements and fixes
+
+- The *Roll Mode* selection in sheet roll dialogs (like for *Skill Checks*) now
+actually works (and defaults to whichever roll mode is selected in the box above chat).
+- If you remove all icons or backgrounds from a sheet, that whole section now gets
+hidden, instead of the title remaining behind like a weirdo.
+- Small improvements to colors, gradients, contrast and styling hopefully mean a
+more pleasant experience playing and using these sheets.
+- Sheets no longer break when set to invalid levels; that's now correctly
+clamped to 1-10.
+
+## NPC sheets
+
+NPC sheets got a bit of love too:
+- The order of *HP* and *Defenses* on NPC sheets now matches Player sheets for consistency.
+  Sorry if it takes you a bit to get used to!
+- All items are now displayed on NPC sheets, regardless of type,
+  so you can now see all the pieces of loot you dropped on NPC actors by accident.
+  Which means you can also use this to track related equipment and loot on NPCs now,
+  without them ending up ~~in the hands of the Diabolist~~ in the invisible ether.
+- As mentioned, *Night Mode* is now a global per-client setting, so you can now feasibly use that with NPCs.
+
+## Localization and translation support
+
+**Everything** besides the compendiums and *Import Power* menu is now
+fully translation-aware and ready for localization. The interface, the PC, NPC,
+effect and item sheets, all the roll dialogs, even the trigger parsing!
+This means that for the first time, it's now possible to translate the full system
+and play in whatever language you want. A **full german translation** is in the works
+and should release soon after this release, and other community members are working
+on further translations!
+
+Translation support for the SRD compendiums and the *Import Powers* menu is slated
+for the next major release.
+
+## Some other goodies
+
+- Work on **2e support** continues, quite a few small changes made it in for that!
+- *Active Effects* got a few improvements and fixes, supporting descriptions,
+  Crit Range modifiers and bonuses and some other bits and bobs now.
+- The chat roll context menu has a shiny new *Apply as Half Healing* option.
+- That same context menu also got its styling fixed and has proper hover effects.
+And roll results look a tiny bit nicer in chat as well!
+- The system now correctly waits for 3D dice rolls (if enabled) to finish before
+updating any sheet UI and spoiling the results.
+- Players are now correctly set to *Unconscious* at 0 HP, instead of *Dead*.
+  This also confers the *Helpless* penalties to them, as it should.
+- *Death Saves* and *Last Gasp Saves* got a few fixes.
+- The *Show Players* button for Item sheets now works correctly.
+- Text trigger evaluation was improved and trigger detection should
+now behave more consistently.
+- *Sequencer* support now handles a few targeting edge cases correctly.
+- Most chat card title images/icons are now hidden if empty. No more *Mystery Man*!
+  Or at least, *less Mystery Man*!
+- Trying to roll initiative without an encounter in the Combat Tracker now
+  results in a helpful message instead of silently doing nothing (and laughing at you).
+- A few useful things were moved around and made accessible for modules and macros.
+
+## Enjoy &ndash; see you next update!
+
+We hope you enjoy this new update and all the work that went into it,
+brought to you by [@Asacolips](https://gitlab.com/Asacolips),
+[@cswendrowski](https://gitlab.com/cswendrowski),
+[@LegoFed3](https://gitlab.com/LegoFed3),
+[@manoelmozzer](https://gitlab.com/manoelmozzer) and
+[@mhilbrunner](https://gitlab.com/mhilbrunner)!
+
+As mentioned, the [changelog](https://gitlab.com/asacolips-projects/foundry-mods/archmage/-/releases/1.25.0)
+lists the full details of the update. Let's hope it becomes one for the Ages!
+Remember to backup your game before updating the system
+and let us know if you run into any issues or bugs &ndash;
+either on the [13th Age Community Discord](https://discord.com/invite/m9DbPC6RsC)
+or by opening an [issue on Gitlab](https://gitlab.com/asacolips-projects/foundry-mods/archmage/-/issues).
+
+With the system becoming official, even more exciting times lie ahead.
+
+Enjoy!
+
+&ndash; Max, sentient construct of the 13 Vaults. (...and the rest of the team!)
+
+[Continue the discussion on GitHub!](https://github.com/orgs/13vaults/discussions/)
+
+---
+
+GitHub Discussions: https://github.com/13vaults/13vaults.com  
+Mastodon: [@13vaults@dice.camp](https://dice.camp/@13vaults)  
+[The 13th Age Community Discord](https://discord.gg/m9DbPC6RsC)  
+Email: admin@13vaults.com
