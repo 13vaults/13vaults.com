@@ -1,9 +1,11 @@
 export default function SocialHero({
   title,
   fontFamily,
+  hero,
 }: {
   title: string | null;
   fontFamily: string;
+  hero: boolean;
 }) {
   return (
     <div
@@ -15,9 +17,18 @@ export default function SocialHero({
         width: "100%",
         fontFamily: fontFamily,
         color: "white",
-        fontSize: "36px",
+        fontSize: hero ? "64px" : "36px",
         fontWeight: 700,
-        backgroundImage: `url("https://www.13vaults.com/images/social-banner.png")`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundImage:
+          process.env.NODE_ENV === "development"
+            ? `url("http://localhost:3000/images/${
+                hero ? "social-banner.jpg" : "social-banner-sm.png"
+              }")`
+            : `url("https://www.13vaults.com/images/${
+                hero ? "social-banner.jpg" : "social-banner-sm.png"
+              }")`,
         textAlign: "center",
         padding: "20px 50px",
         filter: "drop-shadow(0 8px 16px rgb(0 0 0 / 50%))",
@@ -26,7 +37,7 @@ export default function SocialHero({
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
-        height="100px"
+        height={hero ? "175px" : "100px"}
         viewBox="0 0 152 34"
         style={{
           filter: "drop-shadow(0 8px 16px rgb(0 0 0 / 50%))",

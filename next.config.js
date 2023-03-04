@@ -21,6 +21,12 @@ const nextConfig = {
   serverRuntimeConfig: {
     vaultConfig,
   },
+  images: {
+    domains:
+      process.env.NODE_ENV === "production"
+        ? ["www.13vaults.com"]
+        : ["localhost", "www.13vaults.com"],
+  },
   transpilePackages: ["next-image-export-optimizer"],
   env: {
     storePicturesInWEBP: true,

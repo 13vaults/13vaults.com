@@ -22,6 +22,7 @@ import Prose from "@/components/prose";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import { supportedLocales } from "@/lib/locales";
+import Image from "next/image";
 
 dayjs.extend(utc);
 
@@ -76,46 +77,61 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
           maxWidth="max-w-prose"
           maxWidthXl="max-w-4xl"
           maxWidth2xl="max-w-4xl"
-          className="flex flex-col gap-8 bg-white/50 dark:bg-black/50 px-4 pt-4 pb-8 lg:px-8 lg:pt-8 lg:pb-12 shadow w-full flex-1"
+          className="flex flex-col bg-white/50 dark:bg-black/50 shadow w-full flex-1"
         >
-          <h1 className="font-display font-bold text-3xl md:text-4xl text-stone-900 dark:text-stone-200 my-2 md:my-4">
-            {blogPost.title}
-          </h1>
-          <Prose>
-            <p>
-              {t("published-on-label", {
-                date: dayjs(Date.parse(blogPost.date))
-                  .utc()
-                  .format("YYYY-MM-DD"),
-              })}
-            </p>
-            <Content
-              components={{
-                Vault: Vault,
-                a: ({ href, ...properties }: any) => (
-                  <ContentLink href={href} {...properties} />
-                ),
-                table: (properties: any) => (
-                  <div className="overflow-auto border dark:border-stone-700 rounded shadow bg-white dark:bg-stone-700 border-stone-300 my-2">
-                    <table {...properties} />
-                  </div>
-                ),
-                img: ({ alt, ...rest }) => (
-                  <div className="p-4 bg-white/50 rounded dark:bg-black/50 border border-stone-200 dark:border-stone-700">
-                    <figure>
-                      <img
-                        alt={alt}
-                        {...rest}
-                        className="mx-auto rounded shadow"
-                        loading="lazy"
-                      />
-                    </figure>
-                    <figcaption>{alt}</figcaption>
-                  </div>
-                ),
-              }}
+          <div className="relative">
+            <Image
+              className="object-cover"
+              src={
+                process.env.NODE_ENV === "development"
+                  ? `http://localhost:3000/api/og-image/?title=${blogPost.title}&hero=true`
+                  : `https://www.13vaults.com/api/og-image/?title=${blogPost.title}&hero=true`
+              }
+              height="640"
+              width="1280"
+              alt={blogPost.title}
             />
-          </Prose>
+          </div>
+          <div className="flex flex-col gap-8 px-4 pt-4 pb-8 lg:px-8 lg:pt-8 lg:pb-12">
+            <h1 className="font-display font-bold text-3xl md:text-4xl text-stone-900 dark:text-stone-200 my-2 md:my-4">
+              {blogPost.title}
+            </h1>
+            <Prose>
+              <p>
+                {t("published-on-label", {
+                  date: dayjs(Date.parse(blogPost.date))
+                    .utc()
+                    .format("YYYY-MM-DD"),
+                })}
+              </p>
+              <Content
+                components={{
+                  Vault: Vault,
+                  a: ({ href, ...properties }: any) => (
+                    <ContentLink href={href} {...properties} />
+                  ),
+                  table: (properties: any) => (
+                    <div className="overflow-auto border dark:border-stone-700 rounded shadow bg-white dark:bg-stone-700 border-stone-300 my-2">
+                      <table {...properties} />
+                    </div>
+                  ),
+                  img: ({ alt, ...rest }) => (
+                    <div className="p-4 bg-white/50 rounded dark:bg-black/50 border border-stone-200 dark:border-stone-700">
+                      <figure>
+                        <img
+                          alt={alt}
+                          {...rest}
+                          className="mx-auto rounded shadow"
+                          loading="lazy"
+                        />
+                      </figure>
+                      <figcaption>{alt}</figcaption>
+                    </div>
+                  ),
+                }}
+              />
+            </Prose>
+          </div>
         </Container>
       </BasicLayout>
     </>
