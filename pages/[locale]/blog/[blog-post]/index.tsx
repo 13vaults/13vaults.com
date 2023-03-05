@@ -63,7 +63,6 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
           }
         />
         <meta property="og:description" content={blogPost.excerpt} />
-        <meta property="og:url" content="https://www.13vaults.com/" />
         <meta
           property="og:image"
           content={`https://www.13vaults.com/api/og-image/?title=${blogPost.title}`}

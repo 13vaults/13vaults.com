@@ -79,7 +79,6 @@ export default function AncestriesPage({
           property="og:description"
           content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
         />
-        <meta property="og:url" content="https://www.13vaults.com/" />
         <meta
           property="og:image"
           content="https://www.13vaults.com/images/13v-social-banner.jpg"

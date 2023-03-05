@@ -26,6 +26,7 @@ export default function ContentLayerPage({
 }: ContentLayerRendererP) {
   const Content = useMDXComponent(data.body.code);
   const pageDress = get(data, "page_dress");
+  const locale = get(data, "locale", defaultLocale);
   const quote = get(pageDress, "quote");
   const title = `${primaryLabel} - 13 Vaults`;
   const sections = get(data, "sections", []);
@@ -41,10 +42,7 @@ export default function ContentLayerPage({
             "13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
           }
         />
-        <meta
-          property="og:locale"
-          content={get(data, "locale", defaultLocale)}
-        />
+        <meta property="og:locale" content={locale} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta
@@ -67,7 +65,6 @@ export default function ContentLayerPage({
             "13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
           }
         />
-        <meta property="og:url" content="https://www.13vaults.com/" />
         <meta
           property="og:image"
           content="https://www.13vaults.com/images/13v-social-banner.jpg"
