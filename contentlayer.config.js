@@ -9,6 +9,7 @@ import GithubSlugger from "github-slugger";
 import { defaultLocale } from "./lib/locales";
 import remarkSmartypants from "remark-smartypants";
 import remarkUnwrapImages from "remark-unwrap-images";
+import rehypeProbeImageSize from "rehype-probe-image-size";
 
 function getLocaleFromPath(path) {
   const pathArray = path.split(".");
@@ -272,7 +273,10 @@ const contentLayerConfig = makeSource({
   documentTypes: [BlogPost, BasicPage, ClassItem, Ancestry, RulesDocument],
   mdx: {
     remarkPlugins: [remarkGfm, remarkSmartypants, remarkUnwrapImages],
-    rehypePlugins: [rehypeSlug],
+    rehypePlugins: [
+      rehypeSlug,
+      [rehypeProbeImageSize, { staticDir: "public" }],
+    ],
   },
 });
 

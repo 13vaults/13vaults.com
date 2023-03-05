@@ -23,6 +23,7 @@ import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import { supportedLocales } from "@/lib/locales";
 import BlogHero from "@/components/blog-hero";
+import Image from "next/image";
 
 dayjs.extend(utc);
 
@@ -103,14 +104,16 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
                       <table {...properties} />
                     </div>
                   ),
-                  img: ({ alt, ...rest }) => (
+                  img: ({ alt, height = "0", width = "0", src }) => (
                     <div className="p-4 bg-white/50 rounded dark:bg-black/50 border border-stone-200 dark:border-stone-700">
                       <figure>
-                        <img
-                          alt={alt}
-                          {...rest}
+                        <Image
+                          src={src || ""}
+                          alt={alt || ""}
+                          height={Number.parseInt(String(height), 10)}
+                          width={Number.parseInt(String(width), 10)}
                           className="mx-auto rounded shadow"
-                          loading="lazy"
+                          quality={100 * (2 / 3)}
                         />
                       </figure>
                       <figcaption>{alt}</figcaption>
