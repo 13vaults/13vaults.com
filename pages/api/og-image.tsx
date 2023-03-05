@@ -21,8 +21,8 @@ export default async function handler(request: NextRequest) {
     return new ImageResponse(
       <SocialHero fontFamily="Vollkorn SC" title={title} />,
       {
-        width: 800,
-        height: 400,
+        width: 1200,
+        height: 630,
         fonts: [
           {
             name: "Vollkorn SC",

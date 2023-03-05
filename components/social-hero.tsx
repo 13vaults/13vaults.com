@@ -15,7 +15,7 @@ export default function SocialHero({
         width: "100%",
         fontFamily: fontFamily,
         color: "white",
-        fontSize: "36px",
+        fontSize: "54px",
         fontWeight: 700,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -24,14 +24,14 @@ export default function SocialHero({
             ? `url("http://localhost:3000/images/social-banner-sm.png")`
             : `url("https://www.13vaults.com/images/social-banner-sm.png")`,
         textAlign: "center",
-        padding: "20px 50px",
+        padding: "20px 40px",
         filter: "drop-shadow(0 8px 16px rgb(0 0 0 / 50%))",
       }}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
-        height="100px"
+        height="150px"
         viewBox="0 0 152 34"
         style={{
           filter: "drop-shadow(0 8px 16px rgb(0 0 0 / 50%))",
