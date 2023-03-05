@@ -51,7 +51,7 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
         <meta name="twitter:description" content={blogPost.excerpt} />
         <meta
           name="twitter:image"
-          content={`https://www.13vaults.com/api/og-image/?title=${blogPost.title}`}
+          content={`https://www.13vaults.com/api/og-image.png?title=${blogPost.title}`}
         />
         <meta property="og:site_name" content="13 Vaults" />
         <meta property="og:type" content="article" />
@@ -65,7 +65,7 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
         <meta property="og:description" content={blogPost.excerpt} />
         <meta
           property="og:image"
-          content={`https://www.13vaults.com/api/og-image/?title=${blogPost.title}`}
+          content={`https://www.13vaults.com/api/og-image.png?title=${blogPost.title}`}
         />
         <meta property="og:image:type" content="image/png" />
         <meta property="article:published_time" content={blogPost.date} />
