@@ -7,12 +7,13 @@ export const config = {
   runtime: "edge",
 };
 
+const allowedTitles = new Set(allBlogPosts.map((post) => post.title));
+
 export default async function handler(request: NextRequest) {
-  const allowedTitles = allBlogPosts.map((post) => post.title);
   const { searchParams } = request.nextUrl;
   const title = searchParams.get("title");
 
-  if (title && allowedTitles.includes(title)) {
+  if (title && allowedTitles.has(title)) {
     const fontData = await fetch(
       new URL("../../assets/VollkornSC-Bold.ttf", import.meta.url)
     ).then((response) => response.arrayBuffer());
