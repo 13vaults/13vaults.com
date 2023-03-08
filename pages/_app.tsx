@@ -15,20 +15,23 @@ const barlowSemiCondensed = Barlow_Semi_Condensed({
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   preload: false,
+  display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "700"],
   style: ["normal"],
   preload: false,
+  display: "swap",
 });
 
 const vollkorn = Vollkorn({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "700"],
   style: ["normal", "italic"],
   preload: false,
+  display: "swap",
 });
 
 const vollkornSc = Vollkorn_SC({
@@ -36,6 +39,7 @@ const vollkornSc = Vollkorn_SC({
   weight: ["400", "700"],
   style: ["normal"],
   preload: false,
+  display: "swap",
 });
 
 function VaultsApp({ Component, pageProps }: AppProps) {

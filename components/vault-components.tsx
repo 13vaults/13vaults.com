@@ -2,6 +2,7 @@ import clsx from "clsx";
 
 export { default as AbilityList } from "./compendium-ability";
 export { default as CompendiumFeats } from "./compendium-feats";
+export { default as Alert } from "./alert";
 
 export function Dice({ className = "", ...properties }: any) {
   return (
