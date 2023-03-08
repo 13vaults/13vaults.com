@@ -241,7 +241,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                     aria-hidden="true"
                                   />
 
-                                  <div className="relative bg-stone-800 border-b border-stone-700">
+                                  <div className="relative bg-stone-800 border-b border-stone-700 px-8">
                                     <Container className="text-sm">
                                       <div className="font-sans grid grid-cols-1 items-start gap-y-10 gap-x-8 py-6">
                                         <div className="grid grid-cols-5 gap-y-10 gap-x-8">

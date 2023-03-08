@@ -1,0 +1,48 @@
+---
+name: Twygzog
+source: 13th Age Bestiary, p.87
+ability_scores:
+  - strength
+  - constitution
+page_dress:
+  quote:
+    text: |
+      We stumbled upon what appeared to be an abandoned village in the shadowy depths of the Ombarb Wood,
+      completely covered in fungus, mold, and decay.
+      That's where we came upon the group of 'Zogs.
+    cite: Althea Stormbringer, leader of the Silver Blades, recounting her discovery of the Twygzogs during her adventuring days in the 11th Age.
+  lead: Sentient fungaloids that demonstrate the ability to cooperate with other sentient races, unlike most other fungus creatures.
+abilities:
+  - name: Fungal Biology
+    _type: Racial Power
+    description: Once battle per battle when you fail a saving throw (including a death save), reroll the save and abide by the reroll.
+    feats:
+      - tier: champion
+        description: You gain a bonus to fungal biology saves equal to your Constitution modifier.
+  - name: Fungal Survivor
+    _type: Racial Feat
+    feats:
+      - tier: champion
+        description: Whenever you would deal miss damage with a melee attack, you can choose to instead heal hit points equal to your level.
+  - name: Fungal Companion
+    _type: Racial Talent
+    description: You sprout a tiny fungal minion. Use the rules for the Wizard’s Familiar talent. Twygzogs who take this feat can have the fungal minion and a regular familiar or companion granted by class features or feats. In order to sprout a fungal companion you must spend a talent, replacing one of your class talents with the Fungal Companion talent.
+---
+
+Your creature type is plant instead of humanoid.
+
+## Racial Bonus
+
+Twygzog gain a +2 bonus to either Strength or Constitution.
+
+## Racial Powers
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />
+
+## Racial Feats
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Feat")} />
+
+## Racial Talents
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Talent")} />
