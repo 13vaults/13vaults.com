@@ -1,0 +1,37 @@
+---
+name: Unholy Ones
+source: Book of Ages, p.57
+ability_scores:
+  - strength
+  - charisma
+page_dress:
+  quote:
+    text: |-
+      The screams of them... as their bodies twisted and contorted, their minds consumed by the dark power they sought to wield.
+      Those screams...
+    cite: Nara, High Priestess of the Order of Light, circa 4a.234
+  lead: Once human, after pacts made with unholy deities, gained powerful abilities while becoming twisted and corrupted.
+abilities:
+  - name: Drain
+    _type: Racial Power
+    description: |-
+      Once per battle when you heal using a recovery, you may activate this power.
+      One nearby enemy loses hp equal to 1d4 X your level, and you regain half that many additional hp.
+      However, if the damage kills the random enemy, you only regain half as many hp as they had before the damage.
+      So if you do 16 damage to an enemy and that doesn’t kill them, you regain 8 hp; if you do 16 damage to an enemy and they only had 12 hp, they die and you only regain 6 hp.
+    feats:
+      - tier: adventurer
+        description: When you reduce a non-mook enemy to 0 hp with an attack, the closest nearby staggered enemy with fewer hp than you is dazed until the end of its next turn.
+      - tier: champion
+        description: When you use drain, gain a +4 bonus to your next attack roll, or +2 if drain reduced the enemy to 0 hp.
+      - tier: epic
+        description: The first enemy you hit each battle must roll their next d20 roll twice and use the lower result.
+---
+
+## Racial Bonus
+
+Unholy Ones gain a +2 bonus to either Strength or Charisma.
+
+## Racial Powers
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />

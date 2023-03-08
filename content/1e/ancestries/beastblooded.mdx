@@ -1,0 +1,34 @@
+---
+name: Beastblooded
+source: Book of Ages, p.77
+ability_scores:
+  - dexterity
+  - constitution
+page_dress:
+  quote:
+    text: |-
+      I feel it stirring within me, the primal power that threatens to overwhelm my every thought and action, and yet...
+      I cannot help but desire in its strength, in the knowledge that I have become something more than human - something truly free.
+    cite: Recovered study notes of the wizard Aelric, quoting a human he was studying who had became Beastblooded, in the last year of the 12th age.
+  lead: After being pushed to the brink, these former people reveal their true, bestial nature.
+abilities:
+  - name: Bestial Fury
+    _type: Racial Power
+    description: |-
+      Once per battle when you hit an enemy with an attack, you may deal extra damage to them equal to your level &times; the escalation die.
+    feats:
+      - tier: adventurer
+        description: The first time you use bestial fury each battle, heal hp equal to the extra damage you deal.
+      - tier: champion
+        description: Once per battle when you use bestial fury against an enemy engaged with an ally, bestial fury is not expended.
+      - tier: epic
+        description: Once per battle when you miss an enemy with an attack, until the end of the battle, gain an extra use of bestial fury that can only be used against an enemy you miss with an attack.
+---
+
+## Racial Bonus
+
+Beastblooded gain a +2 bonus to either Dexterity or Constitution.
+
+## Racial Powers
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />

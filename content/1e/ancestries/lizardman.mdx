@@ -1,0 +1,49 @@
+---
+name: Lizardman
+source: Book of Ages, p.88
+ability_scores:
+  - dexterity
+  - constitution
+page_dress:
+  quote:
+    text: |-
+      ... and Zalthuun, the blood-mage, faced off against his own brother,
+      Kethras, the golden blade of the imperial legion,
+      in a battle that would shape the lands forever
+    cite: "Blood of the Ages: A Comprehensive History of Conflicts, by Valtor the Bard, published 13a.19"
+  lead: A versatile and culturally flexible people, seamlessly incorporating the norms and values of their surroundings.
+abilities:
+  - name: Frenzy
+    _type: Racial Power
+    description: |-
+      Once per battle, you may declare you are entering a frenzy. Make the following attack:
+
+      Quick action
+
+      ---
+
+      **Special:** You can make a number of attacks equal to the escalation die, but may only target a single creature with half of the potential attacks (rounded up).
+
+      **Target:** One creature engaged with you
+
+      **Attack:** 6 + your level vs. AC
+
+      **Hit:** 1d8 X your level damage.
+
+      **Miss:** You take damage equal to your level.
+    feats:
+      - tier: adventurer
+        description: Once per day when grabbed or stuck, you can spend a recovery (regaining no hp) and end that condition on yourself.
+      - tier: champion
+        description: You may replace one of your frenzy attacks with an at-will or basic attack.
+      - tier: epic
+        description: As a standard action, you may move across any relatively flat surface (a calm lake, a wall, a ceiling, etc.).
+---
+
+## Racial Bonus
+
+Lizardmen gain a +2 bonus to either Dexterity or Constitution.
+
+## Racial Powers
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />

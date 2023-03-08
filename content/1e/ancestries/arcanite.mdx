@@ -1,0 +1,36 @@
+---
+name: Arcanite
+source: Book of Ages, p.77
+ability_scores:
+  - intelligence
+  - charisma
+page_dress:
+  quote:
+    text: |-
+      The booming voice was echoed across the land.
+      With his call, the dormant arcanites stirred from their hidden chambers, ready to once again channel the full force of their arcane power in service to their master's dark ambitions.
+    cite: The Annals of the Dead Crown by the necromancer Morwyn, circa 5e.512
+  lead: Human-like in appearance with the ability to control deep and powerful magic, they have kept themselves hidden for hundreds of years.
+abilities:
+  - name: Arcane Attunement
+    _type: Racial Power
+    description: |-
+      Once per battle, before you make a saving throw against a magical effect,
+      OR just after the battle before you roll to recharge for a spell or magic item recharge,
+      you may choose to roll two d20s instead of one and pick the best result.
+    feats:
+      - tier: adventurer
+        description: You may cast the wizard spell counter-magic twice per day, using your highest ability score in place of Intelligence and your level (or one lower) as the level of the spell.
+      - tier: champion
+        description: You gain +2 to all your defenses against spells and spell-like attacks.
+      - tier: epic
+        description: When you are reduced to 0 hp, deal 10d6 damage to a nearby enemy.
+---
+
+## Racial Bonus
+
+Arcanites gain a +2 bonus to either Intelligence or Charisma.
+
+## Racial Powers
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />

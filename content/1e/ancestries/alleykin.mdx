@@ -1,0 +1,36 @@
+---
+name: Alleykin
+source: Book of Ages, p.80
+ability_scores:
+  - dexterity
+  - charisma
+page_dress:
+  quote:
+    text: |-
+      Attention all citizens!
+      The nefarious 'Nightclaw' is wanted for the heinous robbery of Magistrate Valerius.
+      Be vigilant and report any sightings to the authorities at once, for this elusive feline is not to be underestimated!
+    cite: Wanted poster found in the city of Serenith, circa 13a.6
+  lead: A cunning and nimble race of humanoid cats that often live on the outskirts of society.
+abilities:
+  - name: Elusive
+    _type: Racial Power
+    description: |-
+      Once per battle, reduce the damage you take from an attack by 1d6 &times; your level.
+      Then deal that much damage to one enemy engaged with you.
+    feats:
+      - tier: adventurer
+        description: You take half damage from falls.
+      - tier: champion
+        description: After you use elusive, you can immediately roll a free disengage check.
+      - tier: epic
+        description: Once when you die, it turns out you weren’t dead after all. You find your allies during the next rest, having spent enough recoveries to get above staggered.
+---
+
+## Racial Bonus
+
+Alleykin gain a +2 bonus to either Dexterity or Charisma.
+
+## Racial Powers
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />
