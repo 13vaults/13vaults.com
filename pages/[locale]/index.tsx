@@ -92,6 +92,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
               alt="Dragon flying near a tower."
               placeholder="blur"
               unoptimized={process.env.NODE_ENV === "development"}
+              priority
             />
           </div>
           <div className="flex-1 flex flex-col gap-12 px-4 py-8 lg:p-8 pb-14 z-0 mx-auto justify-center items-center">

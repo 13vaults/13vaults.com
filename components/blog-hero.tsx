@@ -11,6 +11,7 @@ export default function BlogHero({ title }: { title: string }) {
         alt={title}
         priority
         unoptimized={process.env.NODE_ENV !== "production"}
+        placeholder="blur"
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"
