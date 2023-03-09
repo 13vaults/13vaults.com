@@ -23,6 +23,13 @@ abilities:
       _Recharge 16+:_
       After a battle in which you rage, roll a d20 and add your Constitution modifier.
       On a 16+, you can use Barbarian Rage again later in the day.
+    feats:
+      - tier: adventurer
+        description: Whenever the escalation die is 4+, as a quick action, you can start raging for free (it doesn’t count against your normal usage). This rage lasts until the end of the battle, as normal.
+      - tier: champion
+        description: You can now start raging freely when the escalation die is 3+.
+      - tier: epic
+        description: You can now start raging freely when the escalation die is 2+.
   - name: Melee Attack
     _type: Basic Attack
     usage: at-will
@@ -176,6 +183,15 @@ abilities:
     feats:
       - tier: epic
         description: Your Ancestral Warband spirits are always raging, even if you are not, and continue to fight for a single round while you are unconscious.
+  - name: Relentless
+    _type: Talent
+    description: |-
+      **Effect:**
+      While raging, you have resist damage 12+ (when an attack targets you, the attacker must roll a natural 12 or higher on the attack roll or it only deals half damage).
+    feats:
+      - tier: epic
+        description: Even when not raging, whenever you score a critical hit against an enemy, you have resist damage 12+ until the start of your next turn.
+        
 ---
 
 ## Ability Scores
@@ -296,4 +312,4 @@ Choose one of these champion-tier talents or take another adventurer-tier talent
 At 8th level, you gain an additional barbarian class talent.
 Choose one of these epic-tier talents, or take another adventurer-tier or champion-tier talent instead.
 
-<Vault.AbilityList abilities={props.getAbilities(["Ancestral Warband"])} />
+<Vault.AbilityList abilities={props.getAbilities(["Ancestral Warband", "Relentless"])} />
