@@ -258,7 +258,8 @@ Paladins may start with either 25 gp or 1d6 &times; 10 gp.
 ## Basic Attacks
 
 <Vault.AbilityList
-  abilities={props.getAbilities(["Melee Attack", "Ranged Attack"])}
+  abilities={props.getAbilitiesByType("Basic Attack")}
+  columns={2}
 />
 
 ## Class Features

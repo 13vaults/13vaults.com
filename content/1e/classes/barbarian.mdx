@@ -191,7 +191,6 @@ abilities:
     feats:
       - tier: epic
         description: Even when not raging, whenever you score a critical hit against an enemy, you have resist damage 12+ until the start of your next turn.
-        
 ---
 
 ## Ability Scores
@@ -271,7 +270,8 @@ Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are l
 ## Basic Attacks
 
 <Vault.AbilityList
-  abilities={props.getAbilities(["Melee Attack", "Ranged Attack"])}
+  abilities={props.getAbilitiesByType("Basic Attack")}
+  columns={2}
 />
 
 ## Class Features
@@ -312,4 +312,6 @@ Choose one of these champion-tier talents or take another adventurer-tier talent
 At 8th level, you gain an additional barbarian class talent.
 Choose one of these epic-tier talents, or take another adventurer-tier or champion-tier talent instead.
 
-<Vault.AbilityList abilities={props.getAbilities(["Ancestral Warband", "Relentless"])} />
+<Vault.AbilityList
+  abilities={props.getAbilities(["Ancestral Warband", "Relentless"])}
+/>

@@ -377,7 +377,8 @@ Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are l
 ## Basic Attacks
 
 <Vault.AbilityList
-  abilities={props.getAbilities(["Melee Attack", "Ranged Attack"])}
+  abilities={props.getAbilitiesByType("Basic Attack")}
+  columns={2}
 />
 
 ## Class Talents

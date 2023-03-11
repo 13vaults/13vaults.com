@@ -90,7 +90,7 @@ abilities:
       Immediately choose a nearby ally and give them the blessing as a free action.
 
       An ally with this blessing can use it to reroll an attack as a free action this battle. An ally can only have one such blessing on them at a time.
-      
+
       **Invocation of Justice/Vengeance:** This battle, add double your level to the miss damage of your attacks and the attacks of your
       nearby allies. (For example, your basic melee attack as a cleric will deal triple your level as miss damage while this invocation is active.)
     feats:
@@ -716,7 +716,8 @@ Although not listed on the table, this class gets three talents. It does not gai
 ## Basic Attacks
 
 <Vault.AbilityList
-  abilities={props.getAbilities(["Melee Attack", "Ranged Attack"])}
+  abilities={props.getAbilitiesByType("Basic Attack")}
+  columns={2}
 />
 
 ## Class Features
