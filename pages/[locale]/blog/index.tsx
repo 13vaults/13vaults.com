@@ -57,33 +57,31 @@ export default function BlogIndexPage({
             <div>
               {size(blogPosts) > 0 ? (
                 <ol role="list" className="flex flex-col gap-4">
-                  {orderBy(
-                    map(orderBy(blogPosts, ["date"], ["desc"]), (post) => (
-                      <li role="listitem" key={post.slug}>
-                        <Link
-                          href={`/${localeString}/blog/${post.slug}`}
-                          className="flex flex-col gap-4 shadow p-4 rounded text-stone-900 dark:text-stone-50 bg-stone-50 dark:bg-stone-800 transition-all hover:shadow-lg border-2 border-stone-300 hover:border-teal-500 dark:border-stone-700"
-                        >
-                          <div className="flex flex-col">
-                            <h2 className="font-display font-bold text-2xl">
-                              {post.title}
-                            </h2>
-                            <time className="text-xs">
-                              {t("published-on-label", {
-                                date: dayjs(Date.parse(post.date))
-                                  .utc()
-                                  .format("YYYY-MM-DD"),
-                              })}
-                            </time>
-                          </div>
-                          <div className="text-sm">
-                            <p className="mb-2">{post.excerpt}</p>
-                            <p className="italic">{t("read-more")}</p>
-                          </div>
-                        </Link>
-                      </li>
-                    ))
-                  )}
+                  {map(orderBy(blogPosts, ["date"], ["desc"]), (post) => (
+                    <li role="listitem" key={post.slug}>
+                      <Link
+                        href={`/${localeString}/blog/${post.slug}`}
+                        className="flex flex-col gap-4 shadow p-4 rounded text-stone-900 dark:text-stone-50 bg-stone-50 dark:bg-stone-800 transition-all hover:shadow-lg border-2 border-stone-300 hover:border-teal-500 dark:border-stone-700"
+                      >
+                        <div className="flex flex-col">
+                          <h2 className="font-display font-bold text-2xl">
+                            {post.title}
+                          </h2>
+                          <time className="text-xs">
+                            {t("published-on-label", {
+                              date: dayjs(Date.parse(post.date))
+                                .utc()
+                                .format("YYYY-MM-DD"),
+                            })}
+                          </time>
+                        </div>
+                        <div className="text-sm">
+                          <p className="mb-2">{post.excerpt}</p>
+                          <p className="italic">{t("read-more")}</p>
+                        </div>
+                      </Link>
+                    </li>
+                  ))}
                 </ol>
               ) : (
                 <div>{t("no-posts")}</div>
