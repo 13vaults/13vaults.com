@@ -98,7 +98,7 @@ export default function AncestriesPage({
                 title={classItem.name}
                 description={
                   classItem.page_dress?.lead ? (
-                    <p className="text-sm">{classItem.page_dress.lead}</p>
+                    <p>{classItem.page_dress.lead}</p>
                   ) : null
                 }
                 detailsHref={`/${localeString}/compendium/classes/${classItem.slug}`}

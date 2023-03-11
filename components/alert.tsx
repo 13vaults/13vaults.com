@@ -101,7 +101,7 @@ export default function Alert({
           {title ? (
             <p
               className={clsx(
-                "text-sm font-medium mb-0 mx-0 mt-2",
+                "font-medium mb-0 mx-0 mt-2",
                 classes.textColorStrong
               )}
             >
@@ -110,7 +110,7 @@ export default function Alert({
           ) : null}
           <div
             className={clsx(
-              "mt-2 text-sm prose max-w-none prose-p:my-2",
+              "mt-2 prose max-w-none prose-p:my-2",
               classes.proseModifiers
             )}
           >

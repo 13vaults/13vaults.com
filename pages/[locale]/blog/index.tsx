@@ -75,7 +75,7 @@ export default function BlogIndexPage({
                             })}
                           </time>
                         </div>
-                        <div className="text-sm">
+                        <div>
                           <p className="mb-2">{post.excerpt}</p>
                           <p className="italic">{t("read-more")}</p>
                         </div>

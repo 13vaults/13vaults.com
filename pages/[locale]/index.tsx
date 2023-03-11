@@ -193,7 +193,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
                         <h2 className="text-3xl font-display-serif font-semibold">
                           {t(item.title_label)}
                         </h2>
-                        <p className="text-sm leading-tight font-display text-justify text-align-last-center font-medium text-white/75">
+                        <p className="leading-tight font-display text-justify text-align-last-center font-medium text-white/75">
                           {t(item.body_label)}
                         </p>
                       </Link>
@@ -207,7 +207,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
                         <h2 className="text-3xl font-display-serif font-semibold">
                           {t(item.title_label)}
                         </h2>
-                        <p className="text-sm leading-tight font-display text-justify text-align-last-center font-medium text-white/75">
+                        <p className="leading-tight font-display text-justify text-align-last-center font-medium text-white/75">
                           {t(item.body_label)}
                         </p>
                       </div>

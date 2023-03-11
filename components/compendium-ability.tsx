@@ -46,7 +46,7 @@ interface AbilityItemP {
 
 function AbilityItem({ ability }: AbilityItemP): JSX.Element {
   return (
-    <section className="text-xs m-0 rounded shadow border border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-800">
+    <section className="text-base m-0 rounded shadow border border-stone-300 dark:border-stone-700 bg-stone-50 dark:bg-stone-800">
       <header
         className={clsx(
           {
@@ -54,7 +54,7 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
             "border-b": ability.description,
             "sm:border-b": ability.description || ability.feats,
           },
-          "not-prose p-2 gap-2 shadow-sm font-display font-medium text-sm sm:text-base bg-white dark:bg-stone-700 dark:text-stone-200 dark:border-stone-900 border-stone-300 rounded-t flex justify-between"
+          "text-lg not-prose p-2 gap-2 shadow-sm font-display font-medium bg-white dark:bg-stone-700 dark:text-stone-200 dark:border-stone-900 border-stone-300 rounded-t flex justify-between"
         )}
       >
         <h1 className="text-left">{ability.name}</h1>
@@ -64,7 +64,7 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
         {ability.description ? (
           <div
             className="p-2 prose max-w-none prose-p:text-justify dark:prose-invert prose-h3:my-2 prose-headings:font-display
-                     text-xs first:prose-p:mt-0 last:prose-p:mb-0 prose-hr:my-2 prose-p:my-2 prose-hr:border-stone-300 prose-hr:dark:border-stone-700"
+                       text-base first:prose-p:mt-0 last:prose-p:mb-0 prose-hr:my-2 prose-p:my-2 prose-hr:border-stone-300 prose-hr:dark:border-stone-700"
           >
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}

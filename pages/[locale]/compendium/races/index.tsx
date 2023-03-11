@@ -99,7 +99,7 @@ export default function AncestriesPage({
                 title={ancestry.name}
                 description={
                   ancestry.page_dress?.lead ? (
-                    <p className="text-sm">{ancestry.page_dress.lead}</p>
+                    <p>{ancestry.page_dress.lead}</p>
                   ) : null
                 }
                 detailsHref={`/${localeString}/compendium/races/${ancestry.slug}`}

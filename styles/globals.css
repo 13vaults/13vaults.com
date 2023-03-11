@@ -47,7 +47,7 @@
     text-shadow: none;
   }
 
-  @supports (min-height: -webkit-fill-available;) {
+  @supports (min-height: -webkit-fill-available) {
     .min-h-screen-wk {
       min-height: -webkit-fill-available;
     }
