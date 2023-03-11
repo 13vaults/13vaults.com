@@ -62,7 +62,7 @@ export default function BlogIndexPage({
                       <li role="listitem" key={post.slug}>
                         <Link
                           href={`/${localeString}/blog/${post.slug}`}
-                          className="flex flex-col gap-4 shadow p-4 rounded text-stone-900 dark:text-stone-50 bg-stone-50 dark:bg-stone-800 transition-shadow hover:shadow-lg"
+                          className="flex flex-col gap-4 shadow p-4 rounded text-stone-900 dark:text-stone-50 bg-stone-50 dark:bg-stone-800 transition-all hover:shadow-lg border-2 border-stone-300 hover:border-teal-500 dark:border-stone-700"
                         >
                           <div className="flex flex-col">
                             <h2 className="font-display font-bold text-2xl">
