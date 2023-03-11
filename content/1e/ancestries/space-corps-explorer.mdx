@@ -1,0 +1,58 @@
+---
+name: Space Corps Explorer
+source: Book of Ages, p.52
+ability_scores:
+  - intelligence
+  - dexterity
+page_dress:
+  quote:
+    text: |-
+      I was minding me own business tilling the fields when I saw it—the streaking rock soaring across the sky!
+      I've never seen so many colors at once, but I had to see what it could be...
+    cite: Elena the farmer, giving her account about a crashed object to Verdanian officials, circa 6a.568
+  lead: A bold and intrepid adventurer who uses an array of spell-like gadgets to overcome obstacles.
+abilities:
+  - name: Space Fleet Survival Belt
+    _type: Racial Power
+    description: |-
+      You've got an array of technological gadgets in your belt—an anti-
+      grav booster, a narrowbeam comm projector, a holoshell and so
+      forth. You can use these gadgets to cast a non-magical duplicate
+      of _utility spell_ (13th Age core book, page 150) once per battle or
+      scene. You cast the spells at your level, or one level below. You
+      need to make an Intelligence skill check to pull off the effect. The
+      DC for the check depends on the effect desired:
+
+      _Featherfall_: DC 15  
+      _Disguise self, hold portal_: DC 20  
+      _Message, levitate, “speak with item”_: DC 25  
+      _Water breathing, scrying_: DC 30  
+
+      If the test fails, you fail to cast the “spell” and you can’t use your
+      survival belt again until after the battle or scene.
+
+      **About the belt:**
+      The technological version of _speak with item_
+      doesn’t let you talk to a magic item, but does let you analyse the
+      physical composition of an object, detect hidden forensic traces
+      and so forth, which gives you roughly the same information as
+      a _speak with item_ spell. (The belt is genetically keyed to its
+      owner, by the way, so it can’t be used by anyone else. It is also
+      nearly impossible to remove by someone unfamiliar with it,
+      except through ingenuous lockpicking or massive force.)
+    feats:
+      - tier: adventurer
+        description: You can cast the wizard spell _shield_ once per day.
+      - tier: champion
+        description: You may use your Space Fleet Survival Belt twice per battle or scene.
+      - tier: epic
+        description: You can cast the wizard spell _flight_ once per day.
+---
+
+## Racial Bonus
+
+Space Corps Explorers gain a +2 bonus to either Intelligence or Dexterity.
+
+## Racial Powers
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Racial Power")} />
