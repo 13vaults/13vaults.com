@@ -21,8 +21,8 @@ export default function SocialHero({
         backgroundPosition: "center",
         backgroundImage:
           process.env.NODE_ENV === "development"
-            ? `url("http://localhost:3000/images/social-banner-sm.png")`
-            : `url("https://www.13vaults.com/images/social-banner-sm.png")`,
+            ? `url("http://localhost:3000/images/social-banner-sm.jpg")`
+            : `url("https://www.13vaults.com/images/social-banner-sm.jpg")`,
         textAlign: "center",
         padding: "20px 40px",
         filter: "drop-shadow(0 8px 16px rgb(0 0 0 / 50%))",
