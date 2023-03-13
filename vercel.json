@@ -9,7 +9,7 @@
       "destination": "https://plausible.io/js/script.js"
     },
     {
-      "source": "/pa/api/event/",
+      "source": "/pa/api/event",
       "destination": "https://plausible.io/api/event"
     }
   ]
