@@ -21,7 +21,7 @@ export default function BasicLayout({
   const { t } = useTranslation("common");
 
   return (
-    <div className="min-h-screen min-h-screen-wk flex flex-col">
+    <div className="min-h-screen-safe flex flex-col">
       <header className="z-[1] sticky top-0 shadow">
         <MegaNav navigation={navigation} />
       </header>

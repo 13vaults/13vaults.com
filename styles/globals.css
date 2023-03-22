@@ -47,10 +47,8 @@
     text-shadow: none;
   }
 
-  @supports (min-height: -webkit-fill-available) {
-    .min-h-screen-wk {
-      min-height: -webkit-fill-available;
-    }
+  .min-h-screen-safe {
+    min-height: 100dvh;
   }
 }
 
