@@ -24,6 +24,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   experimental: {
+    appDir: true,
     scrollRestoration: true,
     largePageDataBytes: 256 * 1024,
   },

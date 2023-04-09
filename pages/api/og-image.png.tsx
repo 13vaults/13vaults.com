@@ -1,6 +1,5 @@
 import SocialHero from "@/components/social-hero";
-import { ImageResponse } from "@vercel/og";
-import { NextRequest } from "next/server";
+import { NextRequest, ImageResponse } from "next/server";
 
 export const config = {
   runtime: "edge",
