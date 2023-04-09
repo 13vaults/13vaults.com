@@ -18,5 +18,8 @@
   "footer.mastodon-link": "<mastodon>Mastodon</mastodon>",
   "footer.privacy-link": "<privacy>Privacy Policy</privacy>",
   "footer.legal-link": "<legal>Legal</legal>",
-  "footer.license-link": "<license>License</license>"
+  "footer.license-link": "<license>License</license>",
+  "go-back-rules-label": "Go back to Basic Rules",
+  "go-back-races-label": "Go back to Races",
+  "go-back-classes-label": "Go back to Classes"
 }

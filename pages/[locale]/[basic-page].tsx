@@ -61,7 +61,7 @@ export default function VaultsBasicPage({
           <Container>
             <main className="xl:col-start-4 xl:col-end-13 flex flex-col ">
               <article
-                className="prose prose-h1:my-0 prose-h2:mt-4 prose-p:text-justify max-w-none
+                className="prose prose-h1:my-0 prose-h2:mt-4 max-w-none
                          prose-headings:font-serif prose-lead:leading-normal prose-lead:font-display prose-table:my-2
                          prose-blockquote:border-teal-500 prose-blockquote:bg-white dark:prose-blockquote:bg-stone-800
                          dark:prose-blockquote:text-white prose-blockquote:font-serif prose-blockquote:shadow-md

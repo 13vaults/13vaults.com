@@ -63,7 +63,7 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
       <div className="rounded-b flex-col">
         {ability.description ? (
           <div
-            className="p-2 prose max-w-none prose-p:text-justify dark:prose-invert prose-h3:my-2 prose-headings:font-display
+            className="p-2 prose max-w-none dark:prose-invert prose-h3:my-2 prose-headings:font-display
                        text-base first:prose-p:mt-0 last:prose-p:mb-0 prose-hr:my-2 prose-p:my-2 prose-hr:border-stone-300 prose-hr:dark:border-stone-700"
           >
             <ReactMarkdown
