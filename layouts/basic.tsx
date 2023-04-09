@@ -77,7 +77,7 @@ export default function BasicLayout({
                       privacy: (
                         <Link
                           hrefLang={localeString}
-                          href={`/${localeString}/privacy/`}
+                          href={`/${localeString}/privacy`}
                         />
                       ),
                     }}
@@ -92,7 +92,22 @@ export default function BasicLayout({
                       legal: (
                         <Link
                           hrefLang={localeString}
-                          href={`/${localeString}/legal/`}
+                          href={`/${localeString}/legal`}
+                        />
+                      ),
+                    }}
+                  />
+                </p>
+                <span>&middot;</span>
+                <p>
+                  <Trans
+                    t={t}
+                    i18nKey="footer.license-link"
+                    components={{
+                      license: (
+                        <Link
+                          hrefLang={localeString}
+                          href={`/${localeString}/license`}
                         />
                       ),
                     }}
