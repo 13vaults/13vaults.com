@@ -6,16 +6,16 @@ import {
   XCircleIcon,
 } from "@heroicons/react/24/solid";
 import clsx from "clsx";
-import { ElementType } from "react";
+import { ElementType, ReactNode } from "react";
 
 type AlertVariant = "notice" | "caution" | "danger" | "success" | "info";
 
 interface AlertP {
   title?: string;
   variant: AlertVariant;
-  children?: JSX.Element | null;
+  children?: ReactNode | null;
   icon?: ElementType;
-  showIcon: boolean;
+  showIcon?: boolean;
 }
 
 const variantClassMap: Record<
@@ -90,7 +90,7 @@ export default function Alert({
     >
       <div className="flex">
         {showIcon ? (
-          <div className="flex-shrink-0 mt-2">
+          <div className="mt-1">
             <Icon
               className={clsx("h-5 w-5", classes.iconColor)}
               aria-hidden="true"
@@ -100,17 +100,14 @@ export default function Alert({
         <div className="ml-3">
           {title ? (
             <p
-              className={clsx(
-                "font-medium mb-0 mx-0 mt-2",
-                classes.textColorStrong
-              )}
+              className={clsx("font-medium mx-0 mb-2", classes.textColorStrong)}
             >
               {title}
             </p>
           ) : null}
           <div
             className={clsx(
-              "mt-2 prose max-w-none prose-p:my-2",
+              "prose max-w-none prose-p:my-2",
               classes.proseModifiers
             )}
           >
