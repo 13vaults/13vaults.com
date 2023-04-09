@@ -26,6 +26,7 @@
     "react-i18next": "^12.2.0",
     "react-markdown": "^8.0.5",
     "remark-smartypants": "^2.0.0",
+    "sharp": "^0.32.0",
     "typescript": "4.9.5"
   },
   "devDependencies": {
