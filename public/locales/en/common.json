@@ -21,5 +21,6 @@
   "footer.license-link": "<license>License</license>",
   "go-back-rules-label": "Go back to Basic Rules",
   "go-back-races-label": "Go back to Races",
-  "go-back-classes-label": "Go back to Classes"
+  "go-back-classes-label": "Go back to Classes",
+  "go-back-generic-label": "Go back"
 }

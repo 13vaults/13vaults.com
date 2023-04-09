@@ -1,8 +1,10 @@
 import { remToPx } from "@/lib/rem-to-px";
 import useInitialValue from "@/lib/use-initial-value";
+import { ArrowUturnLeftIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
 import { AnimatePresence, useIsPresent, motion } from "framer-motion";
 import { size } from "lodash";
+import Link from "next/link";
 import { ReactNode } from "react";
 import { useSectionStore } from "./section-provider";
 
@@ -82,19 +84,26 @@ function NavigationGroup({ section }: any) {
 
 export default function CompendiumSideNav({
   primaryLabel,
+  goBackLabel,
+  goBackLink,
 }: {
   primaryLabel: string;
+  goBackLabel: string;
+  goBackLink: string;
 }): JSX.Element | null {
   const sections = useSectionStore((store: any) => store.sections);
   return (
     <div>
       {size(sections) > 0 ? (
-        <AnimatePresence initial={true}>
+        <AnimatePresence initial>
           <VisibleSectionHighlight />
         </AnimatePresence>
       ) : null}
-      <div>
-        <p className="font-medium font-display text-xl m-2 truncate">
+      <div className="flex gap-2 items-center p-2">
+        <Link href={goBackLink} title={goBackLabel}>
+          <ArrowUturnLeftIcon className="h-4 w-4 text-current" />
+        </Link>
+        <p className="font-medium font-display text-xl truncate">
           {primaryLabel}
         </p>
       </div>

@@ -16,6 +16,8 @@ interface ContentLayerRendererP {
   primaryLabel: string;
   secondaryLabel: string;
   navigation: Navigation;
+  goBackLabel: string;
+  goBackLink: string;
 }
 
 export default function ContentLayerPage({
@@ -23,6 +25,8 @@ export default function ContentLayerPage({
   primaryLabel,
   secondaryLabel,
   navigation,
+  goBackLabel,
+  goBackLink,
 }: ContentLayerRendererP) {
   const Content = useMDXComponent(data.body.code);
   const pageDress = get(data, "page_dress");
@@ -73,7 +77,13 @@ export default function ContentLayerPage({
       <SectionProvider sections={sections}>
         <VaultLayout
           navigation={navigation}
-          sideNavigation={<CompendiumSideNav primaryLabel={primaryLabel} />}
+          sideNavigation={
+            <CompendiumSideNav
+              goBackLink={goBackLink}
+              goBackLabel={goBackLabel}
+              primaryLabel={primaryLabel}
+            />
+          }
         >
           <VaultHeader
             primaryLabel={primaryLabel}

@@ -10,6 +10,7 @@ import ContentLayerPage from "@/components/content-layer-page";
 import { buildNav, Navigation } from "@/lib/navigation";
 import { getI18nProperties } from "@/lib/get-static";
 import { defaultLocale, supportedLocales } from "@/lib/locales";
+import { useTranslation } from "next-i18next";
 
 interface ClassPageP {
   classItem: ClassItem;
@@ -17,11 +18,16 @@ interface ClassPageP {
 }
 
 export default function ClassPage({ classItem, navigation }: ClassPageP) {
+  const { t } = useTranslation("common");
+  const locale = get(classItem, "locale", defaultLocale);
+
   return (
     <ContentLayerPage
       data={classItem}
       primaryLabel={classItem.name}
       secondaryLabel={classItem.source}
+      goBackLabel={t("go-back-classes-label")}
+      goBackLink={`/${locale}/compendium/classes`}
       navigation={navigation}
     />
   );

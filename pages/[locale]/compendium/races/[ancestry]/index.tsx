@@ -10,6 +10,7 @@ import ContentLayerPage from "@/components/content-layer-page";
 import { buildNav, Navigation } from "@/lib/navigation";
 import { getI18nProperties } from "@/lib/get-static";
 import { defaultLocale, supportedLocales } from "@/lib/locales";
+import { useTranslation } from "react-i18next";
 
 interface AncestryPageP {
   ancestry: Ancestry;
@@ -17,12 +18,17 @@ interface AncestryPageP {
 }
 
 export default function AncestryPage({ ancestry, navigation }: AncestryPageP) {
+  const { t } = useTranslation("common");
+  const locale = get(ancestry, "locale", defaultLocale);
+
   return (
     <ContentLayerPage
       data={ancestry}
       primaryLabel={ancestry.name}
       secondaryLabel={ancestry.source}
       navigation={navigation}
+      goBackLabel={t("go-back-races-label")}
+      goBackLink={`/${locale}/compendium/races`}
     />
   );
 }

@@ -10,6 +10,7 @@ import ContentLayerPage from "@/components/content-layer-page";
 import { buildNav, Navigation } from "@/lib/navigation";
 import { getI18nProperties } from "@/lib/get-static";
 import { defaultLocale, supportedLocales } from "@/lib/locales";
+import { useTranslation } from "react-i18next";
 
 interface RulesDocumentPageP {
   rulesDocument: RulesDocument;
@@ -20,10 +21,15 @@ export default function RulesDocumentPage({
   rulesDocument,
   navigation,
 }: RulesDocumentPageP) {
+  const { t } = useTranslation("common");
+  const locale = get(rulesDocument, "locale", defaultLocale);
+
   return (
     <ContentLayerPage
       navigation={navigation}
       data={rulesDocument}
+      goBackLabel={t("go-back-rules-label")}
+      goBackLink={`/${locale}/compendium/basic-rules`}
       primaryLabel={rulesDocument.title}
       secondaryLabel={rulesDocument.source}
     />
