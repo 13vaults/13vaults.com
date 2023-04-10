@@ -72,7 +72,7 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
       <BasicLayout navigation={navigation}>
         <Container
           as="article"
-          maxWidth="max-w-prose"
+          maxWidth="max-w-4xl"
           maxWidthXl="max-w-4xl"
           maxWidth2xl="max-w-4xl"
           className="flex flex-col bg-white/50 dark:bg-black/50 shadow w-full flex-1"
