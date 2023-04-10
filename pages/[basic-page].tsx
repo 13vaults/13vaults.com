@@ -1,5 +1,5 @@
 import BasicLayout from "@/layouts/basic";
-import { find, get, map } from "lodash";
+import { find, flatMap, get, map } from "lodash";
 import { buildNav, Navigation } from "@/lib/navigation";
 import { GetStaticPropsResult, NextPageContext } from "next";
 import {
@@ -13,7 +13,7 @@ import Head from "next/head";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Container from "@/components/container";
 import { getI18nProperties } from "@/lib/get-static";
-import { defaultLocale } from "@/lib/locales";
+import { defaultLocale, supportedLocales } from "@/lib/locales";
 
 interface VaultsBasicPageP {
   pageData: BasicPage;
@@ -82,10 +82,12 @@ export default function VaultsBasicPage({
 
 export async function getStaticPaths() {
   return {
-    paths: map(allBasicPages, (basicPage) => ({
-      params: { "basic-page": basicPage.slug },
-      locale: basicPage.locale,
-    })),
+    paths: flatMap(supportedLocales, (locale) =>
+      map(allBasicPages, (basicPage) => ({
+        params: { "basic-page": basicPage.slug },
+        locale,
+      }))
+    ),
     fallback: false,
   };
 }
