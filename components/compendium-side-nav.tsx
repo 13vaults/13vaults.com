@@ -1,7 +1,6 @@
 import { remToPx } from "@/lib/rem-to-px";
 import useInitialValue from "@/lib/use-initial-value";
 import { ArrowUturnLeftIcon } from "@heroicons/react/24/solid";
-import clsx from "clsx";
 import { AnimatePresence, useIsPresent, motion } from "framer-motion";
 import { size } from "lodash";
 import Link from "next/link";
@@ -21,11 +20,7 @@ function NavLink({
     <a
       href={href}
       aria-current={active ? "page" : undefined}
-      className={clsx(
-        "flex justify-between gap-2 py-1 pr-3 text-sm transition",
-        "pl-3",
-        "text-stone-600 hover:text-stone-900 dark:text-stone-300 dark:hover:text-white"
-      )}
+      className="flex justify-between gap-2 py-1 px-3 text-sm transition text-stone-600 hover:text-stone-900 dark:text-stone-300 dark:hover:text-white"
     >
       <span className="pointer-events-none truncate">{children}</span>
     </a>

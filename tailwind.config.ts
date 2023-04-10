@@ -1,9 +1,9 @@
-/* eslint-disable unicorn/prefer-module */
+import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
+import typography from "@tailwindcss/typography";
+import forms from "@tailwindcss/forms";
 
-const defaultTheme = require("tailwindcss/defaultTheme");
-
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./layouts/**/*.{js,ts,jsx,tsx}",
@@ -32,5 +32,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
-};
+  plugins: [typography, forms],
+} satisfies Config;

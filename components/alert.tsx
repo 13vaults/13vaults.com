@@ -97,7 +97,7 @@ export default function Alert({
             />
           </div>
         ) : null}
-        <div className="ml-3">
+        <div className="ms-3">
           {title ? (
             <p
               className={clsx("font-medium mx-0 mb-2", classes.textColorStrong)}
