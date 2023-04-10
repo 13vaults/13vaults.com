@@ -2,7 +2,6 @@
   "github": {
     "silent": true
   },
-  "redirects": [{ "source": "/", "destination": "/en/", "permanent": true }],
   "rewrites": [
     {
       "source": "/pa/js/pa.js",
