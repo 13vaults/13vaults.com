@@ -1,10 +1,8 @@
 import MegaNav from "@/components/mega-nav";
-import { defaultLocale } from "@/lib/locales";
 import { Navigation } from "@/lib/navigation";
 import clsx from "clsx";
 import { Trans, useTranslation } from "next-i18next";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function BasicLayout({
   children,
@@ -15,9 +13,6 @@ export default function BasicLayout({
   navigation: Navigation;
   className?: string;
 }) {
-  const router = useRouter();
-  const { locale = defaultLocale } = router.query;
-  const localeString = String(locale);
   const { t } = useTranslation("common");
 
   return (
@@ -74,12 +69,7 @@ export default function BasicLayout({
                     t={t}
                     i18nKey="footer.privacy-link"
                     components={{
-                      privacy: (
-                        <Link
-                          hrefLang={localeString}
-                          href={`/${localeString}/privacy`}
-                        />
-                      ),
+                      privacy: <Link href="/privacy" />,
                     }}
                   />
                 </p>
@@ -89,12 +79,7 @@ export default function BasicLayout({
                     t={t}
                     i18nKey="footer.legal-link"
                     components={{
-                      legal: (
-                        <Link
-                          hrefLang={localeString}
-                          href={`/${localeString}/legal`}
-                        />
-                      ),
+                      legal: <Link href="/legal" />,
                     }}
                   />
                 </p>
@@ -104,12 +89,7 @@ export default function BasicLayout({
                     t={t}
                     i18nKey="footer.license-link"
                     components={{
-                      license: (
-                        <Link
-                          hrefLang={localeString}
-                          href={`/${localeString}/license`}
-                        />
-                      ),
+                      license: <Link href="/license" />,
                     }}
                   />
                 </p>

@@ -1,4 +1,4 @@
-import { defaultLocale, supportedLocales } from "@/lib/locales";
+import { defaultLocale } from "@/lib/locales";
 import { buildNav, Navigation } from "@/lib/navigation";
 import Head from "next/head";
 import {
@@ -38,8 +38,7 @@ export default function BlogIndexPage({
   navigation,
 }: BlogIndexPageP) {
   const router = useRouter();
-  const { locale = defaultLocale } = router.query;
-  const localeString = String(locale);
+  const { locale = defaultLocale } = router;
   const { t } = useTranslation("blog");
 
   return (
@@ -60,7 +59,7 @@ export default function BlogIndexPage({
                   {map(orderBy(blogPosts, ["date"], ["desc"]), (post) => (
                     <li role="listitem" key={post.slug}>
                       <Link
-                        href={`/${localeString}/blog/${post.slug}`}
+                        href={`/${locale}/blog/${post.slug}`}
                         className="flex flex-col gap-4 shadow p-4 rounded text-stone-900 dark:text-stone-50 bg-stone-50 dark:bg-stone-800 transition-all hover:shadow-lg border-2 border-stone-300 hover:border-teal-500 dark:border-stone-700"
                       >
                         <div className="flex flex-col">
@@ -94,13 +93,6 @@ export default function BlogIndexPage({
   );
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: map(supportedLocales, (locale) => `/${locale}/blog`),
-    fallback: false,
-  };
-}
-
 export async function getStaticProps(
   context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<BlogIndexPageP>> {
@@ -113,7 +105,7 @@ export async function getStaticProps(
         (post) => pick(post, ["title", "date", "excerpt", "slug"])
       ),
       navigation: buildNav({
-        locale: String(get(context, "params.locale")),
+        locale: get(context, "locale"),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

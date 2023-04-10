@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 import { buildNav, Navigation } from "@/lib/navigation";
 import Head from "next/head";
 import {
@@ -21,9 +19,9 @@ import ContentLink from "@/components/content-link";
 import Prose from "@/components/prose";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
-import { supportedLocales } from "@/lib/locales";
 import BlogHero from "@/components/blog-hero";
 import Image from "next/image";
+import { supportedLocales } from "@/lib/locales";
 
 dayjs.extend(utc);
 
@@ -133,9 +131,9 @@ export async function getStaticPaths() {
     paths: flatMap(supportedLocales, (locale) =>
       map(allBlogPosts, (post) => ({
         params: {
-          locale: locale,
           "blog-post": post.slug,
         },
+        locale: locale,
       }))
     ),
     fallback: false,
@@ -149,7 +147,7 @@ export async function getStaticProps(
     props: {
       blogPost: find(allBlogPosts, ["slug", get(context, "params.blog-post")])!,
       navigation: buildNav({
-        locale: String(get(context, "params.locale")),
+        locale: get(context, "locale"),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

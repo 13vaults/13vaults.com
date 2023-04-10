@@ -38,10 +38,10 @@ export async function getStaticPaths() {
     paths: flatMap(supportedLocales, (locale) =>
       map(allClassItems, (classItem) => ({
         params: {
-          locale: locale,
           slug: classItem.slug,
           class_item: classItem.slug,
         },
+        locale: locale,
       }))
     ),
     fallback: false,
@@ -54,7 +54,7 @@ export async function getStaticProps(
   const classItem =
     find(allClassItems, {
       slug: get(context, "params.class_item"),
-      locale: get(context, "params.locale"),
+      locale: get(context, "locale"),
     }) ||
     find(allClassItems, {
       slug: get(context, "params.class_item"),
@@ -65,7 +65,7 @@ export async function getStaticProps(
     props: {
       classItem,
       navigation: buildNav({
-        locale: String(get(context, "params.locale", defaultLocale)),
+        locale: get(context, "locale"),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

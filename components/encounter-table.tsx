@@ -1,8 +1,6 @@
-import { defaultLocale } from "@/lib/locales";
 import { toInteger } from "lodash";
 import { Trans, useTranslation } from "next-i18next";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 interface EncounterTableP {
   playerCount: number;
@@ -25,9 +23,6 @@ export default function EncounterTable({
   const parLevelBase = level < 5 ? level : level < 8 ? level + 1 : level + 2;
   const parLevel = battlecount === 4 ? parLevelBase : parLevelBase + 1;
 
-  const router = useRouter();
-  const { locale = defaultLocale } = router.query;
-  const localeString = String(locale);
   const { t } = useTranslation("calculator");
 
   return (
@@ -38,10 +33,7 @@ export default function EncounterTable({
           i18nKey="encounter-rules-info"
           components={{
             "rules-link": (
-              <Link
-                hrefLang={localeString}
-                href={`/${localeString}/compendium/basic-rules/running-the-game`}
-              />
+              <Link href="/compendium/basic-rules/running-the-game" />
             ),
           }}
         />

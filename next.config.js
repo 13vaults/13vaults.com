@@ -1,20 +1,15 @@
 /* eslint-disable unicorn/prefer-module */
 
 const { withContentlayer } = require("next-contentlayer");
-const { defaultLocale } = require("./lib/locales");
-
-async function redirects() {
-  return [
-    {
-      source: "/",
-      destination: `/${defaultLocale}/`,
-      permanent: true,
-    },
-  ];
-}
+const { defaultLocale, supportedLocales } = require("./lib/locales");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  i18n: {
+    defaultLocale: defaultLocale,
+    locales: supportedLocales,
+    localeDetection: true,
+  },
   pageExtensions: ["ts", "tsx", "js", "jsx"],
   images: {
     domains:
@@ -28,7 +23,6 @@ const nextConfig = {
     scrollRestoration: true,
     largePageDataBytes: 256 * 1024,
   },
-  redirects: process.env.NODE_ENV === "development" ? redirects : undefined,
 };
 
 module.exports = withContentlayer(nextConfig);

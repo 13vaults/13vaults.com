@@ -48,7 +48,7 @@ export function buildNav({
         subnavs: [
           {
             labelKey: "compendium-basic-rules-label",
-            href: `/${locale}/compendium/basic-rules/`,
+            href: "/compendium/basic-rules/",
             items: map(
               localeContentLayerList<RulesDocument>(
                 locale,
@@ -57,13 +57,13 @@ export function buildNav({
               ),
               (rulesDocument) => ({
                 name: rulesDocument.title,
-                href: `/${locale}/compendium/basic-rules/${rulesDocument.slug}`,
+                href: `/compendium/basic-rules/${rulesDocument.slug}`,
               })
             ),
           },
           {
             labelKey: "compendium-ancestries-label",
-            href: `/${locale}/compendium/races/`,
+            href: "/compendium/races/",
             large: true,
             items: map(
               localeContentLayerList<Ancestry>(
@@ -73,13 +73,13 @@ export function buildNav({
               ),
               (ancestry) => ({
                 name: ancestry.name,
-                href: `/${locale}/compendium/races/${ancestry.slug}`,
+                href: `/compendium/races/${ancestry.slug}`,
               })
             ),
           },
           {
             labelKey: "compendium-classes-label",
-            href: `/${locale}/compendium/classes`,
+            href: "/compendium/classes",
             large: true,
             items: map(
               localeContentLayerList<ClassItem>(
@@ -89,7 +89,7 @@ export function buildNav({
               ),
               (classItem) => ({
                 name: classItem.name,
-                href: `/${locale}/compendium/classes/${classItem.slug}`,
+                href: `/compendium/classes/${classItem.slug}`,
               })
             ),
           },
@@ -99,7 +99,7 @@ export function buildNav({
     pages: [
       {
         labelKey: "blog-label",
-        href: `/${locale}/blog`,
+        href: "/blog",
       },
       {
         labelKey: "guides-label",
@@ -109,7 +109,7 @@ export function buildNav({
       },
       {
         labelKey: "battle-calculator-label",
-        href: `/${locale}/calculator`,
+        href: `/calculator`,
       },
     ],
   };

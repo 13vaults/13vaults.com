@@ -1,10 +1,10 @@
 import {
-  allAncestries,
-  Ancestry,
-  allClassItems,
   allRulesDocuments,
-} from "contentlayer/generated";
-import { find, map, get, flatMap } from "lodash";
+  RulesDocument,
+  allAncestries,
+  allClassItems,
+} from "@/.contentlayer/generated";
+import { find, flatMap, get, map } from "lodash";
 import { GetStaticPropsResult, NextPageContext } from "next";
 import ContentLayerPage from "@/components/content-layer-page";
 import { buildNav, Navigation } from "@/lib/navigation";
@@ -12,23 +12,25 @@ import { getI18nProperties } from "@/lib/get-static";
 import { defaultLocale, supportedLocales } from "@/lib/locales";
 import { useTranslation } from "react-i18next";
 
-interface AncestryPageP {
-  ancestry: Ancestry;
+interface RulesDocumentPageP {
+  rulesDocument: RulesDocument;
   navigation: Navigation;
 }
 
-export default function AncestryPage({ ancestry, navigation }: AncestryPageP) {
+export default function RulesDocumentPage({
+  rulesDocument,
+  navigation,
+}: RulesDocumentPageP) {
   const { t } = useTranslation("common");
-  const locale = get(ancestry, "locale", defaultLocale);
 
   return (
     <ContentLayerPage
-      data={ancestry}
-      primaryLabel={ancestry.name}
-      secondaryLabel={ancestry.source}
       navigation={navigation}
-      goBackLabel={t("go-back-races-label")}
-      goBackLink={`/${locale}/compendium/races`}
+      data={rulesDocument}
+      goBackLabel={t("go-back-rules-label")}
+      goBackLink={`/compendium/basic-rules`}
+      primaryLabel={rulesDocument.title}
+      secondaryLabel={rulesDocument.source}
     />
   );
 }
@@ -36,8 +38,11 @@ export default function AncestryPage({ ancestry, navigation }: AncestryPageP) {
 export async function getStaticPaths() {
   return {
     paths: flatMap(supportedLocales, (locale) =>
-      map(allAncestries, (ancestry) => ({
-        params: { locale: locale, ancestry: ancestry.slug },
+      map(allRulesDocuments, (rulesDocument) => ({
+        params: {
+          rules_document: rulesDocument.slug,
+        },
+        locale: locale,
       }))
     ),
     fallback: false,
@@ -46,22 +51,22 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(
   context: NextPageContext
-): Promise<GetStaticPropsResult<AncestryPageP>> {
-  const ancestry =
-    find(allAncestries, {
-      slug: get(context, "params.ancestry"),
-      locale: get(context, "params.locale"),
+): Promise<GetStaticPropsResult<RulesDocumentPageP>> {
+  const rulesDocument =
+    find(allRulesDocuments, {
+      slug: get(context, "params.rules_document"),
+      locale: get(context, "locale"),
     }) ||
-    find(allAncestries, {
-      slug: get(context, "params.ancestry"),
+    find(allRulesDocuments, {
+      slug: get(context, "params.rules_document"),
       locale: defaultLocale,
-    })!;
+    });
 
   return {
     props: {
-      ancestry,
+      rulesDocument: rulesDocument || null!,
       navigation: buildNav({
-        locale: String(get(context, "params.locale", defaultLocale)),
+        locale: get(context, "locale"),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

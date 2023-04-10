@@ -9,7 +9,7 @@ import {
   allRulesDocuments,
 } from "@/.contentlayer/generated";
 import { get, map } from "lodash";
-import { defaultLocale, supportedLocales } from "@/lib/locales";
+import { defaultLocale } from "@/lib/locales";
 import { getI18nProperties } from "@/lib/get-static";
 import { useTranslation } from "next-i18next";
 import CompendiumContentSection from "@/components/compendium-content-section";
@@ -23,8 +23,7 @@ export default function CompendiumCategoryPage({
   navigation,
 }: CompendiumCategoryPageP) {
   const router = useRouter();
-  const { locale = defaultLocale } = router.query;
-  const localeString = String(locale);
+  const { locale = defaultLocale } = router;
   const { t } = useTranslation("common");
   return (
     <>
@@ -34,7 +33,7 @@ export default function CompendiumCategoryPage({
           name="description"
           content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
         />
-        <meta property="og:locale" content={localeString} />
+        <meta property="og:locale" content={locale} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Compendium - 13 Vaults" />
         <meta
@@ -83,20 +82,13 @@ export default function CompendiumCategoryPage({
   );
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: map(supportedLocales, (locale) => `/${locale}/compendium/`),
-    fallback: false,
-  };
-}
-
 export async function getStaticProps(
   context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<CompendiumCategoryPageP>> {
   return {
     props: {
       navigation: buildNav({
-        locale: String(get(context, "params.locale")),
+        locale: get(context, "locale"),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

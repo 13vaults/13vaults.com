@@ -11,7 +11,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { buildNav, Navigation } from "@/lib/navigation";
 import { useRouter } from "next/router";
-import { defaultLocale, supportedLocales } from "@/lib/locales";
+import { defaultLocale } from "@/lib/locales";
 import { getI18nProperties } from "@/lib/get-static";
 import CompendiumContentSection from "@/components/compendium-content-section";
 import { PickPartial } from "@/utils";
@@ -32,8 +32,7 @@ export default function BasicRulesPage({
   navigation,
 }: BasicRulesPageP) {
   const router = useRouter();
-  const { locale = defaultLocale } = router.query;
-  const localeString = String(locale);
+  const { locale = defaultLocale } = router;
 
   return (
     <>
@@ -43,7 +42,7 @@ export default function BasicRulesPage({
           name="description"
           content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
         />
-        <meta property="og:locale" content={localeString} />
+        <meta property="og:locale" content={locale} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Basic Rules - 13 Vaults" />
         <meta
@@ -69,7 +68,7 @@ export default function BasicRulesPage({
         <div className="flex flex-col gap-4">
           {map(
             localeContentLayerList<DocumentListing>(
-              localeString,
+              locale,
               defaultLocale,
               rulesDocuments
             ),
@@ -77,9 +76,7 @@ export default function BasicRulesPage({
               <CompendiumContentSection
                 key={document.slug}
                 header={
-                  <Link
-                    href={`/${localeString}/compendium/basic-rules/${document.slug}`}
-                  >
+                  <Link href={`/compendium/basic-rules/${document.slug}`}>
                     {document.title}
                   </Link>
                 }
@@ -104,7 +101,7 @@ export default function BasicRulesPage({
                           {map(sectionChunk, (section) => (
                             <li key={get(section, "id")}>
                               <Link
-                                href={`/${localeString}/compendium/basic-rules/${
+                                href={`/compendium/basic-rules/${
                                   document.slug
                                 }#${get(section, "id")}`}
                               >
@@ -126,16 +123,6 @@ export default function BasicRulesPage({
   );
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: map(
-      supportedLocales,
-      (locale) => `/${locale}/compendium/basic-rules/`
-    ),
-    fallback: false,
-  };
-}
-
 export async function getStaticProps(
   context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<BasicRulesPageP>> {
@@ -145,7 +132,7 @@ export async function getStaticProps(
         pick(rulesDocument, ["slug", "title", "sections", "locale"])
       ),
       navigation: buildNav({
-        locale: String(get(context, "params.locale", defaultLocale)),
+        locale: get(context, "locale"),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

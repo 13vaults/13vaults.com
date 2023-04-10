@@ -12,7 +12,7 @@ import {
   allRulesDocuments,
 } from "@/.contentlayer/generated";
 import Head from "next/head";
-import { defaultLocale, supportedLocales } from "@/lib/locales";
+import { defaultLocale } from "@/lib/locales";
 import { useRouter } from "next/router";
 import { getI18nProperties } from "@/lib/get-static";
 import { useTranslation } from "next-i18next";
@@ -45,8 +45,7 @@ interface VaultsAppHomeP {
 
 export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
   const router = useRouter();
-  const { locale = defaultLocale } = router.query;
-  const localeString = String(locale);
+  const { locale = defaultLocale } = router;
   const { t } = useTranslation("home");
   return (
     <>
@@ -60,7 +59,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
           name="description"
           content="13 Vaults is an unofficial community-driven resource site for the 13th Age tabletop roleplaying game"
         />
-        <meta property="og:locale" content={localeString} />
+        <meta property="og:locale" content={locale} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="13 Vaults" />
         <meta
@@ -120,8 +119,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
             <div className="flex flex-col sm:flex-row gap-2 mx-auto">
               <Link
                 className="flex gap-3 focus:bg-teal-500 hover:bg-teal-500 bg-teal-600 border border-teal-400/50 hover:border-teal-400 rounded pl-8 pr-12 py-3 shadow transition-colors font-display font-semibold items-center"
-                hrefLang={localeString}
-                href={`/${localeString}/compendium`}
+                href="/compendium"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +186,7 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
                           item.classes,
                           "grid place-content-center rounded-sm border h-40 text-center px-4 lg:px-8 transition-colors"
                         )}
-                        href={`${localeString}${item.href}`}
+                        href={item.href}
                       >
                         <h2 className="text-3xl font-display-serif font-semibold">
                           {t(item.title_label)}
@@ -223,20 +221,13 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
   );
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: map(supportedLocales, (locale) => `/${locale}/`),
-    fallback: false,
-  };
-}
-
 export async function getStaticProps(
   context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<VaultsAppHomeP>> {
   return {
     props: {
       navigation: buildNav({
-        locale: String(get(context, "params.locale")),
+        locale: get(context, "locale"),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

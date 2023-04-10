@@ -19,8 +19,7 @@ interface NotFoundP {
 
 export default function NotFound({ navigation }: NotFoundP) {
   const router = useRouter();
-  const { locale = defaultLocale } = router.query;
-  const localeString = String(locale);
+  const { locale = defaultLocale } = router;
   const { t } = useTranslation("common");
   return (
     <BasicLayout navigation={navigation}>
@@ -29,8 +28,9 @@ export default function NotFound({ navigation }: NotFoundP) {
           {t("not-found.title-label")}
         </h1>
         <Link
-          hrefLang={localeString}
-          href={`/${localeString}/`}
+          hrefLang={locale}
+          href="/"
+          locale={locale}
           className="text-red-500 font-display font-medium you-died-animation-late"
         >
           {t("not-found.return-label")}
@@ -46,7 +46,7 @@ export async function getStaticProps(
   return {
     props: {
       navigation: buildNav({
-        locale: String(get(context, "params.locale", defaultLocale)),
+        locale: String(get(context, "locale")),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

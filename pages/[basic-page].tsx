@@ -83,7 +83,8 @@ export default function VaultsBasicPage({
 export async function getStaticPaths() {
   return {
     paths: map(allBasicPages, (basicPage) => ({
-      params: { locale: basicPage.locale, "basic-page": basicPage.slug },
+      params: { "basic-page": basicPage.slug },
+      locale: basicPage.locale,
     })),
     fallback: false,
   };
@@ -95,7 +96,7 @@ export async function getStaticProps(
   const pageData =
     find(allBasicPages, {
       slug: get(context, "params.basic-page"),
-      locale: get(context, "params.locale"),
+      locale: get(context, "locale"),
     }) ||
     find(allBasicPages, {
       slug: get(context, "params.basic-page"),
@@ -105,7 +106,7 @@ export async function getStaticProps(
     props: {
       pageData,
       navigation: buildNav({
-        locale: String(get(context, "params.locale", defaultLocale)),
+        locale: get(context, "locale"),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,

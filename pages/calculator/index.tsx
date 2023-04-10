@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { supportedLocales } from "@/lib/locales";
 import { buildNav, Navigation } from "@/lib/navigation";
 import Head from "next/head";
 import {
@@ -7,7 +6,7 @@ import {
   allRulesDocuments,
   allClassItems,
 } from "@/.contentlayer/generated";
-import { map, get } from "lodash";
+import { get } from "lodash";
 import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import { getI18nProperties } from "@/lib/get-static";
 import EncounterTable from "@/components/encounter-table";
@@ -30,8 +29,6 @@ export default function EncounterCalculator({
   }));
 
   const { t } = useTranslation("calculator");
-
-  // Calculate the values
 
   return (
     <>
@@ -124,20 +121,13 @@ export default function EncounterCalculator({
   );
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: map(supportedLocales, (locale) => `/${locale}/calculator`),
-    fallback: false,
-  };
-}
-
 export async function getStaticProps(
   context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<EncounterCalculatorP>> {
   return {
     props: {
       navigation: buildNav({
-        locale: String(get(context, "params.locale")),
+        locale: get(context, "locale"),
         rulesDocuments: allRulesDocuments,
         classItems: allClassItems,
         ancestries: allAncestries,
