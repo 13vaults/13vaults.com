@@ -18,6 +18,18 @@ const nextConfig = {
         : ["localhost", "www.13vaults.com"],
   },
   reactStrictMode: true,
+  async rewrites() {
+    return [
+      {
+        source: "/pa/js/pa.js",
+        destination: "https://plausible.io/js/script.js",
+      },
+      {
+        source: "/pa/api/event",
+        destination: "https://plausible.io/api/event",
+      },
+    ];
+  },
   experimental: {
     appDir: true,
     scrollRestoration: true,
