@@ -4,5 +4,6 @@
   "title": "13 Vaults Blog",
   "published-on-label": "Published on {{date}}",
   "no-posts": "No posts ☹️",
-  "read-more": "Read more..."
+  "read-more": "Read more...",
+  "unpublished-dev-label": "Unpublished"
 }

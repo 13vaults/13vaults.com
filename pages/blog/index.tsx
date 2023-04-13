@@ -20,12 +20,13 @@ import utc from "dayjs/plugin/utc";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { PickPartial } from "@/utils";
+import clsx from "clsx";
 
 dayjs.extend(utc);
 
 type BlogPostItem = PickPartial<
   BlogPost,
-  "excerpt" | "date" | "title" | "slug"
+  "excerpt" | "date" | "title" | "slug" | "published"
 >;
 
 interface BlogIndexPageP {
@@ -40,6 +41,8 @@ export default function BlogIndexPage({
   const router = useRouter();
   const { locale = defaultLocale } = router;
   const { t } = useTranslation("blog");
+  const unpublishedStyles =
+    "border-yellow-500 bg-amber-200 hover:border-yellow-600 border-4";
 
   return (
     <>
@@ -60,9 +63,17 @@ export default function BlogIndexPage({
                     <li role="listitem" key={post.slug}>
                       <Link
                         href={`/${locale}/blog/${post.slug}`}
-                        className="flex flex-col gap-4 shadow p-4 rounded text-stone-900 dark:text-stone-50 bg-stone-50 dark:bg-stone-800 transition-all hover:shadow-lg border-2 border-stone-300 hover:border-teal-500 dark:border-stone-700"
+                        className={clsx(
+                          "flex flex-col gap-4 shadow p-4 rounded text-stone-900 dark:text-stone-50 bg-stone-50 dark:bg-stone-800 transition-all hover:shadow-lg border-2 border-stone-300 hover:border-teal-500 dark:border-stone-700",
+                          { [unpublishedStyles]: !post.published }
+                        )}
                       >
                         <div className="flex flex-col">
+                          {post.published ? null : (
+                            <span className="bg-red-500 font-bold uppercase text-white p-2 mb-2">
+                              {t("unpublished-dev-label")}
+                            </span>
+                          )}
                           <h2 className="font-display font-bold text-2xl">
                             {post.title}
                           </h2>
@@ -102,7 +113,7 @@ export async function getStaticProps(
         process.env.NODE_ENV === "production"
           ? filter(allBlogPosts, ["published", true])
           : allBlogPosts,
-        (post) => pick(post, ["title", "date", "excerpt", "slug"])
+        (post) => pick(post, ["title", "date", "excerpt", "slug", "published"])
       ),
       navigation: buildNav({
         locale: get(context, "locale"),
