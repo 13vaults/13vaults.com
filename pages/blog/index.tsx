@@ -1,4 +1,3 @@
-import { defaultLocale } from "@/lib/locales";
 import { buildNav, Navigation } from "@/lib/navigation";
 import Head from "next/head";
 import {
@@ -18,7 +17,6 @@ import CompendiumTitle from "@/components/compendium-title";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { PickPartial } from "@/utils";
 import clsx from "clsx";
 
@@ -38,8 +36,6 @@ export default function BlogIndexPage({
   blogPosts,
   navigation,
 }: BlogIndexPageP) {
-  const router = useRouter();
-  const { locale = defaultLocale } = router;
   const { t } = useTranslation("blog");
   const unpublishedStyles =
     "border-yellow-500 bg-amber-200 hover:border-yellow-600 border-4";
@@ -62,7 +58,7 @@ export default function BlogIndexPage({
                   {map(orderBy(blogPosts, ["date"], ["desc"]), (post) => (
                     <li role="listitem" key={post.slug}>
                       <Link
-                        href={`/${locale}/blog/${post.slug}`}
+                        href={`/blog/${post.slug}`}
                         className={clsx(
                           "flex flex-col gap-4 shadow p-4 rounded text-stone-900 dark:text-stone-50 bg-stone-50 dark:bg-stone-800 transition-all hover:shadow-lg border-2 border-stone-300 hover:border-teal-500 dark:border-stone-700",
                           { [unpublishedStyles]: !post.published }
