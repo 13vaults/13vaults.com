@@ -1,6 +1,6 @@
 {
   "name": "13vaults",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -27,7 +27,7 @@
     "react-markdown": "^8.0.5",
     "remark-smartypants": "^2.0.0",
     "sharp": "^0.32.0",
-    "typescript": "4.9.5"
+    "typescript": "5.0.4"
   },
   "devDependencies": {
     "@mdx-js/loader": "^2.2.1",
