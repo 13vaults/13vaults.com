@@ -3,7 +3,10 @@ import socialBanner from "@/public/images/social-banner.webp";
 
 export default function BlogHero({ title }: { title: string }) {
   return (
-    <div className="flex flex-col gap-4 relative justify-center content-center px-10 py-16 aspect-wide text-white w-full">
+    <div
+      role="presentation"
+      className="flex flex-col gap-4 relative justify-center content-center px-10 py-16 aspect-wide text-white w-full"
+    >
       <Image
         className="object-cover"
         src={socialBanner}
