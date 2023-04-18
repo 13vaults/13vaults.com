@@ -2,12 +2,21 @@
   "extends": [
     "eslint:recommended",
     "next/core-web-vitals",
-    "plugin:unicorn/recommended"
+    "plugin:unicorn/recommended",
+    "plugin:storybook/recommended"
   ],
   "rules": {
     "unicorn/no-null": 0,
     "unicorn/no-nested-ternary": 0,
-    "no-unused-vars": ["error", { "destructuredArrayIgnorePattern": "^_" }]
+    "no-unused-vars": [
+      "error",
+      {
+        "destructuredArrayIgnorePattern": "^_",
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ]
   },
   "globals": {
     "JSX": true,
