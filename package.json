@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently pnpm:watch:*",
+    "watch:next": "next dev",
+    "watch:contentlayer": "contentlayer dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -18,7 +20,7 @@
     "eslint-config-next": "13.2.0",
     "i18next": "^22.4.10",
     "lodash": "^4.17.21",
-    "next": "13.2.5-canary.26",
+    "next": "13.3.0",
     "next-contentlayer": "^0.3.1",
     "next-i18next": "^13.2.2",
     "react": "18.2.0",
@@ -40,6 +42,7 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "autoprefixer": "^10.4.13",
+    "concurrently": "^8.0.1",
     "eslint-plugin-unicorn": "^45.0.2",
     "framer-motion": "^9.0.1",
     "github-slugger": "^2.0.0",
