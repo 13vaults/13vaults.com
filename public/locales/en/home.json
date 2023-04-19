@@ -12,5 +12,6 @@
   "posted-ago": "Posted {{timeAgo}}",
   "read-more": "Read more...",
   "unpublished-dev-label": "Unpublished",
-  "latest-posts-blog": "Latest posts from the 13 Vaults blog"
+  "latest-posts-blog": "Latest posts from the 13 Vaults blog",
+  "view-all-blog-posts": "View all blog posts"
 }

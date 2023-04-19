@@ -1,6 +1,7 @@
 import HomeNewsSection from "@/components/home-news-section";
 import { Meta, StoryObj } from "@storybook/react";
 import { faker } from "@faker-js/faker";
+import Container from "@/components/container";
 
 const meta: Meta<typeof HomeNewsSection> = {
   title: "Home/Home News Section",
@@ -35,7 +36,17 @@ const meta: Meta<typeof HomeNewsSection> = {
         published: true,
         slug: "test-title-4",
       },
+      {
+        title: faker.lorem.sentence(),
+        excerpt: faker.lorem.paragraph(),
+        date: faker.date.recent(90).toISOString(),
+        published: true,
+        slug: "test-title-5",
+      },
     ],
+  },
+  parameters: {
+    layout: "fullscreen",
   },
 };
 
@@ -45,6 +56,12 @@ type Story = StoryObj<typeof HomeNewsSection>;
 
 export const Default: Story = {
   render({ heroPost, extraPosts }) {
-    return <HomeNewsSection heroPost={heroPost} extraPosts={extraPosts} />;
+    return (
+      <div className="p-4 lg:p-8 bg-white dark:bg-stone-900">
+        <Container>
+          <HomeNewsSection heroPost={heroPost} extraPosts={extraPosts} />
+        </Container>
+      </div>
+    );
   },
 };

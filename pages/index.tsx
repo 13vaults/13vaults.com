@@ -1,5 +1,5 @@
 import BasicLayout from "@/layouts/basic";
-import { get, map } from "lodash";
+import { filter, get, map, pick, slice, sortBy } from "lodash";
 import Link from "next/link";
 import clsx from "clsx";
 import heroImage from "@/public/images/camelot-spire-butteredbap.webp";
@@ -7,7 +7,9 @@ import Container from "@/components/container";
 import { buildNav, Navigation } from "@/lib/navigation";
 import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import {
+  BlogPost,
   allAncestries,
+  allBlogPosts,
   allClassItems,
   allRulesDocuments,
 } from "@/.contentlayer/generated";
@@ -17,6 +19,8 @@ import { useRouter } from "next/router";
 import { getI18nProperties } from "@/lib/get-static";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
+import HomeNewsSection from "@/components/home-news-section";
+import { PickPartial } from "@/utils";
 
 const bottomNavItems = [
   {
@@ -39,11 +43,22 @@ const bottomNavItems = [
   },
 ];
 
+type BlogPostItem = PickPartial<
+  BlogPost,
+  "date" | "published" | "slug" | "excerpt" | "title"
+>;
+
 interface VaultsAppHomeP {
   navigation: Navigation;
+  heroPost: BlogPostItem;
+  extraPosts: BlogPostItem[];
 }
 
-export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
+export default function VaultsAppHome({
+  navigation,
+  heroPost,
+  extraPosts,
+}: VaultsAppHomeP) {
   const router = useRouter();
   const { locale = defaultLocale } = router;
   const { t } = useTranslation("home");
@@ -216,6 +231,11 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
             </nav>
           </Container>
         </section>
+        <section className="p-4 lg:p-8 bg-white dark:bg-stone-900">
+          <Container>
+            <HomeNewsSection heroPost={heroPost} extraPosts={extraPosts} />
+          </Container>
+        </section>
       </BasicLayout>
     </>
   );
@@ -224,8 +244,20 @@ export default function VaultsAppHome({ navigation }: VaultsAppHomeP) {
 export async function getStaticProps(
   context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<VaultsAppHomeP>> {
+  const sortedBlogPosts = sortBy(
+    map(
+      process.env.NODE_ENV === "production"
+        ? filter(allBlogPosts, ["published", true])
+        : allBlogPosts,
+      (post) => pick(post, ["title", "date", "excerpt", "slug", "published"])
+    ),
+    "-date"
+  );
+
   return {
     props: {
+      heroPost: get(sortedBlogPosts, "0"),
+      extraPosts: slice(sortedBlogPosts, 1, 5),
       navigation: buildNav({
         locale: get(context, "locale"),
         rulesDocuments: allRulesDocuments,

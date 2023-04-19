@@ -3,6 +3,7 @@ import HomeNewsSectionItem from "./home-news-section-item";
 import { BlogPost } from "@/.contentlayer/generated";
 import { map, size } from "lodash";
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
 
 type BlogPostItem = PickPartial<
   BlogPost,
@@ -22,10 +23,7 @@ export default function HomeNewsSection({
 
   return (
     <nav aria-label={t("latest-posts-blog") || ""}>
-      <div
-        role="list"
-        className="flex flex-col gap-2 p-2 bg-stone-50 dark:bg-stone-700"
-      >
+      <div role="list" className="flex flex-col gap-2">
         <HomeNewsSectionItem.Hero
           title={heroPost.title}
           slug={heroPost.slug}
@@ -47,6 +45,14 @@ export default function HomeNewsSection({
             ))}
           </div>
         ) : null}
+        <div className="flex justify-center py-2">
+          <Link
+            className="py-1 px-3 bg-teal-600 hover:bg-teal-500 transition-colors text-white font-display font-medium uppercase"
+            href="/blog"
+          >
+            {t("view-all-blog-posts")}
+          </Link>
+        </div>
       </div>
     </nav>
   );
