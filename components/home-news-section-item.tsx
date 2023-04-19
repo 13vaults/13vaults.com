@@ -8,6 +8,7 @@ import { useTranslation } from "next-i18next";
 import clsx from "clsx";
 import Image from "next/image";
 import socialBanner from "@/public/images/social-banner.webp";
+
 dayjs.extend(utc);
 dayjs.extend(relativeTime);
 
@@ -26,6 +27,7 @@ function HomeNewsSectionItem({
   published,
 }: HomeNewsSectionItemP) {
   const { t } = useTranslation("home");
+
   return (
     <div role="listitem" className="flex">
       <Link

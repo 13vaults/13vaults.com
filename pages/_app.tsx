@@ -4,8 +4,23 @@ import Head from "next/head";
 import Script from "next/script";
 import { appWithTranslation } from "next-i18next";
 import FontStyles from "@/components/font-styles";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import dayjs from "dayjs";
+import { defaultLocale } from "@/lib/locales";
+
+async function updateDayjsLocale(locale: string = defaultLocale) {
+  await import(`dayjs/locale/${locale}.js`);
+  dayjs.locale(locale);
+}
 
 function VaultsApp({ Component, pageProps }: AppProps) {
+  const { locale } = useRouter();
+
+  useEffect(() => {
+    updateDayjsLocale(locale);
+  }, [locale]);
+
   return (
     <>
       <Head>
