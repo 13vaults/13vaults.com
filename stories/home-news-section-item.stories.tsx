@@ -32,3 +32,18 @@ export const Default: Story = {
     );
   },
 };
+
+export const Hero: Story = {
+  render({ date, title, published, excerpt }) {
+    const slugger = new GithubSlugger();
+    return (
+      <HomeNewsSectionItem.Hero
+        excerpt={excerpt}
+        published={published}
+        slug={slugger.slug(title)}
+        title={title}
+        date={date}
+      />
+    );
+  },
+};

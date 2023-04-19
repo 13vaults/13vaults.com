@@ -36,6 +36,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "@mdx-js/loader": "^2.2.1",
     "@mdx-js/react": "^2.2.1",
     "@next/mdx": "^13.1.6",
