@@ -6,3 +6,6 @@
 
 @lint:
   pnpm lint
+
+@storybook:
+  pnpm storybook

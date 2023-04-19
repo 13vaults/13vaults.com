@@ -1,11 +1,12 @@
 import { BlogPost } from "@/.contentlayer/generated";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
-import localizedFormat from "dayjs/plugin/localizedFormat";
+import relativeTime from "dayjs/plugin/relativeTime";
 import { PickPartial } from "@/utils";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 dayjs.extend(utc);
-dayjs.extend(localizedFormat);
+dayjs.extend(relativeTime);
 
 type BlogPostItem = PickPartial<
   BlogPost,
@@ -17,6 +18,17 @@ type HomeNewsSectionItemP = BlogPostItem & {};
 export default function HomeNewsSectionItem({
   slug,
   title,
+  date,
 }: HomeNewsSectionItemP) {
-  return <Link href={`/blog/${slug}`}>{title}</Link>;
+  const { t } = useTranslation("home");
+  return (
+    <Link className="block" href={`/blog/${slug}`}>
+      <div>{title}</div>
+      <div>
+        {t("posted-ago", {
+          timeAgo: dayjs(Date.parse(date)).utc().fromNow(false),
+        })}
+      </div>
+    </Link>
+  );
 }

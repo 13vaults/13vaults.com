@@ -1,11 +1,14 @@
 import type { StorybookConfig } from "@storybook/nextjs";
 import path from "node:path";
+import pathBrowserify from "path-browserify";
+
 const config: StorybookConfig = {
   stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "storybook-react-i18next",
     {
       name: "@storybook/addon-styling",
       options: {
@@ -31,7 +34,9 @@ const config: StorybookConfig = {
         __dirname,
         "../public/texture-dark.webp"
       );
+      config.resolve.alias["next-i18next"] = "react-i18next";
     }
+
     return config;
   },
 };
