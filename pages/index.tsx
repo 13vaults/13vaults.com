@@ -1,5 +1,5 @@
 import BasicLayout from "@/layouts/basic";
-import { filter, get, map, pick, slice, sortBy } from "lodash";
+import { filter, get, map, orderBy, pick, slice } from "lodash";
 import Link from "next/link";
 import clsx from "clsx";
 import heroImage from "@/public/images/camelot-spire-butteredbap.webp";
@@ -244,14 +244,15 @@ export default function VaultsAppHome({
 export async function getStaticProps(
   context: GetStaticPropsContext
 ): Promise<GetStaticPropsResult<VaultsAppHomeP>> {
-  const sortedBlogPosts = sortBy(
+  const sortedBlogPosts = orderBy(
     map(
       process.env.NODE_ENV === "production"
         ? filter(allBlogPosts, ["published", true])
         : allBlogPosts,
       (post) => pick(post, ["title", "date", "excerpt", "slug", "published"])
     ),
-    "-date"
+    "date",
+    "desc"
   );
 
   return {
