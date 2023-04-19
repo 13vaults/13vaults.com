@@ -5,12 +5,12 @@ export const config = {
   runtime: "edge",
 };
 
-export default async function handler(request: NextRequest) {
+export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
   const title = searchParams.get("title");
 
   const fontData = await fetch(
-    new URL("../../assets/VollkornSC-Bold.ttf", import.meta.url)
+    new URL("../../../assets/VollkornSC-Bold.ttf", import.meta.url)
   ).then((response) => response.arrayBuffer());
 
   return new ImageResponse(
