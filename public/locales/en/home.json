@@ -9,5 +9,7 @@
   "encounter-builder": "Encounter Builder",
   "encounter-builder-body": "Coming Soon!",
   "image-cite": "Camelot Spire by butteredbap",
-  "posted-ago": "Posted {{timeAgo}}."
+  "posted-ago": "Posted {{timeAgo}}",
+  "read-more": "Read more...",
+  "unpublished-dev-label": "Unpublished"
 }

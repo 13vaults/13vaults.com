@@ -6,11 +6,11 @@ const meta: Meta<typeof HomeNewsSectionItem> = {
   title: "Home/Home News Section Item",
   component: HomeNewsSectionItem,
   args: {
-    title: "A Cool Title!",
-    date: new Date().toISOString().split("T")[0],
+    title: "Announcing 13 Vaults!",
+    date: "2023-02-27",
     published: true,
     excerpt:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum, justo in dictum pellentesque, urna leo suscipit tortor, nec pulvinar ligula tortor quis ipsum. Proin id convallis leo. Nullam aliquam diam a justo varius tristique. Cras in auctor felis. Sed venenatis pretium velit, a condimentum nulla.",
+      "After a few weeks of intense development and work, 13 Vaults is here!",
   },
 };
 

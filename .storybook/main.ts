@@ -1,6 +1,5 @@
 import type { StorybookConfig } from "@storybook/nextjs";
 import path from "node:path";
-import pathBrowserify from "path-browserify";
 
 const config: StorybookConfig = {
   stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
