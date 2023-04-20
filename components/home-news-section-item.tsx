@@ -1,16 +1,11 @@
 import { BlogPost } from "@/.contentlayer/generated";
 import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import relativeTime from "dayjs/plugin/relativeTime";
 import { PickPartial } from "@/utils";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import clsx from "clsx";
 import Image from "next/image";
 import socialBanner from "@/public/images/social-banner.webp";
-
-dayjs.extend(utc);
-dayjs.extend(relativeTime);
 
 type BlogPostItem = PickPartial<
   BlogPost,
@@ -54,7 +49,7 @@ function HomeNewsSectionItem({
             <div className="text-sm font-medium">
               <time>
                 {t("posted-ago", {
-                  timeAgo: dayjs(Date.parse(date)).utc().fromNow(false),
+                  timeAgo: dayjs.tz(date).fromNow(),
                 })}
               </time>
             </div>
@@ -94,6 +89,7 @@ function HeroVariant({
           placeholder="blur"
           fill
           role="presentation"
+          unoptimized={process.env.NODE_ENV === "development"}
           alt=""
         />
         <section
@@ -112,7 +108,7 @@ function HeroVariant({
             <div className="text-sm font-medium">
               <time>
                 {t("posted-ago", {
-                  timeAgo: dayjs(Date.parse(date)).utc().fromNow(false),
+                  timeAgo: dayjs.tz(date, "America/New_York").fromNow(false),
                 })}
               </time>
             </div>

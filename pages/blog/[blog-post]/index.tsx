@@ -18,12 +18,9 @@ import * as Vault from "@/components/vault-components";
 import ContentLink from "@/components/content-link";
 import Prose from "@/components/prose";
 import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
 import BlogHero from "@/components/blog-hero";
 import Image from "next/image";
 import { supportedLocales } from "@/lib/locales";
-
-dayjs.extend(utc);
 
 interface BlogPostPageP {
   blogPost: BlogPost;
@@ -89,9 +86,7 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
             <Prose>
               <p>
                 {t("published-on-label", {
-                  date: dayjs(Date.parse(blogPost.date))
-                    .utc()
-                    .format("YYYY-MM-DD"),
+                  date: dayjs.tz(blogPost.date).format("YYYY-MM-DD"),
                 })}
               </p>
               <Content

@@ -5,21 +5,25 @@ import Script from "next/script";
 import { appWithTranslation } from "next-i18next";
 import FontStyles from "@/components/font-styles";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+import relativeTime from "dayjs/plugin/relativeTime";
 import { defaultLocale } from "@/lib/locales";
+// Sync this with supported locales
+import "dayjs/locale/de";
 
-async function updateDayjsLocale(locale: string = defaultLocale) {
-  await import(`dayjs/locale/${locale}.js`);
-  dayjs.locale(locale);
-}
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.extend(relativeTime);
+dayjs.tz.setDefault("America/New_York");
 
 function VaultsApp({ Component, pageProps }: AppProps) {
-  const { locale } = useRouter();
+  const { locale = defaultLocale } = useRouter();
 
-  useEffect(() => {
-    updateDayjsLocale(locale);
-  }, [locale]);
+  if (dayjs.locale() !== locale) {
+    dayjs.locale(locale);
+  }
 
   return (
     <>
