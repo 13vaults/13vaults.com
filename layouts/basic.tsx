@@ -17,14 +17,14 @@ export default function BasicLayout({
 
   return (
     <div className="min-h-screen-safe flex flex-col">
-      <header className="z-[1] sticky top-0 shadow">
+      <header className="z-10 sticky top-0 shadow">
         <MegaNav navigation={navigation} />
       </header>
-      <div className={clsx("flex flex-col flex-1 relative z-0", className)}>
+      <div className={clsx("flex flex-col flex-1 relative", className)}>
         {children}
       </div>
       <footer>
-        <div className="bg-stone-900 text-white">
+        <div className="bg-stone-950 text-white">
           <div className="p-4 flex flex-col gap-2 items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"

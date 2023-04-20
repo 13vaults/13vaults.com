@@ -88,9 +88,17 @@ function HeroVariant({
         )}
         href={`/blog/${slug}`}
       >
+        <Image
+          className="object-top object-cover h-full w-full relative"
+          src={socialBanner}
+          placeholder="blur"
+          fill
+          role="presentation"
+          alt=""
+        />
         <section
           aria-label={title}
-          className="flex flex-col gap-2 z-10 p-4 min-h-[24rem] relative justify-end bg-gradient-to-t bg-black/10 from-black/70 to-black/0 group-hover:bg-black/50 transition-all"
+          className="flex flex-col gap-2 p-4 min-h-[24rem] relative justify-end bg-gradient-to-t bg-black/10 from-black/70 to-black/0 group-hover:bg-black/50 transition-all"
         >
           <header className="font-display">
             {published ? null : (
@@ -114,13 +122,6 @@ function HeroVariant({
             <p className="my-2 opacity-90 italic">{t("read-more")}</p>
           </div>
         </section>
-        <Image
-          className="object-top object-cover h-full w-full z-0 relative"
-          src={socialBanner}
-          placeholder="blur"
-          fill
-          alt=""
-        />
       </Link>
     </div>
   );

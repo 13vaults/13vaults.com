@@ -79,7 +79,7 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
           maxWidth="max-w-4xl"
           maxWidthXl="max-w-4xl"
           maxWidth2xl="max-w-4xl"
-          className="flex flex-col bg-white/50 dark:bg-black/50 shadow w-full flex-1"
+          className="flex flex-col bg-white dark:bg-stone-950 shadow w-full flex-1"
         >
           <BlogHero title={blogPost.title} />
           <div className="flex flex-col gap-8 px-4 pt-4 pb-8 lg:px-8 lg:pt-8 lg:pb-12">

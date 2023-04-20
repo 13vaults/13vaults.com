@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useCallback, useState } from "react";
 import { Dialog, Popover, Transition, Disclosure } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -16,11 +16,14 @@ import { useTranslation } from "next-i18next";
 export default function MegaNav({ navigation }: { navigation: Navigation }) {
   const [open, setOpen] = useState(false);
   const { t } = useTranslation("common");
+  const handleToggleOpen = useCallback(() => {
+    setOpen(!open);
+  }, [open]);
 
   return (
-    <div className="bg-stone-800 font-display">
+    <div className="bg-stone-950 font-display">
       <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
+        <Dialog as="div" className="relative lg:hidden" onClose={setOpen}>
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
@@ -30,10 +33,10 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-50" />
+            <div className="fixed top-14 left-0 right-0 bottom-0 bg-black bg-opacity-50" />
           </Transition.Child>
 
-          <div className="fixed inset-0 z-40 flex">
+          <div className="fixed top-14 left-0 right-0 bottom-0 flex">
             <Transition.Child
               as={Fragment}
               enter="transition ease-in-out duration-300 transform"
@@ -43,26 +46,16 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full"
             >
-              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-stone-900 border-r border-stone-700 pb-12 shadow-xl">
-                <div className="flex px-4 pt-3 pb-2">
-                  <button
-                    type="button"
-                    className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-stone-300"
-                    onClick={() => setOpen(false)}
-                  >
-                    <span className="sr-only">{t("nav.close-menu-label")}</span>
-                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                  </button>
-                </div>
+              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-stone-950 border-r border-stone-800 pb-12 shadow-xl">
                 {map(navigation.main, (navItem) => (
                   <Disclosure
                     as="div"
                     key={navItem.labelKey}
-                    className="text-white flex flex-col border-t border-stone-700 font-display font-medium"
+                    className="text-white flex flex-col border-t border-stone-800 font-display font-medium"
                   >
                     {({ open }) => (
                       <>
-                        <Disclosure.Button className="text-left flex items-center gap-1 p-4 bg-stone-800">
+                        <Disclosure.Button className="text-left flex items-center gap-1 p-4 bg-stone-900">
                           {t(navItem.labelKey)}
                           {open ? (
                             <ChevronUpIcon className="h-4 w-4" />
@@ -70,7 +63,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                             <ChevronDownIcon className="h-4 w-4" />
                           )}
                         </Disclosure.Button>
-                        <Disclosure.Panel className="p-4 pt-0 bg-stone-800 flex flex-col gap-4">
+                        <Disclosure.Panel className="p-4 pt-0 bg-stone-900 flex flex-col gap-4">
                           {map(navItem.subnavs, (subnav) => (
                             <div key={subnav.href}>
                               <p
@@ -97,7 +90,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                   <li key={item.name} className="flex">
                                     <Link
                                       href={item.href}
-                                      className="text-stone-400 py-4 block"
+                                      className="text-stone-200 py-4 block"
                                       onClick={() => setOpen(false)}
                                     >
                                       {item.name}
@@ -112,7 +105,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                     )}
                   </Disclosure>
                 ))}
-                <div className="flex flex-col border-t border-stone-700 py-2">
+                <div className="flex flex-col border-t border-stone-800 py-2">
                   {navigation.pages.map((page) => (
                     <div key={page.labelKey} className="flow-root font-display">
                       {page.href ? (
@@ -147,17 +140,25 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
 
       <div className="relative">
         <nav aria-label="Top">
-          <div className="bg-stone-800 px-4 lg:px-8 border-b border-stone-700 h-14 flex items-center z-40">
+          <div className="bg-stone-950 px-4 lg:px-8 shadow h-14 flex items-center">
             <Container className="flex-1">
               <div className="flex py-1 lg:py-2 items-center justify-start gap-8">
                 <div className="flex lg:hidden">
                   <button
                     type="button"
                     className="text-stone-300"
-                    onClick={() => setOpen(true)}
+                    onClick={handleToggleOpen}
                   >
-                    <span className="sr-only">{t("nav.open-menu-label")}</span>
-                    <Bars3Icon className="h-8 w-8" aria-hidden="true" />
+                    <span className="sr-only">
+                      {open
+                        ? t("nav.close-menu-label")
+                        : t("nav.open-menu-label")}
+                    </span>
+                    {open ? (
+                      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                    ) : (
+                      <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                    )}
                   </button>
                 </div>
                 <div className="hidden lg:flex lg:items-center">
@@ -204,8 +205,8 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                   className={clsx(
                                     open
                                       ? "border-teal-600 text-teal-600"
-                                      : "border-transparent text-stone-400 hover:text-stone-300",
-                                    "relative items-center gap-1 z-20 -mb-px flex border-b-2 pt-px font-medium transition-colors duration-200 ease-out"
+                                      : "border-transparent text-stone-200 hover:text-stone-300",
+                                    "relative items-center gap-1 -mb-px flex border-b-2 pt-px font-medium transition-colors duration-200 ease-out"
                                   )}
                                 >
                                   {t(mainNav.labelKey)}
@@ -228,11 +229,11 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                               >
                                 <Popover.Panel className="absolute inset-x-0 top-full text-stone-300">
                                   <div
-                                    className="absolute inset-0 top-1/2 bg-stone-800 shadow"
+                                    className="absolute inset-0 top-1/2 bg-stone-950 shadow"
                                     aria-hidden="true"
                                   />
 
-                                  <div className="relative bg-stone-800 border-b border-stone-700 px-8">
+                                  <div className="relative bg-stone-950 border-y border-stone-800 px-8">
                                     <Container>
                                       <div className="font-sans grid grid-cols-1 items-start gap-y-10 gap-x-8 py-6">
                                         <div className="grid grid-cols-5 gap-y-10 gap-x-8">
@@ -251,7 +252,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                                   id={`desktop-featured-heading-${kebabCase(
                                                     mainNavItem.labelKey
                                                   )}`}
-                                                  className="text-stone-400 border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
+                                                  className="text-stone-200 border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
                                                   href={mainNavItem.href}
                                                 >
                                                   {t(mainNavItem.labelKey)}
@@ -306,7 +307,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                           <Link
                             key={page.href}
                             href={page.href}
-                            className="items-center -mb-px flex pt-px transition-colors duration-200 ease-out text-stone-400 border-b-2 hover:text-teal-600 focus:text-teal-600 border-transparent focus:hover:border-teal-600 hover:border-teal-600"
+                            className="items-center -mb-px flex pt-px transition-colors duration-200 ease-out text-stone-200 border-b-2 hover:text-teal-600 focus:text-teal-600 border-transparent focus:hover:border-teal-600 hover:border-teal-600"
                           >
                             {t(page.labelKey)}
                           </Link>

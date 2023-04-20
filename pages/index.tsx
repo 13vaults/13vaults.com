@@ -97,20 +97,18 @@ export default function VaultsAppHome({
         />
       </Head>
       <BasicLayout navigation={navigation}>
-        <section className="flex-1 relative min-h-[30vh] text-white flex flex-col bg-cover bg-top">
-          <div className="absolute inset-0 home-hero">
-            <Image
-              className="z-[-1] object-top object-cover h-full w-full home-hero bg-neutral-900"
-              fill
-              src={heroImage}
-              alt="Dragon flying near a tower."
-              placeholder="blur"
-              unoptimized={process.env.NODE_ENV === "development"}
-              priority
-            />
-          </div>
-          <div className="flex-1 flex flex-col gap-12 px-4 py-8 lg:p-8 pb-14 z-0 mx-auto justify-center items-center">
-            <h1 className="text-amber-50">
+        <section className="flex-1 relative min-h-[40vh] text-white flex flex-col bg-cover bg-top">
+          <Image
+            className="relative object-top object-cover h-full w-full"
+            fill
+            src={heroImage}
+            alt="Dragon flying near a tower."
+            placeholder="blur"
+            unoptimized={process.env.NODE_ENV === "development"}
+            priority
+          />
+          <div className="relative flex-1 flex flex-col gap-12 px-4 py-8 lg:p-8 pb-14 w-full mx-auto justify-center items-center bg-gradient-to-t from-stone-950 to-stone-950/50">
+            <h1 className="text-stone-50">
               <span className="sr-only">13 Vaults</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +126,7 @@ export default function VaultsAppHome({
                 />
               </svg>
             </h1>
-            <div className="prose prose-p:font-display prose-p:font-medium prose-invert prose-p:my-1 prose-p:text-justify prose-p:leading-tight prose-p:text-amber-50">
+            <div className="prose prose-p:font-display prose-p:font-medium prose-invert prose-p:my-1 prose-p:text-justify prose-p:leading-tight prose-p:text-stone-50">
               <p>{t("intro")}</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-2 mx-auto">
@@ -172,7 +170,7 @@ export default function VaultsAppHome({
           </div>
           <div className="absolute bottom-4 left-4 right-4">
             <Container>
-              <p className="text-sm text-amber-700/50">
+              <p className="text-sm text-stone-600">
                 <a href="https://www.deviantart.com/butteredbap/art/Camelot-spire-358955566">
                   {t("image-cite")}
                 </a>
@@ -180,7 +178,7 @@ export default function VaultsAppHome({
             </Container>
           </div>
         </section>
-        <section className="bg-[rgb(27,10,0)] text-white">
+        <section className="bg-stone-950 text-white">
           <Container>
             <nav>
               <ul
