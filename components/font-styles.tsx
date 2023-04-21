@@ -1,9 +1,4 @@
-import {
-  Barlow_Semi_Condensed,
-  Inter,
-  Vollkorn,
-  Vollkorn_SC,
-} from "next/font/google";
+import { Barlow_Semi_Condensed, Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 const ikariusAdfNo2 = localFont({
@@ -76,30 +71,12 @@ const inter = Inter({
   display: "swap",
 });
 
-const vollkorn = Vollkorn({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  style: ["normal", "italic"],
-  preload: false,
-  display: "swap",
-});
-
-const vollkornSc = Vollkorn_SC({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal"],
-  preload: false,
-  display: "swap",
-});
-
 export default function FontStyles() {
   return (
     <style jsx global>{`
       :root {
         --font-inter: ${inter.style.fontFamily};
         --font-barlow-semi-condensed: ${barlowSemiCondensed.style.fontFamily};
-        --font-vollkorn: ${vollkorn.style.fontFamily};
-        --font-vollkorn-sc: ${vollkornSc.style.fontFamily};
         --font-ikarius-adf-no2: ${ikariusAdfNo2.style.fontFamily};
         --font-ikarius-adf: ${ikariusAdf.style.fontFamily};
       }
