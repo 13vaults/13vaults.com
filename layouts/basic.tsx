@@ -23,7 +23,7 @@ export default function BasicLayout({
       <div className={clsx("flex flex-col flex-1 relative", className)}>
         {children}
       </div>
-      <footer>
+      <footer className="font-bold">
         <div className="bg-stone-950 text-white">
           <div className="p-4 flex flex-col gap-2 items-center justify-center">
             <svg
@@ -37,7 +37,7 @@ export default function BasicLayout({
                 d="M12.3 34 4.5 11.4 5 8.1 3.2 4.9 0 0l11.4 4.9 6 21.6.4 2.6.5-2.6 6-21.6L21 1.6h9.8L34 5l-3 6.5L23.5 34H12.3Z"
               />
             </svg>
-            <div className="prose prose-sm prose-invert prose-p:my-0 prose-p:leading-tight text-xs text-align-last-center text-white/50 font-display font-medium">
+            <div className="prose prose-sm prose-invert prose-p:my-0 prose-p:leading-tight text-xs text-align-last-center text-white/50">
               <p>{t("footer.not-affiliated")}</p>
               <p>
                 <Trans

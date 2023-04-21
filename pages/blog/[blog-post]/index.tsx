@@ -80,15 +80,17 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
         >
           <BlogHero title={blogPost.title} />
           <div className="flex flex-col gap-8 px-4 pt-4 pb-8 lg:px-8 lg:pt-8 lg:pb-12">
-            <h1 className="font-display font-bold text-3xl md:text-4xl text-stone-900 dark:text-stone-200 my-2 md:my-4">
-              {blogPost.title}
-            </h1>
-            <Prose>
-              <p>
+            <div>
+              <h1 className="font-display-serif font-bold text-3xl md:text-4xl text-stone-900 dark:text-stone-200 my-2 md:my-4">
+                {blogPost.title}
+              </h1>
+              <time className="font-display">
                 {t("published-on-label", {
                   date: dayjs.tz(blogPost.date).format("YYYY-MM-DD"),
                 })}
-              </p>
+              </time>
+            </div>
+            <Prose>
               <Content
                 components={{
                   Vault: Vault,

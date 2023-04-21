@@ -21,7 +21,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
   }, [open]);
 
   return (
-    <div className="bg-stone-950 font-display">
+    <div className="bg-stone-950">
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative lg:hidden" onClose={setOpen}>
           <Transition.Child
@@ -51,7 +51,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                   <Disclosure
                     as="div"
                     key={navItem.labelKey}
-                    className="text-white flex flex-col border-t border-stone-800 font-display font-medium"
+                    className="text-white flex flex-col border-t border-stone-800 font-display font-bold"
                   >
                     {({ open }) => (
                       <>
@@ -110,14 +110,14 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                     <div key={page.labelKey} className="flow-root font-display">
                       {page.href ? (
                         <Link
-                          className="flex p-4 items-center font-medium text-stone-200 hover:bg-stone-800 transition-colors"
+                          className="flex p-4 items-center font-bold text-stone-200 hover:bg-stone-800 transition-colors"
                           href={page.href}
                           onClick={() => setOpen(false)}
                         >
                           {t(page.labelKey)}
                         </Link>
                       ) : (
-                        <span className="flex p-4 items-center font-medium text-stone-600 cursor-not-allowed">
+                        <span className="flex p-4 items-center font-bold text-stone-600 cursor-not-allowed">
                           {t(page.labelKey)}
                         </span>
                       )}
@@ -127,7 +127,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                 <div className="flex-1 flex-col">
                   <a
                     href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
-                    className="flex items-center bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-medium p-4 focus:bg-amber-400 hover:bg-amber-400 transition-colors font-display"
+                    className="flex items-center bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-bold p-4 focus:bg-amber-400 hover:bg-amber-400 transition-colors font-display"
                   >
                     {t("nav.buy-13th-age-label")}
                   </a>
@@ -206,7 +206,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                     open
                                       ? "border-teal-600 text-teal-600"
                                       : "border-transparent text-stone-200 hover:text-stone-300",
-                                    "relative items-center gap-1 -mb-px flex border-b-2 pt-px font-medium transition-colors duration-200 ease-out"
+                                    "relative items-center gap-1 -mb-px flex border-b-2 pt-px font-bold transition-colors duration-200 ease-out"
                                   )}
                                 >
                                   {t(mainNav.labelKey)}
@@ -235,7 +235,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
 
                                   <div className="relative bg-stone-950 border-y border-stone-800 px-8">
                                     <Container>
-                                      <div className="font-sans grid grid-cols-1 items-start gap-y-10 gap-x-8 py-6">
+                                      <div className="grid grid-cols-1 items-start gap-y-10 gap-x-8 py-6">
                                         <div className="grid grid-cols-5 gap-y-10 gap-x-8">
                                           {map(
                                             mainNav.subnavs,
@@ -252,7 +252,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                                   id={`desktop-featured-heading-${kebabCase(
                                                     mainNavItem.labelKey
                                                   )}`}
-                                                  className="text-stone-200 border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
+                                                  className="font-bold font-display-serif text-stone-200 border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
                                                   href={mainNavItem.href}
                                                 >
                                                   {t(mainNavItem.labelKey)}
@@ -301,7 +301,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                   </Popover.Group>
 
                   <div className="flex flex-1 gap-8 justify-between">
-                    <div className="flex gap-8 font-medium">
+                    <div className="flex gap-8 font-bold">
                       {navigation.pages.map((page) =>
                         page.href ? (
                           <Link
@@ -324,7 +324,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                     <div className="flex gap-2">
                       <a
                         href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
-                        className=" bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-medium rounded px-2 py-1 focus:bg-amber-400 hover:bg-amber-400 transition-colors"
+                        className=" bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-bold rounded px-2 py-1 focus:bg-amber-400 hover:bg-amber-400 transition-colors"
                       >
                         {t("nav.buy-13th-age-label")}
                       </a>

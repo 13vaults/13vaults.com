@@ -37,7 +37,7 @@ function HomeNewsSectionItem({
         href={`/blog/${slug}`}
       >
         <section aria-label={title} className="flex flex-col gap-2">
-          <header className="font-display">
+          <header className="font-display-serif">
             {published ? null : (
               <div className="text-xl text-white font-black uppercase bg-red-500 p-1 mb-2">
                 {t("unpublished-dev-label")}
@@ -47,7 +47,7 @@ function HomeNewsSectionItem({
               {title}
             </h1>
             <div className="text-sm font-medium">
-              <time>
+              <time className="font-display">
                 {t("posted-ago", {
                   timeAgo: dayjs.tz(date).fromNow(),
                 })}
@@ -96,7 +96,7 @@ function HeroVariant({
           aria-label={title}
           className="flex flex-col gap-2 p-4 min-h-[24rem] relative justify-end bg-gradient-to-t bg-black/10 from-black/70 to-black/0 group-hover:bg-black/50 transition-all"
         >
-          <header className="font-display">
+          <header className="font-display-serif">
             {published ? null : (
               <div className="text-xl text-white font-black uppercase bg-red-500 p-1 mb-2">
                 {t("unpublished-dev-label")}
@@ -106,7 +106,7 @@ function HeroVariant({
               {title}
             </h1>
             <div className="text-sm font-medium">
-              <time>
+              <time className="font-display">
                 {t("posted-ago", {
                   timeAgo: dayjs.tz(date, "America/New_York").fromNow(false),
                 })}

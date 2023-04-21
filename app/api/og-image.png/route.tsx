@@ -10,22 +10,19 @@ export async function GET(request: NextRequest) {
   const title = searchParams.get("title");
 
   const fontData = await fetch(
-    new URL("../../../assets/VollkornSC-Bold.ttf", import.meta.url)
+    new URL("../../../assets/IkariusADFStd-Bold.otf", import.meta.url)
   ).then((response) => response.arrayBuffer());
 
-  return new ImageResponse(
-    <SocialHero fontFamily="Vollkorn SC" title={title} />,
-    {
-      width: 1200,
-      height: 630,
-      fonts: [
-        {
-          name: "Vollkorn SC",
-          data: fontData,
-          style: "normal",
-          weight: 700,
-        },
-      ],
-    }
-  );
+  return new ImageResponse(<SocialHero fontFamily="Ikarius" title={title} />, {
+    width: 1200,
+    height: 630,
+    fonts: [
+      {
+        name: "Ikarius",
+        data: fontData,
+        style: "normal",
+        weight: 700,
+      },
+    ],
+  });
 }

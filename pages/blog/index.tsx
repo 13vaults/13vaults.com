@@ -67,10 +67,10 @@ export default function BlogIndexPage({
                               {t("unpublished-dev-label")}
                             </span>
                           )}
-                          <h2 className="font-display font-bold text-2xl">
+                          <h2 className="font-display-serif font-bold text-2xl">
                             {post.title}
                           </h2>
-                          <time className="text-xs">
+                          <time className="font-display text-sm">
                             {t("published-on-label", {
                               date: dayjs.tz(post.date).format("YYYY-MM-DD"),
                             })}

@@ -126,7 +126,7 @@ export default function VaultsAppHome({
                 />
               </svg>
             </h1>
-            <div className="prose prose-p:font-display prose-p:font-medium prose-invert prose-p:my-1 prose-p:text-justify prose-p:leading-tight prose-p:text-stone-50">
+            <div className="prose prose-invert prose-p:my-1 prose-p:text-justify prose-p:leading-tight prose-p:text-stone-50">
               <p>{t("intro")}</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-2 mx-auto">

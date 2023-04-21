@@ -24,9 +24,12 @@ export default {
           "var(--font-barlow-semi-condensed)",
           ...defaultTheme.fontFamily.sans,
         ],
-        serif: ["var(--font-vollkorn)", ...defaultTheme.fontFamily.serif],
+        serif: [
+          "var(--font-ikarius-adf-no2)",
+          ...defaultTheme.fontFamily.serif,
+        ],
         "display-serif": [
-          "var(--font-vollkorn-sc)",
+          "var(--font-ikarius-adf)",
           ...defaultTheme.fontFamily.serif,
         ],
       },
