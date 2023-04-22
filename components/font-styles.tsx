@@ -6,22 +6,22 @@ const ikariusAdfNo2 = localFont({
   display: "swap",
   src: [
     {
-      path: "../assets/IkariusADFNo2Std-Bold.otf",
+      path: "../public/fonts/IkariusADFNo2Std-Bold.otf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../assets/IkariusADFNo2Std-BoldItalic.otf",
+      path: "../public/fonts/IkariusADFNo2Std-BoldItalic.otf",
       weight: "700",
       style: "italic",
     },
     {
-      path: "../assets/IkariusADFNo2Std-Italic.otf",
+      path: "../public/fonts/IkariusADFNo2Std-Italic.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../assets/IkariusADFNo2Std-Regular.otf",
+      path: "../public/fonts/IkariusADFNo2Std-Regular.otf",
       weight: "400",
       style: "normal",
     },
@@ -33,22 +33,22 @@ const ikariusAdf = localFont({
   display: "swap",
   src: [
     {
-      path: "../assets/IkariusADFStd-Bold.otf",
+      path: "../public/fonts/IkariusADFStd-Bold.otf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../assets/IkariusADFStd-BoldItalic.otf",
+      path: "../public/fonts/IkariusADFStd-BoldItalic.otf",
       weight: "700",
       style: "italic",
     },
     {
-      path: "../assets/IkariusADFStd-Italic.otf",
+      path: "../public/fonts/IkariusADFStd-Italic.otf",
       weight: "400",
       style: "italic",
     },
     {
-      path: "../assets/IkariusADFStd-Regular.otf",
+      path: "../public/fonts/IkariusADFStd-Regular.otf",
       weight: "400",
       style: "normal",
     },
@@ -79,14 +79,6 @@ export default function FontStyles() {
         --font-barlow-semi-condensed: ${barlowSemiCondensed.style.fontFamily};
         --font-ikarius-adf-no2: ${ikariusAdfNo2.style.fontFamily};
         --font-ikarius-adf: ${ikariusAdf.style.fontFamily};
-      }
-
-      /* CSS for other than iOS devices */
-      @supports not (-webkit-touch-callout: none) {
-        html,
-        body {
-          scroll-behavior: smooth;
-        }
       }
     `}</style>
   );

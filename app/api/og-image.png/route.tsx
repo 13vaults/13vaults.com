@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
   const title = searchParams.get("title");
 
   const fontData = await fetch(
-    new URL("../../../assets/IkariusADFStd-Bold.otf", import.meta.url)
+    new URL("../../../public/fonts/IkariusADFStd-Bold.otf", import.meta.url)
   ).then((response) => response.arrayBuffer());
 
   return new ImageResponse(<SocialHero fontFamily="Ikarius" title={title} />, {

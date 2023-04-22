@@ -6,6 +6,7 @@
     "plugin:storybook/recommended"
   ],
   "rules": {
+    "import/no-anonymous-default-export": 0,
     "unicorn/no-null": 0,
     "unicorn/no-nested-ternary": 0,
     "no-unused-vars": [
