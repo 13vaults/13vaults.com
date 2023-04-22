@@ -22,7 +22,13 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-  staticDirs: ["../public"],
+  staticDirs: [
+    "../public",
+    {
+      from: "../public/fonts",
+      to: "public/fonts",
+    },
+  ],
   webpackFinal: async (config) => {
     if (config?.resolve?.alias) {
       config.resolve.alias["/texture.webp"] = path.resolve(

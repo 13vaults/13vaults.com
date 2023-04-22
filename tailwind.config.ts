@@ -8,6 +8,9 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./layouts/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    ...(process.env.NODE_ENV === "development"
+      ? ["./stories/**/*.{js,ts,jsx,tsx}"]
+      : []),
   ],
   theme: {
     extend: {
