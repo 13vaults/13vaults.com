@@ -26,8 +26,8 @@ export default function HomeNewsSection({
       aria-label={t("latest-posts-blog") as string}
       className="flex flex-col gap-4"
     >
-      <ol role="list" className="flex flex-col gap-4">
-        <li>
+      <ol role="list" className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <li className="md:col-span-2">
           <HomeNewsSectionItem.Hero
             title={heroPost.title}
             slug={heroPost.slug}
@@ -36,23 +36,19 @@ export default function HomeNewsSection({
             excerpt={heroPost.excerpt}
           />
         </li>
-        {size(extraPosts) > 0 ? (
-          <li>
-            <ol className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-fr">
-              {map(extraPosts, (post) => (
-                <li className="flex">
-                  <HomeNewsSectionItem
-                    title={post.title}
-                    slug={post.slug}
-                    published={post.published}
-                    date={post.date}
-                    excerpt={post.excerpt}
-                  />
-                </li>
-              ))}
-            </ol>
-          </li>
-        ) : null}
+        {size(extraPosts) > 0
+          ? map(extraPosts, (post) => (
+              <li className="grid auto-cols-fr auto-rows-fr">
+                <HomeNewsSectionItem
+                  title={post.title}
+                  slug={post.slug}
+                  published={post.published}
+                  date={post.date}
+                  excerpt={post.excerpt}
+                />
+              </li>
+            ))
+          : null}
       </ol>
       <div className="flex justify-center">
         <Link

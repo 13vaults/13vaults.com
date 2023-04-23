@@ -63,7 +63,7 @@ export default function VaultsBasicPage({
               <article
                 className="prose prose-h1:my-0 prose-h2:mt-4 max-w-none
                          prose-headings:font-display-serif prose-lead:leading-normal prose-lead:font-display prose-table:my-2
-                         prose-blockquote:border-teal-500 prose-blockquote:bg-white dark:prose-blockquote:bg-stone-800
+                         prose-blockquote:border-teal-500 prose-blockquote:bg-teal-500/5 dark:prose-blockquote:bg-teal-500/20
                          dark:prose-blockquote:text-white prose-blockquote:font-serif prose-blockquote:shadow-md
                          prose-th:font-display prose-th:font-medium
                          prose-th:p-2 prose-thead:shadow-sm prose-th:align-bottom prose-thead:bg-white dark:prose-thead:bg-stone-800

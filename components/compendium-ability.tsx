@@ -54,7 +54,7 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
             "border-b": ability.description,
             "sm:border-b": ability.description || ability.feats,
           },
-          "text-lg not-prose p-2 gap-2 shadow-sm font-display font-medium bg-white dark:bg-stone-700 dark:text-stone-200 dark:border-stone-900 border-stone-300 rounded-t flex justify-between"
+          "text-lg not-prose p-2 gap-2 shadow-sm font-display-serif font-bold bg-white dark:bg-stone-700 dark:text-stone-200 dark:border-stone-900 border-stone-300 rounded-t flex justify-between"
         )}
       >
         <h1 className="text-left">{ability.name}</h1>

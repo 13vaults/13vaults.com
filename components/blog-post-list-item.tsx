@@ -24,7 +24,7 @@ function BlogPostListItem({
   excerpt,
 }: BlogPostListItemP) {
   return (
-    <div className="flex">
+    <div className="grid flex-1">
       <Link
         className={clsx(
           "p-4 block transition-all shadow-sm hover:shadow-md flex-1 group",

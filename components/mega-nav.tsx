@@ -58,7 +58,7 @@ function MobileSubnavWithItems({ subnav, onLinkClick }: MobileSubnavP) {
               <ChevronDownIcon className="h-4 w-4" />
             )}
           </Disclosure.Button>
-          <Disclosure.Panel as="ul" className="pl-2">
+          <Disclosure.Panel as="ul" className="ps-2">
             {subnav.items?.map((item) => (
               <li key={item?.name} className="flex flex-col">
                 <MobileSubnav
@@ -149,14 +149,14 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                     <div key={page.labelKey} className="flow-root font-display">
                       {page.href ? (
                         <Link
-                          className="flex p-4 items-center font-bold text-stone-200 hover:bg-stone-800 transition-colors"
+                          className="flex p-4 items-center text-stone-200 hover:bg-stone-800 transition-colors"
                           href={page.href}
                           onClick={() => setOpen(false)}
                         >
                           {t(page.labelKey)}
                         </Link>
                       ) : (
-                        <span className="flex p-4 items-center font-bold text-stone-600 cursor-not-allowed">
+                        <span className="flex p-4 items-center text-stone-600 cursor-not-allowed">
                           {t(page.labelKey)}
                         </span>
                       )}
@@ -166,7 +166,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                 <div className="flex-1 flex-col">
                   <a
                     href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
-                    className="flex items-center bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-bold p-4 focus:bg-amber-400 hover:bg-amber-400 transition-colors font-display"
+                    className="flex items-center bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white p-4 focus:bg-amber-400 hover:bg-amber-400 transition-colors font-display"
                   >
                     {t("nav.buy-13th-age-label")}
                   </a>
@@ -245,7 +245,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                     open
                                       ? "border-teal-600 text-teal-600"
                                       : "border-transparent text-stone-200 hover:text-stone-300",
-                                    "relative items-center gap-1 -mb-px flex border-b-2 pt-px font-bold transition-colors duration-200 ease-out"
+                                    "font-display-serif font-bold relative items-center gap-1 -mb-px flex border-b-2 pt-px transition-colors duration-200 ease-out"
                                   )}
                                 >
                                   {t(mainNav.labelKey)}
@@ -346,14 +346,14 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                           <Link
                             key={page.href}
                             href={page.href}
-                            className="items-center -mb-px flex pt-px transition-colors duration-200 ease-out text-stone-200 border-b-2 hover:text-teal-600 focus:text-teal-600 border-transparent focus:hover:border-teal-600 hover:border-teal-600"
+                            className="font-bold font-display-serif items-center -mb-px flex pt-px transition-colors duration-200 ease-out text-stone-200 border-b-2 hover:text-teal-600 focus:text-teal-600 border-transparent focus:hover:border-teal-600 hover:border-teal-600"
                           >
                             {t(page.labelKey)}
                           </Link>
                         ) : (
                           <span
                             key={page.labelKey}
-                            className="flex items-center text-stone-600 cursor-not-allowed"
+                            className="font-bold font-display-serif flex items-center text-stone-600 cursor-not-allowed"
                           >
                             {t(page.labelKey)}
                           </span>
