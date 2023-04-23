@@ -14,10 +14,7 @@ import { useTranslation } from "next-i18next";
 import BasicLayout from "@/layouts/basic";
 import Container from "@/components/container";
 import CompendiumTitle from "@/components/compendium-title";
-import dayjs from "dayjs";
-import Link from "next/link";
 import { PickPartial } from "@/utils";
-import clsx from "clsx";
 import BlogIndexPostList from "@/components/blog-index-post-list";
 
 export type BlogPostItem = PickPartial<
