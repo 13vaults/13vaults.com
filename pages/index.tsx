@@ -129,9 +129,9 @@ export default function VaultsAppHome({
             <div className="prose prose-invert prose-p:my-1 prose-p:text-justify prose-p:leading-tight prose-p:text-stone-50 font-serif font-bold">
               <p>{t("intro")}</p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto sm:mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto sm:mx-auto">
               <Link
-                className="flex gap-3 justify-center focus:bg-teal-500 hover:bg-teal-500 bg-teal-600 border border-teal-400/50 hover:border-teal-400 rounded ps-8 pe-12 py-3 shadow transition-colors font-display font-semibold items-center"
+                className="relative group flex gap-3 justify-center focus:bg-teal-600 hover:bg-teal-600 bg-teal-700 border border-teal-400/50 hover:border-teal-400 ps-8 pe-12 py-3 shadow transition-colors font-display font-semibold items-center"
                 href="/compendium"
               >
                 <svg
@@ -146,9 +146,10 @@ export default function VaultsAppHome({
                   />
                 </svg>
                 <span>{t("cta-label")}</span>
+                <div className="border border-teal-600 absolute -inset-1"></div>
               </Link>
               <a
-                className="flex gap-3 justify-center focus:bg-indigo-600/50 hover:bg-indigo-600/50 bg-indigo-600/20 border border-indigo-500/50 hover:border-indigo-500 rounded ps-8 pe-12 py-3 shadow transition-colors font-display font-semibold items-center"
+                className="relative group flex gap-3 justify-center focus:bg-indigo-600/50 hover:bg-indigo-600/50 bg-indigo-600/20 border border-indigo-500/50 hover:border-indigo-500 ps-8 pe-12 py-3 shadow transition-colors font-display font-semibold items-center"
                 href="https://discord.gg/m9DbPC6RsC"
               >
                 <svg
@@ -165,6 +166,7 @@ export default function VaultsAppHome({
                   </g>
                 </svg>
                 <span>{t("join-discord-label")}</span>
+                <div className="border border-indigo-600 absolute -inset-1 group-hover:border-indigo-500"></div>
               </a>
             </div>
           </div>
@@ -197,7 +199,7 @@ export default function VaultsAppHome({
                       <Link
                         className={clsx(
                           item.classes,
-                          "grid place-content-center rounded-sm border h-40 text-center px-4 lg:px-8 transition-colors"
+                          "grid place-content-center border h-40 text-center px-4 lg:px-8 transition-colors"
                         )}
                         href={item.href}
                       >
@@ -212,7 +214,7 @@ export default function VaultsAppHome({
                       <div
                         className={clsx(
                           item.classes,
-                          "grid place-content-center rounded-sm border h-40 text-center px-4 lg:px-8 opacity-30 transition-colors"
+                          "grid place-content-center border h-40 text-center px-4 lg:px-8 opacity-30 transition-colors"
                         )}
                       >
                         <h2 className="text-3xl font-display-serif font-semibold">

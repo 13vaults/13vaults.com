@@ -366,9 +366,15 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                     <div className="flex gap-2">
                       <a
                         href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
-                        className=" bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-serif font-bold rounded px-2 py-1 focus:bg-amber-400 hover:bg-amber-400 transition-colors"
+                        className="relative group shadow-md border border-amber-400 shadow-amber-800"
                       >
-                        {t("nav.buy-13th-age-label")}
+                        <div
+                          role="presentation"
+                          className="absolute rotate-45 top-0 left-1/2 -translate-x-1/2 h-full aspect-square bg-amber-500 border border-amber-400 group-focus:bg-amber-400 group-hover:bg-amber-400 transition-colors"
+                        />
+                        <span className="text-shadow relative inline-block bg-gradient-to-bl bg-amber-500 text-white font-serif font-bold px-2 py-1 group-focus:bg-amber-400 group-hover:bg-amber-400 transition-colors">
+                          {t("nav.buy-13th-age-label")}
+                        </span>
                       </a>
                     </div>
                   </div>
