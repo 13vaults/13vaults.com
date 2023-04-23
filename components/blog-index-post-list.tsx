@@ -18,8 +18,8 @@ export default function BlogIndexPostList({ blogPosts }: BlogIndexPostListP) {
           <BlogPostListItem.Hero
             to={`/blog/${firstPost.slug}`}
             published={firstPost.published}
-            date={t("posted-ago", {
-              timeAgo: dayjs.tz(firstPost.date).fromNow(),
+            date={t("published-on-label", {
+              date: dayjs.tz(firstPost.date).format("YYYY-MM-DD"),
             })}
             label={firstPost.title}
             excerpt={firstPost.excerpt}
@@ -33,8 +33,8 @@ export default function BlogIndexPostList({ blogPosts }: BlogIndexPostListP) {
           <BlogPostListItem
             to={`/blog/${post.slug}`}
             published={post.published}
-            date={t("posted-ago", {
-              timeAgo: dayjs.tz(post.date).fromNow(),
+            date={t("published-on-label", {
+              date: dayjs.tz(post.date).format("YYYY-MM-DD"),
             })}
             label={post.title}
             excerpt={post.excerpt}

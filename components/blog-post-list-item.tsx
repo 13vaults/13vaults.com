@@ -86,7 +86,7 @@ function HeroVariant({
         />
         <section
           aria-label={label}
-          className="flex flex-col gap-2 p-4 min-h-[24rem] relative justify-end bg-gradient-to-t bg-black/10 from-black/70 to-black/0 group-focus:bg-black/50 group-hover:bg-black/50 transition-all ring-inset ring ring-teal-500/50 group-focus:ring-teal-500 group-hover:ring-teal-500"
+          className="flex flex-col gap-2 p-4 min-h-[24rem] relative justify-end bg-gradient-to-t bg-black/10 from-black/70 to-black/0 group-focus:bg-black/50 group-hover:bg-black/50 transition-all ring-inset ring ring-teal-500/75 group-focus:ring-teal-500 group-hover:ring-teal-500"
         >
           <header className="font-display-serif">
             <h1 className="text-2xl md:text-4xl font-black transition-colors group-focus:text-teal-400 group-hover:text-teal-400">
