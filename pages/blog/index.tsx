@@ -19,7 +19,7 @@ import Link from "next/link";
 import { PickPartial } from "@/utils";
 import clsx from "clsx";
 
-type BlogPostItem = PickPartial<
+export type BlogPostItem = PickPartial<
   BlogPost,
   "excerpt" | "date" | "title" | "slug" | "published"
 >;

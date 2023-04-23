@@ -22,17 +22,22 @@ export default function HomeNewsSection({
   const { t } = useTranslation("home");
 
   return (
-    <nav aria-label={t("latest-posts-blog") || ""}>
-      <div role="list" className="flex flex-col gap-2">
-        <HomeNewsSectionItem.Hero
-          title={heroPost.title}
-          slug={heroPost.slug}
-          published={heroPost.published}
-          date={heroPost.date}
-          excerpt={heroPost.excerpt}
-        />
+    <nav
+      aria-label={t("latest-posts-blog") as string}
+      className="flex flex-col gap-4"
+    >
+      <ol role="list" className="flex flex-col gap-4">
+        <li>
+          <HomeNewsSectionItem.Hero
+            title={heroPost.title}
+            slug={heroPost.slug}
+            published={heroPost.published}
+            date={heroPost.date}
+            excerpt={heroPost.excerpt}
+          />
+        </li>
         {size(extraPosts) > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 auto-rows-fr">
+          <li className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-fr">
             {map(extraPosts, (post) => (
               <HomeNewsSectionItem
                 key={post.slug}
@@ -43,16 +48,16 @@ export default function HomeNewsSection({
                 excerpt={post.excerpt}
               />
             ))}
-          </div>
+          </li>
         ) : null}
-        <div className="flex justify-center py-2">
-          <Link
-            className="py-1 px-3 bg-teal-600 hover:bg-teal-500 transition-colors text-white font-display font-medium uppercase"
-            href="/blog"
-          >
-            {t("view-all-blog-posts")}
-          </Link>
-        </div>
+      </ol>
+      <div className="flex justify-center">
+        <Link
+          className="py-1 px-3 bg-teal-600 hover:bg-teal-500 transition-colors text-white font-display font-medium uppercase"
+          href="/blog"
+        >
+          {t("view-all-blog-posts")}
+        </Link>
       </div>
     </nav>
   );

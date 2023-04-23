@@ -9,13 +9,9 @@ const meta: Meta<typeof BlogPostListItem> = {
     label: "Test label!",
     title: faker.lorem.sentence(),
     to: "/",
-    children: (
-      <>
-        <p className="my-2">{faker.lorem.paragraph()}</p>
-        <p className="my-2 opacity-90 italic">Read more...</p>
-      </>
-    ),
-    subtitle: <time className="font-display">Posted several days ago</time>,
+    excerpt: faker.lorem.paragraph(),
+    readMore: "Read more...",
+    date: "Posted several days ago",
     published: true,
   },
 };
@@ -25,17 +21,33 @@ export default meta;
 type Story = StoryObj<typeof BlogPostListItem>;
 
 export const Default: Story = {
-  render({ title, to, children, subtitle, published, label }) {
+  render({ title, to, excerpt, readMore, date, published, label }) {
     return (
       <BlogPostListItem
         label={label}
-        subtitle={subtitle}
+        excerpt={excerpt}
         to={to}
         title={title}
         published={published}
-      >
-        {children}
-      </BlogPostListItem>
+        date={date}
+        readMore={readMore}
+      />
+    );
+  },
+};
+
+export const Hero: Story = {
+  render({ title, to, excerpt, readMore, date, published, label }) {
+    return (
+      <BlogPostListItem.Hero
+        label={label}
+        excerpt={excerpt}
+        to={to}
+        title={title}
+        published={published}
+        date={date}
+        readMore={readMore}
+      />
     );
   },
 };
