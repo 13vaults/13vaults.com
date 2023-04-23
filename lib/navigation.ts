@@ -3,7 +3,7 @@ import { map } from "lodash";
 import { localeContentLayerList } from "./locale-utils";
 import { defaultLocale } from "./locales";
 
-interface SubNav {
+export interface SubNav {
   name: string;
   labelKey: string;
   href: string;
@@ -11,9 +11,9 @@ interface SubNav {
   items?: SubNavWithName[];
 }
 
-type SubNavWithName = Omit<SubNav, "labelKey">;
+export type SubNavWithName = Omit<SubNav, "labelKey">;
 
-type SubNavWithLabel = Omit<SubNav, "name">;
+export type SubNavWithLabel = Omit<SubNav, "name">;
 
 interface MainNavItem {
   labelKey: string;

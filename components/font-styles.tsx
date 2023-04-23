@@ -1,4 +1,8 @@
-import { Barlow_Semi_Condensed, Inter } from "next/font/google";
+import {
+  Barlow_Semi_Condensed,
+  Inter,
+  Source_Sans_Pro,
+} from "next/font/google";
 import localFont from "next/font/local";
 
 const ikariusAdfNo2 = localFont({
@@ -55,6 +59,14 @@ const ikariusAdf = localFont({
   ],
 });
 
+const sourceSans = Source_Sans_Pro({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  preload: false,
+  display: "swap",
+});
+
 const barlowSemiCondensed = Barlow_Semi_Condensed({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -79,6 +91,7 @@ export default function FontStyles() {
         --font-barlow-semi-condensed: ${barlowSemiCondensed.style.fontFamily};
         --font-ikarius-adf-no2: ${ikariusAdfNo2.style.fontFamily};
         --font-ikarius-adf: ${ikariusAdf.style.fontFamily};
+        --font-source-sans: ${sourceSans.style.fontFamily};
       }
     `}</style>
   );

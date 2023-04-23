@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: var(--font-ikarius-adf), system-ui, sans-serif;
-  }
-
   body {
     @apply bg-texture dark:bg-texture-dark;
   }

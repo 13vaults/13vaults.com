@@ -19,10 +19,10 @@ export default {
         "texture-dark": "url(/texture-dark.webp)",
       },
       aspectRatio: {
-        wide: "2 / 1",
+        wide: "16 / 9",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-source-sans)", ...defaultTheme.fontFamily.sans],
         display: [
           "var(--font-barlow-semi-condensed)",
           ...defaultTheme.fontFamily.sans,

@@ -9,9 +9,77 @@ import {
 import clsx from "clsx";
 import Container from "./container";
 import Link from "next/link";
-import { kebabCase, map } from "lodash";
-import { Navigation } from "@/lib/navigation";
+import { kebabCase, map, size } from "lodash";
+import { Navigation, SubNav, SubNavWithName } from "@/lib/navigation";
 import { useTranslation } from "next-i18next";
+import { PartialBy, PickPartial } from "@/utils";
+
+interface MobileSubnavP {
+  subnav: PartialBy<
+    PickPartial<SubNav, "labelKey" | "items" | "href" | "name">,
+    "labelKey" | "name"
+  >;
+  onLinkClick: Function;
+}
+
+function MobileSubnavPlain({ subnav, onLinkClick }: MobileSubnavP) {
+  const { t } = useTranslation("common");
+
+  return (
+    <div>
+      <p
+        id={`mobile-${kebabCase(subnav.labelKey)}-heading`}
+        className="text-stone-100 font-bold"
+      >
+        <Link
+          href={subnav.href}
+          className="block p-4 hover:bg-stone-400/5"
+          onClick={() => onLinkClick()}
+        >
+          {subnav.name || t(subnav.labelKey as string)}
+        </Link>
+      </p>
+    </div>
+  );
+}
+
+function MobileSubnavWithItems({ subnav, onLinkClick }: MobileSubnavP) {
+  const { t } = useTranslation("common");
+
+  return (
+    <Disclosure as="div" className="bg-stone-400/10 flex flex-col">
+      {({ open }) => (
+        <>
+          <Disclosure.Button className="bg-stone-400/10 hover:bg-stone-400/20 text-left flex items-center gap-1 p-4 ">
+            {subnav.name || t(subnav.labelKey as string)}
+            {open ? (
+              <ChevronUpIcon className="h-4 w-4" />
+            ) : (
+              <ChevronDownIcon className="h-4 w-4" />
+            )}
+          </Disclosure.Button>
+          <Disclosure.Panel as="ul" className="pl-2">
+            {subnav.items?.map((item) => (
+              <li key={item?.name} className="flex flex-col">
+                <MobileSubnav
+                  onLinkClick={onLinkClick}
+                  subnav={item as SubNavWithName}
+                />
+              </li>
+            )) ?? null}
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
+  );
+}
+
+function MobileSubnav({ subnav, onLinkClick }: MobileSubnavP) {
+  const Component =
+    size(subnav.items) > 0 ? MobileSubnavWithItems : MobileSubnavPlain;
+
+  return <Component subnav={subnav} onLinkClick={onLinkClick} />;
+}
 
 export default function MegaNav({ navigation }: { navigation: Navigation }) {
   const [open, setOpen] = useState(false);
@@ -63,42 +131,13 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                             <ChevronDownIcon className="h-4 w-4" />
                           )}
                         </Disclosure.Button>
-                        <Disclosure.Panel className="p-4 pt-0 bg-stone-900 flex flex-col gap-4">
+                        <Disclosure.Panel className="p-0 bg-stone-900 flex flex-col">
                           {map(navItem.subnavs, (subnav) => (
-                            <div key={subnav.href}>
-                              <p
-                                id={`mobile-${kebabCase(
-                                  subnav.labelKey
-                                )}-heading`}
-                                className="text-stone-100 font-bold"
-                              >
-                                <Link
-                                  href={subnav.href}
-                                  className="block py-2"
-                                  onClick={() => setOpen(false)}
-                                >
-                                  {t(subnav.labelKey)}
-                                </Link>
-                              </p>
-                              <ul
-                                role="list"
-                                aria-labelledby={`mobile-${kebabCase(
-                                  subnav.labelKey
-                                )}-heading`}
-                              >
-                                {subnav.items?.map((item) => (
-                                  <li key={item.name} className="flex">
-                                    <Link
-                                      href={item.href}
-                                      className="text-stone-200 py-4 block"
-                                      onClick={() => setOpen(false)}
-                                    >
-                                      {item.name}
-                                    </Link>
-                                  </li>
-                                )) ?? null}
-                              </ul>
-                            </div>
+                            <MobileSubnav
+                              onLinkClick={() => setOpen(false)}
+                              key={subnav.href}
+                              subnav={subnav}
+                            />
                           ))}
                         </Disclosure.Panel>
                       </>

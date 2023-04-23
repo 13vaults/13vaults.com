@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { faker } from "@faker-js/faker";
 
 const meta: Meta<typeof BlogPostListItem> = {
-  title: "Blog/Blog Post List Item",
+  title: "Shared/Blog Post List Item",
   component: BlogPostListItem,
   args: {
     label: "Test label!",
