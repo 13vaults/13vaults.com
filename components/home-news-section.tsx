@@ -37,17 +37,20 @@ export default function HomeNewsSection({
           />
         </li>
         {size(extraPosts) > 0 ? (
-          <li className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-fr">
-            {map(extraPosts, (post) => (
-              <HomeNewsSectionItem
-                key={post.slug}
-                title={post.title}
-                slug={post.slug}
-                published={post.published}
-                date={post.date}
-                excerpt={post.excerpt}
-              />
-            ))}
+          <li>
+            <ol className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-fr">
+              {map(extraPosts, (post) => (
+                <li className="flex">
+                  <HomeNewsSectionItem
+                    title={post.title}
+                    slug={post.slug}
+                    published={post.published}
+                    date={post.date}
+                    excerpt={post.excerpt}
+                  />
+                </li>
+              ))}
+            </ol>
           </li>
         ) : null}
       </ol>
