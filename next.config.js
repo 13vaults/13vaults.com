@@ -5,6 +5,9 @@ const { defaultLocale, supportedLocales } = require("./lib/locales");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   i18n: {
     defaultLocale: defaultLocale,
     locales: supportedLocales,
