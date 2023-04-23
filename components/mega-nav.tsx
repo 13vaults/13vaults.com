@@ -119,7 +119,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                   <Disclosure
                     as="div"
                     key={navItem.labelKey}
-                    className="text-white flex flex-col border-t border-stone-800 font-display font-bold"
+                    className="text-white flex flex-col border-t border-stone-800 font-serif font-bold"
                   >
                     {({ open }) => (
                       <>
@@ -146,7 +146,10 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                 ))}
                 <div className="flex flex-col border-t border-stone-800 py-2">
                   {navigation.pages.map((page) => (
-                    <div key={page.labelKey} className="flow-root font-display">
+                    <div
+                      key={page.labelKey}
+                      className="flow-root font-bold font-serif"
+                    >
                       {page.href ? (
                         <Link
                           className="flex p-4 items-center text-stone-200 hover:bg-stone-800 transition-colors"
@@ -166,7 +169,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                 <div className="flex-1 flex-col">
                   <a
                     href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
-                    className="flex items-center bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white p-4 focus:bg-amber-400 hover:bg-amber-400 transition-colors font-display"
+                    className="flex items-center bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white p-4 focus:bg-amber-400 hover:bg-amber-400 transition-colors font-bold font-serif"
                   >
                     {t("nav.buy-13th-age-label")}
                   </a>
@@ -245,7 +248,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                     open
                                       ? "border-teal-600 text-teal-600"
                                       : "border-transparent text-stone-200 hover:text-stone-300",
-                                    "font-display-serif font-bold relative items-center gap-1 -mb-px flex border-b-2 pt-px transition-colors duration-200 ease-out"
+                                    "font-serif font-bold relative items-center gap-1 -mb-px flex border-b-2 pt-px transition-colors duration-200 ease-out"
                                   )}
                                 >
                                   {t(mainNav.labelKey)}
@@ -291,7 +294,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                                                   id={`desktop-featured-heading-${kebabCase(
                                                     mainNavItem.labelKey
                                                   )}`}
-                                                  className="font-bold font-display-serif text-stone-200 border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
+                                                  className="font-bold font-serif text-stone-200 border-b-2 hover:text-teal-400 focus:text-teal-400 border-transparent focus:hover:border-teal-400 hover:border-teal-400"
                                                   href={mainNavItem.href}
                                                 >
                                                   {t(mainNavItem.labelKey)}
@@ -346,14 +349,14 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                           <Link
                             key={page.href}
                             href={page.href}
-                            className="font-bold font-display-serif items-center -mb-px flex pt-px transition-colors duration-200 ease-out text-stone-200 border-b-2 hover:text-teal-600 focus:text-teal-600 border-transparent focus:hover:border-teal-600 hover:border-teal-600"
+                            className="font-bold font-serif items-center -mb-px flex pt-px transition-colors duration-200 ease-out text-stone-200 border-b-2 hover:text-teal-600 focus:text-teal-600 border-transparent focus:hover:border-teal-600 hover:border-teal-600"
                           >
                             {t(page.labelKey)}
                           </Link>
                         ) : (
                           <span
                             key={page.labelKey}
-                            className="font-bold font-display-serif flex items-center text-stone-600 cursor-not-allowed"
+                            className="font-bold font-serif flex items-center text-stone-600 cursor-not-allowed"
                           >
                             {t(page.labelKey)}
                           </span>
@@ -363,7 +366,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                     <div className="flex gap-2">
                       <a
                         href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
-                        className=" bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-bold rounded px-2 py-1 focus:bg-amber-400 hover:bg-amber-400 transition-colors"
+                        className=" bg-gradient-to-bl from-transparent to-amber-600 bg-amber-500 shadow-md shadow-amber-800 text-white font-serif font-bold rounded px-2 py-1 focus:bg-amber-400 hover:bg-amber-400 transition-colors"
                       >
                         {t("nav.buy-13th-age-label")}
                       </a>

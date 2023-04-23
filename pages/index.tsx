@@ -126,12 +126,12 @@ export default function VaultsAppHome({
                 />
               </svg>
             </h1>
-            <div className="prose prose-invert prose-p:my-1 prose-p:text-justify prose-p:leading-tight prose-p:text-stone-50">
+            <div className="prose prose-invert prose-p:my-1 prose-p:text-justify prose-p:leading-tight prose-p:text-stone-50 font-serif font-bold">
               <p>{t("intro")}</p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-2 mx-auto">
+            <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto sm:mx-auto">
               <Link
-                className="flex gap-3 focus:bg-teal-500 hover:bg-teal-500 bg-teal-600 border border-teal-400/50 hover:border-teal-400 rounded ps-8 pe-12 py-3 shadow transition-colors font-display font-semibold items-center"
+                className="flex gap-3 justify-center focus:bg-teal-500 hover:bg-teal-500 bg-teal-600 border border-teal-400/50 hover:border-teal-400 rounded ps-8 pe-12 py-3 shadow transition-colors font-display font-semibold items-center"
                 href="/compendium"
               >
                 <svg
@@ -148,7 +148,7 @@ export default function VaultsAppHome({
                 <span>{t("cta-label")}</span>
               </Link>
               <a
-                className="flex gap-3 focus:bg-indigo-600/50 hover:bg-indigo-600/50 bg-indigo-600/20 border border-indigo-500/50 hover:border-indigo-500 rounded ps-8 pe-12 py-3 shadow transition-colors font-display font-semibold items-center"
+                className="flex gap-3 justify-center focus:bg-indigo-600/50 hover:bg-indigo-600/50 bg-indigo-600/20 border border-indigo-500/50 hover:border-indigo-500 rounded ps-8 pe-12 py-3 shadow transition-colors font-display font-semibold items-center"
                 href="https://discord.gg/m9DbPC6RsC"
               >
                 <svg
