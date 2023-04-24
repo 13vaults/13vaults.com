@@ -349,6 +349,10 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                       >
                         <div
                           role="presentation"
+                          className="absolute -inset-[3px] border border-amber-400"
+                        />
+                        <div
+                          role="presentation"
                           className="absolute rotate-45 top-0 left-1/2 -translate-x-1/2 h-full aspect-square bg-amber-500 border border-amber-400 group-focus:bg-amber-400 group-hover:bg-amber-400 transition-colors"
                         />
                         <span className="text-shadow relative inline-block bg-gradient-to-bl bg-amber-500 text-white font-serif font-bold px-2 py-1 group-focus:bg-amber-400 group-hover:bg-amber-400 transition-colors">
