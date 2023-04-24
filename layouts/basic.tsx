@@ -1,4 +1,5 @@
 import MegaNav from "@/components/mega-nav";
+import VaultsLogo from "@/components/vaults-logo";
 import { Navigation } from "@/lib/navigation";
 import clsx from "clsx";
 import { Trans, useTranslation } from "next-i18next";
@@ -26,17 +27,7 @@ export default function BasicLayout({
       <footer className="font-bold">
         <div className="bg-stone-950 text-white">
           <div className="p-4 flex flex-col gap-2 items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              className="h-6 w-6"
-              viewBox="0 0 34 34"
-            >
-              <path
-                fillRule="evenodd"
-                d="M12.3 34 4.5 11.4 5 8.1 3.2 4.9 0 0l11.4 4.9 6 21.6.4 2.6.5-2.6 6-21.6L21 1.6h9.8L34 5l-3 6.5L23.5 34H12.3Z"
-              />
-            </svg>
+            <VaultsLogo className="h-6 w-6" variant="tiny" />
             <div className="prose prose-sm prose-invert prose-p:my-0 prose-p:leading-tight text-xs text-align-last-center text-white/50">
               <p>{t("footer.not-affiliated")}</p>
               <p>
