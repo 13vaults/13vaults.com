@@ -10,6 +10,7 @@ import timezone from "dayjs/plugin/timezone";
 import relativeTime from "dayjs/plugin/relativeTime";
 // Sync this with supported locales
 import "dayjs/locale/de";
+import { defaultLocale } from "../lib/locales";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -17,8 +18,17 @@ dayjs.extend(relativeTime);
 dayjs.tz.setDefault("America/New_York");
 
 const preview: Preview = {
+  globals: {
+    locale: defaultLocale,
+    locales: {
+      en: "English",
+      de: "German",
+    },
+  },
   decorators: [
     (Story) => {
+      dayjs.locale(i18n.language);
+
       return (
         <I18nextProvider i18n={i18n}>
           <FontStyles />
@@ -37,6 +47,7 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
+    i18n,
   },
 };
 
