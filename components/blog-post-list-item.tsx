@@ -65,44 +65,42 @@ function HeroVariant({
   readMore,
 }: BlogPostListItemP) {
   return (
-    <div className="rounded-sm" role="listitem">
-      <Link
-        className={clsx(
-          "transition-all bg-stone-800 text-white block relative group",
-          {
-            "bg-white text-black outline outline-2 outline-red-500": !published,
-          }
-        )}
-        href={to}
+    <Link
+      className={clsx(
+        "transition-all bg-stone-800 text-white block relative group",
+        {
+          "bg-white text-black outline outline-2 outline-red-500": !published,
+        }
+      )}
+      href={to}
+    >
+      <Image
+        className="object-top object-cover h-full w-full relative"
+        src={socialBanner}
+        placeholder="blur"
+        fill
+        role="presentation"
+        unoptimized={process.env.NODE_ENV === "development"}
+        alt=""
+      />
+      <section
+        aria-label={label}
+        className="flex flex-col gap-2 p-4 min-h-[24rem] relative justify-end bg-gradient-to-t bg-black/10 from-black/70 to-black/0 group-focus:bg-black/50 group-hover:bg-black/50 transition-all ring-inset ring ring-teal-500/75 group-focus:ring-teal-500 group-hover:ring-teal-500"
       >
-        <Image
-          className="object-top object-cover h-full w-full relative"
-          src={socialBanner}
-          placeholder="blur"
-          fill
-          role="presentation"
-          unoptimized={process.env.NODE_ENV === "development"}
-          alt=""
-        />
-        <section
-          aria-label={label}
-          className="flex flex-col gap-2 p-4 min-h-[24rem] relative justify-end bg-gradient-to-t bg-black/10 from-black/70 to-black/0 group-focus:bg-black/50 group-hover:bg-black/50 transition-all ring-inset ring ring-teal-500/75 group-focus:ring-teal-500 group-hover:ring-teal-500"
-        >
-          <header className="font-display-serif">
-            <h1 className="text-xl md:text-4xl font-black transition-colors group-focus:text-teal-400 group-hover:text-teal-400">
-              {title}
-            </h1>
-            <div className="text-sm font-medium">
-              <time className="font-display">{date}</time>
-            </div>
-          </header>
-          <div>
-            <p className="my-2">{excerpt}</p>
-            <p className="my-2 opacity-90 italic">{readMore}</p>
+        <header className="font-display-serif">
+          <h1 className="text-xl md:text-4xl font-black transition-colors group-focus:text-teal-400 group-hover:text-teal-400">
+            {title}
+          </h1>
+          <div className="text-sm font-medium">
+            <time className="font-display">{date}</time>
           </div>
-        </section>
-      </Link>
-    </div>
+        </header>
+        <div>
+          <p className="my-2">{excerpt}</p>
+          <p className="my-2 opacity-90 italic">{readMore}</p>
+        </div>
+      </section>
+    </Link>
   );
 }
 

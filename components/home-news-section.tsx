@@ -27,32 +27,35 @@ export default function HomeNewsSection({
       <Container>
         <nav
           aria-label={t("latest-posts-blog") as string}
-          className="flex flex-col gap-8"
+          className="grid grid-cols-1 auto-rows-min gap-8 max-h-min"
         >
-          <ol role="list" className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <li className="md:col-span-2">
-              <HomeNewsSectionItem.Hero
-                title={heroPost.title}
-                slug={heroPost.slug}
-                published={heroPost.published}
-                date={heroPost.date}
-                excerpt={heroPost.excerpt}
-              />
-            </li>
-            {size(extraPosts) > 0
-              ? map(extraPosts, (post) => (
-                  <li className="grid auto-cols-fr auto-rows-fr">
-                    <HomeNewsSectionItem
-                      title={post.title}
-                      slug={post.slug}
-                      published={post.published}
-                      date={post.date}
-                      excerpt={post.excerpt}
-                    />
-                  </li>
-                ))
-              : null}
-          </ol>
+          <div className="flex flex-col gap-4">
+            <HomeNewsSectionItem.Hero
+              title={heroPost.title}
+              slug={heroPost.slug}
+              published={heroPost.published}
+              date={heroPost.date}
+              excerpt={heroPost.excerpt}
+            />
+            <ol
+              role="list"
+              className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-fr"
+            >
+              {size(extraPosts) > 0
+                ? map(extraPosts, (post) => (
+                    <li className="grid" key={post.slug}>
+                      <HomeNewsSectionItem
+                        title={post.title}
+                        slug={post.slug}
+                        published={post.published}
+                        date={post.date}
+                        excerpt={post.excerpt}
+                      />
+                    </li>
+                  ))
+                : null}
+            </ol>
+          </div>
           <div className="flex justify-center">
             <Link
               className="py-1 px-3 bg-teal-600 hover:bg-teal-500 transition-colors text-white font-display font-medium uppercase"

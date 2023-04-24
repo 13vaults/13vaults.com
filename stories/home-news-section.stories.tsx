@@ -16,7 +16,7 @@ const meta: Meta<typeof HomeNewsSection> = {
     extraPosts: [
       {
         title: faker.lorem.sentence(),
-        excerpt: faker.lorem.paragraph(),
+        excerpt: faker.lorem.sentence(),
         date: faker.date.recent(90).toISOString(),
         published: true,
         slug: "test-title-2",
@@ -30,14 +30,14 @@ const meta: Meta<typeof HomeNewsSection> = {
       },
       {
         title: faker.lorem.sentence(),
-        excerpt: faker.lorem.paragraph(),
+        excerpt: faker.lorem.sentence(),
         date: faker.date.recent(90).toISOString(),
         published: true,
         slug: "test-title-4",
       },
       {
         title: faker.lorem.sentence(),
-        excerpt: faker.lorem.paragraph(),
+        excerpt: faker.lorem.sentence(),
         date: faker.date.recent(90).toISOString(),
         published: true,
         slug: "test-title-5",
