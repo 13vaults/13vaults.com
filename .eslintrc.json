@@ -9,6 +9,14 @@
     "import/no-anonymous-default-export": 0,
     "unicorn/no-null": 0,
     "unicorn/no-nested-ternary": 0,
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "allowList": {
+          "props": true
+        }
+      }
+    ],
     "no-unused-vars": [
       "error",
       {

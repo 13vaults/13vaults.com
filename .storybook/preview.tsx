@@ -22,7 +22,9 @@ const preview: Preview = {
       return (
         <I18nextProvider i18n={i18n}>
           <FontStyles />
-          <Story />
+          <div className="dark:text-white">
+            <Story />
+          </div>
         </I18nextProvider>
       );
     },
