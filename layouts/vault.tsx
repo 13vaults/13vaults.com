@@ -3,7 +3,7 @@ import BasicLayout from "./basic";
 import { Navigation } from "@/lib/navigation";
 import { motion } from "framer-motion";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
-import { useCallback } from "react";
+import { MouseEvent, useCallback } from "react";
 import Prose from "@/components/prose";
 
 interface VaultLayoutP {
@@ -17,18 +17,21 @@ export default function VaultLayout({
   navigation,
   sideNavigation,
 }: VaultLayoutP) {
-  const handleScrollToTop = useCallback((event: any) => {
-    event.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-    history.replaceState(
-      "",
-      document.title,
-      window.location.pathname + window.location.search
-    );
-  }, []);
+  const handleScrollToTop = useCallback(
+    (event: MouseEvent<HTMLButtonElement>) => {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      history.replaceState(
+        "",
+        document.title,
+        window.location.pathname + window.location.search
+      );
+    },
+    []
+  );
 
   return (
     <BasicLayout navigation={navigation}>

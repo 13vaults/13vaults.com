@@ -61,7 +61,7 @@ const ikariusAdf = localFont({
 
 const sourceSans = Source_Sans_Pro({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "600", "700"],
   style: ["normal", "italic"],
   preload: false,
   display: "swap",
