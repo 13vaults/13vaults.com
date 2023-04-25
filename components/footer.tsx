@@ -3,6 +3,7 @@ import VaultsLogo from "./vaults-logo";
 import { Trans, useTranslation } from "next-i18next";
 import React, { useMemo } from "react";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
+import { map } from "lodash";
 
 export default function Footer() {
   const { t } = useTranslation("common");
@@ -113,10 +114,10 @@ export default function Footer() {
               />
             </p>
             <div className="flex space-x-6">
-              {navigation.social.map((item) => (
+              {map(navigation.social, (item) => (
                 <Link
+                  key={item.href}
                   {...(item.anchorProps || {})}
-                  key={item.name}
                   href={item.href}
                   className="text-stone-400 hover:text-teal-400"
                 >
@@ -133,7 +134,7 @@ export default function Footer() {
                   {t("nav.compendium-label")}
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.compendium.map((item) => (
+                  {map(navigation.compendium, (item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
@@ -150,7 +151,7 @@ export default function Footer() {
                   {t("nav.13vaults")}
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.vaults.map((item) => (
+                  {map(navigation.vaults, (item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
@@ -169,7 +170,7 @@ export default function Footer() {
                   {t("nav.resources")}
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.resources.map((item) => (
+                  {map(navigation.resources, (item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
@@ -186,7 +187,7 @@ export default function Footer() {
                   {t("nav.legal")}
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
-                  {navigation.legal.map((item) => (
+                  {map(navigation.legal, (item) => (
                     <li key={item.name}>
                       <Link
                         href={item.href}
