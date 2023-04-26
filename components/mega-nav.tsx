@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useEffect, useState } from "react";
+import { Fragment, useCallback, useState } from "react";
 import { Popover, Transition, Disclosure } from "@headlessui/react";
 import { DialogOverlay, DialogContent } from "@reach/dialog";
 import {
@@ -15,7 +15,7 @@ import { Navigation, SubNav, SubNavWithName } from "@/lib/navigation";
 import { useTranslation } from "next-i18next";
 import { PartialBy, PickPartial } from "@/utils";
 import VaultsLogo from "./vaults-logo";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, cubicBezier, motion } from "framer-motion";
 
 interface MobileSubnavP {
   subnav: PartialBy<
@@ -96,7 +96,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
     setOpen(false);
   }, []);
 
-  useEffect(() => {}, [open]);
+  const easeOutQuart = cubicBezier(0.25, 1, 0.5, 1);
 
   const AnimatedDialogContent = motion(DialogContent);
 
@@ -110,14 +110,14 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
               className="fixed top-14 left-0 right-0 bottom-0"
             >
               <motion.div
-                className="absolute inset-0 bg-black/50"
+                className="absolute inset-0 bg-black/60"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ ease: "linear", duration: 0.3 }}
+                transition={{ ease: easeOutQuart, duration: 0.3 }}
               ></motion.div>
               <AnimatedDialogContent
-                transition={{ ease: "easeInOut", duration: 0.3 }}
+                transition={{ ease: easeOutQuart, duration: 0.3 }}
                 initial={{ x: "calc(100% * -1)" }}
                 animate={{ x: 0 }}
                 exit={{ x: "calc(100% * -1)" }}
