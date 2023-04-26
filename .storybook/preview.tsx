@@ -30,12 +30,14 @@ const preview: Preview = {
       dayjs.locale(i18n.language);
 
       return (
-        <I18nextProvider i18n={i18n}>
-          <FontStyles />
-          <div className="dark:text-white">
-            <Story />
-          </div>
-        </I18nextProvider>
+        <React.StrictMode>
+          <I18nextProvider i18n={i18n}>
+            <FontStyles />
+            <div className="dark:text-white">
+              <Story />
+            </div>
+          </I18nextProvider>
+        </React.StrictMode>
       );
     },
   ],

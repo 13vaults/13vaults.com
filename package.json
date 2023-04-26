@@ -13,6 +13,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.9",
     "@heroicons/react": "^2.0.14",
+    "@reach/dialog": "^0.18.0",
     "clsx": "^1.2.1",
     "contentlayer": "^0.3.2",
     "dayjs": "^1.11.7",
@@ -55,7 +56,7 @@
     "autoprefixer": "^10.4.13",
     "eslint-plugin-storybook": "^0.6.11",
     "eslint-plugin-unicorn": "^45.0.2",
-    "framer-motion": "^9.0.1",
+    "framer-motion": "^10.12.4",
     "github-slugger": "^2.0.0",
     "path-browserify": "^1.0.1",
     "postcss": "^8.4.21",

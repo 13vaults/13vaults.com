@@ -1,5 +1,6 @@
-import { Fragment, useCallback, useState } from "react";
-import { Dialog, Popover, Transition, Disclosure } from "@headlessui/react";
+import { Fragment, useCallback, useEffect, useState } from "react";
+import { Popover, Transition, Disclosure } from "@headlessui/react";
+import { DialogOverlay, DialogContent } from "@reach/dialog";
 import {
   Bars3Icon,
   ChevronDownIcon,
@@ -14,6 +15,7 @@ import { Navigation, SubNav, SubNavWithName } from "@/lib/navigation";
 import { useTranslation } from "next-i18next";
 import { PartialBy, PickPartial } from "@/utils";
 import VaultsLogo from "./vaults-logo";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface MobileSubnavP {
   subnav: PartialBy<
@@ -85,37 +87,43 @@ function MobileSubnav({ subnav, onLinkClick }: MobileSubnavP) {
 export default function MegaNav({ navigation }: { navigation: Navigation }) {
   const [open, setOpen] = useState(false);
   const { t } = useTranslation("common");
+
   const handleToggleOpen = useCallback(() => {
     setOpen(!open);
   }, [open]);
 
+  const closeDrawer = useCallback(() => {
+    setOpen(false);
+  }, []);
+
+  useEffect(() => {}, [open]);
+
+  const AnimatedDialogOverlay = motion(DialogOverlay);
+  const AnimatedDialogContent = motion(DialogContent);
+
   return (
     <div className="bg-stone-950">
-      <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="relative lg:hidden" onClose={setOpen}>
-          <Transition.Child
-            as={Fragment}
-            enter="transition-opacity ease-linear duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition-opacity ease-linear duration-300"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <div className="fixed top-14 left-0 right-0 bottom-0 bg-black bg-opacity-50" />
-          </Transition.Child>
-
-          <div className="fixed top-14 left-0 right-0 bottom-0 flex">
-            <Transition.Child
-              as={Fragment}
-              enter="transition ease-in-out duration-300 transform"
-              enterFrom="-translate-x-full"
-              enterTo="translate-x-0"
-              leave="transition ease-in-out duration-300 transform"
-              leaveFrom="translate-x-0"
-              leaveTo="-translate-x-full"
+      <div className="flex">
+        <AnimatePresence>
+          {open ? (
+            <AnimatedDialogOverlay
+              onDismiss={closeDrawer}
+              className="fixed top-14 left-0 right-0 bottom-0"
             >
-              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-stone-950 border-r border-stone-800 pb-12 shadow-xl">
+              <motion.div
+                className="absolute inset-0 bg-black/50"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ ease: "linear", duration: 0.3 }}
+              ></motion.div>
+              <AnimatedDialogContent
+                transition={{ ease: "easeInOut", duration: 0.3 }}
+                initial={{ x: "calc(100% * -1)" }}
+                animate={{ x: 0 }}
+                exit={{ x: "calc(100% * -1)" }}
+                className="fixed top-14 bottom-0 right-0 left-0 flex w-full max-w-xs flex-col overflow-y-auto bg-stone-950 border-r border-stone-800 pb-12 shadow-xl"
+              >
                 {map(navigation.main, (navItem) => (
                   <Disclosure
                     as="div"
@@ -175,11 +183,11 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                     {t("nav.buy-13th-age-label")}
                   </a>
                 </div>
-              </Dialog.Panel>
-            </Transition.Child>
-          </div>
-        </Dialog>
-      </Transition.Root>
+              </AnimatedDialogContent>
+            </AnimatedDialogOverlay>
+          ) : null}
+        </AnimatePresence>
+      </div>
 
       <div className="relative">
         <nav aria-label="Top">
