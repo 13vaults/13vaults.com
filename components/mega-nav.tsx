@@ -98,7 +98,6 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
 
   useEffect(() => {}, [open]);
 
-  const AnimatedDialogOverlay = motion(DialogOverlay);
   const AnimatedDialogContent = motion(DialogContent);
 
   return (
@@ -106,7 +105,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
       <div className="flex">
         <AnimatePresence>
           {open ? (
-            <AnimatedDialogOverlay
+            <DialogOverlay
               onDismiss={closeDrawer}
               className="fixed top-14 left-0 right-0 bottom-0"
             >
@@ -184,7 +183,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                   </a>
                 </div>
               </AnimatedDialogContent>
-            </AnimatedDialogOverlay>
+            </DialogOverlay>
           ) : null}
         </AnimatePresence>
       </div>
