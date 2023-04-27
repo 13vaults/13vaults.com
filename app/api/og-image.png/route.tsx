@@ -5,7 +5,7 @@ export const config = {
   runtime: "edge",
 };
 
-const vaultsUrl = process.env.VAULTS_URL as string;
+const vaultsUrl = process.env.VAULTS_URL || "https://www.13vaults.com";
 
 export async function GET(request: NextRequest) {
   const title = request.nextUrl.searchParams.get("title");
