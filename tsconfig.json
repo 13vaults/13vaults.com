@@ -32,7 +32,8 @@
     ".next/types/**/*.ts",
     ".contentlayer/generated",
     "components/section-provider.jsx",
-    "lib/locales.js"
+    "lib/locales.js",
+    "env.d.ts"
   ],
   "exclude": ["node_modules"]
 }

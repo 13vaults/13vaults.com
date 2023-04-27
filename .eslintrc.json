@@ -13,8 +13,10 @@
       "error",
       {
         "allowList": {
-          "props": true
-        }
+          "props": true,
+          "ProcessEnv": true
+        },
+        "checkFilenames": false
       }
     ],
     "no-unused-vars": [
