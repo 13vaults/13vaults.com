@@ -61,7 +61,7 @@ function VisibleSectionHighlight() {
     <m.div
       layout
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 0.2 } }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="hidden xl:block absolute inset-x-1 top-0 bg-black/5 will-change-transform dark:bg-white/5 pointer-events-none"
       style={{ borderRadius: 3, height, top }}
