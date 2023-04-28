@@ -1,7 +1,7 @@
 import Container from "@/components/container";
 import BasicLayout from "./basic";
 import { Navigation } from "@/lib/navigation";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
 import { MouseEvent, useCallback } from "react";
 import Prose from "@/components/prose";
@@ -55,7 +55,7 @@ export default function VaultLayout({
         </Container>
       </div>
 
-      <motion.button
+      <m.button
         onClick={handleScrollToTop}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -63,7 +63,7 @@ export default function VaultLayout({
         className="fixed bottom-4 right-4 flex gap-1 items-center p-2 rounded-full bg-white shadow"
       >
         <ChevronUpIcon className="h-4 w-4" />
-      </motion.button>
+      </m.button>
     </BasicLayout>
   );
 }

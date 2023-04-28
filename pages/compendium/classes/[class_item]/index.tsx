@@ -4,7 +4,7 @@ import {
   allAncestries,
   allRulesDocuments,
 } from "contentlayer/generated";
-import { find, map, get, flatMap } from "lodash";
+import { find, map, get, flatMap } from "lodash-es";
 import { GetStaticPropsResult, NextPageContext } from "next";
 import ContentLayerPage from "@/components/content-layer-page";
 import { buildNav, Navigation } from "@/lib/navigation";

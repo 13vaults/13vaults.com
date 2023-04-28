@@ -5,7 +5,7 @@ import {
   allClassItems,
 } from "@/.contentlayer/generated";
 import CompendiumCategoryIndexLayout from "@/layouts/compendium-category-index";
-import { chunk, get, map, pick } from "lodash";
+import { chunk, get, map, pick } from "lodash-es";
 import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import Head from "next/head";
 import Link from "next/link";

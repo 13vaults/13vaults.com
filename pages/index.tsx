@@ -1,5 +1,5 @@
 import BasicLayout from "@/layouts/basic";
-import { filter, get, map, orderBy, pick, slice } from "lodash";
+import { filter, get, map, orderBy, pick, slice } from "lodash-es";
 import { buildNav, Navigation } from "@/lib/navigation";
 import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import {

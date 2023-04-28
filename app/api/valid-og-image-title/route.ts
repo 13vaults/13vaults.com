@@ -1,5 +1,5 @@
 import { allBlogPosts } from "@/.contentlayer/generated";
-import { includes, map } from "lodash";
+import { includes, map } from "lodash-es";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest) {

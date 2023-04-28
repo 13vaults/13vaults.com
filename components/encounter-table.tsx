@@ -1,4 +1,4 @@
-import { toInteger } from "lodash";
+import { toInteger } from "lodash-es";
 import { Trans, useTranslation } from "next-i18next";
 import Link from "next/link";
 

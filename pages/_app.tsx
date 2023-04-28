@@ -12,6 +12,12 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import { defaultLocale } from "@/lib/locales";
 // Sync this with supported locales
 import "dayjs/locale/de";
+import { LazyMotion } from "framer-motion";
+
+async function loadFeatures() {
+  const result = await import("../lib/framer-motion-features");
+  return result.default;
+}
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -42,7 +48,9 @@ function VaultsApp({ Component, pageProps }: AppProps) {
         />
       ) : undefined}
       <FontStyles />
-      <Component {...pageProps} />
+      <LazyMotion features={loadFeatures} strict>
+        <Component {...pageProps} />
+      </LazyMotion>
     </>
   );
 }

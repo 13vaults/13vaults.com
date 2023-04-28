@@ -5,7 +5,7 @@ import {
   allRulesDocuments,
   allClassItems,
 } from "@/.contentlayer/generated";
-import { get } from "lodash";
+import { get } from "lodash-es";
 import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import { getI18nProperties } from "@/lib/get-static";
 import BasicLayout from "@/layouts/basic";

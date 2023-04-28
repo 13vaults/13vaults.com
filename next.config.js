@@ -1,7 +1,13 @@
 /* eslint-disable unicorn/prefer-module */
 
+const withPlugins = require("next-compose-plugins");
 const { withContentlayer } = require("next-contentlayer");
 const { defaultLocale, supportedLocales } = require("./lib/locales");
+const bundleAnalyzer = require("@next/bundle-analyzer");
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -40,4 +46,7 @@ const nextConfig = {
   },
 };
 
-module.exports = withContentlayer(nextConfig);
+module.exports = withPlugins(
+  [withBundleAnalyzer, withContentlayer],
+  nextConfig
+);

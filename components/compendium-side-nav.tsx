@@ -1,8 +1,8 @@
 import { remToPx } from "@/lib/rem-to-px";
 import useInitialValue from "@/lib/use-initial-value";
 import { ArrowUturnLeftIcon } from "@heroicons/react/24/solid";
-import { AnimatePresence, useIsPresent, motion } from "framer-motion";
-import { size } from "lodash";
+import { AnimatePresence, useIsPresent, m } from "framer-motion";
+import { size } from "lodash-es";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { useSectionStore } from "./section-provider";
@@ -58,7 +58,7 @@ function VisibleSectionHighlight() {
   const top = 16 + firstVisibleSectionIndex * itemHeight;
 
   return (
-    <motion.div
+    <m.div
       layout
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2 } }}

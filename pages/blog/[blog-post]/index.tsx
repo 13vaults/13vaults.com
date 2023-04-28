@@ -7,7 +7,7 @@ import {
   allBlogPosts,
   BlogPost,
 } from "@/.contentlayer/generated";
-import { map, get, find, flatMap } from "lodash";
+import { map, get, find, flatMap } from "lodash-es";
 import { GetStaticPropsContext, GetStaticPropsResult } from "next";
 import { getI18nProperties } from "@/lib/get-static";
 import { useTranslation } from "next-i18next";

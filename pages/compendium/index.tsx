@@ -8,7 +8,7 @@ import {
   allClassItems,
   allRulesDocuments,
 } from "@/.contentlayer/generated";
-import { get, map } from "lodash";
+import { get, map } from "lodash-es";
 import { defaultLocale } from "@/lib/locales";
 import { getI18nProperties } from "@/lib/get-static";
 import { useTranslation } from "next-i18next";

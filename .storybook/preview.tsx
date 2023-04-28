@@ -11,6 +11,12 @@ import relativeTime from "dayjs/plugin/relativeTime";
 // Sync this with supported locales
 import "dayjs/locale/de";
 import { defaultLocale } from "../lib/locales";
+import { LazyMotion } from "framer-motion";
+
+async function loadFeatures() {
+  const result = await import("../lib/framer-motion-features");
+  return result.default;
+}
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -31,12 +37,14 @@ const preview: Preview = {
 
       return (
         <React.StrictMode>
-          <I18nextProvider i18n={i18n}>
-            <FontStyles />
-            <div className="dark:text-white">
-              <Story />
-            </div>
-          </I18nextProvider>
+          <LazyMotion features={loadFeatures} strict>
+            <I18nextProvider i18n={i18n}>
+              <FontStyles />
+              <div className="dark:text-white">
+                <Story />
+              </div>
+            </I18nextProvider>
+          </LazyMotion>
         </React.StrictMode>
       );
     },

@@ -9,3 +9,6 @@
 
 @storybook:
   pnpm storybook
+
+@analyze-build:
+  ANALYZE=true pnpm build

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { map } from "lodash";
+import { map } from "lodash-es";
 
 interface CompendiumFeat {
   tier: "adventurer" | "champion" | "epic";

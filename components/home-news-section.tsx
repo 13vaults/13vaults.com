@@ -1,7 +1,7 @@
 import { PickPartial } from "@/utils";
 import HomeNewsSectionItem from "./home-news-section-item";
 import { BlogPost } from "@/.contentlayer/generated";
-import { map, size } from "lodash";
+import { map, size } from "lodash-es";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import Container from "./container";

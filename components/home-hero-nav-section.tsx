@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { map } from "lodash";
+import { map } from "lodash-es";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import Container from "./container";

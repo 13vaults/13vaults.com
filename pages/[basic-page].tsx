@@ -1,5 +1,5 @@
 import BasicLayout from "@/layouts/basic";
-import { find, flatMap, get, map } from "lodash";
+import { find, flatMap, get, map } from "lodash-es";
 import { buildNav, Navigation } from "@/lib/navigation";
 import { GetStaticPropsResult, NextPageContext } from "next";
 import {

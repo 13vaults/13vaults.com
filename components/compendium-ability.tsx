@@ -1,6 +1,6 @@
 import { Ability } from "@/.contentlayer/generated";
 import clsx from "clsx";
-import { map, size } from "lodash";
+import { map, size } from "lodash-es";
 import Link from "next/link";
 import { ReactNode } from "react";
 import ReactMarkdown from "react-markdown";

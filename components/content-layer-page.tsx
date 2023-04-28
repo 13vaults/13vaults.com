@@ -1,6 +1,6 @@
 import * as Vault from "@/components/vault-components";
 import VaultLayout from "@/layouts/vault";
-import { filter, get, includes, intersectionWith } from "lodash";
+import { filter, get, includes, intersectionWith } from "lodash-es";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Head from "next/head";
 import VaultHeader from "./compendium-header";

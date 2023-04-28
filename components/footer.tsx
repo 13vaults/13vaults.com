@@ -3,7 +3,7 @@ import VaultsLogo from "./vaults-logo";
 import { Trans, useTranslation } from "next-i18next";
 import React, { useMemo } from "react";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
-import { map } from "lodash";
+import { map } from "lodash-es";
 
 export default function Footer() {
   const { t } = useTranslation("common");

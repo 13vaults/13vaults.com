@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 import { defaultLocale } from "@/lib/locales";
 import { getI18nProperties } from "@/lib/get-static";
 import { useTranslation } from "next-i18next";
-import { get } from "lodash";
+import { get } from "lodash-es";
 
 interface NotFoundP {
   navigation: Navigation;

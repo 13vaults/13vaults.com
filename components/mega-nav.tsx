@@ -10,7 +10,7 @@ import {
 import clsx from "clsx";
 import Container from "./container";
 import Link from "next/link";
-import { kebabCase, map, size } from "lodash";
+import { kebabCase, map, size } from "lodash-es";
 import { Navigation, SubNav, SubNavWithName } from "@/lib/navigation";
 import { useTranslation } from "next-i18next";
 import { PartialBy, PickPartial } from "@/utils";
@@ -18,7 +18,7 @@ import VaultsLogo from "./vaults-logo";
 import {
   AnimatePresence,
   cubicBezier,
-  motion,
+  m,
   useReducedMotion,
 } from "framer-motion";
 
@@ -104,7 +104,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
 
   const easeOutQuart = cubicBezier(0.25, 1, 0.5, 1);
 
-  const AnimatedDialogContent = motion(DialogContent);
+  const AnimatedDialogContent = m(DialogContent);
 
   return (
     <div className="bg-stone-950">
@@ -116,7 +116,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
               onDismiss={closeDrawer}
               className="fixed top-14 left-0 right-0 bottom-0"
             >
-              <motion.div
+              <m.div
                 className="absolute inset-0 bg-black/60"
                 initial={{ opacity: shouldReduceMotion ? 1 : 0 }}
                 animate={{ opacity: 1 }}
@@ -125,7 +125,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                   ease: easeOutQuart,
                   duration: shouldReduceMotion ? 0 : 0.3,
                 }}
-              ></motion.div>
+              ></m.div>
               <AnimatedDialogContent
                 transition={{
                   ease: easeOutQuart,

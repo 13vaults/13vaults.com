@@ -1,5 +1,5 @@
 import { RulesDocument, ClassItem, Ancestry } from "@/.contentlayer/generated";
-import { map } from "lodash";
+import { map } from "lodash-es";
 import { localeContentLayerList } from "./locale-utils";
 import { defaultLocale } from "./locales";
 

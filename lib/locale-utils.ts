@@ -1,4 +1,4 @@
-import { entries, find, map, reduce } from "lodash";
+import { entries, find, map, reduce } from "lodash-es";
 
 // A very ugly brute-force, but meh
 export function localeContentLayerList<

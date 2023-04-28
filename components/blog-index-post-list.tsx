@@ -1,5 +1,5 @@
 import { BlogPostItem } from "@/pages/blog";
-import { map } from "lodash";
+import { map } from "lodash-es";
 import BlogPostListItem from "./blog-post-list-item";
 import dayjs from "dayjs";
 import { useTranslation } from "next-i18next";
