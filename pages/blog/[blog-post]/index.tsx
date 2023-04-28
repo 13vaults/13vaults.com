@@ -84,7 +84,7 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
               <h1 className="font-display-serif font-bold text-3xl md:text-4xl text-stone-900 dark:text-stone-200 my-2 md:my-4">
                 {blogPost.title}
               </h1>
-              <time className="font-display">
+              <time className="font-serif">
                 {t("published-on-label", {
                   date: dayjs.tz(blogPost.date).format("YYYY-MM-DD"),
                 })}

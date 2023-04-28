@@ -9,7 +9,7 @@ const meta: Meta<typeof BlogIndexPostList> = {
   args: {
     blogPosts: [
       {
-        title: faker.lorem.sentence(),
+        title: faker.lorem.sentence() + " J K R Q LA 0",
         excerpt: faker.lorem.paragraph(),
         date: faker.date.recent(90).toISOString(),
         published: true,

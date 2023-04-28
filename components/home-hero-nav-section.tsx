@@ -52,7 +52,7 @@ export default function HomeHeroNavSection() {
                     <h2 className="text-3xl font-display-serif font-semibold">
                       {t(item.title_label)}
                     </h2>
-                    <p className="leading-tight font-display text-align-last-center font-medium text-white/75">
+                    <p className="leading-tight font-serif text-align-last-center font-medium text-white/75">
                       {t(item.body_label)}
                     </p>
                   </Link>
@@ -66,7 +66,7 @@ export default function HomeHeroNavSection() {
                     <h2 className="text-3xl font-display-serif font-semibold">
                       {t(item.title_label)}
                     </h2>
-                    <p className="leading-tight font-display text-align-last-center font-medium text-white/75">
+                    <p className="leading-tight font-serif text-align-last-center font-medium text-white/75">
                       {t(item.body_label)}
                     </p>
                   </div>

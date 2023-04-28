@@ -54,7 +54,7 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
             "border-b": ability.description,
             "sm:border-b": ability.description || ability.feats,
           },
-          "text-lg not-prose p-2 gap-2 shadow-sm font-display-serif font-bold bg-white dark:bg-stone-700 dark:text-stone-200 dark:border-stone-900 border-stone-300 rounded-t flex justify-between"
+          "text-lg not-prose p-2 gap-2 shadow-sm font-display-serif font-medium bg-white dark:bg-stone-700 dark:text-stone-200 dark:border-stone-900 border-stone-300 rounded-t flex justify-between"
         )}
       >
         <h1 className="text-left">{ability.name}</h1>
@@ -126,7 +126,7 @@ function Feat({ tier, children }: FeatP): JSX.Element {
   return (
     <li className="my-0 odd:bg-sky-50/100 bg-sky-200/50 dark:odd:bg-sky-900/50 dark:bg-sky-800/50 border-t sm:border-r sm:border-l sm:last:border-b dark:border-sky-900/75 border-sky-300 p-2 sm:first:rounded-t last:rounded-b">
       <div>
-        <p className="font-bold">{tierLabels[tier]}</p>
+        <p className="font-semibold">{tierLabels[tier]}</p>
         <div>{children}</div>
       </div>
     </li>

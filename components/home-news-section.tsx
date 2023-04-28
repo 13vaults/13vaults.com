@@ -58,7 +58,7 @@ export default function HomeNewsSection({
           </div>
           <div className="flex justify-center">
             <Link
-              className="py-1 px-3 bg-teal-600 hover:bg-teal-500 transition-colors text-white font-display font-medium uppercase"
+              className="py-1 px-3 bg-teal-600 hover:bg-teal-500 transition-colors text-white font-serif font-medium uppercase"
               href="/blog"
             >
               {t("view-all-blog-posts")}

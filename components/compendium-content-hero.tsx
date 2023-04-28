@@ -22,7 +22,7 @@ export default function CompendiumContentHero({
       <div className="flex-1">{description}</div>
       <div>{children}</div>
       <Link
-        className="p-2 bg-teal-500 dark:bg-teal-700 text-white block rounded shadow shadow-teal-600 dark:shadow-teal-800 transition-colors hover:bg-teal-400 dark:hover:bg-teal-600 text-shadow uppercase font-display font-medium text-center"
+        className="p-2 bg-teal-500 dark:bg-teal-700 text-white block rounded shadow shadow-teal-600 dark:shadow-teal-800 transition-colors hover:bg-teal-400 dark:hover:bg-teal-600 text-shadow uppercase font-serif font-medium text-center"
         href={detailsHref}
       >
         {detailsLabel}

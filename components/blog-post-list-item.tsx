@@ -38,11 +38,11 @@ function BlogPostListItem({
       >
         <section aria-label={label} className="flex flex-col gap-2">
           <header className="font-display-serif">
-            <h1 className="text-xl font-black transition-colors group-hover:text-teal-600 group-hover:dark:text-teal-400 group-focus:text-teal-600 group-focus:dark:text-teal-400">
+            <h1 className="text-xl font-medium transition-colors group-hover:text-teal-600 group-hover:dark:text-teal-400 group-focus:text-teal-600 group-focus:dark:text-teal-400">
               {title}
             </h1>
             <div className="text-sm font-medium">
-              <time className="font-display">{date}</time>
+              <time className="font-sans">{date}</time>
             </div>
           </header>
           <div>
@@ -88,11 +88,11 @@ function HeroVariant({
         className="flex flex-col gap-2 p-4 min-h-[24rem] relative justify-end bg-gradient-to-t bg-black/10 from-black/70 to-black/0 group-focus:bg-black/50 group-hover:bg-black/50 transition-all ring-inset ring ring-teal-500/75 group-focus:ring-teal-500 group-hover:ring-teal-500"
       >
         <header className="font-display-serif">
-          <h1 className="text-xl md:text-4xl font-black transition-colors group-focus:text-teal-400 group-hover:text-teal-400">
+          <h1 className="text-xl md:text-4xl font-medium transition-colors group-focus:text-teal-400 group-hover:text-teal-400">
             {title}
           </h1>
           <div className="text-sm font-medium">
-            <time className="font-display">{date}</time>
+            <time className="font-serif">{date}</time>
           </div>
         </header>
         <div>

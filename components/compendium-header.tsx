@@ -10,7 +10,7 @@ export default function VaultHeader({
   return (
     <header className="not-prose">
       <CompendiumTitle>{primaryLabel}</CompendiumTitle>
-      <p className="my-0 font-display font-medium italic text-black/50 dark:text-stone-400">
+      <p className="my-0 font-serif font-medium italic text-black/50 dark:text-stone-400">
         {secondaryLabel}
       </p>
     </header>

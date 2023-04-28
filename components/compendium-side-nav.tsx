@@ -98,9 +98,7 @@ export default function CompendiumSideNav({
         <Link href={goBackLink} title={goBackLabel}>
           <ArrowUturnLeftIcon className="h-4 w-4 text-current" />
         </Link>
-        <p className="font-medium font-display text-xl truncate">
-          {primaryLabel}
-        </p>
+        <p className="font-medium text-xl truncate">{primaryLabel}</p>
       </div>
       <nav role="navigation" aria-label="Side navigation">
         <ul role="list" className="flex flex-col">

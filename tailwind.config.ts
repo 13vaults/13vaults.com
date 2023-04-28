@@ -27,12 +27,9 @@ export default {
           "var(--font-barlow-semi-condensed)",
           ...defaultTheme.fontFamily.sans,
         ],
-        serif: [
-          "var(--font-ikarius-adf-no2)",
-          ...defaultTheme.fontFamily.serif,
-        ],
+        serif: ["var(--font-reforma-2018)", ...defaultTheme.fontFamily.serif],
         "display-serif": [
-          "var(--font-ikarius-adf)",
+          "var(--font-reforma-2018)",
           ...defaultTheme.fontFamily.serif,
         ],
       },

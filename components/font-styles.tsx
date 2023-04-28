@@ -1,60 +1,39 @@
-import {
-  Barlow_Semi_Condensed,
-  Inter,
-  Source_Sans_Pro,
-} from "next/font/google";
+import { Source_Sans_Pro } from "next/font/google";
 import localFont from "next/font/local";
 
-const ikariusAdfNo2 = localFont({
+const reforma2018 = localFont({
   preload: false,
   display: "swap",
   src: [
     {
-      path: "../public/fonts/IkariusADFNo2Std-Bold.otf",
-      weight: "700",
+      path: "../public/fonts/Reforma2018-Blanca.woff2",
+      weight: "300",
       style: "normal",
     },
     {
-      path: "../public/fonts/IkariusADFNo2Std-BoldItalic.otf",
-      weight: "700",
+      path: "../public/fonts/Reforma2018-BlancaItalica.woff2",
+      weight: "300",
       style: "italic",
     },
     {
-      path: "../public/fonts/IkariusADFNo2Std-Italic.otf",
-      weight: "400",
+      path: "../public/fonts/Reforma2018-Gris.woff2",
+      weight: "500",
       style: "normal",
     },
     {
-      path: "../public/fonts/IkariusADFNo2Std-Regular.otf",
-      weight: "400",
-      style: "normal",
+      path: "../public/fonts/Reforma2018-GrisItalica.woff2",
+      weight: "500",
+      style: "italic",
     },
-  ],
-});
-
-const ikariusAdf = localFont({
-  preload: false,
-  display: "swap",
-  src: [
     {
-      path: "../public/fonts/IkariusADFStd-Bold.otf",
+      path: "../public/fonts/Reforma2018-Negra.woff2",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../public/fonts/IkariusADFStd-BoldItalic.otf",
+      path: "../public/fonts/Reforma2018-NegraItalica.woff2",
       weight: "700",
       style: "italic",
-    },
-    {
-      path: "../public/fonts/IkariusADFStd-Italic.otf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../public/fonts/IkariusADFStd-Regular.otf",
-      weight: "400",
-      style: "normal",
     },
   ],
 });
@@ -67,31 +46,12 @@ const sourceSans = Source_Sans_Pro({
   display: "swap",
 });
 
-const barlowSemiCondensed = Barlow_Semi_Condensed({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  preload: false,
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  style: ["normal"],
-  preload: false,
-  display: "swap",
-});
-
 export default function FontStyles() {
   return (
     <style jsx global>{`
       :root {
-        --font-inter: ${inter.style.fontFamily};
-        --font-barlow-semi-condensed: ${barlowSemiCondensed.style.fontFamily};
-        --font-ikarius-adf-no2: ${ikariusAdfNo2.style.fontFamily};
-        --font-ikarius-adf: ${ikariusAdf.style.fontFamily};
         --font-source-sans: ${sourceSans.style.fontFamily};
+        --font-reforma-2018: ${reforma2018.style.fontFamily};
       }
     `}</style>
   );

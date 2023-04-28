@@ -31,7 +31,7 @@ export default function NotFound({ navigation }: NotFoundP) {
           hrefLang={locale}
           href="/"
           locale={locale}
-          className="text-red-500 font-display font-medium you-died-animation-late"
+          className="text-red-500 font-serif font-medium you-died-animation-late"
         >
           {t("not-found.return-label")}
         </Link>
