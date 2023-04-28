@@ -15,7 +15,12 @@ import { Navigation, SubNav, SubNavWithName } from "@/lib/navigation";
 import { useTranslation } from "next-i18next";
 import { PartialBy, PickPartial } from "@/utils";
 import VaultsLogo from "./vaults-logo";
-import { AnimatePresence, cubicBezier, motion } from "framer-motion";
+import {
+  AnimatePresence,
+  cubicBezier,
+  motion,
+  useReducedMotion,
+} from "framer-motion";
 
 interface MobileSubnavP {
   subnav: PartialBy<
@@ -85,12 +90,13 @@ function MobileSubnav({ subnav, onLinkClick }: MobileSubnavP) {
 }
 
 export default function MegaNav({ navigation }: { navigation: Navigation }) {
+  const shouldReduceMotion = useReducedMotion();
   const [open, setOpen] = useState(false);
   const { t } = useTranslation("common");
 
-  const handleToggleOpen = useCallback(() => {
-    setOpen(!open);
-  }, [open]);
+  const openDrawer = useCallback(() => {
+    setOpen(true);
+  }, []);
 
   const closeDrawer = useCallback(() => {
     setOpen(false);
@@ -106,21 +112,28 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
         <AnimatePresence>
           {open ? (
             <DialogOverlay
+              key="dialog"
               onDismiss={closeDrawer}
               className="fixed top-14 left-0 right-0 bottom-0"
             >
               <motion.div
                 className="absolute inset-0 bg-black/60"
-                initial={{ opacity: 0 }}
+                initial={{ opacity: shouldReduceMotion ? 1 : 0 }}
                 animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ ease: easeOutQuart, duration: 0.3 }}
+                exit={{ opacity: shouldReduceMotion ? 1 : 0 }}
+                transition={{
+                  ease: easeOutQuart,
+                  duration: shouldReduceMotion ? 0 : 0.3,
+                }}
               ></motion.div>
               <AnimatedDialogContent
-                transition={{ ease: easeOutQuart, duration: 0.3 }}
-                initial={{ x: "calc(100% * -1)" }}
+                transition={{
+                  ease: easeOutQuart,
+                  duration: shouldReduceMotion ? 0 : 0.3,
+                }}
+                initial={{ x: shouldReduceMotion ? 0 : "calc(100% * -1)" }}
                 animate={{ x: 0 }}
-                exit={{ x: "calc(100% * -1)" }}
+                exit={{ x: shouldReduceMotion ? 0 : "calc(100% * -1)" }}
                 className="fixed top-14 bottom-0 right-0 left-0 flex w-full max-w-xs flex-col overflow-y-auto bg-stone-950 border-r border-stone-800 pb-12 shadow-xl"
               >
                 {map(navigation.main, (navItem) => (
@@ -196,8 +209,8 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                 <div className="flex lg:hidden">
                   <button
                     type="button"
-                    className="text-stone-300"
-                    onClick={handleToggleOpen}
+                    className="text-stone-300 disabled:opacity-50"
+                    onClick={open ? closeDrawer : openDrawer}
                   >
                     <span className="sr-only">
                       {open

@@ -27,7 +27,7 @@ export default function HomeNewsSection({
       <Container>
         <nav
           aria-label={t("latest-posts-blog") as string}
-          className="grid grid-cols-1 auto-rows-min gap-8 max-h-min"
+          className="grid grid-cols-1 auto-rows-min gap-4 lg:gap-8 max-h-min"
         >
           <div className="flex flex-col gap-4">
             <HomeNewsSectionItem.Hero

@@ -16,6 +16,11 @@
           "props": true,
           "ProcessEnv": true
         },
+        "replacements": {
+          "ref": {
+            "reference": false
+          }
+        },
         "checkFilenames": false
       }
     ],
