@@ -19,6 +19,9 @@
         "replacements": {
           "ref": {
             "reference": false
+          },
+          "props": {
+            "properties": false
           }
         },
         "checkFilenames": false

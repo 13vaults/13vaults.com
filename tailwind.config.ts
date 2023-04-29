@@ -23,13 +23,13 @@ export default {
       },
       fontFamily: {
         sans: ["var(--font-source-sans)", ...defaultTheme.fontFamily.sans],
-        display: [
-          "var(--font-barlow-semi-condensed)",
-          ...defaultTheme.fontFamily.sans,
-        ],
         serif: ["var(--font-reforma-2018)", ...defaultTheme.fontFamily.serif],
         "display-serif": [
-          "var(--font-reforma-2018)",
+          "var(--font-reforma-1969)",
+          ...defaultTheme.fontFamily.serif,
+        ],
+        "display-serif-caps": [
+          "var(--font-reforma-1969)",
           ...defaultTheme.fontFamily.serif,
         ],
       },
