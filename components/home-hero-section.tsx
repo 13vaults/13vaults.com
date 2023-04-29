@@ -21,16 +21,6 @@ export default function HomeHeroSection() {
         priority
       />
       <div className="relative flex-1 flex flex-col gap-12 px-4 py-8 lg:p-8 pb-14 w-full mx-auto justify-center items-center bg-gradient-to-t from-stone-950 to-stone-950/50">
-        <div className="absolute bottom-4 left-4 right-4">
-          <Container>
-            <a
-              className="text-sm text-stone-600"
-              href="https://www.deviantart.com/butteredbap/art/Camelot-spire-358955566"
-            >
-              {t("image-cite")}
-            </a>
-          </Container>
-        </div>
         <h1 className="text-stone-50">
           <span className="sr-only">13 Vaults</span>
           <VaultsLogo
@@ -46,7 +36,7 @@ export default function HomeHeroSection() {
             as={Link}
             href="/compendium"
             size="large"
-            variant="decorative"
+            variant="fancy"
             className="inline-block shadow font-bold font-display-serif"
           >
             <div className="flex gap-3 justify-center items-center">
@@ -79,6 +69,16 @@ export default function HomeHeroSection() {
               {t("join-discord-label")}
             </div>
           </Button>
+        </div>
+        <div className="w-full">
+          <Container>
+            <a
+              className="text-sm text-stone-600"
+              href="https://www.deviantart.com/butteredbap/art/Camelot-spire-358955566"
+            >
+              {t("image-cite")}
+            </a>
+          </Container>
         </div>
       </div>
     </section>
