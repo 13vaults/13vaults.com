@@ -5,6 +5,7 @@ import { map, size } from "lodash-es";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import Container from "./container";
+import Button from "./button";
 
 type BlogPostItem = PickPartial<
   BlogPost,
@@ -57,12 +58,13 @@ export default function HomeNewsSection({
             </ol>
           </div>
           <div className="flex justify-center">
-            <Link
-              className="py-1 px-3 bg-teal-600 hover:bg-teal-500 transition-colors text-white font-serif font-medium uppercase"
+            <Button
+              as={Link}
               href="/blog"
+              className="font-serif font-medium uppercase"
             >
               {t("view-all-blog-posts")}
-            </Link>
+            </Button>
           </div>
         </nav>
       </Container>

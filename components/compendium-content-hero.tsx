@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ReactNode } from "react";
+import Button from "./button";
 
 export default function CompendiumContentHero({
   title = null,
@@ -19,14 +20,18 @@ export default function CompendiumContentHero({
       <header>
         <h1 className="text-xl font-display-serif font-semibold">{title}</h1>
       </header>
-      <div className="flex-1">{description}</div>
-      <div>{children}</div>
-      <Link
-        className="p-2 bg-teal-500 dark:bg-teal-700 text-white block rounded shadow shadow-teal-600 dark:shadow-teal-800 transition-colors hover:bg-teal-400 dark:hover:bg-teal-600 text-shadow uppercase font-serif font-medium text-center"
+      <div className="flex-1">
+        <div>{description}</div>
+        <div>{children}</div>
+      </div>
+      <Button
+        as={Link}
         href={detailsHref}
+        size="large"
+        className="uppercase font-serif font-medium text-center"
       >
         {detailsLabel}
-      </Link>
+      </Button>
     </section>
   );
 }

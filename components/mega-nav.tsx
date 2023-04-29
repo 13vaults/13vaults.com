@@ -21,6 +21,7 @@ import {
   m,
   useReducedMotion,
 } from "framer-motion";
+import Button from "./button";
 
 interface MobileSubnavP {
   subnav: PartialBy<
@@ -363,22 +364,15 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                       )}
                     </div>
                     <div className="flex gap-2">
-                      <a
+                      <Button
+                        as="a"
                         href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
-                        className="relative group shadow-md border border-amber-400 shadow-amber-800"
+                        color="gold"
+                        variant="fancy"
+                        className="font-serif font-bold inline-block"
                       >
-                        <div
-                          role="presentation"
-                          className="absolute -inset-[3px] border border-amber-400"
-                        />
-                        <div
-                          role="presentation"
-                          className="absolute rotate-45 top-0 left-1/2 -translate-x-1/2 h-full aspect-square bg-amber-500 border border-amber-400 group-focus:bg-amber-400 group-hover:bg-amber-400 transition-colors"
-                        />
-                        <span className="text-shadow relative inline-block bg-gradient-to-bl bg-amber-500 text-white font-serif font-bold px-2 py-1 group-focus:bg-amber-400 group-hover:bg-amber-400 transition-colors">
-                          {t("nav.buy-13th-age-label")}
-                        </span>
-                      </a>
+                        {t("nav.buy-13th-age-label")}
+                      </Button>
                     </div>
                   </div>
                 </div>
