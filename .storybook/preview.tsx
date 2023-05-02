@@ -40,7 +40,7 @@ const preview: Preview = {
           <LazyMotion features={loadFeatures} strict>
             <I18nextProvider i18n={i18n}>
               <FontStyles />
-              <div className="dark:text-white">
+              <div className="text-stone-950 dark:text-stone-50">
                 <Story />
               </div>
             </I18nextProvider>

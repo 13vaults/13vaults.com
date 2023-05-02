@@ -4,6 +4,7 @@ import { Trans, useTranslation } from "next-i18next";
 import React, { useMemo } from "react";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { map } from "lodash-es";
+import Label from "./label";
 
 export default function Footer() {
   const { t } = useTranslation("common");
@@ -85,7 +86,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-stone-950 text-white px-4 lg:px-8 pb-8 pt-8 sm:pt-24 lg:pt-32 font-serif"
+      className="bg-stone-950 px-4 lg:px-8 pb-8 pt-8 sm:pt-24 lg:pt-32 text-stone-50"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">
@@ -95,10 +96,10 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-4">
             <VaultsLogo variant="full" className="h-7 text-white" />
-            <p className="text-sm leading-6 text-stone-300">
+            <Label variant="body-small" className="leading-6 text-stone-300">
               {t("footer.not-affiliated")}
-            </p>
-            <p className="text-sm leading-6 text-stone-300">
+            </Label>
+            <Label variant="body-small" className="leading-6 text-stone-300">
               <Trans
                 t={t}
                 i18nKey="footer.foss"
@@ -112,7 +113,7 @@ export default function Footer() {
                   ),
                 }}
               />
-            </p>
+            </Label>
             <div className="flex space-x-6">
               {map(navigation.social, (item) => (
                 <Link
@@ -130,35 +131,47 @@ export default function Footer() {
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-stone-100">
+                <Label
+                  as="h3"
+                  variant="label-small"
+                  className="leading-6 text-stone-100"
+                >
                   {t("nav.compendium-label")}
-                </h3>
+                </Label>
                 <ul role="list" className="mt-6 space-y-4">
                   {map(navigation.compendium, (item) => (
                     <li key={item.name}>
-                      <Link
+                      <Label
+                        variant="body-small"
+                        as={Link}
                         href={item.href}
-                        className="text-sm leading-6 text-stone-300 hover:text-stone-100"
+                        className="text-stone-300 hover:text-stone-100"
                       >
                         {item.name}
-                      </Link>
+                      </Label>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-stone-100">
+                <Label
+                  as="h3"
+                  variant="label-small"
+                  className="leading-6 text-stone-100"
+                >
                   {t("nav.13vaults")}
-                </h3>
+                </Label>
                 <ul role="list" className="mt-6 space-y-4">
                   {map(navigation.vaults, (item) => (
                     <li key={item.name}>
-                      <Link
+                      <Label
+                        variant="body-small"
+                        as={Link}
                         href={item.href}
-                        className="text-sm leading-6 text-stone-300 hover:text-stone-100"
+                        className="text-stone-300 hover:text-stone-100"
                       >
                         {item.name}
-                      </Link>
+                      </Label>
                     </li>
                   ))}
                 </ul>
@@ -166,35 +179,47 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-stone-100">
+                <Label
+                  as="h3"
+                  variant="label-small"
+                  className="leading-6 text-stone-100"
+                >
                   {t("nav.resources")}
-                </h3>
+                </Label>
                 <ul role="list" className="mt-6 space-y-4">
                   {map(navigation.resources, (item) => (
                     <li key={item.name}>
-                      <Link
+                      <Label
+                        variant="body-small"
+                        as={Link}
                         href={item.href}
-                        className="text-sm leading-6 text-stone-300 hover:text-stone-100"
+                        className="text-stone-300 hover:text-stone-100"
                       >
                         {item.name}
-                      </Link>
+                      </Label>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-stone-100">
+                <Label
+                  as="h3"
+                  variant="label-small"
+                  className="leading-6 text-stone-100"
+                >
                   {t("nav.legal")}
-                </h3>
+                </Label>
                 <ul role="list" className="mt-6 space-y-4">
                   {map(navigation.legal, (item) => (
                     <li key={item.name}>
-                      <Link
+                      <Label
+                        variant="body-small"
+                        as={Link}
                         href={item.href}
-                        className="text-sm leading-6 text-stone-300 hover:text-stone-100"
+                        className="text-stone-300 hover:text-stone-100"
                       >
                         {item.name}
-                      </Link>
+                      </Label>
                     </li>
                   ))}
                 </ul>
