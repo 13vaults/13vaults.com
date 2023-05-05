@@ -4,6 +4,12 @@
 
 An unofficial, community-driven resource for the 13th Age RPG.
 
+<picture>
+  <source height="64px" media="(prefers-color-scheme: dark)" srcset="readme-assets/agplv3-white.svg">
+  <source height="64px" media="(prefers-color-scheme: light)" srcset="readme-assets/agplv3-black.svg">
+  <img height="64px" alt="AGPL logo" src="readme-assets/agplv3-black.svg">
+</picture>
+
 ## Development
 
 ### Tools required
