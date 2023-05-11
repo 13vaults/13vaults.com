@@ -67,7 +67,7 @@ function HeroVariant({
   return (
     <Link
       className={clsx(
-        "transition-all bg-stone-800 text-white block relative group",
+        "transition-all bg-stone-800 text-white block relative group overflow-clip",
         {
           "bg-white text-black outline outline-2 outline-red-500": !published,
         }
@@ -75,7 +75,7 @@ function HeroVariant({
       href={to}
     >
       <Image
-        className="object-top object-cover h-full w-full relative"
+        className="object-top object-cover h-full w-full relative scale-100 group-focus:scale-110 group-hover:scale-110 transition-transform"
         src={socialBanner}
         placeholder="blur"
         fill
