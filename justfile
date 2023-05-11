@@ -1,14 +1,15 @@
+# Run the podman container
 @default:
-  pnpm dev
+  podman run \
+    --name 13vaults \
+    --rm \
+    -p 3000:3000 \
+    -v ./:/app \
+    -v /app/node_modules \
+    -v /app/.next \
+    -v /app/.contentlayer \
+    localhost/13vaults:latest
 
-@install:
-  pnpm install
-
-@lint:
-  pnpm lint
-
-@storybook:
-  pnpm storybook
-
-@analyze-build:
-  ANALYZE=true pnpm build
+# Build the container for podman
+@build:
+  podman build . -t 13vaults
