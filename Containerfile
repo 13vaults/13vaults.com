@@ -7,4 +7,5 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 RUN npm i -g pnpm
 RUN pnpm i --frozen-lockfile
+ENV NEXT_TELEMETRY_DISABLED=1
 CMD ["pnpm", "dev"]
