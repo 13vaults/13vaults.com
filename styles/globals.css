@@ -11,23 +11,9 @@
     font-feature-settings: "lnum";
   }
 
-  .font-display-serif-caps {
-    font-feature-settings: "lnum";
-  }
-
   .font-display-serif {
     font-feature-settings: "ss02", "ss03", "ss04", "ss05", "ss07", "ss08",
       "ss09", "ss10", "ss11", "ss12", "ss13", "lnum";
-  }
-}
-
-@layer components {
-  .home-hero {
-    background-image: linear-gradient(
-      to top,
-      rgb(27, 10, 0) 10%,
-      rgb(58 23 3 / 50%)
-    );
   }
 }
 

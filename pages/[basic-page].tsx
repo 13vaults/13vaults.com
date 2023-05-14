@@ -62,10 +62,10 @@ export default function VaultsBasicPage({
             <main className="xl:col-start-4 xl:col-end-13 flex flex-col ">
               <article
                 className="prose prose-h1:my-0 prose-h2:mt-4 max-w-none
-                         prose-headings:font-display-serif prose-lead:leading-normal prose-lead:font-display prose-table:my-2
+                         prose-headings:font-display-serif prose-lead:leading-normal prose-lead:font-serif prose-table:my-2
                          prose-blockquote:border-teal-500 prose-blockquote:bg-teal-500/5 dark:prose-blockquote:bg-teal-500/20
                          dark:prose-blockquote:text-white prose-blockquote:font-serif prose-blockquote:shadow-md
-                         prose-th:font-display prose-th:font-medium
+                         prose-th:font-serif prose-th:font-medium
                          prose-th:p-2 prose-thead:shadow-sm prose-th:align-bottom prose-thead:bg-white dark:prose-thead:bg-stone-800
                          prose-blockquote:pr-6 dark:prose-invert dark:prose-tr:border-stone-800 dark:prose-thead:border-stone-900
                          prose-teal prose-table:bg-stone-50 dark:prose-table:bg-stone-900 prose-td:px-2 even:prose-tr:bg-stone-100 dark:even:prose-tr:bg-stone-800"

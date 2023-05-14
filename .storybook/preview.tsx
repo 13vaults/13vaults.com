@@ -34,6 +34,10 @@ const preview: Preview = {
   decorators: [
     (Story) => {
       dayjs.locale(i18n.language);
+      i18n.services.formatter?.addCached("lowerCase", (language, _options) => {
+        console.log(language);
+        return (value: string) => value.toLocaleLowerCase(language);
+      });
 
       return (
         <React.StrictMode>

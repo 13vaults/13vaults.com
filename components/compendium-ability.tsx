@@ -54,7 +54,7 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
             "border-b": ability.description,
             "sm:border-b": ability.description || ability.feats,
           },
-          "text-lg not-prose p-2 gap-2 shadow-sm font-display-serif font-medium bg-white dark:bg-stone-700 dark:text-stone-200 dark:border-stone-900 border-stone-300 rounded-t flex justify-between"
+          "text-lg not-prose p-2 gap-2 shadow-sm font-serif font-medium bg-white dark:bg-stone-700 dark:text-stone-200 dark:border-stone-900 border-stone-300 rounded-t flex justify-between"
         )}
       >
         <h1 className="text-left">{ability.name}</h1>
@@ -63,7 +63,7 @@ function AbilityItem({ ability }: AbilityItemP): JSX.Element {
       <div className="rounded-b flex-col">
         {ability.description ? (
           <div
-            className="p-2 prose max-w-none dark:prose-invert prose-h3:my-2 prose-headings:font-display-serif
+            className="p-2 prose max-w-none dark:prose-invert prose-h3:my-2 prose-headings:font-serif
                        text-base first:prose-p:mt-0 last:prose-p:mb-0 prose-hr:my-2 prose-p:my-2 prose-hr:border-stone-300 prose-hr:dark:border-stone-700"
           >
             <ReactMarkdown

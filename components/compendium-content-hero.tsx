@@ -18,7 +18,7 @@ export default function CompendiumContentHero({
   return (
     <section className="flex flex-col gap-4 p-4 bg-stone-50 dark:bg-stone-900 bg-gradient-to-tl dark:bg-gradient-to-br from-teal-50/25 to-stone-50 dark:from-teal-900/25 dark:to-transparent shadow relative content-center justify-center rounded text-stone-900 dark:text-stone-50">
       <header>
-        <h1 className="text-xl font-display-serif font-semibold">{title}</h1>
+        <h1 className="text-xl font-serif font-semibold">{title}</h1>
       </header>
       <div className="flex-1">
         <div>{description}</div>
