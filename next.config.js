@@ -43,6 +43,7 @@ const nextConfig = {
     appDir: true,
     scrollRestoration: true,
     largePageDataBytes: 256 * 1024,
+    esmExternals: true,
   },
 };
 

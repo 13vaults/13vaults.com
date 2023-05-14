@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import Script from "next/script";
-import { appWithTranslation, useTranslation } from "next-i18next";
+import { appWithTranslation, i18n } from "next-i18next";
 import FontStyles from "@/components/font-styles";
 import { useRouter } from "next/router";
 import dayjs from "dayjs";
@@ -26,9 +26,8 @@ dayjs.tz.setDefault("America/New_York");
 
 function VaultsApp({ Component, pageProps }: AppProps) {
   const { locale = defaultLocale } = useRouter();
-  const { i18n } = useTranslation();
 
-  i18n.services.formatter?.addCached("lowerCase", (language, _options) => {
+  i18n?.services.formatter?.addCached("lowerCase", (language, _options) => {
     return (value) => value.toLocaleLowerCase(language);
   });
 
