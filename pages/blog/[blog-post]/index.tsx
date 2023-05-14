@@ -103,7 +103,7 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
                     </div>
                   ),
                   img: ({ alt, height = "0", width = "0", src }) => (
-                    <div className="p-4 bg-white/50 rounded dark:bg-black/50 border border-stone-200 dark:border-stone-700">
+                    <div className="p-4 bg-white/50 rounded dark:bg-black/50 border border-stone-200 dark:border-stone-700 my-4">
                       <figure>
                         <Image
                           src={src || ""}
