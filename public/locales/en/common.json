@@ -97,5 +97,9 @@
   "adversary-block.role.spoiler": "spoiler",
   "adversary-block.role.archer": "archer",
   "adversary-block.role.leader": "leader",
-  "adversary-block.role.blocker": "blocker"
+  "adversary-block.role.blocker": "blocker",
+  "ability.feat.tier.adventurer": "Adventurer Feat:",
+  "ability.feat.tier.champion": "Champion Feat:",
+  "ability.feat.tier.epic": "Epic Feat:",
+  "ability.feat.tier.omega": "Omega Feat:"
 }

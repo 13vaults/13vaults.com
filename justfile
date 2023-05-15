@@ -3,6 +3,7 @@
   podman run \
     --name 13vaults \
     --rm \
+    -p 6006:6006 \
     -p 3000:3000 \
     -v ./:/app \
     -v /app/node_modules \

@@ -3,7 +3,7 @@ import Label from "./label";
 import { useRouter } from "next/router";
 import { defaultLocale } from "@/lib/locales";
 import { useCallback, useMemo } from "react";
-import { map, size } from "lodash";
+import { map, size } from "lodash-es";
 
 type Effect = {
   name: string;

@@ -67,7 +67,7 @@ const Ability = defineNestedType(() => ({
     _type: { type: "string", required: false },
     usage: {
       type: "enum",
-      options: ["at-will", "per-day", "recharge", "per-battle"],
+      options: ["at-will", "per-day", "recharge", "per-battle", "other"],
       required: false,
     },
     description: { type: "string", required: false },
