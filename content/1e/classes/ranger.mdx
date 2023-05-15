@@ -20,6 +20,7 @@ best_damage_die: d10
 abilities:
   - name: Melee Attack
     _type: Basic Attack
+    usage: at-will
     description: |-
       At-Will
 
@@ -34,6 +35,7 @@ abilities:
       **Miss:** Damage equal to your level
   - name: Ranged Attack
     _type: Basic Attack
+    usage: at-will
     description: |-
       At-Will
 
@@ -56,6 +58,7 @@ abilities:
       If you would rather have a smaller beast as a pet, see the Ranger’s Pet talent.
   - name: Archery
     _type: Talent
+    usage: per-battle
     description: Once per battle, reroll one of your missed ranged attacks.
     feats:
       - tier: adventurer
@@ -66,6 +69,7 @@ abilities:
         description: Once per day, you can turn a normal hit with a ranger ranged attack into a critical hit.
   - name: Double Melee Attack
     _type: Talent
+    usage: at-will
     description: |-
       When fighting with two one-handed melee weapons, your default option is to make a double melee attack.
 
@@ -83,6 +87,7 @@ abilities:
         description: Each turn, you can pop free of one enemy before one attack roll that is part of a Double Melee Attack. You can also use your move action in between your two attacks if you wish.
   - name: Double Ranged Attack
     _type: Talent
+    usage: at-will
     description: |-
       When you attack with a ranged weapon that does not need to be reloaded, your default option is to make a double ranged attack.
 
@@ -137,6 +142,7 @@ abilities:
         description: Whenever you hit with a First Strike attack, you can reroll your damage once and use the higher roll.
   - name: Lethal Hunter
     _type: Talent
+    usage: per-battle
     description: |-
       Once per battle as a free action, choose an enemy.
       The crit range of your attacks against that enemy expands by 2 for the rest of the battle.

@@ -21,6 +21,7 @@ best_damage_die: d8
 abilities:
   - name: Melee Attack
     _type: Basic Attack
+    usage: at-will
     description: |-
       At-Will
 
@@ -35,6 +36,7 @@ abilities:
       **Miss:** Damage equal to your level
   - name: Ranged Attack
     _type: Basic Attack
+    usage: at-will
     description: |-
       At-Will
 
@@ -49,6 +51,7 @@ abilities:
       **Miss:** —
   - name: Fight from the Front
     _type: Class Feature
+    usage: at-will
     description: When you hit with a commander melee attack during your turn, gain 1d3 command points.
     feats:
       - tier: adventurer
@@ -59,6 +62,7 @@ abilities:
         description: Twice per day when you hit with a melee attack, you can gain additional command points equal to double your Strength modifier.
   - name: Weigh the Odds
     _type: Class Feature
+    usage: at-will
     description: |-
       Standard action
 
@@ -89,6 +93,7 @@ abilities:
           This bonus can’t be higher than the number of icon relationship points you have with warrior or leader icons in your game.
   - name: Battle Captain
     _type: Talent
+    usage: per-battle
     description: |-
       Once per battle when you have 2 or more command points left after giving a command,
       you can use another interrupt action on a different ally’s turn before the start of your next turn.
@@ -190,6 +195,7 @@ abilities:
           You can also use that roll the same way, but not during the same turn you use the d6 result.
   - name: Never Say Die
     _type: Talent
+    usage: per-battle
     description: Once per battle when an enemy scores a critical hit against you or a nearby ally, you can increase the escalation die by 1.
     feats:
       - tier: adventurer
@@ -355,6 +361,7 @@ abilities:
         description: Your attacks that benefit from the +2 attack bonus against that enemy also add triple your Charisma modifier to your damage on a hit.
   - name: Basic Tactical Strike
     _type: Tactic 1
+    usage: recharge
     description: |-
       Quick action
 
@@ -374,6 +381,7 @@ abilities:
         description: The recharge roll is now 6+.
   - name: Enforce Clarity
     _type: Tactic 1
+    usage: recharge
     description: |-
       Quick action
 
@@ -393,6 +401,7 @@ abilities:
         description: The recharge roll is now 6+.
   - name: Just Stay Calm
     _type: Tactic 1
+    usage: recharge
     description: |-
       Quick action, when the escalation die is 2+
 
@@ -411,6 +420,7 @@ abilities:
         description: When you use this tactic, you can spend an additional command point to avoid decreasing the escalation die.
   - name: Outmaneuver
     _type: Tactic 1
+    usage: at-will
     description: |-
       Quick action, once per round
 
@@ -498,6 +508,7 @@ abilities:
       **Effect:** Roll a d20. On a 11+, the target doesn’t expend the use of its racial power and can use it again later this battle.
   - name: Finish This!
     _type: Tactic 3
+    usage: recharge
     description: |-
       Quick action, when the escalation die is 4+
 
@@ -519,6 +530,7 @@ abilities:
         description: You can now spend between 1 and 5 command points on the effect.
   - name: Scramble
     _type: Tactic 3
+    usage: recharge
     description: |-
       Quick action
 
@@ -538,6 +550,7 @@ abilities:
         description: Each target can also make a basic attack as a free action after taking the move action.
   - name: Swordwork
     _type: Tactic 3
+    usage: recharge
     description: |-
       Free action, when the escalation die is 4+
 
@@ -613,6 +626,7 @@ abilities:
         description: Add hampered and stunned to the list of conditions the effect includes.
   - name: Advanced Tactical Strike
     _type: Tactic 5
+    usage: recharge
     description: |-
       Quick action
 
@@ -633,6 +647,7 @@ abilities:
         description: The recharge roll is now 11+.
   - name: Buck Up!
     _type: Tactic 5
+    usage: recharge
     description: |-
       Quick action
 
@@ -679,6 +694,7 @@ abilities:
         description: The target also gains temporary hit points equal to 3d10 + triple your Charisma modifier.
   - name: Climactic Battle
     _type: Tactic 7
+    usage: recharge
     description: |-
       Quick action
 
@@ -694,6 +710,7 @@ abilities:
         description: When the escalation die reaches 8, you gain 1d6 command points and can make recharge rolls for all your tactics.
   - name: On Your Feet, Maggots!
     _type: Tactic 7
+    usage: recharge
     description: |-
       Quick action
 
@@ -711,6 +728,7 @@ abilities:
         description: This tactic now targets up to 1d4 + 1 allies.
   - name: Saving Will
     _type: Tactic 7
+    usage: recharge
     description: |-
       Quick action
 
@@ -758,6 +776,7 @@ abilities:
         description: If the target succeeds on its death save, it can take its turn normally as if it rolled a natural 20.
   - name: Force a Conclusion
     _type: Tactic 9
+    usage: recharge
     description: |-
       Free action
 
@@ -771,6 +790,7 @@ abilities:
         description: You gain command points equal to the newly rolled escalation die value.
   - name: Now, Not Later
     _type: Tactic 9
+    usage: recharge
     description: |-
       Free action
 
@@ -787,6 +807,7 @@ abilities:
         description: The target gains a bonus to the recharge roll equal to your Charisma modifier.
   - name: Supreme Tactical Strike
     _type: Tactic 9
+    usage: recharge
     description: |-
       Quick action
 

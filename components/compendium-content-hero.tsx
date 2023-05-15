@@ -1,36 +1,36 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 import Button from "./button";
+import Label from "./label";
 
-export default function CompendiumContentHero({
-  title = null,
-  detailsHref,
-  detailsLabel,
-  children,
-  description,
-}: {
-  title: ReactNode;
+interface CompendiumContentHeroP {
+  title: string;
   children: ReactNode;
   description?: ReactNode;
   detailsHref: string;
   detailsLabel: ReactNode;
-}) {
+}
+
+export default function CompendiumContentHero({
+  title,
+  detailsHref,
+  detailsLabel,
+  children,
+  description,
+}: CompendiumContentHeroP) {
   return (
-    <section className="flex flex-col gap-4 p-4 bg-stone-50 dark:bg-stone-900 bg-gradient-to-tl dark:bg-gradient-to-br from-teal-50/25 to-stone-50 dark:from-teal-900/25 dark:to-transparent shadow relative content-center justify-center rounded text-stone-900 dark:text-stone-50">
-      <header>
-        <h1 className="text-xl font-serif font-semibold">{title}</h1>
-      </header>
+    <section className="flex flex-col gap-4 p-4 bg-stone-50 dark:bg-stone-900 content-center justify-center text-stone-900 dark:text-stone-50 border border-stone-200 dark:border-stone-800">
+      <Label variant="title" as="h1">
+        {title}
+      </Label>
       <div className="flex-1">
         <div>{description}</div>
         <div>{children}</div>
       </div>
-      <Button
-        as={Link}
-        href={detailsHref}
-        size="large"
-        className="uppercase font-serif font-medium text-center"
-      >
-        {detailsLabel}
+      <Button as={Link} href={detailsHref} className="text-center">
+        <Label variant="label" as="span">
+          {detailsLabel}
+        </Label>
       </Button>
     </section>
   );

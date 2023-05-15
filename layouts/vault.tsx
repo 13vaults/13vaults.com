@@ -60,7 +60,7 @@ export default function VaultLayout({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed bottom-4 right-4 flex gap-1 items-center p-2 rounded-full bg-white shadow"
+        className="fixed bottom-4 right-4 flex gap-1 items-center p-2 rounded-full bg-white shadow text-black"
       >
         <ChevronUpIcon className="h-4 w-4" />
       </m.button>

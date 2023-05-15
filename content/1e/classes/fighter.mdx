@@ -21,6 +21,7 @@ best_damage_die: d10
 abilities:
   - name: Melee Attack
     _type: Basic Attack
+    usage: at-will
     description: |-
       At-Will
 
@@ -35,6 +36,7 @@ abilities:
       **Miss:** Damage equal to your level
   - name: Ranged Attack
     _type: Basic Attack
+    usage: at-will
     description: |-
       At-Will
 
@@ -66,6 +68,7 @@ abilities:
         description: Whenever a non-mook enemy fails to disengage from you, it’s vulnerable to your attacks for the rest of the battle.
   - name: Cleave
     _type: Talent
+    usage: per-battle
     description: Once per battle, make a fighter melee attack as a free action after one of your melee attacks drops an enemy to 0 hp.
     feats:
       - tier: adventurer
@@ -76,6 +79,7 @@ abilities:
         description: You gain a +4 attack bonus with your Cleave attacks.
   - name: Comeback Strike
     _type: Talent
+    usage: per-battle
     description: Once per battle as a free action, make another attack with a –2 penalty after your first fighter attack during your turn misses.
     feats:
       - tier: adventurer
@@ -111,6 +115,7 @@ abilities:
         description: Your crit range with ranged weapon attacks expands by 1 (usually to 19+).
   - name: Heavy Warrior
     _type: Talent
+    usage: per-battle
     description: Once per battle while wearing heavy armor, when you are hit by an attack that targets AC, as a free action, you can take half damage from that attack instead.
     feats:
       - tier: adventurer
@@ -121,6 +126,7 @@ abilities:
         description: Once per day, you can reroll a recharge roll for a magic armor power.
   - name: Power Attack
     _type: Talent
+    usage: per-battle
     description: |-
       Once per battle before you roll an attack, you can declare you’re using Power Attack to deal additional damage with that attack roll.
       If the attack hits, you deal the following additional damage:
@@ -156,6 +162,7 @@ abilities:
     description: Once per battle, you can rally using a quick action instead of a standard action.
   - name: Brace for It
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -171,6 +178,7 @@ abilities:
         description: Brace for it works against any number of critical hits before your next turn.
   - name: Carve an Opening
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -185,6 +193,7 @@ abilities:
         description: Feat The crit range bonus from carve an opening is +2 instead of +1.
   - name: Deadly Assault
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee or ranged attack
 
@@ -200,6 +209,7 @@ abilities:
         description: Deadly assault now also triggers on a natural 17+.
   - name: Defensive Fighting
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -217,6 +227,7 @@ abilities:
         description: You also gain the bonus to Mental Defense.
   - name: Grim Intent
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -228,6 +239,7 @@ abilities:
       At 5th level, instead add 2 total WEAPON dice; at 8th level, instead add 3 total WEAPON dice.
   - name: Heavy Blows
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -243,6 +255,7 @@ abilities:
         description: The bonus instead equals double the escalation die with a one-handed weapon, or triple it with a two-handed weapon.
   - name: Precision Attack
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -257,6 +270,7 @@ abilities:
         description: You can now use precision attack with a ranged attack.
   - name: Second Shot
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible ranged attack
 
@@ -272,6 +286,7 @@ abilities:
         description: The second shot attack penalty is –2 instead.
   - name: Shield Bash
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -289,6 +304,7 @@ abilities:
         description: Once per battle, you can also daze the target (save ends) of your shield bash attack, if that enemy is staggered.
   - name: Two-Weapon Pressure
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -304,6 +320,7 @@ abilities:
         description: The bonus increases to +4.
   - name: Hack & Slash
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -316,6 +333,7 @@ abilities:
       **Effect:** Make another melee weapon attack against a different target.
   - name: Make 'em Flinch
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible ranged attack
 
@@ -328,6 +346,7 @@ abilities:
       at 8th level the damage bonus increases to triple it.
   - name: Punish Them
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -347,6 +366,7 @@ abilities:
         description: The target is now weakened (save ends) instead of dazed.
   - name: Steady Now
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -360,6 +380,7 @@ abilities:
         description: The temporary hit points increase to double your Constitution modifier.
   - name: Strong Guard
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -377,6 +398,7 @@ abilities:
         description: Bonus increases to +3.
   - name: A Dozen Cuts
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -390,6 +412,7 @@ abilities:
         description: Once per battle, you can trigger a dozen cuts with a natural odd hit.
   - name: Hero's Skill
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee or ranged attack
 
@@ -405,6 +428,7 @@ abilities:
         description: The damage is no longer halved on a hit after using hero’s skill.
   - name: Sword Master's Anticipation
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -417,6 +441,7 @@ abilities:
       **Effect:** The next time you use Skilled Intercept this battle, your Skilled Intercept save automatically succeeds.
   - name: Never Surrender
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -430,6 +455,7 @@ abilities:
         description: You gain a +2 bonus to the save.
   - name: Spinning Charge
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -446,6 +472,7 @@ abilities:
         description: If the escalation die is 3+, the second spinning charge attack deals full damage.
   - name: Sword of Destiny
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -459,6 +486,7 @@ abilities:
         description: If the escalation die is 3+, you can now trigger sword of destiny with a natural 18+.
   - name: Combat Mastery
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 
@@ -474,6 +502,7 @@ abilities:
         description: Combat mastery now also triggers on any natural even hit.
   - name: Set 'em Up
     _type: Maneuver
+    usage: at-will
     description: |-
       Flexible melee attack
 

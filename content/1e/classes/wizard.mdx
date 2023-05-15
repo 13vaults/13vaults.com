@@ -17,6 +17,7 @@ best_damage_die: d6
 abilities:
   - name: Melee Attack
     _type: Basic Attack
+    usage: at-will
     description: |-
       At-Will
 
@@ -31,6 +32,7 @@ abilities:
       **Miss:** —
   - name: Ranged Attack
     _type: Basic Attack
+    usage: at-will
     description: |-
       At-Will
 
@@ -114,6 +116,7 @@ abilities:
         description: Whenever you evoke a spell, you can reroll one of the attack rolls if that natural roll was less than or equal to the escalation die. You must take the new result.
   - name: High Arcana
     _type: Talent
+    usage: per-battle
     description: |-
       Your study of the highest orders of magic gives you options that lesser wizards cannot match: Memorization and a bonus spell: counter-magic
 
@@ -219,6 +222,7 @@ abilities:
         description: As above, but you can cast three _utility spells_ instead of one.
   - name: Disguise Self
     _type: Utility Spell 1
+    usage: per-day
     description: |-
       **Range:** Close-quarters spell
 
@@ -240,6 +244,7 @@ abilities:
       9th level spell: You can now target an ally with the spell; you can also now use it on up to two creatures at once.
   - name: Feather Fall
     _type: Utility Spell 1
+    usage: per-day
     description: |-
       **Range:** Close-quarters spell
 
@@ -260,6 +265,7 @@ abilities:
       9th level spell: You gain some control over where a target falls, like a quickly gliding feather.
   - name: Hold Portal
     _type: Utility Spell 1
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -280,6 +286,7 @@ abilities:
       9th level spell: Champion-tier creatures can’t enter. Epic-tier creatures can’t get through for an hour.
   - name: Levitate
     _type: Utility Spell 3
+    usage: per-day
     description: |-
       Ranged spell
 
@@ -297,6 +304,7 @@ abilities:
       9th level spell: The spell can now affect five targets.
   - name: Message
     _type: Utility Spell 3
+    usage: per-day
     description: |-
       **Range:** Close-quarters spell
 
@@ -320,6 +328,7 @@ abilities:
       9th level spell: From any city to any other city, or across a sea.
   - name: Speak with Item
     _type: Utility Spell 3
+    usage: per-day
     description: |-
       **Range:** Close-quarters spell
 
@@ -338,6 +347,7 @@ abilities:
       9th level spell: If the item recharge roll fails, you keep this spell, but the item won’t talk to you until after your next full heal-up.
   - name: Water Breathing
     _type: Utility Spell 5
+    usage: per-day
     description: |-
       **Range:** Close-quarters spell
 
@@ -354,6 +364,7 @@ abilities:
       9th level spell: The spell affects you and 1d6 + 2 nearby allies for 4d6 hours.
   - name: Scrying
     _type: Utility Spell 7
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -365,6 +376,7 @@ abilities:
       Scrying as a single standard action won’t yield much. Concentrating on the spell for a while with props like a scrying pool or a crystal ball will work better.
   - name: Acid Arrow
     _type: Spell 1
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -387,6 +399,7 @@ abilities:
       9th level spell: 5d4 x 10 damage, and 40 ongoing damage; 40 ongoing on a miss.
   - name: Blur
     _type: Spell 1
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -405,6 +418,7 @@ abilities:
       9th level spell: Miss 30% of the time, and you can now target two creatures with the spell.
   - name: Charm Person
     _type: Spell 1
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -430,6 +444,7 @@ abilities:
       9th level spell: Target with 266 hp or fewer.
   - name: Color Spray
     _type: Spell 1
+    usage: per-battle
     description: |-
       **Range:** Close-quarters spell
 
@@ -459,6 +474,7 @@ abilities:
         description: The spell now targets 1d4 + 1 nearby enemies in a group.
   - name: Magic Missile
     _type: Spell 1
+    usage: at-will
     description: |-
       Ranged spell; At-Will
 
@@ -486,6 +502,7 @@ abilities:
         description: The 7th and 9th level versions of the spell now use d8s as damage dice.
   - name: Ray of Frost
     _type: Spell 1
+    usage: at-will
     description: |-
       Ranged spell; At-Will
 
@@ -515,6 +532,7 @@ abilities:
         description: When you cast the spell you can change the damage type to lightning or negative energy.
   - name: Shield
     _type: Spell 1
+    usage: recharge
     description: |-
       **Range:** Close-quarters spell
 
@@ -542,6 +560,7 @@ abilities:
         description: Hit or miss, you take only half damage from any attack you use shield against.
   - name: Shocking Grasp
     _type: Spell 1
+    usage: at-will
     description: |-
       Range: Close-quarters spell
 
@@ -573,6 +592,7 @@ abilities:
         description: The damage dice of the spell increase to d8s.
   - name: Confusion
     _type: Spell 3
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -600,6 +620,7 @@ abilities:
         description: The save against confused is now a difficult save (16+).
   - name: Crescendo
     _type: Spell 3
+    usage: at-will
     description: |-
       **Range:** Close-quarters spell
 
@@ -624,6 +645,7 @@ abilities:
       9th level spell: 10d12 damage.
   - name: Force Salvo
     _type: Spell 3
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -651,6 +673,7 @@ abilities:
         description: Increase the number of bolts by 1.
   - name: Hold Monster
     _type: Spell 3
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -678,6 +701,7 @@ abilities:
         description: Increase the limit by +50 hp.
   - name: Lightning Bolt
     _type: Spell 3
+    usage: per-day
     description: |-
       **Range:** Close-quarters spell
 
@@ -705,6 +729,7 @@ abilities:
         description: A natural even hit now deals 20 ongoing lightning damage (hard save ends, 16+).
   - name: Rebuke
     _type: Spell 3
+    usage: per-battle
     description: |-
       Ranged spell; Cyclic (once per battle OR at-will when the escalation die is even)
 
@@ -730,6 +755,7 @@ abilities:
         description: When you roll a natural even miss against the target, you daze it until the end of your next turn.
   - name: Sleep
     _type: Spell 3
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -752,6 +778,7 @@ abilities:
       9th level spell: Targets 9d20 + 200 max hp
   - name: Teleport Shield
     _type: Spell 3
+    usage: per-day
     description: |-
       **Range:** Close-quarters spell
 
@@ -777,6 +804,7 @@ abilities:
         description: You can now teleport the enemy somewhere far away that you can see; other restrictions still apply.
   - name: Denial
     _type: Spell 5
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -800,6 +828,7 @@ abilities:
         description: Increase the number of targets to 1d4 + 1.
   - name: Dimension Door
     _type: Spell 5
+    usage: per-day
     description: |-
       **Range:** Close-quarters spell
 
@@ -818,6 +847,7 @@ abilities:
       9th level spell: You can take one ally who is next to you along with you as you teleport.
   - name: Fireball
     _type: Spell 5
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -845,6 +875,7 @@ abilities:
         description: Increase the number of targets to 1d3 + 1 instead of 1d3.
   - name: Invisibility
     _type: Spell 5
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -861,6 +892,7 @@ abilities:
       9th level spell: Creatures made invisible by the spell have a 25% chance of remaining invisible the first time (and first time only) they attack or get flashy.
   - name: Blink
     _type: Spell 7
+    usage: per-day
     description: |-
       **Range:** Close-quarters spell
 
@@ -877,6 +909,7 @@ abilities:
       9th level spell: 75% chance.
   - name: Flight
     _type: Spell 7
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -889,6 +922,7 @@ abilities:
       9th level spell: When you cast the spell, you can choose one: the effect lasts for an hour OR you can target 1d4 + 1 creatures for the normal duration.
   - name: Haste
     _type: Spell 7
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -903,6 +937,7 @@ abilities:
       9th level spell: The roll for additional standard actions is now 11+ instead of 16+.
   - name: Invisibility Purge
     _type: Spell 7
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -918,6 +953,7 @@ abilities:
       9th level spell: The spell also affects far away targets that you could normally see.
   - name: Overcome Resistance
     _type: Spell 7
+    usage: recharge
     description: |-
       Ranged spell; Recharge 16+ after battle
 
@@ -930,6 +966,7 @@ abilities:
       9th level spell: You can now target 1d4 nearby allies with the spell.
   - name: Transfer Enchantment
     _type: Spell 7
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -949,6 +986,7 @@ abilities:
       9th level spell: 2d10 x 10 damage; if the spell misses, you regain it during your next quick rest.
   - name: Disintegrate
     _type: Spell 9
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -965,6 +1003,7 @@ abilities:
       **Miss:** Half damage.
   - name: Meteor Swarm
     _type: Spell 9
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
@@ -988,6 +1027,7 @@ abilities:
         description: Each meteor now deals 5d4 x 10 damage.
   - name: Teleport
     _type: Spell 9
+    usage: per-day
     description: |-
       Ranged spell; Daily
 
