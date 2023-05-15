@@ -20,33 +20,27 @@ export default function Label<T extends React.ElementType = "p">({
 }: LabelP<T> & Omit<React.ComponentPropsWithoutRef<T>, keyof LabelP<T>>) {
   const LabelComponent = as || "p";
 
-  const variantStyleMap = new Map<typeof variant, string>()
-    .set(
-      "display-large",
-      "text-7xl font-bold font-display-serif tracking-tighter uppercase"
-    )
-    .set(
-      "display",
-      "text-6xl font-bold font-display-serif tracking-tighter uppercase"
-    )
-    .set(
-      "display-small",
-      "text-5xl font-bold font-display-serif tracking-tighter uppercase"
-    )
-    .set("headline-large", "text-5xl font-light font-display-serif")
-    .set("headline", "text-4xl font-light font-display-serif")
-    .set("headline-small", "text-3xl font-light font-display-serif")
-    .set("title-large", "text-3xl font-medium font-serif")
-    .set("title", "text-2xl font-medium font-serif tracking-tight")
-    .set("title-small", "text-xl font-medium font-serif tracking-tighter")
-    .set("label-large", "text-xl font-semibold")
-    .set("label", "text-lg font-semibold tracking-tight")
-    .set("label-small", "text-base font-semibold tracking-tighter")
-    .set("body-large", "text-lg font-normal")
-    .set("body", "text-base font-normal")
-    .set("body-small", "text-sm font-normal");
+  const variantStyleMap: Record<LabelVariant, string> = {
+    "display-large":
+      "text-7xl font-bold font-display-serif tracking-tighter uppercase",
+    display: "text-6xl font-bold font-display-serif tracking-tighter uppercase",
+    "display-small":
+      "text-5xl font-bold font-display-serif tracking-tighter uppercase",
+    "headline-large": "text-5xl font-light font-display-serif",
+    headline: "text-4xl font-light font-display-serif",
+    "headline-small": "text-3xl font-light font-display-serif",
+    "title-large": "text-3xl font-medium font-serif",
+    title: "text-2xl font-medium font-serif tracking-tight",
+    "title-small": "text-xl font-medium font-serif tracking-tighter",
+    "label-large": "text-xl font-sans-sc font-semibold",
+    label: "text-lg font-sans-sc font-semibold tracking-tight",
+    "label-small": "text-base font-sans-sc font-semibold tracking-tighter",
+    "body-large": "text-lg font-normal",
+    body: "text-base font-normal",
+    "body-small": "text-sm font-normal",
+  };
 
-  const classes = clsx(className, variantStyleMap.get(variant));
+  const classes = clsx(className, variantStyleMap[variant]);
 
   return <LabelComponent className={classes} {...props} />;
 }

@@ -1,4 +1,4 @@
-import { Source_Sans_Pro } from "next/font/google";
+import { Alegreya_Sans, Alegreya_Sans_SC } from "next/font/google";
 import localFont from "next/font/local";
 
 const reforma1969 = localFont({
@@ -38,46 +38,17 @@ const reforma1969 = localFont({
   ],
 });
 
-const reforma2018 = localFont({
+const alegreyaSans = Alegreya_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  style: ["normal", "italic"],
   preload: false,
   display: "swap",
-  src: [
-    {
-      path: "../public/fonts/Reforma2018-Blanca.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/Reforma2018-BlancaItalica.woff2",
-      weight: "300",
-      style: "italic",
-    },
-    {
-      path: "../public/fonts/Reforma2018-Gris.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/Reforma2018-GrisItalica.woff2",
-      weight: "500",
-      style: "italic",
-    },
-    {
-      path: "../public/fonts/Reforma2018-Negra.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/Reforma2018-NegraItalica.woff2",
-      weight: "700",
-      style: "italic",
-    },
-  ],
 });
 
-const sourceSans = Source_Sans_Pro({
+const alegreyaSansSc = Alegreya_Sans_SC({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "700"],
   style: ["normal", "italic"],
   preload: false,
   display: "swap",
@@ -87,9 +58,9 @@ export default function FontStyles() {
   return (
     <style jsx global>{`
       :root {
-        --font-source-sans: ${sourceSans.style.fontFamily};
-        --font-reforma-2018: ${reforma2018.style.fontFamily};
+        --font-alegreya-sans: ${alegreyaSans.style.fontFamily};
         --font-reforma-1969: ${reforma1969.style.fontFamily};
+        --font-alegreya-sans-sc: ${alegreyaSansSc.style.fontFamily};
       }
     `}</style>
   );

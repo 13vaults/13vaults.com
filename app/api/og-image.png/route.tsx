@@ -20,17 +20,17 @@ export async function GET(request: NextRequest) {
 
     if (isValidTitle) {
       const fontData = await fetch(
-        new URL("../../../public/fonts/IkariusADFStd-Bold.otf", import.meta.url)
+        new URL("../../../public/fonts/Reforma1969-Negra.otf", import.meta.url)
       ).then((response) => response.arrayBuffer());
 
       return new ImageResponse(
-        <SocialHero fontFamily="Ikarius" title={title} />,
+        <SocialHero fontFamily="Reforma 1969" title={title} />,
         {
           width: 1200,
           height: 630,
           fonts: [
             {
-              name: "Ikarius",
+              name: "Reforma 1969",
               data: fontData,
               style: "normal",
               weight: 700,

@@ -22,7 +22,11 @@ export default {
         wide: "16 / 9",
       },
       fontFamily: {
-        sans: ["var(--font-source-sans)", ...defaultTheme.fontFamily.sans],
+        "sans-sc": [
+          "var(--font-alegreya-sans-sc)",
+          ...defaultTheme.fontFamily.sans,
+        ],
+        sans: ["var(--font-alegreya-sans)", ...defaultTheme.fontFamily.sans],
         serif: ["var(--font-reforma-1969)", ...defaultTheme.fontFamily.serif],
         "display-serif": [
           "var(--font-reforma-1969)",

@@ -19,6 +19,7 @@ export default function SocialHero({
         fontWeight: 700,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        fontVariantNumeric: "normal",
         backgroundImage:
           process.env.NODE_ENV === "development"
             ? `url("http://localhost:3000/images/social-banner-sm.jpg")`
