@@ -173,73 +173,66 @@ export default function AdversaryStatBlock({
   );
 
   return (
-    <section className="bg-khaki-50 dark:bg-khaki-200 text-stone-900 print:bg-white">
-      <header className="px-2 py-1 bg-teal-900 bg-gradient-to-r from-teal-700 to-teal-700/0 text-stone-50 flex flex-col print:bg-white print:text-black print:from-transparent print:to-transparent">
+    <section className="bg-khaki-50 dark:bg-khaki-100 text-stone-900 print:bg-white">
+      <header className="px-2 py-1 bg-teal-900 bg-gradient-to-r from-teal-700 to-teal-700/0 text-stone-50 flex flex-col print:bg-white print:text-black print:from-transparent print:to-transparent text-shadow">
         <Label as="h1" variant="title-small">
           {name}
         </Label>
         <Label variant="label">{adversaryTitle}</Label>
       </header>
-      <div className="flex flex-col gap-1 py-1">
+      <div className="flex flex-col gap-1 pb-1">
         {flavorText ? (
-          <Label className="block px-2">
+          <Label className="block px-2 pt-1">
             <em>{flavorText}</em>
           </Label>
         ) : null}
-        <section className="px-2">
-          <Label>{t("adversary-block.initiative", { initiative })}</Label>
-        </section>
-        <div className="px-2 py-1 bg-khaki-100 dark:bg-khaki-300 print:bg-white flex gap-2 items-center">
-          <Label as="section" aria-label={t("adversary-block.hp-label")}>
-            <Trans
-              t={t}
-              i18nKey="adversary-block.hp"
-              values={{ hp }}
-              components={{ strong: <strong /> }}
-            />
-          </Label>
-          <Label as="section" aria-label={t("adversary-block.ac-label")}>
-            <Trans
-              t={t}
-              i18nKey="adversary-block.ac"
-              values={{ ac }}
-              components={{ strong: <strong /> }}
-            />
-          </Label>
-          <Label as="section" aria-label={t("adversary-block.pd-label")}>
-            <Trans
-              t={t}
-              i18nKey="adversary-block.pd"
-              values={{ pd }}
-              components={{ strong: <strong /> }}
-            />
-          </Label>
-          <Label as="section" aria-label={t("adversary-block.md-label")}>
-            <Trans
-              t={t}
-              i18nKey="adversary-block.md"
-              values={{ md }}
-              components={{ strong: <strong /> }}
-            />
-          </Label>
+        <div className="px-2 py-0 bg-black/10 print:bg-white">
+          <div>
+            <Label>{t("adversary-block.initiative", { initiative })}</Label>
+          </div>
+          <div className="flex gap-1 items-center">
+            <Label as="section" aria-label={t("adversary-block.hp-label")}>
+              <Trans
+                t={t}
+                i18nKey="adversary-block.hp"
+                values={{ hp }}
+                components={{ strong: <strong /> }}
+              />
+            </Label>
+            <Label as="section" aria-label={t("adversary-block.ac-label")}>
+              <Trans
+                t={t}
+                i18nKey="adversary-block.ac"
+                values={{ ac }}
+                components={{ strong: <strong /> }}
+              />
+            </Label>
+            <Label as="section" aria-label={t("adversary-block.pd-label")}>
+              <Trans
+                t={t}
+                i18nKey="adversary-block.pd"
+                values={{ pd }}
+                components={{ strong: <strong /> }}
+              />
+            </Label>
+            <Label as="section" aria-label={t("adversary-block.md-label")}>
+              <Trans
+                t={t}
+                i18nKey="adversary-block.md"
+                values={{ md }}
+                components={{ strong: <strong /> }}
+              />
+            </Label>
+          </div>
         </div>
         {attacks && size(attacks) > 0 ? (
           <ol
             aria-label={t("adversary-block.attack-list-label") as string}
-            className="px-2 flex flex-col gap-2"
+            className="px-2 flex flex-col gap-1"
           >
             {map(attacks, (attack) => (
               <li key={attack.name}>
                 <div>
-                  {attack.limitedUseDescription ? (
-                    <Label>
-                      <em>
-                        {t("adversary-block.limited-use", {
-                          description: attack.limitedUseDescription,
-                        })}
-                      </em>
-                    </Label>
-                  ) : null}
                   <div className="-indent-4 ms-4">
                     <Label as="span" variant="label-small">
                       {attackName(attack)}
@@ -247,34 +240,47 @@ export default function AdversaryStatBlock({
                     &nbsp;
                     <Label as="span">{attack.damageEffects}</Label>
                   </div>
-                  {attack.triggeredEffects ? (
-                    <ol
-                      aria-label={
-                        t(
-                          "adversary-block.attack.triggered-effects-list-label"
-                        ) as string
-                      }
-                      className="-indent-4 ms-8"
-                    >
-                      {map(attack.triggeredEffects, (effect) => (
-                        <li key={effect.name}>
-                          <div>
-                            <Label>
-                              <Trans
-                                t={t}
-                                i18nKey="adversary-block.attack.effect"
-                                values={{
-                                  name: effect.name,
-                                  description: effect.text,
-                                }}
-                                components={{ em: <em /> }}
-                              />
-                            </Label>
-                          </div>
-                        </li>
-                      ))}
-                    </ol>
-                  ) : null}
+                  <ol
+                    aria-label={
+                      t(
+                        "adversary-block.attack.triggered-effects-list-label"
+                      ) as string
+                    }
+                    className="-indent-4 ms-8"
+                  >
+                    {attack.triggeredEffects
+                      ? map(attack.triggeredEffects, (effect) => (
+                          <li key={effect.name}>
+                            <div>
+                              <Label>
+                                <Trans
+                                  t={t}
+                                  i18nKey="adversary-block.attack.effect"
+                                  values={{
+                                    name: effect.name,
+                                    description: effect.text,
+                                  }}
+                                  components={{ em: <em /> }}
+                                />
+                              </Label>
+                            </div>
+                          </li>
+                        ))
+                      : null}
+                    {attack.limitedUseDescription ? (
+                      <li>
+                        <div>
+                          <Label>
+                            <em>
+                              {t("adversary-block.limited-use", {
+                                description: attack.limitedUseDescription,
+                              })}
+                            </em>
+                          </Label>
+                        </div>
+                      </li>
+                    ) : null}
+                  </ol>
                 </div>
               </li>
             ))}
