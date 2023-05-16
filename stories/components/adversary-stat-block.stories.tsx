@@ -40,6 +40,10 @@ const meta: Meta<typeof AdversaryStatBlock> = {
     role: "troop",
     type: "BEAST",
     sizeOrStrength: "normal",
+    hp: 68,
+    ac: 17,
+    pd: 16,
+    md: 12,
     flavorText:
       "The largest nests of these spiders exist in the root systems of abandoned elven forests and in the caverns surrounding dark elf temples. Elsewhere, you’re normally dealing with only one or two spiders at a time on the hunt for a meal.",
     specials: [

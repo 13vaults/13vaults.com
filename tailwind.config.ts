@@ -14,6 +14,21 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        khaki: {
+          50: "#f0e5d8",
+          100: "#e3ccaf",
+          200: "#d6b380",
+          300: "#c49b59",
+          400: "#aa864d",
+          500: "#907241",
+          600: "#775e36",
+          700: "#5f4b2b",
+          800: "#483921",
+          900: "#322817",
+          950: "#1d170d",
+        },
+      },
       backgroundImage: {
         texture: "url(/texture.webp)",
         "texture-dark": "url(/texture-dark.webp)",
