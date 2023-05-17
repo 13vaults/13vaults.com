@@ -120,7 +120,7 @@ export default function AdversaryStatBlock({
             ordinal: true,
             modifier: t(`adversary-block.modifier.${strengthModifier}`),
           }}
-          components={{ em: <em />, wbr: <wbr /> }}
+          components={{ em: <em /> }}
         />
       );
     }
@@ -139,7 +139,7 @@ export default function AdversaryStatBlock({
             type,
             ordinal: true,
           }}
-          components={{ em: <em />, wbr: <wbr /> }}
+          components={{ em: <em /> }}
         />
       );
     }
@@ -157,7 +157,7 @@ export default function AdversaryStatBlock({
             type,
             ordinal: true,
           }}
-          components={{ em: <em />, wbr: <wbr /> }}
+          components={{ em: <em /> }}
         />
       );
     }
@@ -171,7 +171,7 @@ export default function AdversaryStatBlock({
           type,
           ordinal: true,
         }}
-        components={{ em: <em />, wbr: <wbr /> }}
+        components={{ em: <em /> }}
       />
     );
   }, [level, role, strengthModifier, type, sizeOrStrength, t]);
