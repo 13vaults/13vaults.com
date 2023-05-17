@@ -27,7 +27,7 @@ type Attack = {
 
 interface AdversaryStatBlockP {
   name: string;
-  strengthModifier?: "elite" | "weakling";
+  strengthModifier?: "normal" | "elite" | "weakling";
   sizeOrStrength?:
     | "normal"
     | "large"
@@ -62,7 +62,7 @@ export default function AdversaryStatBlock({
   name,
   initiative,
   sizeOrStrength = "normal",
-  strengthModifier,
+  strengthModifier = "normal",
   type,
   role,
   level,
@@ -108,7 +108,7 @@ export default function AdversaryStatBlock({
   );
 
   const adversaryTitle = useMemo(() => {
-    if (strengthModifier && sizeOrStrength === "normal") {
+    if (strengthModifier !== "normal" && sizeOrStrength === "normal") {
       return (
         <Trans
           t={t}
@@ -120,11 +120,11 @@ export default function AdversaryStatBlock({
             ordinal: true,
             modifier: t(`adversary-block.modifier.${strengthModifier}`),
           }}
-          components={{ em: <em /> }}
+          components={{ em: <em />, wbr: <wbr /> }}
         />
       );
     }
-    if (strengthModifier && sizeOrStrength !== "normal") {
+    if (strengthModifier !== "normal" && sizeOrStrength !== "normal") {
       return (
         <Trans
           t={t}
@@ -139,7 +139,7 @@ export default function AdversaryStatBlock({
             type,
             ordinal: true,
           }}
-          components={{ em: <em /> }}
+          components={{ em: <em />, wbr: <wbr /> }}
         />
       );
     }
@@ -157,7 +157,7 @@ export default function AdversaryStatBlock({
             type,
             ordinal: true,
           }}
-          components={{ em: <em /> }}
+          components={{ em: <em />, wbr: <wbr /> }}
         />
       );
     }
@@ -171,27 +171,29 @@ export default function AdversaryStatBlock({
           type,
           ordinal: true,
         }}
-        components={{ em: <em /> }}
+        components={{ em: <em />, wbr: <wbr /> }}
       />
     );
   }, [level, role, strengthModifier, type, sizeOrStrength, t]);
 
   return (
-    <section className="bg-khaki-50 dark:bg-stone-800 text-stone-900 dark:text-stone-50 print:bg-white  not-prose border-b-2 border-black/25 dark:border-white/10">
-      <header className="px-2 py-1 bg-teal-900 dark:bg-teal-950 bg-gradient-to-l from-teal-700 to-teal-700/0 dark:from-teal-900 dark:to-teal-900/0 text-stone-50 flex flex-col print:bg-white print:text-black print:from-transparent print:to-transparent text-shadow">
-        <Label as="h1" variant="title-small">
+    <section className="bg-khaki-50 dark:bg-stone-800 text-stone-900 dark:text-stone-50 print:bg-white not-prose border-b-2 border-black/25 dark:border-white/10 print:border-none">
+      <header className="px-2 py-1 bg-teal-900 dark:bg-teal-950 bg-gradient-to-l from-teal-700 to-teal-700/0 dark:from-teal-900 dark:to-teal-900/0 text-stone-50 flex print:bg-white print:text-black print:from-transparent print:to-transparent text-shadow justify-between flex-wrap items-end gap-x-2 flex-row print:flex-col print:items-start">
+        <Label as="h1" variant="title" className="flex-grow">
           {name}
         </Label>
-        <Label variant="label">{adversaryTitle}</Label>
+        <Label variant="label" className="flex-shrink">
+          {adversaryTitle}
+        </Label>
       </header>
       <div className="flex flex-col gap-1 pb-1">
-        <section>
-          {flavorText ? (
+        {flavorText ? (
+          <section>
             <Label className="block px-2 pt-1">
               <em>{flavorText}</em>
             </Label>
-          ) : null}
-        </section>
+          </section>
+        ) : null}
         <section className="px-2 py-0 bg-black/5 dark:bg-white/5 print:bg-white">
           <div>
             <Label>

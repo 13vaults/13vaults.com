@@ -4,6 +4,21 @@ import { Meta, StoryObj } from "@storybook/react";
 const meta: Meta<typeof AdversaryStatBlock> = {
   title: "Shared/Adversary Stat Block",
   component: AdversaryStatBlock,
+  args: {
+    vulnerabilities: [],
+    level: 0,
+    hp: 0,
+    ac: 0,
+    pd: 0,
+    md: 0,
+    name: "",
+    type: "",
+    role: "troop",
+    initiative: ["+0"],
+    attacks: [],
+    specials: [],
+    nastierSpecials: [],
+  },
   argTypes: {
     sizeOrStrength: {
       options: [
@@ -17,7 +32,7 @@ const meta: Meta<typeof AdversaryStatBlock> = {
       control: { type: "select" },
     },
     strengthModifier: {
-      options: [null, "elite", "weakling"],
+      options: ["normal", "elite", "weakling"],
       control: { type: "select" },
     },
     role: {
@@ -33,7 +48,19 @@ const meta: Meta<typeof AdversaryStatBlock> = {
       ],
       control: { type: "select" },
     },
+    vulnerabilities: {
+      control: { type: "object" },
+      defaultValue: [],
+    },
   },
+};
+
+export default meta;
+
+type Story = StoryObj<typeof AdversaryStatBlock>;
+
+export const AilorTheDracoDruid: Story = {
+  name: "Ailor the Draco-Druid",
   args: {
     name: "Ailor the Draco-Druid",
     initiative: ["+23", "+17", "+12"],
@@ -165,16 +192,25 @@ of his next turn
   },
 };
 
-export default meta;
-
-type Story = StoryObj<typeof AdversaryStatBlock>;
-
-export const Default: Story = {
-  render(props) {
-    return (
-      <div className="max-w-2xl">
-        <AdversaryStatBlock {...props} />
-      </div>
-    );
+export const SkeletonWarrior: Story = {
+  args: {
+    name: "Skeleton Warrior",
+    level: 2,
+    role: "troop",
+    type: "UNDEAD",
+    initiative: ["+8"],
+    vulnerabilities: ["holy"],
+    ac: 16,
+    pd: 14,
+    md: 11,
+    hp: 26,
+    attacks: [
+      {
+        name: "Spear",
+        attackModifier: 8,
+        targetDefense: "AC",
+        damageEffects: "6 damage",
+      },
+    ],
   },
 };
