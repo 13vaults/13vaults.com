@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { map } from "lodash-es";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Label from "./label";
 import { useTranslation } from "next-i18next";

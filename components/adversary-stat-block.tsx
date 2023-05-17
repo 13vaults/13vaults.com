@@ -4,14 +4,16 @@ import { useRouter } from "next/router";
 import { defaultLocale } from "@/lib/locales";
 import { useCallback, useMemo } from "react";
 import { map, size } from "lodash-es";
+import ReactMarkdown from "react-markdown";
 
 type Effect = {
   name: string;
   text: string;
+  attacks?: Attack[];
 };
 
 type Attack = {
-  speciallyTriggered?: boolean;
+  trigger?: string;
   range?: "melee" | "close-quarters" | "ranged";
   name: string;
   attackModifier: number;
@@ -30,7 +32,8 @@ interface AdversaryStatBlockP {
     | "large"
     | "double-strength"
     | "huge"
-    | "triple-strength";
+    | "triple-strength"
+    | "quadruple-strength";
   level: number;
   flavorText?: string;
   role:
@@ -43,7 +46,7 @@ interface AdversaryStatBlockP {
     | "archer"
     | "leader";
   type: string;
-  initiative: number;
+  initiative: string[];
   attacks?: Attack[];
   specials?: Effect[];
   nastierSpecials?: Effect[];
@@ -51,6 +54,7 @@ interface AdversaryStatBlockP {
   pd: number;
   md: number;
   hp: number;
+  vulnerabilities?: string[];
 }
 
 export default function AdversaryStatBlock({
@@ -68,16 +72,38 @@ export default function AdversaryStatBlock({
   ac,
   pd,
   md,
+  nastierSpecials,
+  vulnerabilities,
 }: AdversaryStatBlockP) {
   const { t } = useTranslation("common");
   const { locale = defaultLocale } = useRouter();
-  const attackTargetListFormatter = useMemo(
+
+  const vulnerabilitiesListFormatter = useMemo(
     () =>
       new Intl.ListFormat(locale, {
         style: "short",
         type: "unit",
       }),
     [locale]
+  );
+
+  const initiativeListFormatter = useMemo(
+    () =>
+      new Intl.ListFormat(locale, {
+        style: "short",
+        type: "unit",
+      }),
+    [locale]
+  );
+
+  const vulnerabilitiesList = useMemo(
+    () => vulnerabilitiesListFormatter.format(vulnerabilities || ""),
+    [vulnerabilitiesListFormatter, vulnerabilities]
+  );
+
+  const initiativeList = useMemo(
+    () => initiativeListFormatter.format(initiative || ""),
+    [initiativeListFormatter, initiative]
   );
 
   const adversaryTitle = useMemo(() => {
@@ -149,47 +175,37 @@ export default function AdversaryStatBlock({
     );
   }, [level, role, strengthModifier, type, sizeOrStrength, t]);
 
-  const attackName = useCallback(
-    ({
-      range = "melee",
-      targets,
-      targetDefense,
-      name,
-      attackModifier,
-    }: Attack) => {
-      if (targets) {
-        const targetList = attackTargetListFormatter.format(targets);
-        return t(
-          `adversary-block.attack.title.${range}-with-targets-vs-${targetDefense}`,
-          { name, attackModifier, targets: targetList }
-        );
-      }
-      return t(`adversary-block.attack.title.${range}-vs-${targetDefense}`, {
-        name,
-        attackModifier,
-      });
-    },
-    [t, attackTargetListFormatter]
-  );
-
   return (
-    <section className="bg-khaki-50 dark:bg-khaki-100 text-stone-900 print:bg-white">
-      <header className="px-2 py-1 bg-teal-900 bg-gradient-to-r from-teal-700 to-teal-700/0 text-stone-50 flex flex-col print:bg-white print:text-black print:from-transparent print:to-transparent text-shadow">
+    <section className="bg-khaki-50 dark:bg-stone-800 text-stone-900 dark:text-stone-50 print:bg-white  not-prose border-b-2 border-black/25 dark:border-white/10">
+      <header className="px-2 py-1 bg-teal-900 dark:bg-teal-950 bg-gradient-to-l from-teal-700 to-teal-700/0 dark:from-teal-900 dark:to-teal-900/0 text-stone-50 flex flex-col print:bg-white print:text-black print:from-transparent print:to-transparent text-shadow">
         <Label as="h1" variant="title-small">
           {name}
         </Label>
         <Label variant="label">{adversaryTitle}</Label>
       </header>
       <div className="flex flex-col gap-1 pb-1">
-        {flavorText ? (
-          <Label className="block px-2 pt-1">
-            <em>{flavorText}</em>
-          </Label>
-        ) : null}
-        <div className="px-2 py-0 bg-black/10 print:bg-white">
+        <section>
+          {flavorText ? (
+            <Label className="block px-2 pt-1">
+              <em>{flavorText}</em>
+            </Label>
+          ) : null}
+        </section>
+        <section className="px-2 py-0 bg-black/10 dark:bg-white/5 print:bg-white">
           <div>
-            <Label>{t("adversary-block.initiative", { initiative })}</Label>
+            <Label>
+              {t("adversary-block.initiative", { initiatives: initiativeList })}
+            </Label>
           </div>
+          {vulnerabilities && size(vulnerabilities) > 0 ? (
+            <div>
+              <Label>
+                {t("adversary-block.vulnerabilities", {
+                  vulnerabilities: vulnerabilitiesList,
+                })}
+              </Label>
+            </div>
+          ) : null}
           <div className="flex gap-1 items-center">
             <Label as="section" aria-label={t("adversary-block.hp-label")}>
               <Trans
@@ -224,90 +240,214 @@ export default function AdversaryStatBlock({
               />
             </Label>
           </div>
-        </div>
+        </section>
         {attacks && size(attacks) > 0 ? (
-          <ol
+          <section>
+            <ul
+              aria-label={t("adversary-block.attack-list-label") as string}
+              className="px-2 flex flex-col gap-1"
+            >
+              {map(attacks, (attack) => (
+                <li key={attack.name}>
+                  <AttackBlock {...attack} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+        {specials && size(specials) > 0 ? (
+          <section className="px-2">
+            <ul
+              aria-label={t("adversary-block.specials-list") as string}
+              className="-indent-4 ms-4"
+            >
+              {map(specials, (effect) => (
+                <li key={effect.name}>
+                  <SpecialAbility {...effect} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+        {nastierSpecials && size(nastierSpecials) > 0 ? (
+          <section className="px-2">
+            <Label variant="label">
+              {t("adversary-block.nastier-specials-list")}
+            </Label>
+            <ul
+              aria-label={t("adversary-block.nastier-specials-list") as string}
+              className="-indent-4 ms-4"
+            >
+              {map(nastierSpecials, (effect) => (
+                <li key={effect.name}>
+                  <SpecialAbility {...effect} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
+function SpecialAbility({ name, text, attacks }: Effect) {
+  const { t } = useTranslation();
+  return (
+    <div className="-indent-4">
+      <Label as="span" className="float-left rtl:float-right">
+        <em>{t("adversary-block.special-ability.name", { name })}</em>
+      </Label>
+      <div className="indent-0">
+        <ReactMarkdown
+          components={{
+            ul: ({ children }) => (
+              <ul className="list-disc list-inside">{children}</ul>
+            ),
+            ol: ({ children }) => (
+              <ol className="list-decimal list-inside">{children}</ol>
+            ),
+          }}
+        >
+          {"&nbsp;" + text}
+        </ReactMarkdown>
+        {attacks && size(attacks) > 0 ? (
+          <ul
             aria-label={t("adversary-block.attack-list-label") as string}
             className="px-2 flex flex-col gap-1"
           >
             {map(attacks, (attack) => (
               <li key={attack.name}>
-                <div>
-                  <div className="-indent-4 ms-4">
-                    <Label as="span" variant="label-small">
-                      {attackName(attack)}
-                    </Label>
-                    &nbsp;
-                    <Label as="span">{attack.damageEffects}</Label>
-                  </div>
-                  <ol
-                    aria-label={
-                      t(
-                        "adversary-block.attack.triggered-effects-list-label"
-                      ) as string
-                    }
-                    className="-indent-4 ms-8"
-                  >
-                    {attack.triggeredEffects
-                      ? map(attack.triggeredEffects, (effect) => (
-                          <li key={effect.name}>
-                            <div>
-                              <Label>
-                                <Trans
-                                  t={t}
-                                  i18nKey="adversary-block.attack.effect"
-                                  values={{
-                                    name: effect.name,
-                                    description: effect.text,
-                                  }}
-                                  components={{ em: <em /> }}
-                                />
-                              </Label>
-                            </div>
-                          </li>
-                        ))
-                      : null}
-                    {attack.limitedUseDescription ? (
-                      <li>
-                        <div>
-                          <Label>
-                            <em>
-                              {t("adversary-block.limited-use", {
-                                description: attack.limitedUseDescription,
-                              })}
-                            </em>
-                          </Label>
-                        </div>
-                      </li>
-                    ) : null}
-                  </ol>
-                </div>
+                <AttackBlock {...attack} />
               </li>
             ))}
-          </ol>
-        ) : null}
-        {specials && size(specials) > 0 ? (
-          <ol
-            aria-label={t("adversary-block.specials-list") as string}
-            className="-indent-4 ms-4 px-2"
-          >
-            {map(specials, ({ name, text }) => (
-              <li key={name}>
-                <div>
-                  <Label>
-                    <Trans
-                      t={t}
-                      i18nKey="adversary-block.special-ability"
-                      values={{ name, description: text }}
-                      components={{ em: <em /> }}
-                    />
-                  </Label>
-                </div>
-              </li>
-            ))}
-          </ol>
+          </ul>
         ) : null}
       </div>
-    </section>
+    </div>
+  );
+}
+
+function AttackBlock(attack: Attack) {
+  const { t } = useTranslation();
+  const { locale = defaultLocale } = useRouter();
+  const attackTargetListFormatter = useMemo(
+    () =>
+      new Intl.ListFormat(locale, {
+        style: "short",
+        type: "unit",
+      }),
+    [locale]
+  );
+
+  const attackName = useCallback(
+    ({
+      range = "melee",
+      targets,
+      targetDefense,
+      name,
+      attackModifier,
+      trigger,
+    }: Attack) => {
+      if (targets) {
+        const targetList = attackTargetListFormatter.format(targets);
+        if (trigger) {
+          return (
+            <Trans
+              t={t}
+              i18nKey={`adversary-block.attack.title.${range}-with-targets-vs-${targetDefense}-triggered`}
+              values={{
+                name,
+                attackModifier,
+                trigger: trigger,
+                targets: targetList,
+              }}
+              components={{
+                attack: <Label as="span" variant="label-small" />,
+                trigger: <Label as="span" className="italic" />,
+              }}
+            />
+          );
+        }
+        return (
+          <Trans
+            t={t}
+            i18nKey={`adversary-block.attack.title.${range}-with-targets-vs-${targetDefense}`}
+            values={{ name, attackModifier, targets: targetList }}
+            components={{
+              attack: <Label as="span" variant="label-small" />,
+            }}
+          />
+        );
+      }
+      if (trigger) {
+        return (
+          <Trans
+            t={t}
+            i18nKey={`adversary-block.attack.title.${range}-vs-${targetDefense}-triggered`}
+            values={{
+              name,
+              attackModifier,
+              trigger: trigger,
+            }}
+            components={{
+              attack: <Label as="span" variant="label-small" />,
+              trigger: <Label as="span" className="italic" />,
+            }}
+          />
+        );
+      }
+      return (
+        <Trans
+          t={t}
+          i18nKey={`adversary-block.attack.title.${range}-vs-${targetDefense}`}
+          values={{
+            name,
+            attackModifier,
+          }}
+          components={{
+            attack: <Label as="span" variant="label-small" />,
+          }}
+        />
+      );
+    },
+    [t, attackTargetListFormatter]
+  );
+
+  return (
+    <div>
+      <div className="-indent-4 ms-4">
+        <span>{attackName(attack)}</span>
+        <span>&mdash;</span>
+        <Label as="span">{attack.damageEffects}</Label>
+      </div>
+      <ul
+        aria-label={
+          t("adversary-block.attack.triggered-effects-list-label") as string
+        }
+        className="-indent-4 ms-8"
+      >
+        {attack.triggeredEffects
+          ? map(attack.triggeredEffects, (effect) => (
+              <li key={effect.name}>
+                <SpecialAbility {...effect} />
+              </li>
+            ))
+          : null}
+        {attack.limitedUseDescription ? (
+          <li>
+            <div>
+              <Label>
+                <em>
+                  {t("adversary-block.limited-use", {
+                    description: attack.limitedUseDescription,
+                  })}
+                </em>
+              </Label>
+            </div>
+          </li>
+        ) : null}
+      </ul>
+    </div>
   );
 }

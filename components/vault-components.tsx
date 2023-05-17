@@ -3,6 +3,7 @@ import clsx from "clsx";
 export { default as AbilityList } from "./compendium-ability";
 export { default as CompendiumFeats } from "./compendium-feats";
 export { default as Alert } from "./alert";
+export { default as AdversaryStatBlock } from "./adversary-stat-block";
 
 export function Dice({ className = "", ...properties }: any) {
   return (
@@ -25,7 +26,7 @@ export function TwoCol({ className = "", ...properties }: any) {
 export function ThreeCol({ className = "", ...properties }: any) {
   return (
     <div
-      className={clsx("lg:grid lg:grid-cols-2 lg:gap-4", className)}
+      className={clsx("lg:grid lg:grid-cols-3 lg:gap-4", className)}
       {...properties}
     />
   );
