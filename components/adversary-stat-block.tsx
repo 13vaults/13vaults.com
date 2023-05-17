@@ -5,6 +5,7 @@ import { defaultLocale } from "@/lib/locales";
 import { useCallback, useMemo } from "react";
 import { map, size } from "lodash-es";
 import ReactMarkdown from "react-markdown";
+import clsx from "clsx";
 
 type Effect = {
   name: string;
@@ -191,7 +192,7 @@ export default function AdversaryStatBlock({
             </Label>
           ) : null}
         </section>
-        <section className="px-2 py-0 bg-black/10 dark:bg-white/5 print:bg-white">
+        <section className="px-2 py-0 bg-black/5 dark:bg-white/5 print:bg-white">
           <div>
             <Label>
               {t("adversary-block.initiative", { initiatives: initiativeList })}
@@ -242,10 +243,10 @@ export default function AdversaryStatBlock({
           </div>
         </section>
         {attacks && size(attacks) > 0 ? (
-          <section>
+          <section className="px-2">
             <ul
               aria-label={t("adversary-block.attack-list-label") as string}
-              className="px-2 flex flex-col gap-1"
+              className="flex flex-col gap-1"
             >
               {map(attacks, (attack) => (
                 <li key={attack.name}>
@@ -256,7 +257,12 @@ export default function AdversaryStatBlock({
           </section>
         ) : null}
         {specials && size(specials) > 0 ? (
-          <section className="px-2">
+          <section
+            className={clsx("px-2", {
+              "bg-black/5 dark:bg-white/5 print:bg-white py-1":
+                nastierSpecials && size(nastierSpecials) > 0,
+            })}
+          >
             <ul
               aria-label={t("adversary-block.specials-list") as string}
               className="-indent-4 ms-4"
@@ -270,7 +276,12 @@ export default function AdversaryStatBlock({
           </section>
         ) : null}
         {nastierSpecials && size(nastierSpecials) > 0 ? (
-          <section className="px-2">
+          <section
+            className={clsx("px-2", {
+              "bg-black/5 dark:bg-white/5 print:bg-white py-1":
+                !specials || size(specials) === 0,
+            })}
+          >
             <Label variant="label">
               {t("adversary-block.nastier-specials-list")}
             </Label>
