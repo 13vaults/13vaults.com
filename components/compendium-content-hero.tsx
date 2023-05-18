@@ -19,7 +19,7 @@ export default function CompendiumContentHero({
   description,
 }: CompendiumContentHeroP) {
   return (
-    <section className="flex flex-col gap-4 p-4 bg-stone-50 dark:bg-stone-900 content-center justify-center text-stone-900 dark:text-stone-50 border border-stone-200 dark:border-stone-800">
+    <section className="flex flex-col gap-4 p-4 bg-stone-50 dark:bg-stone-900 bg-gradient-to-t from-white to-white/0 dark:from-stone-800 dark:to-stone-800/0 content-center justify-center text-stone-900 dark:text-stone-50 border border-stone-200 dark:border-stone-700">
       <Label variant="title" as="h1">
         {title}
       </Label>

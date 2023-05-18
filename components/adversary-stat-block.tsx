@@ -177,7 +177,8 @@ export default function AdversaryStatBlock({
   }, [level, role, strengthModifier, type, sizeOrStrength, t]);
 
   return (
-    <section className="bg-khaki-50 dark:bg-stone-800 text-stone-900 dark:text-stone-50 print:bg-white not-prose border-b-2 border-black/25 dark:border-white/10 print:border-none">
+    <section className="relative bg-khaki-50 dark:bg-stone-900 text-stone-900 dark:text-stone-50 print:bg-white not-prose bg-gradient-to-t from-white/50 to-white/0 dark:from-stone-800 dark:to-stone-800/0">
+      <div className="absolute -inset-[2px] border-2 border-stone-100 dark:border-stone-950 pointer-events-none" />
       <header className="px-2 py-1 bg-teal-900 dark:bg-teal-950 bg-gradient-to-l from-teal-700 to-teal-700/0 dark:from-teal-900 dark:to-teal-900/0 text-stone-50 flex print:bg-white print:text-black print:from-transparent print:to-transparent text-shadow justify-between flex-wrap items-end gap-x-2 flex-row print:flex-col print:items-start">
         <Label as="h1" variant="title" className="flex-grow">
           {name}

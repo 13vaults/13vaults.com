@@ -35,29 +35,30 @@ export default function AbilityItem({
       "from-violet-800 to-violet-950 dark:from-violet-800 dark:to-violet-950",
     "per-battle": "from-red-600 to-red-800 dark:from-red-800 dark:to-red-950",
     "per-day":
-      "from-stone-700 to-stone-800 dark:from-stone-800 dark:to-stone-950",
+      "from-stone-500 to-stone-700 dark:from-stone-600 dark:to-stone-800",
     recharge: "from-sky-600 to-sky-800 dark:from-sky-700 dark:to-sky-900",
   };
 
   return (
-    <section className="text-base m-0 text-stone-950 dark:text-stone-50">
+    <section className="text-base m-0 text-stone-950 dark:text-stone-50 relative">
+      <div className="absolute -inset-[2px] border-2 border-stone-100 dark:border-stone-950 pointer-events-none" />
       <header
         className={clsx(
-          "text-lg not-prose p-1 gap-2 font-serif font-medium bg-gradient-to-r text-stone-50 flex justify-between items-center",
+          "text-lg not-prose p-1 gap-2 font-serif font-medium bg-gradient-to-l text-stone-50 flex justify-between items-center",
           headerBgMap[usage]
         )}
       >
-        <Label as="h1" variant="title-small" className="text-left">
+        <Label as="h1" variant="title" className="text-left">
           {name}
         </Label>
-        <Label as="h1" variant="title-small" className="text-right ordinal">
+        <Label variant="label" className="text-right ordinal">
           {type}
         </Label>
       </header>
-      <div className="flex-col gap-2">
+      <div className="flex-col gap-2 bg-stone-50 dark:bg-stone-900 bg-gradient-to-t from-white to-white/0 dark:from-stone-800 dark:to-stone-800/0">
         {description ? (
           <div
-            className="py-2 px-1 bg-white dark:bg-stone-900 prose max-w-none dark:prose-invert prose-h3:my-2 prose-headings:font-serif text-stone-950 dark:text-stone-50
+            className="py-2 px-1 prose max-w-none dark:prose-invert prose-h3:my-2 prose-headings:font-serif text-stone-950 dark:text-stone-50
                        text-base prose-p:text-current first:prose-p:mt-0 last:prose-p:mb-0 prose-hr:my-2 prose-p:my-2 prose-hr:border-stone-300 prose-hr:dark:border-stone-700"
           >
             <ReactMarkdown
@@ -96,7 +97,7 @@ export default function AbilityItem({
 
 function FeatList({ children }: { children: ReactNode }) {
   return (
-    <ul role="list" className="flex flex-col gap-1 bg-white dark:bg-stone-900">
+    <ul role="list" className="flex flex-col gap-1">
       {children}
     </ul>
   );
@@ -111,7 +112,7 @@ function FeatItem({ tier, children }: FeatItemP): JSX.Element {
   const { t } = useTranslation();
 
   return (
-    <li className="my-0 border-l-2 px-2 py-0 text-stone-900 dark:text-stone-50 border-sky-500 dark:border-sky-300 from-sky-200/50 dark:from-sky-950 to-sky-50/0 dark:to-sky-950/0 bg-gradient-to-r">
+    <li className="my-0 border-l-2 px-2 py-0 text-stone-900 dark:text-stone-50 border-sky-500 dark:border-sky-300 from-sky-200/50 dark:from-sky-950 to-sky-50/10 dark:to-sky-950/10 bg-gradient-to-r">
       <div>
         <Label variant="label">{t(`ability.feat.tier.${tier}`)}</Label>
         <div>{children}</div>
