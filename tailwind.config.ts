@@ -51,4 +51,5 @@ export default {
     },
   },
   plugins: [typography, forms],
+  darkMode: "class",
 } satisfies Config;

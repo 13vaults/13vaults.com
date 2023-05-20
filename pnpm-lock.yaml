@@ -34,6 +34,9 @@ dependencies:
   i18next-http-backend:
     specifier: ^2.2.0
     version: 2.2.0
+  immer:
+    specifier: ^10.0.2
+    version: 10.0.2
   lodash-es:
     specifier: ^4.17.21
     version: 4.17.21
@@ -185,7 +188,7 @@ devDependencies:
     version: 5.75.0(esbuild@0.17.17)
   zustand:
     specifier: ^4.3.2
-    version: 4.3.2(react@18.2.0)
+    version: 4.3.2(immer@10.0.2)(react@18.2.0)
 
 packages:
 
@@ -8133,6 +8136,9 @@ packages:
     engines: {node: '>=14.0.0'}
     dev: false
 
+  /immer@10.0.2:
+    resolution: {integrity: sha512-Rx3CqeqQ19sxUtYV9CU911Vhy8/721wRFnJv3REVGWUmoAcIwzifTsdmJte/MV+0/XpM35LZdQMBGkRIoLPwQA==}
+
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -13306,7 +13312,7 @@ packages:
     resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
     dev: false
 
-  /zustand@4.3.2(react@18.2.0):
+  /zustand@4.3.2(immer@10.0.2)(react@18.2.0):
     resolution: {integrity: sha512-rd4haDmlwMTVWVqwvgy00ny8rtti/klRoZjFbL/MAcDnmD5qSw/RZc+Vddstdv90M5Lv6RPgWvm1Hivyn0QgJw==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
@@ -13318,6 +13324,7 @@ packages:
       react:
         optional: true
     dependencies:
+      immer: 10.0.2
       react: 18.2.0
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: true

@@ -13,6 +13,7 @@ import { defaultLocale } from "@/lib/locales";
 // Sync this with supported locales
 import "dayjs/locale/de";
 import { LazyMotion } from "framer-motion";
+import ThemeWatcher from "@/components/theme-watcher";
 
 async function loadFeatures() {
   const result = await import("../lib/framer-motion-features");
@@ -52,6 +53,7 @@ function VaultsApp({ Component, pageProps }: AppProps) {
         />
       ) : undefined}
       <FontStyles />
+      <ThemeWatcher />
       <LazyMotion features={loadFeatures} strict>
         <Component {...pageProps} />
       </LazyMotion>
