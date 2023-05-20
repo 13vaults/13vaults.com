@@ -2,6 +2,7 @@ import { useCallback, useMemo } from "react";
 import { Listbox } from "@headlessui/react";
 import clsx from "clsx";
 import { Theme, useThemeStore } from "@/lib/theme";
+import { useTranslation } from "next-i18next";
 
 function LightIcon(props: JSX.IntrinsicElements["svg"]) {
   return (
@@ -41,13 +42,22 @@ function SystemIcon(props: JSX.IntrinsicElements["svg"]) {
 
 export function ThemeSelector() {
   const { theme, setTheme } = useThemeStore();
+  const { t } = useTranslation();
   const themes = useMemo(
     () => [
-      { name: "Light", value: "light", icon: LightIcon },
-      { name: "Dark", value: "dark", icon: DarkIcon },
-      { name: "System", value: "system", icon: SystemIcon },
+      {
+        name: t("theme-switcher.theme.light"),
+        value: "light",
+        icon: LightIcon,
+      },
+      { name: t("theme-switcher.theme.dark"), value: "dark", icon: DarkIcon },
+      {
+        name: t("theme-switcher.theme.system"),
+        value: "system",
+        icon: SystemIcon,
+      },
     ],
-    []
+    [t]
   );
 
   const setSelectedTheme = useCallback(
@@ -59,10 +69,12 @@ export function ThemeSelector() {
 
   return (
     <Listbox as="div" value={theme} onChange={setSelectedTheme}>
-      <Listbox.Label className="sr-only">Theme</Listbox.Label>
+      <Listbox.Label className="sr-only">
+        {t("theme-switcher.theme")}
+      </Listbox.Label>
       <Listbox.Button
-        className="flex h-6 w-6 items-center justify-center rounded-lg shadow-md shadow-black/5 ring-1 bg-stone-800 ring-inset ring-white/5"
-        aria-label=""
+        className="flex p-2 items-center justify-center shadow-md shadow-black/5 ring-1 bg-stone-800 ring-inset ring-white/5"
+        aria-label={t("theme-switcher")}
       >
         <LightIcon className="block h-4 w-4 fill-stone-400" />
       </Listbox.Button>
@@ -72,7 +84,7 @@ export function ThemeSelector() {
             key={theme.value}
             value={theme.value}
             className={({ active, selected }) =>
-              clsx("flex cursor-pointer select-none items-center p-1", {
+              clsx("flex cursor-pointer select-none items-center p-2", {
                 "text-teal-500": selected,
                 "text-stone-50": active && !selected,
                 "text-stone-400": !active && !selected,

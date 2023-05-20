@@ -131,5 +131,10 @@
   "ability.feat.tier.adventurer": "Adventurer Feat:",
   "ability.feat.tier.champion": "Champion Feat:",
   "ability.feat.tier.epic": "Epic Feat:",
-  "ability.feat.tier.omega": "Omega Feat:"
+  "ability.feat.tier.omega": "Omega Feat:",
+  "theme-switcher": "Theme Switcher",
+  "theme-switcher.theme": "Theme",
+  "theme-switcher.theme.dark": "Dark",
+  "theme-switcher.theme.light": "Light",
+  "theme-switcher.theme.system": "System"
 }
