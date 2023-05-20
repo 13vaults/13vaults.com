@@ -21,14 +21,5 @@ export default function ThemeWatcher() {
     }
   }, [theme, systemTheme, setSystemTheme]);
 
-  useEffect(() => {
-    if (theme === "system") {
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      setSystemTheme(prefersDark ? "dark" : "light");
-    }
-  }, [theme, setSystemTheme]);
-
   return null;
 }

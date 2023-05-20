@@ -22,6 +22,7 @@ import {
   useReducedMotion,
 } from "framer-motion";
 import Button from "./button";
+import { ThemeSelector } from "./theme-selector";
 
 interface MobileSubnavP {
   subnav: PartialBy<
@@ -206,7 +207,7 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
         <nav aria-label="Top">
           <div className="bg-stone-950 px-4 lg:px-8 shadow h-14 flex items-center">
             <Container className="flex-1">
-              <div className="flex py-1 lg:py-2 items-center justify-start gap-8">
+              <div className="flex py-1 lg:py-2 items-center justify-between gap-8">
                 <div className="flex lg:hidden">
                   <button
                     type="button"
@@ -234,7 +235,6 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                     />
                   </Link>
                 </div>
-
                 <div className="hidden h-full lg:flex gap-8 flex-1">
                   <Popover.Group>
                     <div className="flex h-full justify-center space-x-8">
@@ -363,7 +363,10 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                         )
                       )}
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-4 items-center">
+                      <div className="hidden lg:block relative">
+                        <ThemeSelector />
+                      </div>
                       <Button
                         as="a"
                         href="https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/"
@@ -386,6 +389,10 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                       variant="full"
                     />
                   </Link>
+                </div>
+
+                <div className="lg:hidden relative">
+                  <ThemeSelector />
                 </div>
               </div>
             </Container>
