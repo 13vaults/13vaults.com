@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Listbox } from "@headlessui/react";
 import clsx from "clsx";
 import { Theme, useThemeStore } from "@/lib/theme";
@@ -41,7 +41,8 @@ function SystemIcon(props: JSX.IntrinsicElements["svg"]) {
 }
 
 export function ThemeSelector() {
-  const { theme, setTheme } = useThemeStore();
+  const { theme, systemTheme, setTheme } = useThemeStore();
+  const [themeColor, setThemeColor] = useState<"dark" | "light" | null>(null);
   const { t } = useTranslation();
   const themes = useMemo(
     () => [
@@ -60,6 +61,18 @@ export function ThemeSelector() {
     [t]
   );
 
+  const ThemeIcon = useMemo(() => {
+    return themeColor === "dark" ? DarkIcon : LightIcon;
+  }, [themeColor]);
+
+  useEffect(() => {
+    if (theme === "system") {
+      setThemeColor(systemTheme);
+    } else {
+      setThemeColor(theme);
+    }
+  }, [systemTheme, theme]);
+
   const setSelectedTheme = useCallback(
     (newTheme: Theme) => {
       setTheme(newTheme);
@@ -72,12 +85,14 @@ export function ThemeSelector() {
       <Listbox.Label className="sr-only">
         {t("theme-switcher.theme")}
       </Listbox.Label>
-      <Listbox.Button
-        className="flex p-2 items-center justify-center shadow-md shadow-black/5 ring-1 bg-stone-800 ring-inset ring-white/5"
-        aria-label={t("theme-switcher")}
-      >
-        <LightIcon className="block h-4 w-4 fill-stone-400" />
-      </Listbox.Button>
+      {themeColor ? (
+        <Listbox.Button
+          className="flex p-2 items-center justify-center shadow-md shadow-black/5 ring-1 bg-stone-800 ring-inset ring-white/5"
+          aria-label={t("theme-switcher")}
+        >
+          <ThemeIcon className="block h-4 w-4 fill-stone-400" />
+        </Listbox.Button>
+      ) : null}
       <Listbox.Options className="absolute top-full mt-3 w-36 right-0 text-sm font-medium shadow-md shadow-black/5 ring-1 bg-stone-900 ring-white/5">
         {themes.map((theme) => (
           <Listbox.Option
