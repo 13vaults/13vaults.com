@@ -31,7 +31,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated",
-    "components/section-provider.jsx",
     "lib/locales.js",
     "env.d.ts"
   ],

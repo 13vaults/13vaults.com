@@ -1,25 +1,40 @@
 import {
+  RefObject,
   createContext,
   useContext,
   useEffect,
   useLayoutEffect,
   useState,
 } from "react";
-import { createStore, useStore } from "zustand";
+import { StoreApi, createStore, useStore } from "zustand";
 import { remToPx } from "@/lib/rem-to-px";
 
-function createSectionStore(sections) {
-  return createStore((set) => ({
+type Section = {
+  id: string;
+  content: string;
+  headingRef: RefObject<HTMLHeadingElement>;
+  ref: RefObject<HTMLHeadingElement>;
+  offsetRem: number;
+};
+
+interface SectionStore {
+  sections: Section[];
+  visibleSections: string[];
+  setVisibleSections: (_newSections: string[]) => void;
+}
+
+function createSectionStore(sections: Section[]) {
+  return createStore<SectionStore>((set) => ({
     sections,
     visibleSections: [],
-    setVisibleSections: (newVisibleSections) => {
+    setVisibleSections: (newVisibleSections: string[]) => {
       set((state) =>
         state.visibleSections.join(",") === newVisibleSections.join(",")
           ? {}
           : { visibleSections: newVisibleSections }
       );
     },
-    registerHeading: ({ id, ref, offsetRem }) =>
+    registerHeading: ({ id, ref, offsetRem }: Section) =>
       set((state) => {
         return {
           sections: state.sections.map((section) => {
@@ -37,7 +52,7 @@ function createSectionStore(sections) {
   }));
 }
 
-function useVisibleSections(sectionStore) {
+function useVisibleSections(sectionStore: StoreApi<SectionStore>) {
   const setVisibleSections = useStore(
     sectionStore,
     (s) => s.setVisibleSections
@@ -56,7 +71,7 @@ function useVisibleSections(sectionStore) {
       ) {
         const { id, headingRef, offsetRem } = sections[sectionIndex];
         const offset = remToPx(offsetRem);
-        const top = headingRef?.current?.getBoundingClientRect().top + scrollY;
+        const top = headingRef?.current?.getBoundingClientRect().top! + scrollY;
 
         if (sectionIndex === 0 && top - offset > scrollY) {
           newVisibleSections.push("_top");
@@ -93,12 +108,16 @@ function useVisibleSections(sectionStore) {
   }, [setVisibleSections, sections]);
 }
 
-const SectionStoreContext = createContext();
+const SectionStoreContext = createContext<StoreApi<SectionStore> | null>(null);
 
 const useIsomorphicLayoutEffect =
   typeof window === "undefined" ? useEffect : useLayoutEffect;
 
-export function SectionProvider({ sections, children }) {
+interface SectionProviderP {
+  sections: Section[];
+  children: JSX.Element;
+}
+export function SectionProvider({ sections, children }: SectionProviderP) {
   const [sectionStore] = useState(() => createSectionStore(sections));
 
   useVisibleSections(sectionStore);
@@ -114,7 +133,7 @@ export function SectionProvider({ sections, children }) {
   );
 }
 
-export function useSectionStore(selector) {
+export function useSectionStore<T>(selector: (_state: SectionStore) => T) {
   const store = useContext(SectionStoreContext);
-  return useStore(store, selector);
+  return useStore(store!, selector);
 }
