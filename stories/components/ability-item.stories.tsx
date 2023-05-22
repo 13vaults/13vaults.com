@@ -22,12 +22,18 @@ const meta: Meta<typeof AbilityItem> = {
   args: {
     type: "Rare Ability",
     name: "Bob",
-    description: "Yo!",
+    description: {
+      raw: "Yo!",
+      html: "<p>Yo!</p>",
+    },
     usage: "other",
     feats: [
       {
         tier: "adventurer",
-        description: "A really cool adventurer feat!",
+        description: {
+          raw: "A really cool adventurer feat!",
+          html: "<p>A really cool adventurer feat!</p>",
+        },
       },
     ],
   },
