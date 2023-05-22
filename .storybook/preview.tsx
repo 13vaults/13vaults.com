@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import type { Preview } from "@storybook/react";
 import "@/styles/globals.css";
 import FontStyles from "../components/font-styles";
@@ -12,6 +12,7 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import "dayjs/locale/de";
 import { defaultLocale } from "../lib/locales";
 import { LazyMotion } from "framer-motion";
+import clsx from "clsx";
 
 async function loadFeatures() {
   const result = await import("../lib/framer-motion-features");
@@ -30,13 +31,22 @@ const preview: Preview = {
       en: "English",
       de: "German",
     },
+    darkMode: false,
   },
   decorators: [
-    (Story) => {
+    (Story, ctx) => {
       dayjs.locale(i18n.language);
       i18n.services.formatter?.addCached("lowerCase", (language, _options) => {
         return (value: string) => value.toLocaleLowerCase(language);
       });
+
+      useEffect(() => {
+        if (ctx.globals.darkMode) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }, [ctx]);
 
       return (
         <React.StrictMode>

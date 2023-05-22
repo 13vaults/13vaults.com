@@ -1,4 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { polyfill } from "interweave-ssr";
+
+polyfill();
 
 export default function Document() {
   return (

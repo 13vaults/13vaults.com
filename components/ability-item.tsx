@@ -1,12 +1,11 @@
 import { Ability, Feat } from "@/.contentlayer/generated";
 import clsx from "clsx";
 import { map } from "lodash-es";
-import Link from "next/link";
 import { ReactNode } from "react";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import Label from "./label";
 import { useTranslation } from "next-i18next";
+import { Markup } from "interweave";
+import Link from "next/link";
 
 type PartialFeat = {
   tier: Feat["tier"];
@@ -61,22 +60,39 @@ export default function AbilityItem({
             className="py-2 px-1 prose max-w-none dark:prose-invert prose-h3:my-2 prose-headings:font-serif text-stone-950 dark:text-stone-50
                        text-base prose-p:text-current first:prose-p:mt-0 last:prose-p:mb-0 prose-hr:my-2 prose-p:my-2 prose-hr:border-stone-300 prose-hr:dark:border-stone-700"
           >
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              skipHtml
-              components={{
-                a: ({ href, ...properties }) => (
-                  <Link href={href as string} {...properties} />
-                ),
-                table: ({ ...properties }: any) => (
-                  <div className="overflow-auto border dark:border-stone-700 rounded shadow bg-white dark:bg-stone-700 border-stone-300 my-2">
-                    <table {...properties} />
-                  </div>
-                ),
+            <Markup
+              tagName="fragment"
+              content={description.html}
+              transform={(node: HTMLElement, children) => {
+                if (node.tagName.toUpperCase() === "A") {
+                  return (
+                    <Link href={node.getAttribute("href") as string}>
+                      {children}
+                    </Link>
+                  );
+                }
+                if (node.tagName.toUpperCase() === "TABLE") {
+                  children = children.filter((node) => node !== "\n");
+                  return (
+                    <div className="overflow-auto w-min max-w-full bg-white dark:bg-stone-700 my-2">
+                      <table {...node.attributes}>{children}</table>
+                    </div>
+                  );
+                }
+                if (node.tagName.toUpperCase() === "THEAD") {
+                  children = children.filter((node) => node !== "\n");
+                  return <thead {...node.attributes}>{children}</thead>;
+                }
+                if (node.tagName.toUpperCase() === "TR") {
+                  children = children.filter((node) => node !== "\n");
+                  return <tr {...node.attributes}>{children}</tr>;
+                }
+                if (node.tagName.toUpperCase() === "TBODY") {
+                  children = children.filter((node) => node !== "\n");
+                  return <tbody {...node.attributes}>{children}</tbody>;
+                }
               }}
-            >
-              {description}
-            </ReactMarkdown>
+            />
           </div>
         ) : null}
         {feats ? (
@@ -84,7 +100,7 @@ export default function AbilityItem({
             <FeatList>
               {map(feats, (feat, index) => (
                 <FeatItem key={index} tier={feat.tier}>
-                  <ReactMarkdown>{feat.description}</ReactMarkdown>
+                  <Markup tagName="fragment" content={feat.description.html} />
                 </FeatItem>
               ))}
             </FeatList>

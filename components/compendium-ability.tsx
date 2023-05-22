@@ -24,7 +24,7 @@ export default function AbilityList({
     <div
       role="list"
       className={clsx(
-        "my-4 list-none m-0 p-0 grid grid-cols-1 gap-4",
+        "my-4 list-none m-0 p-0 grid grid-cols-1 gap-4 grid-rows-[masonry]",
         columnClassesMap[columns]
       )}
     >

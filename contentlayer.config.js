@@ -56,7 +56,7 @@ const Feat = defineNestedType(() => ({
       options: ["adventurer", "champion", "epic"],
       required: true,
     },
-    description: { type: "string", required: true },
+    description: { type: "markdown", required: true },
   },
 }));
 
@@ -71,7 +71,7 @@ const Ability = defineNestedType(() => ({
       default: "other",
       required: true,
     },
-    description: { type: "string", required: false },
+    description: { type: "markdown", required: false },
     feats: { type: "list", of: Feat, required: false },
   },
 }));
@@ -272,6 +272,9 @@ const BlogPost = defineDocumentType(() => ({
 const contentLayerConfig = makeSource({
   contentDirPath: "content",
   documentTypes: [BlogPost, BasicPage, ClassItem, Ancestry, RulesDocument],
+  markdown: {
+    remarkPlugins: [remarkGfm, remarkSmartypants, remarkUnwrapImages],
+  },
   mdx: {
     remarkPlugins: [remarkGfm, remarkSmartypants, remarkUnwrapImages],
     rehypePlugins: [

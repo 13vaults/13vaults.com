@@ -98,7 +98,7 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
                     <ContentLink href={href} {...properties} />
                   ),
                   table: (properties: any) => (
-                    <div className="overflow-auto border dark:border-stone-700 rounded shadow bg-white dark:bg-stone-700 border-stone-300 my-2">
+                    <div className="overflow-auto w-min max-w-full border dark:border-stone-700 rounded shadow bg-white dark:bg-stone-700 border-stone-300 my-2">
                       <table {...properties} />
                     </div>
                   ),
