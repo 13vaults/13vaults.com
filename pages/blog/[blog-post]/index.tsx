@@ -19,8 +19,8 @@ import ContentLink from "@/components/content-link";
 import Prose from "@/components/prose";
 import dayjs from "dayjs";
 import BlogHero from "@/components/blog-hero";
-import Image from "next/image";
 import { supportedLocales } from "@/lib/locales";
+import ImageZoom from "@/components/image-zoom";
 
 interface BlogPostPageP {
   blogPost: BlogPost;
@@ -103,15 +103,19 @@ export default function BlogPostPage({ blogPost, navigation }: BlogPostPageP) {
                     </div>
                   ),
                   img: ({ alt, height = "0", width = "0", src }) => (
-                    <div className="p-4 bg-white/50 rounded dark:bg-black/50 border border-stone-200 dark:border-stone-700 my-4">
+                    <div className="p-2 bg-white/50 dark:bg-black/50 border border-stone-200 dark:border-stone-700 my-4">
                       <figure>
-                        <Image
-                          src={src || ""}
-                          alt={alt || ""}
+                        <ImageZoom
+                          src={src as string}
+                          alt={alt as string}
                           height={Number.parseInt(String(height), 10)}
                           width={Number.parseInt(String(width), 10)}
-                          className="mx-auto rounded shadow"
+                          className="mx-auto"
                           quality={100 * (2 / 3)}
+                          options={{
+                            margin: 16,
+                            background: "rgb(0 0 0 / 75%)",
+                          }}
                         />
                       </figure>
                       <figcaption>{alt}</figcaption>

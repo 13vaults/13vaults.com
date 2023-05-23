@@ -95,3 +95,8 @@
     text-shadow: 0 0 1em orangered;
   }
 }
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  @apply z-[999];
+}
