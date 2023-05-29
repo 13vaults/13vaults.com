@@ -12,7 +12,7 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import { defaultLocale } from "@/lib/locales";
 // Sync this with supported locales
 import "dayjs/locale/de";
-import { LazyMotion } from "framer-motion";
+import { LazyMotion, MotionConfig } from "framer-motion";
 import ThemeWatcher from "@/components/theme-watcher";
 
 async function loadFeatures() {
@@ -55,7 +55,9 @@ function VaultsApp({ Component, pageProps }: AppProps) {
       <FontStyles />
       <ThemeWatcher />
       <LazyMotion features={loadFeatures} strict>
-        <Component {...pageProps} />
+        <MotionConfig reducedMotion="user">
+          <Component {...pageProps} />
+        </MotionConfig>
       </LazyMotion>
     </>
   );

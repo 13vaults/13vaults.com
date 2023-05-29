@@ -18,17 +18,19 @@ function HomeNewsSectionItem({
   excerpt,
   published,
 }: HomeNewsSectionItemP) {
-  const { t } = useTranslation("home");
+  const { t } = useTranslation();
 
   return (
     <BlogPostListItem
       to={`/blog/${slug}`}
       published={published}
-      date={dayjs.tz(date).format("YYYY-MM-DD")}
+      date={t("news.post.published-on", {
+        date: dayjs.tz(date).format("YYYY-MM-DD"),
+      })}
       label={title}
       title={title}
       excerpt={excerpt}
-      readMore={t("read-more")}
+      readMore={t("news.post.read-more")}
     />
   );
 }
@@ -40,17 +42,19 @@ function HeroVariant({
   excerpt,
   published,
 }: HomeNewsSectionItemP) {
-  const { t } = useTranslation("home");
+  const { t } = useTranslation();
 
   return (
     <BlogPostListItem.Hero
       to={`/blog/${slug}`}
       published={published}
-      date={dayjs.tz(date).format("YYYY-MM-DD")}
+      date={t("news.post.published-on", {
+        date: dayjs.tz(date).format("YYYY-MM-DD"),
+      })}
       label={title}
       title={title}
       excerpt={excerpt}
-      readMore={t("read-more")}
+      readMore={t("news.post.read-more")}
     />
   );
 }

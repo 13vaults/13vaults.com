@@ -6,18 +6,12 @@ import { useTranslation } from "next-i18next";
 import SunIcon from "@heroicons/react/20/solid/SunIcon";
 import MoonIcon from "@heroicons/react/20/solid/MoonIcon";
 import ComputerDesktopIcon from "@heroicons/react/20/solid/ComputerDesktopIcon";
-import {
-  AnimatePresence,
-  cubicBezier,
-  m,
-  useReducedMotion,
-} from "framer-motion";
+import { AnimatePresence, cubicBezier, m } from "framer-motion";
 
 export function ThemeSelector() {
   const { theme, systemTheme, setTheme } = useThemeStore();
   const [themeColor, setThemeColor] = useState<"dark" | "light" | null>(null);
   const { t } = useTranslation();
-  const shouldReduceMotion = useReducedMotion();
   const themes = useMemo(
     () => [
       {
@@ -55,76 +49,69 @@ export function ThemeSelector() {
   );
 
   const AnimatedListboxOptions = m(Listbox.Options);
-  const AnimatedListboxButton = m(Listbox.Button);
   const easeOutQuart = cubicBezier(0.25, 1, 0.5, 1);
 
   return (
-    <Listbox as="div" value={theme} onChange={setSelectedTheme}>
+    <Listbox as="div" value={theme} onChange={setSelectedTheme} horizontal>
       {({ open }) => (
-        <AnimatePresence>
+        <>
           <Listbox.Label className="sr-only">
             {t("theme-switcher.theme")}
           </Listbox.Label>
-          {themeColor ? (
-            <AnimatedListboxButton
-              key="button"
+          {themeColor === null ? null : (
+            <Listbox.Button
               className="flex p-2 items-center justify-center shadow-md shadow-black/5 ring-1 bg-stone-800 ring-inset ring-white/5"
-              initial={shouldReduceMotion ? {} : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={shouldReduceMotion ? {} : { opacity: 0 }}
-              transition={{
-                ease: easeOutQuart,
-                duration: shouldReduceMotion ? 0 : 0.2,
-              }}
               aria-label={t("theme-switcher") as string}
             >
               <ThemeIcon className="block h-5 w-5 fill-stone-400" />
-            </AnimatedListboxButton>
-          ) : null}
-          {open ? (
-            <AnimatedListboxOptions
-              static
-              key="options"
-              className="absolute top-full mt-3 w-36 right-0 text-sm font-medium shadow-md shadow-black/5 ring-1 bg-stone-900 ring-white/5"
-              initial={shouldReduceMotion ? {} : { y: -8, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={shouldReduceMotion ? {} : { y: -8, opacity: 0 }}
-              transition={{
-                ease: easeOutQuart,
-                duration: shouldReduceMotion ? 0 : 0.2,
-              }}
-            >
-              {themes.map((theme) => (
-                <Listbox.Option
-                  key={theme.value}
-                  value={theme.value}
-                  className={({ active, selected }) =>
-                    clsx("flex cursor-pointer select-none items-center p-2", {
-                      "text-teal-500 bg-stone-950/50": selected,
-                      "text-stone-50": active && !selected,
-                      "text-stone-400": !active && !selected,
-                      "bg-stone-950/100": active,
-                    })
-                  }
-                >
-                  {({ selected }) => (
-                    <>
-                      <div className="p-1 shadow ring-1 bg-stone-700 ring-inset ring-white/5">
-                        <theme.icon
-                          className={clsx(
-                            "h-4 w-4",
-                            selected ? "fill-teal-400" : "fill-stone-400"
-                          )}
-                        />
-                      </div>
-                      <div className="ml-3">{theme.name}</div>
-                    </>
-                  )}
-                </Listbox.Option>
-              ))}
-            </AnimatedListboxOptions>
-          ) : null}
-        </AnimatePresence>
+            </Listbox.Button>
+          )}
+          <AnimatePresence>
+            {open ? (
+              <AnimatedListboxOptions
+                static
+                key="options"
+                className="absolute top-full mt-3 w-36 right-0 text-sm font-medium shadow-md shadow-black/5 ring-1 bg-stone-900 ring-white/5"
+                initial={{ y: -8, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -8, opacity: 0 }}
+                transition={{
+                  ease: easeOutQuart,
+                  duration: 0.2,
+                }}
+              >
+                {themes.map((theme) => (
+                  <Listbox.Option
+                    key={theme.value}
+                    value={theme.value}
+                    className={({ active, selected }) =>
+                      clsx("flex cursor-pointer select-none items-center p-2", {
+                        "text-teal-500 bg-stone-950/50": selected,
+                        "text-stone-50": active && !selected,
+                        "text-stone-400": !active && !selected,
+                        "bg-stone-950/100": active,
+                      })
+                    }
+                  >
+                    {({ selected }) => (
+                      <>
+                        <div className="p-1 shadow ring-1 bg-stone-700 ring-inset ring-white/5">
+                          <theme.icon
+                            className={clsx(
+                              "h-4 w-4",
+                              selected ? "fill-teal-400" : "fill-stone-400"
+                            )}
+                          />
+                        </div>
+                        <div className="ml-3">{theme.name}</div>
+                      </>
+                    )}
+                  </Listbox.Option>
+                ))}
+              </AnimatedListboxOptions>
+            ) : null}
+          </AnimatePresence>
+        </>
       )}
     </Listbox>
   );
