@@ -24,9 +24,7 @@ function HomeNewsSectionItem({
     <BlogPostListItem
       to={`/blog/${slug}`}
       published={published}
-      date={t("posted-ago", {
-        timeAgo: dayjs.tz(date).fromNow(),
-      })}
+      date={dayjs.tz(date).format("YYYY-MM-DD")}
       label={title}
       title={title}
       excerpt={excerpt}
@@ -48,9 +46,7 @@ function HeroVariant({
     <BlogPostListItem.Hero
       to={`/blog/${slug}`}
       published={published}
-      date={t("posted-ago", {
-        timeAgo: dayjs.tz(date).fromNow(),
-      })}
+      date={dayjs.tz(date).format("YYYY-MM-DD")}
       label={title}
       title={title}
       excerpt={excerpt}
