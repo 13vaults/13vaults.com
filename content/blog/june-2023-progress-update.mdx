@@ -1,0 +1,128 @@
+---
+title: June 2023 Progress Update
+date: 2023-06-13T17:42:00Z
+excerpt: |-
+  In this progress update we go over the work done in the past month.
+published: true
+---
+
+Howdy!
+In this month's progress update we'll be going over some of the changes made in the last month of 13 Vaults development.
+Summer is quite busy for me, so there hasn't been a ton of free time to work on 13 Vaults, but I was still able to make some noticeable changes.
+
+### Monster Stat Blocks
+
+I've completed, for the most part, monster stat blocks!
+Here's what it looks like!
+
+<Vault.AdversaryStatBlock
+  {...{
+    name: "Vulpinal",
+    flavorText:
+      "Vulpinals are the most outgoing and friendly of the agathions, taking on a role of wide ranging traveller and storyteller rather than the more warrior nature of many other agathions.",
+    level: 4,
+    role: "spoiler",
+    type: "CELESTIAL",
+    initiative: ["+7"],
+    ac: 19,
+    pd: 15,
+    md: 17,
+    hp: 58,
+    specials: [
+      {
+        name: "Invisibility",
+        text: "As a standard action while it is unengaged, the vulpinal can turn invisible",
+      },
+      { name: "Resist Lightning 12+" },
+    ],
+    attacks: [
+      {
+        name: "Claws and Bite",
+        attackModifier: 9,
+        targetDefense: "AC",
+        damageEffects: "12 damage",
+        triggeredEffects: [
+          {
+            name: "Natural Even Hit",
+            text: "The vulpinal can pop free from the target.",
+          },
+        ],
+      },
+      {
+        name: "Holy Smite",
+        attackModifier: 9,
+        targetDefense: "PD",
+        damageEffects: "8 holy damage.",
+        range: "ranged",
+        triggeredEffects: [
+          {
+            name: "Natural Even Hit",
+            text: "The target is also dazed until the end of the vulpinal’s next turn.",
+          },
+          {
+            name: "Limited Use",
+            text: "2/battle, when the escalation die is even.",
+          },
+        ],
+      },
+      {
+        name: "Aura of Calm Emotions",
+        attackModifier: 10,
+        targetDefense: "MD",
+        targets: ["all engaged enemies plus 1d2 nearby enemies"],
+        damageEffects: "The target is hampered (save ends).",
+        range: "ranged",
+        triggeredEffects: [
+          {
+            name: "Natural 14+",
+            text: "The target is hampered and can’t add the escalation die to its attacks (save ends both).",
+          },
+          {
+            name: "Natural 18+",
+            text: "The target can’t make any attacks (save ends).",
+          },
+          {
+            name: "Miss",
+            text: "The target is immune to this attack until the end of the battle.",
+          },
+          {
+            name: "Quick Use",
+            text: "This attack only requires a quick action (once per turn) when the escalation die is even.",
+          },
+        ],
+      },
+    ],
+  }}
+/>
+
+_The [Vulpinal stat block](https://www.patreon.com/posts/vulpinal-84122774) is from [Paper and Dice](https://www.patreon.com/paperanddice)--check them out!_
+
+When will we see these in 13 Vaults, you ask?
+After I finish up the last remaining classes I will be spitballing some ideas on getting all 13th Age monster stat blocks into 13 Vaults.
+At the moment I'm not entirely sure what that will look like, but we have the ability to bring them in now that there is a stat block design 🙂
+
+### Light/Dark Theme Toggle
+
+A small, but very useful, button has been added to the top navigation bar!
+Before, we just made the theme of 13 Vaults whatever your operating system was.
+Now, you can manually change it by clicking that button and choosing the theme.
+"System" will make it behave like before.
+
+### Conclusion
+
+Like I said before, there hasn't been too much you can see, but I have been getting things done while I can in the summer months!
+I've gotten the first guide submitted to me and over the next month I'll be building out the Guides section of 13 Vaults to accomodate that.
+Additionally, I'll probably be doing another community showcase before next month's progress update, so keep a look out for that!
+
+Til next time!
+
+&ndash; Sean, head curator of the 13 Vaults.
+
+[Continue the discussion on GitHub!](https://github.com/orgs/13vaults/discussions/77)
+
+---
+
+GitHub Discussions: https://github.com/orgs/13vaults/discussions  
+Mastodon: [@13vaults@dice.camp](https://dice.camp/@13vaults)  
+[The 13th Age Community Discord](https://discord.gg/m9DbPC6RsC)  
+Email: admin@13vaults.com

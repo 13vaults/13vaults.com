@@ -9,7 +9,7 @@ import clsx from "clsx";
 
 type Effect = {
   name: string;
-  text: string;
+  text?: string;
   attacks?: Attack[];
 };
 
@@ -310,21 +310,30 @@ function SpecialAbility({ name, text, attacks }: Effect) {
   return (
     <div className="-indent-4">
       <Label as="span" className="float-left rtl:float-right">
-        <em>{t("adversary-block.special-ability.name", { name })}</em>
+        <em>
+          {t(
+            text
+              ? "adversary-block.special-ability.name-with-text"
+              : "adversary-block.special-ability.name",
+            { name }
+          )}
+        </em>
       </Label>
-      <div className="indent-0">
-        <ReactMarkdown
-          components={{
-            ul: ({ children }) => (
-              <ul className="list-disc list-inside">{children}</ul>
-            ),
-            ol: ({ children }) => (
-              <ol className="list-decimal list-inside">{children}</ol>
-            ),
-          }}
-        >
-          {"&nbsp;" + text}
-        </ReactMarkdown>
+      <div className="indent-0 text-base">
+        {text ? (
+          <ReactMarkdown
+            components={{
+              ul: ({ children }) => (
+                <ul className="list-disc list-inside">{children}</ul>
+              ),
+              ol: ({ children }) => (
+                <ol className="list-decimal list-inside">{children}</ol>
+              ),
+            }}
+          >
+            {"&nbsp;" + text}
+          </ReactMarkdown>
+        ) : null}
         {attacks && size(attacks) > 0 ? (
           <ul
             aria-label={t("adversary-block.attack-list-label") as string}
