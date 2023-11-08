@@ -113,6 +113,10 @@ export default function ContentLayerPage({
             getAbilitiesByType={(type: string) =>
               filter(get(data, "abilities"), ["_type", type])
             }
+            getAbilitiesByTypeAndTier={(type: string, tier: string) =>
+              filter(get(data, "abilities"), {
+                "_type": type, "tier": tier })
+            }
             getAbilitiesByTypes={(types: string[]) =>
               filter(get(data, "abilities"), (ability) =>
                 includes(types, get(ability, "_type"))

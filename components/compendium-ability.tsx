@@ -36,6 +36,7 @@ export default function AbilityList({
             description={ability.description}
             feats={ability.feats}
             usage={ability.usage}
+            tier={ability.tier}
           />
         </div>
       ))}

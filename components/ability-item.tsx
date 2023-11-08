@@ -18,6 +18,7 @@ interface AbilityItemP {
   description: Ability["description"];
   feats: Ability["feats"] | PartialFeat[];
   usage: Ability["usage"];
+  tier: Ability["tier"];
 }
 
 export default function AbilityItem({
@@ -26,6 +27,7 @@ export default function AbilityItem({
   description,
   feats,
   usage,
+  tier
 }: AbilityItemP): JSX.Element {
   const headerBgMap: Record<NonNullable<Ability["usage"]>, string> = {
     "at-will":

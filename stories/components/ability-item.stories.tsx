@@ -11,6 +11,9 @@ const meta: Meta<typeof AbilityItem> = {
     name: {
       type: "string",
     },
+    tier: {
+      type: "string",
+    },
     usage: {
       options: ["other", "at-will", "recharge", "per-battle", "per-day"],
       control: { type: "select" },
@@ -27,6 +30,7 @@ const meta: Meta<typeof AbilityItem> = {
       html: "<p>Yo!</p>",
     },
     usage: "other",
+    tier: "any",
     feats: [
       {
         tier: "adventurer",

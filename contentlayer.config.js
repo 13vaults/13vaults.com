@@ -72,6 +72,7 @@ const Ability = defineNestedType(() => ({
       required: true,
     },
     description: { type: "markdown", required: false },
+    tier: {type: "string", required: false},
     feats: { type: "list", of: Feat, required: false },
   },
 }));
