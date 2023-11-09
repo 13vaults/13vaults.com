@@ -66,6 +66,7 @@ abilities:
         description: Add 4d12 to the damage roll instead of 2d12.
   - name: Bastion
     _type: Talent
+    tier: adventurer
     description: |-
       You gain +1 AC.
 
@@ -80,6 +81,7 @@ abilities:
         description: When you use Bastion now, your ally takes no damage. You still lose hit points equal to half the damage.
   - name: Cleric Training
     _type: Talent
+    tier: adventurer
     description: Choose one cleric spell of your level or lower. That spell is now part of your powers. (You can change out the spell normally.)
     feats:
       - tier: adventurer
@@ -90,6 +92,7 @@ abilities:
         description: Choose two cleric spells instead of one.
   - name: Divine Domain
     _type: Talent
+    tier: adventurer
     description: |-
       **Special:** You can choose Divine Domain a second time, if you wish, at 5th level or at 8th level.
 
@@ -100,6 +103,7 @@ abilities:
       You can use the domain’s feats if you wish; reinterpret them similarly if necessary.
   - name: Fearless
     _type: Talent
+    tier: adventurer
     description: |-
       You are immune to fear abilities and to any non-damage effects of attacks named or described as fear attacks.
 
@@ -114,6 +118,7 @@ abilities:
         description: Your nearby allies gain a +1 bonus to death saves.
   - name: Implacable
     _type: Talent
+    tier: adventurer
     description: |-
       You can roll saves at the start of your turn instead of at the end of your turn.
       A successful save against ongoing damage, for example, means that you will not take the ongoing damage that turn.
@@ -127,6 +132,7 @@ abilities:
   - name: Lay on Hands
     _type: Talent
     usage: per-day
+    tier: adventurer
     description: |-
       Twice per day as a quick action, you can heal yourself or an ally next to you with a touch.
       You spend the recovery while the recipient heals as if they had spent the recovery.
@@ -139,6 +145,7 @@ abilities:
         description: You can now use Lay on Hands four times per day instead of two.
   - name: Paladin's Challenge
     _type: Talent
+    tier: adventurer
     description: |-
       When you hit an enemy with a melee attack, you can choose to challenge that enemy as a free action.
       Until the end of the battle, provided that both you and the enemy you’ve challenged are conscious and capable of making an attack,
@@ -168,6 +175,7 @@ abilities:
         description: Enemies you challenge are vulnerable to your attacks.
   - name: Path of Righteous Endeavour
     _type: Talent
+    tier: adventurer
     description: |-
       **Special:** You can’t take this talent if you take the Way of Evil Bastards talent.
 
@@ -181,6 +189,7 @@ abilities:
         description: You gain an additional relationship point with a heroic or ambiguous icon.
   - name: Way of Evil Bastards
     _type: Talent
+    tier: adventurer
     description: |-
       **Special:** You can’t take this talent if you take the Path of Universal Righteous Endeavor talent.
 
@@ -281,17 +290,4 @@ Paladins may start with either 25 gp or 1d6 &times; 10 gp.
 
 ## Class Talents
 
-<Vault.AbilityList
-  abilities={props.getAbilities([
-    "Bastion",
-    "Cleric Training",
-    "Divine Domain",
-    "Fearless",
-    "Holy Strike",
-    "Implacable",
-    "Lay on Hands",
-    "Paladin's Challenge",
-    "Path of Righteous Endeavour",
-    "Way of Evil Bastards",
-  ])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Talent")} />

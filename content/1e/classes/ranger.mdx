@@ -50,6 +50,7 @@ abilities:
       **Miss:** Damage equal to your level
   - name: Animal Companion
     _type: Talent
+    tier: adventurer
     description: |-
       **Special:** Unlike most class talents, this talent takes up two ranger class talent slots.
 
@@ -59,6 +60,7 @@ abilities:
   - name: Archery
     _type: Talent
     usage: per-battle
+    tier: adventurer
     description: Once per battle, reroll one of your missed ranged attacks.
     feats:
       - tier: adventurer
@@ -70,6 +72,7 @@ abilities:
   - name: Double Melee Attack
     _type: Talent
     usage: at-will
+    tier: adventurer
     description: |-
       When fighting with two one-handed melee weapons, your default option is to make a double melee attack.
 
@@ -88,6 +91,7 @@ abilities:
   - name: Double Ranged Attack
     _type: Talent
     usage: at-will
+    tier: adventurer
     description: |-
       When you attack with a ranged weapon that does not need to be reloaded, your default option is to make a double ranged attack.
 
@@ -105,6 +109,7 @@ abilities:
         description: Each turn, you can pop free of one enemy before one attack roll that is part of a Double Ranged Attack. You can also use your move action in between your two attacks if you wish.
   - name: Favored Enemy
     _type: Talent
+    tier: adventurer
     description: |-
       Choose a specific monster type (e.g. aberration, beast, construct, demon, dragon, giant, humanoid\*, ooze, plant, or undead). The crit range of your ranger attacks against that type of enemy expands by 2.
 
@@ -118,6 +123,7 @@ abilities:
         description: Choose a second non-humanoid monster type as a favored enemy.
   - name: Fey Queen's Enchantments
     _type: Talent
+    tier: adventurer
     description: |-
       Choose one daily or recharge spell of your level or lower from the sorcerer class.
       You can cast this spell as if you were a sorcerer (though you can’t gather power).
@@ -130,6 +136,7 @@ abilities:
         description: You gain an additional sorcerer spell of your choice that is your level or lower; a total of two from this talent.
   - name: First Strike
     _type: Talent
+    tier: adventurer
     description: |-
       The first time you attack an enemy during a battle, your crit range for that attack expands by 2 (usually to 18+).
       A mob of mooks counts as a single enemy.
@@ -143,6 +150,7 @@ abilities:
   - name: Lethal Hunter
     _type: Talent
     usage: per-battle
+    tier: adventurer
     description: |-
       Once per battle as a free action, choose an enemy.
       The crit range of your attacks against that enemy expands by 2 for the rest of the battle.
@@ -156,6 +164,7 @@ abilities:
         description: Your Lethal Hunter crits deal triple damage instead of double damage while the escalation die is 3+.
   - name: Ranger ex Cathedral
     _type: Talent
+    tier: adventurer
     description: |-
       Choose one daily or recharge spell of your level or lower from the cleric class.
       You can cast this spell as if you were a cleric.
@@ -169,6 +178,7 @@ abilities:
         description: You gain an additional cleric spell of your choice that is your level or lower; a total of two from this talent.
   - name: Ranger's Pet
     _type: Talent
+    tier: adventurer
     description: |-
       You have a small animal or beast that accompanies you on your adventures.
       Use the rules from the Wizard’s Familiar talent with the following differences:
@@ -185,6 +195,7 @@ abilities:
         description: Your pet gains a fifth ability.
   - name: Tracker
     _type: Talent
+    tier: adventurer
     description: |-
       You have the Tracker background at its full possible bonus of +5, without having to spend your normal background points on it.
       You are an expert wilderness tracker, capable of reading clues from the environment that others can’t perceive.
@@ -212,6 +223,7 @@ abilities:
         description: You can track flying creatures and creatures that normally wouldn’t be trackable, and there’s the possibility that even teleports give you a sense of direction.
   - name: Two Weapon Mastery
     _type: Talent
+    tier: adventurer
     description: You gain a +1 attack bonus when fighting with a one-handed melee weapon in each hand.
     feats:
       - tier: adventurer
@@ -397,23 +409,7 @@ Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are l
 
 ## Class Talents
 
-<Vault.AbilityList
-  abilities={props.getAbilities([
-    "Animal Companion",
-    "Archery",
-    "Double Melee Attack",
-    "Double Ranged Attack",
-    "Favored Enemy",
-    "Fey Queen's Enchantments",
-    "First Strike",
-    "Green Bandit's Secret",
-    "Lethal Hunter",
-    "Ranger ex Cathedral",
-    "Ranger's Pet",
-    "Tracker",
-    "Two Weapon Mastery",
-  ])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Talent")} />
 
 ## Animal Companion Rules
 
