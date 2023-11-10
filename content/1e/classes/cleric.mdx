@@ -214,7 +214,7 @@ abilities:
       - tier: epic
         description: Allies now also get a damage bonus against such enemies equal to double your Charisma modifier.
   - name: Bless
-    _type: Spell
+    _type: Spell 1
     usage: per-day
     description: |-
       Ranged spell; Daily
@@ -237,7 +237,7 @@ abilities:
 
       9th level spell: Each target also gains 3d10 temporary hit points instead of 2d10 per point of the attack bonus.
   - name: Cure Wounds
-    _type: Spell
+    _type: Spell 1
     usage: per-day
     description: |-
       Ranged spell; Daily
@@ -256,7 +256,7 @@ abilities:
 
       9th level spell: This spell is now recharge 11+ instead.
   - name: Hammer of Faith
-    _type: Spell
+    _type: Spell 1
     usage: per-day
     description: |-
       Range: Close-quarters spell
@@ -275,7 +275,7 @@ abilities:
 
       9th level spell: For the rest of the battle, change any of your basic melee attack damage dice rolls that are less than the escalation die to the escalation die value.
   - name: Javelin of Faith
-    _type: Spell
+    _type: Spell 1
     usage: at-will
     description: |-
       Ranged spell; At-Will
@@ -305,7 +305,7 @@ abilities:
       - tier: epic
         description: If your natural attack roll is an 18+, make the attack a second time against a different target as a free action.
   - name: Shield of Faith
-    _type: Spell
+    _type: Spell 1
     usage: per-day
     description: |-
       Ranged spell; Daily
@@ -328,7 +328,7 @@ abilities:
 
       9th level spell: The bonus when cast for power increases to +4. The bonus when cast for broad effect increases to +2.
   - name: Spirits of the Righteous
-    _type: Spell
+    _type: Spell 1
     usage: per-battle
     description: |-
       Ranged spell; Once per battle
@@ -354,7 +354,7 @@ abilities:
       - tier: champion
         description: You also gain the bonus to AC until the end of your next turn on a hit.
   - name: Turn Undead
-    _type: Spell
+    _type: Spell 1
     usage: per-day
     description: |-
       Range: Close-quarters spell
@@ -390,7 +390,7 @@ abilities:
       - tier: epic
         description: Increase the targeting limit by 100 hp.
   - name: Cause Fear
-    _type: Spell
+    _type: Spell 3
     usage: per-day
     description: |-
       Ranged spell; Daily
@@ -411,7 +411,7 @@ abilities:
 
       9th level spell: Target with 300 hp or fewer.
   - name: Combat Boon
-    _type: Spell
+    _type: Spell 3
     usage: at-will
     description: |-
       Range: Close-quarters spell
@@ -433,7 +433,7 @@ abilities:
       - tier: champion
         description: One nearby conscious ally can roll a save even if your attack misses.
   - name: Divine Endurance
-    _type: Spell
+    _type: Spell 3
     usage: per-day
     description: |-
       Ranged spell; Daily
@@ -454,7 +454,7 @@ abilities:
 
       9th level spell: Temporary hp = 100/50.
   - name: Judgment
-    _type: Spell
+    _type: Spell 3
     usage: per-day
     description: |-
       Ranged spell; Daily
@@ -480,7 +480,7 @@ abilities:
       - tier: epic
         description: The spell is now recharge 16+ after battle instead of daily.
   - name: Mighty Healing
-    _type: Spell
+    _type: Spell 3
     usage: per-day
     description: |-
       Ranged spell; Daily
@@ -502,7 +502,7 @@ abilities:
       - tier: champion
         description: This spell is now a close-quarters spell.
   - name: Strength of the Gods
-    _type: Spell
+    _type: Spell 3
     usage: per-day
     description: |-
       Ranged spell; Daily
@@ -523,7 +523,7 @@ abilities:
 
       9th level spell: Power +6d10, Broad +3d10.
   - name: Crisis of Faith
-    _type: Spell
+    _type: Spell 5
     usage: per-day
     description: |-
       Range: Close-quarters spell
@@ -540,7 +540,7 @@ abilities:
 
       9th level spell: 250 hp or fewer.
   - name: Sanctuary
-    _type: Spell
+    _type: Spell 5
     usage: per-day
     description: |-
       Range: Close-quarters spell
@@ -555,7 +555,7 @@ abilities:
 
       9th level spell: 250 hp or fewer.
   - name: Sphere of Radiance
-    _type: Spell
+    _type: Spell 5
     usage: per-day
     description: |-
       Range: Close-quarters spell
@@ -578,7 +578,7 @@ abilities:
 
       9th level spell: 2d8 x 10 damage.
   - name: Circle of Protection
-    _type: Spell
+    _type: Spell 7
     usage: per-day
     description: |-
       Range: Close-quarters spell
@@ -597,7 +597,7 @@ abilities:
       - tier: epic
         description: The spell is now (recharge 16+) after battle instead of daily.
   - name: Resurrection
-    _type: Spell
+    _type: Spell 7
     usage: other
     description: |-
       Ranged spell; **Special:** You can cast this spell only once per level, and a limited number of times in your life.
@@ -628,7 +628,7 @@ abilities:
 
       9th level spell: You no longer need to have most of the corpse to perform this spell.
   - name: Overworld Travel
-    _type: Spell
+    _type: Spell 9
     usage: per-day
     description: |-
       Range: Close-quarters spell
@@ -644,7 +644,7 @@ abilities:
 
       The destination can be in the overworld or in the land. It can’t be in the underworld.
   - name: Prayer for Readiness
-    _type: Spell
+    _type: Spell 9
     usage: per-day
     description: |-
       Range: Close-quarters spell
@@ -771,59 +771,24 @@ There are certain abilities specific to the cleric that can affect their powers:
 
 ## Class Talents
 
-<Vault.AbilityList abilities={props.getAbilitiesByType("Domain")} />
+<Vault.AbilityList abilities={props.getAbilitiesByTypes(["Domain","Domain Spell"])} />
 
 ## 1st Level Spells
 
-<Vault.AbilityList
-  abilities={props.getAbilities([
-    "Bless",
-    "Cure Wounds",
-    "Hammer of Faith",
-    "Javelin of Faith",
-    "Shield of Faith",
-    "Spirits of the Righteous",
-    "Turn Undead",
-    "Vigilant Light",
-  ])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 1")} />
 
 ## 3rd Level Spells
 
-<Vault.AbilityList
-  abilities={props.getAbilities([
-    "Cause Fear",
-    "Combat Boon",
-    "Divine Endurance",
-    "Judgment",
-    "Mighty Healing",
-    "Strength of the Gods",
-  ])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 3")} />
 
 ## 5th Level Spells
 
-<Vault.AbilityList
-  abilities={props.getAbilities([
-    "Crisis of Faith",
-    "Light of Revelation",
-    "Sanctuary",
-    "Sphere of Radiance",
-  ])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 5")} />
 
 ## 7th Level Spells
 
-<Vault.AbilityList
-  abilities={props.getAbilities([
-    "Circle of Protection",
-    "Divine Intervention",
-    "Resurrection",
-  ])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 7")} />
 
 ## 9th Level Spells
 
-<Vault.AbilityList
-  abilities={props.getAbilities(["Overworld Travel", "Prayer for Readiness"])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 9")} />
