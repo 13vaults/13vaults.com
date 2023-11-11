@@ -301,6 +301,8 @@ abilities:
 
       Quick action each turn; 11+ to sustain
 
+      ___
+
       **Opening & Sustained Effect:** You and your nearby allies gain a +1 attack bonus until the start of your next turn.
 
       **Final Verse:** The effect ends immediately, but one ally of your choice gains a +2 bonus to their next attack roll this battle.
@@ -318,10 +320,10 @@ abilities:
     description: |-
       Daily
 
-      - - -
 
       Quick action each turn; 6+ to sustain
 
+      - - -
       **Opening & Sustained Effect:** Any attack against you takes a penalty equal to the number of your allies in the battle who have more hit points than you.
 
       **Final Verse:** The effect ends immediately, and you or one ally of your choice can heal using a recovery.
@@ -733,11 +735,10 @@ abilities:
     _type: Spell 7
     usage: recharge
     description: |-
-      **Range:** Close-quarters spell
+      Close-quarters spell; Recharge 16+ after battle; Quick action
 
-      Quick action to cast
+      ___
 
-      **Recharge:** 16+ after battle
 
       **Effect:** You can swap your position and the positions of all your nearby allies, even if you can't see them when you cast the spell.
       Each position presently occupied by you or an ally must end up occupied after the swap, but otherwise you can swap freely.
@@ -779,13 +780,9 @@ abilities:
     _type: Spell 9
     usage: per-day
     description: |-
-      **Range:** Close-quarters spell
-
-      **Special:** Escalation die must be 4+.
-
-      Daily
-
+      Close-quarters spell; Daily
       - - -
+      **Special:** Escalation die must be 4+.
 
       **Targets:** You and all nearby allies
 
@@ -1023,6 +1020,7 @@ abilities:
   - name: Resounding Battle Cry
     _type: Talent
     source: DATP
+    usage: per-battle
     description: Once per battle, when you use a battle cry that affects only one target,
       you can affect multiple allies instead, equal to your Charisma modifier or the
       escalation die, whichever is lower.
@@ -1075,8 +1073,10 @@ abilities:
   - name: "Can\u2019t Touch This!"
     _type: Battle Cry 1
     source: DATP
+    usage: at-will
     description: 'Flexible melee attack
-  
+
+      ___
   
       **Triggering Roll:**  Natural even roll
   
@@ -1095,8 +1095,10 @@ abilities:
   - name: Follow the Beat!
     _type: Battle Cry 1
     source: DATP
+    usage: at-will
     description: 'Flexible melee attack
   
+      ___
   
       **Triggering Roll:**  Natural even roll
   
@@ -1111,8 +1113,10 @@ abilities:
   - name: Ready to Rock!
     _type: Battle Cry 1
     source: DATP
+    usage: at-will
     description: 'Flexible melee attack
   
+      ___
   
       **Triggering Roll:**  Natural odd roll
   
@@ -1127,8 +1131,10 @@ abilities:
   - name: "You Don\u2019t Dance!"
     _type: Battle Cry 1
     source: DATP
+    usage: at-will
     description: 'Flexible melee attack
   
+      ___
   
       **Triggering Roll:**  Natural odd hit
   
@@ -1230,13 +1236,16 @@ abilities:
     category: Spells & Songs
     usage: at-will
   - name: Ditty of the Bumbling Fools
-    _type: Spell 1
+    _type: Song 1
+    usage: recharge
     source: DATP
-    description: 'Bardic song; Recharge 6+ after battle
+    description: ' Recharge 6+ after battle
   
-  
+
       Quick action each turn; 11+ to sustain; automatic sustain if a natural 1 was rolled
       during or after your last turn
+
+      ___
   
   
       **Opening & Sustained Effect:**  If an ally rolls a natural 1 on a d20 roll, they
@@ -1422,10 +1431,11 @@ abilities:
     category: Spells & Songs
     usage: per-day
   - name: Song of Sustenance
-    _type: Spell 1
+    _type: Song 1
     source: DATP
-    description: "Bardic song; Recharge 11+ after battle; Quick action each turn; 11+\
-      \ to sustain\n\n**Opening & Sustained Effect:**  At the start of each of your\
+    usage: recharge
+    description: " Recharge 11+ after battle\n\nQuick action each turn; 11+\
+      \ to sustain\n___\n**Opening & Sustained Effect:**  At the start of each of your\
       \ nearby allies\u2019 turns, they heal damage equal to your Charisma bonus (minimum\
       \ +1).\n\n**Final Verse:**  The effect ends immediately, and one ally of your\
       \ choice can immediately heal using a recovery.\n\n3rd level spell: The heal amount\
@@ -1436,11 +1446,15 @@ abilities:
     level: 1
     category: Spells & Songs
   - name: Wild Dance
-    _type: Spell 1
+    _type: Song 1
     source: DATP
-    description: 'Bardic song; Recharge 11+ after battle; Quick action each turn; 11+
-      to sustain
+    usage: recharge
+    description: ' Recharge 11+ after battle
+
+
+      Quick action each turn; 11+ to sustain
   
+      ___
   
       **Opening & Sustained Effect:**  You or a nearby ally can immediately pop free
       from all enemies or engage a nearby enemy as a free action.
@@ -1461,8 +1475,10 @@ abilities:
   - name: Hammer Time!
     _type: Battle Cry 3
     source: DATP
+    usage: at-will
     description: 'Flexible melee attack
   
+      ___
   
       **Triggering Roll:**  Natural odd hit
   
@@ -1505,7 +1521,8 @@ abilities:
   - name: This Will Blow Your Mind!
     _type: Battle Cry 3
     source: DATP
-    description: "Flexible melee attack\n\n**Triggering Roll:**  Natural even hit\n\n\
+    usage: at-will
+    description: "Flexible melee attack\n___\n**Triggering Roll:**  Natural even hit\n\n\
       **Effect:**  The next attack against the target\u2019s MD has advantage."
     feats:
     - tier: champion
@@ -1515,8 +1532,10 @@ abilities:
   - name: Animated Theater
     _type: Spell 3
     source: DATP
+    usage: recharge
     description: 'Ranged spell; Recharge 11+
   
+      ___
   
       **Effect:**  You create a three-dimensional, animated visual illusion, roughly
       the size of a chest, for up to an hour. You can use the illusion to recreate events,
@@ -1595,9 +1614,9 @@ abilities:
     category: Spells & Songs
     usage: per-day
   - name: March of the Emperor
-    _type: Spell 3
+    _type: Song 3
     source: DATP
-    description: "Bardic song; Daily; Quick action each turn; 16+ to sustain (11+ if\
+    description: " Daily\n\nQuick action each turn; 16+ to sustain (11+ if\
       \ you have a positive icon relationship with the Emperor)\n\n---\n\n\n**Opening\
       \ & Sustained Effect:** \_A nearby group of mooks (with up to one mook per song\
       \ level + your Charisma modifier) must succeed at a normal save. If they fail,\
@@ -1610,11 +1629,15 @@ abilities:
     category: Spells & Songs
     usage: per-day
   - name: Ode to Heroism
-    _type: Spell 3
+    _type: Song 3
     source: DATP
-    description: 'Bardic song; Recharge 16+ after battle; Quick action each turn; 11+
-      to sustain (6+ if you have a positive icon relationship with the Great Gold Wyrm)
+    usage: recharge
+    description: ' Recharge 16+ after battle
+    
+
+      Quick action each turn; 11+ to sustain (6+ if you have a positive icon relationship with the Great Gold Wyrm)
   
+      ___
   
       **Opening & Sustained Effect:**  Choose an enemy. You and all nearby allies are
       immune to its fear aura (if any), and gain a +2 bonus to saves against any save
@@ -1659,17 +1682,14 @@ abilities:
     category: Spells & Songs
     usage: per-day
   - name: Song of Clashing Swords
-    _type: Spell 3
+    _type: Song 3
     source: DATP
-    description: 'Bardic song; Daily
+    description: ' Daily
   
-  
-      ---
-  
-  
-  
+
       Quick action each turn; 16+ to sustain
   
+      ___
   
       **Opening & Sustained Effect:**  All nearby allies gain a +2 bonus to their AC
       against melee attacks.
@@ -1686,8 +1706,10 @@ abilities:
   - name: Fear the Dark!
     _type: Battle Cry 5
     source: DATP
+    usage: at-will
     description: 'Flexible melee attack
   
+      ___
   
       **Triggering Roll:**  Natural odd hit
   
@@ -1705,8 +1727,10 @@ abilities:
   - name: "I\u2019m Just Messing with You!"
     _type: Battle Cry 5
     source: DATP
+    usage: at-will
     description: 'Flexible melee attack
   
+      ___
   
       **Triggering Roll:**  Natural even miss
   
@@ -1721,8 +1745,10 @@ abilities:
   - name: Stop Messing Around!
     _type: Battle Cry 5
     source: DATP
+    usage: at-will
     description: 'Flexible melee attack
   
+      ___
   
       **Triggering Roll:**  Natural even hit
   
@@ -1738,8 +1764,10 @@ abilities:
   - name: "That\u2019s the Sound of Victory!"
     _type: Battle Cry 5
     source: DATP
+    usage: at-will
     description: 'Flexible melee attack
   
+      ___
   
       **Triggering Roll:**  Natural even hit
   
@@ -1753,8 +1781,10 @@ abilities:
   - name: Time to Dance!
     _type: Battle Cry 5
     source: DATP
+    usage: at-will
     description: 'Flexible melee attack
   
+      ___
   
       **Triggering Roll:**  Natural 5, 6, 7, 8
   
@@ -1795,10 +1825,10 @@ abilities:
     category: Songs & Spells
     usage: per-day
   - name: Ethereal Dancers
-    _type: Spell 5
+    _type: Song 5
     source: DATP
-    description: "You summon a group of ghostly dancers who surround your enemies and\
-      \ invite them to dance.\n\nBardic song; Daily\n\n---\n\n\nStandard action each\
+    description: "_You summon a group of ghostly dancers who surround your enemies and\
+      \ invite them to dance._\n\n Daily\n\n---\n\n\nStandard action each\
       \ turn; 11+ to sustain\n\n**Opening & Sustained Effect:**  Make the following\
       \ attack against the nearby enemy with the lowest hit points. If it\u2019s a mook,\
       \ target the entire group. Skip targets that are already under the effect of the\
@@ -1822,8 +1852,9 @@ abilities:
   - name: Glamor Shield
     _type: Spell 5
     source: DATP
+    usage: recharge
     description: "Close-quarters spell; Daily (Recharge 16+ if you have a positive icon\
-      \ relationship with the Elf Queen); Quick action\n\n**Always:**  For the rest\
+      \ relationship with the Elf Queen); Quick action\n___\n**Always:**  For the rest\
       \ of the battle, once per round when an enemy moves to engage you, you can make\
       \ the following attack against it as a free action before it has the chance to\
       \ attack in melee.\n\n**Attack:**  Charisma + Level vs. MD\n\n_Natural Even Hit:_\
@@ -1840,17 +1871,14 @@ abilities:
     level: 5
     category: Songs & Spells
   - name: Song of the Mockingbird
-    _type: Spell 5
+    _type: Song 5
     source: DATP
-    description: 'Bardic song; Daily
+    description: ' Daily
   
-  
-      ---
-  
-  
-  
+
       Quick action each turn; 6+ to sustain
   
+      ___
   
       **Opening & Sustained Effect:**  All nearby enemies take a -2 penalty to their
       saves. If an enemy fails a save, it takes psychic damage equal to your level (but
@@ -1908,11 +1936,11 @@ abilities:
   - name: Unleash Chaos & Mayhem
     _type: Spell 5
     source: DATP
-    description: 'You animate nearby objects that are not nailed down to create a tornado
-      of flying hazards that strike at anyone who is not taking cover immediately.
+    description: '_You animate nearby objects that are not nailed down to create a tornado
+      of flying hazards that strike at anyone who is not taking cover immediately._
   
   
-      Close-quarters, Daily
+      Close-quarters spell, Daily
   
   
       ---
@@ -1993,8 +2021,10 @@ abilities:
   - name: Screw This!
     _type: Battle Cry 7
     source: DATP
+    usage: at-will
     description: 'Flexible melee attack
   
+      ___
   
       **Triggering Roll:**  Natural 1
   
@@ -2007,8 +2037,10 @@ abilities:
   - name: Welcome to my Nightmare!
     _type: Battle Cry 7
     source: DATP
+    usage: at-will
     description: 'Flexible melee attack
   
+      ___
   
       **Triggering Roll:**  Natural odd hit
   
@@ -2021,13 +2053,15 @@ abilities:
     level: 7
     category: Battle Cries
   - name: Dancing Blade
-    _type: Spell 7
+    _type: Song 7
     source: DATP
-    description: 'Bardic song; Daily; Quick action; 6+ to sustain
+    description: ' Daily
+    
+
+     Quick action; 6+ to sustain
+
   
-  
-      ---
-  
+      ___
   
   
       **Opening & Sustained Effect:**  A melee weapon you are holding flies out to make
@@ -2045,17 +2079,14 @@ abilities:
     category: Songs & Spells
     usage: per-day
   - name: Manic Cacophony
-    _type: Spell 7
+    _type: Song 7
     source: DATP
-    description: 'Bardic song; Daily
+    description: ' Daily
   
-  
-      ---
-  
-  
-  
+
       Standard action each turn; 16+ to sustain
   
+      ___
   
       **Opening & Sustained Effect:**  Make the following against the 1d3 nearby enemies
       with the lowest hit point total.
@@ -2110,15 +2141,15 @@ abilities:
     category: Songs & Spells
     usage: per-day
   - name: Roar of the Great Gold Wyrm
-    _type: Spell 7
+    _type: Song 7
     source: DATP
-    description: 'Bardic song; Daily; Quick action; 16+ to sustain
-  
-  
-      ---
-  
-  
-  
+    description: ' Daily
+      
+
+      Quick action; 16+ to sustain
+    
+      ___
+    
       **Opening & Sustained Effect:**  Creatures with fewer hit points than you cannot
       attack you.
   
@@ -2134,7 +2165,7 @@ abilities:
   - name: Time to Fly
     _type: Spell 7
     source: DATP
-    description: "Close-quarters, Daily\n\n---\n\n\n**Target:**  You and a number of\
+    description: "Close-quarters spell; Daily\n\n---\n\n\n**Target:**  You and a number of\
       \ willing allies equal to your Charisma bonus\n\n**Effect:**  You transform all\
       \ targets and their equipment into birds. The main purpose of this spell is overland\
       \ travel, as you can\u2019t use items or abilities while in bird form. The targets\
@@ -2263,17 +2294,14 @@ abilities:
     category: Songs & Spells
     usage: per-day
   - name: Wail of the Banshee
-    _type: Spell 9
+    _type: Song 9
     source: DATP
-    description: 'Bardic song; Daily
-  
-  
-      ---
-  
+    description: ' Daily
   
   
       Standard action each turn; 16+ to sustain
   
+      ___
   
       **Opening & Sustained Effect:**  Make the following attack against a nearby enemy.
   
@@ -2403,9 +2431,8 @@ As a bard advances in level, they have three different types of powers to choose
 
 ## 1st Level Songs & Spells
 
-<Vault.AbilityList
-  abilities={props.getAbilitiesByTypes(["Song 1", "Spell 1"])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Song 1")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 1")} />
 
 ## 3rd Level Battle Cries
 
@@ -2413,9 +2440,8 @@ As a bard advances in level, they have three different types of powers to choose
 
 ## 3rd Level Songs & Spells
 
-<Vault.AbilityList
-  abilities={props.getAbilitiesByTypes(["Song 3", "Spell 3"])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Song 3")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 3")} />
 
 ## 5th Level Battle Cries
 
@@ -2423,9 +2449,8 @@ As a bard advances in level, they have three different types of powers to choose
 
 ## 5th Level Songs & Spells
 
-<Vault.AbilityList
-  abilities={props.getAbilitiesByTypes(["Song 5", "Spell 5"])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Song 5")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 5")} />
 
 ## 7th Level Battle Cries
 
@@ -2433,9 +2458,8 @@ As a bard advances in level, they have three different types of powers to choose
 
 ## 7th Level Songs & Spells
 
-<Vault.AbilityList
-  abilities={props.getAbilitiesByTypes(["Song 7", "Spell 7"])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Song 7")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 7")} />
 
 ## 9th Level Battle Cries
 
@@ -2443,6 +2467,5 @@ As a bard advances in level, they have three different types of powers to choose
 
 ## 9th Level Songs & Spells
 
-<Vault.AbilityList
-  abilities={props.getAbilitiesByTypes(["Song 9", "Spell 9"])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByType("Song 9")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 9")} />
