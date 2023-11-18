@@ -324,41 +324,44 @@ abilities:
       - tier: epic
         description: Increase your animal companion's AC by +1.
 # BEGIN DATP ABILITIES
-  - name: Adventurer Tier Talents
-    _type: Talent
-    source: DATP
-    description: ''
-    feats: []
-    tier: adventurer
   - name: Arcane Archer
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
-  
-  
+    description: |
       _You practice a mystic form of archery that infuses your arrows with arcane magic
       as you shoot._
   
-  
       If you spend one talent, you are an Arcane Archer initiate, with two, you become
       an Arcane Archer adept.
-  
-  
-      As an Arcane Archer, you gain a number of powers depending on whether you are
-      an initiate or adept, and your level.
-  
-  
-      **Arcane Archer Power Progression** '
-    feats: []
+
+      To use an Arcane Archer power _(see below)_, declare that you are using it before making a ranged weapon attack. You then pay the cost of the power, usually one charge for a 1st or 3rd level power, or 2 charges for 5th level power. You then apply the effect of the power to your ranged attack. If you make more than one attack, such as with the Double Ranged Attack talent, your Arcane Archer power only applies to one of those attacks. If you want to use them with more than one attack, pay the cost each time.
+      If you are an initiate, you have a number of charges equal to your Wisdom modifier, as an adept, you have your Wisdom modifier +3.
+
+      You regain all expended charges during a full heal-up. When you take a quick rest, you regain one charge as an initiate, or two as an adept.
+
+      You can only apply one power to each ranged attack, unless you have one of the feats below that allow you to stack multiple powers of one sphere.
+
+      **Feats**: You don’t need to take the feats below in order.
+    feats: 
+      - description: You learn an additional shot. You can use Intelligence instead of Wisdom for your Arcane Archer abilities.
+        tier: adventurer
+      - description: Gain a bonus charge. You can use Charisma instead of Wisdom for your Arcane Archer abilities.
+        tier: adventurer
+      - description: Choose one sphere. Gain a +1 bonus to hit when using a shot from that sphere.
+        tier: champion
+      - description: Choose one sphere. You can combine any two shots of that sphere in one attack by paying the cost for each.
+        tier: champion
+      - description: Regain two charges on a quick rest as an initiate, or three as an adept.
+        tier: epic
+      - description: Choose one sphere. You can combine all three shots of that sphere in one attack by paying the cost for each. 
+        tier: epic
     tier: adventurer
   - name: Death Sphere
-    _type: Talent
+    _type: Arcane Archery Sphere
+    usage: per-battle
     source: DATP
-    description: ''
-    feats: []
-    tier: adventurer
-  - name: Deathknell Shot (1st Level)
-    _type: Talent
+  - name: Deathknell Shot
+    _type: Arcane Shot 1
     source: DATP
     description: "**Cost:**  1 charge\n\n**Effect:**  On a hit, if your target has 5\
       \ hp or fewer after the attack, you can drop it to 0 hp. If you drop it to zero\
@@ -367,27 +370,27 @@ abilities:
       \ fewer\n\n7th level power: 20 hp or fewer\n\n9th level power: 25 hp or fewer"
     feats:
     - tier: adventurer
-      description: '_Adventurer Feat_ Double the hit point range at which you can drop
+      description: 'Double the hit point range at which you can drop
         an enemy to zero hit points.
   
         '
     tier: adventurer
-  - name: Ghost Shot (3rd Level)
-    _type: Talent
+  - name: Ghost Shot
+    _type: Arcane Shot 3
     source: DATP
     description: "**Cost:**  1 charge\n\n**Effect:**  Target the enemy\u2019s PD instead\
       \ of AC."
     feats:
     - tier: adventurer
-      description: '_Adventurer Feat_ Deal extra negative energy damage equal to your
+      description: 'Deal extra negative energy damage equal to your
         level.
   
         '
     tier: adventurer
-  - name: Kill Shot (5th Level)
-    _type: Talent
+  - name: Kill Shot
+    _type: Arcane Shot 5
     source: DATP
-    description: 'Requires Deathknell Shot and Ghost Shot
+    description: 'Requires Deathknell Shot and Ghost Shot.
   
   
       **Cost:**  2 charges
@@ -397,13 +400,11 @@ abilities:
     feats: []
     tier: adventurer
   - name: Flaming Sphere
-    _type: Talent
+    _type: Arcane Archery Sphere
+    usage: per-battle
     source: DATP
-    description: ''
-    feats: []
-    tier: adventurer
-  - name: Burning Shot (1st Level)
-    _type: Talent
+  - name: Burning Shot
+    _type: Arcane Shot 1
     source: DATP
     description: '**Cost:**  1 charge
   
@@ -411,18 +412,18 @@ abilities:
       **Effect:**  If you hit, deal 1d6 extra fire damage per level.'
     feats:
     - tier: adventurer
-      description: '_Adventurer Feat_ The extra fire damage dice are exploding dice
+      description: 'The extra fire damage dice are exploding dice
         (on a 6, roll another d6 and add it).
   
         '
     tier: adventurer
-  - name: Immolating Shot (3rd Level)
-    _type: Talent
+  - name: Immolating Shot
+    _type: Arcane Shot 3
     source: DATP
     description: '**Cost:**  1 charge
   
   
-      **Effect: ** If you hit, deal an extra 5 ongoing fire damage, and the target is
+      **Effect:** If you hit, deal an extra 5 ongoing fire damage, and the target is
       vulnerable to fire (save ends both).
   
   
@@ -435,21 +436,21 @@ abilities:
       9th level power: 20 ongoing damage'
     feats:
     - tier: adventurer
-      description: '_Adventurer Feat_ The save against the ongoing damage is a hard
+      description: ' The save against the ongoing damage is a hard
         save (16+).
   
         '
     tier: adventurer
-  - name: Explosive Shot (5th Level)
-    _type: Talent
+  - name: Explosive Shot
+    _type: Arcane Shot 5
     source: DATP
-    description: 'Requires Burning Shot and Immolating Shot
+    description: 'Requires Burning Shot and Immolating Shot.
   
   
       **Cost:**  2 charges
   
   
-      **Effect: ** Hit or miss, deal 3d10 + Wisdom extra fire damage to 1d3 nearby enemies
+      **Effect:** Hit or miss, deal 3d10 + Wisdom extra fire damage to 1d3 nearby enemies
       other than the target.
   
   
@@ -460,43 +461,42 @@ abilities:
     feats: []
     tier: adventurer
   - name: Force Sphere
-    _type: Talent
+    _type: Arcane Archery Sphere
+    usage: per-battle
     source: DATP
-    description: ''
-    feats: []
     tier: adventurer
-  - name: Arrow Fist (1st Level)
-    _type: Talent
+  - name: Arrow Fist
+    _type: Arcane Shot 1
     source: DATP
-    description: "**Cost:**  1 charge\n\n**Effect: ** If you hit, the attack deals force\
+    description: "**Cost:**  1 charge\n\n**Effect:** If you hit, the attack deals force\
       \ damage and throws the target backwards. It pops free from anyone it is engaged\
       \ with. If you push the target into a dangerous spot, such as over a ledge or\
       \ into lava, it can make a save\n    to avoid the effect.\n"
     feats:
     - tier: adventurer
-      description: '_Adventurer Feat_ The push effect is now strong enough to throw
+      description: ' The push effect is now strong enough to throw
         a target from a nearby to a far away location.
   
         '
     tier: adventurer
-  - name: Homing Missile (3rd Level)
-    _type: Talent
+  - name: Homing Missile
+    _type: Arcane Shot 3
     source: DATP
     description: '**Cost:**  1 charge
   
   
-      **Effect: ** You have advantage on the attack roll.'
+      **Effect:** You have advantage on the attack roll.'
     feats:
     - tier: adventurer
-      description: '_Adventurer Feat_ Against far away enemies, increase your WEAPON
+      description: ' Against far away enemies, increase your WEAPON
         damage dice by one step.
   
         '
     tier: adventurer
-  - name: Twin Arrow (5th Level)
-    _type: Talent
+  - name: Twin Arrow
+    _type: Arcane Shot 5
     source: DATP
-    description: 'Requires Arrow Fist and Homing Missile
+    description: 'Requires Arrow Fist and Homing Missile.
   
   
       **Cost:**  2 charges
@@ -505,30 +505,29 @@ abilities:
       **Target:**  Two nearby or far away enemies
   
   
-      **Effect: ** Take a -2 penalty to the attack roll. The attack deals force damage.
+      **Effect:** Take a -2 penalty to the attack roll. The attack deals force damage.
       If both attacks miss, roll a third attack against a different enemy.'
     feats: []
     tier: adventurer
   - name: Frost Sphere
-    _type: Talent
+    _type: Arcane Archery Sphere
+    usage: per-battle
     source: DATP
-    description: ''
-    feats: []
     tier: adventurer
-  - name: Ice Arrow (1st Level)
-    _type: Talent
+  - name: Ice Arrow
+    _type: Arcane Shot 1
     source: DATP
     description: '**Cost:**  1 charge
   
   
-      **Effect: ** On a hit, deal 1d4 per level extra cold damage to the target, and
+      **Effect:** On a hit, deal 1d4 per level extra cold damage to the target, and
       it has disadvantage on disengage checks until the end of your next turn.'
     feats:
     - tier: adventurer
       description: ' Increase the extra damage to 1d6 per level.'
     tier: adventurer
-  - name: Freezing Arrow (3rd Level)
-    _type: Talent
+  - name: Freezing Arrow
+    _type: Arcane Shot 3
     source: DATP
     description: '**Cost:**  1 charge
   
@@ -538,15 +537,15 @@ abilities:
       level; x3 at 8th).'
     feats:
     - tier: adventurer
-      description: '_Adventurer Feat_ On a miss, deal extra cold damage equal to your
+      description: ' On a miss, deal extra cold damage equal to your
         level.
   
         '
     tier: adventurer
-  - name: Blizzard Shot (5th Level)
-    _type: Talent
+  - name: Blizzard Shot
+    _type: Arcane Shot 5
     source: DATP
-    description: 'Requires Ice Arrow and Freezing Arrow
+    description: 'Requires Ice Arrow and Freezing Arrow.
   
   
       **Cost:**  2 charges
@@ -564,13 +563,12 @@ abilities:
     feats: []
     tier: adventurer
   - name: Radiant Sphere
-    _type: Talent
+    _type: Arcane Archery Sphere
     source: DATP
-    description: ''
-    feats: []
+    usage: per-battle
     tier: adventurer
-  - name: Blinding Flare (1st Level)
-    _type: Talent
+  - name: Blinding Flare
+    _type: Arcane Shot 1
     source: DATP
     description: '**Cost:**  1 charge
   
@@ -582,22 +580,22 @@ abilities:
   
         '
     tier: adventurer
-  - name: Vexing Flare (3rd Level)
-    _type: Talent
+  - name: Vexing Flare
+    _type: Arcane Shot 3
     source: DATP
     description: "**Cost:**  1 charge\n\n**Effect:**  The attack targets the enemy\u2019\
       s MD instead of AC."
     feats:
     - tier: adventurer
-      description: '_Adventurer Feat_ On a natural even miss, reroll the attack against
+      description: ' On a natural even miss, reroll the attack against
         a different nearby enemy.
   
         '
     tier: adventurer
-  - name: Confusing Flare (5th Level)
-    _type: Talent
+  - name: Confusing Flare
+    _type: Arcane Shot 5
     source: DATP
-    description: "Requires Blinding Flare and Vexing Flare\n\n**Cost:**  2 charges\n\
+    description: "Requires Blinding Flare and Vexing Flare.\n\n**Cost:**  2 charges\n\
       \n**Effect:**  On a hit, if the target\u2019s hit points are equal to your maximum\
       \ or less after taking damage, it is confused until the end of your next turn.\
       \ If they are higher, it is dazed until the end of your next turn."
@@ -609,13 +607,12 @@ abilities:
         '
     tier: adventurer
   - name: Sky Sphere
-    _type: Talent
+    _type: Arcane Archery Sphere
+    usage: per-battle
     source: DATP
-    description: ''
-    feats: []
     tier: adventurer
-  - name: Thunderbolt (1st Level)
-    _type: Talent
+  - name: Thunderbolt
+    _type: Arcane Shot 1
     source: DATP
     description: '**Cost:**  1 charge
   
@@ -625,13 +622,12 @@ abilities:
       target.'
     feats:
     - tier: adventurer
-      description: '_Adventurer Feat_ On a natural even hit, the target is weakened
-        instead.
+      description: ' On a natural even hit, the target is weakened instead.
   
         '
     tier: adventurer
-  - name: Lightning Bolt (3rd Level)
-    _type: Talent
+  - name: Lightning Bolt
+    _type: Arcane Shot 3
     source: DATP
     description: "**Cost:**  1 charge\n\n**Effect:**  Before making your ranged attack,\
       \ make the following separate attack roll.\n\n**Target:**  A random nearby enemy\
@@ -643,10 +639,10 @@ abilities:
   
         '
     tier: adventurer
-  - name: Shocking Jolt (5th Level)
-    _type: Talent
+  - name: Shocking Jolt
+    _type: Arcane Shot 5
     source: DATP
-    description: 'Requires Thunderbolt and Lightning Bolt
+    description: 'Requires Thunderbolt and Lightning Bolt.
   
   
       **Cost:**  2 charges
@@ -661,18 +657,17 @@ abilities:
     feats: []
     tier: adventurer
   - name: Thorns Sphere
-    _type: Talent
+    _type: Arcane Archery Sphere
+    usage: per-battle
     source: DATP
-    description: ''
-    feats: []
     tier: adventurer
-  - name: Rooting Shot (1st Level)
-    _type: Talent
+  - name: Rooting Shot
+    _type: Arcane Shot 1
     source: DATP
     description: '**Cost:**  1 charge
   
   
-      **Effect: ** On a hit, deal 1d4 per level extra damage. On a natural even hit,
+      **Effect:** On a hit, deal 1d4 per level extra damage. On a natural even hit,
       the target is stuck until the end of its next turn.'
     feats:
     - tier: adventurer
@@ -680,13 +675,13 @@ abilities:
     - tier: champion
       description: " On a natural 16+, the stuck effect is \u201Csave ends.\u201D"
     tier: adventurer
-  - name: Ivy Shot (3rd Level)
-    _type: Talent
+  - name: Ivy Shot
+    _type: Arcane Shot 3
     source: DATP
     description: '**Cost:**  1 charge
   
   
-      **Effect: ** On a hit, the target is hampered until the end of your next turn.
+      **Effect:** On a hit, the target is hampered until the end of your next turn.
       It can choose to take 15 poison damage to shake off the effect.
   
   
@@ -701,8 +696,8 @@ abilities:
     - tier: adventurer
       description: " On a natural 18+, the hampered effect is \u201Csave ends.\u201D"
     tier: adventurer
-  - name: Spore Shot (5th Level)
-    _type: Talent
+  - name: Spore Shot
+    _type: Arcane Shot 5
     source: DATP
     description: 'Requires Rooting Shot and Ivy Shot
   
@@ -710,7 +705,7 @@ abilities:
       **Cost:**  2 charges
   
   
-      **Effect: ** Hit or miss, create a spore cloud around the target and 1d3 enemies
+      **Effect:** Hit or miss, create a spore cloud around the target and 1d3 enemies
       in the same group. Enemies in that cloud must take a move action to get out of
       the area or take half damage from the attack as poison damage at the start of
       your next turn.'
@@ -719,7 +714,7 @@ abilities:
   - name: Camouflage
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
+    description: '
   
   
       When you are not engaged, you gain a +2 bonus to all defenses.'
@@ -733,67 +728,10 @@ abilities:
     - tier: epic
       description: ' Increase the defense bonus to +4 in the first round of battle.'
     tier: adventurer
-  - name: Dire Stag
-    _type: Talent
-    source: DATP
-    description: "**Acts** : After ranger\n\n**Advantage** : You can ride it, which\
-      \ probably makes you faster than you\u2019d otherwise be. In the absence of complex\
-      \ mounted combat rules, simply rule that your animal companion always has the\
-      \ same ranges from enemies that you do (engaged, nearby, far away, and so on).\
-      \ In general, you and your companion will move during your turn, and when your\
-      \ turn is over, it\u2019ll make a melee attack with its horns against anything\
-      \ you\u2019re engaged with."
-    feats:
-    - tier: adventurer
-      description: " You gain the ability to charge forward. If you start your turn\
-        \ unengaged, you may engage any enemy you can move to and gain a +2 bonus on\
-        \ your attack roll. (We note that the 13th Age Roleplaying Game generally frowns\
-        \ on charge bonuses, but if there\u2019s a worthy exception, it\u2019s mounted\
-        \ combat.)"
-    tier: adventurer
-  - name: Dire Wolf
-    _type: Talent
-    source: DATP
-    description: "**Acts** : After ranger\n\n**Advantage** : When the dire wolf drops\
-      \ an enemy to 0 hp, it can howl as a free action. Nearby enemies suffer a penalty\
-      \ to attacks and defenses equal to half the escalation die (rounded up) until\
-      \ the end of the companion\u2019s next turn."
-    feats:
-    - tier: adventurer
-      description: '** You can ride the dire wolf; see dire stag advantage above** '
-    tier: adventurer
-  - name: Owlbear
-    _type: Talent
-    source: DATP
-    description: "**Acts** : After ranger\n\n**Advantage** : Because it\u2019s a vicious\
-      \ hybrid, the owlbear can make an extra attack during its turn when the escalation\
-      \ die is even."
-    feats:
-    - tier: champion
-      description: " When the owlbear hits an enemy, that enemy is hampered until the\
-        \ end of the owlbear\u2019s next turn."
-    tier: adventurer
-  - name: Pseudodragon
-    _type: Talent
-    source: DATP
-    description: "**Acts** : Before ranger\n\n**Advantage** : It flies, but unlike the\
-      \ eagle, you don\u2019t drop its melee damage to compensate."
-    feats:
-    - tier: champion
-      description: ' The pseudodragon has a stinging tail that it incorporates into
-        its melee attack, so it gains ongoing poison damage equal to three times your
-        level on a natural attack roll of 18+.'
-    - tier: epic
-      description: " The pseudodragon has a 1/encounter breath weapon that attacks PD\
-        \ with the companion\u2019s normal melee attack bonus. It deals 15 fire damage\
-        \ to 2d3 nearby enemies."
-    tier: adventurer
   - name: Gloomstalker
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
-  
-  
+    description: '
       Choose one spell of your level or lower from the necromancer class. You can cast
       this spell as if you were a necromancer, but you can replace any mention of Intelligence
       with Wisdom. You can change the spell after each full heal-up.'
@@ -811,7 +749,7 @@ abilities:
   - name: Great Weapon Master
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
+    description: '
   
   
       You gain a +1 bonus to attack when fighting with a two-handed melee weapon.'
@@ -829,7 +767,7 @@ abilities:
   - name: Path of the Spear
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
+    description: '
   
   
       When fighting with a spear (d8 two-handed melee attack) or a javelin (d6 thrown
@@ -865,7 +803,7 @@ abilities:
   - name: Survivor
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
+    description: '
   
   
       Add your Wisdom modifier to saving throws and death saves.'
@@ -881,7 +819,7 @@ abilities:
   - name: Ways of the Land
     _type: Talent
     source: DATP
-    description: "**Source **  DATP\n\nYou gain a spell slot from the druid\u2019s Circle\
+    description: "\n\nYou gain a spell slot from the druid\u2019s Circle\
       \ of the Lands (Terrain Caster). Like a Terrain Caster, you don\u2019t need to\
       \ prepare a spell in advance. When you decide to cast a spell, choose one from\
       \ the list of the terrain(s) you are currently in, at your level or lower. If\
@@ -903,250 +841,10 @@ abilities:
       description: ' You gain a second terrain caster spell slot, at two levels below
         your class level.'
     tier: adventurer
-  - name: Embers of the North (1st Level)
-    _type: Talent
-    source: DATP
-    description: 'Daily
-  
-  
-      ---
-  
-  
-  
-      Standard action; includes a basic attack
-  
-  
-      **Target** : One enemy.
-  
-  
-      **Hit** : '
-    feats: []
-    tier: adventurer
-    usage: per-day
-  - name: None
-    _type: Talent
-    source: DATP
-    description: 'Daily
-  
-  
-      ---
-  
-  
-  
-      Standard action; includes a basic attack
-  
-  
-      **Target** : One enemy.
-  
-  
-      **Attack** : As basic attack
-  
-  
-      **Hit** : Basic attack damage + 4d6 fire damage'
-    feats: []
-    tier: adventurer
-    usage: per-day
-  - name: Gale of the Polar Wastes (1st Level)
-    _type: Talent
-    source: DATP
-    description: "Daily\n\n---\n\n\nStandard action; includes a basic attack\n\n**Target**\
-      \ : One enemy.\n\n**Attack** : As basic attack\n\n**Hit** : Basic attack damage\
-      \ + 3d6 cold damage, and the target pops free from whomever it\u2019s engaged\
-      \ with (possibly including you)"
-    feats: []
-    tier: adventurer
-    usage: per-day
-  - name: Rumblings from the East (3rd Level)
-    _type: Talent
-    source: DATP
-    description: 'Daily
-  
-  
-      ---
-  
-  
-  
-      Standard action; includes a basic attack
-  
-  
-      **Attack** : As basic attack
-  
-  
-      **Target** : One enemy.
-  
-  
-      **Hit** : Basic attack damage + 3d6 thunder damage, and nearby enemies take 1d6
-      thunder damage'
-    feats: []
-    tier: adventurer
-    usage: per-day
-  - name: Briars of the White Copse (3rd Level)
-    _type: Talent
-    source: DATP
-    description: 'Daily
-  
-  
-      ---
-  
-  
-  
-      Standard action; includes a basic attack
-  
-  
-      **Attack** : As basic attack
-  
-  
-      **Target** : One enemy.
-  
-  
-      **Hit** : Basic attack damage, and the enemy is stuck (11+ save)'
-    feats: []
-    tier: adventurer
-    usage: per-day
-  - name: Rains from the South (5th Level)
-    _type: Talent
-    source: DATP
-    description: 'Daily
-  
-  
-      ---
-  
-  
-  
-      Standard action; includes a basic attack
-  
-  
-      **Target** : One enemy.
-  
-  
-      **Attack** : As basic attack
-  
-  
-      **Hit** : Basic attack damage, and 15 ongoing acid damage'
-    feats: []
-    tier: adventurer
-    usage: per-day
-  - name: Slumber of the Snowy Peak (5th Level)
-    _type: Talent
-    source: DATP
-    description: 'Daily
-  
-  
-      ---
-  
-  
-  
-      Standard action; includes a basic attack
-  
-  
-      **Target** : One enemy.
-  
-  
-      **Attack** : As basic attack
-  
-  
-      **Hit** : Basic attack damage, and the enemy is unconscious if it has less than
-      85 hit points (after accounting for the successful basic attack) and dazed if
-      it has 85 or more; a hard save (16+) ends either effect, as does taking 10 or
-      more damage'
-    feats: []
-    tier: adventurer
-    usage: per-day
-  - name: Fog of the Umbral Vale (7th Level)
-    _type: Talent
-    source: DATP
-    description: 'Daily
-  
-  
-      ---
-  
-  
-  
-      Standard action; includes a basic attack
-  
-  
-      **Target** : One enemy.
-  
-  
-      **Attack** : As basic attack
-  
-  
-      **Hit** : Basic attack damage, and the enemy is confused (16+ save ends)'
-    feats: []
-    tier: adventurer
-    usage: per-day
-  - name: Storms from the West (7th Level)
-    _type: Talent
-    source: DATP
-    description: 'Daily
-  
-  
-      ---
-  
-  
-  
-      Standard action; includes a basic attack
-  
-  
-      **Target** : One enemy.
-  
-  
-      **Attack** : As basic attack
-  
-  
-      **Hit** : Basic attack damage + 8d12 lightning damage, and the lightning arcs
-      to 1d6 nearby enemies who each take 4d12 lightning damage'
-    feats: []
-    tier: adventurer
-    usage: per-day
-  - name: Leap to the Distant Horizon (9th Level)
-    _type: Talent
-    source: DATP
-    description: "Daily\n\n---\n\n\nStandard action; includes a basic attack\n\n**Target**\
-      \ : One enemy.\n\n**Attack** : As basic attack\n\n**Hit (ranged attack)** : Basic\
-      \ attack damage, and you teleport to any point where you engage the enemy you\
-      \ hit; you may draw one or more melee weapons as a free action\n\n**Hit (melee\
-      \ attack)** : Basic attack damage, and both you and the enemy you hit are teleported\
-      \ to someplace nearby or far away you select; you can choose the destination,\
-      \ but you can\u2019t choose a point in midair or someplace obviously fatal; you\
-      \ and your enemy are still engaged at the conclusion of the teleport"
-    feats: []
-    tier: adventurer
-    usage: per-day
-  - name: Echo of the Weapon Primeval (9th Level)
-    _type: Talent
-    source: DATP
-    description: 'Daily
-  
-  
-      ---
-  
-  
-  
-      Standard action; includes a basic attack
-  
-  
-      **Target** : One enemy.
-  
-  
-      **Attack** : As basic attack
-  
-  
-      **Hit** : Basic attack damage + 4d8 x 10 damage, and target is vulnerable (11+
-      save ends)'
-    feats: []
-    tier: adventurer
-    usage: per-day
-  - name: Champion Tier Talents (New)
-    _type: Talent
-    source: DATP
-    description: You can take the talents below with your 5th or 8th-level talent slot.
-    feats: []
-    tier: adventurer
   - name: Big Game Hunter
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
+    description: '
   
   
       Once per battle, you can perform a stunt as a move action to climb on a large
@@ -1171,25 +869,25 @@ abilities:
         increase it to 30.
   
         '
-    tier: adventurer
+    tier: champion
   - name: Champion of the Fey Queen
     _type: Talent
     source: DATP
-    description: "**Source **  DATP\n\n**Special:**  This talent requires Fey Queen\u2019\
-      s Enchantments.\n\nAt the start of each battle, roll 2d4 to determine the effect\
-      \ of a special blessing that the fey grant you until the end of the battle.\n\n\
-      1. When you rally this battle, you become invisible until you make an attack.\n\
-      2. Enemy attacks have a 25% (4 on a d4) chance of missing you this battle.\n3.\
-      \ 1d4 times this battle, you can teleport to a nearby location you can see as\
-      \ a move action.\n4. When you make a ranger melee or weapon attack, gain a 1d4\
-      \ bonus to the attack roll.\n5. When you roll a save against an effect, gain a\
-      \ 1d4 bonus to the roll.\n6. Choose a sorcerer spell gained with Fey Queen\u2019\
-      s Enchantments. Choose A) advantage on the first attack roll with it or B) a bonus\
-      \ use of it this battle.\n7. \n        If you hit an enemy with a natural even\
-      \ roll on a melee or ranged weapon attack, and their hit point total after taking\
-      \ damage is equal to your maximum or less, that target is confused until the end\
-      \ of your next turn. If they have\n        more hit points, roll 1d4: On a 3 or\
-      \ 4, gain the confusion effect.\n    \n"
+    description: |
+      **Special:**  This talent requires Fey Queen's Enchantments.
+
+      At the start of each battle, roll 2d4 to determine the effect of a special blessing
+      that the fey grant you until the end of the battle.
+      1. When you rally this battle, you become invisible until you make an attack.
+      2. Enemy attacks have a 25% (4 on a d4) chance of missing you this battle.
+      3. 1d4 times this battle, you can teleport to a nearby location you can see as a move action.
+      4. When you make a ranger melee or weapon attack, gain a 1d4 bonus to the attack roll.
+      5. When you roll a save against an effect, gain a 1d4 bonus to the roll.
+      6. Choose a sorcerer spell gained with Fey Queen's Enchantments.  Choose A) advantage on the first attack roll with it or B) a bonus use of it this battle.
+      7. If you hit an enemy with a natural even roll on a melee or ranged weapon attack,
+      and their hit point total after taking damage is equal to your maximum or less,
+      that target is confused until the end of your next turn. 
+      If they have more hit points, roll 1d4: On a 3 or 4, gain the confusion effect.
     feats:
     - tier: champion
       description: ' When the escalation die is 5+, roll again for a second benefit
@@ -1200,11 +898,11 @@ abilities:
       description: ' Gain the second benefit when the escalation die is 3+.
   
         '
-    tier: adventurer
+    tier: champion
   - name: Deadly Aim
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
+    description: '
   
   
       While you are not engaged, you can take a quick action to aim at a nearby enemy.
@@ -1215,30 +913,36 @@ abilities:
       description: " You can choose to target the enemy\u2019s MD instead of PD."
     - tier: epic
       description: ' With aim, you also deal half damage on a miss.'
-    tier: adventurer
+    tier: champion
   - name: Divine Avenger
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
-  
-  
+    description: |
       **Special:**  This talent requires Ranger Ex Cathedral.
-  
   
       Once per day, you can swear an Oath of Vengeance against an enemy as a quick action.
       Your attack rolls against the target have advantage, and all damage you deal against
       it is holy damage.
   
-  
       You also gain Inescapable Wrath and Relentless Pursuit as bonus powers.
+      ___ 
+      ### Inescapable Wrath
+      Close-quarters power; At-will; Interrupt action
+      
+      **Trigger:** Your Oath of Vengeance target disengages or moves away from you.
+
+      **Effect:** Make a save. If your save is equal to the enemy's disengage check or higher,
+      you pursue the enemy and stay engaged while they move. Succeed or fail, you
+      add twice your Wisdom modifier (x3 at 8th level) to damage if your next attack
+      against the target is a hit.
+      ___
+      ### Relentless Pursuit
+      Close-quarters power; Once per battle; No action
   
+      **Trigger:**  The first time you are unconscious at the start of your turn in
+      a battle.
   
-      _Altruist:_ When an enemy drops an ally below zero hit points, you gain a free
-      use of Oath of Vengeance against that enemy.
-  
-  
-      _Egoist:_ When an enemy scores a critical hit against you, you gain a free use
-      of Oath of Vengeance against that enemy.'
+      **Effect:**  You can heal using a recovery.
     feats:
     - tier: champion
       description: ' When an enemy drops you below zero hit points, you gain a free
@@ -1246,40 +950,15 @@ abilities:
   
         '
     - tier: epic
-      description: ' Choose between Egoist or Altruist.
-  
-        '
-    tier: adventurer
-  - name: Inescapable Wrath
-    _type: Talent
-    source: DATP
-    description: "Close-quarters power; At-will; Interrupt action\n\n---\n\n\n**Trigger:**\
-      \  Your Oath of Vengeance target disengages or moves away from you.\n\n **Effect:**\
-      \  Make a save. If your save is equal to the enemy\u2019s disengage check or higher,\
-      \ you pursue the enemy and stay engaged while they move. Succeed or fail, you\
-      \ add twice your Wisdom modifier (x3 at 8th level) to damage if your next attack\
-      \ against the target is a hit."
-    feats: []
-    tier: adventurer
-    usage: at-will
-  - name: Relentless Pursuit
-    _type: Talent
-    source: DATP
-    description: 'Close-quarters power; Once per battle; No action
-  
-  
-      ---
-  
-  
-  
-      **Trigger:**  The first time you are unconscious at the start of your turn in
-      a battle.
-  
-  
-      **Effect:**  You can heal using a recovery.'
-    feats: []
-    tier: adventurer
-    usage: per-battle
+      description: |
+        Choose between Egoist or Altruist.
+      
+        _Altruist:_ When an enemy drops an ally below zero hit points, you gain a free
+        use of Oath of Vengeance against that enemy.
+
+        _Egoist:_ When an enemy scores a critical hit against you, you gain a free use
+        of Oath of Vengeance against that enemy.
+    tier: champion
   - name: First Blood
     _type: Talent
     source: DATP
@@ -1295,11 +974,11 @@ abilities:
     - tier: epic
       description: ' On a critical hit with First Strike, the target is also weakened
         (-4 to attacks and defenses; save ends both).'
-    tier: adventurer
+    tier: champion
   - name: Improved Double Attack
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
+    description: '
   
   
       **Special:**  This talent requires Double Melee Attack or Double Ranged Attack.
@@ -1311,11 +990,11 @@ abilities:
       description: ' Your second attack with Double Melee Attack can be a ranged attack
         instead, and your second attack with Double Ranged Attack can be a melee attack
         instead. (You switch weapons as part of the second attack.)'
-    tier: adventurer
+    tier: champion
   - name: Merciless Hunter
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
+    description: '
   
   
       **Special:**  This talent requires Lethal Hunter.
@@ -1329,18 +1008,11 @@ abilities:
         on a miss.'
     - tier: epic
       description: ' You gain a +2 bonus to hit against your Lethal Hunter target.'
-    tier: adventurer
-  - name: Epic Tier Talents (New)
-    _type: Talent
-    source: DATP
-    description: You can take the talents below with your 8th-level talent slot.
-    feats: []
-    tier: adventurer
+    tier: champion
   - name: Bladestorm
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
-  
+    description: '
   
       When an enemy engages you, you can make a melee basic attack against that enemy
       as an interrupt action.'
@@ -1348,11 +1020,11 @@ abilities:
     - tier: epic
       description: ' Your Bladestorm attacks deal extra damage equal to your Wisdom
         modifier x3.'
-    tier: adventurer
+    tier: epic
   - name: Hail of Arrows
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
+    description: '
   
   
       **Special:**  This talent requires Double Ranged Attack.
@@ -1368,11 +1040,11 @@ abilities:
         increase the escalation die by 1.
   
         '
-    tier: adventurer
+    tier: epic
   - name: Pack Circles the Prey
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
+    description: '
   
   
       When you score a critical hit with a melee attack, the target is vulnerable to
@@ -1380,45 +1052,34 @@ abilities:
     feats:
     - tier: epic
       description: ' The vulnerability increases the critical threat range by 3.'
-    tier: adventurer
+    tier: epic
   - name: Planeswalker
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
-  
-  
+    description: |
       You gain a 5-point background that you can use to sense nearby portals and determine
       the keys that open them.
   
-  
-      You also gain _Defensive Jaunt_ as a bonus power.'
-    feats: []
-    tier: adventurer
-  - name: Defensive Jaunt
-    _type: Talent
-    source: DATP
-    description: 'Close-quarter power; Once per battle; Interrupt action
-  
-  
-      ---
-  
-  
-  
+      You also gain _Defensive Jaunt_ as a bonus power.
+      ___
+      ### Defensive Jaunt
+      Close-quarter power; Once per battle; Interrupt action
+    
       **Trigger:**  You are hit by an attack
-  
-  
-      **Effect:**  Take half damage from the attack and teleport to a nearby location.'
+    
+    
+      **Effect:**  Take half damage from the attack and teleport to a nearby location.
     feats:
     - tier: epic
       description: '_Epic Feat_ You can use defensive jaunt twice per battle.
   
         '
-    tier: adventurer
+    tier: epic
     usage: per-battle
   - name: Reaper
     _type: Talent
     source: DATP
-    description: '**Source **  DATP
+    description: '
   
   
       **Special:**  This talent requires Double Melee Attack.
@@ -1434,7 +1095,7 @@ abilities:
     - tier: epic
       description: ' If the escalation die is 2+, you can now attack far away enemies
         with Reaper.'
-    tier: adventurer
+    tier: epic
   # END DATP ABILITIES
 ---
 
@@ -1522,7 +1183,43 @@ Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are l
 
 ## Class Talents
 
-<Vault.AbilityList abilities={props.getAbilitiesByType("Talent")} />
+### Adventurer Talents
+
+<Vault.AbilityList abilities={props.getAbilitiesByTypeAndTier("Talent","adventurer")} />
+
+### Champion Talents
+
+<Vault.AbilityList abilities={props.getAbilitiesByTypeAndTier("Talent","champion")} />
+
+### Epic Talents
+
+<Vault.AbilityList abilities={props.getAbilitiesByTypeAndTier("Talent","epic")} />
+
+## Arcane Archer Powers
+If you are an Arcane Archer, you gain a number of powers depending on whether you are
+an initiate or adept, and your level.
+
+| Ranger Level | Powers Known (Initiate) | Powers Known (Adept) |
+|--------------|--------------|-----------|
+| 1            | 2            | 3          |
+| 2            | 2            | 4          |
+| 3            | 2            | 4          |
+| 4            | 3            | 5          |
+| 5            | 3            | 5          |
+| 6            | 3            | 6          |
+| 7            | 4            | 6          |
+| 8            | 4            | 7          |
+| 9            | 4            | 7          |
+| 10           | 5            | 8          |
+    
+The Arcane Archer powers are organized in spheres,
+with each sphere containing a 1st, 3rd, and 5th level power.
+
+You can choose the 1st and 3rd level powers from any sphere as long as
+you have the required level, but to access the 5th level power,
+you also need both the 1st and 3rd level powers of that sphere.
+
+<Vault.AbilityList abilities={props.getAbilitiesByTypes(["Arcane Archery Sphere", "Arcane Shot 1", "Arcane Shot 3", "Arcane Shot 5"])} />
 
 ## Animal Companion Rules
 
