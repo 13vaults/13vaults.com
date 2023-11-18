@@ -663,6 +663,3728 @@ abilities:
     feats:
       - tier: epic
         description: This spell is now a quick action to cast.
+# BEGIN DATP ABILITIES
+  - name: Cleric Domains
+    _type: Talent
+    source: DATP
+    description: ''
+    feats: []
+  - name: Domain Spells
+    _type: Talent
+    source: DATP
+    description: '**Source**  DaTP
+  
+  
+      To give clerics of different faiths more individual flavor, this book gives each
+      domain, including the ones from the Core Book, access to a separate list of domain
+      spells. These spells work like standard cleric spells, except that you can only
+      choose them if you have that domain as a talent.'
+    feats: []
+  - name: Paladins, Rangers and Domain Spells
+    _type: Talent
+    source: DATP
+    description: 'To give paladins with Cleric Training and rangers with Ranger Ex Cathedral
+      a chance to use the new material, allow PCs with these talents access to the spells
+      of the following domains:
+  
+  
+      **Paladin:**  Good, Justice, Protection, Strength, War
+  
+  
+      **Ranger:**  Animal, Archery, Freedom, Plant
+  
+  
+      Paladins can also gain access to any domain with the Divine Domain talent.
+  
+  
+      Note that this is a default selection for PCs who fit the archetype of that class.
+      Based on backgrounds, race, icon relationships or One Unique Thing there may be
+      domains that fit better. Talk to your GM.'
+    feats:
+    - tier: adventurer
+      description: ' You gain the at-will attack spell of a cleric domain as a once-per-battle
+        bonus spell. (This feat requires the Cleric Training, Divine Domain or Ranger
+        Ex Cathedral talent)'
+  - name: Air / Storm / Thunder
+    _type: Talent
+    source: DATP
+    description: '_Since ancient times, people have looked to the sky to pray._
+  
+  
+      Gain a spell from a different class at your level or lower as a bonus spell. The
+      spell must deal lightning or thunder damage, or have air, wind or storm in the
+      name. You can replace the ability score used for attack and damage with Wisdom.
+  
+  
+      Whenever a spell deals holy damage, you can change that damage to lightning damage.
+  
+  
+      **Invocation of Air / Storm / Thunder:**  Until the end of the battle, you can
+      fly to a nearby location as a move action.'
+    feats:
+    - tier: adventurer
+      description: ' You have resist _lightning and thunder_ 16+.'
+    - tier: champion
+      description: ' When you deal lightning or thunder damage with an attack, increase
+        the damage dice by one step.'
+    - tier: epic
+      description: ' You now fly normally and no longer need to land at the end of your
+        move action. While airborne, you have a -2 penalty to attack rolls and you are
+        vulnerable to attacks.'
+  - name: Thundering Blow (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Melee attack; At-will
+  
+  
+      ---
+  
+  
+  
+      **Attack:**  Strength OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  WEAPON + Strength thunder damage
+  
+  
+      **Miss:**  Thunder damage equal to your level + Wisdom modifier (x2 at 5th level;
+      x3 at 8th).'
+    feats:
+    - tier: adventurer
+      description: ' On a natural even attack roll, the target pops free from you.'
+    - tier: champion
+      description: ' On a hit, deal WEAPON + Strength + Wisdom thunder damage.'
+    usage: at-will
+  - name: Air Bubble (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily; Quick action
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  You create a zone of breathable air around you, that holds back water,
+      poisonous gases and the like. One normal-sized creature per spell level can be
+      in the zone with you. The zone lasts for 5 minutes per spell level.'
+    feats: []
+    usage: per-day
+  - name: Storm Cloud (3rd Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Daily\n\n---\n\n\n**Effect:**  You summon a\
+      \ storm cloud in the air above you. Until the end of the battle, you can make\
+      \ the following attack as a free action at the start of your turn.\n\n**Target:**\
+      \  One nearby or far away enemy\n\n**Attack:**  Wisdom + Level vs. PD; if the\
+      \ target is flying, you gain a +2 bonus to the attack roll\n\n**Hit:**  2d8 +\
+      \ Wisdom lightning damage\n\n**Miss:**  \u2014\n\n**Any natural even roll:** \
+      \ Deal thunder damage equal to your Strength OR Wisdom modifier (x2 at 5th level;\
+      \ x3 at 8th) to 1d3 nearby enemies in the same group.\n\n5th level spell: 4d8\
+      \ damage\n\n7th level spell: 6d8 damage\n\n9th level spell: 8d8 damage"
+    feats:
+    - tier: champion
+      description: ' On a natural odd miss, repeat the attack against a different nearby
+        enemy.'
+    usage: per-day
+  - name: Animal / Beast
+    _type: Talent
+    source: DATP
+    description: "_You worship the divine spark in every living creature._\n\nYou can\
+      \ speak with animals, as per the druid\u2019s Nature Talking class feature.\n\n\
+      **Invocation of Animal / Beast:**  You call a beast to aid you in battle. The\
+      \ beast has the stats of an animal companion, as per the ranger talent, at one\
+      \ level below your class level."
+    feats:
+    - tier: adventurer
+      description: ' Once per battle or scene, you have advantage on an animal-related
+        skill check.'
+    - tier: champion
+      description: " When you use the invocation, gain a spell from the druid\u2019\
+        s Circle of the Fang at your class level or lower as a bonus spell."
+    - tier: epic
+      description: ' When you cast a cleric spell for broad effect, you can add one
+        nearby animal companion as a bonus target.'
+  - name: Poison Claw (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One enemy engaged with you, or engaged with a nearby animal companion
+  
+  
+      **Attack:**  Strength OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  1d8 + Strength poison damage
+  
+  
+      _Natural 18+:_ 5 ongoing poison damage
+  
+  
+      **Miss:**  Damage equal to your level
+  
+  
+      3rd level spell: 3d8 damage; 10 ongoing damage
+  
+  
+      5th level spell: 5d8 damage; 15 ongoing damage
+  
+  
+      7th level spell: 7d8 damage; 20 ongoing damage
+  
+  
+      9th level spell: 10d8 damage; 25 ongoing damage'
+    feats:
+    - tier: adventurer
+      description: ' Reroll the first natural even miss with this spell in a battle.'
+    usage: at-will
+  - name: Voice of Beasts (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby animal
+  
+  
+      **Effect:**  The animal can speak one language that you know until the end of
+      the scene. The conversation with the animal will still be limited by its intelligence
+      and general outlook on the world, although most animals are smarter than you think.
+      Its speech patterns will keep traces of its natural voice.'
+    feats: []
+    usage: per-day
+  - name: Celestial Guardian (3rd Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; Once per battle\n\n---\n\n\n**Effect:**  Summon a celestial\
+      \ beast next to you. It can move to engage an enemy and make the following melee\
+      \ attack.\n\n**Attack:**  Wisdom + Level vs. AC\n\n**Hit:**  3d8 + Wisdom holy\
+      \ damage\n\n**Miss:**  \u2014\n\n_Natural even roll:_ The beast remains summoned.\
+      \ On your next turn, as a quick action, you can direct it to engage and attack\
+      \ again.\n\n_Natural odd roll:_ The beast vanishes after the attack.\n\n**Special:**\
+      \  The beast has your AC, PD and MD, and hit points equal to 10 times the spell\
+      \ level. It can make one opportunity attack between your turns.\n\n5th level spell:\
+      \ 5d8 damage\n\n7th level spell: 7d8 damage\n\n9th level spell: 10d8 damage"
+    feats:
+    - tier: adventurer
+      description: " Increase the beast\u2019s defenses by 2."
+    usage: per-battle
+  - name: Archery / Hunting
+    _type: Talent
+    source: DATP
+    description: '_With divine help, your arrows always find their target._
+  
+  
+      You can use all ranged weapons without attack penalty.
+  
+  
+      **Invocation of Archery / Hunting:**  Choose a nearby enemy. The target is vulnerable
+      to attacks from you and all your allies until the end of the battle.'
+    feats:
+    - tier: adventurer
+      description: ' You can use a true magic item ranged weapon as an implement for
+        your cleric spells.'
+    - tier: champion
+      description: ' If you kill the target with a critical hit, you immediately regain
+        this invocation.'
+    - tier: epic
+      description: ' If the escalation die is 4+, increase the critical threat range
+        bonus from the vulnerability to +4.'
+  - name: Exalted Shot (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged attack; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby or far away enemy
+  
+  
+      **Attack:**  Dexterity OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  (ranged) WEAPON + Dexterity + Wisdom holy damage
+  
+  
+      _Natural 20:_ The target is hampered until the end of your next turn.
+  
+  
+      **Miss:**  Damage equal to your level'
+    feats:
+    - tier: adventurer
+      description: ' Reroll the first natural even miss with this spell in a battle.'
+    usage: at-will
+  - name: Blessing of the Hunt (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  You, and one nearby ally per point of Wisdom modifier
+  
+  
+      **Effect:**  For one hour per spell level, reduce the difficulty of all skill
+      checks the targets make to track creatures and move unnoticed by one step (-5).Adventurer
+      Feat: When casting the spell, you get a general sense of where game can be found
+      nearby.'
+    feats: []
+    usage: per-day
+  - name: Holy Arrow (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged attack; Daily\n\n---\n\n\n**Target:**  One nearby or far away\
+      \ enemy\n\n**Attack:**  Dexterity OR Wisdom + Level vs. AC\_\n\n**Special:** \
+      \ Against undead and demons, you have advantage on the attack roll.\n\n**Hit:**\
+      \  WEAPON + Dexterity + Wisdom holy damage. If the target is undead or a demon,\
+      \ deal 5 ongoing holy damage and the target is weakened (save ends both).\n\n\
+      **Miss:**  Half damage\n\n3rd level spell: 10 ongoing holy damage\n\n5th level\
+      \ spell: 15 ongoing holy damage\n\n7th level spell: 25 ongoing holy damage\n\n\
+      9th level spell: 40 ongoing holy damage"
+    feats: []
+    usage: per-day
+  - name: Chaos / Disorder / Rebellion
+    _type: Talent
+    source: DATP
+    description: "_Like children rebelling against their parents, gods rebel against\
+      \ the divine order._\n\nWhen you save against an effect, and the save is a natural\
+      \ odd success, transfer the effect to a random nearby enemy.\n\n**Invocation of\
+      \ Chaos / Disorder / Rebellion:**  Roll on the chaos mage\u2019s High Weirdness\
+      \ table (13TW p. 18). At the end of your turn, use the chaos mage spell selection\
+      \ method to gain a chaos mage at-will or once-per-battle spell as a bonus spell.\
+      \ You can use the spell once this battle."
+    feats:
+    - tier: champion
+      description: ' Once per battle, transfer an effect on any natural odd save.'
+    - tier: adventurer
+      description: ' You can choose a chaos mage daily spell instead.'
+  - name: Chaos Hammer (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Melee attack; At-will\n\n---\n\n\n**Attack:**  Strength OR Wisdom\
+      \ + Level vs. AC\n\n**Hit:**  WEAPON + Strength damage. Roll a d6 on the chaos\
+      \ mage\u2019s attack warp table to determine the additional effect.\n\n**Miss:**\
+      \  Damage equal to your level."
+    feats:
+    - tier: adventurer
+      description: ' On a natural even miss, roll on the defense warp table.'
+    usage: at-will
+  - name: Haywire (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby enemy
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Hit:**  When the target makes an attack, determine the target of the attack
+      randomly among all creatures within range (save ends).
+  
+  
+      **Miss:**  The spell is not expended.'
+    feats:
+    - tier: adventurer
+      description: ' If the randomly determined target is an ally, the attack is at
+        a -2 penalty.'
+    usage: per-day
+  - name: Incite Rebellion (3rd Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  1d3 nearby enemies. This\
+      \ spell can only target creatures that are under someone else\u2019s control.\_\
+      \_\n\n**Attack:**  Wisdom + Level vs. MD\n\n**Hit:**  The target shakes free from\
+      \ whatever or whoever controlled it. It is now free to act as it pleases, which\
+      \ usually means fleeing from the battlefield to a nearby safe location.\n\n**Miss:**\
+      \  The target is dazed until the end of your next turn."
+    feats:
+    - tier: adventurer
+      description: ' When targeting mooks, count a group of them as a single target.'
+    usage: per-day
+  - name: Construction
+    _type: Talent
+    source: DATP
+    description: 'You gain 4 additional background points that must be used on a craft
+      or construction trade such as architecture.
+  
+  
+      **Invocation of Construction:**  This battle, every construct you hit with a melee
+      attack is weakened until the start of your next turn. You can weaken each construct
+      in the battle only once.'
+    feats:
+    - tier: adventurer
+      description: ' You gain a +2 attack bonus against constructs.'
+    - tier: champion
+      description: ' You gain +2 to all defenses against attacks from constructs.'
+    - tier: epic
+      description: ' Once per battle, you can instantly reprogram a staggered construct
+        to fight for you for one round. It moves and attacks as you direct.'
+  - name: Darkness / Night
+    _type: Talent
+    source: DATP
+    description: "_And have you felt your neck skin crawl when you\u2019re searching\
+      \ for the light?_\n\nGain a spell from the sorcerer\u2019s Umbral Bloodline of\
+      \ up to your level as a bonus spell. You can replace Charisma with Wisdom in the\
+      \ spell description.\n\n**Invocation of Darkness / Night:**  Give yourself and\
+      \ all nearby allies advantage on the next skill check to be stealthy until the\
+      \ end of the battle or scene."
+    feats:
+    - tier: adventurer
+      description: ' You have advantage on skill checks to notice things in dimly lit
+        and dark conditions.'
+    - tier: epic
+      description: ' When you cast a daily cleric spell at night, the spell becomes
+        Recharge 16+.'
+    - tier: champion
+      description: ' Invocation of Darkness gives you and all nearby allies advantage
+        on your initiative roll if you use it to sneak up on an enemy.'
+  - name: Embrace of the Night (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  Two nearby enemies in a group
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Natural Even Hit:**  1d6 + Wisdom cold damage, and one ally engaged with the
+      target can pop free from it.
+  
+  
+      **Natural Odd Hit:**  Wisdom cold damage, and the target is stuck until the end
+      of your next turn.
+  
+  
+      **Miss:**  One ally engaged with the target can pop free from it.
+  
+  
+      3rd level spell: 2d6 damage on even hit
+  
+  
+      5th level spell: 3d6 damage on even hit
+  
+  
+      7th level spell: 5d6 damage on even hit
+  
+  
+      9th level spell: 8d6 damage on even hit'
+    feats:
+    - tier: adventurer
+      description: ' On a natural odd hit, the target also takes a -2 penalty to attack
+        rolls until the end of your next turn.'
+    usage: at-will
+  - name: Darkness (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; Daily\n\n---\n\n\n**Effect:**  You create a stationary\
+      \ zone of darkness that lasts for 5 minutes or until the end of the battle. Creatures\
+      \ can move in and out of the zone as a move action. While a creature is in the\
+      \ zone, it has disadvantage on all attacks against enemies it is not engaged with.\
+      \ You are immune to the effect, and so are creatures that are adapted to darkness\
+      \ (cats, drow) or that don\u2019t rely on sight (bats, purple worms)."
+    feats:
+    - tier: adventurer
+      description: ' Your allies are immune to the effect.'
+    usage: per-day
+  - name: Meld into the Shadows (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  You
+  
+  
+      **Effect:**  Until the end of the scene, you are invisible as long as you stay
+      in a dimly lit or dark area. The effect ends if you step into the light or make
+      an attack.'
+    feats:
+    - tier: adventurer
+      description: ' You can target one ally per Wisdom modifier point with this spell.'
+    usage: per-day
+  - name: Disappear into the Night (7th Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Special:**  You can cast this spell only once per level.
+  
+  
+      **Target:**  You and all nearby allies
+  
+  
+      **Effect:**  Flee from the current battle. Your party does not suffer a campaign
+      loss, but everyone loses their current 5 and 6 on icon relationship dice.'
+    feats: []
+    usage: per-day
+  - name: Doom / Destruction
+    _type: Talent
+    source: DATP
+    description: "_Come in like a divine wrecking ball._\n\nGain a spell from the terrain\
+      \ druid\u2019s Ruins terrain at your class level or lower as a bonus spell.\n\n\
+      **Invocation of Doom / Destruction:**  Choose a nearby enemy. Until the end of\
+      \ the battle, attacks against the target gain a bonus to their critical threat\
+      \ range equal to the escalation die."
+    feats:
+    - tier: adventurer
+      description: ' Basic attacks against the target deal half damage on a miss instead
+        of their normal damage.'
+    - tier: champion
+      description: ' Once per battle, you can use this invocation for free. If you do
+        so, you cannot cast healing spells until the end of the battle.'
+  - name: Doomhammer (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Melee attack; At-will
+  
+  
+      ---
+  
+  
+  
+      **Attack:**  Strength OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  WEAPON + Strength holy damage. The damage dice of this spell are exploding
+      dice.
+  
+  
+      **Miss:**  Damage equal to your Strength + Level'
+    feats:
+    - tier: champion
+      description: ' This spell deals triple damage on a critical hit.'
+    usage: at-will
+  - name: Doom (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Daily; Quick action\n\n---\n\n\n**Special:**\
+      \  You can cast this spell for power or for broad effect.\n\n**Target:**  When\
+      \ cast for power, target one nearby enemy; when cast for broad effect, 3 nearby\
+      \ enemies\n\n**Attack:**  Wisdom + Level vs. MD\n\n**Hit:**  The target has disadvantage\
+      \ on attack rolls and saves (except against this spell). When cast for broad effect,\
+      \ the spell lasts until the end of the target\u2019s next turn. When cast for\
+      \ power, it is \u201Csave ends\u201D.\n\n**Miss:**  \u2014"
+    feats:
+    - tier: adventurer
+      description: ' This spell is now Recharge 16+ after battle.'
+    usage: per-day
+  - name: Touch of Despair (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One enemy you are engaged with
+  
+  
+      **Attack:**  Wisdom + Level vs. MD
+  
+  
+      **Hit:**  10 ongoing psychic damage. If the target makes an attack while it takes
+      ongoing damage from this spell, it takes additional psychic damage equal to your
+      Wisdom modifier (x2 at 5th level; x3 at 8th).
+  
+  
+      **Miss:**  The spell is not expended.
+  
+  
+      3rd level spell: 20 ongoing damage
+  
+  
+      5th level spell: 30 ongoing damage
+  
+  
+      7th level spell: 50 ongoing damage
+  
+  
+      9th level spell: 80 ongoing damage'
+    feats:
+    - tier: champion
+      description: ' Deal psychic damage equal to twice your level on a miss.'
+    usage: per-day
+  - name: Dragon
+    _type: Talent
+    source: DATP
+    description: "_Dragon worship started with the first humanoid begging not to be\
+      \ eaten._\n\nGain a spell from the sorcerer\u2019s Draconic bloodline of up to\
+      \ your class level as a bonus spell. You can replace Charisma with Wisdom in the\
+      \ spell description.\n\n**Invocation of Dragons:**  Gain a dragon aspect until\
+      \ the end of the battle or scene. Roll 1d6:\n\n1. Claws and Teeth: You can make\
+      \ unarmed attacks at no penalty, with a d8 damage die.\n2. Wings: You can fly\
+      \ to a nearby location as a move action, but you can\u2019t stay airborne.\n3.\
+      \ Tail: You can make a melee basic attack as a quick action once per round with\
+      \ a d4 damage die.\n4. Resistance: Choose fire, cold, acid, poison or lightning,\
+      \ and gain _resist that element_ 16+.\n5. Scales: Gain a +2 bonus to AC and PD.\n\
+      6. Choose one of the above.\n"
+    feats:
+    - tier: adventurer
+      description: ' You have advantage on skill checks pertaining to dragons, and you
+        learn Draconic as a bonus language.'
+    - tier: epic
+      description: " While in (or near) a dragon lair, your divine daily spells are\
+        \ \u201CRecharge 18+ after battle\u201D."
+    - tier: champion
+      description: ' Roll twice and gain both aspects (reroll duplicates).'
+    - tier: epic
+      description: ' You can now fly and hover between turns with the wings, but you
+        are vulnerable to attacks and take a -2 penalty to attack rolls while airborne.'
+  - name: Divine Odem (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby enemy
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Hit:**  1d8 + Wisdom holy OR fire damage
+  
+  
+      _Natural even hit:_ Deal damage equal to your Wisdom modifier (x2 at 5th level,
+      x3 at 8th) to a different nearby enemy.
+  
+  
+      **Miss:**  Damage equal to your level
+  
+  
+      3rd level spell: 3d8 damage
+  
+  
+      5th level spell: 5d8 damage
+  
+  
+      7th level spell: 7d8 damage
+  
+  
+      9th level spell: 10d8 damage'
+    feats:
+    - tier: adventurer
+      description: ' If the escalation die is 3+, on a natural even hit, deal half damage
+        to the second target instead.'
+    usage: at-will
+  - name: Sense Dragons (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Daily\n\n---\n\n\n**Effect:**  You sense how\
+      \ many dragons are within roughly a mile area, and the direction they are in.\n\
+      \n3rd level spell: You sense whether they are chromatic or metallic dragons (or\
+      \ something completely different).\n\n5th level spell: You sense the dragon\u2019\
+      s color.\n\n7th level spell: You sense the dragon\u2019s age."
+    feats: []
+    usage: per-day
+  - name: Summon Dragon (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Special:**  You can cast this spell only once per level.
+  
+  
+      **Effect:**  If your cult worships metallic dragons, you summon a medium brass
+      dragon (13TW p. 184, 31 hp) or a medium bronze dragon (13TW p. 184, 50 hp). If
+      you worship chromatic dragons, you summon a medium white dragon (CB p. 218, 38
+      hp) or a medium black dragon (CB p. 218, 42 hp). The dragon is a divine emissary
+      coming to your help. If it considers the fight a worthy cause, and if it is given
+      the proper respect, it will fight for you until the end of the battle, or until
+      it drops to 0 hp. You control it according to the summoning rules on page XX,
+      except the dragon is free to ignore your orders or leave the battle whenever it
+      desires.
+  
+  
+      As you cast the spell at higher levels, you can summon the following dragons:
+  
+  
+      5th level spell: Medium copper dragon (13TW p. 184, 44 hp) or medium green dragon
+      (CB p. 219, 60 hp)
+  
+  
+      7th level spell: Medium silver dragon (13TW p. 185, 90 hp) or a medium blue dragon
+      (CB p. 219, 76 hp)
+  
+  
+      9th level spell: Medium gold dragon (13TW p. 186, 85 hp) or a medium red dragon
+      (CB p. 219, 90 hp)'
+    feats:
+    - tier: epic
+      description: ' Summon a large dragon of any color instead.'
+    usage: per-day
+  - name: Earth / Mountain
+    _type: Talent
+    source: DATP
+    description: "_How can you look at a majestic peak and not see the divine that resides\
+      \ there?_\n\nGain a spell from the terrain druid\u2019s Cave or Mountain terrain\
+      \ at your class level or lower as a bonus spell.\n\n**Invocation of Earth / Mountain:**\
+      \  Until the end of the battle, all nearby enemies take a -2 penalties to disengage\
+      \ checks. Airborne enemies must succeed at a save at the start of their turn,\
+      \ or they are pulled towards the ground and can\u2019t use their flight ability\
+      \ until the start of their next turn."
+    feats:
+    - tier: adventurer
+      description: ' Whenever you let an ally use a recovery to heal, that ally also
+        gains _resist all_ 14+ until the end of your next turn.'
+    - tier: champion
+      description: ' Both you and the ally gain the resistance.'
+    - tier: epic
+      description: ' Increase the resistance to 16+.'
+  - name: Earthen Hail (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Melee attack; At-will
+  
+  
+      ---
+  
+  
+  
+      **Attack:**  Strength OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  WEAPON + Strength damage
+  
+  
+      _Natural Even hit:_ Deal 1d4 damage to a different nearby enemy.
+  
+  
+      _Natural Odd Hit:_ You grant a nearby ally a +2 bonus to AC and PD until the end
+      of your next turn.
+  
+  
+      **Miss:**  Damage equal to your level
+  
+  
+      3rd level spell: 1d8 damage on natural even hit
+  
+  
+      5th level spell: 2d6 damage on natural even hit
+  
+  
+      7th level spell: 2d10 damage on natural even hit
+  
+  
+      9th level spell: 3d8 damage on natural even hit'
+    feats:
+    - tier: adventurer
+      description: ' You also grant the AC/PD bonus on a natural odd miss.'
+    usage: at-will
+  - name: Return to Dust (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; At-will; Quick action
+  
+  
+      ---
+  
+  
+  
+      **Target:**  A nearby corpse
+  
+  
+      **Effect:**  You turn the corpse into soil. This prevents necromantic magic from
+      being used on the body.'
+    feats: []
+    usage: at-will
+  - name: Rock Shield (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily; Interrupt action
+  
+  
+      ---
+  
+  
+  
+      **Trigger:**  You are targeted by an attack against your AC or PD.
+  
+  
+      **Effect:**  Take half damage from the attack. Ignore any non-damage effects of
+      the attack.'
+    feats:
+    - tier: adventurer
+      description: ' If the attack has more than one target, all targets are protected
+        by the spell.'
+    usage: per-day
+  - name: Tremors (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged Spell; Once per battle
+  
+  
+      ---
+  
+  
+  
+      **Target:**  1d3 nearby enemies
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Hit:**  4d6 + Wisdom damage
+  
+  
+      _Natural even hit:_ The target is knocked prone (melee attacks have advantage
+      against it until it takes a move action to stand up) and all allies engaged with
+      the target can pop free from it.
+  
+  
+      **Miss:**  Half damage
+  
+  
+      5th level spell: 6d6 damage
+  
+  
+      7th level spell: 9d6 damage
+  
+  
+      9th level spell: 12d6 damage'
+    feats:
+    - tier: champion
+      description: ' You can target 1d4 nearby enemies.'
+    - tier: epic
+      description: ' On a natural odd hit, the target is stuck (save ends).'
+    usage: per-battle
+  - name: Evil / Egoism
+    _type: Talent
+    source: DATP
+    description: '_Worship someone who is worth it. Worship yourself._
+  
+  
+      You can target yourself with spells you cast for power, and any other spell that
+      can normally be cast on allies only. You can also target allies with enemy-only
+      spells and enemies with ally-only spells.
+  
+  
+      When you cast a daily cleric spell on yourself and no other targets, it becomes
+      recharge 18+ after battle.
+  
+  
+      **Invocation of Egoism / Evil:**  This battle, when you would spend a recovery,
+      you can force a nearby creature to make a hard save (16+). On a success, you spend
+      the recovery normally. On a failure, your recovery is free and the target loses
+      a recovery. If it is not a PC or NPC that has recoveries, it takes twice your
+      level in negative energy damage instead.'
+    feats:
+    - tier: champion
+      description: ' The spell is now recharge 16+ after battle.'
+    - tier: adventurer
+      description: ' This battle, when you would roll a death save, you can force a
+        nearby creature to roll a hard save (16+) instead. If the target succeeds, your
+        death save fails. If the target fails, your death save succeeds and the target
+        failed a death save for this battle. If it is not a PC or NPC that rolls death
+        saves, it takes twice your level in negative energy damage instead.'
+  - name: Festering Evil (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged attack; At-will\n\n---\n\n\n**Attack:**  Wisdom + Level vs.\
+      \ the lower of the target\u2019s PD or MD\n\n**Hit:**  1d8 + Wisdom damage. If\
+      \ you attack PD, deal poison damage. If you attack MD, deal psychic damage. Until\
+      \ the end of your next turn, the target can\u2019t be healed, it can\u2019t benefit\
+      \ from any positive effects granted by its allies, and it can\u2019t grant any\
+      \ positive effects to its allies.\n\n**Miss:**  Damage equal to your level\n\n\
+      3rd level spell: 3d8 damage\n\n5th level spell: 5d8 damage\n\n7th level spell:\
+      \ 7d8 damage\n\n9th level spell: 10d8 damage"
+    feats:
+    - tier: adventurer
+      description: ' If you miss a target you have hit with this spell at least once
+        this battle, deal half damage.'
+    usage: at-will
+  - name: Blasphemy (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; Once per battle\n\n---\n\n\n**Target:**  The nearby\
+      \ enemy with the fewest hit points\n\n**Attack:**  Wisdom + Level vs. MD\n\n**Hit:**\
+      \  4d6 + Wisdom psychic damage, and the target is dazed until the end of your\
+      \ next turn.\n\n**Miss:**  \u2014\n\n_Natural even miss:_ The target is dazed\
+      \ until the end of your next turn.\n\n3rd level spell: 7d6 damage\n\n5th level\
+      \ spell: 7d10 damage\n\n7th level spell: 10d12 damage\n\n9th level spell: 2d8\
+      \ x 10 damage"
+    feats:
+    - tier: adventurer
+      description: ' Hit or miss, deal damage equal to your level to all enemies engaged
+        with you.'
+    - tier: champion
+      description: ' The daze effect is (save ends).'
+    usage: per-battle
+  - name: Egomania (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  You
+  
+  
+      **Effect:**  Until the end of the battle, whenever a positive effect targets an
+      ally, that ally can choose to have it target you instead, and whenever a negative
+      effect targets you, an ally can choose to have it target them instead. Whenever
+      an ally agrees to this, you grant them a +1 bonus to their next attack roll (which
+      stacks).'
+    feats: []
+    usage: per-day
+  - name: Rise above the Peons (9th Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  You
+  
+  
+      **Effect:**  Until the end of the battle, you can fly, you take half damage from
+      enemy attacks, and you have your own escalation die, which is always 6.'
+    feats: []
+    usage: per-day
+  - name: Farming / Harvest
+    _type: Talent
+    source: DATP
+    description: '_Fertility gods throw the best parties._
+  
+  
+      During a quick rest, you can enchant food, such as berries, to allow you and every
+      ally to reroll 1 on recovery rolls they spend during that rest.
+  
+  
+      **Invocation of Farming / Harvest:**  Summon a feast that feeds up to five people
+      per level. The feast gives everyone a +1 bonus to savessaving throws and _resist
+      poison_ 12+ until the end of the next battle.'
+    feats:
+    - tier: adventurer
+      description: ' Reroll 1 and 2.'
+    - tier: champion
+      description: ' Increase the resistance to 16+.'
+    - tier: epic
+      description: ' The bonuses last for the next two battles.'
+  - name: Cut the Weeds (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Melee attack; At-will
+  
+  
+      ---
+  
+  
+  
+      **Attack:**  Strength OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  WEAPON + Strength damage. Deal damage equal to your Strength modifier
+      to all other enemies engaged with you.
+  
+  
+      **Miss:**  Damage equal to your level.'
+    feats:
+    - tier: adventurer
+      description: ' You gain a +2 bonus to attack against mooks.'
+    usage: at-will
+  - name: Protect the Harvest (1st Level)
+    _type: Talent
+    source: DATP
+    description: '_A divine blessing meant to protect the fields, that also proves its
+      value when surrounded by zombies._
+  
+  
+      Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  The nearby area
+  
+  
+      **Effect:**  Until the end of the battle or scene, non-humanoid creatures must
+      succeed at a save to enter the target area. After they succeed at one save, they
+      are no longer affected by the spell. Creatures already in the area have disadvantage
+      to all attacks until they leave the area or succeed at a save.'
+    feats:
+    - tier: adventurer
+      description: ' Add your Wisdom modifier to the difficulty of the save.'
+    usage: per-day
+  - name: Reap What You Sow (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Once per battle; Interrupt action\n\n---\n\n\
+      \n**Trigger:**  You take damage from an enemy\u2019s attack.\n\n**Effect:**  Gain\
+      \ advantage on your next attack roll against the target. If your attack is a hit,\
+      \ deal extra damage equal to half the damage you took from the attack."
+    feats:
+    - tier: adventurer
+      description: ' You can cast this spell on an ally who was attacked.'
+    usage: per-battle
+  - name: Fire / Volcano
+    _type: Talent
+    source: DATP
+    description: '_Gods of fire range from benevolent protectors of the hearth to raging
+      forces of nature that blow up mountains._
+  
+  
+      Gain a spell from a different class at your level or lower as a bonus spell. The
+      spell must deal fire damage, or have fire, flame or burn in the name. You can
+      replace the ability score used for attack and damage with Wisdom.
+  
+  
+      Whenever a spell deals holy damage, you can change that damage to fire damage
+      instead.
+  
+  
+      **Invocation of Fire / Volcano:**  Until the end of the battle or scene, increase
+      all damage dice of attacks that deal fire damage by one step.'
+    feats:
+    - tier: adventurer
+      description: ' Gain _resist fire_ 16+.'
+    - tier: champion
+      description: ' Enemies are vulnerable to your spells that deal fire damage.'
+    - tier: epic
+      description: " When you reduce an enemy to zero hp or below with fire damage,\
+        \ you can teleport to that enemy\u2019s location as a free action."
+  - name: Burning Brand (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Melee attack; At-will
+  
+  
+      ---
+  
+  
+  
+      **Attack:**  Strength OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  WEAPON + Strength damage
+  
+  
+      _Natural even hit:_ Ongoing fire damage equal to your Wisdom modifier (x2 at 5th
+      level, x3 at 8th).
+  
+  
+      **Miss:**  Damage equal to your level'
+    feats:
+    - tier: adventurer
+      description: ' Add your level to the ongoing damage.'
+    usage: at-will
+  - name: Penance by Fire (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged attack; Once per battle
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby enemy
+  
+  
+      **Attack:**  Wisdom + Level vs. MD
+  
+  
+      **Hit:**  1d4 x 10 + Wisdom fire damage and the target is vulnerable to attacks
+      until the end of your next turn. The target can choose to pray fervently for absolution.
+      It takes no damage and avoids the vulnerability, but loses its next standard action.
+  
+  
+      **Miss:**  Half damage (unless the target prays for absolution)
+  
+  
+      5th level spell: 1d6 x 10 damage
+  
+  
+      7th level spell: 2d4 x 10 damage
+  
+  
+      9th level spell: 2d8 x 10 damage'
+    feats:
+    - tier: champion
+      description: ' If the target has dealt damage to you during the battle, deal extra
+        damage equal to your Charisma modifier (x2 at 5th level; x3 at 8th), and even
+        if the target prays for absolution, it takes half damage on a hit.'
+    usage: per-battle
+  - name: Flame Strike (5th Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged Spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Special:**  You can cast this spell for power or for broad effect.
+  
+  
+      _Cast for power:_
+  
+  
+      **Target:**  One nearby enemy
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Hit:**  8d8 + Wisdom fire damage
+  
+  
+      **Miss:**  Half damage
+  
+  
+      _Cast for broad effect:_
+  
+  
+      **Target:**  Three nearby enemies
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Hit:**  4d8 + Wisdom fire damage
+  
+  
+      **Miss:**  Half damage
+  
+  
+      7th level spell: 2d6 x 10 / 1d6 x 10 damage
+  
+  
+      9th level spell: 3d6 x 10 / 1d10 x 10 damage'
+    feats:
+    - tier: champion
+      description: ' Targets that are vulnerable to holy damage are also vulnerable
+        to this spell.'
+    usage: per-day
+  - name: Freedom / Travel
+    _type: Talent
+    source: DATP
+    description: "_Freedom is the most precious gift once your belly is filled._\n\n\
+      You are immune to the stuck and hampered conditions.\n\n**Invocation of Freedom\
+      \ / Travel:**  You and all nearby allies can make a save against all \u201Csave\
+      \ ends\u201D conditions."
+    feats:
+    - tier: adventurer
+      description: ' Nearby allies gain a +1 bonus to saves against these conditions.'
+    - tier: champion
+      description: " The targets can even save against conditions that don\u2019t normally\
+        \ allow a save, such as \u201Cend of your next turn\u201D effects."
+    - tier: epic
+      description: ' You can use this invocation twice per day.'
+  - name: Freedom Bells (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Attack:**  Wisdom + Level vs. MD
+  
+  
+      **Hit:**  1d8 + Wisdom damage. All allies engaged with the target can pop free.
+  
+  
+      **Miss:**  Damage equal to your level
+  
+  
+      3rd level spell: 3d8 damage
+  
+  
+      5th level spell: 5d8 damage
+  
+  
+      7th level spell: 7d8 damage
+  
+  
+      9th level spell: 10d8 damage'
+    feats:
+    - tier: adventurer
+      description: ' If the target of the spell is under mind control or a similar effect,
+        you can choose to deal half damage to it and allow it to save against the effect.'
+    usage: at-will
+  - name: Blessed Journey (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  You and one nearby ally\
+      \ per Wisdom modifier\n\n**Effect:**  Double the target\u2019s overland speed\
+      \ for a day as they travel without tiring."
+    feats:
+    - tier: adventurer
+      description: ' You can bless vehicles, such as carts and ships, with this spell.'
+    usage: per-day
+  - name: Freedom of Movement (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged Spell; Daily; Quick action
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  You can cast this spell for power or for broad effect.
+  
+  
+      _Cast for power:_ You or a nearby ally ends all effects that hinder their movement,
+      including penalties to disengage checks, the stuck and hampered conditions, and
+      getting grabbed by enemies. The target is immune to these effects until the end
+      of the battle.
+  
+  
+      _Cast for broad effect:_ As above, but target three allies (you can include yourself),
+      but no ongoing immunity.'
+    feats:
+    - tier: champion
+      description: ' The spell is now Recharge 11+ after battle.'
+    usage: per-day
+  - name: "Traveller\u2019s Footsteps (5th Level)"
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily; Quick action
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  Until the end of the battle, you can teleport to a nearby location
+      as a move action once per round.'
+    feats:
+    - tier: champion
+      description: ' You can cast this spell on a nearby ally.'
+    usage: per-day
+  - name: Good / Selflessness
+    _type: Talent
+    source: DATP
+    description: '_All religions claim they are for the benefit of the common folk.
+      Yours takes that pledge seriously._
+  
+  
+      Whenever you cast a cleric daily spell on your allies, but not on yourself, the
+      spell is recharge 18+ after battle.
+  
+  
+      **Invocation of Good / Selflessness:**  Transfer all negative effects that your
+      nearby allies are suffering from to yourself. If several allies are suffering
+      from the same effect, transfer all of them, but you still suffer the effect only
+      once.'
+    feats:
+    - tier: epic
+      description: ' The spell is now recharge 16+.'
+    - tier: adventurer
+      description: ' This battle, when you roll a death save, increase the escalation
+        die by one.'
+    - tier: champion
+      description: ' You can use this invocation twice per day.'
+  - name: Aiding Strike (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Melee attack; At-will
+  
+  
+      ---
+  
+  
+  
+      **Special:**  You have disadvantage on the attack roll. Keep the higher die roll.
+      The next ally to attack the target can switch their natural attack roll for the
+      die you kept.
+  
+  
+      **Attack:**  Strength OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  WEAPON + Strength damage
+  
+  
+      **Miss:**  Holy damage equal to your level'
+    feats:
+    - tier: adventurer
+      description: ' If both dice come up as the same result, you can choose to reroll
+        both.'
+    usage: at-will
+  - name: "Martyr\u2019s Shield (1st Level)"
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Once per battle; Interrupt action
+  
+  
+      ---
+  
+  
+  
+      **Trigger:**  A nearby ally is hit by an attack.
+  
+  
+      **Effect:**  The attacker rerolls the attack. If the reroll is a natural odd hit,
+      the attack hits you instead.'
+    feats:
+    - tier: adventurer
+      description: ' Halve the damage that the triggering attack deals to either you
+        or the ally.'
+    usage: per-battle
+  - name: Righteous Resolve (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily; Quick action
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  Cast this spell for power or for broad effect.
+  
+  
+      _Cast for power:_ A nearby ally gains a +2 bonus to all savessaving throws, including
+      death saves until the end of the battle.
+  
+  
+      _Cast for broad effect:_ Up to three nearby allies (including you) gain a +1 bonus
+      to all saving throws, including death saves until the end of the battle.'
+    feats:
+    - tier: adventurer
+      description: " The targets can make a save against a \u201Csave ends\u201D effect\
+        \ immediately."
+    - tier: champion
+      description: " Targets who successfully save against a \u201Csave ends\u201D effect\
+        \ also heal hit points equal to twice the spell level."
+    usage: per-day
+  - name: Carry On, My Friend (5th Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily; No Action
+  
+  
+      ---
+  
+  
+  
+      **Special:**  You can only cast this spell when you are unconscious, or dead,
+      i.e. fighting in spirit.
+  
+  
+      **Effect:**  You grant a bonus standard action to a nearby ally.'
+    feats: []
+    usage: per-day
+  - name: Healing
+    _type: Talent
+    source: DATP
+    description: '_Let me guess, the party needed a cleric?_
+  
+  
+      (See the 13th Age Core Book p. 95 for details.)'
+    feats: []
+  - name: Healing Strike (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Melee attack; At-will
+  
+  
+      ---
+  
+  
+  
+      **Attack:**  Strength OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  WEAPON + Strength damage, and a nearby conscious ally heals hit points
+      equal to your Wisdom modifier (x2 at 5th level; x3 at 8th).
+  
+  
+      **Miss:**  Damage equal to your level'
+    feats:
+    - tier: adventurer
+      description: ' Add your level to the number of hit points healed.'
+    - tier: champion
+      description: ' On a natural 18+, a nearby unconscious ally can use a recovery
+        to heal (and they can then benefit from the additional healing on a hit).'
+    usage: at-will
+  - name: Restoration (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily; Quick action
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  Cast this spell for power or for broad effect.
+  
+  
+      _Cast for power:_ Remove all effects that a save can end, including last gasp
+      save effects, from one nearby ally.
+  
+  
+      _Cast for broad effect:_ Remove one effect that a save can end, including last
+      gasp save effects, from three nearby creatures, including yourself.'
+    feats:
+    - tier: champion
+      description: ' The target(s) can also heal using a recovery.'
+    usage: per-day
+  - name: Flash Heal (5th Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily; Free Action
+  
+  
+      ---
+  
+  
+  
+      **Special:**  You can cast this spell at any time during battle, including enemy
+      turns.
+  
+  
+      **Effect:**  Cast this spell for power or for broad effect.
+  
+  
+      _Cast for power:_ A nearby ally can heal using a recovery, and double the hit
+      points gained.
+  
+  
+      _Cast for broad effect:_ Up to three nearby allies (including you) can heal using
+      a recovery.'
+    feats:
+    - tier: champion
+      description: ' The spell is now recharge 11+ after battle.'
+    usage: per-day
+  - name: Justice / Vengeance
+    _type: Talent
+    source: DATP
+    description: '_And I will strike down upon thee with great vengeance and furious
+      anger._
+  
+  
+      (See the 13th Age Core Book p. 95 for details.)'
+    feats: []
+  - name: Hammer of Retribution (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Melee attack; At-will
+  
+  
+      ---
+  
+  
+  
+      **Attack:**  Strength OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  WEAPON + Strength damage. Until the end of your next turn, whenever
+      the target makes an attack against a staggered or unconscious creature, they take
+      holy damage equal to your Wisdom modifier (x2 at 5th level; x3 at 8th).
+  
+  
+      **Miss:**  Damage equal to your level'
+    feats:
+    - tier: adventurer
+      description: ' Increase your critical threat range with this attack by 1 for each
+        ally (including you) that was knocked below 0 hp this battle.'
+    - tier: champion
+      description: ' Add your level to the retribution damage.'
+    usage: at-will
+  - name: Eyes of the Judge (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Daily\n\n---\n\n\n**Effect:**  Until the end\
+      \ of the battle or scene, you gain True Sight. You see objects and creatures for\
+      \ what they truly are, ignoring any illusion or transformation effects. The GM\
+      \ may require a skill check to unmask a creature or spell of a higher level than\
+      \ yours. You can also see in a person\u2019s aura when they tell a deliberate\
+      \ lie or falsehood."
+    feats: []
+    usage: per-day
+  - name: Compel Duel (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily; Quick action
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby enemy and one nearby ally (or you)
+  
+  
+      **Effect:**  Until the end of the battle, or until one of the targets is unconscious,
+      both targets have disadvantage on all attack rolls against targets other than
+      each other. In addition, attacks by anyone else against either of the targets
+      have disadvantage.'
+    feats: []
+    usage: per-day
+  - name: Banishment (5th Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  1d3 nearby enemies
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Hit:**  If the target is summoned from a different plane, such as a demon from
+      the abyss, it is banished back to that plane. Other creatures are stunned (save
+      ends) if they have 80 hp or less, or dazed (save ends) otherwise.
+  
+  
+      **Miss:**  The target is dazed until the end of its next turn.
+  
+  
+      7th level spell: Stunned at 120 hp or less.
+  
+  
+      9th level spell: Stunned at 180 hp or less.'
+    feats:
+    - tier: champion
+      description: ' You can target a group of up to five mooks as one enemy.'
+    usage: per-day
+  - name: Knowledge / Lore
+    _type: Talent
+    source: DATP
+    description: _Strongholds of faith are strongholds of learning._
+    feats: []
+  - name: Sacred Mantra (1st Level)
+    _type: Talent
+    source: DATP
+    description: '_You utter words of power in the old language of the scripture._
+  
+  
+      Close-quarters spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  The nearby enemy with the lowest MD (choose in case of a tie)
+  
+  
+      **Attack:**  Automatic hit
+  
+  
+      **Effect:**  1d4 + Wisdom holy damage
+  
+  
+      3rd level spell: 1d8 damage5th level spell: 2d8 damage7th level spell: 3d8 damage9th
+      level spell: 5d8 damage'
+    feats:
+    - tier: adventurer
+      description: ' If the target is dazed, hampered, weakened, or stunned, reroll
+        all natural 1s on the damage dice.'
+    - tier: champion
+      description: ' The first time you use this spell in a battle, deal maximum damage
+        with it.'
+    usage: at-will
+  - name: Divine Insight (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarter spell; Daily\n\n---\n\n\n**Effect:**  Choose a wizard\
+      \ utility spell from the Divination school of this spell\u2019s level or lower.\
+      \ Duplicate its effect."
+    feats: []
+    usage: per-day
+  - name: Pious Tongue (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  Until the end of the scene, you are able to understand all languages,
+      and your words can be understood by any intelligent being. Your words ring as
+      a deep divine truth, which allows you to substitute Wisdom for Charisma in social
+      interaction skill checks.'
+    feats:
+    - tier: adventurer
+      description: ' The spell is now recharge 16+.'
+    usage: per-day
+  - name: Intuitive Reading (3rd Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; Recharge 11+\n\n**Target:**  A nearby creature you have\
+      \ eye contact with\n\n**Attack:**  Wisdom + Level vs. MD\n\n**Hit:**  Ask a question\
+      \ about the target\u2019s soul. Below are some examples.\n\n\u201CWhich icon are\
+      \ you loyal to / do you consider an enemy?\u201D\n\n\u201CWhat is your greatest\
+      \ hope / greatest fear?\u201D\n\n\u201CWhat was the most happy / terrifying experience\
+      \ in your life?\u201D\n\n\u201CWhich person do you love / hate the most?\u201D\
+      \n\nYou perceive the answer as an image that appears in your mind.\n\n**Miss:**\
+      \  \u2014"
+    feats:
+    - tier: adventurer
+      description: ' Ask up to three questions.'
+  - name: Life / Death
+    _type: Talent
+    source: DATP
+    description: '_Lovers, forever nourishing and destroying each other._
+  
+  
+      (See the 13th Age Core Book p. 96 for details.)'
+    feats: []
+  - name: Invigorate (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  A nearby ally
+  
+  
+      **Effect:**  The ally gains a +2 bonus to their next attack roll. If the attack
+      hits, it deals 1d8 extra damage.
+  
+  
+      3rd level spell: 3d8 extra damage
+  
+  
+      5th level spell: 5d8 extra damage
+  
+  
+      7th level spell: 7d8 extra damage
+  
+  
+      9th level spell: 10d8 extra damage'
+    feats:
+    - tier: adventurer
+      description: ' Increase the attack bonus to +3.'
+    usage: at-will
+  - name: Death Ward (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily; Quick action
+  
+  
+      ---
+  
+  
+  
+      **Target:**  You or a nearby ally
+  
+  
+      **Effect:**  The first time the target is reduced to zero hit points this battle,
+      it can spend a recovery to heal as an interrupt action and double the amount healed.'
+    feats:
+    - tier: adventurer
+      description: ' When the target uses the interrupt, it also gains a +4 bonus to
+        all defenses until it is missed by an attack.'
+    - tier: champion
+      description: ' The spell is now Recharge 16+.'
+    usage: per-day
+  - name: Symbol of Life (3rd Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Daily; Quick action\n\n---\n\n\n**Effect:**\
+      \  You create a glowing holy symbol that floats in mid-air until the end of the\
+      \ battle. The symbol starts with a strength equal to the spell level. As a quick\
+      \ action, you or a nearby ally can spend a point of the symbol\u2019s strength\
+      \ to use a recovery to heal. The symbol fades if its strength is reduced to zero."
+    feats:
+    - tier: adventurer
+      description: ' The symbol keeps floating nearby you when you move. It does not
+        fade at the end of the battle if it has strength left. It fades after 1d6 hours.'
+    - tier: champion
+      description: ' You or an ally can also spend a point of strength of the symbol
+        to reroll a death save once. This is not an action.'
+    - tier: epic
+      description: ' You or an ally can spend two points to use two recoveries, or reroll
+        a death save with a +5 bonus.'
+    usage: per-day
+  - name: Raise Dead (5th Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  A nearby creature that has been killed within a day. You need an
+      intact corpse to cast this spell.
+  
+  
+      **Effect:**  You reset the target to zero hit points and zero failed death saves.
+      The target starts making death saves, even outside of combat. If it fails four
+      death saves, it is permanently dead. It cannot take recoveries or heal, even through
+      magic, until it succeeds at a death save.
+  
+  
+      Being raised from the dead is very strenuous. The target takes a -2 penalty to
+      attack rolls, defenses, skill checks and saves until the next full heal-up.
+  
+  
+      In addition, one randomly chosen ability score of the target is permanently reduced
+      by 2, and it permanently loses a recovery. They also end up with a permanent quirk
+      that is related to how they died. For example, if they died from a fireball, they
+      might end up with permanent flame marks on their skin and a strong fear of fire.
+  
+  
+      If Raise Dead is cast on a target a second time before it gains a level, the spell
+      fails.'
+    feats: []
+    usage: per-day
+  - name: Slay Living (7th Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One enemy you are engaged with
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Hit:**  If the target has 150 hit points or less, it dies. If it has more hit
+      points, it takes 100 negative energy damage.
+  
+  
+      **Miss:**  3d10 negative energy damage
+  
+  
+      9th level spell: Death on 250 hit points or less; 150 damage otherwise; 5d10 damage
+      on miss'
+    feats:
+    - tier: epic
+      description: ' You can use this spell as a ranged attack against a nearby enemy.'
+    usage: per-day
+  - name: Gate to the Underworld (9th Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Special:**  You must cast this spell at a site that has a connection to the
+      dead, such as a graveyard, a crypt, or the site of a large, ancient battle.
+  
+  
+      **Effect:**  The spell enables you and a group of nearby allies to travel to any
+      location in the underworld, the world of spirits and the dead. Some knowledge
+      of the underworld is required to know where you are going, which can be gained
+      from past travels, scrying rituals, or the guidance of the soul of a deceased.
+      Travel takes between an hour and a day, depending on distance and the amount of
+      effort exerted.
+  
+  
+      After you enter the underworld, the gate remains and can be unlocked with the
+      right passphrase. You have to return to the same location within the underworld
+      to return. You can also cast this spell again to open a gate back to the surface.'
+    feats:
+    - tier: epic
+      description: ' You can open the gate to return from anywhere within the Underworld
+        with a passphrase.'
+    usage: per-day
+  - name: Love / Beauty
+    _type: Talent
+    source: DATP
+    description: (See the 13th Age Core Book p. 96 for details.)
+    feats: []
+  - name: Radiant Heart (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  A nearby enemy
+  
+  
+      **Attack:**  Wisdom + Level vs. MD
+  
+  
+      **Hit:**  1d6 + Wisdom holy damage. Choose a nearby ally. The target is unable
+      to attack you or the chosen ally until the end of your next turn, or until you
+      or that ally attack it.
+  
+  
+      **Miss:**  Damage equal to your level
+  
+  
+      3rd level spell: 3d6 damage
+  
+  
+      5th level spell: 5d6 damage
+  
+  
+      7th level spell: 7d6 damage
+  
+  
+      9th level spell: 10d6 damage'
+    feats:
+    - tier: adventurer
+      description: ' On a natural even hit, the chosen ally heals hit points equal to
+        your Charisma modifier (x2 at 5th level; x3 at 8th).'
+    usage: at-will
+  - name: Call for a White Knight (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  One nearby creature with\
+      \ 60 hp or fewer\n\n**Attack:**  Wisdom + Level vs. MD\n\n**Hit:**  The target\
+      \ sees you as a hapless damsel in distress that needs protection. On its turn,\
+      \ it won\u2019t take any actions except move close to you, if possible. When adjacent\
+      \ to you, it has a 50% chance of taking a hit that was meant for you. Once between\
+      \ its turns, it can make a counterattack against a creature attacking you as an\
+      \ interrupt. The effect ends on a normal save, or if the target is attacked by\
+      \ you or one of your allies.\n\n**Miss:**  \u2014\n\n3rd level spell: Target with\
+      \ 100 hp or fewer\n\n5th level spell: Target with 150 hp or fewer\n\n7th level\
+      \ spell: Target with 250 hp or fewer\n\n9th level spell: Target with 400 hp or\
+      \ fewer"
+    feats:
+    - tier: adventurer
+      description: " If you don\u2019t attack during your turn, the target\u2019s save\
+        \ is a hard save (16+)."
+    - tier: champion
+      description: ' On a miss, the spell is not expended.'
+    usage: per-day
+  - name: Love Charm (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  One nearby creature with\
+      \ 40 hp or fewer\n\n**Special:**  This spell cannot be cast during combat or on\
+      \ a target that has rolled initiative to fight.\n\n**Attack:**  Wisdom + Level\
+      \ vs. MD\n\n**Hit:**  The target falls in love with you. It will follow you around\
+      \ and try to please you. The effect ends if you reject the target\u2019s advances,\
+      \ or if you or an ally tries to harm it. If combat starts, the target can save\
+      \ against the effect normally.\n\n**Miss:**  The target feels warm and fuzzy,\
+      \ but can\u2019t quite tell why.\n\n3rd level spell: Target with 64 hp or fewer\n\
+      \n5th level spell: Target with 96 hp or fewer\n\n7th level spell: Target with\
+      \ 160 hp or fewer\n\n9th level spell: Target with 266 hp or fewer"
+    feats: []
+    usage: per-day
+  - name: Luck / Fortune
+    _type: Talent
+    source: DATP
+    description: '**Source**  DATP
+  
+  
+      Choose a spell from the Fateweaver class of your level or lower as a bonus spell.
+  
+  
+      **Invocation of Luck / Fortune:**  This battle, whenever you or a nearby ally
+      rolls a natural 1 on a d20, flip a coin and call heads or tails. If you win, treat
+      the roll as a natural 20 instead.'
+    feats:
+    - tier: adventurer
+      description: ' You can Gather Focus like a Fateweaver for the chosen spell.'
+    - tier: champion
+      description: ' Gain an adventurer-tier meditation from the class as a bonus spell.'
+  - name: Lucky Star (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; At-will\n\n---\n\n\n**Target:**  A nearby enemy\n\n\
+      **Attack:**  Wisdom + Level vs. PD\n\n**Hit:**  1d4 + Wisdom holy damage. Give\
+      \ a luck token to yourself or a nearby ally. The token can be used to increase\
+      \ a natural d20 roll by 1 this battle. You can\u2019t give a token to someone\
+      \ who already has a token.\n\n**Miss:**  Damage equal to your level\n\n3rd level\
+      \ spell: 3d4 damage\n\n5th level spell: 5d4 damage\n\n7th level spell: 7d4 damage\n\
+      \n9th level spell: 10d4 damage"
+    feats:
+    - tier: adventurer
+      description: ' On a natural 20, gain a second luck token.'
+    usage: at-will
+  - name: "Fortuna\u2019s Frown (1st Level)"
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Recharge 16+ after battle; Interrupt action
+  
+  
+      **Trigger:**  You or a nearby ally is hit by an attack
+  
+  
+      **Target:**  The attacker
+  
+  
+      **Attack:**  Wisdom + Level vs. MD
+  
+  
+      **Hit:**  The target cannot benefit from effects that are triggered by specific
+      attack roll, such as an even hit (save ends).
+  
+  
+      **Miss:**  Damage equal to your level'
+    feats: []
+  - name: Serendipity (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; Daily; Free action\n\n---\n\n\n**Target:**  You or a\
+      \ nearby ally\n\n**Effect:**  When the spell is cast, a good thing happens to\
+      \ the target through sheer dumb luck. Maybe they kick a stone down the dark tunnel\
+      \ to disarm a deadly trap, lean against a wall to find the secret door everyone\
+      \ is looking for, or just happen to recognize the shopkeeper as an old childhood\
+      \ friend to get a big discount.\n\nIt\u2019s best to cast the spell when there\
+      \ is a specific problem that the party is facing. The GM then decides what boon\
+      \ to grant the PC, and the player can narrate the details of what happens."
+    feats:
+    - tier: adventurer
+      description: ' The spell is now Recharge 16+.'
+    usage: per-day
+  - name: Madness / Nightmare
+    _type: Talent
+    source: DATP
+    description: '_You are the only sane person in the room._
+  
+  
+      You are immune to the dazed and confused conditions.
+  
+  
+      **Invocation of Madness / Nightmare:**  The next enemy you hit with a cleric spell
+      this battle is also confused (save ends).'
+    feats:
+    - tier: adventurer
+      description: ' Nearby allies gain a +1 bonus to saves against the dazed and confused
+        conditions.'
+    - tier: champion
+      description: ' When an enemy attack affects you with the dazed or confused condition,
+        gain a +1 bonus to your next attack roll instead.'
+    - tier: epic
+      description: ' Enemies that are dazed or confused are vulnerable to your attacks.'
+  - name: Manic Cackle (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby enemy
+  
+  
+      **Attack:**  Wisdom + Level vs. MD
+  
+  
+      **Hit:**  1d6 + Wisdom psychic damage
+  
+  
+      _Natural 18+:_ The target immediately makes an attack against its own ally.
+  
+  
+      **Miss:**  Damage equal to your level
+  
+  
+      3rd level spell: 3d6 damage
+  
+  
+      5th level spell: 5d6 damage
+  
+  
+      7th level spell: 7d6 damage
+  
+  
+      9th level spell: 10d6 damage'
+    feats:
+    - tier: champion
+      description: ' Once per battle, when the escalation die is odd, attack 1d3 enemies
+        with this spell.'
+    usage: at-will
+  - name: Manic Reflection (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Recharge 16+ after battle; Interrupt action
+  
+  
+      **Trigger:**  An enemy hits you with a melee attack.
+  
+  
+      **Effect:**  The attacker must reroll the attack. You must accept the new result.
+      If the reroll is a miss, the attacker takes psychic damage equal to half the damage
+      of a hit.'
+    feats:
+    - tier: adventurer
+      description: ' The reroll takes a penalty equal to your Charisma modifier.'
+    - tier: champion
+      description: ' If the reroll is a hit, you regain this spell at the end of the
+        battle.'
+  - name: Waking Nightmare (5th Level)
+    _type: Talent
+    source: DATP
+    description: '_Listen to the voices. Your friends are out to get you._
+  
+  
+      Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby enemy with 160 hp or fewer
+  
+  
+      **Attack:**  Wisdom + Level vs. MD
+  
+  
+      **Hit:**  The target is confused (save ends). Whenever the target hits an ally,
+      it takes half the damage it dealt as psychic damage.
+  
+  
+      **Miss:**  The target is dazed until the end of your next turn.
+  
+  
+      7th level spell: Target with 250 hp or fewer
+  
+  
+      9th level spell: Target with 500 hp or fewer'
+    feats:
+    - tier: champion
+      description: ' The target adds the escalation die to attacks against its allies.'
+    - tier: epic
+      description: ' Double the hit point limit for enemies you can target.'
+    usage: per-day
+  - name: Fever Dream (7th Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  One nearby enemy\n\n\
+      **Special:**  If you collect three personal items from the target and create a\
+      \ little effigy of it, you can cast this spell as a ritual on the effigy and affect\
+      \ the target over a distance of several miles.\n\n**Attack:**  Wisdom + Level\
+      \ vs. MD\n\n**Hit:**  The next time the target sleeps, it will be plagued by a\
+      \ nightmare you create for it. If it succeeds at a save, it still regains half\
+      \ of its recoveries and spells that night. If it fails the save, it does not recover\
+      \ any. For NPCs that don\u2019t have recoveries or spell slots, the GM should\
+      \ reduce their stats or remove a number of powers on the next day.\n\n**Miss:**\
+      \  \u2014"
+    feats: []
+    usage: per-day
+  - name: Magic / Arcana
+    _type: Talent
+    source: DATP
+    description: '_Arcane magic is but a shard of the divine._
+  
+  
+      Gain a wizard spell, or a sorcerer spell from the arcane bloodline, of up to your
+      level as a bonus spell. You can switch out Intelligence or Charisma for Wisdom
+      in the spell description.
+  
+  
+      **Invocation of Magic / Arcana:**  Choose yourself or a nearby ally. The next
+      spell cast by the target is treated as if it was two levels higher. If the spell
+      is already at 9th level, increase its effect by 50% (caster chooses one: number
+      of targets, damage, healing, granted bonus).'
+    feats:
+    - tier: adventurer
+      description: " You can now choose the wizard\u2019s utility spell (CB 150) as\
+        \ your bonus spell."
+    - tier: champion
+      description: ' If the invocation would end at the end of your turn, roll a d6.
+        On a 6, it is active for another turn.'
+  - name: Magic Spark (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; At-will\n\n---\n\n\n**Target:**  A nearby enemy\n\n\
+      **Attack:**  Wisdom + Level vs. PD\n\n**Hit:**  1d6 + Wisdom force damage\n\n\
+      _Natural even hit:_ A nearby ally can add your Charisma modifier to their next\
+      \ attack roll against the target.\n\n**Miss:**  \u2014\n\n_Natural even miss:_\
+      \ You gain a +1 bonus to your next spell attack this battle.\n\n3rd level spell:\
+      \ 3d6 damage\n\n5th level spell: 5d6 damage\n\n7th level spell: 7d6 damage\n\n\
+      9th level spell: 10d6 damage"
+    feats:
+    - tier: adventurer
+      description: ' Increase the attack bonus on natural even miss to +2.'
+    - tier: champion
+      description: ' On a natural odd miss, repeat the attack once against a different
+        nearby enemy.'
+    usage: at-will
+  - name: Might of Magic (5th Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Recharge 11+; Quick action\n\n**Target:**  A\
+      \ nearby enemy\n\n**Attack:**  Wisdom + Level vs. MD\n\n**Hit:**  The target cannot\
+      \ use resistances or other abilities to reduce the damage it takes (save ends).\n\
+      \n**Miss:**  \u2014"
+    feats:
+    - tier: champion
+      description: ' The save against this spell is a hard save (16+).'
+  - name: Shield of the Archons (5th Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Daily; Quick action\n\n---\n\n\n**Effect:**\
+      \  You can cast this spell for power or for broad effect.\n\n_Cast for power:_\
+      \ Choose a nearby ally. The next magical attack against the target this battle\
+      \ is absorbed without effect. Roll a save \u2014 on a success the shield persists\
+      \ and absorbs a second attack.\n\n_Cast for broad effect:_ Target three nearby\
+      \ allies (including you). The next time the target is subject to a magical attack\
+      \ this battle, roll a save. On a success, the attack is absorbed without effect."
+    feats:
+    - tier: champion
+      description: ' This spell is now Recharge 11+.'
+    usage: per-day
+  - name: Metal / Smithing
+    _type: Talent
+    source: DATP
+    description: '_Dwarves shape metal like the gods shaped the first dwarf._
+  
+  
+      Up to one item per level (a sword, armor, shield and so on) that you have forged
+      yourself is considered an adventurer level true magic item of the appropriate
+      chakra when you or an ally wears it. The item only has the basic enchantment effect
+      (+1 to attack and damage for a weapon), but it can acquire an additional effect
+      through story events or icon relations.
+  
+  
+      **Invocation of Metal / Smithing:**  Until the end of the battle, you deal an
+      extra WEAPON damage die with metal weapons (5th level: two dice; 8th level: 3
+      dice).'
+    feats:
+    - tier: adventurer
+      description: ' Gain 3 points towards a background in smithing.'
+    - tier: champion
+      description: ' Your smithed items are considered champion level items.'
+    - tier: epic
+      description: ' Your smithed items are considered epic level items.'
+    - tier: adventurer
+      description: ' Also grant the bonus to two nearby allies.'
+  - name: Blessed Steel (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Melee attack; At-will
+  
+  
+      ---
+  
+  
+  
+      **Attack:**  Strength OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  WEAPON + Strength damage
+  
+  
+      _Natural 16+:_ Deal extra holy damage equal to your Wisdom modifier (x2 at 5th
+      level; x3 at 8th)
+  
+  
+      **Miss:**  Damage equal to your level'
+    feats:
+    - tier: adventurer
+      description: ' Deal half damage on a miss.'
+    - tier: champion
+      description: ' Deal triple damage on a natural 20.'
+    usage: at-will
+  - name: Heat Metal (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  One nearby enemy in heavy\
+      \ armor, wearing metal armor, or using metal weapons\n\n**Attack:**  Wisdom +\
+      \ Level vs. PD\n\n**Hit:**  3d6 + Wisdom fire damage,\_ 10 ongoing fire damage,\
+      \ and the target is dazed (save ends both).\n\n**Miss:**  10 ongoing fire damage\n\
+      \n3rd level spell: 5d6 damage; 15 ongoing damage\n\n5th level spell: 5d10 damage;\
+      \ 25 ongoing damage\n\n7th level spell: 9d10 damage; 40 ongoing damage\n\n9th\
+      \ level spell: 10d12 damage; 50 ongoing damage"
+    feats: []
+    usage: per-day
+  - name: Blade Barrier (5th Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  All enemies engaged with you
+  
+  
+      **Attack:**  Wisdom + Level vs. AC
+  
+  
+      **Hit:**  6d8 + Wisdom damage
+  
+  
+      **Miss:**  Half damage
+  
+  
+      **Always:**  Until the end of the battle, when an enemy engages you, deal 3d8
+      damage to them.
+  
+  
+      7th level spell: 9d8 / 4d8 damage
+  
+  
+      9th level spell: 12d8 / 6d8 damage
+  
+  
+      Champion: Increase the damage dice to d10s.'
+    feats: []
+    usage: per-day
+  - name: Mind / Dream
+    _type: Talent
+    source: DATP
+    description: '**Source**  EC
+  
+  
+      Every attack you make deals psychic damage instead of other types of damage unless
+      you choose otherwise for a specific attack.
+  
+  
+      **Invocation of Mind/Dream:**  When you cast a daily cleric spell this battle,
+      roll a d6. If you roll less than or equal to the escalation die, you regain the
+      use of that daily spell after the battle.'
+    feats:
+    - tier: adventurer
+      description: " If your attack already deals psychic damage, it gains the following\
+        \ bonus damage\u2014adventurer tier: +1 damage; champion tier: +2 damage; epic\
+        \ tier: +3 damage."
+    - tier: champion
+      description: ' You gain a +2 bonus to all defenses against attacks by aberrations.'
+    - tier: epic
+      description: " The invocation also affects your allies\u2019 daily spells."
+  - name: Music / Song
+    _type: Talent
+    source: DATP
+    description: '_Music moves hearts and minds as easily as the strongest magic._
+  
+  
+      Gain a bardic song (CB p. 83) of up to your level as a bonus spell. You can replace
+      Charisma with Wisdom in the spell description.
+  
+  
+      You can conceal your divine spellcasting as part of music or singing, as long
+      as the spell effect itself is subtle, i.e. not like a Flamestrike.
+  
+  
+      **Invocation of Music:**  Grant yourself and all nearby allies a d6 inspiration
+      die, which you can add as a bonus to any d20 roll before the end of the battle
+      or scene. You can decide whether to use the bonus after making the roll.'
+    feats:
+    - tier: adventurer
+      description: ' You gain 3 points towards a background in musical performance.'
+    - tier: champion
+      description: ' Increase the die to a d8.'
+  - name: Divine Cantata (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  Up to two nearby enemies
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Hit:**  1d4 + Wisdom holy damage, and a nearby ally gains a +1 bonus to their
+      next savesaving throw.
+  
+  
+      **Miss:**  Damage equal to your level
+  
+  
+      3rd level spell: 1d12 damage
+  
+  
+      5th level spell: 2d8 damage
+  
+  
+      7th level spell: 2d12 damage
+  
+  
+      9th level spell: 4d12 damage'
+    feats:
+    - tier: adventurer
+      description: ' If both attacks hit and you grant both save bonuses to the same
+        ally, increase the total save bonus to +4.'
+    usage: at-will
+  - name: Sacred Hymn (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  Increase the escalation die by 1. Until the end of the battle, any
+      enemy attempting to use the escalation die (or steal it, or otherwise manipulate
+      it) takes holy damage equal to your Charisma modifier (x2 at 5th level; x3 at
+      8th) + the spell level.
+  
+  
+      5th level spell: You can now cast this spell as a quick action.'
+    feats:
+    - tier: adventurer
+      description: ' Until the end of the battle, you and all allies can add the escalation
+        die to sustain checks for bard songs.'
+    usage: per-day
+  - name: Angelic Chorus (7th Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Daily; Quick action\n\n---\n\n\n**Effect:**\
+      \  You call celestial beings to the battlefield until the end of the battle. While\
+      \ they don\u2019t interact with any creatures directly, they can take one standard\
+      \ action on your turn to cast any of your cleric spells as if you had cast it.\
+      \ The spell is expended as if you had cast it."
+    feats: []
+    usage: per-day
+  - name: Nature
+    _type: Talent
+    source: DATP
+    description: "**Source**  EB\n\nYou have the ability to briefly converse in rudimentary\
+      \ fashion with animals and plant creatures, subject to the limits of the creatures\u2019\
+      \ intelligence, interest, and vocabulary. Extended conversations are beyond the\
+      \ scope of the domain ability.\n\n**Invocation of Nature:**  Nature: Nearby and\
+      \ far away enemies find their footing surprisingly treacherous, so you and your\
+      \ allies can disengage safely as a move action with an easy (6+) save"
+    feats:
+    - tier: adventurer
+      description: ' Once per day, you can pull off a terrain stunt, as defined in the
+        Tracker talent that the Ranger possesses'
+    - tier: champion
+      description: ' You gain +2 to all defenses against attacks from beasts.'
+    - tier: epic
+      description: ' Once per day, you can use the overworld travel spell, but both
+        the origin and destination must be within the wilderness.'
+  - name: Oracle
+    _type: Talent
+    source: DATP
+    description: "**Source**  DPAS\n\nYou can use the Follow the Thread fateweaver class\_\
+      feature once per day. Starting at 3rd level, you can take a fateweaver spell in\
+      \ place of cleric spells. The\_fateweaver spell must be two levels lower than\
+      \ the cleric spell."
+    feats:
+    - tier: adventurer
+      description: " Gain a fateweaver adventurer-tier meditation as a bonus power.\
+        \ You can expend\_focus to deal maximum damage with a Cleric spell,\_or to allow\
+        \ an ally to heal the maximum amount\_when you grant them the use of a recovery."
+  - name: Pain / Suffering
+    _type: Talent
+    source: DATP
+    description: '_I will face my fear. I will permit it to pass over me and through
+      me. Where the fear has gone there will be nothing. Only I will remain._
+  
+  
+      While you are staggered, increase the damage die of each spell you cast by one
+      step (d4 -> d6 and so on).
+  
+  
+      **Invocation of Pain:**  When you deal damage to an enemy, you can activate this
+      power as a free action to deal ongoing damage to the target equal to the damage
+      you just inflicted.'
+    feats:
+    - tier: adventurer
+      description: ' While you are staggered, increase the difficulty of saves against
+        effects you place on enemies by 2.'
+    - tier: champion
+      description: ' If you use this invocation while you are staggered, you regain
+        it at the end of the battle.'
+  - name: Inflict Wounds (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby enemy you are engaged with
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Hit:**  1d8 + Wisdom negative energy damage
+  
+  
+      **Miss:**  Negative energy damage equal to your level
+  
+  
+      3rd level spell: 3d8 damage
+  
+  
+      5th level spell: 5d8 damage
+  
+  
+      7th level spell: 7d8 damage
+  
+  
+      9th level spell: 10d8 damage'
+    feats:
+    - tier: adventurer
+      description: ' You gain a +2 bonus to hit against staggered enemies.'
+    - tier: champion
+      description: ' On a natural 18+, the target is weakened until the end of its next
+        turn.'
+    usage: at-will
+  - name: Thorny Crown (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily; Quick action
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  Cast this spell for power or for broad effect.
+  
+  
+      _Cast for power:_ A nearby ally gains _resist all_ 16+ until the end of the battle.
+      When damage is resisted, the resisted part of the damage is reflected to the attacker,
+      and the spell ends.
+  
+  
+      _Cast for broad effect:_ As cast for power, but target 3 nearby allies with _resist
+      all_ 12+.'
+    feats:
+    - tier: champion
+      description: ' The spell no longer ends when a target resists damage.'
+    usage: per-day
+  - name: Harm (7th Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby enemy you are engaged with
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Hit:**  2d8 x 10 negative energy damage
+  
+  
+      _Natural 16+:_ If the target has 120 hit points or fewer after taking damage,
+      it starts making last gasp saves (16+).
+  
+  
+      **Miss:**  1d4 x 10 negative energy damage
+  
+  
+      9th level spell: 3d8 x 10 damage on a hit; 1d8 x 10 damage on a miss; 180 hp or
+      fewer'
+    feats:
+    - tier: champion
+      description: ' You can cast this spell as a ranged spell against a nearby enemy.'
+    usage: per-day
+  - name: Plant / Forest
+    _type: Talent
+    source: DATP
+    description: "_Revere the ancient trees, taller, stronger and filled with more wisdom\
+      \ than any temple._\n\nGain a spell from the Forest terrain of the druid\u2019\
+      s Circle of the Lands of up to your level as a bonus spell.\n\n**Invocation of\
+      \ Plant:**  Deal 3 times your level in ongoing poison damage to all nearby enemies\
+      \ that are stuck."
+    feats:
+    - tier: adventurer
+      description: ' You and any nearby allies ignore movement penalties or restrictions
+        in dense or hazardous vegetation. Any related skill checks are one step easier
+        (-5).'
+    - tier: champion
+      description: ' The targets have disadvantage on their next save against ongoing
+        poison damage and the stuck effect.'
+    - tier: epic
+      description: ' Increase the ongoing damage to 5 times your level.'
+  - name: Thorn Whip (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby enemy you are engaged with
+  
+  
+      **Attack:**  Strength OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  1d6 per level + Strength poison damage
+  
+  
+      _Natural even hit:_ The target is stuck until the end of your next turn.
+  
+  
+      **Miss:**  Damage equal to your level'
+    feats:
+    - tier: adventurer
+      description: ' You can attack nearby enemies you are not engaged with.'
+    usage: at-will
+  - name: Binding Vines (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Once per battle; Quick Action
+  
+  
+      ---
+  
+  
+  
+      **Target:**  A nearby enemy
+  
+  
+      **Attack:**  Wisdom + Level vs. AC; you have a -4 penalty to the attack roll against
+      large, huge, and flying enemies
+  
+  
+      **Hit:**  The target is stuck (save ends).'
+    feats:
+    - tier: adventurer
+      description: ' You can target 1d3 enemies with this spell.'
+    - tier: champion
+      description: ' The target is also dazed (save ends both).'
+    - tier: epic
+      description: ' The target is also vulnerable to attacks (save ends all).'
+    usage: per-battle
+  - name: Ensnaring Roots (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; Daily\n\n---\n\n\n**Effect:**  Until the end of the\
+      \ battle, tree roots in the nearby area start writhing and grabbing for your enemies\u2019\
+      \ legs. When an enemy moves on the ground, it must succeed at an easy save (6+),\
+      \ or it is stuck until the start of its next turn.\n\n3rd level spell: You can\
+      \ now cast this spell as a quick action.\n\n5th level spell: The save is now a\
+      \ normal save (11+) for normal-sized and smaller enemies."
+    feats: []
+    usage: per-day
+  - name: Protection / Community
+    _type: Talent
+    source: DATP
+    description: '_A temple without a flock is a crypt of dead teachings._
+  
+  
+      (See the 13th Age Core Book p. 97 for details.)'
+    feats: []
+  - name: Shielding Strike (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Melee attack; At-will
+  
+  
+      ---
+  
+  
+  
+      **Attack:**  Strength OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  WEAPON + Strength damage, and you grant a nearby ally a +2 bonus to
+      AC until the end of your next turn.
+  
+  
+      **Miss:**  Grant a nearby ally a +1 bonus to AC.'
+    feats:
+    - tier: adventurer
+      description: ' If you wield a shield, grant the bonus to PD too.'
+    usage: at-will
+  - name: Blessed Orator (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  Until the end of the scene, you have advantage on Wisdom and Charisma-checks
+      when speaking to a group.'
+    feats: []
+    usage: per-day
+  - name: Shield Other (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Recharge 11+ after battle; Interrupt action\n\
+      \n**Trigger:**  An attack hits a nearby ally\u2019s AC.\n\n**Effect:**  The attacker\
+      \ must reroll the attack, and use the second result.\n\n3rd level spell: The ally\
+      \ gains a +2 AC bonus against the rerolled attack.\n\n5th level spell: You can\
+      \ trigger the spell against attacks that target PD; replace references to AC with\
+      \ PD.\n\n7th level spell: The bonus to AC/PD on the rerolled attack increases\
+      \ to +4.\n\n9th level spell: The bonus to AC/PD on the rerolled attack increases\
+      \ to +6."
+    feats:
+    - tier: adventurer
+      description: ' You can now choose either of the attack rolls, in case the second
+        one crits or is otherwise bad for your ally.'
+    - tier: champion
+      description: ' Recharge roll after battle is now 6+.'
+    - tier: epic
+      description: ' Hit or miss, the ally takes only half damage from any attack you
+        use Shield Other against.'
+  - name: Summon Guardian of Faith (3rd Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Daily\n\n---\n\n\n**Effect:**  This spell calls\
+      \ a Guardian of Faith as a superior summoned creature according to the summoning\
+      \ rules on page XX. The guardian takes a shape determined by your faith, often\
+      \ an animal associated with strength, valor and protection, such as a lion, or\
+      \ a knightly saint. The level of the guardian is the same as the spell\u2019s\
+      \ level.\n\n### _Summoned Guardian of Faith_\n\n3rd level troop [Celestial beast]\n\
+      \nInitiative: +5\n\n**Celestial weapon +8 vs. AC** \u201410 holy damage.\n\nNatural\
+      \ even hit: The guardian can use both defend self and defend other this turn.\n\
+      \n_Defend self (quick action):_ The guardian gains a +2 bonus to all defenses\
+      \ until the end of its next turn.\n\n_Defend others (quick action):_ The ally\
+      \ closest to the guardian gains a +2 bonus to all defenses until the end of its\
+      \ next turn.\n\n**Guardian of Faith Level Progression** "
+    feats:
+    - tier: adventurer
+      description: ' If you summon the guardian to defend a holy site, it has a +2 bonus
+        to attacks and defenses and twice the starting hit points.'
+    - tier: champion
+      description: ' The guardian has _resist negative energy_ 16+.'
+    - tier: epic
+      description: " The guardian\u2019s defend abilities grant a +3 bonus to defenses."
+    usage: per-day
+  - name: Walk Unharmed (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Special:**  You can only cast this spell outside of battle.
+  
+  
+      **Effect:**  Until the end of the scene, you and up to one nearby ally per point
+      of Wisdom modifier cannot be attacked. Only creatures of a higher level than you,
+      or direct icon interference (watch those complications from 5s!) can break the
+      effect. The effect also ends if you or one of your allies makes an attack.
+  
+  
+      5th level spell: The effect lasts one hour.
+  
+  
+      7th level spell: The effect lasts 1d6 hours.
+  
+  
+      9th level spell: The effect lasts 2d4 hours.'
+    feats: []
+    usage: per-day
+  - name: Secrets / Cultism
+    _type: Talent
+    source: DATP
+    description: "_Your church, or at least the branch you belong to, prefers to operate\
+      \ without drawing attention to itself. You generally don\u2019t disclose your\
+      \ status to those who are not part of your faith._\n\nYour divine magic is subtle,\
+      \ and hard to detect. Outside of blatant elemental effects, only direct targets\
+      \ of the spell, and those with a supernatural ability to detect divine presence\
+      \ will notice your divine aura or your spellcasting.\n\n**Invocation of Secrets\
+      \ / Cultism:**  Choose a nearby person. Gain a hint about a secret they are hiding.\
+      \ The hint should be significant enough to drive the story forward, but not so\
+      \ complete that no further investigation is required. If in doubt, the invocation\
+      \ gives an inspiration about where to look for more information."
+    feats:
+    - tier: adventurer
+      description: " Your ranged divine spells don\u2019t provoke opportunity attacks."
+    - tier: champion
+      description: ' When casting a divine ritual to uncover secrets or find forbidden
+        information, you gain advantage on the skill check.'
+    - tier: epic
+      description: ' Once per day, you can use a secret you know about a target to gain
+        advantage on a spell attack roll against them.'
+  - name: Ominous Chant (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby enemy
+  
+  
+      **Attack:**  Wisdom + Level vs. MD
+  
+  
+      **Hit:**  1d8 + Wisdom psychic damage
+  
+  
+      **Miss:**  Damage equal to your level
+  
+  
+      **Any natural even roll:**  The target takes a -4 penalty to MD until the end
+      of your next turn.
+  
+  
+      3rd level spell: 3d8 damage
+  
+  
+      5th level spell: 5d8 damage
+  
+  
+      7th level spell: 7d8 damage
+  
+  
+      9th level spell: 10d8 damage'
+    feats:
+    - tier: adventurer
+      description: ' The damage dice of this spell are exploding dice.'
+    usage: at-will
+  - name: Encrypt (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  A letter, book etc.
+  
+  
+      **Effect:**  You obfuscate the words, and make the writing appear as a harmless
+      text or complete gibberish. Only you, and any person designated by you, can read
+      the original text.'
+    feats: []
+    usage: per-day
+  - name: Erase Memory (5th Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  One nearby creature\n\
+      \n**Attack:**  Wisdom + Level vs. MD\n\n**Hit:**  You cause the target to forget\
+      \ a small piece of information, such as the face of a stranger, a password or\
+      \ the location of a meeting. The target can save against the effect after 24 hours,\
+      \ and each day after that.\n\n**Miss:**  \u2014\n\n_Natural odd miss:_ The target\
+      \ notices the attempt to mess with its mind, and it will be quite unhappy about\
+      \ it.\n\n7th level spell: The target forgets something much closer to them, such\
+      \ as the name of a good friend.\n\n9th level spell: You can erase a larger chunk\
+      \ of memory, up to a year\u2019s worth."
+    feats:
+    - tier: champion
+      description: ' Instead of erasing the memory, you can subtly alter it. For example,
+        you can make the target remember a different face.'
+    usage: per-day
+  - name: Spirits / Undeath
+    _type: Talent
+    source: DATP
+    description: '_Eternal life at any cost._
+  
+  
+      Gain a necromancer spell (13TW p. 85) of your level or lower as a bonus spell.
+      You can switch Intelligence for Wisdom in the spell description.
+  
+  
+      **Invocation of Spirits / Undeath:**  Until the end of the battle, deal negative
+      energy damage equal to your level to each enemy who makes an attack against you.
+      If an undead creature attempts to attack you, it must roll a save. If the save
+      fails, they cannot attack you, but they do not lose the action used for the attack.
+      If the save succeeds, they can now attack you freely until the end of the battle.'
+    feats:
+    - tier: adventurer
+      description: ' If the save is a natural 1, the target is stunned until the start
+        of its next turn.'
+  - name: Withering Touch (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; At-will\n\n---\n\n\n**Target:**  One enemy you\
+      \ are engaged with\n\n**Attack:**  Wisdom + Level vs. PD\n\n**Hit:**  1d12 + Wisdom\
+      \ negative energy damage\n\n**Miss:**  \u2014\n\n_Natural odd miss:_ You take\
+      \ 1d6 negative energy damage.\n\n3rd level spell: 5d6 damage, 2d6 damage on odd\
+      \ miss\n\n5th level spell: 5d8 damage, 2d8 damage on odd miss\n\n7th level spell:\
+      \ 7d10 damage, 3d10 damage on odd miss\n\n9th level spell: 10d10 damage, 4d6 damage\
+      \ on odd miss"
+    feats:
+    - tier: champion
+      description: ' You can now use the spell as a ranged spell.'
+    usage: at-will
+  - name: Captive Spirit (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Once per battle
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  You summon one captive spirit mook as per the summoning rules on
+      page XX. The spirit fights for you until the end of the battle, or until it drops
+      to 0 hp, whichever comes first.'
+    feats: []
+    usage: per-battle
+  - name: Bolster Undead (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily; Quick action
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  You can cast this spell for power or for broad effect.
+  
+  
+      _Cast for power:_ One nearby undead creature gains 20 temporary hit points and
+      a +2 bonus to hit until the end of the battle.
+  
+  
+      _Cast for broad effect_: Choose up to three nearby undead creatures; each target
+      gains 10 temporary hit points and a +1 bonus to hit until the end of the battle.
+  
+  
+      5th level spell: Temporary hp = 30/15
+  
+  
+      7th level spell: Temporary hp = 40/20
+  
+  
+      9th level spell: Temporary hp = 50/25'
+    feats: []
+    usage: per-day
+  - name: Strength
+    _type: Talent
+    source: DATP
+    description: '_You worship physical prowess._
+  
+  
+      (See the 13th Age Core Book p. 97 for details.)'
+    feats: []
+  - name: Powerful Blow (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Melee attack; At-will
+  
+  
+      ---
+  
+  
+  
+      **Attack:**  Strength + Level vs. AC
+  
+  
+      **Hit:**  WEAPON + Strength damage
+  
+  
+      _Natural odd hit:_ The target pops free from you.
+  
+  
+      **Miss:**  Damage equal to your Strength modifier (x2 at 5th level; x3 at 8th)
+      + Level'
+    feats:
+    - tier: adventurer
+      description: ' On a natural even hit, deal extra damage equal to your level.'
+    - tier: champion
+      description: ' On a natural odd hit, you knock the target prone. Melee attacks
+        have advantage against the target until it takes a move action to stand up.'
+    usage: at-will
+  - name: Bend Bars and Lift Gates (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Once per scene; Free action\n\n**Trigger:**\
+      \  You or a nearby ally makes a Strength check or a Strength-based skill check.\n\
+      \n**Effect:**  Triple the target\u2019s Strength modifier for the check."
+    feats:
+    - tier: adventurer
+      description: ' You can target 1d3 allies (including yourself).'
+  - name: Siphon Strength (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby enemy with 96 hp or fewer
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Hit:**  4d12 + Wisdom negative energy damage, and the target is weakened (save
+      ends)
+  
+  
+      **Miss:**  Half damage
+  
+  
+      5th level spell: 7d12 damage
+  
+  
+      7th level spell: 2d6 x 10 damage
+  
+  
+      9th level spell: 2d10 x 10 damage'
+    feats:
+    - tier: adventurer
+      description: ' The spell can now target an enemy with any number of hit points
+        while the escalation die is 3+.'
+    - tier: champion
+      description: ' The save against weakened is now a hard save (16+).'
+    - tier: epic
+      description: ' On a miss, the target is also dazed (save ends).'
+    usage: per-day
+  - name: Sun / Anti-Undead
+    _type: Talent
+    source: DATP
+    description: '_The sun, all-seeing and eternal, is the center of the sky and of
+      many pantheons._
+  
+  
+      (See the 13th Age Core Book p. 97 for details.)'
+    feats: []
+  - name: Ray of Light (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  A nearby enemy
+  
+  
+      **Attack:**  Wisdom + Level vs. MD
+  
+  
+      **Hit:**  1d6 + Wisdom holy damage. Deal maximum damage against undead.
+  
+  
+      **Miss:**  Damage equal to your level
+  
+  
+      3rd level spell: 3d6 damage
+  
+  
+      5th level spell: 5d6 damage
+  
+  
+      7th level spell: 7d6 damage
+  
+  
+      9th level spell: 10d6 damage'
+    feats:
+    - tier: adventurer
+      description: ' Against undead, deal half damage on a miss.'
+    - tier: champion
+      description: ' Increase the damage dice to d8.'
+    usage: at-will
+  - name: Consecration (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  You create a consecrated area that covers the nearby battlefield
+      until the end of the battle. Within the area, undead, demons and devils lose their
+      resistances and become vulnerable to all attacks. Against creatures that are already
+      vulnerable to holy damage, you deal extra damage equal to your Wisdom modifier
+      (x2 at 5th level; x3 at 8th).
+  
+  
+      3rd level spell: You can now cast this spell as a quick action.'
+    feats:
+    - tier: adventurer
+      description: ' Allies gain a bonus die to their recovery rolls while within the
+        consecrated area (5th level: 2 dice; 8th level: 3 dice).'
+    - tier: champion
+      description: ' The spell is now Recharge 16+.'
+    usage: per-day
+  - name: Searing Light (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby enemy per point of escalation die
+  
+  
+      **Attack:**  Wisdom + Level vs. MD
+  
+  
+      **Hit:**  5d8 + Wisdom holy damage. If the target is a demon or undead, it is
+      also dazed (save ends).
+  
+  
+      **Miss:**  Half damage
+  
+  
+      5th level spell: 1d8 x 10 damage
+  
+  
+      7th level spell: 1d8 x 15 damage
+  
+  
+      9th level spell: 2d8 x 10 damage'
+    feats:
+    - tier: adventurer
+      description: ' Gain a +3 bonus to hit against demons and undead.'
+    usage: per-day
+  - name: Time
+    _type: Talent
+    source: DATP
+    description: '_No one can escape time._
+  
+  
+      Choose a wizard spell of your level or lower from the following list as a bonus
+      spell: Feather Fall, Haste, Slow, Time Stop.
+  
+  
+      **Invocation of Time:**  Grant a nearby ally a standard action.'
+    feats:
+    - tier: adventurer
+      description: ' Once per battle, when the escalation die is increased by one, move
+        yourself up 1d4 positions in the initiative order.'
+    - tier: champion
+      description: ' Also grant a move action.'
+  - name: Sands of Time (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  A nearby enemy
+  
+  
+      **Attack:**  Wisdom + Level vs. MD
+  
+  
+      **Hit:**  1d4 + Wisdom ongoing holy damage
+  
+  
+      **Miss:**  Damage equal to your level
+  
+  
+      3rd level spell: 2d8 ongoing damage
+  
+  
+      5th level spell: 4d6 ongoing damage
+  
+  
+      7th level spell: 6d6 ongoing damage
+  
+  
+      9th level spell: 7d10 ongoing damage'
+    feats:
+    - tier: adventurer
+      description: ' The target also takes a -2 penalty to disengage checks (save ends
+        both).'
+    usage: at-will
+  - name: Temporal Disruption (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Target:**  1d3 nearby enemies
+  
+  
+      **Attack:**  Wisdom + Level vs. MD
+  
+  
+      **Hit:**  4d6 + Wisdom holy damage. Move the target to the end of the initiative
+      queue. If it has already taken its turn this round, it takes its next turn in
+      the next round.
+  
+  
+      **Miss:**  Half damage
+  
+  
+      3rd level spell: 7d6 damage
+  
+  
+      5th level spell: 10d6 damage
+  
+  
+      7th level spell: 15d6 damage
+  
+  
+      9th level spell: 2d6 x 10 damage'
+    feats: []
+    usage: per-day
+  - name: Visions of the Past (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Daily; Quick action\n\n---\n\n\n**Effect:**\
+      \  Focus on a nearby person, place, or object, and decide a rough time range (1\
+      \ day, 1 month, 1 year, 100 years \u2026). You see a vision of that person, place,\
+      \ or object at the time. You can improve the vision if you focus longer, touch\
+      \ the object, and succeed at skill check at a normal difficulty.\n\n5th level\
+      \ spell: The difficulty of skill checks for the spell is now easy."
+    feats: []
+    usage: per-day
+  - name: Trickery / Illusion
+    _type: Talent
+    source: DATP
+    description: '_Every family has its black sheep, every pantheon has its trickster._
+  
+  
+      (See the 13th Age Core Book p. 97 for details.)'
+    feats: []
+  - name: Wink of the Trickster (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; At-will\n\n---\n\n\n**Target:**  A nearby enemy\n\n\
+      **Attack:**  Wisdom + Level vs. MD\n\n**Hit:**  1d6 + Wisdom psychic damage\n\n\
+      _Natural even hit:_ The next attack by the target against you has disadvantage\
+      \ as you create an illusory double of yourself.\n\n**Miss:**  \u2014\n\n_Natural\
+      \ even miss:_ The next attack against a nearby ally of your choice has disadvantage.\n\
+      \n3rd level spell: 3d6 damage\n\n5th level spell: 5d6 damage\n\n7th level spell:\
+      \ 7d6 damage\n\n9th level spell: 10d6 damage"
+    feats:
+    - tier: adventurer
+      description: ' You can use this spell as a melee attack that deals WEAPON + Wisdom
+        damage.'
+    - tier: champion
+      description: ' On a natural 20, the target is confused until the end of its next
+        turn.'
+    usage: at-will
+  - name: Taunt and Tease (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Once per battle
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby enemy
+  
+  
+      **Attack:**  Wisdom + Level vs. MD
+  
+  
+      **Hit:**  4d6 + Wisdom psychic damage, and the target takes a -4 penalty to attacks
+      until the end of your next turn, unless it attacks you. If it misses with an attack
+      against any target, it takes psychic damage equal to your Charisma modifier (x2
+      at 5th level; x3 at 8th) + twice the spell level.
+  
+  
+      **Miss:**  Damage equal to your level
+  
+  
+      3rd level spell: 5d8 damage.
+  
+  
+      5th level spell: 7d10 damage.
+  
+  
+      7th level spell: 10d12 damage.
+  
+  
+      9th level spell: 2d8 x 10 damage.'
+    feats:
+    - tier: adventurer
+      description: ' You can make the target think the attack comes from an ally it
+        is engaged with instead of you. It now has a -4 penalty to attacks against everyone
+        except that ally.'
+    - tier: champion
+      description: ' A natural even miss does not expend the spell.'
+    usage: per-battle
+  - name: "Trickster\u2019s Guise (1st Level)"
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  This spell provides you with an effective magical disguise that lasts
+      about ten minutes, making the skill check to avoid unmasking one step easier (-5
+      to the difficulty). The spell only affects your general appearance, not your size.
+      It can be used to hide your features behind the generic features of another person
+      or race. Using it to impersonate a specific creature makes it less effective as
+      a disguise (-2 to -5 penalty to the check).
+  
+  
+      3rd level spell: The spell lasts for 1 hour.
+  
+  
+      5th level spell: The spell also provides smell; +2 bonus to any checks.
+  
+  
+      7th level spell: The spell also handles accurate-sounding vocal patterns and rough
+      mannerisms; +4 bonus to any checks.'
+    feats:
+    - tier: champion
+      description: ' You can cast the spell on yourself plus one ally per point of Wisdom
+        modifier. All disguises will be of the same type, for example all orcs or all
+        city guards.'
+    usage: per-day
+  - name: Borrowed Trick (5th Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily; Quick action
+  
+  
+      ---
+  
+  
+  
+      **Target:**  One nearby ally
+  
+  
+      **Effect:**  Choose a spell, maneuver or power of the target. You can use it at
+      its normal frequency until the end of the battle.'
+    feats: []
+    usage: per-day
+  - name: Cheat All Except Death (7th Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily; Quick action
+  
+  
+      ---
+  
+  
+  
+      **Target:**  You
+  
+  
+      **Effect:**  Until the end of the battle, you can set a d20 roll as a natural
+      20 after making the roll. Each time you do so, you add one failed death save for
+      this battle. As usual, you die after the fourth failed death save, regardless
+      of your current hit point total.'
+    feats: []
+    usage: per-day
+  - name: War / Leadership
+    _type: Talent
+    source: DATP
+    description: '_The fiercest battles are fought when both sides pray to the same
+      god._
+  
+  
+      (See the 13th Age Core Book p. 97 for details.)'
+    feats: []
+  - name: Lead the Assault (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Melee attack; At-will
+  
+  
+      ---
+  
+  
+  
+      **Attack:**  Strength OR Wisdom + Level vs. AC
+  
+  
+      **Hit:**  WEAPON + Strength damage. Until the end of your next turn, your allies
+      have a +2 bonus to their critical threat range against the target.
+  
+  
+      **Miss:**  Damage equal to your level'
+    feats:
+    - tier: adventurer
+      description: ' Also grant the crit bonus on an even miss.'
+    usage: at-will
+  - name: Booming Command (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Daily\n\n---\n\n\n**Target:**  One nearby enemy\n\
+      \n**Effect:**  You give the target a simple, three-word command, such as \u201C\
+      drop your weapon\u201D or \u201Crun away quickly\u201D. If the target obeys, no\
+      \ other effect happens. If it doesn\u2019t, make the following attack against\
+      \ it:\n\n**Attack:**  Wisdom + Level vs. MD\n\n**Hit:**  3d8 + Wisdom thunder\
+      \ damage\n\n**Miss:**  Damage equal to your level\n\n3rd level spell: 4d8 thunder\
+      \ damage\n\n5th level spell: 6d8 thunder damage\n\n7th level spell: 9d8 thunder\
+      \ damage\n\n9th level spell: 2d6 x 10 thunder damage"
+    feats:
+    - tier: adventurer
+      description: ' The command can be up to 5 words.'
+    - tier: champion
+      description: ' Target 1d3 enemies.'
+    - tier: epic
+      description: ' Target 1d4 enemies.'
+    usage: per-day
+  - name: Elevated Command (3rd Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; Daily; Quick action
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  Until the end of the battle, when you grant an ally an attack bonus
+      from the War Domain, increase it +2.'
+    feats:
+    - tier: adventurer
+      description: " The War domain\u2019s attack bonus now lasts until the end of your\
+        \ next turn, and you can benefit from it yourself."
+    usage: per-day
+  - name: Water / Sea / River
+    _type: Talent
+    source: DATP
+    description: "_From the tiniest stream to the endless oceans, where there is water,\
+      \ there is divine power._\n\nChoose a spell from the Ocean or River terrains of\
+      \ the druid\u2019s Circle of the Lands of up to your level as a bonus spell.\n\
+      \n**Invocation of Water:**  A foggy mist fills the battlefield that gives you\
+      \ and all allies in the nearby area a +2 bonus to defenses against ranged and\
+      \ close-quarters attacks, and _resist fire and poison_ 12+."
+    feats:
+    - tier: adventurer
+      description: ' You gain _resist poison_ 16+.'
+    - tier: champion
+      description: ' Increase the resistances to 14+.'
+  - name: Jetblast (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Close-quarters spell; At-will
+  
+  
+      ---
+  
+  
+  
+      **Target:**  A nearby enemy
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Hit:**  1d6 + Wisdom damage. If the target has an attack that deals fire damage,
+      it is dazed (doused) until the end of your next turn.
+  
+  
+      _Natural even hit:_ If the target is engaged with you, you force it to pop free.
+  
+  
+      **Miss:**  Damage equal to your level
+  
+  
+      3rd level spell: 3d6 damage
+  
+  
+      5th level spell: 5d6 damage
+  
+  
+      7th level spell: 7d6 damage
+  
+  
+      9th level spell: 10d6 damage'
+    feats:
+    - tier: champion
+      description: " You can choose to attack two targets with this spell, but you take\
+        \ a \u20134 penalty to your attack roll."
+    usage: at-will
+  - name: Neutralize Poison (1st Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Recharge 11+ after battle; Quick action
+  
+  
+      **Effect:**  You can cast this spell for power or for broad effect.
+  
+  
+      _Cast for power:_ End any ongoing poison effect on a nearby ally, and grant them
+      _resist poison_ 18+ until the end of the battle.
+  
+  
+      _Cast for broad effect:_ As with casting for power, but on 3 allies, including
+      yourself, and the resistance is 14+.'
+    feats:
+    - tier: champion
+      description: ' The target gains a +4 bonus to defenses against attacks that deal
+        poison damage until the end of the battle (broad effect: +2).'
+  - name: Purification (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Close-quarters spell; Daily\n\n---\n\n\n**Target:**  1d4 nearby enemies\n\
+      \n**Attack:**  Wisdom + Level vs. PD\n\n**Hit:**  1d8 + Wisdom holy damage. Until\
+      \ the end of your next turn, the enemy\u2019s attacks cannot impose conditions\
+      \ on their targets.\n\n**Miss:**  Half damage\n\n3rd level spell: 3d8 damage\n\
+      \n5th level spell: 5d8 damage\n\n7th level spell: 7d8 damage\n\n9th level spell:\
+      \ 10d8 damage"
+    feats:
+    - tier: adventurer
+      description: ' Nearby allies heal hit points equal to the spell level.'
+    usage: per-day
+  - name: Winter / Ice
+    _type: Talent
+    source: DATP
+    description: "_Before every new beginning, there must be an end._\n\nChoose a spell\
+      \ from the Ice terrain of the druid\u2019s Circle of the Lands of up to your level\
+      \ as a bonus spell.\n\nWhen you cast a spell that deals holy damage, you can deal\
+      \ cold damage instead.\n\n**Invocation of Winter:**  Until the end of the battle,\
+      \ all enemies that don\u2019t have resistance to cold damage are vulnerable to\
+      \ cold damage."
+    feats:
+    - tier: adventurer
+      description: ' You gain _resist cold_ 16+.'
+    - tier: champion
+      description: ' When you deal cold damage, increase all damage dice by one step.'
+  - name: Ice Shards (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Ranged spell; At-Will\n\n---\n\n\n**Targets:**  1d3 nearby enemies\
+      \ in a group\n\n**Attack:**  Wisdom + Level vs. PD\n\n**Hit:**  1d6 + Wisdom cold\
+      \ damage\n\n**Miss:**  \u2014\n\n_Natural 1:_ Deal cold damage equal to your level\
+      \ to a nearby ally.\n\n3rd level spell: 2d6 damage\n\n5th level spell: 3d6 damage\n\
+      \n7th level spell: 6d6 damage\n\n9th level spell: 8d6 damage"
+    feats:
+    - tier: adventurer
+      description: ' Gain a +1 bonus to your critical threat range.'
+    usage: at-will
+  - name: Frost Hammer (1st Level)
+    _type: Talent
+    source: DATP
+    description: "Melee attack; Daily\n\n---\n\n\n**Attack:**  Strength OR Wisdom +\
+      \ Level vs. AC\n\n**Hit:**  WEAPON + Strength cold damage, and if the target\u2019\
+      s hit points are equal to the spell level x 50 or fewer after taking damage, it\
+      \ is frozen (-4 to defenses and can\u2019t take actions) until the end of your\
+      \ next turn.\n\n**Miss:**  Half damage"
+    feats:
+    - tier: adventurer
+      description: ' On a natural even miss, the target is dazed until the end of your
+        next turn.'
+    - tier: champion
+      description: ' Also deal 10 times the spell level in ongoing cold damage.'
+    usage: per-day
+  - name: Snow Storm (5th Level)
+    _type: Talent
+    source: DATP
+    description: 'Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  You summon icy winds across the battlefield. For the next three rounds,
+      you can make the following attack at the start of your turn.
+  
+  
+      **Target:**  1d3 nearby enemies
+  
+  
+      **Attack:**  Wisdom + Level vs. PD
+  
+  
+      **Hit:**  2d8 + Wisdom cold damage, and the target has disadvantage on saves to
+      disengage until the end of your next turn.
+  
+  
+      _Natural 18+:_ The target also has disadvantage on attack rolls.
+  
+  
+      **Miss:**  Damage equal to your level
+  
+  
+      7th level spell: 4d8 damage
+  
+  
+      9th level spell: 7d8 damage'
+    feats:
+    - tier: champion
+      description: ' You can now target 1d4 enemies with this spell.'
+    usage: per-day
+  - name: Cleric Spells (All Domains)
+    _type: Talent
+    source: DATP
+    description: ''
+    feats: []
+  - name: 1st Level Spells
+    _type: Spell 1
+    source: DATP
+    description: ''
+    feats: []
+    level: 1
+    category: Spells
+  - name: Divine Guidance
+    _type: Spell 1
+    source: DATP
+    description: '**Source**  DaTP
+  
+  
+      Close-quarters spell; Recharge 16+ after the scene; Free action
+  
+  
+      **Trigger:**  A nearby ally makes a skill check.
+  
+  
+      **Effect:**  Grant the ally a 1d8 bonus to the check. If the skill check is related
+      to one of your domains, increase the bonus to 2d8.'
+    feats:
+    - tier: adventurer
+      description: ' If you fail the recharge roll, you still gain another use of the
+        spell, but the bonus is only 1d6 / 2d6.'
+    level: 1
+    category: Spells
+  - name: Minor Miracle
+    _type: Spell 1
+    source: DATP
+    description: "**Source**  DaTP\n\nRanged spell; At-will\n\n---\n\n\n**Effect:**\
+      \  You create a small miracle effect to strengthen your believer\u2019s faith\
+      \ in your deity. Below are some example effects.\n\n_Create Water or Wine:_ Create\
+      \ one serving of a beverage of your choice.\n\n_Divine Light:_ Create an ongoing\
+      \ light effect, roughly the strength of a torch.\n\n_Glowing Scripture:_ Write\
+      \ the words of the scripture in glowing letters into the air or on a wall.\_\n\
+      \n_Mend What is Broken:_ Repair an object by magically gluing together the pieces.\n\
+      \n_Purify Food and Water:_ Cleanse a single serving of food so that it can be\
+      \ safely consumed.\n\n_Soothe Pain:_ The target does not feel pain from illness\
+      \ or injury.\n\nYou can only have one ongoing effect from this spell at the same\
+      \ time.\n\nAt higher levels, increase the scale of the miracle you create. At\
+      \ 3rd level, you can fill a decanter with water, at 5th level a barrel or trough\
+      \ and so on."
+    feats: []
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Remove Fear
+    _type: Spell 1
+    source: DATP
+    description: "**Source**  DaTP\n\nClose-quarters spell; Recharge 11+; Quick action\n\
+      \n**Effect:**  You can cast this spell for power or for broad effect.\n\n_Cast\
+      \ for power:_ Choose a nearby ally. The target is immune to fear until the end\
+      \ of the battle.\n\n_Cast for broad effect:_ Three nearby allies (including you)\
+      \ can immediately save against a fear effect, even if that effect normally doesn\u2019\
+      t allow saves. If the save is a success, the target is immune to fear until the\
+      \ end of the battle."
+    feats:
+    - tier: adventurer
+      description: ' When you cast for broad effect, target yourself and all nearby
+        allies.'
+    level: 1
+    category: Spells
+  - name: 3rd Level Spells
+    _type: Spell 3
+    source: DATP
+    description: ''
+    feats: []
+    level: 3
+    category: Spells
+  - name: Spiritual Weapon
+    _type: Spell 3
+    source: DATP
+    description: "**Source**  DaTP\n\nRanged spell; Recharge 16+ after battle; Quick\
+      \ action\n\n**Effect:**  You summon the divine representation of your deity\u2019\
+      s weapon. Make a melee attack against a nearby enemy with it.\n\n**Attack:** \
+      \ Wisdom + Level vs. AC\n\n**Hit:**  2d8 + Strength OR Charisma holy damage\n\n\
+      **Miss:**  \u2014\n\nThe weapon persists until the end of the battle, or until\
+      \ you roll a natural 1 on the attack with it. You can attack with it once per\
+      \ round as a quick action. The blade does not need to engage or disengage to attack.\n\
+      \n5th level spell: 3d8 damage\n\n7th level spell: 4d8 damage\n\n9th level spell:\
+      \ 6d8 damage"
+    feats:
+    - tier: champion
+      description: ' Against demons, devils and undead, increase the damage dice to
+        d10.'
+    - tier: epic
+      description: ' The spell is now Recharge 11+.'
+    level: 3
+    category: Spells
+  - name: 5th Level Spells
+    _type: Spell 5
+    source: DATP
+    description: ''
+    feats: []
+    level: 5
+    category: Spells
+  - name: Summon Planetar
+    _type: Spell 5
+    source: DATP
+    description: '**Source**  DaTP
+  
+  
+      Ranged spell; Daily
+  
+  
+      ---
+  
+  
+  
+      **Effect:**  You summon a planetar, as per the summoning rules on page XX. This
+      planetar fights for you until the end of the battle, or until it drops to 0 hp,
+      whichever comes first. As you cast the spell at higher levels, your planetar becomes
+      stronger.
+  
+  
+      ### _Summoned Planetar_'
+    feats: []
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: 7th Level Spells
+    _type: Spell 7
+    source: DATP
+    description: ''
+    feats: []
+    level: 7
+    category: Spells
+  - name: 9th Level Spells
+    _type: Spell 9
+    source: DATP
+    description: ''
+    feats: []
+    level: 9
+    category: Spells
+  - name: Cleric Rituals
+    _type: Spell 9
+    source: DATP
+    description: ''
+    feats: []
+    level: 9
+    category: Spells
+  - name: Blessed Forge (1st Level)
+    _type: Spell 9
+    source: DATP
+    description: '**Base spell:**  Any spell from the Metal domain
+  
+  
+      **Target:**  A forge or smithy
+  
+  
+      **Effect:**  Until the end of the day, all smithing-related skill checks in the
+      forge have advantage.'
+    feats: []
+    level: 9
+    category: Spells
+  - name: Ceremony of Blessing (1st Level)
+    _type: Spell 9
+    source: DATP
+    description: "**Base spell:**  Bless, Shield of Faith\n\n**Effect:**  You perform\
+      \ a religious ceremony. The effect depends on the type of ceremony conducted.\n\
+      \n_Birth / Christening:_ Supernatural creatures must succeed at a hard save if\
+      \ they want to touch the baby.\n\n_Coming of Age:_ Grant the target an icon relationship\
+      \ point (if it doesn\u2019t have any yet).\n\n_Marriage:_ Both partners get a\
+      \ +1 bonus to saves for one month.\n\n_Funeral:_ The soul is safely guided to\
+      \ the afterlife, and the body cannot be raised as undead.\n\n_Oath:_ If the target\
+      \ breaks the oath, it is weakened (save ends).\n\n_Spring Rites:_ Bless the fertility\
+      \ of livestock.\_\n\n_Harvest:_ Increase the harvest, and protect the harvested\
+      \ crop from pests and fouling.\n\n_Foundation stone ceremony:_ Protect the construction\
+      \ site from accidents.\n\n_Topping out ceremony:_ The building is protected from\
+      \ fire and lightning for a year.\n\n_Door blessing:_ Supernatural creatures must\
+      \ succeed at a save to enter the house."
+    feats: []
+    level: 9
+    category: Spells
+  - name: Divine Builder (7th Level)
+    _type: Spell 9
+    source: DATP
+    description: '**Base spell:**  Sanctuary
+  
+  
+      **Effect:**  You summon building materials and divine spirits that can erect a
+      building of your choice overnight. A single casting of the ritual is enough for
+      a one-storey building, a bridge over a stream, or a statue. For bigger projects,
+      you need to cast the ritual multiple times, or find a way to increase the effect.'
+    feats: []
+    level: 9
+    category: Spells
+  # END DATP ABILITIES
 ---
 
 ## Ability Scores
@@ -771,7 +4493,7 @@ There are certain abilities specific to the cleric that can affect their powers:
 
 ## Class Talents
 
-<Vault.AbilityList abilities={props.getAbilitiesByTypes(["Domain","Domain Spell"])} />
+<Vault.AbilityList abilities={props.getAbilitiesByTypes(["Talent", "Domain","Domain Spell"])} />
 
 ## 1st Level Spells
 
