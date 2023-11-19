@@ -74,7 +74,8 @@ abilities:
   - name: Ritual Magic
     _type: Class Feature
     description: Clerics can cast their spells as rituals. (See [Rituals](/compendium/basic-rules/running-the-game/#rituals).)
-  - name: Healing
+  - &healing
+    name: Healing
     _type: Domain
     description: |-
       When you cast a spell that lets you or an ally heal using a recovery, the target also adds hit points equal to double your level to the recovery.
@@ -664,49 +665,34 @@ abilities:
       - tier: epic
         description: This spell is now a quick action to cast.
 # BEGIN DATP ABILITIES
-  - name: Cleric Domains
-    _type: Talent
-    source: DATP
-    description: ''
-    feats: []
   - name: Domain Spells
-    _type: Talent
+    _type: Class Feature
     source: DATP
-    description: '**Source**  DaTP
-  
-  
-      To give clerics of different faiths more individual flavor, this book gives each
-      domain, including the ones from the Core Book, access to a separate list of domain
-      spells. These spells work like standard cleric spells, except that you can only
-      choose them if you have that domain as a talent.'
-    feats: []
-  - name: Paladins, Rangers and Domain Spells
-    _type: Talent
-    source: DATP
-    description: 'To give paladins with Cleric Training and rangers with Ranger Ex Cathedral
-      a chance to use the new material, allow PCs with these talents access to the spells
+    description: |
+      These spells work like standard cleric spells, except that you can only
+      choose them if you have that domain as a talent.
+
+      ### Paladins, Rangers and Domain Spells
+      To give paladins with Cleric Training and rangers with Ranger Ex Cathedral
+      a chance to use the new material, PCs with these talents have access to the spells
       of the following domains:
   
-  
       **Paladin:**  Good, Justice, Protection, Strength, War
-  
-  
+
       **Ranger:**  Animal, Archery, Freedom, Plant
-  
   
       Paladins can also gain access to any domain with the Divine Domain talent.
   
-  
       Note that this is a default selection for PCs who fit the archetype of that class.
       Based on backgrounds, race, icon relationships or One Unique Thing there may be
-      domains that fit better. Talk to your GM.'
+      domains that fit better. Talk to your GM.
     feats:
     - tier: adventurer
-      description: ' You gain the at-will attack spell of a cleric domain as a once-per-battle
-        bonus spell. (This feat requires the Cleric Training, Divine Domain or Ranger
-        Ex Cathedral talent)'
+      description: ' As a paladin or a ranger, you gain the at-will attack spell of a cleric domain as a once-per-battle
+        bonus spell. This feat requires the Cleric Training, Divine Domain or Ranger
+        Ex Cathedral talent.'
   - name: Air / Storm / Thunder
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_Since ancient times, people have looked to the sky to pray._
   
@@ -731,8 +717,8 @@ abilities:
       description: ' You now fly normally and no longer need to land at the end of your
         move action. While airborne, you have a -2 penalty to attack rolls and you are
         vulnerable to attacks.'
-  - name: Thundering Blow (1st Level)
-    _type: Talent
+  - name: Thundering Blow
+    _type: Domain Spell 1
     source: DATP
     description: 'Melee attack; At-will
   
@@ -755,8 +741,8 @@ abilities:
     - tier: champion
       description: ' On a hit, deal WEAPON + Strength + Wisdom thunder damage.'
     usage: at-will
-  - name: Air Bubble (1st Level)
-    _type: Talent
+  - name: Air Bubble
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; Daily; Quick action
   
@@ -770,8 +756,8 @@ abilities:
       in the zone with you. The zone lasts for 5 minutes per spell level.'
     feats: []
     usage: per-day
-  - name: Storm Cloud (3rd Level)
-    _type: Talent
+  - name: Storm Cloud
+    _type: Domain Spell 3
     source: DATP
     description: "Close-quarters spell; Daily\n\n---\n\n\n**Effect:**  You summon a\
       \ storm cloud in the air above you. Until the end of the battle, you can make\
@@ -788,7 +774,7 @@ abilities:
         enemy.'
     usage: per-day
   - name: Animal / Beast
-    _type: Talent
+    _type: Domain
     source: DATP
     description: "_You worship the divine spark in every living creature._\n\nYou can\
       \ speak with animals, as per the druid\u2019s Nature Talking class feature.\n\n\
@@ -805,8 +791,8 @@ abilities:
     - tier: epic
       description: ' When you cast a cleric spell for broad effect, you can add one
         nearby animal companion as a bonus target.'
-  - name: Poison Claw (1st Level)
-    _type: Talent
+  - name: Poison Claw
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; At-will
   
@@ -844,8 +830,8 @@ abilities:
     - tier: adventurer
       description: ' Reroll the first natural even miss with this spell in a battle.'
     usage: at-will
-  - name: Voice of Beasts (1st Level)
-    _type: Talent
+  - name: Voice of Beasts
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; Daily
   
@@ -863,8 +849,8 @@ abilities:
       Its speech patterns will keep traces of its natural voice.'
     feats: []
     usage: per-day
-  - name: Celestial Guardian (3rd Level)
-    _type: Talent
+  - name: Celestial Guardian
+    _type: Domain Spell 3
     source: DATP
     description: "Ranged spell; Once per battle\n\n---\n\n\n**Effect:**  Summon a celestial\
       \ beast next to you. It can move to engage an enemy and make the following melee\
@@ -880,7 +866,7 @@ abilities:
       description: " Increase the beast\u2019s defenses by 2."
     usage: per-battle
   - name: Archery / Hunting
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_With divine help, your arrows always find their target._
   
@@ -900,8 +886,8 @@ abilities:
     - tier: epic
       description: ' If the escalation die is 4+, increase the critical threat range
         bonus from the vulnerability to +4.'
-  - name: Exalted Shot (1st Level)
-    _type: Talent
+  - name: Exalted Shot
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged attack; At-will
   
@@ -927,8 +913,8 @@ abilities:
     - tier: adventurer
       description: ' Reroll the first natural even miss with this spell in a battle.'
     usage: at-will
-  - name: Blessing of the Hunt (1st Level)
-    _type: Talent
+  - name: Blessing of the Hunt
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; Daily
   
@@ -946,8 +932,8 @@ abilities:
       nearby.'
     feats: []
     usage: per-day
-  - name: Holy Arrow (1st Level)
-    _type: Talent
+  - name: Holy Arrow
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged attack; Daily\n\n---\n\n\n**Target:**  One nearby or far away\
       \ enemy\n\n**Attack:**  Dexterity OR Wisdom + Level vs. AC\_\n\n**Special:** \
@@ -960,7 +946,7 @@ abilities:
     feats: []
     usage: per-day
   - name: Chaos / Disorder / Rebellion
-    _type: Talent
+    _type: Domain
     source: DATP
     description: "_Like children rebelling against their parents, gods rebel against\
       \ the divine order._\n\nWhen you save against an effect, and the save is a natural\
@@ -974,8 +960,8 @@ abilities:
       description: ' Once per battle, transfer an effect on any natural odd save.'
     - tier: adventurer
       description: ' You can choose a chaos mage daily spell instead.'
-  - name: Chaos Hammer (1st Level)
-    _type: Talent
+  - name: Chaos Hammer
+    _type: Domain Spell 1
     source: DATP
     description: "Melee attack; At-will\n\n---\n\n\n**Attack:**  Strength OR Wisdom\
       \ + Level vs. AC\n\n**Hit:**  WEAPON + Strength damage. Roll a d6 on the chaos\
@@ -985,8 +971,8 @@ abilities:
     - tier: adventurer
       description: ' On a natural even miss, roll on the defense warp table.'
     usage: at-will
-  - name: Haywire (1st Level)
-    _type: Talent
+  - name: Haywire
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; Daily
   
@@ -1011,8 +997,8 @@ abilities:
       description: ' If the randomly determined target is an ally, the attack is at
         a -2 penalty.'
     usage: per-day
-  - name: Incite Rebellion (3rd Level)
-    _type: Talent
+  - name: Incite Rebellion
+    _type: Domain Spell 3
     source: DATP
     description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  1d3 nearby enemies. This\
       \ spell can only target creatures that are under someone else\u2019s control.\_\
@@ -1024,26 +1010,8 @@ abilities:
     - tier: adventurer
       description: ' When targeting mooks, count a group of them as a single target.'
     usage: per-day
-  - name: Construction
-    _type: Talent
-    source: DATP
-    description: 'You gain 4 additional background points that must be used on a craft
-      or construction trade such as architecture.
-  
-  
-      **Invocation of Construction:**  This battle, every construct you hit with a melee
-      attack is weakened until the start of your next turn. You can weaken each construct
-      in the battle only once.'
-    feats:
-    - tier: adventurer
-      description: ' You gain a +2 attack bonus against constructs.'
-    - tier: champion
-      description: ' You gain +2 to all defenses against attacks from constructs.'
-    - tier: epic
-      description: ' Once per battle, you can instantly reprogram a staggered construct
-        to fight for you for one round. It moves and attacks as you direct.'
   - name: Darkness / Night
-    _type: Talent
+    _type: Domain
     source: DATP
     description: "_And have you felt your neck skin crawl when you\u2019re searching\
       \ for the light?_\n\nGain a spell from the sorcerer\u2019s Umbral Bloodline of\
@@ -1061,8 +1029,8 @@ abilities:
     - tier: champion
       description: ' Invocation of Darkness gives you and all nearby allies advantage
         on your initiative roll if you use it to sneak up on an enemy.'
-  - name: Embrace of the Night (1st Level)
-    _type: Talent
+  - name: Embrace of the Night
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; At-will
   
@@ -1103,8 +1071,8 @@ abilities:
       description: ' On a natural odd hit, the target also takes a -2 penalty to attack
         rolls until the end of your next turn.'
     usage: at-will
-  - name: Darkness (1st Level)
-    _type: Talent
+  - name: Darkness
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged spell; Daily\n\n---\n\n\n**Effect:**  You create a stationary\
       \ zone of darkness that lasts for 5 minutes or until the end of the battle. Creatures\
@@ -1116,8 +1084,8 @@ abilities:
     - tier: adventurer
       description: ' Your allies are immune to the effect.'
     usage: per-day
-  - name: Meld into the Shadows (3rd Level)
-    _type: Talent
+  - name: Meld into the Shadows
+    _type: Domain Spell 3
     source: DATP
     description: 'Ranged spell; Daily
   
@@ -1136,8 +1104,8 @@ abilities:
     - tier: adventurer
       description: ' You can target one ally per Wisdom modifier point with this spell.'
     usage: per-day
-  - name: Disappear into the Night (7th Level)
-    _type: Talent
+  - name: Disappear into the Night
+    _type: Domain Spell 7
     source: DATP
     description: 'Ranged spell; Daily
   
@@ -1157,7 +1125,7 @@ abilities:
     feats: []
     usage: per-day
   - name: Doom / Destruction
-    _type: Talent
+    _type: Domain
     source: DATP
     description: "_Come in like a divine wrecking ball._\n\nGain a spell from the terrain\
       \ druid\u2019s Ruins terrain at your class level or lower as a bonus spell.\n\n\
@@ -1171,8 +1139,8 @@ abilities:
     - tier: champion
       description: ' Once per battle, you can use this invocation for free. If you do
         so, you cannot cast healing spells until the end of the battle.'
-  - name: Doomhammer (1st Level)
-    _type: Talent
+  - name: Doomhammer
+    _type: Domain Spell 1
     source: DATP
     description: 'Melee attack; At-will
   
@@ -1193,8 +1161,8 @@ abilities:
     - tier: champion
       description: ' This spell deals triple damage on a critical hit.'
     usage: at-will
-  - name: Doom (1st Level)
-    _type: Talent
+  - name: Doom
+    _type: Domain Spell 1
     source: DATP
     description: "Close-quarters spell; Daily; Quick action\n\n---\n\n\n**Special:**\
       \  You can cast this spell for power or for broad effect.\n\n**Target:**  When\
@@ -1207,8 +1175,8 @@ abilities:
     - tier: adventurer
       description: ' This spell is now Recharge 16+ after battle.'
     usage: per-day
-  - name: Touch of Despair (1st Level)
-    _type: Talent
+  - name: Touch of Despair
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -1246,7 +1214,7 @@ abilities:
       description: ' Deal psychic damage equal to twice your level on a miss.'
     usage: per-day
   - name: Dragon
-    _type: Talent
+    _type: Domain
     source: DATP
     description: "_Dragon worship started with the first humanoid begging not to be\
       \ eaten._\n\nGain a spell from the sorcerer\u2019s Draconic bloodline of up to\
@@ -1271,8 +1239,8 @@ abilities:
     - tier: epic
       description: ' You can now fly and hover between turns with the wings, but you
         are vulnerable to attacks and take a -2 penalty to attack rolls while airborne.'
-  - name: Divine Odem (1st Level)
-    _type: Talent
+  - name: Divine Odem
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; At-will
   
@@ -1312,8 +1280,8 @@ abilities:
       description: ' If the escalation die is 3+, on a natural even hit, deal half damage
         to the second target instead.'
     usage: at-will
-  - name: Sense Dragons (1st Level)
-    _type: Talent
+  - name: Sense Dragons
+    _type: Domain Spell 1
     source: DATP
     description: "Close-quarters spell; Daily\n\n---\n\n\n**Effect:**  You sense how\
       \ many dragons are within roughly a mile area, and the direction they are in.\n\
@@ -1322,8 +1290,8 @@ abilities:
       s color.\n\n7th level spell: You sense the dragon\u2019s age."
     feats: []
     usage: per-day
-  - name: Summon Dragon (3rd Level)
-    _type: Talent
+  - name: Summon Dragon
+    _type: Domain Spell 3
     source: DATP
     description: 'Ranged spell; Daily
   
@@ -1364,7 +1332,7 @@ abilities:
       description: ' Summon a large dragon of any color instead.'
     usage: per-day
   - name: Earth / Mountain
-    _type: Talent
+    _type: Domain
     source: DATP
     description: "_How can you look at a majestic peak and not see the divine that resides\
       \ there?_\n\nGain a spell from the terrain druid\u2019s Cave or Mountain terrain\
@@ -1381,8 +1349,8 @@ abilities:
       description: ' Both you and the ally gain the resistance.'
     - tier: epic
       description: ' Increase the resistance to 16+.'
-  - name: Earthen Hail (1st Level)
-    _type: Talent
+  - name: Earthen Hail
+    _type: Domain Spell 1
     source: DATP
     description: 'Melee attack; At-will
   
@@ -1421,8 +1389,8 @@ abilities:
     - tier: adventurer
       description: ' You also grant the AC/PD bonus on a natural odd miss.'
     usage: at-will
-  - name: Return to Dust (1st Level)
-    _type: Talent
+  - name: Return to Dust
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; At-will; Quick action
   
@@ -1438,8 +1406,8 @@ abilities:
       being used on the body.'
     feats: []
     usage: at-will
-  - name: Rock Shield (1st Level)
-    _type: Talent
+  - name: Rock Shield
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; Daily; Interrupt action
   
@@ -1458,8 +1426,8 @@ abilities:
       description: ' If the attack has more than one target, all targets are protected
         by the spell.'
     usage: per-day
-  - name: Tremors (3rd Level)
-    _type: Talent
+  - name: Tremors
+    _type: Domain Spell 3
     source: DATP
     description: 'Ranged Spell; Once per battle
   
@@ -1499,7 +1467,7 @@ abilities:
       description: ' On a natural odd hit, the target is stuck (save ends).'
     usage: per-battle
   - name: Evil / Egoism
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_Worship someone who is worth it. Worship yourself._
   
@@ -1527,8 +1495,8 @@ abilities:
         death save fails. If the target fails, your death save succeeds and the target
         failed a death save for this battle. If it is not a PC or NPC that rolls death
         saves, it takes twice your level in negative energy damage instead.'
-  - name: Festering Evil (1st Level)
-    _type: Talent
+  - name: Festering Evil
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged attack; At-will\n\n---\n\n\n**Attack:**  Wisdom + Level vs.\
       \ the lower of the target\u2019s PD or MD\n\n**Hit:**  1d8 + Wisdom damage. If\
@@ -1543,8 +1511,8 @@ abilities:
       description: ' If you miss a target you have hit with this spell at least once
         this battle, deal half damage.'
     usage: at-will
-  - name: Blasphemy (1st Level)
-    _type: Talent
+  - name: Blasphemy
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged spell; Once per battle\n\n---\n\n\n**Target:**  The nearby\
       \ enemy with the fewest hit points\n\n**Attack:**  Wisdom + Level vs. MD\n\n**Hit:**\
@@ -1560,8 +1528,8 @@ abilities:
     - tier: champion
       description: ' The daze effect is (save ends).'
     usage: per-battle
-  - name: Egomania (3rd Level)
-    _type: Talent
+  - name: Egomania
+    _type: Domain Spell 3
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -1580,8 +1548,8 @@ abilities:
       stacks).'
     feats: []
     usage: per-day
-  - name: Rise above the Peons (9th Level)
-    _type: Talent
+  - name: Rise above the Peons
+    _type: Domain Spell 9
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -1598,7 +1566,7 @@ abilities:
     feats: []
     usage: per-day
   - name: Farming / Harvest
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_Fertility gods throw the best parties._
   
@@ -1617,8 +1585,8 @@ abilities:
       description: ' Increase the resistance to 16+.'
     - tier: epic
       description: ' The bonuses last for the next two battles.'
-  - name: Cut the Weeds (1st Level)
-    _type: Talent
+  - name: Cut the Weeds
+    _type: Domain Spell 1
     source: DATP
     description: 'Melee attack; At-will
   
@@ -1639,8 +1607,8 @@ abilities:
     - tier: adventurer
       description: ' You gain a +2 bonus to attack against mooks.'
     usage: at-will
-  - name: Protect the Harvest (1st Level)
-    _type: Talent
+  - name: Protect the Harvest
+    _type: Domain Spell 1
     source: DATP
     description: '_A divine blessing meant to protect the fields, that also proves its
       value when surrounded by zombies._
@@ -1664,8 +1632,8 @@ abilities:
     - tier: adventurer
       description: ' Add your Wisdom modifier to the difficulty of the save.'
     usage: per-day
-  - name: Reap What You Sow (1st Level)
-    _type: Talent
+  - name: Reap What You Sow
+    _type: Domain Spell 1
     source: DATP
     description: "Close-quarters spell; Once per battle; Interrupt action\n\n---\n\n\
       \n**Trigger:**  You take damage from an enemy\u2019s attack.\n\n**Effect:**  Gain\
@@ -1676,7 +1644,7 @@ abilities:
       description: ' You can cast this spell on an ally who was attacked.'
     usage: per-battle
   - name: Fire / Volcano
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_Gods of fire range from benevolent protectors of the hearth to raging
       forces of nature that blow up mountains._
@@ -1701,8 +1669,8 @@ abilities:
     - tier: epic
       description: " When you reduce an enemy to zero hp or below with fire damage,\
         \ you can teleport to that enemy\u2019s location as a free action."
-  - name: Burning Brand (1st Level)
-    _type: Talent
+  - name: Burning Brand
+    _type: Domain Spell 1
     source: DATP
     description: 'Melee attack; At-will
   
@@ -1726,8 +1694,8 @@ abilities:
     - tier: adventurer
       description: ' Add your level to the ongoing damage.'
     usage: at-will
-  - name: Penance by Fire (3rd Level)
-    _type: Talent
+  - name: Penance by Fire
+    _type: Domain Spell 3
     source: DATP
     description: 'Ranged attack; Once per battle
   
@@ -1763,8 +1731,8 @@ abilities:
         damage equal to your Charisma modifier (x2 at 5th level; x3 at 8th), and even
         if the target prays for absolution, it takes half damage on a hit.'
     usage: per-battle
-  - name: Flame Strike (5th Level)
-    _type: Talent
+  - name: Flame Strike
+    _type: Domain Spell 5
     source: DATP
     description: 'Ranged Spell; Daily
   
@@ -1816,7 +1784,7 @@ abilities:
         to this spell.'
     usage: per-day
   - name: Freedom / Travel
-    _type: Talent
+    _type: Domain
     source: DATP
     description: "_Freedom is the most precious gift once your belly is filled._\n\n\
       You are immune to the stuck and hampered conditions.\n\n**Invocation of Freedom\
@@ -1830,8 +1798,8 @@ abilities:
         \ allow a save, such as \u201Cend of your next turn\u201D effects."
     - tier: epic
       description: ' You can use this invocation twice per day.'
-  - name: Freedom Bells (1st Level)
-    _type: Talent
+  - name: Freedom Bells
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; At-will
   
@@ -1864,8 +1832,8 @@ abilities:
       description: ' If the target of the spell is under mind control or a similar effect,
         you can choose to deal half damage to it and allow it to save against the effect.'
     usage: at-will
-  - name: Blessed Journey (1st Level)
-    _type: Talent
+  - name: Blessed Journey
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  You and one nearby ally\
       \ per Wisdom modifier\n\n**Effect:**  Double the target\u2019s overland speed\
@@ -1874,8 +1842,8 @@ abilities:
     - tier: adventurer
       description: ' You can bless vehicles, such as carts and ships, with this spell.'
     usage: per-day
-  - name: Freedom of Movement (3rd Level)
-    _type: Talent
+  - name: Freedom of Movement
+    _type: Domain Spell 3
     source: DATP
     description: 'Ranged Spell; Daily; Quick action
   
@@ -1899,8 +1867,8 @@ abilities:
     - tier: champion
       description: ' The spell is now Recharge 11+ after battle.'
     usage: per-day
-  - name: "Traveller\u2019s Footsteps (5th Level)"
-    _type: Talent
+  - name: Traveller's Footsteps
+    _type: Domain Spell 5
     source: DATP
     description: 'Close-quarters spell; Daily; Quick action
   
@@ -1916,7 +1884,7 @@ abilities:
       description: ' You can cast this spell on a nearby ally.'
     usage: per-day
   - name: Good / Selflessness
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_All religions claim they are for the benefit of the common folk.
       Yours takes that pledge seriously._
@@ -1938,8 +1906,8 @@ abilities:
         die by one.'
     - tier: champion
       description: ' You can use this invocation twice per day.'
-  - name: Aiding Strike (1st Level)
-    _type: Talent
+  - name: Aiding Strike
+    _type: Domain Spell 1
     source: DATP
     description: 'Melee attack; At-will
   
@@ -1965,8 +1933,8 @@ abilities:
       description: ' If both dice come up as the same result, you can choose to reroll
         both.'
     usage: at-will
-  - name: "Martyr\u2019s Shield (1st Level)"
-    _type: Talent
+  - name: Martyr's Shield
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; Once per battle; Interrupt action
   
@@ -1985,8 +1953,8 @@ abilities:
       description: ' Halve the damage that the triggering attack deals to either you
         or the ally.'
     usage: per-battle
-  - name: Righteous Resolve (3rd Level)
-    _type: Talent
+  - name: Righteous Resolve
+    _type: Domain Spell 3
     source: DATP
     description: 'Ranged spell; Daily; Quick action
   
@@ -2012,8 +1980,8 @@ abilities:
       description: " Targets who successfully save against a \u201Csave ends\u201D effect\
         \ also heal hit points equal to twice the spell level."
     usage: per-day
-  - name: Carry On, My Friend (5th Level)
-    _type: Talent
+  - name: Carry On, My Friend
+    _type: Domain Spell 5
     source: DATP
     description: 'Close-quarters spell; Daily; No Action
   
@@ -2030,15 +1998,15 @@ abilities:
     feats: []
     usage: per-day
   - name: Healing
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_Let me guess, the party needed a cleric?_
   
   
       (See the 13th Age Core Book p. 95 for details.)'
     feats: []
-  - name: Healing Strike (1st Level)
-    _type: Talent
+  - name: Healing Strike
+    _type: Domain Spell 1
     source: DATP
     description: 'Melee attack; At-will
   
@@ -2062,8 +2030,8 @@ abilities:
       description: ' On a natural 18+, a nearby unconscious ally can use a recovery
         to heal (and they can then benefit from the additional healing on a hit).'
     usage: at-will
-  - name: Restoration (3rd Level)
-    _type: Talent
+  - name: Restoration
+    _type: Domain Spell 3
     source: DATP
     description: 'Ranged spell; Daily; Quick action
   
@@ -2085,8 +2053,8 @@ abilities:
     - tier: champion
       description: ' The target(s) can also heal using a recovery.'
     usage: per-day
-  - name: Flash Heal (5th Level)
-    _type: Talent
+  - name: Flash Heal
+    _type: Domain Spell 5
     source: DATP
     description: 'Ranged spell; Daily; Free Action
   
@@ -2113,7 +2081,7 @@ abilities:
       description: ' The spell is now recharge 11+ after battle.'
     usage: per-day
   - name: Justice / Vengeance
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_And I will strike down upon thee with great vengeance and furious
       anger._
@@ -2121,8 +2089,8 @@ abilities:
   
       (See the 13th Age Core Book p. 95 for details.)'
     feats: []
-  - name: Hammer of Retribution (1st Level)
-    _type: Talent
+  - name: Hammer of Retribution
+    _type: Domain Spell 1
     source: DATP
     description: 'Melee attack; At-will
   
@@ -2147,8 +2115,8 @@ abilities:
     - tier: champion
       description: ' Add your level to the retribution damage.'
     usage: at-will
-  - name: Eyes of the Judge (1st Level)
-    _type: Talent
+  - name: Eyes of the Judge
+    _type: Domain Spell 1
     source: DATP
     description: "Close-quarters spell; Daily\n\n---\n\n\n**Effect:**  Until the end\
       \ of the battle or scene, you gain True Sight. You see objects and creatures for\
@@ -2158,8 +2126,8 @@ abilities:
       \ lie or falsehood."
     feats: []
     usage: per-day
-  - name: Compel Duel (3rd Level)
-    _type: Talent
+  - name: Compel Duel
+    _type: Domain Spell 3
     source: DATP
     description: 'Close-quarters spell; Daily; Quick action
   
@@ -2177,8 +2145,8 @@ abilities:
       have disadvantage.'
     feats: []
     usage: per-day
-  - name: Banishment (5th Level)
-    _type: Talent
+  - name: Banishment
+    _type: Domain Spell 5
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -2210,12 +2178,12 @@ abilities:
       description: ' You can target a group of up to five mooks as one enemy.'
     usage: per-day
   - name: Knowledge / Lore
-    _type: Talent
+    _type: Domain
     source: DATP
     description: _Strongholds of faith are strongholds of learning._
     feats: []
-  - name: Sacred Mantra (1st Level)
-    _type: Talent
+  - name: Sacred Mantra
+    _type: Domain Spell 1
     source: DATP
     description: '_You utter words of power in the old language of the scripture._
   
@@ -2246,16 +2214,16 @@ abilities:
       description: ' The first time you use this spell in a battle, deal maximum damage
         with it.'
     usage: at-will
-  - name: Divine Insight (1st Level)
-    _type: Talent
+  - name: Divine Insight
+    _type: Domain Spell 1
     source: DATP
     description: "Close-quarter spell; Daily\n\n---\n\n\n**Effect:**  Choose a wizard\
       \ utility spell from the Divination school of this spell\u2019s level or lower.\
       \ Duplicate its effect."
     feats: []
     usage: per-day
-  - name: Pious Tongue (1st Level)
-    _type: Talent
+  - name: Pious Tongue
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -2272,10 +2240,11 @@ abilities:
     - tier: adventurer
       description: ' The spell is now recharge 16+.'
     usage: per-day
-  - name: Intuitive Reading (3rd Level)
-    _type: Talent
+  - name: Intuitive Reading
+    _type: Domain Spell 3
     source: DATP
-    description: "Ranged spell; Recharge 11+\n\n**Target:**  A nearby creature you have\
+    usage: recharge
+    description: "Ranged spell; Recharge 11+\n___\n**Target:**  A nearby creature you have\
       \ eye contact with\n\n**Attack:**  Wisdom + Level vs. MD\n\n**Hit:**  Ask a question\
       \ about the target\u2019s soul. Below are some examples.\n\n\u201CWhich icon are\
       \ you loyal to / do you consider an enemy?\u201D\n\n\u201CWhat is your greatest\
@@ -2287,15 +2256,15 @@ abilities:
     - tier: adventurer
       description: ' Ask up to three questions.'
   - name: Life / Death
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_Lovers, forever nourishing and destroying each other._
   
   
       (See the 13th Age Core Book p. 96 for details.)'
     feats: []
-  - name: Invigorate (1st Level)
-    _type: Talent
+  - name: Invigorate
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; At-will
   
@@ -2325,8 +2294,8 @@ abilities:
     - tier: adventurer
       description: ' Increase the attack bonus to +3.'
     usage: at-will
-  - name: Death Ward (1st Level)
-    _type: Talent
+  - name: Death Ward
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; Daily; Quick action
   
@@ -2347,8 +2316,8 @@ abilities:
     - tier: champion
       description: ' The spell is now Recharge 16+.'
     usage: per-day
-  - name: Symbol of Life (3rd Level)
-    _type: Talent
+  - name: Symbol of Life
+    _type: Domain Spell 3
     source: DATP
     description: "Close-quarters spell; Daily; Quick action\n\n---\n\n\n**Effect:**\
       \  You create a glowing holy symbol that floats in mid-air until the end of the\
@@ -2366,8 +2335,8 @@ abilities:
       description: ' You or an ally can spend two points to use two recoveries, or reroll
         a death save with a +5 bonus.'
     usage: per-day
-  - name: Raise Dead (5th Level)
-    _type: Talent
+  - name: Raise Dead
+    _type: Domain Spell 5
     source: DATP
     description: 'Ranged spell; Daily
   
@@ -2400,8 +2369,8 @@ abilities:
       fails.'
     feats: []
     usage: per-day
-  - name: Slay Living (7th Level)
-    _type: Talent
+  - name: Slay Living
+    _type: Domain Spell 7
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -2429,8 +2398,8 @@ abilities:
     - tier: epic
       description: ' You can use this spell as a ranged attack against a nearby enemy.'
     usage: per-day
-  - name: Gate to the Underworld (9th Level)
-    _type: Talent
+  - name: Gate to the Underworld
+    _type: Domain Spell 9
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -2460,12 +2429,12 @@ abilities:
         with a passphrase.'
     usage: per-day
   - name: Love / Beauty
-    _type: Talent
+    _type: Domain
     source: DATP
     description: (See the 13th Age Core Book p. 96 for details.)
     feats: []
-  - name: Radiant Heart (1st Level)
-    _type: Talent
+  - name: Radiant Heart
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; At-will
   
@@ -2503,8 +2472,8 @@ abilities:
       description: ' On a natural even hit, the chosen ally heals hit points equal to
         your Charisma modifier (x2 at 5th level; x3 at 8th).'
     usage: at-will
-  - name: Call for a White Knight (1st Level)
-    _type: Talent
+  - name: Call for a White Knight
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  One nearby creature with\
       \ 60 hp or fewer\n\n**Attack:**  Wisdom + Level vs. MD\n\n**Hit:**  The target\
@@ -2524,8 +2493,8 @@ abilities:
     - tier: champion
       description: ' On a miss, the spell is not expended.'
     usage: per-day
-  - name: Love Charm (1st Level)
-    _type: Talent
+  - name: Love Charm
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  One nearby creature with\
       \ 40 hp or fewer\n\n**Special:**  This spell cannot be cast during combat or on\
@@ -2540,12 +2509,12 @@ abilities:
     feats: []
     usage: per-day
   - name: Luck / Fortune
-    _type: Talent
+    _type: Domain
     source: DATP
-    description: '**Source**  DATP
+    description: '
   
   
-      Choose a spell from the Fateweaver class of your level or lower as a bonus spell.
+      Choose a spell from the Fateweaver class _(Dark Pacts and Ancient Secrets)_ of your level or lower as a bonus spell.
   
   
       **Invocation of Luck / Fortune:**  This battle, whenever you or a nearby ally
@@ -2556,8 +2525,8 @@ abilities:
       description: ' You can Gather Focus like a Fateweaver for the chosen spell.'
     - tier: champion
       description: ' Gain an adventurer-tier meditation from the class as a bonus spell.'
-  - name: Lucky Star (1st Level)
-    _type: Talent
+  - name: Lucky Star
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged spell; At-will\n\n---\n\n\n**Target:**  A nearby enemy\n\n\
       **Attack:**  Wisdom + Level vs. PD\n\n**Hit:**  1d4 + Wisdom holy damage. Give\
@@ -2570,11 +2539,13 @@ abilities:
     - tier: adventurer
       description: ' On a natural 20, gain a second luck token.'
     usage: at-will
-  - name: "Fortuna\u2019s Frown (1st Level)"
-    _type: Talent
+  - name: Fortuna's Frown
+    _type: Domain Spell 1
     source: DATP
+    usage: recharge
     description: 'Ranged spell; Recharge 16+ after battle; Interrupt action
   
+      ___
   
       **Trigger:**  You or a nearby ally is hit by an attack
   
@@ -2591,8 +2562,8 @@ abilities:
   
       **Miss:**  Damage equal to your level'
     feats: []
-  - name: Serendipity (1st Level)
-    _type: Talent
+  - name: Serendipity
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged spell; Daily; Free action\n\n---\n\n\n**Target:**  You or a\
       \ nearby ally\n\n**Effect:**  When the spell is cast, a good thing happens to\
@@ -2607,7 +2578,7 @@ abilities:
       description: ' The spell is now Recharge 16+.'
     usage: per-day
   - name: Madness / Nightmare
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_You are the only sane person in the room._
   
@@ -2626,8 +2597,8 @@ abilities:
         gain a +1 bonus to your next attack roll instead.'
     - tier: epic
       description: ' Enemies that are dazed or confused are vulnerable to your attacks.'
-  - name: Manic Cackle (1st Level)
-    _type: Talent
+  - name: Manic Cackle
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; At-will
   
@@ -2666,11 +2637,13 @@ abilities:
       description: ' Once per battle, when the escalation die is odd, attack 1d3 enemies
         with this spell.'
     usage: at-will
-  - name: Manic Reflection (3rd Level)
-    _type: Talent
+  - name: Manic Reflection
+    _type: Domain Spell 3
     source: DATP
+    usage: recharge
     description: 'Close-quarters spell; Recharge 16+ after battle; Interrupt action
   
+      ___
   
       **Trigger:**  An enemy hits you with a melee attack.
   
@@ -2684,8 +2657,8 @@ abilities:
     - tier: champion
       description: ' If the reroll is a hit, you regain this spell at the end of the
         battle.'
-  - name: Waking Nightmare (5th Level)
-    _type: Talent
+  - name: Waking Nightmare
+    _type: Domain Spell 5
     source: DATP
     description: '_Listen to the voices. Your friends are out to get you._
   
@@ -2720,8 +2693,8 @@ abilities:
     - tier: epic
       description: ' Double the hit point limit for enemies you can target.'
     usage: per-day
-  - name: Fever Dream (7th Level)
-    _type: Talent
+  - name: Fever Dream
+    _type: Domain Spell 7
     source: DATP
     description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  One nearby enemy\n\n\
       **Special:**  If you collect three personal items from the target and create a\
@@ -2736,7 +2709,7 @@ abilities:
     feats: []
     usage: per-day
   - name: Magic / Arcana
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_Arcane magic is but a shard of the divine._
   
@@ -2757,8 +2730,8 @@ abilities:
     - tier: champion
       description: ' If the invocation would end at the end of your turn, roll a d6.
         On a 6, it is active for another turn.'
-  - name: Magic Spark (1st Level)
-    _type: Talent
+  - name: Magic Spark
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged spell; At-will\n\n---\n\n\n**Target:**  A nearby enemy\n\n\
       **Attack:**  Wisdom + Level vs. PD\n\n**Hit:**  1d6 + Wisdom force damage\n\n\
@@ -2774,18 +2747,19 @@ abilities:
       description: ' On a natural odd miss, repeat the attack once against a different
         nearby enemy.'
     usage: at-will
-  - name: Might of Magic (5th Level)
-    _type: Talent
+  - name: Might of Magic
+    _type: Domain Spell 5
     source: DATP
-    description: "Close-quarters spell; Recharge 11+; Quick action\n\n**Target:**  A\
+    usage: recharge
+    description: "Close-quarters spell; Recharge 11+; Quick action\n___\n**Target:**  A\
       \ nearby enemy\n\n**Attack:**  Wisdom + Level vs. MD\n\n**Hit:**  The target cannot\
       \ use resistances or other abilities to reduce the damage it takes (save ends).\n\
       \n**Miss:**  \u2014"
     feats:
     - tier: champion
       description: ' The save against this spell is a hard save (16+).'
-  - name: Shield of the Archons (5th Level)
-    _type: Talent
+  - name: Shield of the Archons
+    _type: Domain Spell 5
     source: DATP
     description: "Close-quarters spell; Daily; Quick action\n\n---\n\n\n**Effect:**\
       \  You can cast this spell for power or for broad effect.\n\n_Cast for power:_\
@@ -2799,7 +2773,7 @@ abilities:
       description: ' This spell is now Recharge 11+.'
     usage: per-day
   - name: Metal / Smithing
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_Dwarves shape metal like the gods shaped the first dwarf._
   
@@ -2823,8 +2797,8 @@ abilities:
       description: ' Your smithed items are considered epic level items.'
     - tier: adventurer
       description: ' Also grant the bonus to two nearby allies.'
-  - name: Blessed Steel (1st Level)
-    _type: Talent
+  - name: Blessed Steel
+    _type: Domain Spell 1
     source: DATP
     description: 'Melee attack; At-will
   
@@ -2850,8 +2824,8 @@ abilities:
     - tier: champion
       description: ' Deal triple damage on a natural 20.'
     usage: at-will
-  - name: Heat Metal (1st Level)
-    _type: Talent
+  - name: Heat Metal
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  One nearby enemy in heavy\
       \ armor, wearing metal armor, or using metal weapons\n\n**Attack:**  Wisdom +\
@@ -2862,8 +2836,8 @@ abilities:
       \ level spell: 10d12 damage; 50 ongoing damage"
     feats: []
     usage: per-day
-  - name: Blade Barrier (5th Level)
-    _type: Talent
+  - name: Blade Barrier
+    _type: Domain Spell 5
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -2897,30 +2871,8 @@ abilities:
       Champion: Increase the damage dice to d10s.'
     feats: []
     usage: per-day
-  - name: Mind / Dream
-    _type: Talent
-    source: DATP
-    description: '**Source**  EC
-  
-  
-      Every attack you make deals psychic damage instead of other types of damage unless
-      you choose otherwise for a specific attack.
-  
-  
-      **Invocation of Mind/Dream:**  When you cast a daily cleric spell this battle,
-      roll a d6. If you roll less than or equal to the escalation die, you regain the
-      use of that daily spell after the battle.'
-    feats:
-    - tier: adventurer
-      description: " If your attack already deals psychic damage, it gains the following\
-        \ bonus damage\u2014adventurer tier: +1 damage; champion tier: +2 damage; epic\
-        \ tier: +3 damage."
-    - tier: champion
-      description: ' You gain a +2 bonus to all defenses against attacks by aberrations.'
-    - tier: epic
-      description: " The invocation also affects your allies\u2019 daily spells."
   - name: Music / Song
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_Music moves hearts and minds as easily as the strongest magic._
   
@@ -2941,8 +2893,8 @@ abilities:
       description: ' You gain 3 points towards a background in musical performance.'
     - tier: champion
       description: ' Increase the die to a d8.'
-  - name: Divine Cantata (1st Level)
-    _type: Talent
+  - name: Divine Cantata
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; At-will
   
@@ -2979,8 +2931,8 @@ abilities:
       description: ' If both attacks hit and you grant both save bonuses to the same
         ally, increase the total save bonus to +4.'
     usage: at-will
-  - name: Sacred Hymn (1st Level)
-    _type: Talent
+  - name: Sacred Hymn
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -3001,8 +2953,8 @@ abilities:
       description: ' Until the end of the battle, you and all allies can add the escalation
         die to sustain checks for bard songs.'
     usage: per-day
-  - name: Angelic Chorus (7th Level)
-    _type: Talent
+  - name: Angelic Chorus
+    _type: Domain Spell 7
     source: DATP
     description: "Close-quarters spell; Daily; Quick action\n\n---\n\n\n**Effect:**\
       \  You call celestial beings to the battlefield until the end of the battle. While\
@@ -3011,28 +2963,10 @@ abilities:
       \ The spell is expended as if you had cast it."
     feats: []
     usage: per-day
-  - name: Nature
-    _type: Talent
-    source: DATP
-    description: "**Source**  EB\n\nYou have the ability to briefly converse in rudimentary\
-      \ fashion with animals and plant creatures, subject to the limits of the creatures\u2019\
-      \ intelligence, interest, and vocabulary. Extended conversations are beyond the\
-      \ scope of the domain ability.\n\n**Invocation of Nature:**  Nature: Nearby and\
-      \ far away enemies find their footing surprisingly treacherous, so you and your\
-      \ allies can disengage safely as a move action with an easy (6+) save"
-    feats:
-    - tier: adventurer
-      description: ' Once per day, you can pull off a terrain stunt, as defined in the
-        Tracker talent that the Ranger possesses'
-    - tier: champion
-      description: ' You gain +2 to all defenses against attacks from beasts.'
-    - tier: epic
-      description: ' Once per day, you can use the overworld travel spell, but both
-        the origin and destination must be within the wilderness.'
   - name: Oracle
-    _type: Talent
-    source: DATP
-    description: "**Source**  DPAS\n\nYou can use the Follow the Thread fateweaver class\_\
+    _type: Domain
+    source: DPAS
+    description: "You can use the Follow the Thread fateweaver class\_\
       feature once per day. Starting at 3rd level, you can take a fateweaver spell in\
       \ place of cleric spells. The\_fateweaver spell must be two levels lower than\
       \ the cleric spell."
@@ -3042,7 +2976,7 @@ abilities:
         \ You can expend\_focus to deal maximum damage with a Cleric spell,\_or to allow\
         \ an ally to heal the maximum amount\_when you grant them the use of a recovery."
   - name: Pain / Suffering
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_I will face my fear. I will permit it to pass over me and through
       me. Where the fear has gone there will be nothing. Only I will remain._
@@ -3062,8 +2996,8 @@ abilities:
     - tier: champion
       description: ' If you use this invocation while you are staggered, you regain
         it at the end of the battle.'
-  - name: Inflict Wounds (1st Level)
-    _type: Talent
+  - name: Inflict Wounds
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; At-will
   
@@ -3101,8 +3035,8 @@ abilities:
       description: ' On a natural 18+, the target is weakened until the end of its next
         turn.'
     usage: at-will
-  - name: Thorny Crown (3rd Level)
-    _type: Talent
+  - name: Thorny Crown
+    _type: Domain Spell 3
     source: DATP
     description: 'Ranged spell; Daily; Quick action
   
@@ -3125,8 +3059,8 @@ abilities:
     - tier: champion
       description: ' The spell no longer ends when a target resists damage.'
     usage: per-day
-  - name: Harm (7th Level)
-    _type: Talent
+  - name: Harm
+    _type: Domain Spell 7
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -3158,7 +3092,7 @@ abilities:
       description: ' You can cast this spell as a ranged spell against a nearby enemy.'
     usage: per-day
   - name: Plant / Forest
-    _type: Talent
+    _type: Domain
     source: DATP
     description: "_Revere the ancient trees, taller, stronger and filled with more wisdom\
       \ than any temple._\n\nGain a spell from the Forest terrain of the druid\u2019\
@@ -3175,8 +3109,8 @@ abilities:
         poison damage and the stuck effect.'
     - tier: epic
       description: ' Increase the ongoing damage to 5 times your level.'
-  - name: Thorn Whip (1st Level)
-    _type: Talent
+  - name: Thorn Whip
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; At-will
   
@@ -3202,8 +3136,8 @@ abilities:
     - tier: adventurer
       description: ' You can attack nearby enemies you are not engaged with.'
     usage: at-will
-  - name: Binding Vines (1st Level)
-    _type: Talent
+  - name: Binding Vines
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; Once per battle; Quick Action
   
@@ -3228,8 +3162,8 @@ abilities:
     - tier: epic
       description: ' The target is also vulnerable to attacks (save ends all).'
     usage: per-battle
-  - name: Ensnaring Roots (1st Level)
-    _type: Talent
+  - name: Ensnaring Roots
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged spell; Daily\n\n---\n\n\n**Effect:**  Until the end of the\
       \ battle, tree roots in the nearby area start writhing and grabbing for your enemies\u2019\
@@ -3240,15 +3174,15 @@ abilities:
     feats: []
     usage: per-day
   - name: Protection / Community
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_A temple without a flock is a crypt of dead teachings._
   
   
       (See the 13th Age Core Book p. 97 for details.)'
     feats: []
-  - name: Shielding Strike (1st Level)
-    _type: Talent
+  - name: Shielding Strike
+    _type: Domain Spell 1
     source: DATP
     description: 'Melee attack; At-will
   
@@ -3269,8 +3203,8 @@ abilities:
     - tier: adventurer
       description: ' If you wield a shield, grant the bonus to PD too.'
     usage: at-will
-  - name: Blessed Orator (1st Level)
-    _type: Talent
+  - name: Blessed Orator
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -3283,10 +3217,11 @@ abilities:
       when speaking to a group.'
     feats: []
     usage: per-day
-  - name: Shield Other (1st Level)
-    _type: Talent
+  - name: Shield Other
+    _type: Domain Spell 1
     source: DATP
-    description: "Close-quarters spell; Recharge 11+ after battle; Interrupt action\n\
+    usage: recharge
+    description: "Close-quarters spell; Recharge 11+ after battle; Interrupt action\n___\
       \n**Trigger:**  An attack hits a nearby ally\u2019s AC.\n\n**Effect:**  The attacker\
       \ must reroll the attack, and use the second result.\n\n3rd level spell: The ally\
       \ gains a +2 AC bonus against the rerolled attack.\n\n5th level spell: You can\
@@ -3303,8 +3238,8 @@ abilities:
     - tier: epic
       description: ' Hit or miss, the ally takes only half damage from any attack you
         use Shield Other against.'
-  - name: Summon Guardian of Faith (3rd Level)
-    _type: Talent
+  - name: Summon Guardian of Faith
+    _type: Domain Spell 3
     source: DATP
     description: "Close-quarters spell; Daily\n\n---\n\n\n**Effect:**  This spell calls\
       \ a Guardian of Faith as a superior summoned creature according to the summoning\
@@ -3327,8 +3262,8 @@ abilities:
     - tier: epic
       description: " The guardian\u2019s defend abilities grant a +3 bonus to defenses."
     usage: per-day
-  - name: Walk Unharmed (3rd Level)
-    _type: Talent
+  - name: Walk Unharmed
+    _type: Domain Spell 3
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -3356,7 +3291,7 @@ abilities:
     feats: []
     usage: per-day
   - name: Secrets / Cultism
-    _type: Talent
+    _type: Domain
     source: DATP
     description: "_Your church, or at least the branch you belong to, prefers to operate\
       \ without drawing attention to itself. You generally don\u2019t disclose your\
@@ -3377,8 +3312,8 @@ abilities:
     - tier: epic
       description: ' Once per day, you can use a secret you know about a target to gain
         advantage on a spell attack roll against them.'
-  - name: Ominous Chant (1st Level)
-    _type: Talent
+  - name: Ominous Chant
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; At-will
   
@@ -3417,8 +3352,8 @@ abilities:
     - tier: adventurer
       description: ' The damage dice of this spell are exploding dice.'
     usage: at-will
-  - name: Encrypt (1st Level)
-    _type: Talent
+  - name: Encrypt
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -3435,8 +3370,8 @@ abilities:
       the original text.'
     feats: []
     usage: per-day
-  - name: Erase Memory (5th Level)
-    _type: Talent
+  - name: Erase Memory
+    _type: Domain Spell 5
     source: DATP
     description: "Ranged spell; Daily\n\n---\n\n\n**Target:**  One nearby creature\n\
       \n**Attack:**  Wisdom + Level vs. MD\n\n**Hit:**  You cause the target to forget\
@@ -3453,7 +3388,7 @@ abilities:
         you can make the target remember a different face.'
     usage: per-day
   - name: Spirits / Undeath
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_Eternal life at any cost._
   
@@ -3471,8 +3406,8 @@ abilities:
     - tier: adventurer
       description: ' If the save is a natural 1, the target is stunned until the start
         of its next turn.'
-  - name: Withering Touch (1st Level)
-    _type: Talent
+  - name: Withering Touch
+    _type: Domain Spell 1
     source: DATP
     description: "Close-quarters spell; At-will\n\n---\n\n\n**Target:**  One enemy you\
       \ are engaged with\n\n**Attack:**  Wisdom + Level vs. PD\n\n**Hit:**  1d12 + Wisdom\
@@ -3485,8 +3420,8 @@ abilities:
     - tier: champion
       description: ' You can now use the spell as a ranged spell.'
     usage: at-will
-  - name: Captive Spirit (1st Level)
-    _type: Talent
+  - name: Captive Spirit
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; Once per battle
   
@@ -3500,8 +3435,8 @@ abilities:
       to 0 hp, whichever comes first.'
     feats: []
     usage: per-battle
-  - name: Bolster Undead (3rd Level)
-    _type: Talent
+  - name: Bolster Undead
+    _type: Domain Spell 3
     source: DATP
     description: 'Ranged spell; Daily; Quick action
   
@@ -3531,15 +3466,15 @@ abilities:
     feats: []
     usage: per-day
   - name: Strength
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_You worship physical prowess._
   
   
       (See the 13th Age Core Book p. 97 for details.)'
     feats: []
-  - name: Powerful Blow (1st Level)
-    _type: Talent
+  - name: Powerful Blow
+    _type: Domain Spell 1
     source: DATP
     description: 'Melee attack; At-will
   
@@ -3566,8 +3501,8 @@ abilities:
       description: ' On a natural odd hit, you knock the target prone. Melee attacks
         have advantage against the target until it takes a move action to stand up.'
     usage: at-will
-  - name: Bend Bars and Lift Gates (1st Level)
-    _type: Talent
+  - name: Bend Bars and Lift Gates
+    _type: Domain Spell 1
     source: DATP
     description: "Close-quarters spell; Once per scene; Free action\n\n**Trigger:**\
       \  You or a nearby ally makes a Strength check or a Strength-based skill check.\n\
@@ -3575,8 +3510,8 @@ abilities:
     feats:
     - tier: adventurer
       description: ' You can target 1d3 allies (including yourself).'
-  - name: Siphon Strength (3rd Level)
-    _type: Talent
+  - name: Siphon Strength
+    _type: Domain Spell 3
     source: DATP
     description: 'Ranged spell; Daily
   
@@ -3615,7 +3550,7 @@ abilities:
       description: ' On a miss, the target is also dazed (save ends).'
     usage: per-day
   - name: Sun / Anti-Undead
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_The sun, all-seeing and eternal, is the center of the sky and of
       many pantheons._
@@ -3623,8 +3558,8 @@ abilities:
   
       (See the 13th Age Core Book p. 97 for details.)'
     feats: []
-  - name: Ray of Light (1st Level)
-    _type: Talent
+  - name: Ray of Light
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; At-will
   
@@ -3661,8 +3596,8 @@ abilities:
     - tier: champion
       description: ' Increase the damage dice to d8.'
     usage: at-will
-  - name: Consecration (1st Level)
-    _type: Talent
+  - name: Consecration
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; Daily
   
@@ -3686,8 +3621,8 @@ abilities:
     - tier: champion
       description: ' The spell is now Recharge 16+.'
     usage: per-day
-  - name: Searing Light (3rd Level)
-    _type: Talent
+  - name: Searing Light
+    _type: Domain Spell 3
     source: DATP
     description: 'Ranged spell; Daily
   
@@ -3721,7 +3656,7 @@ abilities:
       description: ' Gain a +3 bonus to hit against demons and undead.'
     usage: per-day
   - name: Time
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_No one can escape time._
   
@@ -3737,8 +3672,8 @@ abilities:
         yourself up 1d4 positions in the initiative order.'
     - tier: champion
       description: ' Also grant a move action.'
-  - name: Sands of Time (1st Level)
-    _type: Talent
+  - name: Sands of Time
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; At-will
   
@@ -3774,8 +3709,8 @@ abilities:
       description: ' The target also takes a -2 penalty to disengage checks (save ends
         both).'
     usage: at-will
-  - name: Temporal Disruption (1st Level)
-    _type: Talent
+  - name: Temporal Disruption
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; Daily
   
@@ -3810,8 +3745,8 @@ abilities:
       9th level spell: 2d6 x 10 damage'
     feats: []
     usage: per-day
-  - name: Visions of the Past (1st Level)
-    _type: Talent
+  - name: Visions of the Past
+    _type: Domain Spell 1
     source: DATP
     description: "Close-quarters spell; Daily; Quick action\n\n---\n\n\n**Effect:**\
       \  Focus on a nearby person, place, or object, and decide a rough time range (1\
@@ -3822,15 +3757,15 @@ abilities:
     feats: []
     usage: per-day
   - name: Trickery / Illusion
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_Every family has its black sheep, every pantheon has its trickster._
   
   
       (See the 13th Age Core Book p. 97 for details.)'
     feats: []
-  - name: Wink of the Trickster (1st Level)
-    _type: Talent
+  - name: Wink of the Trickster
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged spell; At-will\n\n---\n\n\n**Target:**  A nearby enemy\n\n\
       **Attack:**  Wisdom + Level vs. MD\n\n**Hit:**  1d6 + Wisdom psychic damage\n\n\
@@ -3847,8 +3782,8 @@ abilities:
       description: ' On a natural 20, the target is confused until the end of its next
         turn.'
     usage: at-will
-  - name: Taunt and Tease (1st Level)
-    _type: Talent
+  - name: Taunt and Tease
+    _type: Domain Spell 1
     source: DATP
     description: 'Ranged spell; Once per battle
   
@@ -3890,8 +3825,8 @@ abilities:
     - tier: champion
       description: ' A natural even miss does not expend the spell.'
     usage: per-battle
-  - name: "Trickster\u2019s Guise (1st Level)"
-    _type: Talent
+  - name: Trickster's Guise
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; Daily
   
@@ -3922,8 +3857,8 @@ abilities:
         modifier. All disguises will be of the same type, for example all orcs or all
         city guards.'
     usage: per-day
-  - name: Borrowed Trick (5th Level)
-    _type: Talent
+  - name: Borrowed Trick
+    _type: Domain Spell 5
     source: DATP
     description: 'Ranged spell; Daily; Quick action
   
@@ -3939,8 +3874,8 @@ abilities:
       its normal frequency until the end of the battle.'
     feats: []
     usage: per-day
-  - name: Cheat All Except Death (7th Level)
-    _type: Talent
+  - name: Cheat All Except Death
+    _type: Domain Spell 7
     source: DATP
     description: 'Close-quarters spell; Daily; Quick action
   
@@ -3959,7 +3894,7 @@ abilities:
     feats: []
     usage: per-day
   - name: War / Leadership
-    _type: Talent
+    _type: Domain
     source: DATP
     description: '_The fiercest battles are fought when both sides pray to the same
       god._
@@ -3967,8 +3902,8 @@ abilities:
   
       (See the 13th Age Core Book p. 97 for details.)'
     feats: []
-  - name: Lead the Assault (1st Level)
-    _type: Talent
+  - name: Lead the Assault
+    _type: Domain Spell 1
     source: DATP
     description: 'Melee attack; At-will
   
@@ -3989,8 +3924,8 @@ abilities:
     - tier: adventurer
       description: ' Also grant the crit bonus on an even miss.'
     usage: at-will
-  - name: Booming Command (1st Level)
-    _type: Talent
+  - name: Booming Command
+    _type: Domain Spell 1
     source: DATP
     description: "Close-quarters spell; Daily\n\n---\n\n\n**Target:**  One nearby enemy\n\
       \n**Effect:**  You give the target a simple, three-word command, such as \u201C\
@@ -4008,8 +3943,8 @@ abilities:
     - tier: epic
       description: ' Target 1d4 enemies.'
     usage: per-day
-  - name: Elevated Command (3rd Level)
-    _type: Talent
+  - name: Elevated Command
+    _type: Domain Spell 3
     source: DATP
     description: 'Close-quarters spell; Daily; Quick action
   
@@ -4026,7 +3961,7 @@ abilities:
         \ next turn, and you can benefit from it yourself."
     usage: per-day
   - name: Water / Sea / River
-    _type: Talent
+    _type: Domain
     source: DATP
     description: "_From the tiniest stream to the endless oceans, where there is water,\
       \ there is divine power._\n\nChoose a spell from the Ocean or River terrains of\
@@ -4039,8 +3974,8 @@ abilities:
       description: ' You gain _resist poison_ 16+.'
     - tier: champion
       description: ' Increase the resistances to 14+.'
-  - name: Jetblast (1st Level)
-    _type: Talent
+  - name: Jetblast
+    _type: Domain Spell 1
     source: DATP
     description: 'Close-quarters spell; At-will
   
@@ -4080,11 +4015,13 @@ abilities:
       description: " You can choose to attack two targets with this spell, but you take\
         \ a \u20134 penalty to your attack roll."
     usage: at-will
-  - name: Neutralize Poison (1st Level)
-    _type: Talent
+  - name: Neutralize Poison
+    _type: Domain Spell 1
+    usage: recharge
     source: DATP
     description: 'Ranged spell; Recharge 11+ after battle; Quick action
   
+      ___
   
       **Effect:**  You can cast this spell for power or for broad effect.
   
@@ -4099,8 +4036,8 @@ abilities:
     - tier: champion
       description: ' The target gains a +4 bonus to defenses against attacks that deal
         poison damage until the end of the battle (broad effect: +2).'
-  - name: Purification (1st Level)
-    _type: Talent
+  - name: Purification
+    _type: Domain Spell 1
     source: DATP
     description: "Close-quarters spell; Daily\n\n---\n\n\n**Target:**  1d4 nearby enemies\n\
       \n**Attack:**  Wisdom + Level vs. PD\n\n**Hit:**  1d8 + Wisdom holy damage. Until\
@@ -4113,7 +4050,7 @@ abilities:
       description: ' Nearby allies heal hit points equal to the spell level.'
     usage: per-day
   - name: Winter / Ice
-    _type: Talent
+    _type: Domain
     source: DATP
     description: "_Before every new beginning, there must be an end._\n\nChoose a spell\
       \ from the Ice terrain of the druid\u2019s Circle of the Lands of up to your level\
@@ -4126,8 +4063,8 @@ abilities:
       description: ' You gain _resist cold_ 16+.'
     - tier: champion
       description: ' When you deal cold damage, increase all damage dice by one step.'
-  - name: Ice Shards (1st Level)
-    _type: Talent
+  - name: Ice Shards
+    _type: Domain Spell 1
     source: DATP
     description: "Ranged spell; At-Will\n\n---\n\n\n**Targets:**  1d3 nearby enemies\
       \ in a group\n\n**Attack:**  Wisdom + Level vs. PD\n\n**Hit:**  1d6 + Wisdom cold\
@@ -4138,8 +4075,8 @@ abilities:
     - tier: adventurer
       description: ' Gain a +1 bonus to your critical threat range.'
     usage: at-will
-  - name: Frost Hammer (1st Level)
-    _type: Talent
+  - name: Frost Hammer
+    _type: Domain Spell 1
     source: DATP
     description: "Melee attack; Daily\n\n---\n\n\n**Attack:**  Strength OR Wisdom +\
       \ Level vs. AC\n\n**Hit:**  WEAPON + Strength cold damage, and if the target\u2019\
@@ -4153,8 +4090,8 @@ abilities:
     - tier: champion
       description: ' Also deal 10 times the spell level in ongoing cold damage.'
     usage: per-day
-  - name: Snow Storm (5th Level)
-    _type: Talent
+  - name: Snow Storm
+    _type: Domain Spell 5
     source: DATP
     description: 'Ranged spell; Daily
   
@@ -4191,27 +4128,16 @@ abilities:
     - tier: champion
       description: ' You can now target 1d4 enemies with this spell.'
     usage: per-day
-  - name: Cleric Spells (All Domains)
-    _type: Talent
-    source: DATP
-    description: ''
-    feats: []
-  - name: 1st Level Spells
-    _type: Spell 1
-    source: DATP
-    description: ''
-    feats: []
-    level: 1
-    category: Spells
   - name: Divine Guidance
     _type: Spell 1
     source: DATP
-    description: '**Source**  DaTP
+    usage: recharge
+    description: '
   
   
       Close-quarters spell; Recharge 16+ after the scene; Free action
-  
-  
+
+      ___
       **Trigger:**  A nearby ally makes a skill check.
   
   
@@ -4226,7 +4152,7 @@ abilities:
   - name: Minor Miracle
     _type: Spell 1
     source: DATP
-    description: "**Source**  DaTP\n\nRanged spell; At-will\n\n---\n\n\n**Effect:**\
+    description: "Ranged spell; At-will\n\n---\n\n\n**Effect:**\
       \  You create a small miracle effect to strengthen your believer\u2019s faith\
       \ in your deity. Below are some example effects.\n\n_Create Water or Wine:_ Create\
       \ one serving of a beverage of your choice.\n\n_Divine Light:_ Create an ongoing\
@@ -4246,7 +4172,8 @@ abilities:
   - name: Remove Fear
     _type: Spell 1
     source: DATP
-    description: "**Source**  DaTP\n\nClose-quarters spell; Recharge 11+; Quick action\n\
+    usage: recharge
+    description: "Close-quarters spell; Recharge 11+; Quick action\n___\
       \n**Effect:**  You can cast this spell for power or for broad effect.\n\n_Cast\
       \ for power:_ Choose a nearby ally. The target is immune to fear until the end\
       \ of the battle.\n\n_Cast for broad effect:_ Three nearby allies (including you)\
@@ -4259,18 +4186,12 @@ abilities:
         allies.'
     level: 1
     category: Spells
-  - name: 3rd Level Spells
-    _type: Spell 3
-    source: DATP
-    description: ''
-    feats: []
-    level: 3
-    category: Spells
   - name: Spiritual Weapon
     _type: Spell 3
+    usage: recharge
     source: DATP
-    description: "**Source**  DaTP\n\nRanged spell; Recharge 16+ after battle; Quick\
-      \ action\n\n**Effect:**  You summon the divine representation of your deity\u2019\
+    description: "Ranged spell; Recharge 16+ after battle; Quick\
+      \ action\n___\n\n**Effect:**  You summon the divine representation of your deity\u2019\
       s weapon. Make a melee attack against a nearby enemy with it.\n\n**Attack:** \
       \ Wisdom + Level vs. AC\n\n**Hit:**  2d8 + Strength OR Charisma holy damage\n\n\
       **Miss:**  \u2014\n\nThe weapon persists until the end of the battle, or until\
@@ -4286,17 +4207,10 @@ abilities:
       description: ' The spell is now Recharge 11+.'
     level: 3
     category: Spells
-  - name: 5th Level Spells
-    _type: Spell 5
-    source: DATP
-    description: ''
-    feats: []
-    level: 5
-    category: Spells
   - name: Summon Planetar
     _type: Spell 5
     source: DATP
-    description: '**Source**  DaTP
+    description: |
   
   
       Ranged spell; Daily
@@ -4306,40 +4220,42 @@ abilities:
   
   
   
-      **Effect:**  You summon a planetar, as per the summoning rules on page XX. This
+      **Effect:**  You summon a planetar, as per the summoning rules. This
       planetar fights for you until the end of the battle, or until it drops to 0 hp,
       whichever comes first. As you cast the spell at higher levels, your planetar becomes
       stronger.
   
-  
-      ### _Summoned Planetar_'
+      ___
+
+      ### _Summoned Planetar_
+      **5th level spoiler [celestial]**
+
+      **Initiative:** +12
+
+      **Blade of Elysium:** +10 vs. PD—15 holy damage
+      - *Miss:* Half damage
+      
+      **C:** Winged Smite +10 vs. PD—15 holy energy damage, and the planetar flies to engage the target
+      - *Natural 16+:* The target is also weakened until the end of its next turn.
+      - *Limited use:* The planetar can use winged smite only when the escalation die is even.
+
+
+      **Flight:** The planetar flies with large feathered wings on its back.
+
+
+      | Level | INIT. | ATTACK | DAMAGE | AC  | PD  | MD  | HP  |
+      |-------|-------|--------|--------|-----|-----|-----|-----|
+      | 5     | +12   | +10    | 15     | 20  | 15  | 18  | 50  |
+      | 7     | +14   | +12    | 25     | 22  | 17  | 20  | 80  |
+      | 9     | +17   | +15    | 40     | 25  | 20  | 23  | 125 |
+
     feats: []
     level: 5
     category: Spells
     usage: per-day
-  - name: 7th Level Spells
-    _type: Spell 7
-    source: DATP
-    description: ''
-    feats: []
-    level: 7
-    category: Spells
-  - name: 9th Level Spells
-    _type: Spell 9
-    source: DATP
-    description: ''
-    feats: []
-    level: 9
-    category: Spells
-  - name: Cleric Rituals
-    _type: Spell 9
-    source: DATP
-    description: ''
-    feats: []
-    level: 9
-    category: Spells
-  - name: Blessed Forge (1st Level)
-    _type: Spell 9
+
+  - name: Blessed Forge
+    _type: Ritual 1
     source: DATP
     description: '**Base spell:**  Any spell from the Metal domain
   
@@ -4350,10 +4266,10 @@ abilities:
       **Effect:**  Until the end of the day, all smithing-related skill checks in the
       forge have advantage.'
     feats: []
-    level: 9
+    level: 1
     category: Spells
-  - name: Ceremony of Blessing (1st Level)
-    _type: Spell 9
+  - name: Ceremony of Blessing
+    _type: Ritual 1
     source: DATP
     description: "**Base spell:**  Bless, Shield of Faith\n\n**Effect:**  You perform\
       \ a religious ceremony. The effect depends on the type of ceremony conducted.\n\
@@ -4369,10 +4285,10 @@ abilities:
       \ fire and lightning for a year.\n\n_Door blessing:_ Supernatural creatures must\
       \ succeed at a save to enter the house."
     feats: []
-    level: 9
+    level: 1
     category: Spells
-  - name: Divine Builder (7th Level)
-    _type: Spell 9
+  - name: Divine Builder
+    _type: Ritual 7
     source: DATP
     description: '**Base spell:**  Sanctuary
   
@@ -4382,7 +4298,7 @@ abilities:
       a one-storey building, a bridge over a stream, or a statue. For bigger projects,
       you need to cast the ritual multiple times, or find a way to increase the effect.'
     feats: []
-    level: 9
+    level: 7
     category: Spells
   # END DATP ABILITIES
 ---
@@ -4491,9 +4407,10 @@ There are certain abilities specific to the cleric that can affect their powers:
 
 <Vault.AbilityList abilities={props.getAbilitiesByType("Class Feature")} />
 
-## Class Talents
+## Class Talents (Domains)
 
-<Vault.AbilityList abilities={props.getAbilitiesByTypes(["Talent", "Domain","Domain Spell"])} />
+<Vault.AbilityList abilities={props.getAbilitiesByTypes(["Talent", "Domain",
+  "Domain Spell 1", "Domain Spell 3", "Domain Spell 5", "Domain Spell 7", "Domain Spell 9"])} />
 
 ## 1st Level Spells
 
@@ -4514,3 +4431,10 @@ There are certain abilities specific to the cleric that can affect their powers:
 ## 9th Level Spells
 
 <Vault.AbilityList abilities={props.getAbilitiesByType("Spell 9")} />
+
+## Cleric Rituals
+<Vault.AbilityList abilities={props.getAbilitiesByType("Ritual 1")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Ritual 3")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Ritual 5")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Ritual 7")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Ritual 9")} />
