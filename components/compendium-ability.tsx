@@ -2,6 +2,7 @@ import { Ability } from "@/.contentlayer/generated";
 import clsx from "clsx";
 import { map, size } from "lodash-es";
 import AbilityItem from "./ability-item";
+import { useBookStore, isSourceEnabled } from "@/lib/books";
 
 interface AbilityListP {
   abilities?: Ability[];
@@ -19,6 +20,7 @@ export default function AbilityList({
     2: "lg:grid-cols-2",
     3: "lg:grid-cols-3",
   };
+  const bookstore = useBookStore();
 
   return (
     <div
@@ -28,7 +30,10 @@ export default function AbilityList({
         columnClassesMap[columns]
       )}
     >
-      {map(abilities, (ability) => (
+      {map(abilities, (ability) => {
+        console.log(ability)
+        if(ability.source && !isSourceEnabled(bookstore,ability.source)) return null;
+        return (
         <div role="listitem" key={ability.name}>
           <AbilityItem
             type={ability._type}
@@ -39,7 +44,8 @@ export default function AbilityList({
             tier={ability.tier}
           />
         </div>
-      ))}
+        );
+      })}
     </div>
   );
 }

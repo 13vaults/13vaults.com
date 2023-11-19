@@ -19,6 +19,7 @@ interface AbilityItemP {
   feats: Ability["feats"] | PartialFeat[];
   usage: Ability["usage"];
   tier: Ability["tier"];
+  source: Ability["source"];
 }
 
 export default function AbilityItem({

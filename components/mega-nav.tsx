@@ -22,6 +22,7 @@ import {
   useReducedMotion,
 } from "framer-motion";
 import Button from "./button";
+import { BookSelector } from "./book-selector";
 import { ThemeSelector } from "./theme-selector";
 
 interface MobileSubnavP {
@@ -365,6 +366,9 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                     </div>
                     <div className="flex gap-4 items-center">
                       <div className="hidden lg:block relative">
+                        <BookSelector />
+                      </div>
+                      <div className="hidden lg:block relative">
                         <ThemeSelector />
                       </div>
                       <Button
@@ -391,6 +395,9 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                   </Link>
                 </div>
 
+                <div className="lg:hidden relative">
+                  <BookSelector />
+                </div>
                 <div className="lg:hidden relative">
                   <ThemeSelector />
                 </div>
