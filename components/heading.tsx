@@ -18,11 +18,13 @@ export default function Heading({
   const Component = `h${level}`;
   const reference = useRef<Element>(null);
   const registerHeading = useSectionStore((s: any) => s.registerHeading);
+  const unregisterHeading = useSectionStore((s: any) => s.unregisterHeading);
 
   useEffect(() => {
     if (level === 2) {
       registerHeading({ id, ref: reference, offsetRem: 10 });
     }
+    return (() => level === 2 ? unregisterHeading(id) : null)
   }, [id, level, registerHeading]);
 
   const { className, ...restHeadingProperties } = headingProps;

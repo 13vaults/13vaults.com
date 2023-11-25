@@ -41,8 +41,13 @@ export default function AbilityItem({
     recharge: "from-sky-600 to-sky-800 dark:from-sky-700 dark:to-sky-900",
   };
 
+
   return (
-    <section className="text-base m-0 text-stone-950 dark:text-stone-50 relative">
+    <section className={clsx(
+       // TODO: figure out a nicer way of displaying this
+       type && (type.startsWith("Domain Spell") || type.startsWith("Death Knight Rune") || type.startsWith("Bonus Power")) ? "pl-16": "",
+      "text-base m-0 text-stone-950 dark:text-stone-50 relative"
+    )}>
       <div className="absolute -inset-[2px] border-2 border-stone-100 dark:border-stone-950 pointer-events-none" />
       <header
         className={clsx(

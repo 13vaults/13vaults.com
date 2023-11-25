@@ -1187,6 +1187,8 @@ Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are l
 
 <Vault.AbilityList abilities={props.getAbilitiesByTypeAndTier("Talent","adventurer")} />
 
+<If source="DATP">
+
 ### Champion Talents
 
 <Vault.AbilityList abilities={props.getAbilitiesByTypeAndTier("Talent","champion")} />
@@ -1220,6 +1222,8 @@ you have the required level, but to access the 5th level power,
 you also need both the 1st and 3rd level powers of that sphere.
 
 <Vault.AbilityList abilities={props.getAbilitiesByTypes(["Arcane Archery Sphere", "Arcane Shot 1", "Arcane Shot 3", "Arcane Shot 5"])} />
+
+</If>
 
 ## Animal Companion Rules
 

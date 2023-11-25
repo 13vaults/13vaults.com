@@ -10,6 +10,7 @@ import { SectionProvider } from "./section-provider";
 import CompendiumSideNav from "./compendium-side-nav";
 import ContentLink from "./content-link";
 import { defaultLocale } from "@/lib/locales";
+import { useBookStore, isSourceEnabled } from "@/lib/books";
 
 interface ContentLayerRendererP {
   data: any;
@@ -34,7 +35,10 @@ export default function ContentLayerPage({
   const quote = get(pageDress, "quote");
   const title = `${primaryLabel} - 13 Vaults`;
   const sections = get(data, "sections", []);
+  const bookstore = useBookStore();
   const lead = get(pageDress, "lead");
+  const If = (props) => props.source && isSourceEnabled(bookstore, props.source) ?
+                          props.children : null
   return (
     <>
       <Head>
@@ -122,8 +126,14 @@ export default function ContentLayerPage({
                 includes(types, get(ability, "_type"))
               )
             }
+            getAbilitiesByTypesAndTier={(types: string[], tier: string) =>
+              filter(get(data, "abilities"), (ability) =>
+                includes(types, get(ability, "_type")) && ability["tier"] == tier)
+            }
+            isSourceEnabled = {(name:string) => isSourceEnabled(bookstore,name)}
             components={{
               Vault: Vault,
+              If: If,
               h2: ({ id, children, ...rest }) => (
                 <Heading level={2} id={id!} headingProps={rest}>
                   {children}

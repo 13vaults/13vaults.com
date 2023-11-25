@@ -31,7 +31,6 @@ export default function AbilityList({
       )}
     >
       {map(abilities, (ability) => {
-        console.log(ability)
         if(ability.source && !isSourceEnabled(bookstore,ability.source)) return null;
         return (
         <div role="listitem" key={ability.name}>
