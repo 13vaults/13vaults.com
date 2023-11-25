@@ -92,6 +92,8 @@ export default function ContentLayerPage({
           <VaultHeader
             primaryLabel={primaryLabel}
             secondaryLabel={secondaryLabel}
+            versions={data.versions}
+            variants={data.variants}
           />
           {quote ? (
             <figure>

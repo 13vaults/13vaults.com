@@ -60,6 +60,21 @@ const Feat = defineNestedType(() => ({
   },
 }));
 
+const ClassVersion = defineNestedType(() => ({
+  name: "ClassVersion",
+  fields: {
+    name: { type: "string", required:true },
+    source: { type:"string", required:false }
+  },
+}));
+const ClassVariant = defineNestedType(() => ({
+  name: "ClassVariant",
+  fields: {
+    name: { type: "string", required:true },
+    source: { type:"string", required:false }
+  },
+}));
+
 const Ability = defineNestedType(() => ({
   name: "Ability",
   fields: {
@@ -188,6 +203,8 @@ const ClassItem = defineDocumentType(() => ({
   fields: {
     name: { type: "string", required: true },
     source: { type: "string", required: true },
+    versions: { type: "list", of: ClassVersion, required:false },
+    variants: { type: "list", of: ClassVariant, required:false },
     page_dress: { type: "nested", of: PageDress, required: false },
     abilities: { type: "list", of: Ability, required: false },
     ability_scores: {

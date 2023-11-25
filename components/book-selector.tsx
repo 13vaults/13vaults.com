@@ -39,7 +39,7 @@ export function BookSelector() {
                   <Switch
                     checked={book[2]}
                     onChange={ () => toggleEnabledBook(index) }
-                    className={(book[2] ? 'bg-amber-500' : 'bg-gray-200') +
+                    className={(book[2] ? 'bg-amber-500' : 'bg-amber-900') +
                     " relative inline-flex h-4 w-8 items-center rounded-full"}>
                       {({checked}) => (
                         <>
