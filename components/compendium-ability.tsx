@@ -31,7 +31,8 @@ export default function AbilityList({
       )}
     >
       {map(abilities, (ability) => {
-        if(ability.source && !isSourceEnabled(bookstore,ability.source)) return null;
+        if((ability.source && !isSourceEnabled(bookstore,ability.source)) ||
+           ability.replaced_by && isSourceEnabled(bookstore,ability.replaced_by)) return null;
         return (
         <div role="listitem" key={ability.name}>
           <AbilityItem

@@ -20,6 +20,7 @@ interface AbilityItemP {
   usage: Ability["usage"];
   tier: Ability["tier"];
   source: Ability["source"];
+  replaced_by: Ability["replaced_by"];
 }
 
 export default function AbilityItem({

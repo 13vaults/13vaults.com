@@ -74,9 +74,9 @@ abilities:
   - name: Ritual Magic
     _type: Class Feature
     description: Clerics can cast their spells as rituals. (See [Rituals](/compendium/basic-rules/running-the-game/#rituals).)
-  - &healing
-    name: Healing
+  - name: Healing
     _type: Domain
+    replaced_by: DATP
     description: |-
       When you cast a spell that lets you or an ally heal using a recovery, the target also adds hit points equal to double your level to the recovery.
 
@@ -94,6 +94,7 @@ abilities:
         description: Increase the additional hit points the target heals to triple your level.
   - name: Justice/Vengeance
     _type: Domain
+    replaced_by: DATP
     description: |-
       Once per turn when an enemy scores a critical hit against you or a nearby ally, or drops you or a nearby ally to 0 hp or below, you gain an attack-reroll blessing.
       Immediately choose a nearby ally and give them the blessing as a free action.
@@ -111,6 +112,7 @@ abilities:
         description: Attacks rolls from your reroll blessings gain a +4 bonus.
   - name: Knowledge/Lore
     _type: Domain
+    replaced_by: DATP
     description: |-
       You gain 4 additional background points that must be used somehow in relation to knowledge or lore.
 
@@ -126,6 +128,7 @@ abilities:
         description: You gain a different positive relationship point each day with a random icon, purely because the icon has realized you know something they need to know. It changes every day and it might contradict your usual icon relationships.
   - name: Life/Death
     _type: Domain
+    replaced_by: DATP
     description: |-
       You and your nearby allies gain a +1 bonus to death saves.
 
@@ -141,6 +144,7 @@ abilities:
         description: Your first use of the resurrection spell is free, and doesn't count against your total.
   - name: Love/Beauty
     _type: Domain
+    replaced_by: DATP
     description: |-
       Once per level, you can generate a one-point conflicted relationship with a heroic or ambiguous icon you do not already have a relationship with.
       The relationship point remains with you until you gain a level, and then it's time for another one-level relationship.
@@ -153,6 +157,7 @@ abilities:
         description: You gain two points in the relationship instead.
   - name: Protection/Community
     _type: Domain
+    replaced_by: DATP
     description: |-
       Once per battle, you can affect two additional allies when you cast a spell for broad effect.
 
@@ -162,6 +167,7 @@ abilities:
         description: Whenever you target one or more allies with a spell, one ally of your choice can roll a save against a save ends effect.
   - name: Strength
     _type: Domain
+    replaced_by: DATP
     description: |-
       You can wield heavy/martial weapons without an attack penalty.
 
@@ -175,6 +181,7 @@ abilities:
         description: Once per day, you can use d20s instead of d8s for the bonus damage dice.
   - name: Sun/Anti-Undead
     _type: Domain
+    replaced_by: DATP
     description: |-
       Every attack you make deals holy damage instead of other types of damage unless you choose otherwise for a specific attack.
 
@@ -189,6 +196,7 @@ abilities:
         description: The invocation also affects your allies' daily spells.
   - name: Trickery/Illusion
     _type: Domain
+    replaced_by: DATP
     description: |-
       Once per battle, as a quick action when you are engaged with an enemy, roll a d20 (your 'trick die').
 
@@ -203,6 +211,7 @@ abilities:
         description: You get another trick die roll to use each battle the first time the escalation die reaches 3+.
   - name: War/Leadership
     _type: Domain
+    replaced_by: DATP
     description: |-
       Once per turn when you make a melee attack against an enemy, hit or miss, your allies gain a +1 attack bonus against that enemy until the start of your next turn.
 
@@ -2000,11 +2009,21 @@ abilities:
   - name: Healing
     _type: Domain
     source: DATP
-    description: '_Let me guess, the party needed a cleric?_
-  
-  
-      (See the 13th Age Core Book p. 95 for details.)'
-    feats: []
+    description: |-
+      When you cast a spell that lets you or an ally heal using a recovery, the target also adds hit points equal to double your level to the recovery.
+
+      **Invocation of Healing:**
+      This battle, you gain an additional use of the heal spell (see Class Features, left).
+      The first heal spell you cast after using this invocation allows the target to heal using a free recovery instead of spending a recovery.
+    feats:
+      - tier: adventurer
+        description:
+          When you cast a spell that allows an ally to heal using a recovery, you can let them use one of your recoveries instead.
+          (If you also have the Protection/Community domain, any nearby ally can expend the recovery instead of you.)
+      - tier: champion
+        description: The invocation of healing gives you two additional uses of heal this battle instead of only one.
+      - tier: epic
+        description: Increase the additional hit points the target heals to triple your level.
   - name: Healing Strike
     _type: Domain Spell 1
     source: DATP
@@ -2080,15 +2099,24 @@ abilities:
     - tier: champion
       description: ' The spell is now recharge 11+ after battle.'
     usage: per-day
-  - name: Justice / Vengeance
+  - name: Justice/Vengeance
     _type: Domain
     source: DATP
-    description: '_And I will strike down upon thee with great vengeance and furious
-      anger._
-  
-  
-      (See the 13th Age Core Book p. 95 for details.)'
-    feats: []
+    description: |-
+      Once per turn when an enemy scores a critical hit against you or a nearby ally, or drops you or a nearby ally to 0 hp or below, you gain an attack-reroll blessing.
+      Immediately choose a nearby ally and give them the blessing as a free action.
+
+      An ally with this blessing can use it to reroll an attack as a free action this battle. An ally can only have one such blessing on them at a time.
+
+      **Invocation of Justice/Vengeance:** This battle, add double your level to the miss damage of your attacks and the attacks of your
+      nearby allies. (For example, your basic melee attack as a cleric will deal triple your level as miss damage while this invocation is active.)
+    feats:
+      - tier: adventurer
+        description: You can now take the attack-reroll blessing yourself.
+      - tier: champion
+        description: When you gain an attack-reroll blessing to distribute, you gain two blessings to distribute instead.
+      - tier: epic
+        description: Attacks rolls from your reroll blessings gain a +4 bonus.
   - name: Hammer of Retribution
     _type: Domain Spell 1
     source: DATP
@@ -2177,11 +2205,22 @@ abilities:
     - tier: champion
       description: ' You can target a group of up to five mooks as one enemy.'
     usage: per-day
-  - name: Knowledge / Lore
+  - name: Knowledge/Lore
     _type: Domain
     source: DATP
-    description: _Strongholds of faith are strongholds of learning._
-    feats: []
+    description: |-
+      You gain 4 additional background points that must be used somehow in relation to knowledge or lore.
+
+      **Invocation of Knowledge/Lore:** You must use this invocation during your first round of a battle.
+      When you do, you get a quick glimpse of the battle's future.
+      Roll a d6; as a free action at any point after the escalation die equals the number you rolled, you can allow one of your allies to reroll a single attack roll with a +2 bonus thanks to your vision of this future.
+    feats:
+      - tier: adventurer
+        description: Once per day, you can change one of your skill checks involving knowledge to a natural 20 instead. Interpret the word “knowledge” as loosely as your GM allows. GMs, be generous.
+      - tier: champion
+        description: You now roll a d4 for the invocation, not a d6.
+      - tier: epic
+        description: You gain a different positive relationship point each day with a random icon, purely because the icon has realized you know something they need to know. It changes every day and it might contradict your usual icon relationships.
   - name: Sacred Mantra
     _type: Domain Spell 1
     source: DATP
@@ -2255,14 +2294,22 @@ abilities:
     feats:
     - tier: adventurer
       description: ' Ask up to three questions.'
-  - name: Life / Death
+  - name: Life/Death
     _type: Domain
     source: DATP
-    description: '_Lovers, forever nourishing and destroying each other._
-  
-  
-      (See the 13th Age Core Book p. 96 for details.)'
-    feats: []
+    description: |-
+      You and your nearby allies gain a +1 bonus to death saves.
+
+      **Invocation of Life/Death:** This battle, you and each of your allies can each separately add the escalation die to a single save made by that character.
+      In addition, you and your allies do not die from hit point damage when your negative hit points equal half your normal hit points.
+      Instead, you die when your negative hit points equal your full hit points.
+    feats:
+      - tier: adventurer
+        description: The death save bonus increases to +2.
+      - tier: champion
+        description: Each battle, the first time an ally near you becomes staggered, that ally immediately heals hit points equal to twice your level.
+      - tier: epic
+        description: Your first use of the resurrection spell is free, and doesn't count against your total.
   - name: Invigorate
     _type: Domain Spell 1
     source: DATP
@@ -2428,11 +2475,19 @@ abilities:
       description: ' You can open the gate to return from anywhere within the Underworld
         with a passphrase.'
     usage: per-day
-  - name: Love / Beauty
+  - name: Love/Beauty
     _type: Domain
     source: DATP
-    description: (See the 13th Age Core Book p. 96 for details.)
-    feats: []
+    description: |-
+      Once per level, you can generate a one-point conflicted relationship with a heroic or ambiguous icon you do not already have a relationship with.
+      The relationship point remains with you until you gain a level, and then it's time for another one-level relationship.
+
+      **Invocation of Love/Beauty:** As a free action, at some dramatic moment, you or an ally of your choice can roll for one icon relationship that might have an effect on the battle.
+      Rolls of 5 and 6 are beneficial as usual, though the GM will have to improvise what that means in the middle of combat.
+      The invocation's advantage does not occur the moment you roll initiative; wait for a dramatic moment instead.
+    feats:
+      - tier: champion
+        description: You gain two points in the relationship instead.
   - name: Radiant Heart
     _type: Domain Spell 1
     source: DATP
@@ -3173,14 +3228,16 @@ abilities:
       \ normal save (11+) for normal-sized and smaller enemies."
     feats: []
     usage: per-day
-  - name: Protection / Community
+  - name: Protection/Community
     _type: Domain
     source: DATP
-    description: '_A temple without a flock is a crypt of dead teachings._
-  
-  
-      (See the 13th Age Core Book p. 97 for details.)'
-    feats: []
+    description: |-
+      Once per battle, you can affect two additional allies when you cast a spell for broad effect.
+
+      **Invocation of Protection/Community:** This battle, critical hits against you and your nearby allies deal normal damage instead of critical damage.
+    feats:
+      - tier: adventurer
+        description: Whenever you target one or more allies with a spell, one ally of your choice can roll a save against a save ends effect.
   - name: Shielding Strike
     _type: Domain Spell 1
     source: DATP
@@ -3468,11 +3525,17 @@ abilities:
   - name: Strength
     _type: Domain
     source: DATP
-    description: '_You worship physical prowess._
-  
-  
-      (See the 13th Age Core Book p. 97 for details.)'
-    feats: []
+    description: |-
+      You can wield heavy/martial weapons without an attack penalty.
+
+      **Invocation of Strength:** This battle, you and your nearby allies deal triple damage instead of double damage on critical hits with melee attacks.
+    feats:
+      - tier: adventurer
+        description: Once per battle, you can deal extra damage to one target you hit with a melee attack as a free action. The damage bonus is a number of d4 equal to your Strength modifier or to your level, whichever is higher.
+      - tier: champion
+        description: You can use d8s instead of d4s for the bonus damage dice.
+      - tier: epic
+        description: Once per day, you can use d20s instead of d8s for the bonus damage dice.
   - name: Powerful Blow
     _type: Domain Spell 1
     source: DATP
@@ -3549,15 +3612,21 @@ abilities:
     - tier: epic
       description: ' On a miss, the target is also dazed (save ends).'
     usage: per-day
-  - name: Sun / Anti-Undead
+  - name: Sun/Anti-Undead
     _type: Domain
     source: DATP
-    description: '_The sun, all-seeing and eternal, is the center of the sky and of
-      many pantheons._
-  
-  
-      (See the 13th Age Core Book p. 97 for details.)'
-    feats: []
+    description: |-
+      Every attack you make deals holy damage instead of other types of damage unless you choose otherwise for a specific attack.
+
+      **Invocation of Sun/Anti-Undead:** When you cast a daily cleric spell this battle, roll a d6.
+      If you roll less than or equal to the escalation die, you regain the use of that daily spell after the battle.
+    feats:
+      - tier: adventurer
+        description: "If your attack already deals holy damage, it gains the following bonus damage—adventurer tier: +1 damage; champion tier: +2 damage; epic tier: +3 damage."
+      - tier: champion
+        description: You gain a +2 bonus to all defenses against attacks by undead.
+      - tier: epic
+        description: The invocation also affects your allies' daily spells.
   - name: Ray of Light
     _type: Domain Spell 1
     source: DATP
@@ -3756,14 +3825,21 @@ abilities:
       \ spell: The difficulty of skill checks for the spell is now easy."
     feats: []
     usage: per-day
-  - name: Trickery / Illusion
+  - name: Trickery/Illusion
     _type: Domain
     source: DATP
-    description: '_Every family has its black sheep, every pantheon has its trickster._
-  
-  
-      (See the 13th Age Core Book p. 97 for details.)'
-    feats: []
+    description: |-
+      Once per battle, as a quick action when you are engaged with an enemy, roll a d20 (your 'trick die').
+
+      As a free action before the start of your next turn, give your trick die to a nearby ally or enemy who is about to make an attack roll.
+      The trick die result becomes the natural result of their roll instead.
+
+      **Invocation of Trickery/Illusion:** This battle, attacks against you by enemies that moved to engage you during their turn miss on natural odd rolls.
+    feats:
+      - tier: champion
+        description: Your trick die can be used for any one d20 roll, not just an attack.
+      - tier: epic
+        description: You get another trick die roll to use each battle the first time the escalation die reaches 3+.
   - name: Wink of the Trickster
     _type: Domain Spell 1
     source: DATP
@@ -3893,15 +3969,20 @@ abilities:
       of your current hit point total.'
     feats: []
     usage: per-day
-  - name: War / Leadership
+  - name: War/Leadership
     _type: Domain
     source: DATP
-    description: '_The fiercest battles are fought when both sides pray to the same
-      god._
-  
-  
-      (See the 13th Age Core Book p. 97 for details.)'
-    feats: []
+    description: |-
+      Once per turn when you make a melee attack against an enemy, hit or miss, your allies gain a +1 attack bonus against that enemy until the start of your next turn.
+
+      **Invocation of War/Leadership:** Increase the escalation die by 1.
+    feats:
+      - tier: adventurer
+        description: The attack no longer has to be a melee attack, close and ranged attacks also work.
+      - tier: champion
+        description: The bonus now applies against all enemies you attack; you no longer have to single out one foe if you use a spell that attacks multiple enemies.
+      - tier: epic
+        description: Allies now also get a damage bonus against such enemies equal to double your Charisma modifier.
   - name: Lead the Assault
     _type: Domain Spell 1
     source: DATP
