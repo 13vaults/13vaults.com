@@ -205,53 +205,50 @@ abilities:
   - name: Smite Powers
     _type: Class Feature
     source: DATP
-    description: When you activate your Smite Evil, choose one of your Smite powers
-      and gain its effect. You must choose the smite power before making the attack
-      roll, and before you know whether your smite hits or misses.
+    description: |-
+      When you activate your Smite Evil, choose one of your Smite powers and gain its
+      effect. You must choose the smite power before making the attack roll, and
+      before you know whether your smite hits or misses.
     feats: []
   - name: Smite Evil (DATP)
     _type: Class Feature
     source: DATP
     usage: per-battle
-    description: 'Close-quarters power; Once per battle, plus once per day per Charisma
-      modifier; Free Action
-
+    description: |-
+      Close-quarters power; Once per battle, plus once per day per Charisma modifier;
+      Free Action
       ___
   
-  
-      **Effect:**  Your next paladin melee attack deals 1d12 extra damage on a hit.
-      In addition, you can activate one smite power of your choice, which can be True
+      **Effect:**  Your next paladin melee attack deals 1d12 extra damage on a hit. In
+      addition, you can activate one smite power of your choice, which can be True
       Smite below, or a smite power gained through talents.
-  
   
       4th level paladin: 2d12 extra damage
   
-  
       6th level paladin: 3d12 extra damage
-  
   
       8th level paladin: 4d12 extra damage
   
-  
       10th level paladin: 5d12 extra damage
   
-  
       **True Smite (Smite Power):**  Deal half of both melee attack and smite extra
-      damage on a miss.'
+      damage on a miss.
     feats:
     - tier: adventurer
       description: ' Gain an additional use of Smite Evil per day.'
     - tier: champion
-      description: ' Your Smite attacks become uninterruptible. Enemies cannot trigger
-        interrupt actions against your smite attacks.'
+      description: |2-
+         Your Smite attacks become uninterruptible. Enemies cannot trigger interrupt
+        actions against your smite attacks.
     - tier: adventurer
       description: ' Gain a +4 bonus to the attack roll with True Smite.'
   - name: Bastion
     _type: Talent
     tier: adventurer
     source: DATP
-    description: "**Bastion Smite (Smite Power):**  On a hit, gain temporary hit points\
-      \ equal to the smite\u2019s bonus damage roll."
+    description: |-
+      **Bastion Smite (Smite Power):**  On a hit, gain temporary hit points equal to
+      the smite’s bonus damage roll.
     feats:
     - tier: adventurer
       description: ' Gain twice your level in temporary hit points on a miss.'
@@ -259,42 +256,47 @@ abilities:
     _type: Talent
     tier: adventurer
     source: DATP
-    description: '**Blessed Smite (Smite Power):**  On a hit, choose a nearby ally.
-      That ally gains a bonus to their next attack roll equal to your Wisdom or Charisma
-      modifier (whichever is higher).'
+    description: |-
+      **Blessed Smite (Smite Power):**  On a hit, choose a nearby ally. That ally
+      gains a bonus to their next attack roll equal to your Wisdom or Charisma
+      modifier (whichever is higher).
     feats:
     - tier: adventurer
-      description: ' Gain a bonus equal to your Wisdom or Charisma modifier to the Smite
-        attack roll.'
+      description: |2-
+         Gain a bonus equal to your Wisdom or Charisma modifier to the Smite attack
+        roll.
   - name: Divine Domain
     _type: Talent
     tier: adventurer
     source: DATP
-    description: "**Divine Smite (Smite Power):**  Hit or miss, you can use the at-will\
-      \ attack spell associated with your domain as a quick action this turn. If it\
-      \ is a ranged spell, you don\u2019t provoke opportunity attacks with it. This\
-      \ replaces the smite extra damage."
+    description: |-
+      **Divine Smite (Smite Power):**  Hit or miss, you can use the at-will attack
+      spell associated with your domain as a quick action this turn. If it is a ranged
+      spell, you don’t provoke opportunity attacks with it. This replaces the smite
+      extra damage.
     feats:
     - tier: adventurer
-      description: ' If you have used the invocation of your domain this battle, gain
-        a +1 bonus to both the smite and the spell attack.'
+      description: |2-
+         If you have used the invocation of your domain this battle, gain a +1 bonus to
+        both the smite and the spell attack.
   - name: Fearless
     _type: Talent
     tier: adventurer
     source: DATP
-    description: "**Courageous Smite (Smite Power):**  If you hit an enemy who has a\
-      \ fear aura or a fear-based attack, the target can\u2018t use that ability (save\
-      \ ends)."
+    description: |-
+      **Courageous Smite (Smite Power):**  If you hit an enemy who has a fear aura or
+      a fear-based attack, the target can‘t use that ability (save ends).
     feats:
     - tier: adventurer
-      description: " Deal extra damage equal to the enemy\u2018s level."
+      description: ' Deal extra damage equal to the enemy‘s level.'
   - name: Implacable
     _type: Talent
     tier: adventurer
     source: DATP
-    description: '**Conduit Smite (Smite Power):**  Choose an effect that you have successfully
+    description: |-
+      **Conduit Smite (Smite Power):**  Choose an effect that you have successfully
       saved against at the start of your turn (if any). On a hit, impose that effect
-      on the target.'
+      on the target.
     feats:
     - tier: adventurer
       description: ' Also gain the effect on a natural even miss.'
@@ -302,33 +304,38 @@ abilities:
     _type: Talent
     tier: adventurer
     source: DATP
-    description: '**Healing Smite (Smite Power):**  Spend a recovery to heal, but grant
-      the healing to a nearby ally.'
+    description: |-
+      **Healing Smite (Smite Power):**  Spend a recovery to heal, but grant the
+      healing to a nearby ally.
     feats:
     - tier: adventurer
-      description: " If the ally is staggered, they heal additional hit points equal\
-        \ to the smite\u2019s extra damage."
+      description: |2-
+         If the ally is staggered, they heal additional hit points equal to the smite’s
+        extra damage.
     - tier: champion
       description: ' On a natural 16+ on the attack roll, the recovery is free.'
     - tier: epic
       description: ' Both you and the ally gain the healing.'
-  - name: "Paladin\u2019s Challenge"
+  - name: Paladin’s Challenge
     _type: Talent
     tier: adventurer
     source: DATP
-    description: '**Exalted Challenge (Smite Power):**  If you use the talent to challenge
-      the target with your Smite Evil attack, the target takes holy damage equal to
-      your Smite Evil bonus damage whenever it attacks one of your allies.'
+    description: |-
+      **Exalted Challenge (Smite Power):**  If you use the talent to challenge the
+      target with your Smite Evil attack, the target takes holy damage equal to your
+      Smite Evil bonus damage whenever it attacks one of your allies.
     feats:
     - tier: adventurer
-      description: ' The target also takes the Smite Evil bonus damage if it uses any
-        method to no longer be engaged with you, such as disengage, pop free, or teleporting.'
+      description: |2-
+         The target also takes the Smite Evil bonus damage if it uses any method to no
+        longer be engaged with you, such as disengage, pop free, or teleporting.
   - name: Path of Universal Righteous Endeavor
     _type: Talent
     tier: adventurer
     source: DATP
-    description: "**Absolving Smite (Smite Power):**  On a hit, a nearby ally can save\
-      \ against a \u201Csave ends\u201D effect."
+    description: |-
+      **Absolving Smite (Smite Power):**  On a hit, a nearby ally can save against a
+      “save ends” effect.
     feats:
     - tier: adventurer
       description: ' The save has a bonus to the roll equal to your Charisma modifier.'
@@ -336,31 +343,38 @@ abilities:
     _type: Talent
     tier: adventurer
     source: DATP
-    description: '**Sickening Smite (Smite Power):**  On a hit, the target has disadvantage
-      on their next attack roll against you.'
+    description: |-
+      **Sickening Smite (Smite Power):**  On a hit, the target has disadvantage on
+      their next attack roll against you.
     feats:
     - tier: adventurer
-      description: ' If the target misses with its next attack, it takes ongoing negative
-        energy damage equal to three times your level.'
+      description: |2-
+         If the target misses with its next attack, it takes ongoing negative energy
+        damage equal to three times your level.
   - name: Conviction
     _type: Talent
     source: DATP
-    description: "Define three moral convictions for your character, such as \u201C\
-      protect the innocent,\u201D \u201Cspeak the truth,\u201D and \u201Cnever turn\
-      \ down a challenge.\u201D When you make a skill check while acting based on one\
-      \ of your convictions, you add a d6 conviction die to the roll.\n\nHowever, whenever\
-      \ you act against one of your convictions, you lose the use of the conviction\
-      \ die until the next full heal-up. If you have committed a gross violation, say\
-      \ you willfully lied while under oath in the above example, the conviction die\
-      \ becomes a penalty to all skill checks until you atone. Work out an appropriate\
-      \ atonement with your GM.\n\n**Smite of Conviction (Smite Power):**  If you have\
-      \ entered the battle based on your convictions, add your conviction die to the\
-      \ attack roll. In addition, the first time you miss with Smite of Conviction this\
-      \ battle, the smite is not expended."
+    description: |-
+      Define three moral convictions for your character, such as “protect the
+      innocent,” “speak the truth,” and “never turn down a challenge.” When you make a
+      skill check while acting based on one of your convictions, you add a d6
+      conviction die to the roll.
+  
+      However, whenever you act against one of your convictions, you lose the use of
+      the conviction die until the next full heal-up. If you have committed a gross
+      violation, say you willfully lied while under oath in the above example, the
+      conviction die becomes a penalty to all skill checks until you atone. Work out
+      an appropriate atonement with your GM.
+  
+      **Smite of Conviction (Smite Power):**  If you have entered the battle based on
+      your convictions, add your conviction die to the attack roll. In addition, the
+      first time you miss with Smite of Conviction this battle, the smite is not
+      expended.
     feats:
     - tier: champion
-      description: ' While in a battle that is aligned with your moral convictions,
-        add the conviction die to saves.'
+      description: |2-
+         While in a battle that is aligned with your moral convictions, add the
+        conviction die to saves.
     - tier: epic
       description: ' Your conviction die becomes a d8.'
     tier: adventurer
@@ -368,86 +382,102 @@ abilities:
     _type: Talent
     source: DATP
     description: |
-      You learn three runes _(see below)_, which you can use in battle via the Activate Rune power.
+      You learn three runes _(see below)_, which you can use in battle via the
+      Activate Rune power.
       When you activate a rune, you can also use its special smite power.
-      The direct connection to death has taken a toll on you. You are Sorta Dead, as per the necromancer talent (_13 True Ways_ p. 84),
+      The direct connection to death has taken a toll on you. You are Sorta Dead, as
+      per the necromancer talent (_13 True Ways_ p. 84),
       and you have a lesser version of their Wasting Away class feature.
-       
-      **Wasting Away:**  While Death Knights aren't quite as wasteful with their physical bodies as necromancers,
-      the necrotic powers still come at a price. If your Constitution modifier is +2 or higher,
+  
+      **Wasting Away:**  While Death Knights aren't quite as wasteful with their
+      physical bodies as necromancers,
+      the necrotic powers still come at a price. If your Constitution modifier is +2
+      or higher,
       you take a -1 penalty to attack rolls.
-
+  
       ___
       ### Activate Rune
       Close quarters power; At-will; Quick action
       ___
-      **Effect:** Gain the rune benefit of either the Blood, Death, or Frost rune until the end of the battle. You can only have one rune active at a time—using a different rune ends the current one. When you Smite Evil, you can use the active rune's smite power.
-
+      **Effect:** Gain the rune benefit of either the Blood, Death, or Frost rune
+      until the end of the battle. You can only have one rune active at a time—using a
+      different rune ends the current one. When you Smite Evil, you can use the active
+      rune's smite power.
     feats:
     - tier: adventurer
       description: |
-        _Total Devotion_ _(only for Paladin/Necromancer multiclass)_ : Your Death Knight paladin talent is also considered
-        a necromancer talent, which allows you to use its benefits with necromancer talents and spells.
-
+        _Total Devotion_ _(only for Paladin/Necromancer multiclass)_ : Your Death Knight
+        paladin talent is also considered
+        a necromancer talent, which allows you to use its benefits with necromancer
+        talents and spells.
     - tier: champion
-      description: ' You gain a necromancer spell as a bonus power, at two levels below
-        your class level. You can replace Intelligence with Charisma as the key ability
-        for the spell.'
+      description: |2-
+         You gain a necromancer spell as a bonus power, at two levels below your class
+        level. You can replace Intelligence with Charisma as the key ability for the
+        spell.
     - tier: epic
-      description: ' You can choose a second necromancer spell, also at two levels lower
-        than you class level.'
+      description: |2-
+         You can choose a second necromancer spell, also at two levels lower than you
+        class level.
     tier: adventurer
   - name: Blood Rune
     _type: Death Knight Rune
     source: DATP
     usage: at-will
-    description: '**Rune Benefit:**  When you hit with a melee attack, heal hit points
-      equal to your level.
+    description: |-
+      **Rune Benefit:**  When you hit with a melee attack, heal hit points equal to
+      your level.
   
-  
-      **Blood Smite (Smite Power):**  On a hit, heal hit points equal to the smite extra
-      damage.'
+      **Blood Smite (Smite Power):**  On a hit, heal hit points equal to the smite
+      extra damage.
     feats:
     - tier: adventurer
       description: ' On a critical hit with a melee attack, you can heal using a recovery.'
     - tier: champion
       description: ' On a hit, end any ongoing damage you are currently taking.'
     - tier: epic
-      description: ' Also deal the smite extra damage and heal hit points equal to that
-        amount on a miss.'
+      description: |2-
+         Also deal the smite extra damage and heal hit points equal to that amount on a
+        miss.
     tier: adventurer
   - name: Death Rune
     _type: Death Knight Rune
     source: DATP
     usage: at-will
-    description: "**Effect:** \_Increase your critical threat range with Paladin melee\
-      \ attacks by 1, and they deal negative energy damage. When you drop a non-mook\
-      \ enemy to zero hp, deal negative energy damage equal to your Smite bonus damage\
-      \ to another nearby enemy.\n\n**Raise Minion (Smite Power):**  If you drop a non-minion\
-      \ enemy to zero hp with the attack, you create a Crumbling Skeleton mook at the\
-      \ start of your next turn. The mook fights for you according to the summoning\
-      \ rules (p. XX) until the end of the battle, or until it is destroyed.\n\nStarting\
-      \ at 3rd level, you can create a Just-Ripped-Free Skeleton mook (_13 True Ways_\
-      \ p. 88) of your level or lower instead."
+    description: |-
+      **Effect:**  Increase your critical threat range with Paladin melee attacks by
+      1, and they deal negative energy damage. When you drop a non-mook enemy to zero
+      hp, deal negative energy damage equal to your Smite bonus damage to another
+      nearby enemy.
+  
+      **Raise Minion (Smite Power):**  If you drop a non-minion enemy to zero hp with
+      the attack, you create a Crumbling Skeleton mook at the start of your next turn.
+      The mook fights for you according to the summoning rules (p. XX) until the end
+      of the battle, or until it is destroyed.
+  
+      Starting at 3rd level, you can create a Just-Ripped-Free Skeleton mook (_13 True
+      Ways_ p. 88) of your level or lower instead.
     feats:
     - tier: epic
-      description: "\_Deal the damage to ALL other nearby enemies."
+      description:  Deal the damage to ALL other nearby enemies.
     - tier: adventurer
-      description: " If you hit with the smite, you can use the necromancer\u2018s Deathknell\
-        \ talent on the target as a free action, even if you don\u2018t have that talent."
+      description: |2-
+         If you hit with the smite, you can use the necromancer‘s Deathknell talent on
+        the target as a free action, even if you don‘t have that talent.
     - tier: champion
-      description: ' If you kill a large or huge creature, the skeleton mook you create
-        has twice the hit points and deals double damage.'
+      description: |2-
+         If you kill a large or huge creature, the skeleton mook you create has twice
+        the hit points and deals double damage.
     tier: adventurer
   - name: Frost Rune
     _type: Death Knight Rune
     source: DATP
     usage: at-will
-    description: '**Rune Benefit:**  Your melee attacks deal cold damage. When you hit
-      with a melee attack, deal extra damage equal to your level.
+    description: |-
+      **Rune Benefit:**  Your melee attacks deal cold damage. When you hit with a
+      melee attack, deal extra damage equal to your level.
   
-  
-      **Frost Smite (Smite Power):**  On a hit, the target is stuck (save ends).'
+      **Frost Smite (Smite Power):**  On a hit, the target is stuck (save ends).
     feats:
     - tier: adventurer
       description: ' On a critical hit with a melee attack, deal 1d6 extra cold damage
@@ -455,34 +485,44 @@ abilities:
     - tier: champion
       description: ' The target is also vulnerable to cold (save ends both).'
     - tier: epic
-      description: " If the target of your smite power is already stuck or vulnerable\
-        \ to cold, it is frozen (can\u2019t take actions) until the end of your next\
-        \ turn."
+      description: |2-
+         If the target of your smite power is already stuck or vulnerable to cold, it is
+        frozen (can’t take actions) until the end of your next turn.
     tier: adventurer
   - name: Divine Mount
     _type: Talent
     source: DATP
-    description: "**Note:**  This talent requires the Mounted Combat rules published\
-      \ in _13th Age Monthly #20_.\n\nYou can summon a warhorse (see Mounted Combat\
-      \ page 8 for stats) from the celestial realms as a standard action, which stays\
-      \ as long as you require. You can dismiss it as a free action. If your mount is\
-      \ killed, you can summon it again after your next full heal-up.\n\nWhile you are\
-      \ mounted, you and your mount act as per the mounted combat rules. You can perform\
-      \ two mounted combat actions per battle (one per round). However, due to an empathic\
-      \ link with your mount, you don\u2019t require a mounted combat check \u2014 the\
-      \ action always succeeds.\n\nIf you feel a different mount would fit your PC better,\
-      \ you can expand your choices with the adventurer feat.\n\n**Special:**  You can\
-      \ pick the feats below individually. You don\u2019t need to take them in order.\n\
-      \n**Smite of the Chevalier (Smite Power):**  Your mount also gains the Smite Evil\
-      \ extra damage if it hits with an attack on the same turn."
+    description: |-
+      **Note:**  This talent requires the Mounted Combat rules published in _13th Age
+      Monthly #20_.
+  
+      You can summon a warhorse (see Mounted Combat page 8 for stats) from the
+      celestial realms as a standard action, which stays as long as you require. You
+      can dismiss it as a free action. If your mount is killed, you can summon it
+      again after your next full heal-up.
+  
+      While you are mounted, you and your mount act as per the mounted combat rules.
+      You can perform two mounted combat actions per battle (one per round). However,
+      due to an empathic link with your mount, you don’t require a mounted combat
+      check — the action always succeeds.
+  
+      If you feel a different mount would fit your PC better, you can expand your
+      choices with the adventurer feat.
+  
+      **Special:**  You can pick the feats below individually. You don’t need to take
+      them in order.
+  
+      **Smite of the Chevalier (Smite Power):**  Your mount also gains the Smite Evil
+      extra damage if it hits with an attack on the same turn.
     feats:
     - tier: adventurer
       description: ' You can perform a third mounted combat action each battle.'
     - tier: adventurer
-      description: ' You can choose one of the problematic or Praxian mounts in the
-        mounted combat rules as your steed. Or you can summon an aquatic mount, like
-        a shark or dolphin. You can take this feat multiple times, to gain access to
-        different types of mounts.'
+      description: |2-
+         You can choose one of the problematic or Praxian mounts in the mounted combat
+        rules as your steed. Or you can summon an aquatic mount, like a shark or
+        dolphin. You can take this feat multiple times, to gain access to different
+        types of mounts.
     - tier: champion
       description: ' Your mount deals holy damage.'
     - tier: epic
@@ -493,30 +533,31 @@ abilities:
   - name: Exorcist
     _type: Talent
     source: DATP
-    description: 'Increase your critical threat range against devils and demons by 2.
-  
+    description: |-
+      Increase your critical threat range against devils and demons by 2.
   
       Once per battle or scene, you can concentrate as a quick action and sense the
       presence of demons within the nearby or far away area.
   
-  
-      **Smite of Interdiction (Smite Power):**  On a hit, the target takes ongoing holy
-      damage equal to twice your level. If the target is a demon or devil, it is also
-      hampered (save ends both).'
+      **Smite of Interdiction (Smite Power):**  On a hit, the target takes ongoing
+      holy damage equal to twice your level. If the target is a demon or devil, it is
+      also hampered (save ends both).
     feats:
     - tier: adventurer
       description: ' Gain a +1 bonus to attacks against devils and demons.'
     - tier: epic
       description: ' Gain a +1 bonus to all defenses against devils and demons.'
     - tier: champion
-      description: ' When you hit a staggered devil or demon with a natural 16+ on the
-        attack roll, you banish the creature back to the Abyss.'
+      description: |2-
+         When you hit a staggered devil or demon with a natural 16+ on the attack roll,
+        you banish the creature back to the Abyss.
     tier: adventurer
   - name: Fallen Soul
     _type: Talent
     source: DPAS
-    description: Choose one warlock spell of your level or lower. That spell is now
-      part of your powers. You can change the spell at each full heal-up.
+    description: |-
+      Choose one warlock spell of your level or lower. That spell is now part of your
+      powers. You can change the spell at each full heal-up.
     feats:
     - tier: adventurer
       description: ' Choose a warlock pact. You can use the pact power once per day.'
@@ -528,31 +569,36 @@ abilities:
   - name: Fist of the Crusader
     _type: Talent
     source: DATP
-    description: "In battle, when you are staggered the first time, roll 1d4 and gain\
-      \ a Crusader\u2019s Boon from the table below. Each boon gives you a special interrupt\
-      \ action that you can use at-will until the end of the battle.\n\n1. _Crusader\u2019\
-      s Thorns:_ When an enemy makes a melee attack against you and the natural attack\
-      \ roll is lower than your Strength score, deal damage equal to your Strength modifier\
-      \ (x2 at 5th level; x3 at 8th).\n2. _Crusader\u2019s Heart:_ When an enemy makes\
-      \ an attack against you and the natural attack roll is lower than your Constitution\
-      \ score, reduce the damage by your Constitution modifier (x2 at 5th level; x3\
-      \ at 8th) and immediately save against any \u201Csave ends\u201D effects of that\
-      \ attack.\n3. _Crusader\u2019s Gaze:_ When an enemy makes an attack against you\
-      \ and the natural roll is lower than your Wisdom score, gain advantage on your\
-      \ next attack roll against the target.\n4. _Crusader\u2019s Defiance:_ When an\
-      \ enemy makes an\_ attack against you and the natural attack roll is lower than\
-      \ your Charisma score, the enemy is struck by fear (dazed and can\u2019t use the\
-      \ escalation die) until the end of its next turn.\n\n\n**Crusader\u2019s Fist\
-      \ (Smite Power):**  If the target has fewer hit points that your maximum after\
-      \ you hit, it is cowering in fear (-4 to attacks and can\u2019t use the escalation\
-      \ die) until the end of your next turn."
+    description: |-
+      In battle, when you are staggered the first time, roll 1d4 and gain a Crusader’s
+      Boon from the table below. Each boon gives you a special interrupt action that
+      you can use at-will until the end of the battle.
+  
+      1. _Crusader’s Thorns:_ When an enemy makes a melee attack against you and the
+      natural attack roll is lower than your Strength score, deal damage equal to your
+      Strength modifier (x2 at 5th level; x3 at 8th).
+      2. _Crusader’s Heart:_ When an enemy makes an attack against you and the natural
+      attack roll is lower than your Constitution score, reduce the damage by your
+      Constitution modifier (x2 at 5th level; x3 at 8th) and immediately save against
+      any “save ends” effects of that attack.
+      3. _Crusader’s Gaze:_ When an enemy makes an attack against you and the natural
+      roll is lower than your Wisdom score, gain advantage on your next attack roll
+      against the target.
+      4. _Crusader’s Defiance:_ When an enemy makes an  attack against you and the
+      natural attack roll is lower than your Charisma score, the enemy is struck by
+      fear (dazed and can’t use the escalation die) until the end of its next turn.
+  
+  
+      **Crusader’s Fist (Smite Power):**  If the target has fewer hit points that your
+      maximum after you hit, it is cowering in fear (-4 to attacks and can’t use the
+      escalation die) until the end of your next turn.
     feats:
     - tier: champion
-      description: "For one battle per day, gain the Crusader\u2019s Boon at the start\
-        \ of your first turn."
+      description: |-
+        For one battle per day, gain the Crusader’s Boon at the start of your first
+        turn.
     - tier: epic
-      description: "When you gain the Crusader\u2019s Boon, you can spend a recovery\
-        \ to heal."
+      description: When you gain the Crusader’s Boon, you can spend a recovery to heal.
     - tier: adventurer
       description: |
         **Crusader's Fist**: Against demons, the fear effect is (save ends).
@@ -560,12 +606,12 @@ abilities:
   - name: Glory of the Empire
     _type: Talent
     source: DATP
-    description: 'Choose one tactic from the Commander list up to your level and add
-      it to your powers. You can change this tactic during a full heal-up.
-  
+    description: |-
+      Choose one tactic from the Commander list up to your level and add it to your
+      powers. You can change this tactic during a full heal-up.
   
       **Glorious Smite (Smite Power):**  If you hit, the target has disadvantage on
-      their next attack roll if that attack does not target you.'
+      their next attack roll if that attack does not target you.
     feats:
     - tier: adventurer
       description: ' While you are conscious, your nearby allies gain a +1 bonus to
@@ -578,12 +624,13 @@ abilities:
   - name: Golden Legion
     _type: Talent
     source: DATP
-    description: 'You gain two powers, Exalted Breath and Indomitability, and the Roar
-      of the Golden smite power.
+    description: |-
+      You gain two powers, Exalted Breath and Indomitability, and the Roar of the
+      Golden smite power.
   
-  
-      **Roar of the Golden (Smite Power):**  If you have used Exalted Breath this battle,
-      regain your breath weapon if the natural attack roll of your smite is 16+.'
+      **Roar of the Golden (Smite Power):**  If you have used Exalted Breath this
+      battle, regain your breath weapon if the natural attack roll of your smite is
+      16+.
     feats:
     - tier: adventurer
       description: ' You gain _resist demon attacks_ 16+.'
@@ -591,31 +638,25 @@ abilities:
   - name: Exalted Breath
     _type: Bonus Power
     source: DATP
-    description: 'Close-quarters spell; Breath weapon; Daily
-  
+    description: |-
+      Close-quarters spell; Breath weapon; Daily
   
       ---
   
   
-  
       **Target:**  1d2 nearby enemies in a group
-  
   
       **Attack:**  Charisma + Level vs. PD
   
-  
       **Hit:**  1d8 per level + Charisma fire damage
   
-  
-      _Natural even hit:_ Three times your level ongoing fire damage and the target
-      is dazed (save ends both).
-  
+      _Natural even hit:_ Three times your level ongoing fire damage and the target is
+      dazed (save ends both).
   
       **Miss:**  Half damage
   
-  
-      _Breath Weapon:_ For the rest of the battle, roll a d20 at the start of your turn.
-      On a 16+, you can use Exalted Breath again on that turn if you wish.'
+      _Breath Weapon:_ For the rest of the battle, roll a d20 at the start of your
+      turn. On a 16+, you can use Exalted Breath again on that turn if you wish.
     feats:
     - tier: champion
       description: ' Target 1d3 enemies.'
@@ -624,244 +665,275 @@ abilities:
   - name: Indomitability
     _type: Bonus Power
     source: DATP
-    description: 'Close-quarters spell; Daily; Quick action
-  
+    description: |-
+      Close-quarters spell; Daily; Quick action
   
       ---
   
   
-  
-      Effect: Spend a recovery to heal, and cancel all effects and conditions on yourself,
-      including ongoing damage. You can use indomitability even if you are otherwise
-      prevented from taking actions, such as from being stunned.'
+      Effect: Spend a recovery to heal, and cancel all effects and conditions on
+      yourself, including ongoing damage. You can use indomitability even if you are
+      otherwise prevented from taking actions, such as from being stunned.
     feats:
     - tier: epic
-      description: ' Gain an additional use of Indomitability per day for each icon
-        relationship point you have with the Great Gold Wyrm.'
+      description: |2-
+         Gain an additional use of Indomitability per day for each icon relationship
+        point you have with the Great Gold Wyrm.
     tier: adventurer
     usage: per-day
   - name: Grey Guard
     _type: Talent
     source: DATP
-    description: "You gain the Prince of Shadows\u2019 Luck blessing, which allows you\
-      \ to reroll a skill check or a save once per day per Charisma modifier.\n\n**Lucky\
-      \ Smite (Smite Power):**  You can expend one of your Luck blessings to reroll\
-      \ the Smite Evil attack roll."
+    description: |-
+      You gain the Prince of Shadows’ Luck blessing, which allows you to reroll a
+      skill check or a save once per day per Charisma modifier.
+  
+      **Lucky Smite (Smite Power):**  You can expend one of your Luck blessings to
+      reroll the Smite Evil attack roll.
     feats:
     - tier: adventurer
       description: ' You gain 3 points towards a background in disguise and espionage.'
     - tier: champion
-      description: ' You gain an extra daily use of your Luck blessing for each icon
-        relationship point with the Prince of Shadows.'
+      description: |2-
+         You gain an extra daily use of your Luck blessing for each icon relationship
+        point with the Prince of Shadows.
     - tier: epic
-      description: " When you roll a 4 on an icon relationship die with the Prince of\
-        \ Shadows, you can switch that icon relationship die for a 5 with a different\
-        \ icon. This represents the Prince of Shadows\u2019 network within the other\
-        \ icon\u2019s organization."
+      description: |2-
+         When you roll a 4 on an icon relationship die with the Prince of Shadows, you
+        can switch that icon relationship die for a 5 with a different icon. This
+        represents the Prince of Shadows’ network within the other icon’s organization.
     tier: adventurer
   - name: Guardian of the Sacred Grove
     _type: Talent
     source: DATP
-    description: "Gain a flexible attack from the Warrior Druid list. You can trigger\
-      \ the maneuver with paladin melee basic attacks, but not with smites, unless you\
-      \ use Nature\u2019s Smite below.\n\n**Nature\u2019s Smite (Smite Power):**  You\
-      \ can trigger your Warrior Druid flexible attack with this smite. If the target\
-      \ is a creature that\u2019s not native to the current terrain, you have advantage\
-      \ on the attack roll, and you can trigger your Warrior Druid flexible maneuver\
-      \ based on either d20 roll."
+    description: |-
+      Gain a flexible attack from the Warrior Druid list. You can trigger the maneuver
+      with paladin melee basic attacks, but not with smites, unless you use Nature’s
+      Smite below.
+  
+      **Nature’s Smite (Smite Power):**  You can trigger your Warrior Druid flexible
+      attack with this smite. If the target is a creature that’s not native to the
+      current terrain, you have advantage on the attack roll, and you can trigger your
+      Warrior Druid flexible maneuver based on either d20 roll.
     feats:
     - tier: adventurer
-      description: " Choose one terrain from the druid\u2019s Terrain Caster talent,\
-        \ and gain a daily spell of your level or lower from its list. You can switch\
-        \ Wisdom for Charisma in the spell\u2019s description. You don\u2019t need to\
-        \ be in the terrain to cast it."
+      description: |2-
+         Choose one terrain from the druid’s Terrain Caster talent, and gain a daily
+        spell of your level or lower from its list. You can switch Wisdom for Charisma
+        in the spell’s description. You don’t need to be in the terrain to cast it.
     - tier: champion
       description: ' You can cast the Wild Heal spell from the Wild Healer talent twice
         per day.'
     - tier: epic
-      description: ' Choose either a second flexible attack, a second daily spell from
-        the same terrain, OR a third daily use of Wild Heal.'
+      description: |2-
+         Choose either a second flexible attack, a second daily spell from the same
+        terrain, OR a third daily use of Wild Heal.
     tier: adventurer
   - name: Guardian of the Vault
     _type: Talent
     source: DATP
-    description: "You are especially trained in dealing with magic items and artifacts,\
-      \ both the beneficial and the dangerous kind. You gain the rogue\u2019s Trap Sense\
-      \ ability. In addition to traps, you can use this ability against trapped or cursed\
-      \ magic items and artifacts.\n\nWhen you wear heavy armor, reduce the damage you\
-      \ take from hits by non-mook enemies by your level. (You swear that this is a\
-      \ blessing by the Dwarf King and only works with armor of fine dwarven craftsmanship.)\n\
-      \n**Hammering Smite (Smite Power):**  Reroll all natural 1s and 2s on the damage\
-      \ dice with your Smite Evil. This applies to all damage dice, not just the extra\
-      \ damage."
+    description: |-
+      You are especially trained in dealing with magic items and artifacts, both the
+      beneficial and the dangerous kind. You gain the rogue’s Trap Sense ability. In
+      addition to traps, you can use this ability against trapped or cursed magic
+      items and artifacts.
+  
+      When you wear heavy armor, reduce the damage you take from hits by non-mook
+      enemies by your level. (You swear that this is a blessing by the Dwarf King and
+      only works with armor of fine dwarven craftsmanship.)
+  
+      **Hammering Smite (Smite Power):**  Reroll all natural 1s and 2s on the damage
+      dice with your Smite Evil. This applies to all damage dice, not just the extra
+      damage.
     feats:
     - tier: adventurer
-      description: ' You gain a bonus to magic item power recharge rolls equal to your
-        Charisma modifier.'
+      description: |2-
+         You gain a bonus to magic item power recharge rolls equal to your Charisma
+        modifier.
     - tier: champion
-      description: ' Once per day, you can concentrate on a known, named artifact to
-        gain insight into its lore or a vision of its location.'
+      description: |2-
+         Once per day, you can concentrate on a known, named artifact to gain insight
+        into its lore or a vision of its location.
     - tier: epic
       description: ' Increase the damage reduction to your level + 5.'
     tier: adventurer
   - name: Infernal Devotion
     _type: Talent
     source: DATP
-    description: "Choose one demonologist spell of your level or lower. The spell is\
-      \ now part of your powers, and you are considered an initiate of that path for\
-      \ the spell\u2019s effect. You can choose any spell that is not a summoning spell.\
-      \ You can switch the spell after a full heal-up.\n\nThe smite power you gain from\
-      \ this talent depends on the demonologist path you choose the spell from.\n\n\
-      **Corrupt Smite (Smite Power):**  Your smite deals poison damage. On a natural\
-      \ even hit, deal ongoing poison damage equal to the smite damage to a different,\
-      \ random nearby enemy.\n\n**Flaming Smite (Smite Power):**  Your smite deals fire\
-      \ damage. At the start of your next turn, deal fire damage equal to the smite\
-      \ bonus damage to all enemies engaged with you.\n\n**Slaughtering Smite (Smite\
-      \ Power):**  Increase your Smite Evil extra damage dice to d20."
+    description: |-
+      Choose one demonologist spell of your level or lower. The spell is now part of
+      your powers, and you are considered an initiate of that path for the spell’s
+      effect. You can choose any spell that is not a summoning spell. You can switch
+      the spell after a full heal-up.
+  
+      The smite power you gain from this talent depends on the demonologist path you
+      choose the spell from.
+  
+      **Corrupt Smite (Smite Power):**  Your smite deals poison damage. On a natural
+      even hit, deal ongoing poison damage equal to the smite damage to a different,
+      random nearby enemy.
+  
+      **Flaming Smite (Smite Power):**  Your smite deals fire damage. At the start of
+      your next turn, deal fire damage equal to the smite bonus damage to all enemies
+      engaged with you.
+  
+      **Slaughtering Smite (Smite Power):**  Increase your Smite Evil extra damage
+      dice to d20.
     feats:
     - tier: adventurer
-      description: ' Gain a resistance based on the path of your chosen spell: _resist
-        poison 12+_ for corruption, _resist fire_ 12+ for flame, and _resist melee attacks_
-        10+ for slaughter.'
+      description: |2-
+         Gain a resistance based on the path of your chosen spell: _resist poison 12+_
+        for corruption, _resist fire_ 12+ for flame, and _resist melee attacks_ 10+ for
+        slaughter.
     - tier: champion
-      description: ' Choose a second demonologist spell, at two levels lower. The spell
-        must be from the same path as your other spell.'
+      description: |2-
+         Choose a second demonologist spell, at two levels lower. The spell must be from
+        the same path as your other spell.
     - tier: epic
-      description: ' On a natural 18+ on the attack roll with your Smite Evil, you gain
-        a free use of your chosen demonologist spell for this battle.'
+      description: |2-
+         On a natural 18+ on the attack roll with your Smite Evil, you gain a free use
+        of your chosen demonologist spell for this battle.
     tier: adventurer
   - name: Inquisitor
     _type: Talent
     source: DATP
-    description: "You gain a 5-point background as an inquisitor. When you make a skill\
-      \ check to detect a lie, illusion, or falsehood, and the check is a natural even\
-      \ failure, reroll the check once.\n\n**Inquisitor\u2019s Smite (Smite Power):**\
-      \  On a hit, the target is hampered until the end of your next turn. The target\
-      \ can choose to take damage equal to 10 times your level to shake off the effect."
+    description: |-
+      You gain a 5-point background as an inquisitor. When you make a skill check to
+      detect a lie, illusion, or falsehood, and the check is a natural even failure,
+      reroll the check once.
+  
+      **Inquisitor’s Smite (Smite Power):**  On a hit, the target is hampered until
+      the end of your next turn. The target can choose to take damage equal to 10
+      times your level to shake off the effect.
     feats:
     - tier: champion
-      description: " You gain the Counter-magic ability of the Wizard\u2019s High Arcana\
-        \ talent."
+      description: ' You gain the Counter-magic ability of the Wizard’s High Arcana
+        talent.'
     - tier: epic
       description: ' You can now cast Counter-magic twice per battle.'
     - tier: adventurer
       description: |
-       **Inquisitor's Smite**: On a natural 16+ with Smite Evil, the hampered effect is now (save ends).
+        **Inquisitor's Smite**: On a natural 16+ with Smite Evil, the hampered effect is
+        now (save ends).
     tier: adventurer
   - name: Lightbringer
     _type: Talent
     source: DATP
-    description: "You gain _resist damage from undead_ 12+ (5th level: 14+; 8th level:\
-      \ 16+).\n\nYou gain the cleric spell Turn Undead\_as a bonus power.\n\n**Radiant\
-      \ Smite (Smite Power):**  Your Smite Evil attack deals holy damage. Against undead,\
-      \ set the smite bonus damage dice as the maximum."
+    description: |-
+      You gain _resist damage from undead_ 12+ (5th level: 14+; 8th level: 16+).
+  
+      You gain the cleric spell Turn Undead as a bonus power.
+  
+      **Radiant Smite (Smite Power):**  Your Smite Evil attack deals holy damage.
+      Against undead, set the smite bonus damage dice as the maximum.
     feats:
     - tier: adventurer
       description: ' You gain advantage on skill checks to sense the presence of undead.'
     - tier: champion
-      description: ' When you resist damage from an attack by an undead creature, you
-        are also immune to any non-damage effects of the attack.'
+      description: |2-
+         When you resist damage from an attack by an undead creature, you are also
+        immune to any non-damage effects of the attack.
     - tier: epic
       description: ' You gain a +1 bonus to attacks and defenses against undead.'
     tier: adventurer
   - name: Lorekeeper
     _type: Talent
     source: DATP
-    description: "You gain a 5-point background to represent your excellent academic\
-      \ training. In addition, you can reroll a natural even failure on a skill check\
-      \ to remember facts or knowledge once per scene.\n\n**Smite the Ignorant (Smite\
-      \ Power):**  Target the enemy\u2019s MD with your Smite Evil attack roll."
+    description: |-
+      You gain a 5-point background to represent your excellent academic training. In
+      addition, you can reroll a natural even failure on a skill check to remember
+      facts or knowledge once per scene.
+  
+      **Smite the Ignorant (Smite Power):**  Target the enemy’s MD with your Smite
+      Evil attack roll.
     feats:
     - tier: adventurer
-      description: ' You gain a +1 bonus to all defenses when defending scholars, tomes
-        of knowledge, or places of learning.'
+      description: |2-
+         You gain a +1 bonus to all defenses when defending scholars, tomes of
+        knowledge, or places of learning.
     - tier: champion
-      description: '**Smite the Ignorant**: If you hit a target with a lower MD than your own, you also daze
-        it (-4 to attacks) until the end of your next turn.'
+      description: |-
+        **Smite the Ignorant**: If you hit a target with a lower MD than your own, you
+        also daze it (-4 to attacks) until the end of your next turn.
     tier: adventurer
   - name: Stormhammer
     _type: Talent
     source: DATP
-    description: 'When you hit with a melee attack, add lightning damage equal to your
+    description: |-
+      When you hit with a melee attack, add lightning damage equal to your
       Constitution modifier (x2 at 5th level; x3 at 8th).
   
-  
-      **Stormhammer (Smite power):**  You can throw your melee weapon to make your Smite
-      Evil attack as a ranged attack against a nearby or far away enemy, using Strength
-      and your melee WEAPON dice. The weapon returns to your hand.'
+      **Stormhammer (Smite power):**  You can throw your melee weapon to make your
+      Smite Evil attack as a ranged attack against a nearby or far away enemy, using
+      Strength and your melee WEAPON dice. The weapon returns to your hand.
     feats:
     - tier: adventurer
       description: ' You gain _resist lightning and thunder_ 16+.'
     - tier: champion
-      description: '**Stormhammer**: On a natural even hit, you can teleport to engage the target as
-        a free action.'
+      description: |-
+        **Stormhammer**: On a natural even hit, you can teleport to engage the target as
+        a free action.
     - tier: epic
-      description: '**Stormhammer**: On an even miss, make a second attack against a different nearby
-        enemy.'
+      description: |-
+        **Stormhammer**: On an even miss, make a second attack against a different
+        nearby enemy.
     tier: adventurer
   - name: Valiant of the Star Court
     _type: Talent
     source: DATP
-    description: 'Once per battle, you can end a condition you are under as a free action.
-      The conditions you can end with this ability are taught by the elven races: dazed
-      (high elves), stuck (wood elves), ongoing poison damage (dark elves), and hampered
-      (half-elves).
-  
+    description: |
+      Once per battle, you can end a condition you are under as a free action. The
+      conditions you can end with this ability are taught by the elven races: dazed
+      (high elves), stuck (wood elves), ongoing poison damage (dark elves), and
+      hampered (half-elves).
   
       **Elven Crown Smite (Smite Power):**  On a hit, roll 1d4 and put the following
       condition on the target.
   
-  
       1. Dazed (save ends)
-  
       2. Stuck (save ends)
-  
       3. Three times your level in ongoing poison damage
-  
       4. Hampered until the end of your next turn
-  
-      '
     feats:
     - tier: adventurer
       description: |
-       You gain three points towards an elite guard background that covers
-        not only prevention measures against poison and assassination but also court
-        etiquette and diplomacy.
-        _(not required for champion feat)_
+        You gain three points towards an elite guard background that covers
+         not only prevention measures against poison and assassination but also court
+         etiquette and diplomacy.
+         _(not required for champion feat)_
     - tier: champion
-      description: 'You can use this talent twice per battle.'
+      description: You can use this talent twice per battle.
     tier: adventurer
   - name: Avenger
     _type: Talent
     source: DATP
-    description: 'Once per battle, when an enemy you are engaged with makes an attack
-      against one of your allies, you can make a melee attack against that enemy as
-      an interrupt action after it makes the attack. You can Smite Evil with that attack.
-  
+    description: |-
+      Once per battle, when an enemy you are engaged with makes an attack against one
+      of your allies, you can make a melee attack against that enemy as an interrupt
+      action after it makes the attack. You can Smite Evil with that attack.
   
       **Avenging Smite (Smite Power):**  If a nearby ally is dying, you have advantage
       on the attack roll. If both attack rolls hit, the target is stunned until the
-      end of its next turn.'
+      end of its next turn.
     feats:
     - tier: champion
-      description: ' You can use this talent at-will (but you are still limited to one
-        interrupt action between your turns).'
+      description: |2-
+         You can use this talent at-will (but you are still limited to one interrupt
+        action between your turns).
     tier: champion
   - name: Champion of Pain
     _type: Talent
     source: DATP
-    description: 'While you are staggered, increase your WEAPON and smite damage dice,
-      as well as your recovery dice, by one step. (1d4 -> 1d6 -> 1d8 -> 1d10 -> 1d12
-      -> 2d6)
-  
+    description: |-
+      While you are staggered, increase your WEAPON and smite damage dice, as well as
+      your recovery dice, by one step. (1d4 -> 1d6 -> 1d8 -> 1d10 -> 1d12 -> 2d6)
   
       The first time you are staggered in a battle, you gain advantage on your next
       melee attack.
   
-  
       **Smite of Suffering (Smite Power):**  If you hit, you lose hit points equal to
       the smite extra damage, and deal ongoing damage to the target equal to the smite
-      extra damage.'
+      extra damage.
     feats:
     - tier: champion
       description: ' Also gain the ongoing damage and hit point loss on a miss.'
@@ -872,33 +944,37 @@ abilities:
   - name: Cleansing Touch
     _type: Talent
     source: DATP
-    description: 'Once per day per Charisma modifier, you can touch an adjacent ally
-      (or yourself) as a quick action to end a condition they are under. You can end
-      the condition regardless of whether it requires a save or not.
-  
+    description: |-
+      Once per day per Charisma modifier, you can touch an adjacent ally (or yourself)
+      as a quick action to end a condition they are under. You can end the condition
+      regardless of whether it requires a save or not.
   
       **Cleansing Smite (Smite Power):**  On a hit, you cleanse the target. Cleansed
       targets cannot put effects on enemies or allies (save ends). This also ends any
       effects that are currently active. The target can still deal damage normally,
-      and they can still use powers that affect themselves, just not other creatures.'
+      and they can still use powers that affect themselves, just not other creatures.
     feats:
     - tier: champion
-      description: ' You can use this ability on nearby allies (they no longer have
-        to be next to you).'
+      description: |2-
+         You can use this ability on nearby allies (they no longer have to be next to
+        you).
     - tier: epic
-      description: ' You can expend multiple uses of this talent with the same quick
-        action, and target a number of allies (including yourself) equal to the number
-        of uses spent.'
+      description: |2-
+         You can expend multiple uses of this talent with the same quick action, and
+        target a number of allies (including yourself) equal to the number of uses
+        spent.
     tier: champion
   - name: Shield of Devotion
     _type: Talent
     source: DATP
-    description: "Once per battle, when a nearby ally is hit by an attack, you can grant\
-      \ the ally a normal save (11+). If the save is successful, the target takes no\
-      \ damage from the attack, and all its effects are negated. On a failure, the ally\
-      \ takes half damage and effects apply.\n\n**Devoted Smite (Smite Power):**  On\
-      \ a hit, gain a free use of Shield of Devotion this battle against the target\u2019\
-      s attack against one of your allies."
+    description: |-
+      Once per battle, when a nearby ally is hit by an attack, you can grant the ally
+      a normal save (11+). If the save is successful, the target takes no damage from
+      the attack, and all its effects are negated. On a failure, the ally takes half
+      damage and effects apply.
+  
+      **Devoted Smite (Smite Power):**  On a hit, gain a free use of Shield of
+      Devotion this battle against the target’s attack against one of your allies.
     feats:
     - tier: champion
       description: ' If you are engaged with the attacker, the save is an easy save
@@ -907,24 +983,27 @@ abilities:
   - name: Sword of Faith
     _type: Talent
     source: DATP
-    description: "You gain a +1 bonus to melee attack rolls.\n\n**Guiding Smite (Smite\
-      \ Power):**  On a hit, the target is vulnerable to your allies\u2019 attacks until\
-      \ the start of your next turn."
+    description: |-
+      You gain a +1 bonus to melee attack rolls.
+  
+      **Guiding Smite (Smite Power):**  On a hit, the target is vulnerable to your
+      allies’ attacks until the start of your next turn.
     feats:
     - tier: champion
-      description: ' For one battle per day, grant all nearby allies a +1 bonus to melee
-        attack rolls.'
+      description: |2-
+         For one battle per day, grant all nearby allies a +1 bonus to melee attack
+        rolls.
     tier: champion
   - name: Celestial Wings
     _type: Talent
     source: DATP
-    description: 'Once per day, you can summon glowing wings of celestial origin on
-      your back, to allow you to fly until the end of the battle or scene.
-  
+    description: |-
+      Once per day, you can summon glowing wings of celestial origin on your back, to
+      allow you to fly until the end of the battle or scene.
   
       **Winged Smite (Smite Power):**  When you take the free action to activate Smite
       Evil, you can fly across the battlefield on ethereal wings to engage a nearby
-      enemy. If you make the attack in mid-air, the wings let you land safely.'
+      enemy. If you make the attack in mid-air, the wings let you land safely.
     feats:
     - tier: epic
       description: ' The wings granted by your smite power last until the end of your
@@ -933,43 +1012,44 @@ abilities:
   - name: Chosen of Darkness
     _type: Talent
     source: DATP
-    description: 'If an enemy targets you with an attack, that enemy takes negative
-      energy damage equal to 10 + your Charisma modifier. The enemy with the most hit
-      points on the battlefield is immune to the effect.
+    description: |-
+      If an enemy targets you with an attack, that enemy takes negative energy damage
+      equal to 10 + your Charisma modifier. The enemy with the most hit points on the
+      battlefield is immune to the effect.
   
-  
-      **Cleaving Smite (Smite Power):**  Hit or miss, deal the Smite extra damage to
-      a number of additional nearby enemies equal to your Charisma modifier. Choose
-      targets by their hit point total, starting with the lowest.'
+      **Cleaving Smite (Smite Power):**  Hit or miss, deal the Smite extra damage to a
+      number of additional nearby enemies equal to your Charisma modifier. Choose
+      targets by their hit point total, starting with the lowest.
     feats: []
     tier: epic
   - name: Radiant Presence
     _type: Talent
     source: DATP
-    description: 'Enemies engaged with you have automatic disadvantage on all saves,
-      including disengage checks. If they fail a save, they take radiant damage equal
-      to your level.
+    description: |-
+      Enemies engaged with you have automatic disadvantage on all saves, including
+      disengage checks. If they fail a save, they take radiant damage equal to your
+      level.
   
-  
-      **Radiant Smite (Smite Power):**  On a hit, the target is weakened (-4 to attacks
-      and defenses) until the end of your next turn.'
+      **Radiant Smite (Smite Power):**  On a hit, the target is weakened (-4 to
+      attacks and defenses) until the end of your next turn.
     feats:
     - tier: epic
-      description: " The weaken effect is \u201Csave ends.\u201D"
+      description: ' The weaken effect is “save ends.”'
     tier: epic
   - name: Zealot
     _type: Talent
     source: DATP
-    description: 'Once per round, when the escalation die is even, you can make a melee
-      basic attack as a quick action.
+    description: |-
+      Once per round, when the escalation die is even, you can make a melee basic
+      attack as a quick action.
   
-  
-      **Zealous Smite (Smite Power):**  Make two Smite Evil attacks against two different
-      enemies you are engaged with.'
+      **Zealous Smite (Smite Power):**  Make two Smite Evil attacks against two
+      different enemies you are engaged with.
     feats:
     - tier: epic
-      description: ' Once per day, move yourself to the start of the initiative order
-        at the start of a round, after the escalation die is increased.'
+      description: |2-
+         Once per day, move yourself to the start of the initiative order at the start
+        of a round, after the escalation die is increased.
     tier: epic
   # END DATP ABILITIES
 ---

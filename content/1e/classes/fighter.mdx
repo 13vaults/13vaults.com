@@ -527,16 +527,17 @@ abilities:
   - name: Abominable Mutation
     _type: Talent
     source: DPAS
-    description: 'Choose one of the native elements of the abomination class. You gain
-      resist that element 12+.
-  
+    description: |-
+      Choose one of the native elements of the abomination class. You gain resist that
+      element 12+.
   
       Starting from 3rd level, you can switch a fighter maneuver for an abomination
-      maneuver 2 levels lower.'
+      maneuver 2 levels lower.
     feats:
     - tier: adventurer
-      description: ' Gain the abomination limit maneuver related to the chosen element
-        as a bonus maneuver.'
+      description: |2-
+         Gain the abomination limit maneuver related to the chosen element as a bonus
+        maneuver.
     - tier: champion
       description: ' Increase your resistance to 16+.'
     - tier: epic
@@ -546,38 +547,42 @@ abilities:
     _type: Talent
     source: DATP
     usage: per-battle
-    description: "Once per scene, you can make a Charisma + level \u201Cattack\u201D\
-      \ against the highest MD in the room. If you succeed, you can hush a room, stop\
-      \ a mob, or convince a bunch of thugs that you are not to be messed with."
+    description: |-
+      Once per scene, you can make a Charisma + level “attack” against the highest MD
+      in the room. If you succeed, you can hush a room, stop a mob, or convince a
+      bunch of thugs that you are not to be messed with.
     feats:
     - tier: adventurer
       description: ' Add an appropriate background to the Charisma roll.'
     - tier: champion
-      description: ' Once per day, if you succeed at the Charisma check but a fight
-        still starts, set the escalation die to 1 at the start of the battle.'
+      description: |2-
+         Once per day, if you succeed at the Charisma check but a fight still starts,
+        set the escalation die to 1 at the start of the battle.
     tier: adventurer
   - name: Battlemaster
     _type: Talent
     source: DATP
-    description: 'You gain a bonus fighter maneuver.
-  
+    description: |-
+      You gain a bonus fighter maneuver.
   
       When you spend a feat on a fighter maneuver, also gain a feat of the same tier
-      (adventurer, champion, epic) with a different fighter maneuver for free.'
+      (adventurer, champion, epic) with a different fighter maneuver for free.
     feats: []
     tier: adventurer
   - name: Bravado
     _type: Talent
     source: DATP
     usage: per-battle
-    description: "Once per battle, as a standard action, you can pull off an attack\
-      \ that is outside of what is normally covered by the rules. Smash a pillar to\
-      \ collapse the ceiling. Flip a table and charge into a wall of enemies with it.\
-      \ Smash an enemy into an open pit of lava. Improvise. Your GM will help you with\
-      \ the specifics, such as how many enemies you can catch, what the damage would\
-      \ be, and any additional effects. This talent allows you to pull off the stunt\
-      \ without additional skill checks, but you still need to roll to attack.\n\nAttacks\
-      \ made with this talent don\u2019t trigger fighter maneuvers."
+    description: |-
+      Once per battle, as a standard action, you can pull off an attack that is
+      outside of what is normally covered by the rules. Smash a pillar to collapse the
+      ceiling. Flip a table and charge into a wall of enemies with it. Smash an enemy
+      into an open pit of lava. Improvise. Your GM will help you with the specifics,
+      such as how many enemies you can catch, what the damage would be, and any
+      additional effects. This talent allows you to pull off the stunt without
+      additional skill checks, but you still need to roll to attack.
+  
+      Attacks made with this talent don’t trigger fighter maneuvers.
     feats:
     - tier: adventurer
       description: ' You have advantage on your Bravado attack roll.'
@@ -591,59 +596,65 @@ abilities:
       description: ' You have advantage on Strength-based skill checks to damage or
         destroy things.'
     - tier: champion
-      description: ' When you reduce a target to zero hit points, deal the remaining
-        damage to a different nearby enemy (as if every enemy were a mook).'
+      description: |2-
+         When you reduce a target to zero hit points, deal the remaining damage to a
+        different nearby enemy (as if every enemy were a mook).
     - tier: epic
       description: ' If you kill an enemy, gain a +1 bonus to your next melee attack.'
     tier: adventurer
   - name: Combat Challenge
     _type: Talent
     source: DATP
-    description: 'When you make a fighter attack against an enemy you are engaged with,
-      you mark the target. The mark ends when you are no longer engaged with the target,
-      or when the target makes an attack against you.
-  
+    description: |-
+      When you make a fighter attack against an enemy you are engaged with, you mark
+      the target. The mark ends when you are no longer engaged with the target, or
+      when the target makes an attack against you.
   
       While the target is marked, it takes a -2 penalty to attacks that do not target
-      you. When the marked enemy makes an attack that does not target you, you can make
-      a basic melee attack against it as an interrupt action.'
+      you. When the marked enemy makes an attack that does not target you, you can
+      make a basic melee attack against it as an interrupt action.
     feats:
     - tier: adventurer
-      description: ' If a marked enemy can pop free from you through an ability, it
-        still has to succeed at a disengage check, otherwise it stays engaged.'
+      description: |2-
+         If a marked enemy can pop free from you through an ability, it still has to
+        succeed at a disengage check, otherwise it stays engaged.
     - tier: champion
       description: ' You can use fighter maneuvers with interrupt attacks triggered
         by the mark.'
     - tier: epic
-      description: ' Marked enemies must succeed at a disengage check even if they use
-        a teleport or similar powers to get away from you, otherwise the teleport fails
-        and it stays engaged.'
+      description: |2-
+         Marked enemies must succeed at a disengage check even if they use a teleport or
+        similar powers to get away from you, otherwise the teleport fails and it stays
+        engaged.
     tier: adventurer
   - name: Cry for Glory
     _type: Talent
     source: DATP
-    description: You gain a battle cry from the bard list as a bonus flexible attack.
-      You can trigger the battle cry with fighter melee attacks.
+    description: |-
+      You gain a battle cry from the bard list as a bonus flexible attack. You can
+      trigger the battle cry with fighter melee attacks.
     feats:
     - tier: adventurer
-      description: ' You can use Charisma instead of Dexterity or Constitution with
-        your fighter maneuvers and your Threatening class feature.'
+      description: |2-
+         You can use Charisma instead of Dexterity or Constitution with your fighter
+        maneuvers and your Threatening class feature.
     - tier: champion
       description: ' You can switch a fighter maneuver for a bard battle cry two levels
         lower.'
     - tier: epic
-      description: ' Gain a second battle cry as a bonus maneuver, of up to 4 levels
-        below your class level.'
+      description: |2-
+         Gain a second battle cry as a bonus maneuver, of up to 4 levels below your
+        class level.
     tier: adventurer
   - name: Fencer
     _type: Talent
     source: DATP
-    description: 'You can use Dexterity instead of Strength for attack and damage with
-      fighter melee attacks.
-  
+    description: |-
+      You can use Dexterity instead of Strength for attack and damage with fighter
+      melee attacks.
   
       When you wield a small (d4 damage die) or light (d6 damage die) one-handed melee
-      weapon, you gain a +2 bonus to your critical threat range.'
+      weapon, you gain a +2 bonus to your critical threat range.
     feats:
     - tier: adventurer
       description: ' Increase your base AC to 11 without armor and 14 in light armor.'
@@ -656,33 +667,37 @@ abilities:
   - name: Lock & Load
     _type: Talent
     source: DATP
-    description: 'You can reload a heavy crossbow as a quick action instead of a move
-      action.
-  
+    description: |-
+      You can reload a heavy crossbow as a quick action instead of a move action.
   
       When you spend a quick action to reload a crossbow of any type, you gain a +2
-      bonus to critical threat range on your next attack with it this turn.'
+      bonus to critical threat range on your next attack with it this turn.
     feats:
     - tier: adventurer
-      description: ' You can trigger flexible melee attack maneuvers when making a fighter
-        ranged attack with a crossbow.'
+      description: |2-
+         You can trigger flexible melee attack maneuvers when making a fighter ranged
+        attack with a crossbow.
     - tier: champion
-      description: ' Reloading any crossbow is now a free action. You still get the
-        +2 crit range bonus.'
+      description: |2-
+         Reloading any crossbow is now a free action. You still get the +2 crit range
+        bonus.
     - tier: epic
-      description: ' Once per battle, you can use a move action to gain advantage on
-        your next attack roll with a crossbow.'
+      description: |2-
+         Once per battle, you can use a move action to gain advantage on your next
+        attack roll with a crossbow.
     tier: adventurer
   - name: Power Block
     _type: Talent
     source: DATP
     usage: per-battle
-    description: Once per battle, you can force an opponent to reroll an attack against
-      your AC or PD. If you wield a shield, the reroll is at a -2 penalty.
+    description: |-
+      Once per battle, you can force an opponent to reroll an attack against your AC
+      or PD. If you wield a shield, the reroll is at a -2 penalty.
     feats:
     - tier: adventurer
-      description: ' Increase the reroll penalty to -4 if you wield a shield and the
-        attack is a ranged attack.'
+      description: |2-
+         Increase the reroll penalty to -4 if you wield a shield and the attack is a
+        ranged attack.
     - tier: champion
       description: ' When you wield a shield, also gain a +1 bonus to PD.'
     - tier: epic
@@ -691,23 +706,24 @@ abilities:
   - name: Showstopper
     _type: Talent
     source: DATP
-    description: 'When an enemy triggers an opportunity attack from you, and your opportunity
+    description: |-
+      When an enemy triggers an opportunity attack from you, and your opportunity
       attack is a natural even hit, you cause the triggering action to fail and the
       enemy loses that action.
   
-  
       Once per battle, when an enemy engaged with you makes an attack that would not
-      trigger an opportunity attack from you normally, you can make an opportunity attack
-      against them anyway.'
+      trigger an opportunity attack from you normally, you can make an opportunity
+      attack against them anyway.
     feats:
     - tier: adventurer
       description: ' You can use your fighter maneuvers with opportunity attacks.'
     - tier: champion
       description: ' The triggering action fails on any hit with an opportunity attack.'
     - tier: epic
-      description: " If an enemy disengages from you with a successful disengage check,\
-        \ you can still make an opportunity attack. However, the attack deals half damage,\
-        \ and you don\u2019t prevent the opponent from moving away."
+      description: |2-
+         If an enemy disengages from you with a successful disengage check, you can
+        still make an opportunity attack. However, the attack deals half damage, and you
+        don’t prevent the opponent from moving away.
     tier: adventurer
   - name: Tactical Talent
     _type: Talent
@@ -715,9 +731,10 @@ abilities:
     description: You gain a commander tactic as a bonus power.
     feats:
     - tier: adventurer
-      description: ' You can substitute Intelligence for Dexterity or Constitution with
-        your fighter maneuvers and Threatening class feature. You can substitute Intelligence
-        for Charisma with the commander tactics gained through this talent.'
+      description: |2-
+         You can substitute Intelligence for Dexterity or Constitution with your fighter
+        maneuvers and Threatening class feature. You can substitute Intelligence for
+        Charisma with the commander tactics gained through this talent.
     - tier: champion
       description: ' You can switch a fighter maneuver for a commander tactic two levels
         lower.'
@@ -728,15 +745,17 @@ abilities:
   - name: Two Healthy Fists
     _type: Talent
     source: DATP
-    description: You do not suffer the standard -2 penalty to unarmed attacks, and your
-      damage die with unarmed melee attacks increases to d8. If you have both hands
-      free, you gain the two-weapon fighting bonus with unarmed attacks (reroll natural
-      2 on the attack die). If you have your hands full, you can still make unarmed
-      attacks such as kicks and head butts. You can use magic bracers like a monk.
+    description: |-
+      You do not suffer the standard -2 penalty to unarmed attacks, and your damage
+      die with unarmed melee attacks increases to d8. If you have both hands free, you
+      gain the two-weapon fighting bonus with unarmed attacks (reroll natural 2 on the
+      attack die). If you have your hands full, you can still make unarmed attacks
+      such as kicks and head butts. You can use magic bracers like a monk.
     feats:
     - tier: adventurer
-      description: ' When you are grabbed by an attack, you can immediately roll a save
-        to end the effect.'
+      description: |2-
+         When you are grabbed by an attack, you can immediately roll a save to end the
+        effect.
     - tier: champion
       description: ' When you roll damage on an unarmed attack, reroll natural 1s once.'
     - tier: epic
@@ -745,80 +764,88 @@ abilities:
   - name: War Orphan
     _type: Talent
     source: DATP
-    description: 'You gain a +1 bonus to PD and MD. Increase your recovery dice by one
-      step (usually to d12).
+    description: |-
+      You gain a +1 bonus to PD and MD. Increase your recovery dice by one step
+      (usually to d12).
   
-  
-      As a natural loner, you have no interests in the greater machinations of powerful
-      beings, and you have one less icon relationship point, for a total of two at level
-      1.'
+      As a natural loner, you have no interests in the greater machinations of
+      powerful beings, and you have one less icon relationship point, for a total of
+      two at level 1.
     feats:
     - tier: adventurer
       description: ' Add your Constitution modifier to death saves.'
     - tier: champion
       description: ' Add your Constitution modifier to all saves.'
     - tier: epic
-      description: ' Once per battle, roll a save at the start of your turn, in addition
-        to the saves you roll at the end.'
+      description: |2-
+         Once per battle, roll a save at the start of your turn, in addition to the
+        saves you roll at the end.
     tier: adventurer
   - name: Warrior of the Wild
     _type: Talent
     source: DATP
-    description: Gain a flexible attack from the warrior druid list as a bonus maneuver.
-      You can trigger it with your fighter melee attacks.
+    description: |-
+      Gain a flexible attack from the warrior druid list as a bonus maneuver. You can
+      trigger it with your fighter melee attacks.
     feats:
     - tier: adventurer
       description: ' You gain 3 points towards a background in wilderness survival.'
     - tier: champion
-      description: ' You can switch a fighter maneuver for a warrior druid maneuver
-        two levels lower.'
+      description: |2-
+         You can switch a fighter maneuver for a warrior druid maneuver two levels
+        lower.
     - tier: epic
-      description: " You can cast the Wild Healer\u2019s Regeneration spell once per\
-        \ battle."
+      description: ' You can cast the Wild Healer’s Regeneration spell once per battle.'
     tier: adventurer
-  - name: "Friggin\u2019 Tank"
+  - name: Friggin’ Tank
     _type: Talent
     source: DATP
     description: Increase your base hit points to 10 + Con mod.
     feats:
     - tier: champion
-      description: " When you use a recovery to heal, you gain any hit points above\
-        \ your maximum as temporary hit points. You can take recoveries while you are\
-        \ at maximum hit points. These temporary hit points don\u2019t stack with temporary\
-        \ hit points you already have \u2014 use the higher total."
+      description: |2-
+         When you use a recovery to heal, you gain any hit points above your maximum as
+        temporary hit points. You can take recoveries while you are at maximum hit
+        points. These temporary hit points don’t stack with temporary hit points you
+        already have — use the higher total.
     - tier: epic
-      description: ' When you are reduced below zero hit points, you remain conscious,
-        and you can still take actions. You still roll death saves normally, and you
-        fall unconscious when you fail a death save.'
+      description: |2-
+         When you are reduced below zero hit points, you remain conscious, and you can
+        still take actions. You still roll death saves normally, and you fall
+        unconscious when you fail a death save.
     tier: champion
   - name: Mage Slayer
     _type: Talent
     source: DATP
     usage: per-battle
-    description: "Once per battle, when an enemy targets you with a spell, you can roll\
-      \ a save (11+) to counter the spell as an interrupt action. Success means the\
-      \ spell has no effect on you. At the GM\u2019s discretion, this ability also protects\
-      \ against monster attacks that are similar to spells, such as the breath of a\
-      \ dragon."
+    description: |-
+      Once per battle, when an enemy targets you with a spell, you can roll a save
+      (11+) to counter the spell as an interrupt action. Success means the spell has
+      no effect on you. At the GM’s discretion, this ability also protects against
+      monster attacks that are similar to spells, such as the breath of a dragon.
     feats:
     - tier: champion
-      description: ' When you successfully counter a spell cast by a nearby enemy, you
-        can pop free from all enemies and charge the caster (engage and make a basic
-        melee attack) as a free action.'
+      description: |2-
+         When you successfully counter a spell cast by a nearby enemy, you can pop free
+        from all enemies and charge the caster (engage and make a basic melee attack) as
+        a free action.
     - tier: epic
-      description: ' If you have a positive icon relationship with the Archmage or a
-        draconic icon, the save is an easy save (6+).'
+      description: |2-
+         If you have a positive icon relationship with the Archmage or a draconic icon,
+        the save is an easy save (6+).
     tier: champion
   - name: One with the Blade
     _type: Talent
     source: DATP
     usage: per-battle
-    description: Once per battle, you can increase the natural roll of one of your melee
-      attacks by 1, after making the die roll.
+    description: |-
+      Once per battle, you can increase the natural roll of one of your melee attacks
+      by 1, after making the die roll.
     feats:
     - tier: champion
-      description: ' If you roll a natural 20 on an attack, you gain an additional use
-        of this talent for the battle.'
+      description: |2-
+         If you roll a natural 20 on an attack, you gain an additional use of this
+        talent for the battle.
     - tier: epic
       description: ' Once per day, you can increase the roll by 3 instead.'
     tier: champion
@@ -826,9 +853,9 @@ abilities:
     _type: Talent
     source: DATP
     usage: per-battle
-    description: Each battle, you can use one of your once-per-battle powers a second
-      time. This can be a once-per-battle fighter talent, a fighter maneuver or a racial
-      power.
+    description: |-
+      Each battle, you can use one of your once-per-battle powers a second time. This
+      can be a once-per-battle fighter talent, a fighter maneuver or a racial power.
     feats:
     - tier: epic
       description: ' You can now use two different powers a second time each battle.'
@@ -836,23 +863,24 @@ abilities:
   - name: Ultimate Combat Reflexes
     _type: Talent
     source: DATP
-    description: 'In combat, your regular actions, i.e. your standard, move and quick
-      action, are no longer limited to when it is your turn in the initiative order.
-      You can take them any time you like during a round. Make sure to keep track of
-      the actions you have taken during a given round, for example by flipping a card.
-      When you take a regular action in response to what an ally or enemy does, your
-      action resolves after theirs.
-  
+    description: |-
+      In combat, your regular actions, i.e. your standard, move and quick action, are
+      no longer limited to when it is your turn in the initiative order. You can take
+      them any time you like during a round. Make sure to keep track of the actions
+      you have taken during a given round, for example by flipping a card. When you
+      take a regular action in response to what an ally or enemy does, your action
+      resolves after theirs.
   
       This does not affect other combat rules. You still roll initiative, roll saves
       at the end of your turn, and use interrupt actions, intercepts and opportunity
-      attacks normally, without any changes.'
+      attacks normally, without any changes.
     feats: []
     tier: champion
   - name: Weapon Specialization
     _type: Talent
     source: DATP
-    description: Choose one type of weapon, such as two-handed martial weapons or heavy
+    description: |-
+      Choose one type of weapon, such as two-handed martial weapons or heavy
       crossbows. You gain a +1 bonus to attack with this type of weapon.
     feats:
     - tier: champion
@@ -864,21 +892,18 @@ abilities:
     _type: Maneuver 1
     source: DATP
     usage: at-will
-    description: 'Flexible melee or ranged attack
-
+    description: |-
+      Flexible melee or ranged attack
       ___
-  
   
       **Triggering Roll:**  Any miss
   
-  
-      **Effect:**  Drink a potion as a free action.'
+      **Effect:**  Drink a potion as a free action.
     feats:
     - tier: champion
       description: ' You can use an oil or a rune as a free action instead.'
     - tier: epic
-      description: " You can pour a potion down a nearby unconscious ally\u2019s throat\
-        \ instead."
+      description: ' You can pour a potion down a nearby unconscious ally’s throat instead.'
     tier: champion
     level: 1
     category: Maneuvers
@@ -886,14 +911,12 @@ abilities:
     _type: Maneuver 1
     source: DATP
     usage: at-will
-    description: 'Flexible ranged attack
-  
+    description: |-
+      Flexible ranged attack
       ___
-  
       **Triggering Roll:**  Any natural odd miss
   
-  
-      **Effect:**  An ally engaged with the target can pop free.'
+      **Effect:**  An ally engaged with the target can pop free.
     feats:
     - tier: adventurer
       description: ' You can trigger this maneuver on any natural odd roll.'
@@ -904,18 +927,15 @@ abilities:
     _type: Maneuver 1
     source: DATP
     usage: at-will
-    description: 'Flexible melee or ranged attack
-  
+    description: |-
+      Flexible melee or ranged attack
       ___
-  
       **Special:**  At least one ally must be engaged with the same enemy.
-  
   
       **Triggering Roll:**  Any natural even roll
   
-  
       **Effect:**  Deal extra damage equal to your Intelligence modifier (x2 at 5th
-      level; x3 at 8th).'
+      level; x3 at 8th).
     feats:
     - tier: champion
       description: ' Your ally can make a disengage check.'
@@ -926,15 +946,13 @@ abilities:
     _type: Maneuver 1
     source: DATP
     usage: at-will
-    description: 'Flexible melee attack
-  
+    description: |-
+      Flexible melee attack
       ___
-  
       **Triggering Roll:**  Any natural even roll
   
-  
       **Effect:**  Deal your Strength modifier in damage (x2 at 5th level; x3 at 8th)
-      to a different enemy you are engaged with.'
+      to a different enemy you are engaged with.
     feats:
     - tier: adventurer
       description: ' You can deal the damage to any nearby enemy.'
@@ -947,19 +965,18 @@ abilities:
     _type: Maneuver 1
     source: DATP
     usage: at-will
-    description: 'Flexible melee attack
-  
+    description: |-
+      Flexible melee attack
       ___
-  
       **Triggering Roll:**  Any natural odd roll
   
-  
-      **Effect:**  Until the end of your next turn, the target has disadvantage on disengage
-      checks.'
+      **Effect:**  Until the end of your next turn, the target has disadvantage on
+      disengage checks.
     feats:
     - tier: adventurer
-      description: ' You also gain a +1 bonus to your next melee attack against the
-        target this battle.'
+      description: |2-
+         You also gain a +1 bonus to your next melee attack against the target this
+        battle.
     tier: champion
     level: 1
     category: Maneuvers
@@ -967,19 +984,18 @@ abilities:
     _type: Maneuver 1
     source: DATP
     usage: at-will
-    description: 'Flexible ranged attack
-  
+    description: |-
+      Flexible ranged attack
       ___
-  
       **Triggering Roll:**  Natural even miss
   
-  
-      **Effect:**  Until the end of your next turn, you gain a +2 bonus to ranged attacks
-      against the target.'
+      **Effect:**  Until the end of your next turn, you gain a +2 bonus to ranged
+      attacks against the target.
     feats:
     - tier: adventurer
-      description: ' If your next ranged attack against the target is a hit, deal an
-        extra WEAPON damage die (x2 at 5th level; x3 at 8th).'
+      description: |2-
+         If your next ranged attack against the target is a hit, deal an extra WEAPON
+        damage die (x2 at 5th level; x3 at 8th).
     - tier: champion
       description: ' You can also use this maneuver on a natural odd miss.'
     tier: champion
@@ -989,18 +1005,15 @@ abilities:
     _type: Maneuver 1
     source: DATP
     usage: at-will
-    description: 'Flexible melee attack
-  
+    description: |-
+      Flexible melee attack
       ___
-  
       **Special:**  You must be wielding a two-handed weapon.
-  
   
       **Triggering Roll:**  Any natural odd roll
   
-  
       **Effect:**  After resolving the attack, increase your WEAPON damage dice by one
-      step (usually from d10 to d12) until the end of your next turn.'
+      step (usually from d10 to d12) until the end of your next turn.
     feats: []
     tier: champion
     level: 1
@@ -1009,15 +1022,13 @@ abilities:
     _type: Maneuver 1
     source: DATP
     usage: at-will
-    description: 'Flexible melee or ranged attack
-  
+    description: |-
+      Flexible melee or ranged attack
       ___
-  
       **Triggering Roll:**  Any natural odd roll
   
-  
-      **Effect:**  You gain a cumulative +1 bonus to saves against effects this battle,
-      up to a maximum of +5.'
+      **Effect:**  You gain a cumulative +1 bonus to saves against effects this
+      battle, up to a maximum of +5.
     feats:
     - tier: champion
       description: ' Increase the bonus to +2, and the maximum to +6.'
@@ -1028,24 +1039,22 @@ abilities:
     _type: Maneuver 1
     source: DATP
     usage: at-will
-    description: '_You put your whole weight behind the strike to smack them down._
-  
+    description: |-
+      _You put your whole weight behind the strike to smack them down._
   
       Flexible melee attack
-  
       ___
-  
       **Special:**  You must be making an unarmed attack.
-  
   
       **Triggering Roll:**  Natural even hit
   
-  
-      **Effect:**  Add your Constitution modifier (x2 at 5th level; x3 at 8th) to damage.'
+      **Effect:**  Add your Constitution modifier (x2 at 5th level; x3 at 8th) to
+      damage.
     feats:
     - tier: adventurer
-      description: ' If the escalation die is 5+, the target is also dazed until the
-        end of your next turn.'
+      description: |2-
+         If the escalation die is 5+, the target is also dazed until the end of your
+        next turn.
     tier: champion
     level: 1
     category: Maneuvers
@@ -1053,15 +1062,13 @@ abilities:
     _type: Maneuver 3
     source: DATP
     usage: at-will
-    description: 'Flexible melee or ranged attack
-  
+    description: |-
+      Flexible melee or ranged attack
       ___
-  
       **Triggering Roll:**  Any natural odd roll
   
-  
       **Effect:**  Until the end of the battle, you gain a cumulative +1 bonus to MD
-      (up to +4).'
+      (up to +4).
     feats:
     - tier: adventurer
       description: ' You also gain _resist psychic_ 14+.'
@@ -1072,25 +1079,22 @@ abilities:
     _type: Maneuver 3
     source: DATP
     usage: at-will
-    description: '_You dive elbow first into the target to throw them to the ground._
-  
+    description: |-
+      _You dive elbow first into the target to throw them to the ground._
   
       Flexible melee attack
-  
       ___
-  
       **Special:**  You must be making an unarmed attack.
-  
   
       **Triggering Roll:**  Natural even hit
   
-  
       **Effect:**  The next melee attack by an ally against the target has advantage.
-      The target can prevent this by taking a move action to stand up.'
+      The target can prevent this by taking a move action to stand up.
     feats:
     - tier: adventurer
-      description: ' If the escalation die is 5+, kick the target on the ground for
-        extra damage equal to your Strength modifier.'
+      description: |2-
+         If the escalation die is 5+, kick the target on the ground for extra damage
+        equal to your Strength modifier.
     tier: champion
     level: 3
     category: Maneuvers
@@ -1098,17 +1102,14 @@ abilities:
     _type: Maneuver 3
     source: DATP
     usage: at-will
-    description: 'Flexible ranged attack
-  
+    description: |-
+      Flexible ranged attack
       ___
-  
       **Special:**  You cannot use this maneuver when engaged with an enemy.
-  
   
       **Triggering Roll:**  Any natural even roll
   
-  
-      **Effect:**  Gain +2 AC until the end of your next turn.'
+      **Effect:**  Gain +2 AC until the end of your next turn.
     feats:
     - tier: adventurer
       description: ' You also gain the bonus to PD.'
@@ -1123,11 +1124,15 @@ abilities:
     _type: Maneuver 3
     source: DATP
     usage: at-will
-    description: "Flexible melee or ranged attack\n___\n**Triggering Roll:**  Natural odd\
-      \ hit\n\n**Effect:**  Ask a question about the target, such as \u201CWhat are\
-      \ its vulnerabilities?\u201D or \u201CWhat is its lowest defense?\u201D Make an\
-      \ Intelligence or Wisdom-based skill check against its MD. If you succeed, you\
-      \ learn the answer to your question."
+    description: |-
+      Flexible melee or ranged attack
+      ___
+      **Triggering Roll:**  Natural odd hit
+  
+      **Effect:**  Ask a question about the target, such as “What are its
+      vulnerabilities?” or “What is its lowest defense?” Make an Intelligence or
+      Wisdom-based skill check against its MD. If you succeed, you learn the answer to
+      your question.
     feats:
     - tier: adventurer
       description: ' On a natural 16+ on the skill check, you get the answer to a second
@@ -1139,11 +1144,17 @@ abilities:
     _type: Maneuver 3
     source: DATP
     usage: at-will
-    description: "_Your stray arrow hit something that distracts the opponent for a\
-      \ moment. It could be\_ snow from a tree branch, burning oil from a lamp, or a\
-      \ sail going loose._\n\nFlexible ranged attack\n___\n**Triggering Roll:**  Any natural\
-      \ odd miss\n\n**Effect:**  The enemy takes a -2 penalty to AC, PD and MD until\
-      \ the start of your next turn."
+    description: |-
+      _Your stray arrow hit something that distracts the opponent for a moment. It
+      could be  snow from a tree branch, burning oil from a lamp, or a sail going
+      loose._
+  
+      Flexible ranged attack
+      ___
+      **Triggering Roll:**  Any natural odd miss
+  
+      **Effect:**  The enemy takes a -2 penalty to AC, PD and MD until the start of
+      your next turn.
     feats:
     - tier: champion
       description: ' Increase the penalty to -4.'
@@ -1154,42 +1165,37 @@ abilities:
     _type: Maneuver 3
     source: DATP
     usage: at-will
-    description: 'Flexible melee attack
-  
+    description: |-
+      Flexible melee attack
       ___
-  
       **Triggering Roll:**  Natural even hit
   
-  
       **Effect:**  An ally engaged with the same enemy can make a basic melee attack
-      against it with disadvantage.'
+      against it with disadvantage.
     feats:
     - tier: adventurer
-      description: " If the ally\u2019s attack hits, it deals additional damage equal\
-        \ to your Intelligence modifier (x2 at 5th level; x3 at 8th)."
+      description: |2-
+         If the ally’s attack hits, it deals additional damage equal to your
+        Intelligence modifier (x2 at 5th level; x3 at 8th).
     tier: champion
     level: 3
     category: Maneuvers
   - name: The Tombstone
     _type: Maneuver 3
     source: DATP
-    description: '_You lift the target and plant it headfirst into the ground._
-  
+    description: |-
+      _You lift the target and plant it headfirst into the ground._
   
       Flexible melee attack; Once per battle
-  
   
       ---
   
   
-  
       **Special:**  You must be making an unarmed attack.
-  
   
       **Triggering Roll:**  Natural odd hit
   
-  
-      **Effect:**  The target has disadvantage on their next attack.'
+      **Effect:**  The target has disadvantage on their next attack.
     feats:
     - tier: adventurer
       description: ' Add your Constitution modifier to the damage roll (x2 at 5th level;
@@ -1204,14 +1210,13 @@ abilities:
     _type: Maneuver 5
     source: DATP
     usage: at-will
-    description: 'Flexible melee or ranged attack
-  
+    description: |-
+      Flexible melee or ranged attack
   
       **Triggering Roll:**  Any natural even roll
   
-  
-      **Effect:**  If the target has any resistance against the attack, ignore the resistance
-      and deal full damage.'
+      **Effect:**  If the target has any resistance against the attack, ignore the
+      resistance and deal full damage.
     feats:
     - tier: champion
       description: ' Ignore the resistance of the target until the end of the battle.'
@@ -1222,18 +1227,16 @@ abilities:
     _type: Maneuver 5
     source: DATP
     usage: at-will
-    description: 'Flexible melee or ranged attack
-  
+    description: |-
+      Flexible melee or ranged attack
       ___
-  
       **Triggering Roll:**  Natural 16+
   
-  
       **Effect:**  Until the end of your next turn, the target is vulnerable to all
-      attacks.'
+      attacks.
     feats:
     - tier: champion
-      description: " On a natural 18+, the effect is \u201Csave ends\u201D."
+      description: ' On a natural 18+, the effect is “save ends”.'
     tier: champion
     level: 5
     category: Maneuvers
@@ -1241,21 +1244,19 @@ abilities:
     _type: Maneuver 5
     source: DATP
     usage: at-will
-    description: 'Flexible melee attack
-  
+    description: |-
+      Flexible melee attack
       ___
-  
       **Special:**  You must be making an unarmed attack.
-  
   
       **Triggering Roll:**  Natural 18+
   
-  
-      **Effect:**  The target is dazed (save ends).'
+      **Effect:**  The target is dazed (save ends).
     feats:
     - tier: champion
-      description: ' The target also takes ongoing damage equal to twice your Constitution
-        modifier (x3 at 8th level).'
+      description: |2-
+         The target also takes ongoing damage equal to twice your Constitution modifier
+        (x3 at 8th level).
     tier: champion
     level: 5
     category: Maneuvers
@@ -1263,18 +1264,15 @@ abilities:
     _type: Maneuver 5
     source: DATP
     usage: at-will
-    description: 'Flexible melee attack
-  
+    description: |-
+      Flexible melee attack
       ___
-  
       **Special:**  You must be wielding two weapons.
-  
   
       **Triggering Roll:**  Natural 16+
   
-  
       **Effect:**  The next melee attack against you before the end of your next turn
-      has disadvantage on the attack roll.'
+      has disadvantage on the attack roll.
     feats: []
     tier: champion
     level: 5
@@ -1283,18 +1281,15 @@ abilities:
     _type: Maneuver 5
     source: DATP
     usage: at-will
-    description: 'Flexible melee attack
-  
+    description: |-
+      Flexible melee attack
       ___
-  
       **Special:**  You must be wielding a two-handed weapon.
-  
   
       **Triggering Roll:**  Any even miss
   
-  
       **Effect:**  Deal half the damage of a hit instead of miss damage. Until the end
-      of your next turn, you take a -4 penalty to defenses.'
+      of your next turn, you take a -4 penalty to defenses.
     feats:
     - tier: champion
       description: ' On an even miss, deal extra damage equal to your Dexterity modifier.'
@@ -1305,22 +1300,19 @@ abilities:
     _type: Maneuver 5
     source: DATP
     usage: at-will
-    description: 'Flexible melee attack
-  
+    description: |-
+      Flexible melee attack
       ___
-  
       **Special:**  You must be wielding two weapons.
-  
   
       **Triggering Roll:**  Any even miss
   
-  
       **Effect:**  Make a second melee attack against the target. This attack cannot
-      trigger maneuvers. If the attack misses, the target can make a melee attack against
-      you as a free action.'
+      trigger maneuvers. If the attack misses, the target can make a melee attack
+      against you as a free action.
     feats:
     - tier: champion
-      description: " The target\u2019s follow-up attack has disadvantage."
+      description: ' The target’s follow-up attack has disadvantage.'
     tier: champion
     level: 5
     category: Maneuvers
@@ -1328,10 +1320,14 @@ abilities:
     _type: Maneuver 5
     source: DATP
     usage: at-will
-    description: "Flexible melee attack\n___\n**Triggering Roll:**  Natural odd miss\n\n\
-      **Effect:**  Make a Wisdom + level attack roll against the target\u2019s MD. If\
-      \ you hit, the target is dazed until the end of your next turn. If you miss, you\
-      \ are dazed until the end of your next turn."
+    description: |-
+      Flexible melee attack
+      ___
+      **Triggering Roll:**  Natural odd miss
+  
+      **Effect:**  Make a Wisdom + level attack roll against the target’s MD. If you
+      hit, the target is dazed until the end of your next turn. If you miss, you are
+      dazed until the end of your next turn.
     feats: []
     tier: champion
     level: 5
@@ -1339,17 +1335,15 @@ abilities:
   - name: Take a Breather
     _type: Maneuver 5
     source: DATP
-    description: 'Flexible melee or ranged attack; Once per battle
-  
+    description: |-
+      Flexible melee or ranged attack; Once per battle
   
       ---
   
   
-  
       **Triggering Roll:**  Natural odd miss
   
-  
-      **Effect:**  You can use a recovery to heal.'
+      **Effect:**  You can use a recovery to heal.
     feats:
     - tier: champion
       description: ' You can use this maneuver at-will.'
@@ -1361,38 +1355,35 @@ abilities:
     _type: Maneuver 7
     source: DATP
     usage: at-will
-    description: 'Flexible melee attack
-  
+    description: |-
+      Flexible melee attack
   
       **Triggering Roll:**  Natural 1
   
-  
-      **Effect:**  Your next melee attack against the target has advantage.'
+      **Effect:**  Your next melee attack against the target has advantage.
     feats:
     - tier: epic
-      description: " Your next melee attack has advantage, even if it\u2019s against\
-        \ a different target."
+      description: ' Your next melee attack has advantage, even if it’s against a different
+        target.'
     tier: champion
     level: 7
     category: Maneuvers
   - name: Porcupine Stance
     _type: Maneuver 7
     source: DATP
-    description: 'Flexible melee attack; Once per battle
-  
+    description: |-
+      Flexible melee attack; Once per battle
   
       ---
   
   
-  
       **Special:**  You must be wielding two weapons.
-  
   
       **Triggering Roll:**  Any natural odd roll
   
-  
-      **Effect:**  Until the start of your next turn, you can make a basic melee attack
-      as an interrupt action against an enemy that makes a melee attack against you.'
+      **Effect:**  Until the start of your next turn, you can make a basic melee
+      attack as an interrupt action against an enemy that makes a melee attack against
+      you.
     feats:
     - tier: champion
       description: ' The attack can trigger maneuvers.'
@@ -1403,25 +1394,23 @@ abilities:
   - name: Raised Shield
     _type: Maneuver 7
     source: DATP
-    description: 'Flexible melee attack; Once per battle
-  
+    description: |-
+      Flexible melee attack; Once per battle
   
       ---
   
   
-  
       **Special:**  You must be wielding a shield.
-  
   
       **Triggering Roll:**  Any natural odd roll
   
-  
       **Effect:**  The next time you or an adjacent ally takes damage from an attack
-      against AC or PD before the end of your next turn, halve it.'
+      against AC or PD before the end of your next turn, halve it.
     feats:
     - tier: champion
-      description: ' If the attack targets both you and the ally, you can half the damage
-        against both.'
+      description: |2-
+         If the attack targets both you and the ally, you can half the damage against
+        both.
     tier: champion
     level: 7
     category: Maneuvers
@@ -1430,14 +1419,13 @@ abilities:
     _type: Maneuver 7
     source: DATP
     usage: at-will
-    description: 'Flexible melee attack
-  
+    description: |-
+      Flexible melee attack
   
       **Triggering Roll:**  Any natural odd hit
   
-  
       **Effect:**  Attacks against you have advantage until the end of your next turn.
-      Your first melee attack on your next turn deals double damage.'
+      Your first melee attack on your next turn deals double damage.
     feats:
     - tier: champion
       description: ' Also gain a +2 bonus to the attack roll with your next attack.'
@@ -1448,15 +1436,13 @@ abilities:
     _type: Maneuver 7
     source: DATP
     usage: at-will
-    description: 'Flexible melee or ranged attack
-  
+    description: |-
+      Flexible melee or ranged attack
       ___
-  
       **Triggering Roll:**  Natural 16+
   
-  
       **Effect:**  The target takes half damage immediately and half damage as ongoing
-      damage.'
+      damage.
     feats:
     - tier: champion
       description: ' Add your Dexterity modifier (x2; x3 at 8th level) to the ongoing
@@ -1467,18 +1453,16 @@ abilities:
   - name: Tactical Defense Line
     _type: Maneuver 7
     source: DATP
-    description: 'Flexible melee attack; Once per battle
-  
+    description: |-
+      Flexible melee attack; Once per battle
   
       ---
   
   
-  
       **Triggering Roll:**  Any natural even roll
   
-  
       **Effect:**  Gain a bonus to all defenses equal to your Intelligence modifier
-      until the start of your next turn.'
+      until the start of your next turn.
     feats:
     - tier: champion
       description: ' If you are wielding a shield, you can also grant the bonus to an
@@ -1490,17 +1474,15 @@ abilities:
   - name: Boom, Headshot
     _type: Maneuver 9
     source: DATP
-    description: 'Flexible ranged attack; Once per battle
-  
+    description: |-
+      Flexible ranged attack; Once per battle
   
       ---
   
   
-  
       **Triggering Roll:**  Natural even hit
   
-  
-      **Effect:**  Deal maximum damage instead of rolling damage dice.'
+      **Effect:**  Deal maximum damage instead of rolling damage dice.
     feats: []
     tier: champion
     level: 9
@@ -1509,20 +1491,17 @@ abilities:
   - name: Brute Force
     _type: Maneuver 9
     source: DATP
-    description: 'Flexible melee attack; Once per battle
-  
+    description: |-
+      Flexible melee attack; Once per battle
   
       ---
   
   
-  
       **Special: ** You must be wielding a two-handed weapon
-  
   
       **Triggering Roll:**  Natural even hit
   
-  
-      **Effect:**  Deal maximum damage instead of rolling damage dice.'
+      **Effect:**  Deal maximum damage instead of rolling damage dice.
     feats: []
     tier: champion
     level: 9
@@ -1531,20 +1510,17 @@ abilities:
   - name: Expert Feint
     _type: Maneuver 9
     source: DATP
-    description: 'Flexible melee attack; Once per battle
-  
+    description: |-
+      Flexible melee attack; Once per battle
   
       ---
   
   
-  
       **Special:**  You must be wielding a one-handed melee weapon.
-  
   
       **Triggering Roll:**  Natural even miss
   
-  
-      **Effect:**  Make a basic melee attack against the MD of the target.'
+      **Effect:**  Make a basic melee attack against the MD of the target.
     feats:
     - tier: epic
       description: ' The follow-up attack can also trigger maneuvers.'
@@ -1556,18 +1532,17 @@ abilities:
     _type: Maneuver 9
     source: DATP
     usage: at-will
-    description: 'Flexible ranged attack
-  
+    description: |-
+      Flexible ranged attack
       ___
-  
       **Triggering Roll:**  Natural even hit
   
-  
-      **Effect:**  Deal half damage to one other nearby enemy.'
+      **Effect:**  Deal half damage to one other nearby enemy.
     feats:
     - tier: epic
-      description: ' Once per battle, deal half damage to one nearby enemy per point
-        of escalation die with this maneuver.'
+      description: |2-
+         Once per battle, deal half damage to one nearby enemy per point of escalation
+        die with this maneuver.
     tier: champion
     level: 9
     category: Maneuvers
@@ -1575,15 +1550,13 @@ abilities:
     _type: Maneuver 9
     source: DATP
     usage: at-will
-    description: 'Flexible melee or ranged attack
-  
+    description: |-
+      Flexible melee or ranged attack
       ___
-  
       **Triggering Roll:**  Natural odd hit
   
-  
       **Effect:**  Until the end of your next turn, when you attack the target, treat
-      the escalation die as 6.'
+      the escalation die as 6.
     feats: []
     tier: champion
     level: 9
@@ -1592,10 +1565,15 @@ abilities:
     _type: Maneuver 9
     usage: at-will
     source: DATP
-    description: "Flexible melee attack\n\n**Special:**  You must be wielding a two-handed\
-      \ weapon.\n\n**Triggering Roll:**  Natural odd hit\n\n**Effect:**  Move the target\
-      \ to the end of the initiative order. If the target already took a turn this round,\
-      \ it doesn\u2019t get a second turn."
+    description: |-
+      Flexible melee attack
+  
+      **Special:**  You must be wielding a two-handed weapon.
+  
+      **Triggering Roll:**  Natural odd hit
+  
+      **Effect:**  Move the target to the end of the initiative order. If the target
+      already took a turn this round, it doesn’t get a second turn.
     feats: []
     tier: champion
     level: 9
@@ -1604,15 +1582,13 @@ abilities:
     _type: Maneuver 9
     source: DATP
     usage: at-will
-    description: 'Flexible melee or ranged attack
-  
+    description: |-
+      Flexible melee or ranged attack
       ___
-  
       **Triggering Roll:**  Natural 20
   
-  
-      **Effect:**  Trigger two other maneuvers you know with this attack. You can choose
-      a maneuver even if it normally could not be triggered on a natural 20.'
+      **Effect:**  Trigger two other maneuvers you know with this attack. You can
+      choose a maneuver even if it normally could not be triggered on a natural 20.
     feats: []
     tier: champion
     level: 9

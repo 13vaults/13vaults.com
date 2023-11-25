@@ -1190,12 +1190,13 @@ abilities:
   - name: Cycle Bonus (New Keyword)
     _type: Talent
     source: DATP
-    description: "This is a monk-specific keyword. You gain a cycle bonus for the duration\
-      \ of your current attack progression, that is, for your opening, flow and finishing\
-      \ attack, until the start of your next turn after using a finishing attack. It\
-      \ also ends if anything breaks the current attack progression, such as the end\
-      \ of the battle, when you don\u2019t attack for a round, or when you start a new\
-      \ progression by using an opening attack."
+    description: |-
+      This is a monk-specific keyword. You gain a cycle bonus for the duration of your
+      current attack progression, that is, for your opening, flow and finishing
+      attack, until the start of your next turn after using a finishing attack. It
+      also ends if anything breaks the current attack progression, such as the end of
+      the battle, when you don’t attack for a round, or when you start a new
+      progression by using an opening attack.
     feats: []
   - name: Adventurer Tier Talents
     _type: Talent
@@ -1206,9 +1207,9 @@ abilities:
   - name: Clarity of Mind
     _type: Talent
     source: DPAS
-    description: You gain an adventurer tier meditation spell from the fateweaver list
-      as a bonus power. The meditation is considered an opening attack for your monk
-      forms.
+    description: |-
+      You gain an adventurer tier meditation spell from the fateweaver list as a bonus
+      power. The meditation is considered an opening attack for your monk forms.
     feats:
     - tier: champion
       description: ' When you have focus, roll twice on attack rolls and take the preferred
@@ -1219,32 +1220,35 @@ abilities:
   - name: Crane Style
     _type: Talent
     source: DATP
-    description: 'You use Wisdom for attack and damage with unarmed attacks. However,
-      your base hit points are reduced by 1 to 6 + CON mod.
-  
+    description: |-
+      You use Wisdom for attack and damage with unarmed attacks. However, your base
+      hit points are reduced by 1 to 6 + CON mod.
   
       **Ki Power (Spread the Wings):**  You can spend a ki point to add your Wisdom
-      modifier to a disengage check, after you roll.'
+      modifier to a disengage check, after you roll.
     feats:
     - tier: adventurer
-      description: ' Whenever you spend a ki point, also gain temporary hit points equal
-        to your level.'
+      description: |2-
+         Whenever you spend a ki point, also gain temporary hit points equal to your
+        level.
     - tier: champion
-      description: ' Whenever you spend a ki point, you also gain a +1 bonus to all
-        defenses until the end of your next turn.'
+      description: |2-
+         Whenever you spend a ki point, you also gain a +1 bonus to all defenses until
+        the end of your next turn.
     - tier: epic
-      description: ' Once per battle, as an interrupt action, you can spend a ki point
-        to make a melee basic attack against an enemy who misses you with a melee attack.'
+      description: |2-
+         Once per battle, as an interrupt action, you can spend a ki point to make a
+        melee basic attack against an enemy who misses you with a melee attack.
     tier: adventurer
   - name: Crystal Mind
     _type: Talent
     source: DATP
-    description: 'When an attack that targets MD hits you, you can roll a normal save.
-      If you succeed, you take only half damage from the attack.
-  
+    description: |-
+      When an attack that targets MD hits you, you can roll a normal save. If you
+      succeed, you take only half damage from the attack.
   
       **Ki Power (Cleansing of Thought):**  You can spend a ki point as a free action
-      to gain _resist psychic damage_ 16+ until the end of the battle.'
+      to gain _resist psychic damage_ 16+ until the end of the battle.
     feats:
     - tier: adventurer
       description: ' Add your Wisdom modifier to Crystal Mind saves.'
@@ -1252,29 +1256,48 @@ abilities:
       description: ' On a successful save, you also block any non-damage effect from
         the attack.'
     - tier: epic
-      description: ' If you roll a natural 18+ on the save, you instead take no damage
-        from the attack and can choose one nearby enemy. It takes one-quarter of the
-        damage as you deflect the attack, and suffers any effects from it.'
+      description: |2-
+         If you roll a natural 18+ on the save, you instead take no damage from the
+        attack and can choose one nearby enemy. It takes one-quarter of the damage as
+        you deflect the attack, and suffers any effects from it.
     tier: adventurer
   - name: Fire Fist (Seven Deadly Secrets)
     _type: Talent
     source: DATP
-    description: "**Special:**  If you use Fire Fist in a battle, you can\u2019t use\
-      \ any other Deadly Secrets talents that battle.\n\nYou gain the following power:\n\
-      \nClose-quarters power; Once per battle; Quick action\n\n---\n\n\n**Effect:**\
-      \  Until the end of the battle, if the escalation die is 1+, your JAB, PUNCH and\
-      \ KICK attacks deal fire damage, and you deal 1d4 extra damage on a hit.\n\n2nd\
-      \ level monk: 1d6 extra damage\n\n4th level monk: 1d8 extra damage\n\n6th level\
-      \ monk: 2d6 extra damage\n\n8th level monk: 2d10 extra damage\n\n10th level monk:\
-      \ 3d12 extra damage\n\n**Ki Power (Immolating Fist):**  After rolling the extra\
-      \ fire damage, you can spend a ki point to deal ongoing fire damage to the target\
-      \ equal to the extra damage."
+    description: |-
+      **Special:**  If you use Fire Fist in a battle, you can’t use any other Deadly
+      Secrets talents that battle.
+  
+      You gain the following power:
+  
+      Close-quarters power; Once per battle; Quick action
+  
+      ---
+  
+  
+      **Effect:**  Until the end of the battle, if the escalation die is 1+, your JAB,
+      PUNCH and KICK attacks deal fire damage, and you deal 1d4 extra damage on a hit.
+  
+      2nd level monk: 1d6 extra damage
+  
+      4th level monk: 1d8 extra damage
+  
+      6th level monk: 2d6 extra damage
+  
+      8th level monk: 2d10 extra damage
+  
+      10th level monk: 3d12 extra damage
+  
+      **Ki Power (Immolating Fist):**  After rolling the extra fire damage, you can
+      spend a ki point to deal ongoing fire damage to the target equal to the extra
+      damage.
     feats:
     - tier: adventurer
       description: ' Also deal the extra damage on a miss.'
     - tier: champion
-      description: ' On a natural 18+ attack roll, deal maximum damage with the Fire
-        Fist extra damage.'
+      description: |2-
+         On a natural 18+ attack roll, deal maximum damage with the Fire Fist extra
+        damage.
     - tier: epic
       description: ' Double the ongoing damage from Immolating Fist.'
     tier: adventurer
@@ -1282,15 +1305,26 @@ abilities:
   - name: Freezing Fist (Seven Deadly Secrets)
     _type: Talent
     source: DATP
-    description: "**Special:**  If you use Freezing Fist in a battle, you can\u2019\
-      t use any other Deadly Secrets talents that battle.\n\nYou gain the following\
-      \ power:\n\nClose-quarters power; Once per battle; Free action\n\n---\n\n\n**Trigger:**\
-      \  You hit with an unarmed melee attack.\n\n**Effect:**  Deal extra cold damage\
-      \ equal to your level, and the target is dazed until the end of your next turn.\
-      \ If it is staggered, it is frozen (as stunned; -4 to defenses and can\u2019t\
-      \ take actions) until the end of your next turn instead.\n\n**Ki Power (Icy Breath):**\
-      \  When you use Freezing Fist, spend a ki point to give all enemies engaged with\
-      \ you disadvantage to disengage checks until the end of your next turn."
+    description: |-
+      **Special:**  If you use Freezing Fist in a battle, you can’t use any other
+      Deadly Secrets talents that battle.
+  
+      You gain the following power:
+  
+      Close-quarters power; Once per battle; Free action
+  
+      ---
+  
+  
+      **Trigger:**  You hit with an unarmed melee attack.
+  
+      **Effect:**  Deal extra cold damage equal to your level, and the target is dazed
+      until the end of your next turn. If it is staggered, it is frozen (as stunned;
+      -4 to defenses and can’t take actions) until the end of your next turn instead.
+  
+      **Ki Power (Icy Breath):**  When you use Freezing Fist, spend a ki point to give
+      all enemies engaged with you disadvantage to disengage checks until the end of
+      your next turn.
     feats:
     - tier: adventurer
       description: ' Deal extra cold damage equal to twice your level.'
@@ -1304,78 +1338,97 @@ abilities:
   - name: Iron Body
     _type: Talent
     source: DATP
-    description: "_You can push your body beyond mortal limits. You can walk over hot\
-      \ coals and meditate for hours in an ice-cold waterfall. You can put your body\
-      \ in a state where you can survive days, months, even years with a minimum of\
-      \ air, water, or food.\__\n\nYou take half damage from ongoing damage, and from\
-      \ any damage caused by the surrounding environment.\n\n**Ki Power (Seal of Steel):**\
-      \  You can spend a ki point to turn a failed save against ongoing damage, or the\
-      \ weakened, hampered, vulnerable or stuck conditions, into a success."
+    description: |-
+      _You can push your body beyond mortal limits. You can walk over hot coals and
+      meditate for hours in an ice-cold waterfall. You can put your body in a state
+      where you can survive days, months, even years with a minimum of air, water, or
+      food. _
+  
+      You take half damage from ongoing damage, and from any damage caused by the
+      surrounding environment.
+  
+      **Ki Power (Seal of Steel):**  You can spend a ki point to turn a failed save
+      against ongoing damage, or the weakened, hampered, vulnerable or stuck
+      conditions, into a success.
     feats:
     - tier: adventurer
       description: ' Increase your recovery dice to d10.'
     - tier: champion
       description: ' You gain _resist poison_ 16+.'
     - tier: epic
-      description: ' At the start of each battle, you gain temporary hit points equal
-        to 10 times your Constitution modifier.'
+      description: |2-
+         At the start of each battle, you gain temporary hit points equal to 10 times
+        your Constitution modifier.
     tier: adventurer
   - name: Kensai
     _type: Talent
     source: DATP
-    description: "Any melee weapon is a monk weapon for you. You wield them without\
-      \ penalty, and you can use your monk forms with them. When wielding a melee weapon,\
-      \ use that weapon\u2019s usual WEAPON damage die instead of your JAB, PUNCH or\
-      \ KICK.\n\nWhen you wield a two-handed weapon, use Strength instead of Dexterity\
-      \ for the attack roll. You don\u2019t reroll natural 2 on the attack, as you are\
-      \ not two-weapon-fighting.\n\n**Ki Power (Soulblade):**  As a free action, spend\
-      \ a ki point to imbue a weapon you wield as a true magic item (+1 to attacks and\
-      \ damage; +2 at 5th level; +3 at 8th) until the end of the battle. On your next\
-      \ hit with it, deal one extra WEAPON die damage (x2 at 5th level; x3 at 8th)."
+    description: |-
+      Any melee weapon is a monk weapon for you. You wield them without penalty, and
+      you can use your monk forms with them. When wielding a melee weapon, use that
+      weapon’s usual WEAPON damage die instead of your JAB, PUNCH or KICK.
+  
+      When you wield a two-handed weapon, use Strength instead of Dexterity for the
+      attack roll. You don’t reroll natural 2 on the attack, as you are not two-
+      weapon-fighting.
+  
+      **Ki Power (Soulblade):**  As a free action, spend a ki point to imbue a weapon
+      you wield as a true magic item (+1 to attacks and damage; +2 at 5th level; +3 at
+      8th) until the end of the battle. On your next hit with it, deal one extra
+      WEAPON die damage (x2 at 5th level; x3 at 8th).
     feats:
     - tier: adventurer
       description: ' You can use the Soulblade ki power once per day without spending
         a ki point.'
     - tier: champion
-      description: ' You can spend a ki point to recharge a magic item power of a true
-        magic item melee weapon.'
+      description: |2-
+         You can spend a ki point to recharge a magic item power of a true magic item
+        melee weapon.
     - tier: epic
-      description: ' If you have bonded with a weapon via Soulblade before, you can
-        spend a ki point to call it to your hand from a nearby or far away location.'
+      description: |2-
+         If you have bonded with a weapon via Soulblade before, you can spend a ki point
+        to call it to your hand from a nearby or far away location.
     tier: adventurer
   - name: Ninjutsu
     _type: Talent
     source: DATP
-    description: "You learn a rogue power of your level or lower. If it is an attack\
-      \ power, you can use your JAB as the weapon, and it counts as an opening attack.\
-      \ If you choose a momentum power, don\u2019t track momentum \u2014 instead, spend\
-      \ one ki point to use the power.\n\n**Ki Power (Yamiuchi):**  When you hit with\
-      \ a melee attack against an enemy that is also engaged with one of your allies,\
-      \ you can spend a ki point to deal Sneak Attack damage as a rogue of your level.\n\
-      \nAdventurer Tier: Gain three background points towards a stealth and espionage\
-      \ background."
+    description: |-
+      You learn a rogue power of your level or lower. If it is an attack power, you
+      can use your JAB as the weapon, and it counts as an opening attack. If you
+      choose a momentum power, don’t track momentum — instead, spend one ki point to
+      use the power.
+  
+      **Ki Power (Yamiuchi):**  When you hit with a melee attack against an enemy that
+      is also engaged with one of your allies, you can spend a ki point to deal Sneak
+      Attack damage as a rogue of your level.
+  
+      Adventurer Tier: Gain three background points towards a stealth and espionage
+      background.
     feats:
     - tier: champion
-      description: " Gain a second Rogue power, which counts as a PUNCH if it is an\
-        \ attack, and can be used\_ as a flow attack."
+      description: |2-
+         Gain a second Rogue power, which counts as a PUNCH if it is an attack, and can
+        be used  as a flow attack.
     - tier: epic
-      description: ' Gain a third Rogue power, which counts as a KICK if it is an attack,
-        and can be used as a finishing attack.'
+      description: |2-
+         Gain a third Rogue power, which counts as a KICK if it is an attack, and can be
+        used as a finishing attack.
     tier: adventurer
   - name: Shell of the Storm Turtle
     _type: Talent
     source: DATP
-    description: 'Increase your base AC in light or no armor to 14. This replaces the
-      variable defense bonus you gain from using your monk forms.
+    description: |-
+      Increase your base AC in light or no armor to 14. This replaces the variable
+      defense bonus you gain from using your monk forms.
   
-  
-      **Ki Power (Retreat into the Shell):**  Once per battle, while you are not engaged
-      with any enemy, you can spend a ki point as a quick action to gain a +1 bonus
-      to AC until the end of the battle.'
+      **Ki Power (Retreat into the Shell):**  Once per battle, while you are not
+      engaged with any enemy, you can spend a ki point as a quick action to gain a +1
+      bonus to AC until the end of the battle.
     feats:
     - tier: adventurer
-      description: ' When you use Retreat into the Shell, you gain _resist lightning_
-        16+ until the end of the battle.'
+      description: |2-
+         When you use Retreat into the Shell, you gain _resist lightning_ 16+ until the
+        end of the battle.
     - tier: champion
       description: ' Retreat into the Shell also increases your PD by 1.'
     - tier: epic
@@ -1384,16 +1437,17 @@ abilities:
   - name: Tattooed Monk
     _type: Talent
     source: DATP
-    description: 'You learn an additional adventurer tier form.
+    description: |-
+      You learn an additional adventurer tier form.
   
-  
-      **Ki Power (Flow of the Ink):**  Once per battle, as a quick action, you can spend
-      a ki point to move forward one step in the progression from opening to flow or
-      from flow to finishing.'
+      **Ki Power (Flow of the Ink):**  Once per battle, as a quick action, you can
+      spend a ki point to move forward one step in the progression from opening to
+      flow or from flow to finishing.
     feats:
     - tier: adventurer
-      description: ' You can switch one adventurer tier form you know for a different
-        one during a short rest.'
+      description: |2-
+         You can switch one adventurer tier form you know for a different one during a
+        short rest.
     - tier: champion
       description: ' You can choose a champion tier form as your bonus form instead.'
     - tier: epic
@@ -1402,16 +1456,17 @@ abilities:
   - name: Waterfall in the Clouded Gorge
     _type: Talent
     source: DATP
-    description: 'When you spend a recovery to heal, add your Wisdom modifier to the
-      amount you heal (x2 at 5th level; x3 at 8th).
-  
+    description: |-
+      When you spend a recovery to heal, add your Wisdom modifier to the amount you
+      heal (x2 at 5th level; x3 at 8th).
   
       **Ki Power (Crashing Waters):**  Once per battle, you can spend a ki point to
-      rally as a quick action.'
+      rally as a quick action.
     feats:
     - tier: adventurer
-      description: ' When you spend a recovery to heal, you also gain a +2 bonus to
-        PD and MD until the end of your next turn.'
+      description: |2-
+         When you spend a recovery to heal, you also gain a +2 bonus to PD and MD until
+        the end of your next turn.
     - tier: champion
       description: ' When you use Crashing Waters, also gain 5 temporary hit points
         per level.'
@@ -1427,43 +1482,59 @@ abilities:
   - name: Black Rose Acolyte
     _type: Talent
     source: DATP
-    description: 'Choose a necromancer spell of your level or lower as a bonus power.
-      You can choose any spell except summoning spells and spells granted by talents.
-      You can switch the spell after each full heal-up. If the spell is an at-will attack
+    description: |-
+      Choose a necromancer spell of your level or lower as a bonus power. You can
+      choose any spell except summoning spells and spells granted by talents. You can
+      switch the spell after each full heal-up. If the spell is an at-will attack
       spell, you can cast it in place of a flow attack. If the spell is a limited use
       attack spell, you can cast it in place of a finishing attack, at the frequency
       you can normally cast it (such as daily). Use your Wisdom as the ability score
       that determines attack and damage with the spell.
   
-  
-      **Ki Power (Tribute to Death):**  If an enemy has 5 times your level in hit points
-      or less after you hit them with a monk melee attack, you can expend a ki point
-      to reduce them to zero hit points.'
+      **Ki Power (Tribute to Death):**  If an enemy has 5 times your level in hit
+      points or less after you hit them with a monk melee attack, you can expend a ki
+      point to reduce them to zero hit points.
     feats:
     - tier: champion
-      description: ' When you use a monk power that has an elemental damage type, such
-        as fire, you can change that damage to negative energy instead.'
+      description: |2-
+         When you use a monk power that has an elemental damage type, such as fire, you
+        can change that damage to negative energy instead.
     - tier: epic
-      description: ' You can use the Tribute to Death ki power once per day without
-        expending a ki point.'
+      description: |2-
+         You can use the Tribute to Death ki power once per day without expending a ki
+        point.
     tier: champion
   - name: Death Touch (Seven Deadly Secrets)
     _type: Talent
     source: DATP
-    description: "**Special:**  If you use Death Touch in a battle, you can\u2019t use\
-      \ any other Deadly Secrets talents that battle.\n\nYou gain the following power:\n\
-      \nClose-quarters power; Once per battle; Free action\n\n---\n\n\n**Trigger:**\
-      \  You hit an enemy with an unarmed melee attack.\n\n**Effect:**  If the target\
-      \ has 50 hit points or less after taking damage from the attack, you kill it.\
-      \ Otherwise, the target is weakened (-4 to attacks and defenses; save ends).\n\
-      \n7th level monk: 75 hit points or less\n\n9th level monk: 100 hit points or less\n\
-      \n**Ki Power**  (Fatal Surprise): Once per battle, you can spend a ki point to\
-      \ use Death Touch even if you have already used a different Deadly Secret this\
-      \ battle."
+    description: |-
+      **Special:**  If you use Death Touch in a battle, you can’t use any other Deadly
+      Secrets talents that battle.
+  
+      You gain the following power:
+  
+      Close-quarters power; Once per battle; Free action
+  
+      ---
+  
+  
+      **Trigger:**  You hit an enemy with an unarmed melee attack.
+  
+      **Effect:**  If the target has 50 hit points or less after taking damage from
+      the attack, you kill it. Otherwise, the target is weakened (-4 to attacks and
+      defenses; save ends).
+  
+      7th level monk: 75 hit points or less
+  
+      9th level monk: 100 hit points or less
+  
+      **Ki Power**  (Fatal Surprise): Once per battle, you can spend a ki point to use
+      Death Touch even if you have already used a different Deadly Secret this battle.
     feats:
     - tier: champion
-      description: ' If you kill a target with Death Touch, you can spend a ki point
-        to use a recovery to heal.'
+      description: |2-
+         If you kill a target with Death Touch, you can spend a ki point to use a
+        recovery to heal.
     - tier: epic
       description: ' Kill a target with 150 hit points or less.'
     tier: champion
@@ -1471,13 +1542,16 @@ abilities:
   - name: Magefist
     _type: Talent
     source: DATP
-    description: "Choose a swordmage spell of your level or lower as a bonus power.\
-      \ You can cast it in place of a finishing attack, at the frequency you can normally\
-      \ cast it (such as daily). You can switch the spell after each full heal-up. Use\
-      \ your Wisdom instead of Intelligence as the ability score that determines attack\
-      \ and damage with the spell, and KICK for WEAPON damage.\n\n**Ki Power (Ki Sigil):**\
-      \  Choose a swordmage sigil when you gain this talent. You can spend a ki point\
-      \ to place the sigil on an enemy with the Mark with Sigil spell.\_"
+    description: |-
+      Choose a swordmage spell of your level or lower as a bonus power. You can cast
+      it in place of a finishing attack, at the frequency you can normally cast it
+      (such as daily). You can switch the spell after each full heal-up. Use your
+      Wisdom instead of Intelligence as the ability score that determines attack and
+      damage with the spell, and KICK for WEAPON damage.
+  
+      **Ki Power (Ki Sigil):**  Choose a swordmage sigil when you gain this talent.
+      You can spend a ki point to place the sigil on an enemy with the Mark with Sigil
+      spell. 
     feats:
     - tier: champion
       description: ' Once per day, you can use ki sigil without expending a ki point.'
@@ -1487,127 +1561,137 @@ abilities:
   - name: Perfect Kata
     _type: Talent
     source: DATP
-    description: 'If your flow attack is from the same form as your opening attack,
-      you gain a +1 bonus to your critical threat range with it. If your finishing attack
-      is from the same form as both your opening and flow attack, you gain a +2 bonus
-      to its critical threat range.
-  
+    description: |-
+      If your flow attack is from the same form as your opening attack, you gain a +1
+      bonus to your critical threat range with it. If your finishing attack is from
+      the same form as both your opening and flow attack, you gain a +2 bonus to its
+      critical threat range.
   
       **Ki Power (Nidan):**  Before making your attack roll, you can spend a ki point
-      to double the critical threat range bonus gained from this talent, i.e. +2 to
-      a flow attack or +4 to a finishing attack. If the power requires multiple attack
-      rolls this turn, you gain the benefit for all of them.'
+      to double the critical threat range bonus gained from this talent, i.e. +2 to a
+      flow attack or +4 to a finishing attack. If the power requires multiple attack
+      rolls this turn, you gain the benefit for all of them.
     feats:
     - tier: champion
       description: ' You can use the Nidan ki power once per day without expending a
         ki point.'
     - tier: epic
-      description: ' In addition to a bonus to your critical threat range, also gain
-        the same bonus to the attack roll. This bonus is also doubled when you expend
-        a ki point.'
+      description: |2-
+         In addition to a bonus to your critical threat range, also gain the same bonus
+        to the attack roll. This bonus is also doubled when you expend a ki point.
     tier: champion
   - name: Prison Within
     _type: Talent
     source: DATP
-    description: "_Demons and evil spirits who possess the power to enter their victim\u2019\
-      s mind are the most frightening adversaries of good, because they can hide among\
-      \ the innocent and any attempt to purge the spirit puts them in danger too. Therefore,\
-      \ most devout monks volunteer to imprison these creatures within themselves, where\
-      \ they are under control and\_ prevented from doing mischief._\n\nOnce per day,\
-      \ as a quick action when the escalation die is 1+, you can unleash the power of\
-      \ the imprisoned demon. Until the end of the battle, you have advantage on melee\
-      \ attacks. However, if both attack rolls show the same number, the demon eats\
-      \ away at your soul, and you lose a recovery. If you have no recoveries left,\
-      \ you take a -1 penalty to attacks and defenses until your next full heal-up.\n\
-      \n**Ki Power (The Demon Roars):**  When you unleash the demon, if both dice of\
-      \ your melee attack show the same number, you can spend a ki point to deal 1d6\
-      \ fire damage per level to the target."
+    description: |-
+      _Demons and evil spirits who possess the power to enter their victim’s mind are
+      the most frightening adversaries of good, because they can hide among the
+      innocent and any attempt to purge the spirit puts them in danger too. Therefore,
+      most devout monks volunteer to imprison these creatures within themselves, where
+      they are under control and  prevented from doing mischief._
+  
+      Once per day, as a quick action when the escalation die is 1+, you can unleash
+      the power of the imprisoned demon. Until the end of the battle, you have
+      advantage on melee attacks. However, if both attack rolls show the same number,
+      the demon eats away at your soul, and you lose a recovery. If you have no
+      recoveries left, you take a -1 penalty to attacks and defenses until your next
+      full heal-up.
+  
+      **Ki Power (The Demon Roars):**  When you unleash the demon, if both dice of
+      your melee attack show the same number, you can spend a ki point to deal 1d6
+      fire damage per level to the target.
     feats:
     - tier: champion
       description: ' You also gain _resist fire_ 16+ while the demon is unleashed.'
     - tier: epic
-      description: ' You can spend a 5 or 6 with the Diabolist to gain an additional
-        use of this talent that day.'
+      description: |2-
+         You can spend a 5 or 6 with the Diabolist to gain an additional use of this
+        talent that day.
     tier: champion
   - name: Shuriken Master
     _type: Talent
     source: DATP
-    description: 'Once per battle, you can make a ranged basic attack with a small thrown
-      weapon as a quick action.
+    description: |-
+      Once per battle, you can make a ranged basic attack with a small thrown weapon
+      as a quick action.
   
-  
-      **Ki Power (Back of the Hand):**  You can spend a ki point to use this talent
-      an additional time per battle.'
+      **Ki Power (Back of the Hand):**  You can spend a ki point to use this talent an
+      additional time per battle.
     feats:
     - tier: champion
       description: ' Increase your damage dice with small thrown weapons to d6.'
     - tier: epic
-      description: ' Once per battle, you can make an opening attack as a ranged attack
-        with a small thrown weapon instead of its usual type.'
+      description: |2-
+         Once per battle, you can make an opening attack as a ranged attack with a small
+        thrown weapon instead of its usual type.
     tier: champion
   - name: Epic Tier Talents
     _type: Talent
     source: DATP
-    description: At epic tier, you can choose **One with the Void**  to regain a ki
-      point on a quick rest. **Midnight Storm**  gives a bit of extra punch. **Moonlight
-      Reflection**  summons a double of yourself. **Wind in the Reeds**  allows you
-      to massively reduce the damage you take from one attack.
+    description: |-
+      At epic tier, you can choose **One with the Void**  to regain a ki point on a
+      quick rest. **Midnight Storm**  gives a bit of extra punch. **Moonlight
+      Reflection**  summons a double of yourself. **Wind in the Reeds**  allows you to
+      massively reduce the damage you take from one attack.
     feats: []
     tier: epic
   - name: Midnight Storm Topples the Oak
     _type: Talent
     source: DATP
-    description: 'Once per battle, you can make a monk basic melee attack as a quick
-      action, using the same damage die (JAB, PUNCH or KICK) as your last melee attack.
-  
+    description: |-
+      Once per battle, you can make a monk basic melee attack as a quick action, using
+      the same damage die (JAB, PUNCH or KICK) as your last melee attack.
   
       **Ki Power (Morning Tempest):**  You can spend a ki point to gain a second use
-      of this talent in a battle, when the escalation die is 3+.'
+      of this talent in a battle, when the escalation die is 3+.
     feats:
     - tier: epic
-      description: ' Once per day, you can use the Morning Tempest ki power without
-        spending a ki point.'
+      description: |2-
+         Once per day, you can use the Morning Tempest ki power without spending a ki
+        point.
     tier: epic
   - name: Moonlight Reflection
     _type: Talent
     source: DATP
-    description: 'For one battle per day, as a quick action, you can summon a shadow
-      double of yourself. At the end of your turn, roll a d6. If the result is lower
-      than the escalation die, the shadow double makes a melee basic attack against
-      a nearby enemy of your choice, using your stats and doing JAB, PUNCH or KICK damage
-      based on your current stage in the cycle. The double does not interact with the
-      battle in any other way.
+    description: |-
+      For one battle per day, as a quick action, you can summon a shadow double of
+      yourself. At the end of your turn, roll a d6. If the result is lower than the
+      escalation die, the shadow double makes a melee basic attack against a nearby
+      enemy of your choice, using your stats and doing JAB, PUNCH or KICK damage based
+      on your current stage in the cycle. The double does not interact with the battle
+      in any other way.
   
-  
-      **Ki Power (Ripples in the Pond):**  You can spend a ki point to set the d6 to
-      1 after you roll it (potentially triggering the shadow double attack).'
+      **Ki Power (Ripples in the Pond):**  You can spend a ki point to set the d6 to 1
+      after you roll it (potentially triggering the shadow double attack).
     feats:
     - tier: epic
-      description: ' Damage by your shadow double is either holy or negative energy
-        damage (choose when you take the feat).'
+      description: |2-
+         Damage by your shadow double is either holy or negative energy damage (choose
+        when you take the feat).
     tier: epic
   - name: One with the Void
     _type: Talent
     source: DATP
-    description: 'You regain a ki point when you take a quick rest.
+    description: |-
+      You regain a ki point when you take a quick rest.
   
-  
-      **Ki Power (One with the World):**  You can spend a ki point to increase the natural
-      roll of any d20 roll by 1, not just attack rolls.'
+      **Ki Power (One with the World):**  You can spend a ki point to increase the
+      natural roll of any d20 roll by 1, not just attack rolls.
     feats:
     - tier: epic
-      description: ' When you spend a ki point to increase a natural roll, you can increase
-        it by two instead.'
+      description: |2-
+         When you spend a ki point to increase a natural roll, you can increase it by
+        two instead.
     tier: epic
   - name: Wind in the Reeds
     _type: Talent
     source: DATP
-    description: 'The first time you are hit in a battle, make a save. If you succeed,
-      you only take damage equal to the level of the enemy.
-  
+    description: |-
+      The first time you are hit in a battle, make a save. If you succeed, you only
+      take damage equal to the level of the enemy.
   
       **Ki Power (Another Petal Falls):**  You can spend a ki point to use this power
-      a second time in a battle.'
+      a second time in a battle.
     feats:
     - tier: epic
       description: ' If you fail the save, you take only half damage.'
@@ -1628,84 +1712,61 @@ abilities:
   - name: Crazed Monkey
     _type: Form
     source: DATP
-    description: '### Opening Attack (Monkey Screech)
-  
+    description: |-
+      ### Opening Attack (Monkey Screech)
   
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. AC
   
-  
       **Hit:**  JAB + Strength damage
-  
   
       _Cycle bonus:_ You take a -2 penalty to AC, but all JAB, PUNCH and KICK damage
       dice are exploding dice (including this attack).
   
-  
-      **Miss:**  Damage equal to your level. You can spend a ki point to gain the cycle
-      bonus.
-  
+      **Miss:**  Damage equal to your level. You can spend a ki point to gain the
+      cycle bonus.
   
       ### Flow Attack (Monkey Jump)
   
-  
       Melee attack
-  
   
       **Always:**  You can pop free and engage a different nearby enemy.
   
-  
       **Attack:**  Dexterity + Level vs. AC
   
-  
       **Hit:**  PUNCH + Strength damage
-  
   
       _Natural even hit:_ Pop free, engage a different enemy, and make a second attack
       with JAB damage.
   
-  
       **Miss:**  Damage equal to your level
-  
   
       ### Finishing Attack (Monkey Swing)
   
-  
       Melee attack
   
-  
-      **Always:**  Pop free and make an acrobatic stunt, swinging across the battlefield
-      on a rope, chandelier, or whatever is available, and engage the target of the
-      attack.
-  
+      **Always:**  Pop free and make an acrobatic stunt, swinging across the
+      battlefield on a rope, chandelier, or whatever is available, and engage the
+      target of the attack.
   
       **Target:**  One nearby or far away enemy
   
-  
       **Attack:**  Dexterity + Level vs. AC
-  
   
       **Hit:**  KICK + Strength damage
   
-  
       _Natural even hit:_ Deal 1d4 extra damage per point of Dexterity modifier.
-  
   
       **Miss:**  Damage equal to your level
   
-  
       3rd level monk: Use d6 for extra damage
-  
   
       5th level monk: Use d8 for extra damage
   
-  
       7th level monk: Use d10 for extra damage
   
-  
-      9th level monk: Use d12 for extra damage'
+      9th level monk: Use d12 for extra damage
     feats:
     - tier: adventurer
       description: ' You can spend a ki point on this attack to target one additional
@@ -1715,92 +1776,103 @@ abilities:
   - name: Drunken Fist
     _type: Form
     source: DATP
-    description: "### Opening Attack (Wine-Addled Step)\n\nMelee attack\n\n**Attack:**\
-      \  Dexterity + Level vs. the target\u2019s lowest defense\n\n**Hit:**  JAB + Strength\
-      \ damage, and the next attack against you has disadvantage.\n\n_Cycle bonus:_\
-      \ You can spend a ki point as a free action to give the next attack against you\
-      \ disadvantage.\n\n**Miss:**  One enemy you are engaged with (GM\u2019s choice)\
-      \ can make a melee attack against you as a free action. The enemy has disadvantage\
-      \ on the attack.\n\n### Flow Attack (Swig from the Jug)\n\nMelee attack\n\n**Always:**\
-      \  You can drink a potion as a free action.\n\n**Attack:**  Dexterity + Level\
-      \ vs. the target\u2019s lowest defense\n\n**Hit:**  PUNCH + Strength damage\n\n\
-      **Miss:**  One enemy you are engaged with (GM\u2019s choice) can make a melee\
-      \ attack against you as a free action. The enemy has disadvantage on the attack.\n\
-      \n**Ki Power (Power Brew):**  If the potion has a random effect (like the bonus\
-      \ hit points gained from a healing potion), you can spend a ki point to set the\
-      \ result as the maximum.\n\n### Finishing Attack (Swaggering Spin)\n\nMelee attack\n\
-      \n**Attack:**  Dexterity + Level vs. the target\u2019s lowest defense\n\n**Hit:**\
-      \  KICK + Strength damage\n\n_Natural even hit:_ The target has disadvantage on\
-      \ its attack rolls (save ends).\n\n**Miss:**  One enemy you are engaged with (GM\u2019\
-      s choice) can make a melee attack against you as a free action. The enemy has\
-      \ disadvantage on the attack."
+    description: |-
+      ### Opening Attack (Wine-Addled Step)
+  
+      Melee attack
+  
+      **Attack:**  Dexterity + Level vs. the target’s lowest defense
+  
+      **Hit:**  JAB + Strength damage, and the next attack against you has
+      disadvantage.
+  
+      _Cycle bonus:_ You can spend a ki point as a free action to give the next attack
+      against you disadvantage.
+  
+      **Miss:**  One enemy you are engaged with (GM’s choice) can make a melee attack
+      against you as a free action. The enemy has disadvantage on the attack.
+  
+      ### Flow Attack (Swig from the Jug)
+  
+      Melee attack
+  
+      **Always:**  You can drink a potion as a free action.
+  
+      **Attack:**  Dexterity + Level vs. the target’s lowest defense
+  
+      **Hit:**  PUNCH + Strength damage
+  
+      **Miss:**  One enemy you are engaged with (GM’s choice) can make a melee attack
+      against you as a free action. The enemy has disadvantage on the attack.
+  
+      **Ki Power (Power Brew):**  If the potion has a random effect (like the bonus
+      hit points gained from a healing potion), you can spend a ki point to set the
+      result as the maximum.
+  
+      ### Finishing Attack (Swaggering Spin)
+  
+      Melee attack
+  
+      **Attack:**  Dexterity + Level vs. the target’s lowest defense
+  
+      **Hit:**  KICK + Strength damage
+  
+      _Natural even hit:_ The target has disadvantage on its attack rolls (save ends).
+  
+      **Miss:**  One enemy you are engaged with (GM’s choice) can make a melee attack
+      against you as a free action. The enemy has disadvantage on the attack.
     feats:
     - tier: adventurer
-      description: ' If an enemy misses you with a melee attack during this cycle, deal
-        psychic damage equal to your Wisdom modifier (x2 at 5th level; x3 at 8th).'
+      description: |2-
+         If an enemy misses you with a melee attack during this cycle, deal psychic
+        damage equal to your Wisdom modifier (x2 at 5th level; x3 at 8th).
     tier: adventurer
     category: Forms
   - name: Firewalker
     _type: Form
     source: DATP
-    description: '**Ki Power (Firewalk):**  Spend a ki point to gain _resist fire_ 12+
-      until the end of the battle. If you already have fire resistance, increase it
-      by 2.
-  
+    description: |-
+      **Ki Power (Firewalk):**  Spend a ki point to gain _resist fire_ 12+ until the
+      end of the battle. If you already have fire resistance, increase it by 2.
   
       5th level monk: Increase the resistance to 16+.
   
-  
       ### Opening Attack (Flying Cinders)
-  
   
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. AC
-  
   
       **Hit:**  JAB + Strength fire damage
   
+      _Cycle bonus:_ Whenever an enemy makes a melee attack against you, deal fire
+      damage equal to your Wisdom modifier (x2 at 5th level; x3 at 8th) to the
+      attacker.
   
-      _Cycle bonus:_ Whenever an enemy makes a melee attack against you, deal fire damage
-      equal to your Wisdom modifier (x2 at 5th level; x3 at 8th) to the attacker.
-  
-  
-      **Miss:**  Damage equal to your level. You can spend a ki point to gain the cycle
-      bonus.
-  
+      **Miss:**  Damage equal to your level. You can spend a ki point to gain the
+      cycle bonus.
   
       ### Flow Attack (Awaken the Flames)
   
-  
       Melee attack
-  
   
       **Attack:**  Dexterity + Level vs. AC
   
-  
       **Hit:**  Ongoing fire damage equal to 5 times your level
-  
   
       **Miss:**  Damage equal to your level
   
-  
       ### Finishing Attack (Fan of Flames)
-  
   
       Melee attack
   
+      **Attack:**  Dexterity + Level vs. AC. If the target is taking ongoing fire
+      damage, you have advantage on the attack roll.
   
-      **Attack:**  Dexterity + Level vs. AC. If the target is taking ongoing fire damage,
-      you have advantage on the attack roll.
+      **Hit:**  KICK + Strength fire damage. Deal fire damage equal to your Wisdom
+      modifier (x2 at 5th level; x3 at 8th) to 1d4 nearby enemies.
   
-  
-      **Hit:**  KICK + Strength fire damage. Deal fire damage equal to your Wisdom modifier
-      (x2 at 5th level; x3 at 8th) to 1d4 nearby enemies.
-  
-  
-      **Miss:**  Damage equal to your level'
+      **Miss:**  Damage equal to your level
     feats:
     - tier: adventurer
       description: ' Add your level to the damage dealt with the cycle bonus.'
@@ -1809,16 +1881,46 @@ abilities:
   - name: Rabid Badger
     _type: Form
     source: DATP
-    description: "### Opening Attack (Badger)\n\nMelee attack\n\n**Attack:**  Dexterity\
-      \ + Level -4 vs. AC\n\n**Hit:**  JAB + Strength + 1d6 per level damage\n\n**Miss:**\
-      \  1d6 damage (5th level: 2d6; 8th level: 3d6)\n\n### Flow Attack (Badger Badger)\n\
-      \nMelee attack\n\n**Target:**  Two enemies\n\n**Attack:**  Dexterity + Level -4\
-      \ vs. AC\n\n**Hit:**  PUNCH + Strength damage\n\n**Miss:**  1d6 damage (5th level:\
-      \ 2d6; 8th level: 3d6)\n\n### Finishing Attack (Badger Badger Badger)\n\nMelee\
-      \ attack\n\n**Attack:**  Dexterity + Level -4 vs. AC\n\n**Hit:**  KICK + Strength\
-      \ damage\n\n**Miss:**  1d6 damage (5th level: 2d6; 8th level: 3d6)\n\n**Always:**\
-      \  Make two follow-up attacks against the same target.\n\n**Attack:**  Dexterity\
-      \ + Level -4 vs. AC\n\n**Hit:**  JAB damage\n\n**Miss:**  \u2014"
+    description: |-
+      ### Opening Attack (Badger)
+  
+      Melee attack
+  
+      **Attack:**  Dexterity + Level -4 vs. AC
+  
+      **Hit:**  JAB + Strength + 1d6 per level damage
+  
+      **Miss:**  1d6 damage (5th level: 2d6; 8th level: 3d6)
+  
+      ### Flow Attack (Badger Badger)
+  
+      Melee attack
+  
+      **Target:**  Two enemies
+  
+      **Attack:**  Dexterity + Level -4 vs. AC
+  
+      **Hit:**  PUNCH + Strength damage
+  
+      **Miss:**  1d6 damage (5th level: 2d6; 8th level: 3d6)
+  
+      ### Finishing Attack (Badger Badger Badger)
+  
+      Melee attack
+  
+      **Attack:**  Dexterity + Level -4 vs. AC
+  
+      **Hit:**  KICK + Strength damage
+  
+      **Miss:**  1d6 damage (5th level: 2d6; 8th level: 3d6)
+  
+      **Always:**  Make two follow-up attacks against the same target.
+  
+      **Attack:**  Dexterity + Level -4 vs. AC
+  
+      **Hit:**  JAB damage
+  
+      **Miss:**  —
     feats:
     - tier: adventurer
       description: ' Reduce the attack penalty of all attacks in this form to -2.'
@@ -1827,118 +1929,90 @@ abilities:
   - name: Red Cliff
     _type: Form
     source: DATP
-    description: '### Opening Attack (Raise the Wall)
-  
+    description: |-
+      ### Opening Attack (Raise the Wall)
   
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. AC
   
-  
       **Hit:**  JAB + Strength damage
-  
   
       _Cycle bonus:_ Enemies take a penalty to disengage from you equal to your Wisdom
       modifier.
   
-  
-      **Miss:**  Damage equal to your level. You can spend a ki point to gain the cycle
-      bonus.
-  
+      **Miss:**  Damage equal to your level. You can spend a ki point to gain the
+      cycle bonus.
   
       ### Flow Attack (Break the Barrier)
   
-  
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. AC
-  
   
       **Hit:**  PUNCH + Strength damage
   
-  
-      **First Miss:**  Repeat the attack once against a different enemy you are engaged
-      with.
-  
+      **First Miss:**  Repeat the attack once against a different enemy you are
+      engaged with.
   
       **Second Miss:**  Pop free from all enemies.
   
-  
       ### Finishing Attack (Force Retreat)
-  
   
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. AC
-  
   
       **Hit:**  The target can choose to either take no damage, pop free and retreat
       to a far away location, OR take double KICK + Strength damage.
   
-  
-      **Miss:**  1d8 damage (5th level: 2d8; 8th level: 3d8)'
+      **Miss:**  1d8 damage (5th level: 2d8; 8th level: 3d8)
     feats:
     - tier: adventurer
-      description: ' With the cycle bonus, also reduce the damage you take from enemy
-        attacks by your level.'
+      description: |2-
+         With the cycle bonus, also reduce the damage you take from enemy attacks by
+        your level.
     tier: adventurer
     category: Forms
   - name: Shadow Fist
     _type: Form
     source: DATP
-    description: '### Opening Attack (Embrace the Shadow)
-  
+    description: |-
+      ### Opening Attack (Embrace the Shadow)
   
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. MD
-  
   
       **Hit:**  JAB + Strength damage
   
-  
       _Cycle bonus:_ Gain a bonus to disengage checks equal to your Wisdom modifier.
   
-  
-      **Miss:**  Damage equal to your level. You can spend a ki point to gain the cycle
-      bonus.
-  
+      **Miss:**  Damage equal to your level. You can spend a ki point to gain the
+      cycle bonus.
   
       ### Flow Attack (Shadow Curtain)
   
-  
       Melee attack
-  
   
       **Attack:**  Dexterity + Level vs. MD
   
-  
-      **Hit:**  PUNCH + Strength damage, and if the next attack against you is a natural
-      odd roll, change the target to this enemy.
-  
+      **Hit:**  PUNCH + Strength damage, and if the next attack against you is a
+      natural odd roll, change the target to this enemy.
   
       **Miss:**  Damage equal to your level
   
-  
       ### Finishing Attack (Shadow Dance)
-  
   
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. MD
-  
   
       **Hit:**  KICK + Strength damage, and you teleport to a nearby location you can
       see.
   
-  
       **Miss:**  You can spend a ki point to reroll the attack, and add your Wisdom
-      modifier as a bonus to the attack.'
+      modifier as a bonus to the attack.
     feats:
     - tier: adventurer
       description: ' On a hit, you can teleport the target instead.'
@@ -1947,67 +2021,56 @@ abilities:
   - name: Sacred Fist
     _type: Form
     source: DATP
-    description: '### Opening Attack (Sacred Willow Sutra)
-  
+    description: |-
+      ### Opening Attack (Sacred Willow Sutra)
   
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. AC
   
-  
       **Hit:**  JAB + Wisdom holy damage
-  
   
       _Cycle bonus:_ Your melee attacks deal holy damage, and you can replace Strength
       with Wisdom for damage.
   
-  
-      **Miss:**  Damage equal to your level. You can spend a ki point to gain the cycle
-      bonus.
-  
+      **Miss:**  Damage equal to your level. You can spend a ki point to gain the
+      cycle bonus.
   
       ### Flow Attack (Clear Spring Under the Weeping Willow)
   
-  
       Melee attack
-  
   
       **Attack:**  Dexterity + Level vs. AC
   
+      **Hit:**  PUNCH + Wisdom damage. You or a nearby conscious ally can heal hit
+      points equal to 1d4 + your Wisdom modifier (2d4 + Wis x2 at 5th level; 4d4 + Wis
+      x3 at 8th).
   
-      **Hit:**  PUNCH + Wisdom damage. You or a nearby conscious ally can heal hit points
-      equal to 1d4 + your Wisdom modifier (2d4 + Wis x2 at 5th level; 4d4 + Wis x3 at
-      8th).
-  
-  
-      **Miss:**  The target takes a -2 penalty to attacks against you until the end
-      of your next turn.
-  
+      **Miss:**  The target takes a -2 penalty to attacks against you until the end of
+      your next turn.
   
       ### Finishing Attack (Moonlight Reflection in the Stream)
   
-  
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. AC
-  
   
       **Hit:**  KICK + Wisdom damage. Spend a recovery to heal. Heal half yourself,
       and grant the same amount to the nearby wounded ally with the lowest hit point
       total. You gain a +2 bonus to AC until the end of your next turn.
   
-  
       **Miss:**  You gain a +2 bonus to AC until the end of your next turn, and the
-      nearby ally with the lowest hit point total heals hit points equal to your level.'
+      nearby ally with the lowest hit point total heals hit points equal to your
+      level.
     feats:
     - tier: adventurer
-      description: ' With the cycle bonus, add both Strength AND Wisdom to damage rolls
-        instead of replacing one with the other.'
+      description: |2-
+         With the cycle bonus, add both Strength AND Wisdom to damage rolls instead of
+        replacing one with the other.
     - tier: champion
-      description: ' On a hit, the target of your healing also gains a +2 bonus to AC
-        until the end of your next turn.'
+      description: |2-
+         On a hit, the target of your healing also gains a +2 bonus to AC until the end
+        of your next turn.
     tier: adventurer
     category: Forms
   - name: Champion Tier Forms
@@ -2020,18 +2083,43 @@ abilities:
   - name: Calm of the Lotus Pond
     _type: Form
     source: DATP
-    description: "### Opening Attack (Lotus Bloom)\n\nMelee attack\n\n**Attack:**  Dexterity\
-      \ + Level vs. AC\n\n**Hit:**  JAB + Strength damage\n\n_Cycle bonus:_ Roll saves\
-      \ at the start of your turn instead of at the end.\n\n**Miss:**  Damage equal\
-      \ to your level. You can spend a ki point to gain the cycle bonus.\n\n### Flow\
-      \ Attack (Koi in the Water)\n\nMelee attack\n\n**Attack:**  Dexterity + Level\
-      \ vs. AC\n\n**Hit:**  PUNCH + Strength damage. Starting from next turn, change\
-      \ your position in the initiative order to act directly after one ally of your\
-      \ choice.\n\n**Miss:**  Damage equal to your level\n\n### Finishing Attack (Frog\
-      \ Croaking in the Pond)\n\nMelee attack\n\n**Target:**  One nearby enemy\n\n**Attack:**\
-      \  Dexterity + Level vs. AC\n\n**Hit: ** KICK + Strength damage. The target\u2019\
-      s next attack roll is a miss, unless the natural roll is an 18+.\n\n**Miss:**\
-      \  Damage equal to your level"
+    description: |-
+      ### Opening Attack (Lotus Bloom)
+  
+      Melee attack
+  
+      **Attack:**  Dexterity + Level vs. AC
+  
+      **Hit:**  JAB + Strength damage
+  
+      _Cycle bonus:_ Roll saves at the start of your turn instead of at the end.
+  
+      **Miss:**  Damage equal to your level. You can spend a ki point to gain the
+      cycle bonus.
+  
+      ### Flow Attack (Koi in the Water)
+  
+      Melee attack
+  
+      **Attack:**  Dexterity + Level vs. AC
+  
+      **Hit:**  PUNCH + Strength damage. Starting from next turn, change your position
+      in the initiative order to act directly after one ally of your choice.
+  
+      **Miss:**  Damage equal to your level
+  
+      ### Finishing Attack (Frog Croaking in the Pond)
+  
+      Melee attack
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Dexterity + Level vs. AC
+  
+      **Hit: ** KICK + Strength damage. The target’s next attack roll is a miss,
+      unless the natural roll is an 18+.
+  
+      **Miss:**  Damage equal to your level
     feats:
     - tier: champion
       description: ' If the escalation die is 4+, you can target two enemies you are
@@ -2041,76 +2129,56 @@ abilities:
   - name: Forbidden Teachings of Kok Abaator
     _type: Form
     source: DATP
-    description: '### Opening Attack (Finger of Dust)
-  
+    description: |-
+      ### Opening Attack (Finger of Dust)
   
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. PD
-  
   
       **Hit:**  JAB + Strength negative energy damage, plus 1d6 damage for each icon
       relationship point with the Lich King.
   
-  
       _Cycle bonus:_ When a target has 25 hp or fewer after you hit it with a melee
       attack, you reduce it to zero hp.
   
-  
-      **Miss:**  Damage equal to your level. You can spend a ki point to gain the cycle
-      bonus.
-  
+      **Miss:**  Damage equal to your level. You can spend a ki point to gain the
+      cycle bonus.
   
       7th level monk: 1d10 per icon relationship point; 40 hp or fewer
   
-  
       9th level monk: 2d8 per icon relationship point; 60 hp or fewer
-  
   
       ### Flow Attack (Finger of Bones)
   
-  
       Melee attack
-  
   
       **Target:**  One nearby enemy
   
-  
       **Attack:**  Dexterity + Level vs. PD
   
-  
-      **Hit: ** KICK + Strength negative energy damage. If you reduce the target to
-      0 hp or fewer, raise it as a 5th level just-ripped-free skeleton mook (13TW p.
-      88) under your control.
-  
+      **Hit: ** KICK + Strength negative energy damage. If you reduce the target to 0
+      hp or fewer, raise it as a 5th level just-ripped-free skeleton mook (13TW p. 88)
+      under your control.
   
       **Miss:**  Damage equal to your level
   
-  
       7th level monk: 7th level mook
-  
   
       9th level monk: 9th level mook
   
-  
       ### Finishing Attack (Finger of Blood)
-  
   
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. PD
-  
   
       **Hit:**  PUNCH + Strength negative energy damage. You can spend a recovery to
       heal hit points equal to the damage (instead of a recovery roll).
   
-  
       _Natural even hit:_ You can spend a ki point instead of a recovery.
   
-  
-      **Miss:**  Half damage, and heal hit points equal to your level.'
+      **Miss:**  Half damage, and heal hit points equal to your level.
     feats:
     - tier: champion
       description: ' You can target any nearby enemy with this attack, without being
@@ -2120,24 +2188,52 @@ abilities:
   - name: Great Wave of Crashing Waters
     _type: Form
     source: DATP
-    description: "### Opening Attack (Storm Gathering at Sea)\n\nMelee attack\n\n**Attack:**\
-      \  Dexterity + Level vs. AC\n\n**Hit:**  JAB + Strength damage\n\n_Cycle bonus:_\
-      \ When you hit with a melee attack, you can force the target to pop free from\
-      \ you. If you do, reroll any damage dice that come up as natural 1.\n\n**Miss:**\
-      \  Damage equal to your level. You can spend a ki point to gain the cycle bonus.\n\
-      \n### Flow Attack (Ship Rocking on the Waves)\n\nMelee attack\n\n**Attack:** \
-      \ Dexterity + Level vs. AC\n\n**Hit:**  KICK + Strength damage. Until the end\
-      \ of your next turn, you gain a +4 bonus to AC against melee attacks.\n\n**Miss:**\
-      \  Damage equal to your level\n\n### Finishing Attack (Wave Crashes Against the\
-      \ Coast)\n\nMelee attack\n\n**Attack:**  Make three separate attack rolls, Dexterity\
-      \ + Level vs. each of the target\u2019s three defenses (AC, PD and MD). If at\
-      \ least one of the rolls hits, the attack is a hit.\n\n**Hit:**  PUNCH + Strength\
-      \ damage. For each defense that you hit, gain an additional effect as below.\n\
-      \n_Hit against AC:_ Deal 1d12 extra damage (8th level: 2d12).\n\n_Hit against\
-      \ PD:_ The target is forced to pop free from you, and you push it to a nearby\
-      \ location of your choice. If the location is dangerous (acid pit, over a ledge\
-      \ etc.), it can make a save to prevent that danger.\n\n_Hit against MD:_ The target\
-      \ is hampered until the end of your next turn.\n\n**Miss:**  \u2014"
+    description: |-
+      ### Opening Attack (Storm Gathering at Sea)
+  
+      Melee attack
+  
+      **Attack:**  Dexterity + Level vs. AC
+  
+      **Hit:**  JAB + Strength damage
+  
+      _Cycle bonus:_ When you hit with a melee attack, you can force the target to pop
+      free from you. If you do, reroll any damage dice that come up as natural 1.
+  
+      **Miss:**  Damage equal to your level. You can spend a ki point to gain the
+      cycle bonus.
+  
+      ### Flow Attack (Ship Rocking on the Waves)
+  
+      Melee attack
+  
+      **Attack:**  Dexterity + Level vs. AC
+  
+      **Hit:**  KICK + Strength damage. Until the end of your next turn, you gain a +4
+      bonus to AC against melee attacks.
+  
+      **Miss:**  Damage equal to your level
+  
+      ### Finishing Attack (Wave Crashes Against the Coast)
+  
+      Melee attack
+  
+      **Attack:**  Make three separate attack rolls, Dexterity + Level vs. each of the
+      target’s three defenses (AC, PD and MD). If at least one of the rolls hits, the
+      attack is a hit.
+  
+      **Hit:**  PUNCH + Strength damage. For each defense that you hit, gain an
+      additional effect as below.
+  
+      _Hit against AC:_ Deal 1d12 extra damage (8th level: 2d12).
+  
+      _Hit against PD:_ The target is forced to pop free from you, and you push it to
+      a nearby location of your choice. If the location is dangerous (acid pit, over a
+      ledge etc.), it can make a save to prevent that danger.
+  
+      _Hit against MD:_ The target is hampered until the end of your next turn.
+  
+      **Miss:**  —
     feats:
     - tier: epic
       description: ' Before making the attack, you can engage a nearby enemy as a free
@@ -2147,17 +2243,45 @@ abilities:
   - name: Polished Jade
     _type: Form
     source: DATP
-    description: "### Opening Attack (Jade Jewel)\n\nMelee attack\n\n**Attack:**  Dexterity\
-      \ + Level vs. MD\n\n**Hit:**  JAB + Strength damage\n\n_Cycle bonus:_ Gain a +2\
-      \ bonus to MD.\n\n**Miss:**  Damage equal to your level + Wisdom modifier. You\
-      \ can spend a ki point to gain the cycle bonus.\n\n### Flow Attack (Jade Cut)\n\
-      \nMelee attack\n\n**Attack:**  Dexterity + Level vs. PD\n\n**Hit:**  PUNCH + Strength\
-      \ damage\n\n_Natural 16+:_ The attack deals maximum damage.\n\n**Miss:**  Damage\
-      \ equal to your level\n\n### Finishing Attack (Jade and Pearl)\n\nMelee attack\n\
-      \n**Target:**  One nearby enemy\n\n**Attack:**  Dexterity + Level vs. PD\n\n**Hit:\
-      \ ** KICK + Strength damage. The target cannot reduce this damage in any way,\
-      \ such as through resistance. The attack also doesn\u2019t trigger interrupt actions.\n\
-      \n**Miss:**  Damage equal to your level"
+    description: |-
+      ### Opening Attack (Jade Jewel)
+  
+      Melee attack
+  
+      **Attack:**  Dexterity + Level vs. MD
+  
+      **Hit:**  JAB + Strength damage
+  
+      _Cycle bonus:_ Gain a +2 bonus to MD.
+  
+      **Miss:**  Damage equal to your level + Wisdom modifier. You can spend a ki
+      point to gain the cycle bonus.
+  
+      ### Flow Attack (Jade Cut)
+  
+      Melee attack
+  
+      **Attack:**  Dexterity + Level vs. PD
+  
+      **Hit:**  PUNCH + Strength damage
+  
+      _Natural 16+:_ The attack deals maximum damage.
+  
+      **Miss:**  Damage equal to your level
+  
+      ### Finishing Attack (Jade and Pearl)
+  
+      Melee attack
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Dexterity + Level vs. PD
+  
+      **Hit: ** KICK + Strength damage. The target cannot reduce this damage in any
+      way, such as through resistance. The attack also doesn’t trigger interrupt
+      actions.
+  
+      **Miss:**  Damage equal to your level
     feats:
     - tier: champion
       description: ' Deal half damage on a miss.'
@@ -2166,102 +2290,113 @@ abilities:
   - name: Scales of The Serpent
     _type: Form
     source: DATP
-    description: '### Opening Attack (Serpentine Gaze)
-  
+    description: |-
+      ### Opening Attack (Serpentine Gaze)
   
       Close-quarters attack
   
-  
       **Target:**  One nearby enemy
-  
   
       **Attack:**  Wisdom + Level vs. MD
   
-  
       **Hit:**  Psychic damage equal to twice your level
-  
   
       _Cycle bonus:_ The target cannot attack you until you make an attack against it.
       You cannot affect the same enemy twice in the same battle with this power.
   
-  
       **Miss:**  Damage equal to your level
-  
   
       ### Flow Attack (Slithering Coil)
   
-  
       Melee attack
-  
   
       **Target:**  One nearby enemy
   
-  
       **Always:**  Move to engage the enemy. This movement cannot be intercepted.
-  
   
       **Special:**  If the target is under your Serpentine Gaze effect, you can spend
       a ki point to gain advantage on the attack roll.
   
-  
       **Attack:**  Dexterity OR Strength + Level vs. AC
-  
   
       **Hit:**  You grab the target, and it takes ongoing poison damage equal to twice
       your level (save ends both).
   
-  
       **Miss:**  Damage equal to your level
-  
   
       ### Finishing Attack (Death Fang)
   
-  
       Melee attack
-  
   
       **Special: ** If the target is grabbed by you, you can spend a ki point to gain
       advantage on the attack roll.
   
-  
       **Attack:**  Dexterity + Level vs. AC
-  
   
       **Hit:**  40 ongoing poison damage
   
-  
       **Miss:**  Half damage
-  
   
       7th level form: 70 ongoing damage
   
-  
-      9th level form: 100 ongoing damage'
+      9th level form: 100 ongoing damage
     feats:
     - tier: champion
-      description: ' Each time the target fails a save against the ongoing damage, increase
-        that damage by twice your level.'
+      description: |2-
+         Each time the target fails a save against the ongoing damage, increase that
+        damage by twice your level.
     tier: champion
     category: Forms
   - name: White Dragon Mountain
     _type: Form
     source: DATP
-    description: "### Opening Attack (Glacial Touch)\n\nMelee attack\n\n**Target:**\
-      \  One nearby enemy\n\n**Attack:**  Dexterity + Level vs. PD\n\n**Hit:**  JAB\
-      \ + Strength + Wisdom cold damage\n\n_Cycle bonus:_ When you miss with an attack,\
-      \ deal extra cold damage equal to twice your Wisdom modifier (x3 at 8th level).\n\
-      \n**Miss:**  Damage equal to your level + twice your Wisdom modifier (x3 at 8th\
-      \ level). You can spend a ki point to gain the cycle bonus.\n\n### Flow Attack\
-      \ (Spread the Ice)\n\nMelee attack\n\n**Target:**  All enemies you are engaged\
-      \ with\n\n**Always:**  Any targets that don\u2019t fly have disadvantage on disengage\
-      \ checks until the end of your next turn.\n\n**Attack:**  Dexterity + Level vs.\
-      \ PD\n\n**Hit:**  PUNCH + Strength + Wisdom cold damage\n\n**Miss:**  Damage equal\
-      \ to your level\n\n### Finishing Attack (Avalanche Breath)\n\nClose-quarters power\n\
-      \n**Target:**  1d3 nearby enemies\n\n**Attack:**  Dexterity + Level vs. PD\n\n\
-      **Hit:**  1d10 per level + Strength + Wisdom cold damage\n\n**Miss:**  Half damage\n\
-      \n**Always:**  Until the end of the battle, when your monk attack is a natural\
-      \ 1-5, you can spend 2 ki points to use Avalanche Breath as a quick action once\
-      \ on the same turn."
+    description: |-
+      ### Opening Attack (Glacial Touch)
+  
+      Melee attack
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Dexterity + Level vs. PD
+  
+      **Hit:**  JAB + Strength + Wisdom cold damage
+  
+      _Cycle bonus:_ When you miss with an attack, deal extra cold damage equal to
+      twice your Wisdom modifier (x3 at 8th level).
+  
+      **Miss:**  Damage equal to your level + twice your Wisdom modifier (x3 at 8th
+      level). You can spend a ki point to gain the cycle bonus.
+  
+      ### Flow Attack (Spread the Ice)
+  
+      Melee attack
+  
+      **Target:**  All enemies you are engaged with
+  
+      **Always:**  Any targets that don’t fly have disadvantage on disengage checks
+      until the end of your next turn.
+  
+      **Attack:**  Dexterity + Level vs. PD
+  
+      **Hit:**  PUNCH + Strength + Wisdom cold damage
+  
+      **Miss:**  Damage equal to your level
+  
+      ### Finishing Attack (Avalanche Breath)
+  
+      Close-quarters power
+  
+      **Target:**  1d3 nearby enemies
+  
+      **Attack:**  Dexterity + Level vs. PD
+  
+      **Hit:**  1d10 per level + Strength + Wisdom cold damage
+  
+      **Miss:**  Half damage
+  
+      **Always:**  Until the end of the battle, when your monk attack is a natural
+      1-5, you can spend 2 ki points to use Avalanche Breath as a quick action once on
+      the same turn.
     feats:
     - tier: champion
       description: ' On a natural even hit, the target is dazed until the end of your
@@ -2278,61 +2413,45 @@ abilities:
   - name: Clouds of the Morning Mist
     _type: Form
     source: DATP
-    description: '### Opening Attack (Step between the Clouds)
-  
+    description: |-
+      ### Opening Attack (Step between the Clouds)
   
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. AC
-  
   
       **Hit:**  JAB + Strength damage
   
-  
       _Cycle bonus:_ You have _resist physical damage _16+.
   
-  
-      **Miss:**  Damage equal to your level. You can spend a ki point to gain the cycle
-      bonus.
-  
+      **Miss:**  Damage equal to your level. You can spend a ki point to gain the
+      cycle bonus.
   
       ### Flow Attack (Step from the Clouds)
   
-  
       Melee attack
-  
   
       **Target:**  One nearby or far away enemy
   
-  
       **Always:**  Teleport to engage the enemy
   
-  
       **Attack:**  Dexterity + Level vs. AC
-  
   
       **Hit:**  PUNCH + Strength damage
   
-  
       **Miss:**  Damage equal to your level
-  
   
       ### Finishing Attack (Vanish without a Trace)
   
-  
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. AC
-  
   
       **Hit:**  KICK + Strength damage, and you are invisible until the start of your
       next turn.
   
-  
-      **Miss:**  Choose to deal half damage OR become invisible until the start of your
-      next turn.'
+      **Miss:**  Choose to deal half damage OR become invisible until the start of
+      your next turn.
     feats:
     - tier: epic
       description: ' Deal half damage on a miss.'
@@ -2341,147 +2460,147 @@ abilities:
   - name: Ghost Fist
     _type: Form
     source: DATP
-    description: "### Opening Attack (Ghosts Awaken)\n\nMelee attack\n\n**Attack:**\
-      \  Dexterity + Level vs. AC\n\n**Hit:**  JAB + Strength damage.\n\n_Cycle bonus:_\
-      \ When a nearby enemy makes a melee attack against you, you can spend a ki point\
-      \ to make the attack below as an interrupt action. The interrupt resolves before\
-      \ their attack.\n\n**Target:**  The enemy who attacked you\n\n**Attack:**  Dexterity\
-      \ + Level vs. PD\n\n**Hit:**  JAB + Strength force damage, and the target\u2019\
-      s attack has disadvantage.\n\n**Miss:**  Damage equal to your level\n\n**Miss:**\
-      \  Damage equal to your level\n\n### Flow Attack (Shatter the Spirit)\n\nMelee\
-      \ attack\n\n**Attack:**  Dexterity + Level vs. AC\n\n**Hit:**  PUNCH + Strength\
-      \ damage, and the target is hampered (save ends). The target can choose to take\
-      \ five times its level in damage to shake off the condition as a free action,\
-      \ without a save.\n\n**Miss:**  Damage equal to your level\n\n### Finishing Attack\
-      \ (Possessing Spirit)\n\nMelee attack\n\n**Attack:**  Wisdom + Level vs. MD; if\
-      \ the target is hampered, you have advantage on the attack.\n\n**Hit:**  KICK\
-      \ psychic damage. The target immediately makes an attack against another nearby\
-      \ enemy of your choosing.\n\n**Miss:**  Half damage"
+    description: |-
+      ### Opening Attack (Ghosts Awaken)
+  
+      Melee attack
+  
+      **Attack:**  Dexterity + Level vs. AC
+  
+      **Hit:**  JAB + Strength damage.
+  
+      _Cycle bonus:_ When a nearby enemy makes a melee attack against you, you can
+      spend a ki point to make the attack below as an interrupt action. The interrupt
+      resolves before their attack.
+  
+      **Target:**  The enemy who attacked you
+  
+      **Attack:**  Dexterity + Level vs. PD
+  
+      **Hit:**  JAB + Strength force damage, and the target’s attack has disadvantage.
+  
+      **Miss:**  Damage equal to your level
+  
+      **Miss:**  Damage equal to your level
+  
+      ### Flow Attack (Shatter the Spirit)
+  
+      Melee attack
+  
+      **Attack:**  Dexterity + Level vs. AC
+  
+      **Hit:**  PUNCH + Strength damage, and the target is hampered (save ends). The
+      target can choose to take five times its level in damage to shake off the
+      condition as a free action, without a save.
+  
+      **Miss:**  Damage equal to your level
+  
+      ### Finishing Attack (Possessing Spirit)
+  
+      Melee attack
+  
+      **Attack:**  Wisdom + Level vs. MD; if the target is hampered, you have
+      advantage on the attack.
+  
+      **Hit:**  KICK psychic damage. The target immediately makes an attack against
+      another nearby enemy of your choosing.
+  
+      **Miss:**  Half damage
     feats:
     - tier: epic
-      description: ' You can make the interrupt attack granted by the cycle bonus when
-        attacked by a nearby enemy with a ranged or close-quarters attack. You can pop
-        free and engage the enemy to make the attack.'
+      description: |2-
+         You can make the interrupt attack granted by the cycle bonus when attacked by a
+        nearby enemy with a ranged or close-quarters attack. You can pop free and engage
+        the enemy to make the attack.
     tier: epic
     category: Forms
   - name: Heavenly Kick
     _type: Form
     source: DATP
-    description: '### Opening Attack (Foot Parts the Clouds)
-  
+    description: |-
+      ### Opening Attack (Foot Parts the Clouds)
   
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. AC
-  
   
       **Hit:**  KICK + Strength damage. You can spend a ki point to reroll any number
       of damage dice once.
   
-  
       **Miss:**  Damage equal to your level
-  
   
       ### Flow Attack (Prodigious Leap)
   
-  
       Melee attack
-  
   
       **Always:**  Fly to engage a nearby or far away enemy.
   
-  
       **Attack:**  Dexterity + Level vs. AC
   
-  
       **Hit:**  KICK + Strength damage
-  
   
       _Natural even hit:_ Deal half damage to a different nearby enemy. You can spend
       a ki point to deal half damage to a second nearby enemy.
   
-  
       **Miss:**  Damage equal to your level
-  
   
       ### Finishing Attack (Stomping Storm Giant)
   
-  
       Melee attack
-  
   
       **Attack:**  Dexterity + Level vs. AC
   
-  
       **Hit:**  KICK + Strength + 3d6 lightning damage
-  
   
       _Natural even hit:_ If the target has 150 hp or fewer after the attack, it is
       stunned until the end of your next turn. You can spend a ki point to increase
       the limit to 500 hp.
   
-  
       **Miss:**  Lightning damage equal to your level + 3d6.
   
-  
       10th level monk: Increase the bonus damage to 5d6, and the stun limit to 250 /
-      1000 hp.'
+      1000 hp.
     feats: []
     tier: epic
     category: Forms
   - name: Quivering Palm
     _type: Form
     source: DATP
-    description: '### Opening Attack (Interrupted Ki Flow)
-  
+    description: |-
+      ### Opening Attack (Interrupted Ki Flow)
   
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. AC
-  
   
       **Hit:**  JAB + Strength damage. The target is vulnerable to your attacks, and
       it cannot gain temporary hit points or heal (save ends both).
   
-  
       **Miss:**  Damage equal to your level
-  
   
       ### Flow Attack (Ki Block)
   
-  
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. AC
-  
   
       **Hit:**  PUNCH + Strength damage, and the target is ki blocked (save ends).
   
-  
-      _Ki blocked:_ The target cannot roll saves against other effects, including ongoing
-      damage, until it saves against this effect.
-  
+      _Ki blocked:_ The target cannot roll saves against other effects, including
+      ongoing damage, until it saves against this effect.
   
       **Miss:**  Damage equal to your level
   
-  
       ### Finishing Attack (Marked for Death)
-  
   
       Melee attack
   
-  
       **Attack:**  Dexterity + Level vs. AC
-  
   
       **Hit:**  The target takes double damage from all attacks against it (save ends;
       the effect also ends if the target is staggered by an attack).
   
-  
-      **Miss:**  The next attack that hits the target deals 25 extra damage.'
+      **Miss:**  The next attack that hits the target deals 25 extra damage.
     feats:
     - tier: epic
       description: ' You can target PD instead of AC with Quivering Palm attacks.'
@@ -2490,27 +2609,58 @@ abilities:
   - name: Rise of the Red Dragon
     _type: Form
     source: DATP
-    description: "### Opening Attack (The Dragon Awakens)\n\nClose-quarters power\n\n\
-      **Effect (cycle bonus):**  For the current attack cycle, you change your shape\
-      \ into a humanoid-sized dragon. You can fly and you have _resist fire_ 16+. Once\
-      \ per round, you can spend a ki point to make the following breath weapon attack\
-      \ as a quick action.\n\n**Target:**  1d3 nearby enemies\n\n**Attack:**  Dexterity\
-      \ + Level vs. PD\n\n**Hit:**  5d6 + Strength fire damage\n\n**Miss:**  Damage\
-      \ equal to your level\n\n### Flow Attack (Swooping Dragon)\n\nMelee attack\n\n\
-      **Special:**  If you fly to engage the enemy before making this attack, gain a\
-      \ +2 bonus to the attack roll.\n\n**Attack:**  Dexterity + Level vs. AC\n\n**Hit:**\
-      \  PUNCH + Strength damage\n\n_Natural even hit:_ If the target is humanoid size\
-      \ or smaller, you can grab it.\n\n**First Miss:**  Make a second attack roll against\
-      \ the same enemy.\n\n**Second Miss:**  \u2014\n\n### Finishing Attack (Rampaging\
-      \ Dragon)\n\nMelee attack\n\n**Attack:**  Dexterity + Level vs. AC\n\n**Hit:**\
-      \  KICK + Strength damage, and nearby staggered enemies are struck with fear (-4\
-      \ to attack and can\u2019t use the escalation die) until the end of your next\
-      \ turn. If you hit with the breath weapon attack gained from _The Dragon Awakens_\
-      \ this turn, deal double damage.\n\n**Miss:**  Half damage"
+    description: |-
+      ### Opening Attack (The Dragon Awakens)
+  
+      Close-quarters power
+  
+      **Effect (cycle bonus):**  For the current attack cycle, you change your shape
+      into a humanoid-sized dragon. You can fly and you have _resist fire_ 16+. Once
+      per round, you can spend a ki point to make the following breath weapon attack
+      as a quick action.
+  
+      **Target:**  1d3 nearby enemies
+  
+      **Attack:**  Dexterity + Level vs. PD
+  
+      **Hit:**  5d6 + Strength fire damage
+  
+      **Miss:**  Damage equal to your level
+  
+      ### Flow Attack (Swooping Dragon)
+  
+      Melee attack
+  
+      **Special:**  If you fly to engage the enemy before making this attack, gain a
+      +2 bonus to the attack roll.
+  
+      **Attack:**  Dexterity + Level vs. AC
+  
+      **Hit:**  PUNCH + Strength damage
+  
+      _Natural even hit:_ If the target is humanoid size or smaller, you can grab it.
+  
+      **First Miss:**  Make a second attack roll against the same enemy.
+  
+      **Second Miss:**  —
+  
+      ### Finishing Attack (Rampaging Dragon)
+  
+      Melee attack
+  
+      **Attack:**  Dexterity + Level vs. AC
+  
+      **Hit:**  KICK + Strength damage, and nearby staggered enemies are struck with
+      fear (-4 to attack and can’t use the escalation die) until the end of your next
+      turn. If you hit with the breath weapon attack gained from _The Dragon Awakens_
+      this turn, deal double damage.
+  
+      **Miss:**  Half damage
     feats:
     - tier: epic
-      description: ' The first time you use your breath weapon in a battle, it does
-        not cost a ki point.'
+      description: |2-
+         The first time you use your breath weapon in a battle, it does not cost a ki
+        point.
     tier: epic
     category: Forms
   # END DATP ABILITIES
