@@ -51,6 +51,7 @@ abilities:
       **Miss:** —
   - name: Smite Evil
     _type: Class Feature
+    replaced_by: DATP
     usage: per-battle
     description: |-
       You can use this ability once per battle, plus an additional number of times per day equal to your Charisma modifier.
@@ -67,6 +68,7 @@ abilities:
   - name: Bastion
     _type: Talent
     tier: adventurer
+    replaced_by: DATP
     description: |-
       You gain +1 AC.
 
@@ -82,6 +84,7 @@ abilities:
   - name: Cleric Training
     _type: Talent
     tier: adventurer
+    replaced_by: DATP
     description: Choose one cleric spell of your level or lower. That spell is now part of your powers. (You can change out the spell normally.)
     feats:
       - tier: adventurer
@@ -93,6 +96,7 @@ abilities:
   - name: Divine Domain
     _type: Talent
     tier: adventurer
+    replaced_by: DATP
     description: |-
       **Special:** You can choose Divine Domain a second time, if you wish, at 5th level or at 8th level.
 
@@ -104,6 +108,7 @@ abilities:
   - name: Fearless
     _type: Talent
     tier: adventurer
+    replaced_by: DATP
     description: |-
       You are immune to fear abilities and to any non-damage effects of attacks named or described as fear attacks.
 
@@ -119,6 +124,7 @@ abilities:
   - name: Implacable
     _type: Talent
     tier: adventurer
+    replaced_by: DATP
     description: |-
       You can roll saves at the start of your turn instead of at the end of your turn.
       A successful save against ongoing damage, for example, means that you will not take the ongoing damage that turn.
@@ -133,6 +139,7 @@ abilities:
     _type: Talent
     usage: per-day
     tier: adventurer
+    replaced_by: DATP
     description: |-
       Twice per day as a quick action, you can heal yourself or an ally next to you with a touch.
       You spend the recovery while the recipient heals as if they had spent the recovery.
@@ -146,6 +153,7 @@ abilities:
   - name: Paladin's Challenge
     _type: Talent
     tier: adventurer
+    replaced_by: DATP
     description: |-
       When you hit an enemy with a melee attack, you can choose to challenge that enemy as a free action.
       Until the end of the battle, provided that both you and the enemy you’ve challenged are conscious and capable of making an attack,
@@ -176,6 +184,7 @@ abilities:
   - name: Path of Righteous Endeavour
     _type: Talent
     tier: adventurer
+    replaced_by: DATP
     description: |-
       **Special:** You can’t take this talent if you take the Way of Evil Bastards talent.
 
@@ -190,6 +199,7 @@ abilities:
   - name: Way of Evil Bastards
     _type: Talent
     tier: adventurer
+    replaced_by: DATP
     description: |-
       **Special:** You can’t take this talent if you take the Path of Universal Righteous Endeavor talent.
 
@@ -202,15 +212,7 @@ abilities:
       - tier: epic
         description: You gain an additional relationship point with a villainous or ambiguous icon.
 # BEGIN DATP ABILITIES
-  - name: Smite Powers
-    _type: Class Feature
-    source: DATP
-    description: |-
-      When you activate your Smite Evil, choose one of your Smite powers and gain its
-      effect. You must choose the smite power before making the attack roll, and
-      before you know whether your smite hits or misses.
-    feats: []
-  - name: Smite Evil (DATP)
+  - name: Smite Evil
     _type: Class Feature
     source: DATP
     usage: per-battle
@@ -242,34 +244,69 @@ abilities:
         actions against your smite attacks.
     - tier: adventurer
       description: ' Gain a +4 bonus to the attack roll with True Smite.'
+  - name: Smite Powers
+    _type: Class Feature
+    source: DATP
+    description: |-
+      When you activate your Smite Evil, choose one of your Smite powers and gain its
+      effect. You must choose the smite power before making the attack roll, and
+      before you know whether your smite hits or misses.
+    feats: []
   - name: Bastion
     _type: Talent
     tier: adventurer
     source: DATP
     description: |-
+      You gain +1 AC.
+
+      In addition, once per battle when a nearby ally is hit by an attack, you can choose to lose hit points equal to half of that damage, and have your ally take only half of the damage instead.
+      The damage you lose can come from temporary hit points, but isn’t affected by damage resistance and other tricks to avoid the damage.
+
       **Bastion Smite (Smite Power):**  On a hit, gain temporary hit points equal to
       the smite’s bonus damage roll.
     feats:
     - tier: adventurer
-      description: ' Gain twice your level in temporary hit points on a miss.'
+      description: Increase your total number of recoveries by 1.
+    - tier: champion
+      description: Once per day, you can use Bastion twice in the same battle.
+    - tier: epic
+      description: When you use Bastion now, your ally takes no damage. You still lose hit points equal to half the damage.
+    - tier: adventurer
+      description: '**Bastion Smite:** Gain twice your level in temporary hit points on a miss.'
   - name: Cleric Training
     _type: Talent
     tier: adventurer
     source: DATP
     description: |-
+      Choose one cleric spell of your level or lower. That spell is now part of your powers. (You can change out the spell normally.)
+
       **Blessed Smite (Smite Power):**  On a hit, choose a nearby ally. That ally
       gains a bonus to their next attack roll equal to your Wisdom or Charisma
       modifier (whichever is higher).
     feats:
     - tier: adventurer
+      description: You can use your Charisma as the attack ability for cleric spells you can cast.
+    - tier: champion
+      description: You can now cast the cleric class feature heal spell twice per day.
+    - tier: epic
+      description: Choose two cleric spells instead of one.
+    - tier: adventurer
       description: |2-
-         Gain a bonus equal to your Wisdom or Charisma modifier to the Smite attack
+        **Blessed Smite:** Gain a bonus equal to your Wisdom or Charisma modifier to the Smite attack
         roll.
   - name: Divine Domain
     _type: Talent
     tier: adventurer
     source: DATP
     description: |-
+      **Special:** You can choose Divine Domain a second time, if you wish, at 5th level or at 8th level.
+
+      Choose one of the domains listed in the cleric’s class talent list.
+      You gain all the domain’s advantages, including the ability to use the domain’s invocation once per day.
+
+      If the domain you choose is designed to help cleric spells and attacks, reinterpret the talent to help your paladin powers.
+      You can use the domain’s feats if you wish; reinterpret them similarly if necessary.
+
       **Divine Smite (Smite Power):**  Hit or miss, you can use the at-will attack
       spell associated with your domain as a quick action this turn. If it is a ranged
       spell, you don’t provoke opportunity attacks with it. This replaces the smite
@@ -284,9 +321,20 @@ abilities:
     tier: adventurer
     source: DATP
     description: |-
+      You are immune to fear abilities and to any non-damage effects of attacks named or described as fear attacks.
+
+      In addition, you gain a +1 melee attack bonus against enemies that are not engaged by any of your allies.
+      The bonus increases to +2 against enemies with fear abilities.
+
       **Courageous Smite (Smite Power):**  If you hit an enemy who has a fear aura or
       a fear-based attack, the target can‘t use that ability (save ends).
     feats:
+    - tier: adventurer
+      description: You gain a +1 bonus to death saves.
+    - tier: champion
+      description: You gain a +1 bonus to all saves except death saves.
+    - tier: epic
+      description: Your nearby allies gain a +1 bonus to death saves.
     - tier: adventurer
       description: ' Deal extra damage equal to the enemy‘s level.'
   - name: Implacable
@@ -294,62 +342,126 @@ abilities:
     tier: adventurer
     source: DATP
     description: |-
+      You can roll saves at the start of your turn instead of at the end of your turn.
+      A successful save against ongoing damage, for example, means that you will not take the ongoing damage that turn.
+      
       **Conduit Smite (Smite Power):**  Choose an effect that you have successfully
       saved against at the start of your turn (if any). On a hit, impose that effect
       on the target.
     feats:
     - tier: adventurer
-      description: ' Also gain the effect on a natural even miss.'
+      description: You gain a +1 bonus to saves.
+    - tier: champion
+      description: Once during your turn as a free action, you can choose to lose hit points equal to your level to reroll a save.
+    - tier: epic
+      description: You gain a +1 bonus to Physical Defense and Mental Defense.
+    - tier: adventurer
+      description: '**conduit Smite:** Also gain the effect on a natural even miss.'
   - name: Lay on Hands
     _type: Talent
     tier: adventurer
     source: DATP
     description: |-
+      Twice per day as a quick action, you can heal yourself or an ally next to you with a touch.
+      You spend the recovery while the recipient heals as if they had spent the recovery.
+
       **Healing Smite (Smite Power):**  Spend a recovery to heal, but grant the
       healing to a nearby ally.
     feats:
     - tier: adventurer
+      description: Add twice your Charisma modifier to the healing provided by Lay on Hands.
+    - tier: champion
+      description: Lay on Hands healing uses a free recovery instead of one of your own.
+    - tier: epic
+      description: You can now use Lay on Hands four times per day instead of two.
+    - tier: adventurer
       description: |2-
-         If the ally is staggered, they heal additional hit points equal to the smite’s
+        **Healing Smite:** If the ally is staggered, they heal additional hit points equal to the smite’s
         extra damage.
     - tier: champion
-      description: ' On a natural 16+ on the attack roll, the recovery is free.'
+      description: '**Healing Smite:**  On a natural 16+ on the attack roll, the recovery is free.'
     - tier: epic
-      description: ' Both you and the ally gain the healing.'
+      description: '**Healing Smite:**  Both you and the ally gain the healing.'
   - name: Paladin’s Challenge
     _type: Talent
     tier: adventurer
     source: DATP
     description: |-
+      When you hit an enemy with a melee attack, you can choose to challenge that enemy as a free action.
+      Until the end of the battle, provided that both you and the enemy you’ve challenged are conscious and capable of making an attack,
+      you each take a –4 attack penalty against all other creatures and a –4 penalty to disengage checks from each other.
+
+      The attack penalty temporarily deactivates for the attacker when they make an attack roll against their rival, but only until the end of the attacker’s turn.
+      For example, if a creature with more than one attack attacks you first, its subsequent attacks against your allies are without the challenge penalty.
+      However, the attack penalty resets at the end of its turn, so it does not help with opportunity attacks against your allies later in the round.
+
+      You can only have one enemy challenged at a time.
+
+      Your Paladin’s Challenge ends when
+
+      - you or the creature you are challenging falls unconscious or drops to 0 hp.
+      - you hit a different enemy with an attack (assuming you hit with the –4 penalty).
+      - the creature flees far away and you choose to end the challenge.
+
+      An enemy can only be the subject of one Paladin’s Challenge at a time; a new challenge overrides the previous one.
+
+      In the unlikely case in which two paladins fight each other, any use of Paladin’s Challenge locks them into a challenge that only ends when one of them drops.
+
       **Exalted Challenge (Smite Power):**  If you use the talent to challenge the
       target with your Smite Evil attack, the target takes holy damage equal to your
       Smite Evil bonus damage whenever it attacks one of your allies.
     feats:
     - tier: adventurer
+      description: The attack and disengage penalty for challenged enemies (but not for you) is equal to –4 or to the escalation die, whichever is higher.
+    - tier: champion
+      description: You can have two challenges active at the same time against different enemies.
+    - tier: epic
+      description: Enemies you challenge are vulnerable to your attacks.
+    - tier: adventurer
       description: |2-
-         The target also takes the Smite Evil bonus damage if it uses any method to no
+        **Exalted Challenge:** The target also takes the Smite Evil bonus damage if it uses any method to no
         longer be engaged with you, such as disengage, pop free, or teleporting.
   - name: Path of Universal Righteous Endeavor
     _type: Talent
     tier: adventurer
     source: DATP
     description: |-
+      **Special:** You can’t take this talent if you take the Way of Evil Bastards talent.
+
+      Your nearby allies gain a +1 bonus to all saves.
+
       **Absolving Smite (Smite Power):**  On a hit, a nearby ally can save against a
       “save ends” effect.
     feats:
     - tier: adventurer
-      description: ' The save has a bonus to the roll equal to your Charisma modifier.'
+      description: Once per day, you can reroll your relationship dice with a heroic or ambiguous icon.
+    - tier: champion
+      description: All of your melee and ranged attacks deal holy damage.
+    - tier: epic
+      description: You gain an additional relationship point with a heroic or ambiguous icon.
+    - tier: adventurer
+      description: '**Absolving Smite:** The save has a bonus to the roll equal to your Charisma modifier.'
   - name: Way of Evil Bastards
     _type: Talent
     tier: adventurer
     source: DATP
     description: |-
+      **Special:** You can’t take this talent if you take the Path of Universal Righteous Endeavor talent.
+
+      When one of your Smite Evil attacks drops a non-mook enemy to 0 hp, that use of Smite Evil is not expended.
+
       **Sickening Smite (Smite Power):**  On a hit, the target has disadvantage on
       their next attack roll against you.
     feats:
     - tier: adventurer
+      description: Once per day, you can reroll your relationship dice with a villainous or ambiguous icon.
+    - tier: champion
+      description: When one of your Smite Evil attacks drops three or more mooks, it is not expended.
+    - tier: epic
+      description: You gain an additional relationship point with a villainous or ambiguous icon.
+    - tier: adventurer
       description: |2-
-         If the target misses with its next attack, it takes ongoing negative energy
+        **Sickening Smite:** If the target misses with its next attack, it takes ongoing negative energy
         damage equal to three times your level.
   - name: Conviction
     _type: Talent
@@ -1141,10 +1253,13 @@ Paladins may start with either 25 gp or 1d6 &times; 10 gp.
 
 ## Class Talents
 
+<If source="DATP">
 ### Adventurer Tier Talents
+</If>
 
 <Vault.AbilityList abilities={props.getAbilitiesByTypesAndTier(["Talent","Death Knight Rune","Bonus Power"], "adventurer")} />
 
+<If source="DATP">
 ### Champion Tier Talents
 
 <Vault.AbilityList abilities={props.getAbilitiesByTypesAndTier(["Talent","Death Knight Rune","Bonus Power"], "champion")} />
@@ -1152,3 +1267,4 @@ Paladins may start with either 25 gp or 1d6 &times; 10 gp.
 ### Epic Tier Talents
 
 <Vault.AbilityList abilities={props.getAbilitiesByTypesAndTier(["Talent","Death Knight Rune","Bonus Power"], "epic")} />
+</If>
