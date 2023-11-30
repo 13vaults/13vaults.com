@@ -1,6 +1,10 @@
 ---
 name: Wizard
 source: 13th Age, p.144
+versions:
+  - name: Core Book
+  - name: Specialist (DATP)
+    source: DATP
 page_dress:
   quote:
     text: |-
@@ -71,9 +75,12 @@ abilities:
       In other words, if you cast a cyclic spell like color spray or rebuke when the escalation die is even, the spell is not expended and can still be cast later in the battle.
   - name: Overworld Advantage
     _type: Class Feature
+    version: Core Book
     description: |-
       Wizardly magic taps into the power of the overworld.
       While a wizard is in the overworld, their daily spells become recharge 16+ after battle.
+
+      _(Overworld refers to places floating in the sky, not just anything outdoors.)_
   - name: Ritual Magic
     _type: Class Feature
     description: |-
@@ -214,7 +221,7 @@ abilities:
         description: Once per level, if your familiar is close to you, it can cast one of your spells as a free action on your initiative count, even if you have already expended the spell. The spell functions as if you had cast it.
       - tier: epic
         description: Your familiar gains another ability.
-  - name: Feat Tiers
+  - name: Utility Spell Feats
     feats:
       - tier: adventurer
         description: Each _utility spell_ you take lets you cast two spells from the available options instead of one.
@@ -1079,7 +1086,4134 @@ abilities:
       - tier: epic
         description: Your allies don’t need to be next to you before you cast the spell, just nearby. Alternately, if they are all next to you when you cast the spell, you can teleport to a location known to one of your allies.
 # BEGIN DATP ABILITIES
-# END DATP ABILITIES
+  - name: Cloud Spells
+    _type: Class Feature
+    source: DATP
+    description: |-
+      Cloud spells create a fog in the nearby area. These spells usually attack a
+      number of nearby enemies and have some effect on allies engaged with these
+      targets.
+  
+      After the fog is created, non-engaged creatures can move out of it as a move
+      action. Engaged creatures must succeed at a disengage check to do so.
+  
+      At the start of your next turn after casting the spell, make a normal save (11+)
+      to check whether the cloud persists. This is not an action. If it persists, any
+      target that was hit and is still in the cloud suffers the effect again, and you
+      make another save at the start of the following turn. If the save fails, the
+      spell ends.
+  
+      At the GM’s discretion, clouds move naturally with the terrain. They will roll
+      down slopes and disperse in strong winds.
+    feats: []
+  - name: Abjuration
+    _type: Wizard School
+    source: DATP
+    description: |-
+      This school covers mainly defense and protection spells.
+  
+      |  | Core Book | Dark Alleys |
+      |---------|-----------|-------------|
+      | Utility | 1: Hold Portal | 5: Magical Disjunction |
+      | Level 1 | Shield    | Mage Armor, Resist Magic |
+      | Level 3 | Teleport Shield | Break Enchantment, Circle of Warding, Elemental Absorption, Explosive Runes, Protection from Arrows |
+      | Level 5 | —         | Protection from Normal Weapons, Sanctum |
+      | Level 7 | Invisibility Purge | Anti-Magic Shell, Elemental Parry, Mind Blank, Symbol |
+      | Level 9 | —         | Imprisonment, Suppress Magic |
+
+    feats:
+    - tier: champion
+      description: |2-
+         Once per day, when casting an Abjuration spell on yourself, also grant the
+        benefit to a nearby ally.
+  - name: Conjuration
+    _type: Wizard School
+    source: DATP
+    description: |-
+      Spells of this school summon things, usually from other planes.
+  
+      |  | Core Book | Dark Alleys |
+      |---------|-----------|-------------|
+      | Utility | | 1: Summon Small Animal, Unseen Servant, 3: Leisurely Tiny Hut, 9: Magnificent Mansion
+      | Level 1 | Acid Arrow, Summon Wizard's Earth Elemental (M) | Acid Splash, Ice Knife, Summon Mana Spirit |
+      | Level 3 | Crescendo, Summon Imp (M) | Clay Golem, Flame Arrow, Flaming Sphere, Reanimate Golem, Web |
+      | Level 5 | Diension Door, Summon Frenzy Demon (M) | Acid Trap, Big Purple Hand, Rock Golem |
+      | Level 7 | Summon Laughing Demon (M) | Arcane Sword, Gem Golem |
+      | Level 9 | Teleport | Magma Golem, Maze, Wish |
+    feats:
+    - tier: adventurer
+      description: |2-
+         You gain a +1 bonus to attack rolls with your spells against enemies engaged
+        with a creature you summoned.
+  - name: Divination
+    _type: Wizard School
+    source: DATP
+    description: |-
+      Spells of this school help you perceive things, both mundane and magical, and at
+      higher levels also throughthough time and space.
+  
+      |  | Core Book | Dark Alleys |
+      |---------|-----------|-------------|
+      | Utility 1 |  | 1: Darkvision, Familiar's Eyes, Identify, Recall Memory, Talking Pages, Tongues |
+      | Utility 3+ | 3: Speak with Item, 7: Scrying   |  3: Clairaudience/Clairvoyance, See Invisible, 5: Arcane Eye, Legend Lore, 7: True Seeing |
+      | Level 1 | —  | Hostile Probe, Painful Memory, Threat Assessment, True Strike |
+      | Level 3 | —  | Critical Scope, Foresee Peril |
+      | Level 5 | —  | Precognitive Ward, Telepathic Bond |
+      | Level 7 | —  | Flashback |
+      | Level 9 | —  | Foresight |
+    feats:
+    - tier: adventurer
+      description: |2-
+         When you perform an arcane ritual to gain information or predict the future,
+        you have advantage on the ritual check.
+  - name: Enchantment
+    _type: Wizard School
+    source: DATP
+    description: |-
+      There are two types of Enchantment spells, those that mess with the mind and
+      those that give objects magical properties.
+  
+      |  | Core Book | Dark Alleys |
+      |---------|-----------|-------------|
+      | Utility | — | 1: Scribe Scroll |
+      | Level 1 | Charm Person | Animate Armor, Eldritch Incantation, Hideous Laughter, Magic Weapon |
+      | Level 3 | Confusion, Hold Monster, Rebuke, Sleep | Flame Arrow, Enchanted Conduit, Luck, Suggestion |
+      | Level 5 | Denial | Crushing Despair, Heroism |
+      | Level 7 | — | Outrageous Irresistible Dance, Power Word: Stun |
+      | Level 9 | — | Doinate Monster, Feeblemind, Power Word: Kill |
+    feats:
+    - tier: adventurer
+      description: |2-
+         Increase the difficulty of saves against spells of the Enchantment school by 1.
+        (A natural 18+ on a save always succeeds.)
+  - name: Evocation
+    _type: Wizard School
+    source: DATP
+    description: |-
+      Evocation spells summon raw magical force and the elements. Besides spells that
+      throw raw elements at your enemies, the school also offers spells that create
+      walls and spheres.
+  
+      |  | Core Book | Dark Alleys |
+      |---------|-----------|-------------|
+      | Utility | — | 1: Continual Light, Treasure-Bearing Disc |
+      | Level 1 | Magic Missile, Ray of Frost, Shocking Grasp | Chromatic Orb, Elemental Triad, Firebolt, Fog Cloud |
+      | Level 3 | Force Salvo, Lightning Bolt | Fire / Ice Shield, Stinking Cloud |
+      | Level 5 | Fireball | Cone of Cold, Contingency, Incendiary Cloud, Resilient Sphere |
+      | Level 7 | — | Cloudkill, Delayed Blast Fireball, Opaque Freezing Sphere, Wall of Force |
+      | Level 9 | Meteor Swarm | Prismatic Spray |
+    feats:
+    - tier: champion
+      description: |2-
+         Once per battle, when casting an Evocation spell on more than one target, add
+        an additional target.
+  - name: Illusion
+    _type: Wizard School
+    source: DATP
+    description: |-
+      Illusion spells create figments of imagination, either in the target’s mind or
+      for all to see.
+  
+      |  | Core Book | Dark Alleys |
+      |---------|-----------|-------------|
+      | Utility | 1: Disguise Self | 1: Animated Image, 3: Magic Mouth, 7: Mirage Arcana, Scrying Screen |
+      | Level 1 | Blur, Color Spray |  Mirror Image, Phantasmal Force, Phantom Lance |
+      | Level 3 | — | Phantom Soldiers, Shadow Evocation |
+      | Level 5 | Invisibility | Fantastic Beast, Hypnotic Pattern, Phantasmal Killer |
+      | Level 7 | — | Mislead, Simulacrum |
+      | Level 9 | — | Twisted Nightmare |
+    feats:
+    - tier: adventurer
+      description: ' Double the duration of all illusion spells you cast that have a
+        fixed duration.'
+  - name: Transmutation
+    _type: Wizard School
+    source: DATP
+    description: |-
+      Transmutation manipulates the properties of a physical object, or changes it
+      entirely.
+  
+      |  | Core Book | Dark Alleys |
+      |---------|-----------|-------------|
+      | Utility 1-3 | 1: Feather Fall, 3: Levitate, Message | 1: Permanent Cantrip, 3: Arcane Cypher |
+      | Utility 5+ | 5: Water Breathing | 5: Passwall, Stone to Flesh, 7: Dungeon Engineering |
+      | Level 1 | — | Enlarge Person, Expeditious Retreat, Ray of Contortion, Reduce Person |
+      | Level 3 | — | Harden Metal, Slow |
+      | Level 5 | — | Baleful Polymorph, Tenacious Transformation |
+      | Level 7 | Blink, Flight, Haste, Overcome Resistance, Transfer Enchantment | Flesh to Stone |
+      | Level 9 | Disintegrate | Time Stop |
+    feats:
+    - tier: adventurer
+      description: |2-
+        Double the duration of any spell that targets physical objects, including
+        cantrips.
+  - name: Specialist Advantage
+    _type: Class Feature
+    version: Specialist
+    source: DATP
+    description: |-
+      Choose one of seven wizard schools: Abjuration, Conjuration, Divination,
+      Enchantment, Evocation, Illusion, or Transmutation as your specialist school.
+
+      Daily spells of your chosen school become recharge 16+ after battle. They still
+      count as daily spells for abilities that trigger off daily spells.
+    feats:
+    - tier: champion
+      description: ' Gain a +1 bonus to recharge rolls for spells of your school.'
+    - tier: epic
+      description: ' The bonus to recharge rolls is now equal to your Intelligence modifier.'
+  - name: Specialist Spell Slot
+    _type: Class Feature
+    version: Specialist
+    source: DATP
+    description: |-
+      When you choose spells during a full heal-up, you can declare one (and only one)
+      of your spell slots as your specialist school slot. You don’t choose a spell for
+      that slot after the full heal-up, but at the time of casting the spell. You can
+      choose any normal spell or utility spell that belongs to your specialist school.
+  
+      If the spell you cast is a recharge spell, make a recharge roll at the end of
+      the battle to regain the spell slot, not the particular spell. If the spell you
+      cast is once per battle, cyclic, or at-will, you cast the spell normally during
+      the battle, then regain the spell slot at the end of the battle.
+  
+      **This replaces access to the Core Book wizard’s utility spell slot.
+      You can still cast utility spells, but you prepare them individually like your
+      other spells.**
+    feats: []
+  - name: Barred School
+    _type: Class Feature
+    version: Specialist
+    source: DATP
+    description: |-
+      As a specialist wizard, choose one of the seven wizard schools Abjuration,
+      Conjuration, Divination, Enchantment, Evocation, Illusion, or Transmutation as
+      your barred school. You cannot cast spells from that school.
+    feats: []
+  - name: Arcane Archaeologist
+    _type: Talent
+    source: DATP
+    description: |-
+      You gain 5 points in a background that covers knowledge of ancient
+      civilizations, locating treasure sites, and identifying what you find. You are
+      familiar enough with ancient writing systems that you can decipher most writings
+      you find on maps, dungeon walls, and item inscriptions.
+  
+      Once per battle or scene, as a move action, you can pull off a stunt that you
+      have learned when exploring dangerous ruins, things like climbing slippery
+      surfaces, jumping narrow ledges, and avoiding massive rolling boulders. Describe
+      how you are using a mixture of athletic training and arcane tricks to avoid the
+      danger. Usually, you can pull off the stunt without any skill check, but the GM
+      can require a roll for absolutely outlandish tricks.
+    feats:
+    - tier: adventurer
+      description: ' You gain the rogue’s Trap Sense class feature.'
+    - tier: champion
+      description: |2-
+         Add your Intelligence modifier to magic item power recharge rolls for items you
+        wield. This represents your familiarity with ancient artifacts.
+    - tier: epic
+      description: |2-
+         You have advantage on saves against effects that were caused by magic items and
+        traps.
+  - name: Battle Mage
+    _type: Talent
+    source: DPAS
+    description: |-
+      You can use light and heavy one-handed melee weapons without attack penalty, and
+      your base AC in light armor is increased to 12.
+  
+      Starting from 3rd level, you can replace a wizard spell with a 
+      swordmage spell two levels lower.
+    feats:
+    - tier: adventurer
+      description: ' Increase your recovery dice to d8.'
+    - tier: champion
+      description: |2-
+         When you wield a sword (or other one-handed melee weapon) in one hand and a
+        wand in the other, you gain the benefit of two-weapon fighting. Reroll any
+        natural 2s on the attack roll with both melee attacks and spells.
+    - tier: epic
+      description: |2-
+         After casting a Wizard spell, your next melee attack (hit or miss) deals extra
+        damage equal to the spell’s level, of an element related to the spell.
+  - name: Beguiler
+    _type: Talent
+    source: DATP
+    description: |
+      When you cast a spell that targets MD, choose one of the following benefits:
+  
+      - If the spell deals damage, deal extra damage equal to your Charisma modifier
+      (x2 at 5th level; x3 at 8th) to each target you hit.
+      - Increase the difficulty for the target’s first save against the spell by your
+      Charisma modifier. (A natural roll of 18+ always saves, however.)
+      - Increase the hit point limit for the creatures you can affect by 5 times your
+      level if the spell has one target, and twice your level if it has multiple
+      targets.
+    feats:
+    - tier: adventurer
+      description: |2-
+         You gain 3 points toward a background that represents performance skills or
+        mental manipulation.
+    - tier: champion
+      description: |2-
+         Choose a class. You can switch out a wizard spell for a spell from the chosen
+        class at a -2 level penalty, as long as that spell targets MD.
+    - tier: epic
+      description: |2-
+         Once per battle, when the escalation die is 3+, you can gain all three of the
+        beguiler benefits with one spell.
+  - name: Bladesinger
+    _type: Talent
+    source: DATP
+    description: |-
+      You can use light and heavy one-handed melee weapons without attack penalty, and
+      if the weapon is a true magic item, you can use it as an implement for wizard
+      spells. If you are multiclassed, you are considered a “skillful warrior” for
+      these weapons and don’t suffer a reduced damage die with them.
+  
+      You are also trained in light armors, and increase your base AC with them to 12.
+  
+      However, the focus on martial training has reduced your time to study the arcane
+      arts, and you have one fewer wizard spell slots of your highest level available.
+    feats:
+    - tier: adventurer
+      description: |2-
+         When you wield a one-handed blade weapon, your ranged spells do not provoke
+        opportunity attacks.
+    - tier: champion
+      description: |2-
+         After casting an arcane spell, your next hit or miss with a melee weapon attack
+        deals extra damage equal to the spell level. This bonus is not cumulative, only
+        use the highest bonus.
+    - tier: epic
+      description: |2-
+         As a quick action, you can enter a defensive stance that gives you a +1 bonus
+        to AC until the end of your next turn, and a +1 bonus to the first melee attack
+        on your next turn.
+  - name: Deep Specialization
+    _type: Talent
+    source: DATP
+    version: Specialist (DATP)
+    description: |-
+  
+      **Special:**  You must be a specialist wizard. You cannot take both this talent
+      and Dual Specialization.
+  
+      When you prepare your specialist spell slot, you can use it to cast two spells
+      instead of one.
+    feats:
+    - tier: adventurer
+      description: ' You have advantage on skill checks regarding spells of your specialist
+        school.'
+    - tier: champion
+      description: |2-
+         When you take a quick rest, and you don’t have any spells left except at-will
+        spells, you can regain your specialist school bonus spell slot. Take a
+        cumulative -1 penalty to PD and MD from exhaustion until your next full heal-up.
+    - tier: epic
+      description: ' Gain the lowest tier feat of all spells of your specialist school
+        for free.'
+  - name: Dual Specialization
+    _type: Talent
+    source: DATP
+    version: Specialist (DATP)
+    description: |-
+      **Special:**  You must be a specialist wizard. You cannot take both this talent
+      and Deep Specialization.
+  
+      Choose two specialist schools instead of just one. You gain the specialist spell
+      slot and specialist recharge abilities for both schools. For the specialist
+      slot, you can prepare two slots, one for each of your two schools.
+  
+      You must also choose two barred schools.
+    feats:
+    - tier: adventurer
+      description: |2-
+         Before casting a spell of one specialist school, you can spend a quick action
+        to add a small effect from your other specialist school. For example, you could
+        use illusion to make an evocation spell seem scarier and more dangerous, or add
+        an abjuration effect to a summoned monster to shore up its defenses.
+    - tier: champion
+      description: |2-
+         Gain the adventurer tier feat of all spells from both of your specialist
+        schools.
+  - name: Hedge Wizard
+    _type: Talent
+    source: DATP
+    description: |
+      After each full heal-up, roll a d8.
+  
+      1. A blood sacrifice strengthens your body over your mind. You gain one less
+      wizard spell this time. However, you gain a +2 bonus to PD and roll d8s for
+      recovery dice until the next full heal-up.
+      2. You bond with a protective spirit. Gain a +1 bonus to saves until your next
+      full heal-up.
+      3. You bond with an earth spirit. Gain a daily terrain caster spell from the
+      terrain you are currently in.
+      4. You bond with a life spirit. The first time you are reduced below zero hit
+      points before your next full heal-up, immediately heal using a free recovery.
+      5. You have an out-of-body experience. Immediately gain the incremental advance
+      you would gain at the end of the session. (This does not allow you to level up
+      yet).
+      6. You have a prophetic dream about an upcoming conflict. For one battle before
+      the next full heal-up, set the escalation die to 1 at the start of your first
+      turn.
+      7. You reach into the past. Choose one spell that you had not expended before
+      the heal-up and gain it as a bonus spell. If you have none, reroll.
+      8. The stars are aligned for one spell of your choice. You can reroll one of
+      your attack rolls with that spell before your next full heal-up.
+    feats:
+    - tier: adventurer
+      description: |2-
+         When casting a spell as a ritual, you can expend a recovery without healing to
+        gain advantage on the check. Describe how your ritual is physically exhausting,
+        through dance, sweating, loss of blood, etc.
+    - tier: champion
+      description: ' Roll twice on the table and choose one of the results.'
+    - tier: epic
+      description: |2-
+         Get a spell from a different spellcasting class as a bonus spell, at your class
+        level minus 2. This represents your study of primal wizardry that does not
+        conform to modern limitations.
+  - name: Monster Ecologist
+    _type: Talent
+    source: DATP
+    description: |
+      You gain a 5-point background in the academic knowledge of fantastic creatures.
+  
+      Once per battle, as a free action on your turn, gain a flash of insight about a
+      creature. Choose from the list below:
+  
+      - Learn details of an attack, power, or nastier special (GM’s choice).
+      - Understand its true desires or motives for fighting.
+      - Find out the condition under which it would negotiate, surrender, or flee.
+      - Know about weaknesses or resistances.
+    feats:
+    - tier: adventurer
+      description: |2-
+         If the creature is an aberration, beast, dragon, elemental or ooze, you can
+        learn two facts about it.
+    - tier: champion
+      description: ' You can use this talent twice per battle.'
+    - tier: epic
+      description: ' After using this talent on a target, gain a +1 bonus to attacks
+        against it.'
+  - name: Muscle Wizard
+    _type: Talent
+    source: DATP
+    description: |-
+  
+      You can make unarmed attacks without penalty, and your unarmed damage dice are
+      d6s. Once per battle, when you hit with an unarmed attack, you can deal fire,
+      force, or lightning damage with the attack, increase the damage dice to d10s,
+      and force the target to pop free from you.
+  
+      When you cast a ranged spell, you don’t trigger attacks of opportunity from
+      engaged enemies that you target with the spell.
+    feats:
+    - tier: adventurer
+      description: |2-
+         When you miss a spell attack against a target you are engaged with, deal damage
+        equal to your Strength modifier (x2 at 5th level; x3 at 8th) to it.
+    - tier: champion
+      description: ' Increase your recovery dice to d8s.'
+    - tier: epic
+      description: ' Increase the damage dice of your once-per-battle unarmed attack
+        to d20s.'
+  - name: Necromancy
+    _type: Talent
+    source: DATP
+    description: |-
+  
+      You can switch one of your wizard spells for a spell of the same level from the
+      necromancer list. Starting at third level, you can switch out additional spells
+      at a -2 level penalty.
+  
+      You know how to unravel the magic that creates undead. You gain a +1 bonus to
+      attacks against them.
+    feats:
+    - tier: adventurer
+      description: |2-
+         Understanding the undead helps you ward them off. You gain a +1 bonus to
+        defenses against undead.
+    - tier: champion
+      description: |2-
+         Add your Intelligence modifier to the first death save you roll in a battle. If
+        you roll a natural 20 on any death save. you also regain an expended spell.
+    - tier: epic
+      description: |2-
+         When you kill an enemy with a spell, siphon off some of their life. Gain a +1
+        bonus to your critical threat range until the end of the battle. This bonus
+        resets to zero when you score a critical hit.
+  - name: Pyromancer
+    _type: Talent
+    source: DATP
+    description: |-
+  
+      When you cast a wizard spell that deals damage, you can change the damage type
+      to fire.
+  
+      You gain a spell from any class as a bonus spell at the highest level you can
+      cast, as long as that spell deals fire damage or is otherwise connected to fire.
+      If the spell has an attack roll, you can use Intelligence as the ability score.
+    feats:
+    - tier: adventurer
+      description: ' You ignore fire resistance.'
+    - tier: champion
+      description: |2-
+         When you take fire damage from an enemy attack, heal hit points equal to your
+        level.
+    - tier: epic
+      description: |2-
+         When the escalation die is 1+ and you cast a spell that does fire damage,
+        increase its damage dice by one step.
+  - name: Scion of Horizon
+    _type: Talent
+    source: DATP
+    description: |-
+  
+      Your close ties in wizard society give you an extra icon relationship point with
+      a wizardly icon.
+  
+      Due to your pure wizard blood, combined with the excellent training you have
+      enjoyed, you gain a bonus spell slot at the highest level you can cast. However,
+      you also have one less recovery (usually 7).
+    feats:
+    - tier: adventurer
+      description: |2-
+         You have met many wizards, which gives you an easy read on them. When meeting
+        an arcane spellcaster for the first time, ask one question about them, which the
+        GM will answer truthfully. Typical questions are their school specialization,
+        their icon affiliation, or the spell signature that marks their spells.
+    - tier: champion
+      description: ' You gain a +1 bonus to all defenses against spells and magical
+        attacks.'
+  - name: Sheltered Apprentice
+    _type: Talent
+    source: DATP
+    description: |-
+  
+      Intelligence-based skill checks are one step easier (-5) for you. This includes
+      checks about niche academics and esoteric lore, but also arcane knowledge and
+      skill checks required for ritual casting. Once per day, you can perform a stunt
+      to remember an otherwise useless fact from an obscure tome you’ve read. This is
+      allows you to automatically succeed on what would otherwise be a ridiculously
+      hard task. The GM should encourage the player to make up pieces of lore for the
+      game world with this talent.
+  
+      However, you also choose one ability score where all skill checks are one step
+      more difficult. You’re either frail (Strength), clumsy (Dexterity), sickly
+      (Constitution), lacking in empathy (Wisdom) or socially awkward (Charisma).
+    feats:
+    - tier: adventurer
+      description: |2-
+         Choose a very narrowly defined scholarly background, and gain one point in it
+        per word in the name, ignoring trivial words like “the”, for up to 7 points.
+        Examples include the revised taxonomy of butterflies in the Eldeen Reaches,
+        cultural implications of the seasonal migration patterns of Koru Behemoths, or
+        tribal animism and worship among Iron Sea merfolk.
+    - tier: champion
+      description: |2-
+         When you spend a feat to improve a wizard spell, you also gain the benefits of
+        any other feat of that spell up to your current tier.
+    - tier: epic
+      description: ' Once per day, you can perform an arcane ritual without expending
+        a spell.'
+  - name: Spellslinger
+    _type: Talent
+    source: DATP
+    description: |-
+  
+      You gain a +2 bonus to your critical threat range with wizard at-will spells.
+    feats:
+    - tier: adventurer
+      description: |2-
+         Once per day per point of Dexterity modifier, you can reroll an attack roll
+        with an at-will spell.
+    - tier: champion
+      description: |2-
+         Once per battle, when the escalation die is 3+, you can cast an at-will spell
+        as a quick action.
+    - tier: epic
+      description: |2-
+         As per the champion tier feat, but you can cast the spell as an interrupt when
+        you are attacked. If you hit, your attacker has disadvantage on their attack
+        roll.
+  - name: Summoner
+    _type: Talent
+    source: DATP
+    description: |-
+  
+      When you spend a quick action to control a summoned creature (which allows it to
+      add the escalation die to attack rolls), it also deals extra damage equal to its
+      level, on both hit and miss.
+  
+      Creatures you summon have one recovery. When healed, they use your recovery roll
+      to determine how many hit points they regain. They can use the rally action to
+      heal, or be healed using healing spells and potions.
+    feats:
+    - tier: adventurer
+      description: ' Your summoned creatures gain a +1 bonus to all saves.'
+    - tier: champion
+      description: ' Your summoned creatures have a second recovery.'
+    - tier: epic
+      description: ' Your summoned creatures gain a +1 bonus to all defenses.'
+  - name: Thaumaturge
+    _type: Talent
+    source: DATP
+    description: |
+  
+      When you cast a spell that targets PD, choose one of the following benefits:
+  
+      - If the spell deals damage, deal extra damage equal to your Constitution
+      modifier (x2 at 5th level; x3 at 8th) to each target you hit.
+      - Increase the DC for the target’s first save against the spell by your
+      Constitution modifier. (A natural roll of 18+ always saves, however)
+      - Increase the hit point limit for the creatures you can affect by 5 times your
+      level if it is one target, or twice your level in case of multiple targets.
+    feats:
+    - tier: adventurer
+      description: |2-
+         You gain 3 points towards a background in alchemy and the manipulation of
+        forces and matter.
+    - tier: champion
+      description: |2-
+         Choose a class. You can switch out a wizard spell for a spell from that class
+        at a -2 level penalty, as long as that spell targets PD.
+    - tier: epic
+      description: |2-
+         Once per battle, when the escalation die is 3+, you can gain all three of the
+        thaumaturge benefits with one spell.
+  - name: Animated Image
+    _type: Utility Spell 1
+    source: DATP
+    school: Illusion
+    description: |-
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  Create a two-dimensional illusion, up to the size of a large
+      painting, with an animated effect such as eyes that follow the viewer, falling
+      snow or a change of seasons. Make a skill check to determine the artistic value
+      of the image. The image lasts about 10 minutes.
+  
+      3rd level spell: The spell lasts for 1 hour.
+  
+      5th level spell: The spell lasts for 1 day.
+    feats:
+    - tier: adventurer
+      description: |2-
+         You can program the image to appear and perform a predetermined movement when a
+        defined trigger occurs, such as when a person steps through a door.
+    level: 1
+    category: Utility Spells
+    usage: per-day
+  - name: Continual Light
+    _type: Utility Spell 1
+    school: Evocation
+    source: DATP
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  An object you touch starts emitting light as bright as a torch. The
+      light stays at this brightness for a day, then it slowly fades over the next few
+      days.
+    feats: []
+    level: 1
+    category: Utility Spells
+    usage: per-day
+  - name: Darkvision
+    _type: Utility Spell 1
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One creature per spell level 
+  
+      **Effect:**  The target can see perfectly in the dark for 10 minutes per spell
+      level.
+    feats: []
+    level: 1
+    category: Utility Spells
+    usage: per-day
+  - name: Familiar’s Eyes
+    _type: Utility Spell 1
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Special:**  This spell requires the Wizard’s Familiar talent.
+  
+      **Effect:**  For the next 1d6 x 10 minutes, you can perceive the world through
+      your familiar’s eyes and senses. While using the spell, you are effectively
+      blind and deaf as it dulls your own senses.
+    feats: []
+    level: 1
+    category: Utility Spells
+    usage: per-day
+  - name: Identify
+    _type: Utility Spell 1
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  Gain a +10 bonus to a skill check to identify the magic properties
+      of an item or a persistent magical effect.
+    feats: []
+    level: 1
+    category: Utility Spells
+    usage: per-day
+  - name: Permanent Cantrip
+    _type: Utility Spell 1
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  This spell has the effect of any wizard cantrip of your choice,
+      except that the effect is ongoing for days, if not months, if you don’t dismiss
+      it. Since it’s a minor magical effect, other spellcasters can dispel it with a
+      normal-difficulty skill check.
+    feats: []
+    level: 1
+    category: Utility Spells
+    usage: per-day
+  - name: Recall Memory
+    _type: Utility Spell 1
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Close quarters spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You or a nearby willing creature
+  
+      **Effect:**  You help the target remember something. They can repeat a failed
+      knowledge check with a +5 bonus.
+    feats: []
+    level: 1
+    category: Utility Spells
+    usage: per-day
+  - name: Scribe Scroll
+    _type: Utility Spell 1
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  Inscribe any spell you have prepared for the day onto a parchment.
+      You can cast the spell from the scroll once at a later date, which uses up the
+      scroll.
+  
+      Choose the level of the spell when you create the scroll, between the lowest
+      level it can be learned at and the highest you can cast.
+  
+      Creating a scroll takes roughly 10 minutes per spell level and expends your use
+      of that spell for the day, even for spells other than daily spells. It requires
+      material components that cost about 50 gp per level of the spell.
+  
+      The finished scroll can be used by others, but doing so requires an
+      Intelligence-based skill check with a DC of 15 + the spell’s level (10 + level
+      for other wizards). On a natural even failure, nothing happens, but on a natural
+      odd failure, the magic gets triggered in an unintended, possibly disastrous way,
+      and the scroll is destroyed.
+    feats:
+    - tier: adventurer
+      description: |2-
+         Your scrolls are easier to use by other people, and only require a DC of 10 +
+        level to cast (5 + level for other wizards).
+    level: 1
+    category: Utility Spells
+    usage: per-day
+  - name: Summon Small Animals
+    _type: Utility Spell 1
+    school: Conjuration
+    source: DATP
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You summon 1d6 small animals, such as cats, rabbits, or doves. The
+      animals are purely magical creations. They will act rather confused and
+      disappear after 1d6 minutes.
+  
+      3rd level spell: You can control the animals with a quick action each turn, and
+      you can have them perform small tricks an animal of that type would be capable
+      of.
+    feats: []
+    level: 1
+    category: Utility Spells
+    usage: per-day
+  - name: Talking Pages
+    _type: Utility Spell 1
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One book you touch
+  
+      **Effect:**  You absorb the knowledge contained in a piece of writing up to the
+      size of a book. A short touch will teach you the gist of it, whereas a few
+      minutes of concentration are enough to gain an understanding of its contents. A
+      full day is required if you want to achieve a word-by-word memorization. You
+      don’t need to know the language of the writing. This spell can also decipher
+      non-magical code.
+    feats: []
+    level: 1
+    category: Utility Spells
+    usage: per-day
+  - name: Tongues
+    _type: Utility Spell 1
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You gain the ability to speak and understand the language of any
+      intelligent creature. You can only speak one language at a time. Tongues does
+      not enable you to communicate with creatures that don’t have a language. You can
+      make yourself understood as far as your voice carries. The effect lasts for 1d6
+      x 10 minutes.
+  
+      5th level spell: The effect lasts for 1d6 hours.
+    feats:
+    - tier: adventurer
+      description: ' You can grant the ability to another creature by touch.'
+    level: 1
+    category: Utility Spells
+    usage: per-day
+  - name: Treasure-bearing Disc
+    _type: Utility Spell 1
+    source: DATP
+    school: Evocation
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You create a hovering disc of force energy, roughly the size of
+      your outstretched arms. It can carry two people, one person in heavy armor, or a
+      load of treasure. It follows you on command. It flies at walking speed, and it
+      can slowly move up or down. The disc is indestructible by non-magical means. It
+      persists for 1d6 x 10 minutes.
+  
+      5th level spell: The disc lasts for 1d6 hours.
+    feats: []
+    level: 1
+    category: Utility Spells
+    usage: per-day
+  - name: Unseen Servant
+    _type: Utility Spell 1
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You summon a shimmering, ghost-like valet to step and fetch, open
+      doors and hold chairs, as well as to clean and mend at your command. The servant
+      is about as strong as an average human. It does not fight, is hit by any attack
+      roll of natural 2+, and only has one hit point per level of the spell. The
+      servant persists for 1d6 x 10 minutes.
+  
+      5th level spell: The servant persists for 1d6 hours.
+    feats: []
+    level: 1
+    category: Utility Spells
+    usage: per-day
+  - name: Arcane Cypher
+    _type: Utility Spell 3
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You scramble a text of up to one page per spell level into
+      unreadable gibberish, unless a condition set by you is met. This is usually a
+      certain person reading the text, a specific item touching the page, or a spoken
+      code word.
+    feats: []
+    level: 3
+    category: Utility Spells
+    usage: per-day
+  - name: Clairaudience / Clairvoyance
+    _type: Utility Spell 3
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You concentrate upon a nearby locale and either see or hear inside
+      as if you were there (your choice). You must be able to pinpoint the location,
+      such as around a corner, behind a door etc. The spell lasts for up to one minute
+      per spell level.
+  
+      5th level spell: You can both see and hear with the spell.
+  
+      7th level spell: You can target far away locations.
+    feats: []
+    level: 3
+    category: Utility Spells
+    usage: per-day
+  - name: Leisurely Tiny Hut
+    _type: Utility Spell 3
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You summon a small hut that is large enough for six people to find
+      shelter in. The hut is sturdy enough to survive most environmental effects,
+      although it can be damaged and ultimately destroyed by extreme conditions such
+      as lava or a direct lightning strike. The outer appearance of the hut is up to
+      you. On the inside, the hut provides a comfortable temperature and breathable
+      air. The effect lasts for up to 8 hours.
+    feats: []
+    level: 3
+    category: Utility Spells
+    usage: per-day
+  - name: Magic Mouth
+    _type: Utility Spell 3
+    source: DATP
+    school: Illusion
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You place an enchanted mouth on an object which suddenly appears
+      when a specified event occurs. The mouth speaks a message of up to 25 words as
+      specified by you. The message is entirely mundane and cannot create spell
+      effects. The event that triggers the message can be as simple or as complicated
+      as you like, but the conditions are limited to what can be perceived by normal
+      means. No mind reading, detecting invisible creatures and the like. The spell
+      remains in effect for one day per spell level.
+    feats: []
+    level: 3
+    category: Utility Spells
+    usage: per-day
+  - name: See Invisible
+    _type: Utility Spell 3
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Close-quarters spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Effect:**  You can see invisible creatures normally until the end of the
+      battle or scene.
+  
+      5th level spell: The effect lasts for up to an hour.
+  
+      7th level spell: The effect lasts for up to eight hours.
+    feats: []
+    level: 3
+    category: Utility Spells
+    usage: per-day
+  - name: Arcane Eye
+    _type: Utility Spell 5
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You create an invisible floating eye that sends you visual
+      information. The eye floats at walking speed, and you can send it out of your
+      line of sight. Through the eye, you can see as if through your own eyes. It
+      cannot pass through walls, but it can pass through small holes and openings. The
+      eye persists for 1d6 x 10 minutes.
+  
+      During combat, it’s a quick action to direct the eye and receive visual imagery.
+      If you don’t use the quick action, the eye remains inert.
+  
+      7th level spell: The effect lasts for 1d6 hours.
+    feats:
+    - tier: champion
+      description: ' You can cast spells through the eye at a -2 penalty to the attack.'
+    level: 5
+    category: Utility Spells
+    usage: per-day
+  - name: Legend Lore
+    _type: Utility Spell 5
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  This divination reveals some information about a legendary person,
+      place, or item. Examples include a current or former icon, their stronghold, or
+      a major artifact. The closer you are physically to the target, the more
+      information can be gained by the spell. If you are in the target location, or
+      have the object within reach, the spell is likely to provide vivid imagery of
+      key scenes in its history. If the target is far away, or just a myth that may
+      not be real at all, the spell will conjure just very hazy fragments of
+      information.
+    feats: []
+    level: 5
+    category: Utility Spells
+    usage: per-day
+  - name: Magical Disjunction
+    _type: Utility Spell 5
+    source: DATP
+    school: Abjuration
+    description: |-
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You destroy a permanent magical effect. If you target a true magic
+      item, it is permanently returned into its mundane state. A magical trap is
+      permanently disarmed. Epic-level items are immune to this spell.
+  
+      9th level spell: You can now destroy epic-level effects, but artifacts of iconic
+      power are still immune to the spell.
+    feats: []
+    level: 5
+    category: Utility Spells
+    usage: per-day
+  - name: Passwall
+    _type: Utility Spell 5
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You open a magical passage through a wall that allows you, and any
+      creature designated by you, to pass through. The passage is open for 1d6
+      minutes, if you do not end the spell earlier. The passage opens straight on the
+      opposite side, so make sure there is safe terrain to step into.
+    feats: []
+    level: 5
+    category: Utility Spells
+    usage: per-day
+  - name: Stone to Flesh
+    _type: Utility Spell 5
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  This spell reverses a petrification effect, such as from a medusa’s
+      gaze. You can also use it to change a stone statue into an uncanny corpse (and
+      make the proud artist quite angry).
+    feats: []
+    level: 5
+    category: Utility Spells
+    usage: per-day
+  - name: Dungeon Engineering
+    _type: Utility Spell 7
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You magically perform major construction work for roughly an hour.
+      You can move large amounts of earth and stone, dig a hole or a tunnel, or erect
+      walls and pillars. The GM can require a skill check using an appropriate
+      background to determine the quality and sturdiness of the work.
+    feats: []
+    level: 7
+    category: Utility Spells
+    usage: per-day
+  - name: Mirage Arcana
+    _type: Utility Spell 7
+    source: DATP
+    school: Illusion
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You cover an area the size of a castle or a small forest in an
+      extensive animated illusion that affects all senses. The illusion cannot create
+      solid objects, so if for example you create an illusory wall where there is
+      none, anyone can just walk through it. Make a Charisma-based skill check to
+      determine the quality of the illusion. Anyone with an MD higher than the check
+      will see through it immediately. Others can save against the effect if they have
+      a reason to disbelieve the illusion.
+  
+      The illusion lasts for a day but can be cast as a ritual for longer durations.
+    feats: []
+    level: 7
+    category: Utility Spells
+    usage: per-day
+  - name: Scrying Screen
+    _type: Utility Spell 7
+    source: DATP
+    school: Illusion
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You create an illusion that fools magical divinations. Whoever uses
+      a spell such as Scrying on you or the surrounding area will perceive the image
+      or scene as set by you, not what is really there. The details of the illusory
+      images and sounds are entirely up to you. The screen stays up for 8 hours, but
+      paranoid mages tend to set this spell up as a ritual for longer durations.
+    feats: []
+    level: 7
+    category: Utility Spells
+    usage: per-day
+  - name: True Seeing
+    _type: Utility Spell 7
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You or an ally you touch
+  
+      **Effect:**  For the next hour, the target can see in normal and magical
+      darkness, see invisible creatures and objects, detect visual illusions, and
+      perceive the natural form of a shapechanger or a magically transformed creature.
+      For a creature that has more than one natural form, such as a werewolf, you see
+      both forms as a shadowy overlay. The target can also perceive things that are
+      hidden away on other planes where they overlap with their current location.
+    feats: []
+    level: 7
+    category: Utility Spells
+    usage: per-day
+  - name: Magnificent Mansion
+    _type: Utility Spell 9
+    school: Conjuration
+    source: DATP
+    description: |-
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You create and furnish a stately home in an extradimensional space.
+      You can layout and decorate the place in any shape and form you like. The
+      typical manifestation of the spell is a large aristocratic manor with dozens of
+      luxurious rooms, a glistening banquet hall and lush gardens, populated with
+      liveried servants and skillful musicians. The entrance to the manor is a
+      dimensional portal that others can enter upon your invitation.
+  
+      The mansion lasts for one day. Anything brought into the mansion will drop out
+      of the portal when the spell ends.
+    feats: []
+    level: 9
+    category: Utility Spells
+    usage: per-day
+  - name: Acid Splash
+    _type: Spell 1
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Ranged spell; At-will
+  
+      ---
+  
+  
+      **Target:**  2 random nearby enemies
+  
+      **Attack:**  Automatic hit
+  
+      **Effect:**  3 acid damage
+  
+      3rd level spell: 5 damage
+  
+      5th level spell: 8 damage
+  
+      7th level spell: 12 damage
+  
+      9th level spell: 20 damage
+    feats:
+    - tier: adventurer
+      description: ' When the escalation die is odd, target 3 random nearby enemies.'
+    - tier: champion
+      description: ' When the escalation die is even, increase the damage by the spell
+        level.'
+    - tier: epic
+      description: ' You can now cast this spell without provoking opportunity attacks.'
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Animate Armor
+    _type: Spell 1
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Special:**  You can only cast this spell outside of battle; it requires 2d4
+      minutes to cast.
+  
+      **Target:**  A suit of heavy armor
+  
+      **Effect:**  You animate a suit of heavy armor to fight for you as an armor
+      golem, following to the summoning rules. The armor stays animated until it is
+      reduced to zero hit points, or until your next full heal-up. The spell ends, but
+      the armor is not destroyed when it is reduced it to zero hp (unless it makes
+      sense story-wise, e.g. when falling into lava).
+  
+      By default, the armor uses its gauntlets to attack, and has a d4 damage die with
+      them. However, the armor can also wield melee weapons like a fighter (with the
+      same WEAPON damage dice) and use a shield for +1 AC.
+  
+      If you cast the spell on a true magic item suit of armor, or equip it with magic
+      items, it benefits from their bonuses and abilities. However, it can only
+      benefit from one item per spell level, and it suffers all item quirks.
+  
+      While the armor provides strong protection, it has one weakness — when it takes
+      damage, it needs a round to reassemble itself, and cannot attack that turn.
+    feats: []
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Chromatic Orb
+    _type: Spell 1
+    school: Evocation
+    source: DATP
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  1d12 damage, plus damage type and effect depending on your choice for
+      the color of the orb.
+  
+      _Pearly:_ Light. Holy damage. The target is surrounded by bright light. It is
+      also weakened (-4 to attacks and defenses; save ends).
+  
+      _Ruby:_ Heat. Fire damage. The target’s attacks deal half damage (save ends).
+  
+      **Miss:**  You regain the spell during your next quick rest.
+  
+      3rd level spell: 3d12 damage, and you can create the following colors:
+  
+      _Opal:_ Fire. Fire damage. The target takes 5 points of ongoing fire damage per
+      spell level.
+  
+      _Amber:_ Blindness. Negative energy damage. When the target attacks, determine
+      the targets randomly among all nearby creatures (save ends).
+  
+      5th level spell: 5d12 damage, and you can create the following colors:
+  
+      _Emerald:_ Stinking cloud. Poison damage. The target is dazed (save ends). Deal
+      half damage to 1d3 nearby enemies.
+  
+      _Turquoise:_ Magnetism. Metal objects start clinging to the target. It is
+      hampered (save ends).
+  
+      7th level spell: 7d12 damage, and you can create the following colors:
+  
+      _Sapphire:_ Paralysis. Lightning damage. The target is stunned (save ends). If
+      the target has more than 150 hit points, it can save against the effect
+      immediately.
+  
+      _Amethyst:_ Petrification. Negative energy damage. The target is weakened (save
+      ends). If it fails its fourth save against the spell, it is permanently turned
+      into stone.
+  
+      9th level spell: 9d12 damage, and you can create the following colors:
+  
+      _Ashen:_ Negative energy damage. If the target has 150 hit points or less, it
+      dies. Otherwise it takes 50 ongoing negative energy damage.
+    feats:
+    - tier: adventurer
+      description: ' The spell is now Recharge 16+ after battle.'
+    - tier: champion
+      description: |2-
+         All saves against this spell are hard saves (16+), including saves against
+        ongoing damage.
+    - tier: epic
+      description: ' You have advantage on the attack roll with this spell.'
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Eldritch Incantation
+    _type: Spell 1
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Ranged spell; At-will
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  1d20 psychic damage
+  
+      **Miss:**  —
+  
+      3rd level spell: 2d20 damage
+  
+      5th level spell: 3d20 damage
+  
+      7th level spell: 4d20 damage
+  
+      9th level spell: 6d20 damage
+    feats:
+    - tier: adventurer
+      description: ' You can cast this spell as a close-quarters spell.'
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Elemental Triad
+    _type: Spell 1
+    source: DATP
+    school: Evocation
+    description: |-
+      Ranged spell; Cyclic (once per battle OR at-will when the escalation die is
+      even)
+  
+      **Target:**  Three nearby enemies
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  2d8 damage. Against the first target, deal fire damage, cold against
+      the second, and lightning against the third.
+  
+      **Miss:**  Damage equal to your level
+  
+      3rd level spell: 3d8 damage
+  
+      5th level spell: 5d8 damage
+  
+      7th level spell: 7d8 damage
+  
+      9th level spell: 10d8 damage
+    feats:
+    - tier: adventurer
+      description: |2-
+         Choose the element of each attack. You can also deal acid or thunder damage
+        with this spell, but each attack must use a different element.
+    - tier: champion
+      description: |2-
+         If you miss a target with the first or second attack roll, you can target the
+        same enemy again with the next attack.
+    - tier: epic
+      description: ' On a miss, deal half damage instead.'
+    level: 1
+    category: Spells
+  - name: Enlarge Person
+    _type: Spell 1
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby creature
+  
+      **Attack:**  Intelligence + Level vs. PD (no attack roll required against
+      allies)
+  
+      **Hit:**  The target’s size increases by one step (usually from normal to
+      large), and it has advantage on all Strength-based skill checks. In addition, it
+      increases all WEAPON damage dice by one step. The target also has a +2 bonus to
+      all defenses against attacks that attempt to grab or swallow it. Unwilling
+      targets can save against the effect normally, otherwise the effect ends at the
+      end of the battle or scene.
+  
+      **Miss:**  —
+  
+      5th level spell: You can now increase the target’s size to huge. It takes a -1
+      penalty to attacks and defenses, but its WEAPON damage dice are increased by an
+      additional step.
+    feats: []
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Expeditious Retreat
+    _type: Spell 1
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Close-quarters spell; Once per battle; Quick action
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  Move to a far away location that you can reach on foot. You do not
+      trigger opportunity attacks and you cannot be intercepted.
+    feats:
+    - tier: adventurer
+      description: |2-
+         Until the end of your next turn, you gain a bonus to all defenses equal to the
+        escalation die.
+    level: 1
+    category: Spells
+    usage: per-battle
+  - name: Firebolt
+    _type: Spell 1
+    school: Evocation
+    source: DATP
+    description: |-
+      Ranged spell; At-will
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Special:**  You can increase the targets of the spell to 1d3 nearby enemies.
+      This expends the spell for the day.
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  2d6 fire damage
+  
+      **Miss:**  Half damage
+  
+      3rd level spell: 4d6 damage; 1d4 targets if expended
+  
+      5th level spell: 5d8 damage
+  
+      7th level spell: 6d10 damage; 1d6 targets if expended
+  
+      9th level spell: 8d12 damage
+    feats:
+    - tier: adventurer
+      description: ' If you expend the spell, you can recharge it on a 16+ after the
+        battle.'
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Fog Cloud
+    _type: Spell 1
+    source: DATP
+    school: Evocation
+    description: |-
+      
+  
+      Ranged spell; Daily; Cloud
+  
+      ---
+  
+  
+      **Target:**  1d4 nearby enemies
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  While inside the cloud, any attack made by the target or against the
+      target has disadvantage, unless the attack is at engaged range. Any creature
+      engaged with the target is also under this effect, i.e. it attacks by it and
+      against it have disadvantage unless at engaged range.
+  
+      _Cloud:_ A creature that is not engaged can leave the cloud as a move action. At
+      the start of your next turn, make a normal save (11+) to check whether the cloud
+      persists. This is not an action. If it persists, the effect continues, and you
+      make another check at the start of the following turn.
+    feats:
+    - tier: adventurer
+      description: ' The save to see if the cloud persists is now an easy save (6+).'
+    - tier: champion
+      description: ' You can now target 1d4+2 enemies.'
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Hideous Laughter
+    _type: Spell 1
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  A nearby enemy; constructs and similar mindless enemies are immune
+      to this spell.
+  
+      **Attack:**  Intelligence + Level vs. MD; if the target is staggered, you have
+      disadvantage on the attack roll as the target is in too much pain
+  
+      **Hit:**  The target starts laughing uncontrollably. It is unable to make
+      attacks, but it can take other actions normally (save ends; it also ends if the
+      target is hit by an attack).
+  
+      **Miss:**  The target is dazed until the end of your next turn.
+    feats: []
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Hostile Probe
+    _type: Spell 1
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Ranged spell; At-will
+  
+      ---
+  
+  
+      **Target:**  A nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  The target must choose to either reveal its intentions or resist and
+      take damage.
+  
+      _Reveal:_ You learn what action the target intends to take next. Until the end
+      of your next turn, its attacks against you have disadvantage.
+  
+      _Resist:_ The target takes 2d10 psychic damage.
+  
+      **Miss:**  —
+  
+      3rd level spell: 4d10 damage
+  
+      5th level spell: 6d10 damage
+  
+      7th level spell: 8d10 damage
+  
+      9th level spell: 12d10 damage
+    feats:
+    - tier: adventurer
+      description: |2-
+         You can share the reveal with your allies, which gives the target disadvantage
+        on attacks against them too.
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Ice Knife
+    _type: Spell 1
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Ranged spell; Cyclic (once per battle OR at-will when the escalation die is
+      even)
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. AC
+  
+      **Hit:**  3d8 cold damage
+  
+      _Natural even hit:_ Deal 1d8 cold damage to the 1d3 enemies closest to the
+      target.
+  
+      **Miss:**  Cold damage equal to your level
+  
+      3rd level spell: 5d8 damage; 2d8 on even hit
+  
+      5th level spell: 8d8 damage; 3d8 on even hit
+  
+      7th level spell: 13d8 damage; 4d8 on even hit
+  
+      9th level spell: 2d8 x 10 damage; 5d8 on even hit
+    feats:
+    - tier: adventurer
+      description: |2-
+         For the extra damage on even hit, increase the number of targets to 1d4 and the
+        damage dice to d10s.
+    level: 1
+    category: Spells
+  - name: Mage Armor
+    _type: Spell 1
+    source: DATP
+    school: Abjuration
+    description: |-
+      
+  
+      Close-quarters spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Special:**  You can spend 2d4 minutes to cast this spell out of battle to
+      protect yourself until the end of the next battle.
+  
+      **Target:**  You
+  
+      **Effect:**  Increase your unarmed base armor class to 12 (usually from 10)
+      until the end of the battle.
+  
+      3rd level spell: Base armor 13
+  
+      5th level spell: Base armor 14
+    feats:
+    - tier: adventurer
+      description: ' If you cast this spell out of battle, it lasts for two battles.'
+    - tier: champion
+      description: ' If you cast this spell out of battle, it lasts for three battles.'
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Magic Weapon
+    _type: Spell 1
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  A nearby weapon
+  
+      **Effect:**  Until the end of the battle, the weapon gains a +1 bonus to attack
+      and damage, like a true magic item. Attacks with the weapon ignore any
+      resistances the target has against the attack.
+  
+      5th level spell: Increase the bonus to +2
+  
+      9th level spell: Increase the bonus to +3
+    feats:
+    - tier: adventurer
+      description: |2-
+         If you wield the weapon, you can use your Intelligence modifier for attack and
+        damage with it.
+    - tier: champion
+      description: ' The spell is now Recharge 16+ after battle.'
+    - tier: epic
+      description: |2-
+         The wielder can hurl the weapon to make a ranged attack against a nearby enemy
+        with it. It returns to their hand.
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Mirror Image
+    _type: Spell 1
+    source: DATP
+    school: Illusion
+    description: |-
+      
+  
+      Close-quarters spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  You create 1d3 illusory duplicates of yourself. If an attack
+      against you is a natural odd roll, the attack strikes a duplicate instead of
+      you, and destroys it.
+  
+      3rd level spell: 1d4 images
+  
+      5th level spell: 1d4+1 images
+  
+      7th level spell: 1d6+1 images
+  
+      9th level spell: 2d4 images
+    feats:
+    - tier: adventurer
+      description: ' The spell is now Recharge 16+ after battle.'
+    - tier: champion
+      description: ' On a natural odd miss, the duplicate is no longer destroyed.'
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Phantasmal Force
+    _type: Spell 1
+    source: DATP
+    school: Illusion
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  You plant a phantasm in the target’s mind that it considers to be real
+      (save ends). Describe the phantasm to the GM, who will adjudicate the effect and
+      the target’s actions. Some outcomes the GM can choose are:
+  
+      - Silly distraction: The target is dazed.
+      - Overwhelming desire: The target will move toward a place, creature, or item,
+      and possibly try to grab or touch it.
+      - Stationary danger: The target will avoid a certain area.
+      - Looming threat: The target will try to move away from a place or a creature as
+      fast as it can.
+      - Frightening horror: The target curls up in a corner, unable to do anything but
+      shiver.
+      - Imaginary pain: The target takes 10 ongoing psychic damage per spell level.
+  
+  
+      The GM can set the save as hard (16+) or easy (6+) depending on how realistic
+      the phantasm is in the current situation. The spell ends immediately if the
+      target feels pain that is inconsistent with the phantasm (like touching a hot
+      coal that it thought was a diamond). The target can still perceive everything
+      outside of the phantasm normally. The phantasm cannot be seen by anyone else.
+  
+      **Miss:**  You regain the spell at the end of the battle.
+  
+      5th level spell: The phantasm can have up to two of the effects above.
+  
+      9th level spell: You can target a second enemy.
+    feats:
+    - tier: adventurer
+      description: ' When you hit a mook with this spell, you affect the entire group.'
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Phantom Lance
+    _type: Spell 1
+    source: DATP
+    school: Illusion
+    description: |-
+      
+  
+      Ranged spell; At-will
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  2d10 psychic damage
+  
+      **Miss:**  —
+  
+      3rd level spell: 3d10 damage
+  
+      5th level spell: 5d10 damage
+  
+      7th level spell: 6d12 damage
+  
+      9th level spell: 10d12 damage
+    feats:
+    - tier: adventurer
+      description: ' If the target is dazed or confused, you have advantage on the attack
+        roll.'
+    - tier: champion
+      description: |2-
+         On a natural even hit, also deal ongoing psychic damage equal to the spell
+        level.
+    - tier: epic
+      description: ' You can attack far away enemies at a -2 penalty to the attack roll.'
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Ray of Contortion
+    _type: Spell 1
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Ranged spell; At-will
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  2d8 damage
+  
+      _Natural 16+:_ The target has disadvantage on its next attack roll.
+  
+      **Miss:**  Damage equal to your level
+  
+      3rd level spell: 4d6 damage
+  
+      5th level spell: 6d6 damage
+  
+      7th level spell: 10d6 damage
+  
+      9th level spell: 10d10 damage
+    feats:
+    - tier: adventurer
+      description: |2-
+         On a natural 12–15 on the attack roll, the target is vulnerable to the next
+        attack against it.
+    - tier: champion
+      description: ' Constructs and undead are vulnerable to this spell.'
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Reduce Person
+    _type: Spell 1
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby creature
+  
+      **Attack:**  Intelligence + Level vs. PD (no attack roll required against
+      allies)
+  
+      **Hit:**  The target’s size is reduced by one step (usually from normal to
+      small), and it has a +4 bonus to AC against opportunity attacks. Its WEAPON
+      damage dice are reduced by 1 step. Targeted monsters reduce the damage of
+      physical attacks by their level. Unwilling targets can save against the effect
+      normally, otherwise the effect ends at the end of the battle or scene.
+  
+      5th level spell: You can now reduce a target to tiny size. It deals half damage
+      with physical and weapon attacks.
+    feats: []
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Resist Magic
+    _type: Spell 1
+    school: Abjuration
+    source: DATP
+    usage: recharge
+    description: |-
+      Ranged spell; Recharge 16+ after battle
+  
+      **Target:**  You or one nearby ally
+  
+      **Effect:**  Until the end of the battle, the target gains _resist magic_ 12+.
+      This resistance covers any monster attacks that have names like spells, any
+      attack by a monster with the caster type, and obviously magic abilities like
+      dragon breath.
+  
+      5th level spell: Resistance is now 16+.
+  
+      7th level spell: The spell now affects two targets.
+  
+      9th level spell: Recharge roll is now 11+.
+    feats:
+    - tier: adventurer
+      description: ' You can target an additional creature with the spell.'
+    level: 1
+    category: Spells
+  - name: Summon Mana Spirit
+    _type: Spell 1
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  This spell summons a Mana Spirit as a superior summoned creature.
+      The level of the spirit is the same as the spell’s level. This spell follows the
+      summoning rules.
+    feats:
+    - tier: adventurer
+      description: ' The mana spirit can teleport to a nearby location once per battle.'
+    - tier: champion
+      description: |2-
+         When the escalation die is even, the Mana Spirit can attack two nearby enemies
+        with its magic missile attack.
+    - tier: epic
+      description: |2-
+         The mana spirit can use Magic Missile as an interrupt action after it isits
+        attacked.
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Threat Assessment
+    _type: Spell 1
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  A larger area, such as one level of a dungeon
+  
+      **Effect:**  You gain a visual image and the rough location of the strongest
+      creature in the target area (GM’s choice; usually the creature with the most hit
+      points).
+    feats: []
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: True Strike
+    _type: Spell 1
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Close-quarters spell; Cyclic (once per battle OR at-will when the escalation die
+      is even)
+  
+      **Target:**  You or a nearby ally
+  
+      **Effect:**  The target has advantage on their next weapon attack roll, and a
+      bonus to their critical threat range equal to the escalation die.
+    feats: []
+    level: 1
+    category: Spells
+  - name: Break Enchantment
+    _type: Spell 3
+    school: Abjuration
+    source: DATP
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby creature or object
+  
+      **Attack:**  Charisma + Level vs. MD; you can hit willing targets without an
+      attack roll
+  
+      **Hit:**  End all effects on the target. If you target a magic item, its effects
+      are temporarily negated (save ends).
+  
+      **Miss:**  —
+    feats:
+    - tier: champion
+      description: ' You can target one specific effect, rather than all of them.'
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Circle of Warding
+    _type: Spell 3
+    school: Abjuration
+    source: DATP
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You create a circle on the ground that is large enough for you and
+      one ally per spell level to stand in. Choose one type of creature (aberration,
+      beast, construct, demon, dragon, elemental, fey, giant, humanoid, plant, ooze,
+      or undead). Creatures of the chosen type have disadvantage on all attacks
+      against those within the circle. Anyone inside the circle has to step across it
+      to engage anyone outside of it, and vice versa.
+  
+      If a creature of your chosen type tries to enter the circle, make the following
+      attack against it as a free action.
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  1d6 per spell level psychic damage. The target fails to enter the
+      circle and can’t engage anyone within it.
+  
+      At the start of each of your turns, roll 1d20. If the roll is equal to the
+      escalation die or lower, the spell ends.
+    feats: []
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Clay Golem
+    _type: Spell 3
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Special:**  You can only cast this spell outside of battle; it requires 2d4
+      minutes to cast.
+  
+      **Effect:**  You summon a clay golem to fight as your ally in the upcoming
+      battles, according to the summoning rules. The golem stays animated until it is
+      reduced to zero hit points, or until your next full heal-up.
+    feats:
+    - tier: adventurer
+      description: |2-
+         Your clay golem regenerates a number of hit points equal to its level at the
+        start of its turn.
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Critical Scope
+    _type: Spell 3
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  You or a nearby ally
+  
+      **Effect:**  The target gains a +2 bonus to their critical threat range until
+      the end of the battle.
+  
+      7th level spell: You can now cast this spell on two targets.
+    feats: []
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Elemental Absorption
+    _type: Spell 3
+    source: DATP
+    school: Abjuration
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You or a nearby ally
+  
+      **Effect:**  Choose one element (acid, cold, fire, force, lightning, poison, or
+      thunder). You create a shield around the target that absorbs damage of that
+      element. The shield dissipates after it has absorbed 30 points of damage, or at
+      the end of the battle.
+  
+      5th level spell: 50 points of damage
+  
+      7th level spell: 80 points of damage
+  
+      9th level spell: 140 points of damage
+    feats:
+    - tier: adventurer
+      description: |2-
+         You can choose to create two shields for two different elements; each absorbs
+        half the amount.
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Enchanted Conduit
+    _type: Spell 3
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Close-quarters spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  A staff (simple two-handed melee weapon)
+  
+      **Effect:**  You enchant the staff as both an adventurer-level true magic
+      weapon, and an arcane implement (+1 bonus to attack and damage). In melee, you
+      can use Intelligence for attack and damage with it, and it deals acid, cold,
+      fire, force, or lightning damage (your choice). Deal 1d6 extra damage with melee
+      attacks and spells that deal damage of the chosen element.
+  
+      5th level spell: Increase the enchantment bonus to champion tier (+2), and the
+      extra damage to 2d6.
+  
+      7th level: Increase the extra damage to 3d6.
+  
+      9th level spell: Increase the enchantment bonus to epic tier (+3), and the extra
+      damage to 5d6.
+    feats:
+    - tier: adventurer
+      description: ' You can switch the damage type as a quick action.'
+    - tier: champion
+      description: ' The spell is now Recharge 16+ after battle.'
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Explosive Runes
+    _type: Spell 3
+    source: DATP
+    school: Abjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You inscribe mystic runes on a book, scroll, map or similar item
+      that last for a day. Specify a safe way to read the runes without triggering
+      them. If those instructions aren’t followed, the runes explode, targeting the
+      reader with the attack below.
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  6d6 fire damage
+  
+      **Miss:**  Half damage against the target and another random nearby creature
+  
+      5th level spell: 10d6 damage
+  
+      7th level spell: 2d6 x 10 damage
+  
+      9th level spell: 3d6 x 10 damage
+    feats:
+    - tier: adventurer
+      description: ' The runes have 1d4+1 charges, and they last for up to a month.'
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Fire / Ice Shield
+    _type: Spell 3
+    source: DATP
+    usage: recharge
+    schoool: Evocation
+    description: |-
+      Close-quarters spell; Recharge 16+ after battle; Quick action
+  
+      ___
+
+      **Special:**  Choose whether you want to create a fire shield or an ice shield
+      when you cast the spell.
+  
+      **Effect (Fire Shield):**  You create a burning barrier that you can wield like
+      a shield (AC +1, no attack penalty). The shields grants _resist fire_ 12+. When
+      an enemy makes a melee attack against you, deal fire damage equal to your
+      Intelligence modifier (x2 at 5th level; x3 at 8th) + Level to it.
+  
+      **Effect (Ice Shield):**  As above, but the shield deals cold damage and grants
+      resistance to cold damage.
+  
+      5th level spell: The resistance is now 16+.
+    feats:
+    - tier: champion
+      description: ' Increase the AC bonus to +2.'
+    - tier: epic
+      description: ' The spell is now Recharge 11+.'
+    level: 3
+    category: Spells
+  - name: Flame Arrow
+    _type: Spell 3
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Special:**  When you cast the spell, choose whether you want to cast it as (A)
+      a direct damage spell or (B) an item enchantment effect.
+  
+      **Effect A:**  You create one flaming arrow and make the following attack with
+      it.
+  
+      **Target:**  One nearby or far away enemy. If you have more than one arrow, you
+      choose a different target for each arrow, or the same target again.
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  7d10 fire damage
+  
+      **Miss:**  Half damage
+  
+      5th level spell: Create 2 arrows.
+  
+      7th level spell: Create 3 arrows.
+  
+      9th level spell: Create 5 arrows.
+  
+      **Effect B:**  Summon flaming arrows into someone’s quiver. Until the end of the
+      battle, they deal 2 extra WEAPON dice of fire damage with bow attacks on a hit
+      until the end of the battle.
+  
+      5th level spell: 3 WEAPON dice
+  
+      7th level spell: 5 WEAPON dice
+  
+      9th level spell: 7 WEAPON dice
+    feats:
+    - tier: adventurer
+      description: ' The spell is now Recharge 16+ after battle.'
+    - tier: champion
+      description: ' (B) The enchanted bow deals half extra fire damage on a miss.'
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Flaming Sphere
+    _type: Spell 3
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You summon a flaming sphere that you can direct to singe your
+      enemies. Until the end of the battle, you can make the following attack as a
+      quick action once on each of your turns.
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  3d12 fire damage
+  
+      **Miss:**  Half damage to a different nearby enemy
+  
+      5th level spell: 6d12 damage
+  
+      7th level spell: 1d12 x 10 damage
+  
+      9th level spell: 3d6 x 10 damage
+    feats:
+    - tier: adventurer
+      description: ' On a miss, deal damage equal to your level to the initial target.'
+    - tier: champion
+      description: |2-
+         You can attack recklessly with this spell. Attack 1d3 enemies with one quick
+        action, but on a miss, deal half damage to each ally engaged with the targets.
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Foresee Peril
+    _type: Spell 3
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You or a nearby ally
+  
+      **Effect:**  The target has advantage on initiative checks and cannot be
+      surprised. It can always act in a surprise round. It also has advantage on skill
+      checks to notice dangers such as traps. This effect lasts for one hour per spell
+      level.
+    feats: []
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Harden Metal
+    _type: Spell 3
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  A nearby set of heavy armor
+  
+      **Effect:**  If cast on a set of armor, the armor grants +1 AC and converts
+      critical hits into normal hits until the end of the battle.
+    feats: []
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Luck
+    _type: Spell 3
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  You or one nearby ally
+  
+      **Effect:**  The target gains a +1 bonus to d20 rolls (attacks, saves, skill
+      checks) until the end of the battle or scene.
+  
+      5th level spell: The target also gains the bonus to defenses.
+  
+      9th level spell: Increase the bonus to +2.
+    feats:
+    - tier: adventurer
+      description: |2-
+         When you cast the spell, roll 1d6. If the result is equal to the escalation die
+        or lower, you can add a second target.
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Painful Memory
+    _type: Spell 3
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  10 psychic damage, 10 ongoing psychic damage and the target is dazed
+      (save ends).
+  
+      _Natural 18+:_ The target is also stunned until the end of your next turn.
+  
+      **Miss:**  The target is dazed until the end of your next turn, and you regain
+      the spell during your next quick rest.
+  
+      5th level spell: 15 damage, and 15 ongoing damage
+  
+      7th level spell: 25 damage, and 25 ongoing damage
+  
+      9th level spell: 40 damage, and 40 ongoing damage
+    feats:
+    - tier: champion
+      description: ' Stun the target on a natural 16+.'
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Phantom Soldiers
+    _type: Spell 3
+    source: DATP
+    school: Illusion
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You summon a mob of three phantom soldiers (below), as per the
+      summoning rules. These soldiers fight for you until the end of the battle, or
+      until they drop to 0 hp, whichever comes first.
+    feats: []
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Protection from Arrows
+    _type: Spell 3
+    source: DATP
+    school: Abjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You or one nearby ally
+  
+      **Effect:**  Until the end of the battle, the target gains _resist missile
+      attacks_ 18+. This reduces the damage from weapon-based ranged attacks, such as
+      arrows or sling stones, but not spells and attacks that deal elemental damage.
+      The spell does not protect from attacks that aren’t targeted, such as an
+      avalanche.
+    feats:
+    - tier: adventurer
+      description: ' The spell is now Recharge 16+ after battle.'
+    - tier: champion
+      description: ' If the natural attack roll is 12 or lower, the resisted attack
+        deals no damage.'
+    - tier: epic
+      description: ' You can target yourself and 1d3 nearby allies with this spell.'
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Reanimate Golem
+    _type: Spell 3
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Special:**  When you cast this spell during a quick rest, you can expend a
+      recovery without healing to regain this spell after the quick rest.
+  
+      **Target:**  One destroyed golem you have created earlier that day
+  
+      **Effect:**  You reanimate the golem at full hit points.
+    feats: []
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Shadow Evocation
+    _type: Spell 3
+    source: DATP
+    school: Illusion
+    description: |
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  Choose a spell of the Evocation school of the same level as this
+      spell or lower. You cast that spell, with the following changes:
+  
+      - It’s a daily spell.
+      - The spell targets the enemy’s MD.
+      - All damage dice are reduced by one step (d6 to d4 and so on).
+      - All damage is psychic damage.
+    feats: []
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Slow
+    _type: Spell 3
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy with 120 hp or fewer
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  The target is slowed (save ends).
+  
+      _Slowed:_ The target is limited to one attack per turn and takes a -5 penalty to
+      disengage checks. It can’t take actions outside of its turn.
+  
+      **Miss:**  —
+  
+      5th level spell: 180 hp or fewer
+  
+      7th level spell: 300 hp or fewer
+  
+      9th level spell: 480 hp or fewer
+    feats:
+    - tier: adventurer
+      description: |2-
+         On a miss, the target takes a -5 penalty to disengage checks until the end of
+        its next turn.
+    - tier: champion
+      description: ' Target 1d3 nearby enemies.'
+    - tier: epic
+      description: ' The target is also weakened.'
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Stinking Cloud
+    _type: Spell 3
+    source: DATP
+    school: Evocation
+    description: |-
+      
+  
+      _You create a cloud of pungent odor._
+  
+      Ranged spell; Daily; Cloud
+  
+      ---
+  
+  
+      **Target:**  1d4 nearby enemies
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  4d6 poison damage, and the target is dazed until the start of your
+      next turn.
+  
+      **Miss:**  Half damage against each ally engaged with the target.
+  
+      _Cloud:_ A creature that is not engaged can leave the cloud as a move action. At
+      the start of your next turn, make a normal save (11+) to check whether the cloud
+      persists. This is not an action. If it persists, any target that was hit and is
+      still in the cloud suffers the hit effect again, and you make another save at
+      the start of the following turn.
+  
+      5th level spell: 6d6 damage
+  
+      7th level spell: 10d6 damage
+  
+      9th level spell: 14d6 damage
+    feats:
+    - tier: adventurer
+      description: |2-
+         A target that suffers the hit effect a second time is now weakened instead. A
+        target that suffers the hit effect a third time is now stunned instead.
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Suggestion
+    _type: Spell 3
+    source: DATP
+    usage: recharge
+    school: Enchantment
+    description: |-
+      
+  
+      Ranged spell; Recharge 11+
+
+      ___
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  You plant a suggested course of action into the target’s mind. The
+      suggestion must be short and easy to understand. The subject will only follow
+      reasonable courses of action. It won’t do anything to harm themselves or people
+      they care about. The effect ends when the target fulfills the suggestion. If
+      this requires a longer time than one round, the target can save against the
+      effect.
+  
+      **Miss:**  The target hears the suggestion but is in no way compelled to follow
+      it.
+    feats: []
+    level: 3
+    category: Spells
+  - name: Web
+    _type: Spell 3
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  1d3 nearby enemies in a group with 30 hp or fewer each. If you
+      choose to cast the spell recklessly, you can target enemies with any number of
+      hp.
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  The target is stuck and hampered (save ends both).
+  
+      **Miss:**  —
+  
+      _Reckless Miss:_ Make an attack roll for this spell against each of your allies
+      engaged with a target.
+  
+      **Effect:**  The spell creates a webbed area until the end of the battle. If a
+      combatant with hit points equal to limit or less is pushed into the webbed area
+      by a stunt or similar, it must immediately make a save. If the save fails, it is
+      also stuck and hampered (save ends both). The web can be set on fire by a torch
+      or a fire spell. In that case, the spell ends, and all stuck creatures take fire
+      damage equal to twice the spell level.
+  
+      5th level spell: Targets with 50 hp or fewer
+  
+      7th level spell: Targets with 80 hp or fewer
+  
+      9th level spell: Targets with 125 hit points or fewer
+    feats:
+    - tier: adventurer
+      description: ' Your allies can save against the spell with an easy save (6+).'
+    - tier: champion
+      description: ' Target 1d4 enemies.'
+    - tier: epic
+      description: |2-
+         The web is now populated by spiders that deal 10 poison damage to any enemy
+        caught in the web at the start of your turn.
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Acid Trap
+    _type: Spell 5
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Special:**  You can use this spell to create a trap. Cast the spell as a
+      standard action on a designated spot. You can then trigger the spell as an
+      interrupt action. If you don’t trigger the spell before your next full heal-up,
+      it fades. You can set the spell to trigger on a set condition, such as a certain
+      type of creature going near the location.
+  
+      **Target:**  1d4 nearby enemies in a group
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  8d8 acid damage
+  
+      **Miss:**  Half damage
+  
+      7th level spell: 2d4 x 10 damage
+  
+      9th level spell: 2d8 x 10 damage
+    feats:
+    - tier: champion
+      description: ' The trap resets to trigger a second time after 1d4 turns.'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Baleful Polymorph
+    _type: Spell 5
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy with 160 hp or fewer
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  The target is polymorphed into a harmless creature, like a mouse or a
+      frog (save ends). While polymorphed, the target retains its defenses, but it
+      cannot make attacks. The spell ends if the target takes damage equal to its
+      level.
+  
+      **Miss:**  —
+  
+      7th level spell: Target with 250 hp or fewer, or two targets each with 125 hp or
+      fewer
+  
+      9th level spell: Target with 500 hp or fewer, or two targets each with 250 hp or
+      fewer
+    feats:
+    - tier: champion
+      description: |2-
+         After the target successfully saves against the spell, it is dazed until the
+        end of its next turn.
+    - tier: epic
+      description: ' You can target three instead of two creatures with the lower hit
+        point total.'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Big Purple Hand
+    _type: Spell 5
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You summon a hand of shimmering, translucent force, as per the
+      summoning rules. The hand lasts until the end of the battle, or until destroyed.
+      It moves at your command, mimicking the movements of your own hand.
+    feats:
+    - tier: champion
+      description: ' Attacks by the hand deal +1d8 damage; +2d8 at 8th level.'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Cone of Cold
+    _type: Spell 5
+    school: Evocation
+    source: DATP
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Target:**  1d3 nearby enemies in a group. If you cast recklessly, you can
+      target 1d4 + 1 enemies, but your allies engaged with the targets may also take
+      damage.
+  
+      **Attack:**  Intelligence + Level vs. PD; you gain a +2 bonus to the attack roll
+      against enemies engaged with you
+  
+      **Hit:**  10d8 cold damage
+  
+      _Natural even hit:_ The target is dazed until the end of your next turn.
+  
+      **Miss:**  Half damage
+  
+      _Reckless miss:_ Your allies engaged with the target take damage equal to twice
+      the spell level.
+  
+      7th level spell: 15d8 damage
+  
+      9th level spell: 2d8 x 10 damage
+    feats:
+    - tier: champion
+      description: ' The spell is now Recharge 16+ after battle.'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Contingency
+    _type: Spell 5
+    school: Evocation
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  Choose a spell of 5th level or lower that you can cast, and that
+      can target you. You cast that spell—called the contingent spell—as part of
+      casting contingency, expending spell slots for both, but the contingent spell
+      doesn’t come into effect. Instead, it takes effect when a certain circumstance
+      occurs. You describe that circumstance when you cast the two spells. For
+      example, you could set a contingency to trigger water breathing when you are
+      drowning.
+  
+      Triggering the contingent spell does not take an action from you. It takes
+      effect immediately after the circumstance is met for the first time, whether or
+      not you want it to, and then contingency ends.
+  
+      The contingent spell takes effect only on you, even if it can normally target
+      others.
+  
+      If the contingency was not triggered, it ends at your next full heal-up.
+    feats:
+    - tier: adventurer
+      description: |2-
+         You can now set a target other than you for the contingency, such as “the enemy
+        who attacked me last” or “a nearby orc.”
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Crushing Despair
+    _type: Spell 5
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  1d3 nearby enemies
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  The target has disadvantage on attack rolls and skill checks (save
+      ends).
+  
+      **Miss:**  The target has disadvantage on its next attack roll.
+    feats: []
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Fantastic Beast
+    _type: Spell 5
+    source: DATP
+    school: Illusion
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You summon a fantastic beast (below), as per the summoning rules.
+      The beast fights for you until the end of the battle, or until it drops to 0 hp,
+      whichever comes first. Choose one special ability for the beast from the list
+      below.
+  
+      _Memory Jumble:_ When the beast’s attack roll is a natural 20, the target is
+      confused until the end of their next turn.
+  
+      _Oscillating Skin Pattern:_ Enemies engaged with the beast have disadvantage on
+      attacks against targets other than the beast.
+  
+      _Phasing:_ If the escalation die is even, the beast can teleport to a nearby
+      location you can see as a quick action.
+  
+      _Psychic Strike:_ When a nearby enemy attacks the beast’s MD, it can make a
+      phantom claw attack against it as an interrupt action.
+    feats:
+    - tier: champion
+      description: ' Choose two abilities instead.'
+    - tier: epic
+      description: ' Choose three abilities instead.'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Heroism
+    _type: Spell 5
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby ally
+  
+      **Effect:**  Until the end of the battle, the target is immune to fear. In
+      addition, once per round, the target can reroll a d20 roll that is a natural
+      1–5.
+    feats: []
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Hypnotic Pattern
+    _type: Spell 5
+    source: DATP
+    school: Illusion
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  1d4 nearby enemies in a group
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  If the target has 80 hit points or fewer, it is stunned (can’t take
+      actions and -4 to defenses; easy save 6+ ends). Otherwise it is dazed (save
+      ends).
+  
+      **Miss:**  The target is dazed until the end of your next turn.
+  
+      7th level spell: 120 hit points or fewer
+  
+      9th level spell: 180 hit points or fewer
+    feats:
+    - tier: champion
+      description: |2-
+         Enemies who successfully save against this spell are still dazed until the end
+        of their next turn.
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Incendiary Cloud
+    _type: Spell 5
+    school: Evocation
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Cloud
+  
+      ---
+  
+  
+      **Target:**  1d3 nearby enemies
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  6d8 fire damage
+  
+      **Miss:**  For each damage die coming up as maximum, deal that much damage to
+      each ally engaged with the target.
+  
+      _Cloud:_ A creature that is not engaged can leave the cloud as a move action. At
+      the start of your next turn, make a normal save (11+) to check whether the cloud
+      persists. This is not an action. If it persists, any target that was hit and is
+      still in the cloud suffers the hit effect again, and you make another save at
+      the start of the following turn.
+  
+      7th level spell: 8d10 damage
+  
+      9th level spell: 10d12 damage
+    feats:
+    - tier: champion
+      description: ' The check to sustain the cloud is now an easy save (6+).'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Phantasmal Killer
+    _type: Spell 5
+    source: DATP
+    school: Illusion
+    description: |-
+      
+  
+      _You create the vision of a shadowy attacker in the target’s head._
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  1d12 x 10 psychic damage
+  
+      _Natural odd hit:_ The target makes a basic attack against one of its allies.
+  
+      **Miss:**  Half damage
+  
+      7th level spell: 2d8 x 10 damage
+  
+      9th level spell: 4d6 x 10 damage
+    feats:
+    - tier: champion
+      description: |2-
+         On an odd hit, the target will use its most damaging attack power available
+        instead of a basic attack, possibly targeting more than one ally.
+    - tier: epic
+      description: ' The target adds the escalation die to its attack roll.'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Precognitive Ward
+    _type: Spell 5
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You or a nearby ally
+  
+      **Effect:**  Until the end of the battle, whenever the target is attacked, they
+      can use an interrupt action to roll a d20. If that roll is higher than the
+      natural roll of the attacker, the attack is a miss. (Note that you are limited
+      to one interrupt action between your turns.)
+    feats:
+    - tier: champion
+      description: ' Add the escalation die to the d20 roll.'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Protection from Normal Weapons
+    _type: Spell 5
+    source: DATP
+    school: Abjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You or one nearby ally
+  
+      **Effect:**  Until the end of the battle, the target gains _resist weapon
+      attacks_ 18+. This reduces the damage from weapon-based melee attacks, such as
+      swords and axes. It does not protect from attacks that don’t use weapons,
+      including the claws, teeth, and other natural weapons of monsters. True magic
+      item weapons also ignore the resistance.
+    feats:
+    - tier: champion
+      description: ' If the natural attack roll is 12 or lower, the resisted attack
+        deals no damage.'
+    - tier: epic
+      description: ' You can target yourself and 1d3 nearby allies with this spell.'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Rock Golem
+    _type: Spell 5
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Special:**  You can only cast this spell outside of battle; it requires 2d4
+      minutes to cast.
+  
+      **Effect:**  You summon a rock golem to fight as your ally in upcoming battles,
+      according to the summoning rules. The golem stays animated until it is reduced
+      to zero hit points, or until your next full heal-up.
+    feats:
+    - tier: champion
+      description: |2-
+         Enemies engaged with the stone golem take a -2 penalty to any attack that does
+        not target the stone golem.
+    - tier: epic
+      description: ' The stone golem cannot be intercepted by creatures that aren’t
+        large or bigger.'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Resilient Sphere
+    _type: Spell 5
+    school: Evocation
+    source: DATP
+    description: |-
+  
+      Ranged Spell; Daily
+  
+      ---
+  
+  
+      **Target:**  A nearby normal-sized creature
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  A sphere of shimmering force encloses the target (hard save 16+ ends).
+      Nothing—not physical objects, energy, or other spell effects—can pass through
+      the barrier, in or out. The sphere is immune to all damage, and a creature or
+      object inside can’t be damaged by attacks or effects originating from outside,
+      nor can a creature inside the sphere damage anything outside it. The enclosed
+      creature can push against the sphere’s walls and roll around with it.
+  
+      **Miss:**  —
+  
+      7th level spell: You can now target a large creature.
+  
+      9th level spell: You can now target a huge creature.
+    feats: []
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Sanctum
+    _type: Spell 5
+    school: Abjuration
+    source: DATP
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You ward the nearby area against magical intrusion. The area cannot
+      be scried on with divination spells, and it’s not possible to teleport into it.
+  
+      Wizards often use a ritual of this spell to protect their studies and towers
+      against other wizards.
+    feats: []
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Telepathic Bond
+    _type: Spell 5
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You and one nearby creature per spell level
+  
+      **Effect:**  All targets of the spell can communicate with each other
+      telepathically for the next hour.
+    feats:
+    - tier: champion
+      description: |2-
+         If two targets of the spell are engaged with the same enemy, they gain a +2
+        bonus to attacks against that enemy.
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Tenacious Transformation
+    _type: Spell 5
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  You become a fighting machine—stronger, tougher, faster. You can
+      wield all weapons without attack penalty, your Strength is increased to be equal
+      to your Intelligence score, your base armor class increases to 14 (from usually
+      10), your recovery dice increase to d10s, and you gain 5 temporary hit points
+      per level.
+  
+      However, you cannot cast any spells while transformed. You can end the spell at
+      the start of your turn as a free action.
+    feats:
+    - tier: champion
+      description: ' You can cast spells while transformed, but at a -2 penalty to the
+        attack roll.'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Anti-Magic Shell
+    _type: Spell 7
+    source: DATP
+    school: Abjuration
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You or a nearby ally
+  
+      **Effect:**  You create a shimmering zone around the target that suppresses all
+      magic within it. The zone protects the target and any creature next to it.
+      Creatures within the zone can’t cast spells or use magic items, and any ongoing
+      magical effects end. Magical attacks, including supernatural effects like gaze
+      or breath weapons, don’t affect targets within the zone.
+  
+      The spell lasts until the end of the battle, or until you end it as a free
+      action.
+    feats:
+    - tier: champion
+      description: |2-
+         You can target enemies with the spell. To attach the zone to an unwilling
+        target, you need an attack roll vs. MD, and the target can save against the
+        effect.
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Arcane Sword
+    _type: Spell 7
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You summon a hovering sword of pure magical force. Until the end of
+      the battle, you can make the following attack with it as a quick action.
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. AC
+  
+      **Hit:**  1d8 x 10 force damage
+  
+      **Miss:**  —
+  
+      9th level spell: 1d12 x 10 damage
+    feats:
+    - tier: champion
+      description: |2-
+         You can take a few minutes before a battle to prepare the spell, which allows
+        you to summon the sword as a free action.
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Cloudkill
+    _type: Spell 7
+    source: DATP
+    school: Evocation
+    description: |-
+      
+  
+      Ranged spell; Daily; Cloud
+  
+      ---
+  
+  
+      **Target:**  1d4 nearby enemies OR 3d4 nearby mooks
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  If the target is a mook, it is killed. Otherwise, it takes 30 poison
+      damage.
+  
+      **Miss:**  Allies engaged with the target take 15 poison damage.
+  
+      _Cloud:_ A creature that is not engaged can leave the cloud as a move action. At
+      the start of your next turn, make a normal save (11+) to check whether the cloud
+      persists. This is not an action. If it persists, any target that was hit and is
+      still in the cloud suffers the hit effect again, and you make another save at
+      the start of the following turn.
+  
+      9th level spell: 50 damage to non-mooks; 25 damage to allies on miss
+    feats:
+    - tier: epic
+      description: ' You can now target far away enemies.'
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Delayed Blast Fireball
+    _type: Spell 7
+    school: Evocation
+    source: DATP
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  Before the end of the battle, you can make the following attack
+      once as a free action.
+  
+      **Target:**  1d3 nearby enemies; or 2d3 if cast recklessly
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  12d10 fire damage
+  
+      **Miss:**  Half damage
+  
+      _Reckless miss:_ Allies engaged with the target take one quarter of the damage.
+  
+      9th level spell: 20d10 damage
+    feats: []
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Elemental Parry
+    _type: Spell 7
+    source: DATP
+    school: Abjuration
+    description: |-
+      
+  
+      Close-quarters spell; Cyclic (once per battle OR at-will when the escalation die
+      is even); Interrupt action
+  
+      **Trigger:**  You are targeted by an attack that deals acid, fire, cold,
+      lightning, or thunder damage, with a natural attack roll of 14 or less.
+  
+      **Effect:**  Take half damage from the attack. The next time you cast a spell
+      that deals damage of that element before the end of the battle, deal extra
+      damage equal to the level of this spell.
+  
+      9th level spell: Trigger on 18 or less.
+    feats:
+    - tier: champion
+      description: ' Increase the extra damage to 1d4 per spell level.'
+    level: 7
+    category: Spells
+  - name: Flashback
+    _type: Spell 7
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  You or a nearby ally
+  
+      **Effect:**  The target regains a spell or power they have expended this day or
+      this battle.
+    feats: []
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Flesh to Stone
+    _type: Spell 7
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy with 500 hp or fewer
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  25 ongoing damage, and the target has disadvantage on disengage checks
+      (save ends both). After the first failed save, the target is also hampered (save
+      ends all). After the fourth failed save, the target is permanently turned to
+      stone.
+  
+      **Miss:**  20 damage
+  
+      9th level spell: target with 750 hp; 40 ongoing damage; 30 miss damage
+    feats: []
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Gem Golem
+    _type: Spell 7
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Special:**  You can only cast this spell outside of battle; it requires 2d4
+      minutes to cast.
+  
+      **Effect:**  You summon a gem golem to fight as your ally in upcoming battles,
+      according to the summoning rules. The golem stays animated until it is reduced
+      to zero hit points, or until your next full heal-up. When you create the golem,
+      embed three gems worth at least 300 gp each in its forehead, which you can
+      retrieve when the golem is destroyed. For each gem, choose a 3rd-level wizard
+      spell you can cast. The golem is able to cast these spells as if you would cast
+      them, at their normal frequency. This does not expend any of your spells.
+  
+      9th level spell: You can now embed three gems worth at least 500 gp each to
+      embed 5th level spells.
+    feats: []
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Mind Blank
+    _type: Spell 7
+    source: DATP
+    school: Abjuration
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You or one nearby ally
+  
+      **Effect:**  Until the end of the battle, the target gains _resist psychic_ 16+
+      and it is immune to all non-damage effects of attacks against MD.
+  
+      9th level spell: _Resist psychic_ 18+
+    feats:
+    - tier: epic
+      description: ' You can target yourself and 1d3 allies with the spell.'
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Mislead
+    _type: Spell 7
+    source: DATP
+    school: Illusion
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  Until the end of the battle (or for five minutes out of combat),
+      you become invisible until you attack or use some ridiculously flashy action. In
+      addition, you create an illusory double of yourself that you can move freely in
+      a nearby location. The double does not interact with physical objects;
+      everything passes through it.
+    feats: []
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Opaque Freezing Sphere
+    _type: Spell 7
+    school: Evocation
+    source: DATP
+    description: |-
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  3d6 x 10 cold damage
+  
+      **Miss:**  Half damage
+  
+      **Special:**  You can choose to cast this spell recklessly. In this case, add
+      1d3 enemies in the same group as secondary targets.
+  
+      **Secondary Attack:**  Intelligence + Level vs. PD
+  
+      **Secondary Hit:**  1d10 x 10 cold damage
+  
+      **Secondary Miss:**  1d4 x 10 cold damage to allies engaged with the targets
+  
+      9th level spell: Increase all damage multipliers to x 15.
+    feats:
+    - tier: epic
+      description: |2-
+         On a natural 16+ attack roll, the primary target is weakened until the end of
+        your next turn.
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Outrageous Irresistible Dance
+    _type: Spell 7
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy with 320 hp or fewer
+  
+      **Special:**  If the target has 160 hp or fewer, you gain a +4 bonus to the
+      attack roll and the save is a hard save (16+).
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  The target is hampered and takes a -4 penalty to defenses (save ends
+      both).
+  
+      **Miss:**  —
+  
+      9th level spell: Targets with 500 / 250 hp or fewer
+    feats:
+    - tier: epic
+      description: ' On a miss, the next attack against the target has advantage.'
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Power Word, Stun
+    _type: Spell 7
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy with 300 hp or fewer
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  The target is stunned (-4 to defenses and can’t take actions; save
+      ends).
+  
+      **Miss:**  The target is weakened until the end of its next turn.
+  
+      9th level spell: Targets with 600 hp or fewer
+    feats:
+    - tier: epic
+      description: ' If the target has 300 hp or fewer, the save is a hard save (16+).'
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: None
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Ranged spell
+  
+      Daily
+  
+      ---
+  
+  
+      **Special** : When you cast this spell, you can choose to cast it recklessly.
+  
+      **Target** : 1d3 + 1 nearby enemies in a group. If you cast recklessly, you can
+      target 1d2 additional enemies, but then your allies engaged with any of the
+      targets may also take damage (see below).
+  
+      **Attack** : Intelligence + Level vs. PD
+  
+      **Hit** : 2d4 x 10 damage.
+  
+      **Miss** : Half damage.
+  
+      **Reckless miss** : Your allies engaged with the target take one-fourth damage.
+  
+      9th level spell: 2d8 x 10 damage, and gravity remains reversed for any hit
+      targets (as well as any damaged allies on a reckless miss) for a number of
+      rounds equal to the current escalation die value when you cast the spell. If
+      there’s no ceiling in the place where you cast this, multiply the base damage by
+      the number f rounds the effect lasts—that’s how much they’ll take when they
+      finally land.
+    feats: []
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Simulacrum
+    _type: Spell 7
+    source: DATP
+    school: Illusion
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby creature
+  
+      **Effect:**  You create an illusory double of the creature that fights for you
+      until the end of the battle, according to the summoning rules. The simulacrum
+      has the stats of the target, with the following changes:
+  
+      - It only has 45 hit points.
+      - It ignores any attack against it with a natural odd attack roll.
+      - If the target was double-strength, the simulacrum deals half damage. If it was
+      triple-strength or a PC, the simulacrum deals one third of the damage. You
+      cannot create a simulacrum of creatures stronger than triple-strength.
+      - It can’t be healed.
+  
+  
+      9th level spell: The simulacrum has 70 hp.
+    feats: []
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Symbol
+    _type: Spell 7
+    source: DATP
+    school: Abjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You create a glowing symbol on a nearby object that you imbue with
+      a variable effect from the list below. You can choose between a lesser symbol,
+      which has a weaker effect but affects more targets, or a greater symbol, which
+      has a stronger effect but only affects one target.
+  
+      **Lesser Symbols**
+  
+      _Fear:_ The targets are struck by fear (-4 to attacks and can’t use the
+      escalation die; save ends).
+  
+      _Hopelessness:_ The targets are struck by hopelessness (-5 to MD and -5
+      difficulty to skill checks to give suggestions or commands to the target; save
+      ends).
+  
+      _Pain:_ The target has disadvantage on attacks (save ends).
+  
+      _Discord:_ The targets are confused until the end of their next turn.
+  
+      _Persuasion:_ The targets are subject to a suggestion by the caster (save ends).
+      The effect also ends if the target takes damage.
+  
+      **Greater Symbols**
+  
+      _Insanity:_ The target is confused (save ends).
+  
+      _Sleep:_ The target falls unconscious (save ends). The effect also ends if the
+      target takes damage.
+  
+      _Stun:_ The target is stunned (save ends).
+  
+      _Death:_ The target starts making last gasp saves (16+). If it fails the fourth
+      save, it dies.
+  
+      The symbol lasts until it is activated, or until 24 hours have passed. You also
+      set an activation trigger, for example when the object is touched, when an
+      undead creature comes near it, or when someone passes through the doorway under
+      it.
+  
+      When the symbol is triggered, it makes the following attack:
+  
+      **Target (lesser symbol):**  the 1d4 closest creatures with 120 hp or fewer
+  
+      **Target (greater symbol):**  the closest creature with 180 hp or fewer
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  As per the chosen symbol
+  
+      9th level spell: Increase the hp threshold to 180 / 270 hp.
+    feats:
+    - tier: champion
+      description: |2-
+         You can hide the symbol, so that it only becomes visible on a certain condition
+        (for example, when an orc approaches within 30 feet, or when someone is touching
+        the object). The symbol must become visible before it can trigger.
+    - tier: epic
+      description: |2-
+         The effect skips nearby enemies with more hit points than the hp threshold if
+        eligible targets are within range.
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Wall of Force
+    _type: Spell 7
+    source: DATP
+    school: Evocation
+    description: |-
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You create a transparent wall in a straight line across the
+      battlefield. The wall can be a few hundred feet across. The wall blocks
+      creatures, attacks, and spells.
+  
+      When damage is dealt directly to the wall, divide the damage of that attack by
+      10 and roll a d20. If the die roll is lower, the wall dissipates.
+  
+      9th level spell: The wall now only dissipates on the third failed roll.
+    feats: []
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Dominate Monster
+    _type: Spell 9
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby creature
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  You take complete control over the target (normal save 11+ ends;
+      double-strength and stronger monsters make an easy save 6+). The target acts on
+      its normal turn, but you determine its actions. If you order the target to do
+      something that goes against its very nature, it can immediately save against the
+      effect.
+    feats:
+    - tier: epic
+      description: ' You can target a group of mooks as a single target.'
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Feeblemind
+    _type: Spell 9
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby creature
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  The target is reduced to minimal intelligence and instinctual behavior
+      (hard save 16+ ends). The target can still physically defend itself and fight,
+      and it recognizes friend from foe, but it can’t speak, cast spells, or use any
+      advanced tactics. This is effectively a stronger version of the hampered
+      condition.
+  
+      **Miss:**  The target is dazed until the end of your next turn.
+    feats:
+    - tier: epic
+      description: |2-
+         The target can only save against the spell effect when the escalation die is
+        even.
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Foresight
+    _type: Spell 9
+    source: DATP
+    school: Divination
+    description: |-
+      
+  
+      _You bestow sudden flashes of insight about the immediate future to the target._
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You or a nearby ally
+  
+      **Effect:**  The target rolls two d12s and keeps the higher result. As a free
+      action, it can reduce the die by one to gain a sudden insight about an upcoming
+      task, which grants advantage to a skill check, attack, or save. The target can
+      also reduce the die by one to avoid being surprised, or impose disadvantage on
+      an attack against it. The spell ends when the die is reduced to zero, or at the
+      next full heal-up.
+    feats: []
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Imprisonment
+    _type: Spell 9
+    source: DATP
+    school: Abjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby creature
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  You shrink the target and teleport it into a gem, necklace or similar
+      object. The target is fully conscious, but can’t escape the gemstone unless it
+      succeeds at a hard save (16+), the gem is smashed, or it has a way to teleport
+      out of there.
+  
+      **Miss:**  The target is teleported to a random nearby location.
+    feats: []
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Magma Golem
+    _type: Spell 9
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Special:**  You can only cast this spell outside of battle; it requires 2d4
+      minutes to cast.
+  
+      **Effect:**  You summon a magma golem to fight as your ally in upcoming battles,
+      according to the summoning rules. The golem stays animated until it is reduced
+      to zero hit points, or until your next full heal-up.
+    feats:
+    - tier: epic
+      description: ' When the magma golem engages an enemy, it deals 25 fire damage
+        to them.'
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Maze
+    _type: Spell 9
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby creature
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  The target is removed from the battlefield and teleported to a
+      labyrinth-like demiplane, where it has to search for the exit. At the end of
+      each turn, it makes a normal save (11+). If it succeeds, it immediately rolls
+      another save that turn, otherwise it starts saving again at the end of its next
+      turn. It needs three successes to escape from the maze. Enemies whose MD is
+      higher than yours only need two successes. Minotaurs always succeed at their
+      save against this spell.
+  
+      **Miss:**  —
+    feats:
+    - tier: epic
+      description: |2-
+         Enemies now need four successes to escape the maze (three if their MD is higher
+        than yours).
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Power Word, Kill
+    _type: Spell 9
+    source: DATP
+    school: Enchantment
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  The target takes 100 ongoing negative energy damage. If it rolls a
+      natural 5 or less on its save, increase the ongoing damage by 50.
+  
+      **Miss:**  50 ongoing damage
+    feats:
+    - tier: epic
+      description: ' On a natural 5 or less on the save, increase the ongoing damage
+        by 100.'
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Prismatic Spray
+    _type: Spell 9
+    school: Evocation
+    source: DATP
+    description: |-
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One random nearby enemy per point of Intelligence modifier
+  
+      **Attack:**  Intelligence + Level vs. PD
+  
+      **Hit:**  Roll 1d8 to determine which color ray affects the target.
+  
+      1. Red. The target takes 2d8 x 10 ongoing fire damage. 
+      2. Orange. The target takes 3d8 x 10 acid damage.
+      3. Yellow. The target takes 3d8 x 10 lightning damage.
+      4. Green. The target takes 2d8 x 10 ongoing poison damage. If it fails a save
+      while it has 150 hp or fewer, it dies.
+      5. Blue. The target takes 3d8 x 10 cold damage.
+      6. Indigo. The target is hampered (save ends). After the third failed save, it
+      is permanently turned into stone.
+      7. Violet. The target is blinded (treat as weakened, -4 to attacks and
+      defenses). If it fails its save three times, it is transported to another plane
+      of existence of the GM’s choosing. (Typically, a creature that is on a plane
+      that isn’t its home plane is banished home, while other creatures are usually
+      cast into the Astral or Ethereal planes.) 
+      8. The target is struck by two rays. Roll twice more, rerolling any 8s.
+  
+  
+      **Miss:**  Roll 1d8 to determine the ray color, but the target takes half damage
+      and ignores any non-damage effect.
+    feats: []
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Suppress Magic
+    _type: Spell 9
+    source: DATP
+    school: Abjuration
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  Nearby enemies have disadvantage on magic and spell attacks
+      (anything that can be targeted by Counterspell). If they try to cast a spell
+      that does not involve an attack roll, roll a d20; if the roll is a natural 1–5,
+      the spell fails. The effect lasts until the end of the battle, until you fall
+      unconscious, or until an enemy rolls a natural 20 on a spell attack roll or
+      spell failure check.
+    feats: []
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Time Stop
+    _type: Spell 9
+    source: DATP
+    school: Transmutation
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  Time seems to cease flowing for everyone but you. You speed up so
+      greatly that all other creatures seem frozen to you, although they are still
+      moving at their normal speeds. You can take 1d4+1 full turns (standard action,
+      move action, quick action) as a free action. You suffer effects like ongoing
+      damage normally while taking these turns. While the time stop is in effect,
+      other creatures are invulnerable to your attacks and spells. You cannot move or
+      harm items held, carried, or worn by a creature stuck in normal time, but you
+      can affect any item that is not in another creature’s possession. Any spell with
+      a duration longer than the remaining duration of the time stop has its normal
+      effects on other creatures once the time stop ends.
+    feats: []
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Twisted Nightmare
+    _type: Spell 9
+    source: DATP
+    school: Illusion
+    description: |-
+      
+  
+      Ranged spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy with 750 hp or fewer
+  
+      **Attack:**  Intelligence + Level vs. MD
+  
+      **Hit:**  The target is confused (save ends). It takes a penalty to the save
+      equal to the escalation die. Whenever the target hits its own ally, it takes
+      psychic damage equal to half the damage it dealt. Whenever the target takes
+      damage, increase the damage of its attacks by its level until the end of the
+      battle (even after the spell ends).
+  
+      **Miss:**  You can repeat the attack against the target once during your next
+      turn as a quick action.
+    feats:
+    - tier: epic
+      description: |2-
+         If you hit the target with this spell, you gain a +2 bonus to attacks against
+        it until the end of the battle.
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Wish
+    _type: Spell 9
+    source: DATP
+    school: Conjuration
+    description: |-
+      
+  
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Effect:**  You utter the words “I wish …”, and the literal wording of that
+      Wish becomes reality. Wish is the ultimate freeform spell, as it can make
+      anything happen. It can heal wounds, transport you anywhere, summon items, and
+      make bad things happen to your enemies. However, the universe has a way to
+      reflect overly ambitious Wishes back at the caster, by giving them exactly what
+      they wanted.
+  
+      **Special:**  You cannot, or rather should not attempt to cast this spell more
+      than three times in a lifetime. Stories are vague as to the reason, but the most
+      common legend is that the genie who fulfills your wishes is freed after the
+      third casting, and a fourth attempt will force the caster to take their place.
+  
+      _GM Note:_ If you are looking for a literary inspiration for this spell, think
+      about Cinderella’s transformation to join the ball. Think about who fulfills
+      wishes in your campaign — Faerie godmothers? Genies? The Diabolist?
+  
+      All in all, treat this spell as a plot device. Fulfill the Wish in a way that
+      moves the story forward, with an epic effect that is worthy of a 9th level
+      spell, just like you would handle a 5 or 6 on an icon relationship roll. This is
+      the most powerful spell in the game, cast by one of the most powerful casters in
+      the game world, at the peak of the campaign. The results can and should feel
+      amazing. There is always room to introduce unintended negative consequences
+      later.
+    feats: []
+    level: 9
+    category: Spells
+    usage: per-day
+  # END DATP ABILITIES
 ---
 
 ## Ability Scores
@@ -1172,13 +5306,19 @@ Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are l
 
 ## Class Features
 
-Wizards have four class features: Cantrips, Cyclic Spells, Overworld Advantage, and Ritual Magic.
-
 <Vault.AbilityList abilities={props.getAbilitiesByType("Class Feature")} />
 
 ## Class Talents
 
 <Vault.AbilityList abilities={props.getAbilitiesByType("Talent")} />
+
+<If source="DATP">
+## Wizard Schools
+The seven schools of magic are Abjuration, Conjuration, Divination, Enchantment, Evocation, Illusion and Transmutation.
+
+See the necromancer class for Necromancy.
+<Vault.AbilityList abilities={props.getAbilitiesByType("Wizard School")} />
+</If>
 
 ## Cantrips
 
@@ -1235,6 +5375,109 @@ This is a minor fire creation spell, enough to light a pipe, or a campfire, or e
 It doesn't work against living beings or against things that couldn't easily be set on fire with a few seconds of steady application of a candle.
 The target of the spark has to be nearby and in sight.
 
+
+<If source="DATP">
+
+### Animate Quill
+
+Animate a quill, a piece of charcoal or similar object to write down words as you instruct it.
+
+### Deep Pockets
+
+Put an item in a pocket, from where it disappears into a small pocket dimension.
+The item can be as long as you like, as long as it fits through the pocket’s
+opening. You can pull the item back out as a quick action at any time. At the
+end of the cantrip’s duration, or if the physical pocket is destroyed, the item
+falls out.
+
+### Detect Magic
+
+You notice lingering magic and supernatural effects within your field of vision.
+If an effect is concealed on purpose, the DM can require a skill check to detect
+it.
+
+### Erase
+  
+Permanently remove non-magical writing or painting from a scroll or a sheet of
+paper, parchment, or similar surfaces.
+
+### Fire Shaping
+  
+Enlarge or reduce a non-magical fire, change its color, shape, or intensity.
+After the spell ends, the fire returns to its natural shape, determined by the
+material that is burning.
+
+### Grease
+  
+You create a slippery area where you touch the floor or an object. Anyone who
+attempts to move through the area or tries to hold on to the object must succeed
+at a save to do so.
+
+### Gust of Wind
+  
+Create a strong puff of air that is sufficient to extinguish candles, torches,
+and similar unprotected flames. With a successful skill check, the gust is
+strong enough to even extinguish lanterns and other protected flames. It pushes
+back insects and other small flying creatures, smells, and smoke clouds. It does
+not affect larger creatures except for a dramatic waving of hair and clothing.
+
+### Locate Minor Object
+  
+Divine the location of an object you are very familiar with, within a range of a
+few meters. This spell is very handy to find keys, glasses, and other things
+that get lost around the house.
+
+### Mustache
+  
+This incantation grows a mustache on the target. Rumors are that it is part of
+an entire suite of spells that create a wide variety of hair and beard styles,
+however, this specific formula has proven to be a runaway hit at the court of
+the Elf Queen (of all places).
+
+### Nascent Magic Aura
+  
+Give an item an indeterminate magic aura, which can be noticed if it is examined
+for the presence of magic. Upon closer examination and a hard difficulty skill
+check, the examiner can determine that the aura has no other effect than to
+create the appearance of a magical enchantment.
+
+### Perfume
+
+Create a pleasant smell on the target object, or at least hide a hideous one.
+
+### Recall Familiar
+
+You summon your familiar back to your shoulder, or a location next to you, from
+up to a few hundred feet distance.
+
+### Recording
+  
+For the next few minutes, you record the surrounding sounds into a small gem.
+The gem holds the recorded sound and can replay it as long as the cantrip lasts.
+
+### Still Image
+  
+You produce an illusory image, roughly the size of a portrait painting, for the
+standard duration. It’s two-dimensional, doesn’t move, and doesn’t react to
+touch. You can make the image transparent or opaque.
+
+### Sundial
+  
+Summon a small sundial on your open palm that shows the current time, even in
+places where no sunlight is available.
+
+### Sunshades
+  
+Summon a black screen in front of your eyes that blocks excessive sunlight.
+
+### Ventriloquism
+  
+You throw your voice to appear to come from a different location. This is
+especially effective if the target can’t see you speak.
+
+</If>
+
+<If version="Core Book">
 ## Utility Spell
 
 When you choose spells during a full heal-up, instead of taking a standard spell, you can choose to give up a spell slot to memorize the _utility spell_ at the same level.
@@ -1244,7 +5487,12 @@ You can give up multiple spell slots to take _utility spell_ multiple times.
 
 Choose from among the following utility spells:
 
-<Vault.AbilityList abilities={props.getAbilities(["Feat Tiers"])} />
+<Vault.AbilityList abilities={props.getAbilities(["Utility Spell Feats"])} />
+
+</If>
+<If version="Specialist (DATP)">
+## Utility Spells
+</If>
 
 <Vault.AbilityList abilities={props.getAbilitiesByType("Utility Spell 1")} />
 

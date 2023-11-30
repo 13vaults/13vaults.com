@@ -10,7 +10,7 @@ import { SectionProvider } from "./section-provider";
 import CompendiumSideNav from "./compendium-side-nav";
 import ContentLink from "./content-link";
 import { defaultLocale } from "@/lib/locales";
-import { useBookStore, isSourceEnabled } from "@/lib/books";
+import { useBookStore, isSourceEnabled, isVVEnabled } from "@/lib/books";
 
 interface ContentLayerRendererP {
   data: any;
@@ -37,7 +37,8 @@ export default function ContentLayerPage({
   const sections = get(data, "sections", []);
   const bookstore = useBookStore();
   const lead = get(pageDress, "lead");
-  const If = (props) => props.source && isSourceEnabled(bookstore, props.source) ?
+  const If = (props) => (props.source && isSourceEnabled(bookstore, props.source)) ||
+                        (props.version && isVVEnabled(bookstore,"version", props.version))  ?
                           props.children : null
   return (
     <>
