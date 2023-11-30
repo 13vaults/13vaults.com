@@ -18,6 +18,8 @@ interface AbilityItemP {
   description: Ability["description"];
   feats: Ability["feats"] | PartialFeat[];
   usage: Ability["usage"];
+  version: Ability["version"];
+  variant: Ability["variant"];
   tier: Ability["tier"];
   source: Ability["source"];
   replaced_by: Ability["replaced_by"];
