@@ -1,6 +1,24 @@
 ---
 name: Sorcerer
 source: 13th Age, p.132
+versions:
+  - name: Core Book
+  - name: Arcane
+    source: DATP
+  - name: Celestial
+    source: DATP
+  - name: Draconic
+    source: DATP
+  - name: Fey
+    source: DATP
+  - name: Infernal
+    source: DATP
+  - name: Storm
+    source: DATP
+  - name: Umbral
+    source: DATP
+  - name: Wild
+    source: DATP
 page_dress:
   quote:
     text: |-
@@ -47,6 +65,7 @@ abilities:
       **Miss:** —
   - name: Access to Wizardry
     _type: Class Feature
+    version: Core Book
     description: Starting at 3rd level, you can take a wizard spell in place of a sorcerer spell. The wizard spell must be two levels lower than the sorcerer spell.
   - name: Breath Weapon
     _type: Class Feature
@@ -74,6 +93,7 @@ abilities:
       Keep on rolling attacks as long as you get even rolls and don’t run out of new targets.
       Each enemy can be targeted only once.
   - name: Dancing Lights
+    version: Core Book
     _type: Class Feature
     description: |-
       All sorcerers can cast the dancing lights spell as a standard action.
@@ -90,7 +110,37 @@ abilities:
       When a sorcerer gathers power, it does not count as casting a spell;
       you can gather power without taking opportunity attacks.
 
-      In addition, because you spend your standard action to gather power, you generate a small magical benefit.
+      In addition, because you spend your standard action to gather power, you generate a small magical benefit (see below).
+
+      After you have gathered power, you can use your next standard action to cast an empowered sorcerer spell.
+      Empowered sorcerer spells deal double the damage of a normal sorcerer spell.
+      This means that you double the damage results of the hit or a miss from the single spell.
+      Non-attack spells generally don't improve when cast empowered; use empowered casting for attacks.
+
+      If you do not or are not able to use your next standard action to cast a sorcerer attack spell, you lose the power you've gathered.
+      You can use another standard action to gather power again, but the spell you eventually cast will still only do double damage.
+
+      You can spend your move actions and quick actions any way you like after you gather power and before casting your next empowered spell.
+      Yes, once a battle has started it's possible to perform the magical firefight trick of gathering power while hiding to the side of the cave entrance, then jumping into the cave opening on your next turn and blasting with the empowered spell.
+
+      Breath weapon spells add an extra wrinkle.
+      Of course you can gather power the first time you cast a breath weapon spell in a battle.
+      Later in the fight it's a question of whether you gathered power the turn before a breath weapon spell roll goes your way.
+      You can be all ready with gathered power but roll too low to use the breath weapon spell, forcing you to cast a different spell with the gathered power.
+
+      If you've gathered power for a spell that deals ongoing damage, the ongoing damage is doubled the first time it is dealt, but not on subsequent rounds, if any.
+    feats:
+      - tier: adventurer
+        description: Once per battle, you can choose the chaotic benefit you want instead of rolling for it.
+      - tier: champion
+        description: Once per battle when the escalation die is 4+, you can gather power as a quick action.
+      - tier: epic
+        description: When you gather power, if the escalation die is 2+, you can roll two chaotic benefits. Unlike most effects, the benefits stack if you roll the same result twice.
+
+  - name: Chaotic Benefit
+    _type: Class Feature
+    version: Core Book
+    description: |-
       Like many of your powers, this benefit is chaotic rather than perfectly reliable, so you must make a random check to see what benefit you get.
       Roll a d6 and consult the appropriate table below.
 
@@ -120,32 +170,9 @@ abilities:
       | 3-4       | Deal damage equal to your level + twice your Charisma modifier to all nearby staggered enemies. |
       | 5-6       | Deal damage equal to your level + twice your Charisma modifier to one nearby enemy.             |
 
-      After you have gathered power, you can use your next standard action to cast an empowered sorcerer spell.
-      Empowered sorcerer spells deal double the damage of a normal sorcerer spell.
-      This means that you double the damage results of the hit or a miss from the single spell.
-      Non-attack spells generally don't improve when cast empowered; use empowered casting for attacks.
-
-      If you do not or are not able to use your next standard action to cast a sorcerer attack spell, you lose the power you've gathered.
-      You can use another standard action to gather power again, but the spell you eventually cast will still only do double damage.
-
-      You can spend your move actions and quick actions any way you like after you gather power and before casting your next empowered spell.
-      Yes, once a battle has started it's possible to perform the magical firefight trick of gathering power while hiding to the side of the cave entrance, then jumping into the cave opening on your next turn and blasting with the empowered spell.
-
-      Breath weapon spells add an extra wrinkle.
-      Of course you can gather power the first time you cast a breath weapon spell in a battle.
-      Later in the fight it's a question of whether you gathered power the turn before a breath weapon spell roll goes your way.
-      You can be all ready with gathered power but roll too low to use the breath weapon spell, forcing you to cast a different spell with the gathered power.
-
-      If you've gathered power for a spell that deals ongoing damage, the ongoing damage is doubled the first time it is dealt, but not on subsequent rounds, if any.
-    feats:
-      - tier: adventurer
-        description: Once per battle, you can choose the chaotic benefit you want instead of rolling for it.
-      - tier: champion
-        description: Once per battle when the escalation die is 4+, you can gather power as a quick action.
-      - tier: epic
-        description: When you gather power, if the escalation die is 2+, you can roll two chaotic benefits. Unlike most effects, the benefits stack if you roll the same result twice.
   - name: Random Energy
     _type: Class Feature
+    version: Core Book
     description: |-
       Some sorcerer spells deal damage of a random type. If it matters for the situation, use a d4 to determine which type of damage the spell deals.
 
@@ -769,6 +796,3786 @@ abilities:
       Other ability score references remain unchanged.
 
       As you might expect, each 5 you roll also invokes an icon-related complication or obligation in the tradition of rolling 5s on relationship checks.
+# BEGIN DATP ABILITIES
+  - name: Metamagic and Sorcery Points
+    _type: Class Feature
+    source: DATP
+    description: |-
+      A sorcerer’s magic is an innate ability, and they can intuitively control it as
+      if they were moving a hand or a finger. Each bloodline has metamagic tricks to
+      improve their spells. Arcane sorcerers are great at targeting their spells,
+      whereas draconic sorcerers have a few extra tricks with their breath weapons,
+      and so on.
+  
+      To fuel these tricks, _Dark Alleys & Twisted Paths_ adds _sorcery points_ as a new resource for
+      sorcerers. You have a pool of sorcery points equal to your Charisma modifier,
+      and you regain all expended sorcery points after a full heal-up.
+  
+      To use a metamagic ability, you must declare that you spend sorcery points on a
+      spell or roll _before_ rolling the dice, unless the description says otherwise.
+      The benefit only applies to this casting of the spell. You can only augment a
+      spell with one metamagic ability at a time.
+  
+      If you have gained a spell through your Access to … class feature, you can apply
+      metamagic to them in the same way you augment your sorcerer spells.
+    feats:
+    - tier: adventurer
+      description: ' Increase your maximum sorcery points by 1.'
+  - name: No Bloodline
+    _type: Bloodline
+    version: Core Book
+    source: DATP
+    description: |-
+      **Select a bloodline for your sorcerer at the top of this page. Or use the following...** 
+
+      The sorcerer in the 13th Age Core Book has a mixed
+      theme that doesn’t quite fit one of the bloodlines
+      presented here specifically.
+      
+      If you want to play a sorcerer based on that template, you can still take any of the spells and
+      some of the talents in this book and skip all references
+      to the supplemental rules, i.e. bloodlines, sorcery points,
+      and metamagic. 
+      
+      If you only want to add metamagic, 
+      choose two metamagic abilities from any of the bloodlines in this book.
+
+      If you would like to convert an existing sorcerer character to the material in this book, look at their backgrounds, talents, especially heritage talents, and icon
+      relations, and choose a bloodline that fits. Then, swap
+      out the class features accordingly. You may also have to
+      swap out some spells gained through Access to Wizardry
+      if your new bloodline gives you access to the spell list of
+      a different class.
+
+  - name: Arcane Bloodline
+    _type: Bloodline
+    source: DATP
+    version: Arcane
+    description: |-
+      The arcane bloodline originates from old wizard dynasties, who have studied and
+      manipulated magic over so many generations the arcane energies have infused
+      their essence. In rare cases, the bloodline can also manifest spontaneously in
+      people who survived encounters with strong magical forces. Sorcerers of this
+      bloodline often show small elemental manifestations on their bodies, like eyes
+      of burning fire, snowflakes on their hair, or lightning cracking between their
+      fingers.
+  
+      **Linked Icon:**  The Archmage
+  
+      **Linked Rune:**  Magic
+      ### Arcane Bloodline Spells
+      | Level | Core Book | Dark Alleys |
+      |-------|-----------|-------------|
+      | 1st   | Burning Hands, Lightning Fork, Resist Energy, Scorching Ray | Attune Weapon, Elemental Sorcery, Force Boomerang, Sorcerer's Shield, Thunderwave |
+      | 3rd   | Echoing Thunder | Cloak of Lightning, Energy Charge, Flash Freeze, Pierce Resistance |
+      | 5th   | Summon Flux Elemental* | Leech Magic, Living Torch |
+      | 7th   | - | Elemental Form, Reflecting Barrier |
+      | 9th   | Silver Flame | Spell Barrage, Twilight Travel |
+      
+      _*In 13th Age Monthly: Sorcerer Summoning_
+
+      ### Arcane Random Energy
+      | Roll (d6) | Energy Type |
+      |---|---|
+      | 1 | Cold |
+      | 2 | Fire |
+      | 3 | Lightning |
+      | 4 | Thunder |
+      | 5 | Acid |
+      | 6 | Force |
+
+      ### Arcane Familiars
+      Arcane familiars choose two familiar abilities, as per the Wizard’s Familiar talent. 
+    feats: []
+  - name: Access to Wizardry
+    _type: Class Feature
+    version: Arcane
+    source: DATP
+    description: |-
+      Starting at 3rd level, you can take a wizard spell in place of a sorcerer spell.
+      The wizard spell must be two levels lower than the sorcerer spell.
+  
+      **Special:**  If you have the Arcane Heritage talent (see the revised version in
+      this book), you can choose one of your wizard spells without the -2 level
+      penalty.
+    feats:
+    - tier: adventurer
+      description: ' Use Charisma instead of Intelligence with your chosen wizard spells.'
+  - name: Arcane Benefit
+    _type: Class Feature
+    version: Arcane
+    source: DATP
+    description: |-
+      When you gather power, you gain a sorcery point (see the Metamagic and Sorcery
+      Points class feature above). This can temporarily give you more sorcery points
+      than your starting pool, but unused points above your pool are lost at the end
+      of the battle.
+    feats: []
+  - name: Arcane Metamagic
+    source: DATP
+    _type: Class Feature
+    version: Arcane
+    description: |-
+      You gain the following metamagic abilities.
+  
+      **Precision (2 points):** Gain a +2 bonus to attack with the spell. If the
+      spell is a sorcerer spell with the arcane keyword or a wizard spell, increase
+      the bonus to +3.
+  
+      **Mana Reserve (2 points):** Gain a +2 bonus to a spell recharge roll you make
+      after a battle, after rolling the die.
+  
+      **Arcane Preservation (2 points):**  If all attack rolls with the spell are a
+      natural 1–5, you don’t expend the spell.
+    feats:
+    - tier: adventurer
+      description: |2-
+         If the target spell is a sorcerer spell with the arcane keyword, the metamagic
+        abilities above cost 1 point less.
+  - name: Dancing Lights
+    _type: Class Feature
+    version: Arcane
+    description: |-
+      Arcane sorcerers can cast the dancing lights spell as a standard action.
+      Unlike the wizard’s light cantrip, the sorcerer’s dancing lights spell produces a number of varicolored light globes that bloom within 5 to 30 feet of the sorcerer every two to five seconds.
+      The sorcerer has very little control over the exact location or illumination provided by the lights, meaning that they can occasionally be used for dramatic plot purposes.
+    feats: []
+  - name: Celestial Bloodline
+    _type: Bloodline
+    version: Celestial
+    source: DATP
+    description: |-
+      Even though the gods are distant in the Dragon Empire, celestial beings from the
+      divine realms can manifest on the surface world, and sometimes even beget
+      offspring with mortals. This ancestry can manifest in the ability to wield an
+      innate divine magic without requiring faith, worship, or religion, even
+      generations later. Celestial sorcerers often have a delicate, unnatural beauty
+      to them, as if they are too pure for this world.
+  
+      _If it fits your character concept, you can interpret the Celestial bloodline
+      sorcerer as an invoker of divine power. In that case, switch your magic type to
+      divine and swap wand implements for holy symbols._
+  
+      **Linked Icon:**  The Priestess
+  
+      **Linked Rune:**  n/a
+
+      ### Celestial Bloodline Spells
+      | Level | Core Book | Dark Alleys |
+      |-------|-----------|-------------|
+      | 1st   | Lightning Fork, Scorching Ray | Angelic Dictum, Archon's Trumpet, Attune Weapon, Celestial Resistance, Sorcerer’s Shield |
+      | 3rd   | Echoing Thunder       | Conviction, False Life, Protected Perimeter  |
+      | 5th   | Unearthly Glamour     | Flash of Radiance, Nasty to Nice             |
+      | 7th   | -                     | Celestial Censure, Entomb, Sorcerous Wings   |
+      | 9th   | Calling the Blood     | Celestial Apotheosis, Twilight Travel        |
+
+      
+      ### Celestial Random Energy
+      | Roll (d4) | Energy Type |
+      |---|---|
+      | 1 | Fire |
+      | 2 | Lightning |
+      | 3 | Thunder |
+      | 4 | Holy |
+
+      ### Celestial Familiars
+      Celestial familiars are often animals from divine realms. They resemble animals
+      from the prime material plane, but in a true, perfect sense. Their fur is
+      shinier, and even if they don’t speak, they have a reserved wisdom to them that
+      is unlike any mortal creature. Celestial familiars have two familiar abilities,
+      which can be Celestial Ward, Healing Touch, or Radiant listed below, or the
+      Alert, Flight, Scout, Tough, or Talkative abilities from the wizard list.
+  
+      **Celestial Ward:** Once per battle, when the Sorcerer, or an adjacent ally is
+      attacked, give the attack a penalty equal to the escalation die.
+  
+      **Healing Touch:** Once per day, the familiar can touch an ally. The ally can use
+      a recovery to heal.
+  
+      **Radiant:** Once per battle, when you hit an enemy engaged with you, you can add
+      5 ongoing holy damage per tier to the damage roll.
+    feats: []
+  - name: Access to Divine Magic
+    _type: Class Feature
+    version: Celestial
+    source: DATP
+    description: |-
+      Starting at 3rd level, you can take a cleric spell in place of a sorcerer spell.
+      The cleric spell must be two levels lower than the sorcerer spell.
+  
+      **Special:**  You can take one divine domain from the cleric list as a sorcerer
+      talent. Interpret any reference to cleric spells as applying to both sorcerer
+      and cleric spells. If you take the domain, you also gain access to its domain
+      spells, and you can choose one of your cleric spells without the -2 level
+      penalty.
+    feats:
+    - tier: adventurer
+      description: |2-
+         When you empower a spell that grants healing, double the amount of hit points
+        granted by it. When you empower a spell that grants a bonus to attacks, defenses
+        or saves, double the bonus.
+    - tier: champion
+      description: ' You can cast the cleric’s Heal spell once per battle.'
+    - tier: epic
+      description: |2-
+         When you Gather Power, you gain an additional use of the Heal spell this
+        battle.
+  - name: Celestial Benefit
+    _type: Class Feature
+    version: Celestial
+    source: DATP
+    description: |-
+      When you Gather Power, you gain the divine benefit below. Unlike other
+      bloodlines, this benefit is not random. Instead, it depends on the escalation
+      die.
+  
+      | Escalation Die | Benefit |
+      |---|---|
+      | None | Gain a +1 bonus to PD and MD until the start of your next turn. |
+      | Odd | Deal holy damage equal to your Wisdom modifier (x2 at 5th level; x3 at 8th) + Level to one nearby enemy. |
+      | Even | Heal hit points equal to Wisdom modifier (x2 at 5th level; x3 at 8th) to a nearby staggered ally. If no nearby allies are staggered, gain a +1 bonus to AC until the end of your next turn. |
+    feats: 
+      - tier: adventurer
+        description: When you empower a sorcerer spell with the Celestial keyword, gain the celestial benefit again, using the escalation die of the current turn.
+      - tier: champion
+        description: Target two enemies / allies with the odd / even effect.
+  - name: Celestial Metamagic
+    _type: Class Feature
+    version: Celestial
+    source: DATP
+    description: |-
+      You gain the following metamagic abilities.
+  
+      **Holy Spell (1 point):**  Change the spell’s damage to holy damage.
+  
+      **Rejuvenating Spell (1 point):**  The target also gains temporary hit points
+      equal to your Wisdom modifier (x2 at 5th level; x3 at 8th) plus twice the spell
+      level.
+    feats: []
+  - name: Radiant Halo
+    _type: Class Feature
+    version: Celestial
+    source: DATP
+    description: |-
+      Celestial sorcerers can cast the _radiant halo_ spell as a standard action. The
+      spell produces an intense, almost blinding light source that is centered around
+      the top of your head. It bathes the area within 30 feet around you in a bright
+      light which shines far past that distance. While the light provides perfect
+      visibility as if under daylight conditions, and can even pierce dense fog, it
+      makes attempts at stealth pretty much impossible.
+  
+      At the GM’s discretion, the halo can give creatures that are attuned to darkness
+      (such as dark elves) a -1 penalty to attacks against you.
+  
+      The spell usually lasts at least an hour. You can cast it a number of times per
+      day equal to your Charisma modifier.
+    feats: []
+  - name: Celestial Familiars
+    _type: Talent
+    source: DATP
+    description: |-
+    feats: []
+  - name: Draconic Bloodline
+    _type: Bloodline
+    version: Draconic
+    source: DATP
+    description: |-
+      Dragons have long had the power to change shape and mingle with the numerous but
+      short-lived humanoid beings. Unions between humanoid and dragon can create
+      offspring, and you trace your ancestry back to such a union. Sorcerers of the
+      draconic bloodline often have draconic features, such as patches of scaly skin,
+      lizard eyes, or horns.
+  
+      **Linked Icon:**  Great Gold Wyrm, The Three
+  
+      **Linked Rune:**  Dragonewt
+
+      ### Draconic Bloodline Spells
+      | Level | Core Book | Dark Alleys |
+      |-------|-----------|-------------|
+      | 1st   | Breath of the White, Burning Hands, Resist Energy | Attune Weapon, Breath of the Brass, Dragon Orb, Friends, Sorcerer’s Shield, Thunderwave |
+      | 3rd   | Breath of the Green; Dragon's Leap, Echoing Thunder | Breath of the Bronze                                |
+      | 5th   | Breath of the Black; Summon Lightning Drakes*     | Breath of the Copper, Breath of the Purple          |
+      | 7th   | Breath of the Blue                                | Breath of the Silver, Draconic Gift, Sorcerous Wings |
+      | 9th   | Breath of the Void, Calling the Blood (draconic icons only), Silver Flame | Breath of the Golden, Breath of the Red, Draconic Apotheosis |
+
+      _*In 13th Age Monthly: Sorcerer Summoning_
+      
+      ### Draconic Random Energy
+      _This is the same table as the Core Book sorcerer. Feel free
+      to add acid and / or poison in there if it fits the type of
+      dragon you are connected to._
+
+      | Roll (d4) | Energy Type |
+      |---|---|
+      | 1 | Cold |
+      | 2 | Fire |
+      | 3 | Lightning |
+      | 4 | Thunder |
+
+      ### Draconic Familiars
+      If you have the Sorcerer’s Familiar talent, you can choose
+      a pocket dragon or a pseudodragon as familiar. Both start
+      with two abilities. One is Flight, the other is Breathe Fire
+      for the pocket dragon and Prestidigitation for the pseudodragon.
+
+      **Breathe Fire:** Once per battle, your familiar can make
+      a Charisma + Level attack against a nearby opponent’s
+      PD (using your Charisma modifier and level). On a hit,
+      it deals 1d6 per level fire damage against the target, and
+      half damage on a miss. You can change the damage type
+      to match the dragon’s color.
+
+      **Prestidigitation**: Your familiar can cast the wizard's
+      Prestidigitation cantrip at-will.
+    feats: 
+      - tier: adventurer
+        description: |
+          **Sorcerer's Familiar - Breathe Fire**: Your familiar can breathe fire twice per battle, but not in the same turn. 
+  - name: Access to Wizardry
+    _type: Class Feature
+    version: Draconic
+    source: DATP
+    description: |-
+      Starting at 3rd level, you can take a wizard spell in place of a sorcerer spell.
+      The wizard spell must be two levels lower than the sorcerer spell.
+  
+      **Special:**  If you have the Chromatic Destroyer Heritage, Metallic Protector
+      Heritage, or Rumble Mumble Rumble (see Bestiary 2 p. 174) talents, you can
+      choose one of your wizard spells without the -2 level penalty. You can only gain
+      this benefit once.
+  
+      _Dragons, especially blue dragons, are often depicted as studious and smart
+      masters of magic, which would be the argument for why draconic sorcerers get
+      access to wizard spells. However, if you interpret dragons as embodiments of
+      elemental forces in your campaign, access to Elemental Caster druid spells might
+      make more sense. Or if you want to play up their political role as the true
+      movers and shakers, you may want to give them access to commander tactics
+      instead._
+
+    feats:
+    - tier: adventurer
+      description: ' Use Charisma instead of Intelligence with your chosen wizard spells.'
+  - name: Draconic Benefit
+    _type: Class Feature
+    version: Draconic
+    source: DATP
+    description: |-
+      When you Gather Power, gain a draconic benefit as per the table below. This is
+      the same table as for the Core Book sorcerer.
+  
+      ### Draconic Benefit, Adventurer Tier (levels 1–4)
+
+      | Roll (d6) | Effect                                                           |
+      |-----------|------------------------------------------------------------------|
+      | 1-2       | You gain a +1 bonus to AC until the start of your next turn.     |
+      | 3-4       | Deal damage equal to your level to all nearby staggered enemies. |
+      | 5-6       | Deal damage equal to your level to one nearby enemy.             |
+
+      ### Draconic Benefit, Champion Tier (levels 5–7)
+
+      | Roll (d6) | Effect                                                                                    |
+      |-----------|-------------------------------------------------------------------------------------------|
+      | 1-2       | You gain a +1 bonus to AC and Physical Defense until the start of your next turn.         |
+      | 3-4       | Deal damage equal to your level + your Charisma modifier to all nearby staggered enemies. |
+      | 5-6       | Deal damage equal to your level + your Charisma modifier to one nearby enemy.             |
+
+      ### Draconic Benefit, Epic Tier (levels 8–10)
+
+      | Roll (d6) | Effect                                                                                          |
+      |-----------|-------------------------------------------------------------------------------------------------|
+      | 1-2       | You gain a +1 bonus to all defenses until the start of your next turn.                          |
+      | 3-4       | Deal damage equal to your level + twice your Charisma modifier to all nearby staggered enemies. |
+      | 5-6       | Deal damage equal to your level + twice your Charisma modifier to one nearby enemy.             |
+
+    feats:
+      - tier: adventurer
+        description: When you empower a sorcerer spell with the draconic benefit, or a wizard spell, gain the draconic benefit again.
+      - tier: champion
+        description: When you gather power, you also gain the ability to fly to a nearby location as a move action on the same turn.
+  - name: Draconic Metamagic
+    _type: Class Feature
+    version: Draconic
+    source: DATP
+    description: |-
+      You gain the following metamagic abilities.
+  
+      **Forceful Breath (1 point):**  Reroll all natural 1s on a damage roll with a
+      breath weapon spell, after making the roll.
+  
+      **Inhale Deeper (1 point):**  Gain a +2 bonus to the recharge roll for a breath
+      weapon spell, after making the roll.
+  
+      **Sticky Breath (1 point):**  When dealing ongoing damage with a breath weapon
+      to a target, make the save a hard save (16+).
+    feats: []
+  - name: Minor Elemental Breath
+    _type: Class Feature
+    version: Draconic
+    source: DATP
+    description: |-
+      Sorcerers with the Draconic bloodline can create small elemental effects with
+      their breath at-will. They can light a candle with fire, melt the bolts in a
+      lock with acid, create a shocking sensation with lightning, or cool down a drink
+      with cold. This ability deals damage equal to the sorcerer’s level, which
+      doesn’t quite make it powerful enough for combat use.
+    feats: []
+  - name: Fey Bloodline
+    _type: Bloodline
+    version: Fey
+    source: DATP
+    description: |-
+      The fey realms have many portals into the mortal world, and it is not unheard of
+      for someone to stumble into the fey world and return with strange powers,
+      sometimes decades later. The fey have been known to abduct humanoid children and
+      raise them as their own. Sorcerers with the fey bloodline tend to be capricious
+      and moody. Depending on the type of fey in their ancestry, they can have a wide
+      variety of physical features, such as rainbow-colored hair or goat hooves as
+      feet.
+  
+      **Linked Icon:**  The Elf Queen
+  
+      **Linked Rune:**  Illusion
+
+      ### Fey Bloodline Spells
+      | Level | Core Book | Dark Alleys |
+      |-------|-----------|-------------|
+      | 1st   | -                                     | Alter Self, Attune Weapon, Chameleon Skin, Fey Glamour, Fey Path, Friends, Sorcerer's Shield |
+      | 3rd   | -                                     | Beast Form, Flowery Kiss                     |
+      | 5th   | Elven Shadows, Unearthly Glamour      | Faerie Door, Fey Curse, Merry Go-Round       |
+      | 7th   | Stolen Faces                          | Pixie Dust, Sorcerous Wings                  |
+      | 9th   | -                                     | Prey of the Wild Hunt, Silver Flame, Twilight Travel |
+
+      
+      ### Fey Random Energy
+      | Roll (d4) | Energy Type |
+      |---|---|
+      | 1 | Cold |
+      | 2 | Psychic |
+      | 3 | Force |
+      | 4 | Thunder |
+
+      ### Fey Familiars
+      If you have the Sorcerer’s Familiar talent, choose two abilities from the table
+      as per the Wizard’s Familiar. You also have the two additional options below.
+  
+      **Invisibility:** Your familiar can turn invisible at-will, but it cannot move
+      while invisible.
+  
+      **Teleport:** Your familiar can teleport to a nearby location it can see once per
+      battle (or every 5 minutes).
+
+    feats: []
+  - name: Access to Fey Magic
+    _type: Class Feature
+    version: Fey
+    source: DATP
+    description: |-
+      Starting at 3rd level, you can take a bard spell OR a druid spell of the Circle
+      of Feysong in place of a sorcerer spell. The bard / druid spell must be two
+      levels lower than the sorcerer spell.
+  
+      **Special:**  If you have the Fey Heritage talent, you can choose one of your
+      bard / druid spells without the -2 level penalty.
+    feats: []
+  - name: Fey Benefit
+    _type: Class Feature
+    version: Fey
+    source: DATP
+    description: |-
+      When you Gather Power, roll 1d12 on the table below to determine your fey
+      benefit. The fey are fickle and mischievous. When they are on your side, the
+      benefits are great, but watch out when they aren’t.
+
+      ### Fey Benefit, Adventurer Tier (levels 1–4)
+
+      | Roll (d12) | Effect                                                           |
+      |-----------|------------------------------------------------------------------|
+      | 1 | Mischievous spirits disable one of your magic items until the end of the battle. |
+      | 2 | A complication from a recent 5 in an icon relationship comes into play right now |
+      | 3-5 | Gain a +1 bonus to all defenses until the start of your next turn. |
+      | 6-8 | Add your Charisma modifier to disengage checks this turn. |
+      | 9-10 | The nearby enemy with the lowest PD takes a -4 penalty to MD until the end of your next turn. |
+      | 11-12 | The nearby enemy with the lowest MD is dazed until the end of your next turn. |The nearby enemy with the
+
+      ### Fey Benefit, Champion Tier (levels 5–7)
+
+      | Roll (d12) | Effect                                                           |
+      |-----------|------------------------------------------------------------------|
+      | 1 | Mischievous spirits disable one of your magic items until the end of the battle. |
+      | 2 | A complication from a recent 5 in an icon relationship comes into play right now |
+      | 3-5 | Gain a +2 bonus to all defenses until the start of your next turn. |
+      | 6-8 | This turn, you can teleport to a nearby location you can see as a move action. |
+      | 9-10 | The nearby enemy with the lowest PD takes a -4 penalty to MD until the end of your next turn. |
+      | 11-12 | The nearby enemy with the lowest MD is dazed until the end of your next turn. |The nearby enemy with the
+
+      ### Fey Benefit, Epic Tier (levels 8–10)
+
+      | Roll (d12) | Effect                                                           |
+      |-----------|------------------------------------------------------------------|
+      | 1 | Mischievous spirits disable one of your magic items until the end of the battle. |
+      | 2 | A complication from a recent 5 in an icon relationship comes into play right now |
+      | 3-5 | Gain a +3 bonus to all defenses until the start of your next turn. |
+      | 6-8 | This turn, you can teleport to a nearby location you can see as a quick action, and you leave an illusory double with 1 hp behind. |
+      | 9-10 | One enemy of your choice takes a -4 penalty to MD until the end of your next turn. |
+      | 11-12 | One enemy of your choice is dazed until the end of your next turn. |
+  
+    feats:
+      - tier: adventurer
+        description: When you empower a sorcerer spell with the Fey keyword, you gain a +1 bonus to the attack roll.
+      - tier: champion
+        description: The daze and MD penalty effects are “save ends.
+  - name: Fey Metamagic
+    _type: Class Feature
+    version: Fey
+    source: DATP
+    description: |-
+      You gain the following metamagic abilities.
+  
+      **Glamorous Distraction (2 points):**  Change a daze until the end of your next
+      turn effect to daze (save ends).
+  
+      **Fey Trickery (2 points):**  Treat a natural odd spell attack roll as even, or
+      even as odd, after making the roll.
+    feats:
+    - tier: adventurer
+      description: |2-
+         If the target spell is a sorcerer spell with the fey keyword, or a bard spell,
+        reduce the cost of the above metamagic abilities by 1.
+  - name: Dancing Lights
+    _type: Class Feature
+    version: Fey
+    source: DATP
+    description: |-
+      Fey sorcerers can cast the dancing lights spell as a standard action.
+      Unlike the wizard’s light cantrip, the sorcerer’s dancing lights spell produces a number of varicolored light globes that bloom within 5 to 30 feet of the sorcerer every two to five seconds.
+      The sorcerer has very little control over the exact location or illumination provided by the lights, meaning that they can occasionally be used for dramatic plot purposes.
+    feats: []
+  - name: Infernal Bloodline
+    _type: Bloodline
+    version: Infernal
+    source: DATP
+    description: |-
+      The 13th Age has seen many new hellholes opening across the Empire, some of
+      which are conquered and harnessed by the Crusader. This has led to many children
+      born with infernal powers, taken in and raised by the Crusader’s servants. The
+      infernal bloodline tends to manifest in features that are often associated with
+      tieflings, such as intense red skin, horns, tails, and hooves. But demons come
+      in many shapes and forms, so depending on the fiendish ancestry, there could be
+      much stranger manifestations such as spider webs between the hands, or a hyena
+      head.
+  
+      **Linked Icon:**  The Crusader, The Diabolist
+  
+      **Linked Rune:**  Chaos
+
+      ### Infernal Bloodline Spells
+      | Level | Core Book | Dark Alleys |
+      |-------|-----------|-------------|
+      | 1st   | Burning Hands                   | Attune Weapon, Orb of Wrath, Skullfire, Sorcerer's Shield, Touch of the Ice Devil |
+      | 3rd   | -                               | Burning Whip, Sinner's Pyre                |
+      | 5th   | Three Dooms, Summon Burnout Elemental* | Chain Immolation, Wave of Anguish      |
+      | 7th   | Touch of Evil                   | All-Consuming Inferno, Sorcerous Wings, Touch of Corruption |
+      | 9th   | Calling the Blood               | Infernal Apotheosis, Twilight Travel, Unleash Hell |
+
+      _*In 13th Age Monthly: Sorcerer Summoning_
+      
+      ### Infernal Random Energy
+      | Roll (d4) | Energy Type |
+      |---|---|
+      | 1 | Cold |
+      | 2 | Fire |
+      | 3 | Lightning |
+      | 4 | Psychic |
+
+      ### Infernal Familiars
+      The classic demonic familiar is an imp with the Flight and Talkative abilities,
+      but they can come in many other shapes and forms, such as horned snakes, fire-
+      breathing dogs, or slimy toads. Choose any two abilities from the Wizard,
+      Warlock, or Demonologist Familiar ability lists, except for agile or alert.
+      Demons have precious little patience for those who are clumsy or can’t watch
+      their own backs. 
+    feats: []
+  - name: Access to Demonology
+    _type: Class Feature
+    version: Infernal
+    source: DATP
+    description: |-
+      Choose warlock (see _Dark Pacts & Ancient Secrets_) or demonologist (see _Book
+      of Demons_) spells. Starting at 3rd level, you can take a spell from the chosen
+      class in place of a sorcerer spell, at a -2 level penalty. You are considered an
+      initiate for any demonologist spells you choose.
+  
+      **Special:**  If you have the Blood Sacrifice or Infernal Heritage talent, you
+      can choose one of your demonologist / warlock spells without the -2 level
+      penalty. You can only gain this benefit once.
+    feats: []
+  - name: Infernal Curse
+    _type: Class Feature
+    version: Infernal
+    source: DATP
+    description: |-
+      When you Gather Power, roll 1d6 on the table below to set up an infernal curse
+      that is waiting to be triggered by a hapless enemy. It triggers once, then the
+      curse ends; otherwise it is active until the end of your next turn. Triggering
+      the curse does not require an action by you, and it even happens if you fall
+      unconscious.
+
+      | Roll (d6) | Curse trigger and effect |
+      |---------|-------------------------------------------------------------------------------------------|
+      | 1–2     | If an enemy rolls a natural 1–5 on their attack roll, they take 1d6 times their level psychic damage. |
+      | 3       | If an enemy rolls a natural 1–5 on a disengage check, they are hampered until the end of their next turn. |
+      | 4       | If an enemy engages you, they take 1d6 times their level fire damage.                     |
+      | 5       | If an enemy moves from nearby to far away range, or attempts to flee, they take 1d6 times their level negative energy damage. |
+      | 6       | If an enemy gains hit points or temporary hit points, they take 1d6 times their level cold damage. |
+  
+    feats: 
+      - tier: adventurer
+        description: If you cast an empowered infernal sorcerer spell, extend the duration of the infernal curse until the end of your next turn.
+      - tier: champion
+        description: Expand the d20 roll triggers for the first two effects to 1–7.
+      - tier: epic
+        description: Increase the damage dice to d8.
+  - name: Infernal Metamagic
+    _type: Class Feature
+    version: Infernal
+    source: DATP
+    description: |-
+      You gain the following metamagic abilities.
+  
+      **Infernal Sacrifice (1 point):**  Reroll a damage roll for a spell, after
+      making the roll. Deal damage equal to the spell level to a nearby ally.
+  
+      **Weakening Spell (2 points):**  The first enemy you hit with the spell is also
+      weakened until the end of your next turn. Deal damage equal to the spell level
+      to yourself.
+  
+      **Lasting Pain (2 points):**  Increase the saving throw of ongoing damage you
+      deal with a spell from normal to hard (16+).
+    feats: []
+  - name: Infernal Kindling
+    _type: Class Feature
+    version: Infernal
+    source: DATP
+    description: |-
+      All infernal sorcerers can cast the _infernal kindling_ spell as a standard
+      action. The spell produces a number of small dancing flames within thirty feet
+      you, flickering and circling around you. They create enough light to see most
+      things in the area in the dark, but not enough light to guarantee you’re not
+      missing something that’s well hidden, or steady enough to read by. The flames
+      are real, not illusions, and they can set fire to flammable things on command.
+      They can be used to deal damage, but not effectively so (treat as a _Burning
+      Hands_ spell that deals half damage).
+  
+      The spell usually lasts at least an hour. You can cast it a number of times per
+      day equal to your Charisma modifier.
+    feats: []
+  - name: Storm Bloodline
+    _type: Bloodline
+    version: Storm
+    source: DATP
+    description: |-
+      This is the storm voice class as introduced in _13th Age Glorantha_. For the
+      customized class features of this bloodline and its spell list, refer to the
+      description of the storm voice class. Consider the storm voice spells to be
+      sorcerer spells with the Storm keyword.
+
+      _(not implemented in 13vaults, sorry!)_
+    feats: []
+  - name: Storm Metamagic
+    _type: Class Feature
+    version: Storm
+    source: DATP
+    description: |-
+      You gain the following metamagic abilities.
+  
+      **Eye of the Storm (1 point):**  When a spell or power grants you resistance
+      against lightning or thunder damage, increase the resistance by 2.
+  
+      **Storm Ascendant (1 point):**  Reroll all natural 1s of a lightning or thunder
+      damage roll, after making the roll.
+    feats: []
+  - name: Umbral Bloodline
+    _type: Bloodline
+    version: Umbral
+    source: DATP
+    description: |-
+      Some claim that the Shadow Prince controls a hidden source of magic, woven from
+      the Shadows of our prime existence, and separated from the arcane magics that
+      the dragons and the Archmage lord over.
+  
+      Other rumors say his power was stolen, and that the Lich King’s phylactery is
+      hidden in the Shadow Prince’s vault. Followers of the Lich King don’t deny that,
+      but they claim that it was stored there for safekeeping, or that the Lich King
+      allowed it to be stolen, to keep it out of reach of more dangerous foes.
+  
+      What is known is that some children are born with the gifts of the Shadow
+      Prince, able to embrace the darkness and manipulate the shadows.
+  
+      Umbral sorcerers often appear lifeless, with pale skin, milky white or raven
+      black hair, and raspy, whispering voices. Some have a ghost-like appearance, as
+      if they were not quite there.
+  
+      **Linked Icon:**  The Lich King or the Shadow Prince
+  
+      **Linked Rune:**  Death, Darkness
+
+      ### Umbral Bloodline Spells
+      | Level | Core Book | Dark Alleys |
+      |-------|-----------|-------------|
+      | 1st   | -                          | Attune Weapon, Chameleon Skin, Darkness, Decrepit Eyes, Friends, Shadow Bolt, Skullfire, Sorcerer's Shield |
+      | 3rd   | Summon Undead Toady*       | Choke Hold, False Life                          |
+      | 5th   | Three Dooms                | Leech Magic, Scare, Wave of Anguish             |
+      | 7th   | The Elven Shadows, Stolen Faces | Entomb, Memento Mori, Shadow Form             |
+      | 9th   | Breath of the Void         | Black Blade of Disaster, Twilight Travel, Void Rift |
+
+      _*In 13th Age Monthly: Sorcerer Summoning_
+      
+      ### Umbral Random Energy
+      | Roll (d4) | Energy Type |
+      |---|---|
+      | 1 | Cold |
+      | 2 | Negative energy |
+      | 3 | Poison |
+      | 4 | Psychic |
+
+      ### Umbral Familiars
+
+      Your familiar is a creature associated with the dark arts, such as a cat, raven
+      or a bat. Some are ghostly or skeletal in appearance. Your familiar has two
+      abilities, which you can choose from Consume, Corrupting Touch, Ghost-sight or
+      Insubstantial below, or Counter-bite, Flight, or Poisonous from the wizard list.
+      If you choose a raven, it can also be Talkative.
+  
+      **Consume:** Once per day, when an attack would take you below zero hit points,
+      you can consume your familiar as an interrupt. Immediately heal using a free
+      recovery. Your familiar reforms at the next full heal-up.
+  
+      **Corrupting Touch:** Once per day, your familiar can make a Charisma + Level
+      attack against the PD of an enemy you are engaged with. On a hit, the target is
+      weakened until the end of your next turn.
+  
+      **Ghost-sight:** While your familiar is nearby, you can sense the presence of
+      undead, even at far away range.
+  
+      **Insubstantial:** Your familiar can pass through solid objects, but it cannot
+      interact with physical objects (like stealing items and such). If it takes
+      damage, it just dissolves and reappears on your shoulder at the start of your
+      next turn. It would take an exorcism or similar to destroy it.
+    feats: []
+  - name: Access to Dark Powers
+    _type: Class Feature
+    version: Umbral
+    source: DATP
+    description: |-
+      Choose either the necromancer or the rogue class.
+  
+      **Necromancer:** Starting from 3rd level, you can switch a sorcerer spell for a
+      necromancer spell 2 levels lower.
+  
+      **Rogue:** Starting from 3rd level, you can switch a sorcerer spell for a rogue
+      power with the Shadow keyword 2 levels lower. If you choose a momentum power,
+      track momentum like a rogue.
+  
+      **Special:**  If you have the Animate Shadow or Undead Remnant Heritage talent,
+      you can switch in one power / spell without the -2 level penalty. You can only
+      get this benefit once.
+    feats:
+    - tier: adventurer
+      description: ' You can replace Intelligence with Charisma for your chosen necromancer
+        spells.'
+  - name: Umbral Benefit
+    _type: Class Feature
+    version: Umbral
+    source: DATP
+    description: |-
+      When you Gather Power, roll 1d6 on the table below.
+  
+      ### Umbral Benefit, Adventurer Tier (levels 1–4)
+
+      | Roll (d6) | Effect                                                           |
+      |-----------|------------------------------------------------------------------|
+      | 1-2       | Until the end of your next turn, when you take damage, you can deal damage equal to your level to a nearby willing ally, and reduce the damage you take by twice your level. |
+      | 3-4       | Deal twice your level in damage to the nearby enemy with the lowest hp total. If that kills the target, you regain hit points equal to the damage dealt. |
+      | 5-6       | Become insubstantial until the start of your next turn. You gain resist physical damage 12+ and add your Charisma modifier to disengage checks. |
+
+      ### Umbral Benefit, Champion Tier (levels 5–7)
+
+      | Roll (d6) | Effect                                                           |
+      |-----------|------------------------------------------------------------------|
+      | 1-2       | Until the end of your next turn, when you take damage, you can deal damage equal to your level to a nearby willing ally, and reduce the damage you take by three times your level. |
+      | 3-4       | Deal three times your level in damage to the nearby enemy with the lowest hp total. If that kills the target, you regain hit points equal to the damage dealt. |
+      | 5-6       | Become insubstantial until the start of your next turn. You gain resist physical damage 15+ and add your Charisma modifier to disengage checks. You can fly and hover. |
+
+      ### Umbral Benefit, Epic Tier (levels 8–10)
+
+      | Roll (d6) | Effect                                                           |
+      |-----------|------------------------------------------------------------------|
+      | 1-2       | Until the end of your next turn, when you take damage, you can deal damage equal to your level to a nearby willing ally, and reduce the damage you take by five times your level. |
+      | 3-4       | Deal five times your level in damage to the nearby enemy with the lowest hp total. If that kills the target, you regain hit points equal to the damage dealt. |
+      | 5-6       | Become insubstantial until the start of your next turn. You gain resist physical damage 18+ and add your Charisma modifier to disengage checks. You can fly, hover, and pass through solid objects until the start of your next turn. |
+
+    feats: 
+      - tier: adventurer
+        description: If you empower a sorcerer spell with the Umbral keyword, gain the Umbral benefit again after casting the spell.
+      - tier: champion 
+        description: Also gain the Umbral benefit as a free action the first time you are staggered in a battle.
+  - name: Umbral Metamagic
+    _type: Class Feature
+    version: Umbral
+    source: DATP
+    description: |-
+      You gain the following metamagic abilities.
+  
+      **Negative Spell (1 point):**  Change the spell’s damage type to negative energy
+      damage.
+  
+      **Leeching Spell (1 point):**  If the spell hits at least one enemy, heal hit
+      points equal to your Constitution modifier (x2 at 5th level; x3 at 8th) + the
+      spell level.
+  
+      **Shadow Spell (1 point):**  Change the spell’s damage to psychic damage. The
+      spell cannot be countered by abilities such as the blue dragon’s counter-spell.
+  
+      **Shrouding Spell (2 points):**  On a hit, give the target disadvantage on its
+      next attack roll against you.
+    feats: []
+  - name: Crypt Candles
+    _type: Class Feature
+    version: Umbral
+    source: DATP
+    description: |-
+      All Umbral sorcerers can cast the _crypt candles_ spell as a standard action.
+      The spell produces a circle of black and red candles that provide an eerie
+      illumination within thirty feet of youfeet you. They create enough light to move
+      around, but it’s easy to miss details in the dim, flickering lights. If you
+      move, the zone moves with you.
+  
+      The candles and their illumination can only be seen by you, your allies and any
+      creatures with a connection to the Shadow Prince or the Lich King. They make
+      invisible creatures visible.
+  
+      The spell usually lasts at least an hour. You can cast it a number of times per
+      day equal to your Charisma modifier.
+    feats: []
+  - name: Wild Magic Bloodline
+    _type: Bloodline
+    version: Wild
+    source: DATP
+    description: |-
+      Arcane scholars designate wild sorcery as a bloodline, but purely out of
+      convenience. There does not seem to be a discernible pattern how, when, or why
+      this magic ability manifests in humanoids. If anything, having an ancestor with
+      any form of arcane ability seems to decrease your chances of being born with
+      this gift. As with all bloodlines, wild magic also manifests in your physical
+      features, but in a much less stable or predictable way. Don’t be surprised if
+      you wake up with sky-blue fingernails and butterflies in your hair one morning;
+      it’s all part of the gift.
+  
+      **Linked Icon:**  n/a, among the Core Book icons anyway — feel free to create
+      one that fits the campaign
+  
+      **Linked Rune:**  Disorder
+
+      ### Wild Bloodline Spells
+      | Level | Core Book | Dark Alleys |
+      |-------|-----------|-------------|
+      | 1st   | Chaos Bolt   | Attune Weapon, Fireworks, Force Boomerang, Sorcerer's Shield, Wild Surge |
+      | 3rd   | Chaos Pulse  | Energy Charge, Iconic Power, Wild Spark          |
+      | 5th   | -            | Ooze Form, Rolling Thunderball                   |
+      | 7th   | -            | Wild Polymorph, Untamed Sorcery                  |
+      | 9th   | Calling the Blood | Spell Barrage, Twilight Travel               |
+
+      _*In 13th Age Monthly: Sorcerer Summoning_
+      
+      ### Wild Random Energy
+
+      The wild bloodline’s “random energy” is a little more random than that of other
+      sorcerers. You roll a d6 on the table, but this will only tell you who gets to
+      describe what you just conjured. And yes, that means if that person considers
+      strawberry jam or butterflies a valid element for the _13th Age Roleplaying
+      Game_, that’s what your spell is blasting across the battlefield. It’s up to the
+      GM to decide whether a particular creature is vulnerable or resistant to that
+      “element” or not.
+
+      | Roll (d6) | Who decides? |
+      |---|---|
+      | 1 | The player on your left |
+      | 2 | You |
+      | 3-4 | The GM |
+      | 5 | The player who is newest to RPGs |
+      | 6 | The player on your right |
+
+      ### Wild Familiars
+      Like _Core Book_ sorcerer familiars, wild familiars have one fixed ability, and
+      two that are determined at random every day. In addition to the choices on the
+      Wizard Familiar list, you have Wild Entropy as an option.
+  
+      **Wild Entropy:** Once per day, when you are hit by an attack while your familiar
+      is next to you, your familiar’s magical influence can force the attacker to
+      reroll the attack.
+
+    feats: []
+  - name: Access to Chaos Magic
+    _type: Class Feature
+    version: Wild
+    source: DATP
+    description: |-
+      Starting at 3rd level, you can take a chaos mage spell in place of a sorcerer
+      spell, at two levels lower than the spell it replaces. You cast it like a
+      sorcerer of that frequency — at-will, once-per-battle, or daily.
+  
+      **Special:**  If you have the Wild Heritage talent, you can choose one of your
+      chaos mage spells without the -2 level penalty.
+  
+      _The wild bloodline gives you access to chaos magic without the unpredictability
+      of the chaos mage class. Consider it an alternative for players who like the
+      flavor of chaos magic but prefer a little more control over what they can do in
+      the game._
+  
+    feats: []
+  - name: Wild Benefit
+    _type: Class Feature
+    version: Wild
+    source: DATP
+    description: |-
+      When you Gather Power, roll 1d6 on the table below. As is to be expected with
+      wild magic, the results are much more varied than with other bloodlines. You can
+      even end up empty-handed, or with a much more powerful benefit.
+  
+      ### Wild Benefit, Adventurer Tier (levels 1–4)
+
+      | Roll (d6) | Effect                                                           |
+      |-----------|------------------------------------------------------------------|
+      | 1 |  Roll 1d6: (1-2) a sad trombone sound, (3-4) erratic fart noises, (5-6) weirdly canned-sounding laughter. |
+      | 2 | Roll 1d6 on the chaos mage’s Attacking Warp talent table. |
+      | 3 | Roll 1d6 on the chaos mage’s Defensive Warp talent table. |
+      | 4 | Roll 1d6 on the chaos mage’s Iconic Warp talent table. |
+      | 5-6 | Roll on the chaos mage’s High Weirdness table (13TW page 18). |
+
+      ### Wild Benefit, Champion Tier (levels 5–7)
+
+      | Roll (d6) | Effect                                                           |
+      |-----------|------------------------------------------------------------------|
+      | 1 |  Roll 1d6: (1-2) a sad trombone sound, (3-4) erratic fart noises, (5-6) weirdly canned-sounding laughter. |
+      | 2 | Roll 1d6 on the chaos mage’s Attacking Warp talent table, and deal d6 per level damage to a random staggered enemy. |
+      | 3 | Roll 1d6 on the chaos mage’s Defensive Warp talent table, and a random nearby staggered ally can heal using a recovery. |
+      | 4 | Roll 1d6 on the chaos mage’s Iconic Warp talent table and reroll one icon relationship die. |
+      | 5-6 | Roll two d10s and choose either die as 10s and 1s for a result on the chaos mage’s High Weirdness table (13TW page 18). |
+
+      ### Wild Benefit, Epic Tier (levels 8–10)
+
+      | Roll (d6) | Effect                                                           |
+      |-----------|------------------------------------------------------------------|
+      | 1 |  Roll 1d6: (1-2) a sad trombone sound, (3-4) erratic fart noises, (5-6) weirdly canned-sounding laughter. |
+      | 2 | Roll 1d6 on the chaos mage’s Attacking Warp talent table, and deal d6 per level damage to 1d3 random enemies. |
+      | 3 | Roll 1d6 on the chaos mage’s Defensive Warp talent table, and a random nearby staggered ally can heal using a free recovery. |
+      | 4 | Roll 1d6 on the chaos mage’s Iconic Warp talent table and gain 5 on an icon relationship die with a random icon. |
+      | 5-6 | Roll on the chaos mage’s High Weirdness table (13TW page 18). If you don’t like the result for yourself, you can bestow it on a random nearby enemy. |
+
+    feats:
+      - tier: adventurer
+        description: When you empower a sorcerer spell with the Wild Magic keyword, you gain a +1 bonus to the attack roll.
+      - tier: champion
+        description: When you gain an effect from a chaos mage warp talent that uses Dexterity, Intelligence, or Wisdom, you can use your Charisma modifier instead.
+
+  - name: Wild Metamagic
+    _type: Class Feature
+    version: Wild
+    source: DATP
+    description: |-
+      You gain the following metamagic abilities.
+  
+      **Controlled Chaos (1 point):**  Choose one target of the spell that would
+      otherwise be determined randomly.
+  
+      **Wild Targeting (2 points):**  For the first attack roll with the spell that
+      misses, you can reroll the attack against a different enemy within range.
+    feats: []
+  - name: Dancing Lights
+    _type: Class Feature
+    version: Wild
+    source: DATP
+    description: |-
+      Wild sorcerers can cast the dancing lights spell as a standard action.
+      Unlike the wizard’s light cantrip, the sorcerer’s dancing lights spell produces a number of varicolored light globes that bloom within 5 to 30 feet of the sorcerer every two to five seconds.
+      The sorcerer has very little control over the exact location or illumination provided by the lights, meaning that they can occasionally be used for dramatic plot purposes.
+    feats: []
+  - name: Animated Shadow
+    _type: Talent
+    source: DATP
+    description: |-
+      _Your shadow is permanently animated, ready to strike at your enemies. Let’s
+      hope it understands that it will only exist as long as you are alive._
+  
+      Your shadow can fetch items and help with chores, similar to a Mage Hand
+      cantrip.
+  
+      Once per day, as a quick action, you can separate your shadow and have it aid
+      you until the end of the battle as an independent combatant.
+  
+      Your shadow has the stats, attacks and defenses as below. It acts on your
+      initiative after you, taking a standard action, a move action, and (if
+      applicable) a quick action. It can’t heal. When it drops to 0 hp, it’s destroyed
+      until the next full heal-up. The shadow counts as your ally. Summoning rules
+      don’t apply to it. It benefits from the default bonus of your items for attacks
+      and defenses. It benefits from the escalation die.
+    feats: []
+  - name: Animated Shadow
+    _type: Talent
+    source: DATP
+    description: |-
+      _1st level troop_, undead
+  
+      **Shadow Choke +4 vs. PD ** — 1d10 cold damage
+  
+      _Natural even hit:_ The target has disadvantage on disengage saves until the end
+      of your next turn.
+  
+      _Resist physical damage_ 16+
+  
+      _Shadow Blur_ (standard action): The shadow wraps itself around you. Until the
+      start of your next turn, all attacks against you with a natural odd attack roll
+      target the shadow instead.
+  
+      **Animated Shadow Level Advancement**
+    feats: []
+  - name: None
+    _type: Talent
+    source: DATP
+    description: |-
+      _Although magic is in the blood of every sorcerer, you have a greater
+      understanding of magic than most sorcerers and even some wizards._
+  
+      **Special:**  You must have access to wizard spells through the Access to
+      Wizardry class feature.
+  
+      Like a wizard, you can choose to give up one spell slot to memorize a _utility
+      spell_ at the same level. You can then use the spell slot to cast one spell from
+      the wizard’s utility spell list, without choosing it in advance.
+  
+      You also gain a +2 bonus to a background that involves or suggests magical
+      knowledge or talent, up to your normal maximum background point limit.
+  
+      <<<Begin Sidebar>>>
+  
+      Sorcerers with Access to Wizardry, but without Arcane Heritage, can still choose
+      wizard utility spells, but they can’t reserve a spell slot to spontaneously cast
+      a utility spell of their choice.
+  
+      <<<End Sidebar>>>
+    feats:
+    - tier: adventurer
+      description: ' Gain three wizard cantrips as at-will bonus spells.'
+    - tier: champion
+      description: ' Gain a bonus sorcery point.'
+    - tier: epic
+      description: ' You gain Overworld Advantage like a wizard.'
+  - name: Arcane Overload (Metamagic)
+    _type: Talent
+    source: DATP
+    description: |-
+      _Your connection to the magical energies of the world is unmatched. As the
+      arcane energies surge in the heat of battle, you find yourself dripping with
+      raw, magical power. You’ve learned how to harness this residual energy to
+      further empower your spells with extra oomph._
+  
+      Gain a bonus sorcery point, and the following metamagic abilities. (See the
+      Metamagic and Sorcery Points class feature for detail).
+  
+      **Overloaded Spell (1 point):**  Increase all damage dice by one step (d4 -> d6
+      -> d8 -> d10 -> d12 -> 2d6 -> 2d8).
+  
+      **Minor Chain Spell (2 points):**  When your first attack roll with the spell is
+      a natural even roll, make a second attack against a different target. Unlike a
+      real chain spell, this can only trigger once. You can make non-attack spells
+      into chain spells, just roll a d20 and see whether it’s even. You cannot use
+      this enhancement with spells that are already chain spells.
+  
+      **Overwhelming Spell (4 points):**  You have advantage on the first attack roll
+      with the spell.
+    feats:
+    - tier: adventurer
+      description: |2-
+         You can now overload spells for 3 points, and increase the damage dice by 2
+        steps.
+    - tier: champion
+      description: |2-
+         When using Overwhelming Spell on a spell with multiple attack rolls, you can
+        spend one extra sorcery point on each following attack to gain advantage on
+        those attack rolls too. 
+  - name: Blood Sacrifice
+    _type: Talent
+    source: DATP
+    description: |-
+      _When you have exhausted your magic reserves, you can push yourself further by
+      sacrificing your life essence._
+  
+      **Special:**  This talent requires the Infernal Bloodline.
+  
+      Once per battle, when you Gather Power, you can spend a recovery without healing
+      as a free action to immediately regain a spell that you have expended this day
+      or this battle.
+    feats:
+    - tier: adventurer
+      description: |2-
+         Add your Constitution modifier to damage with the regained spell (x2 at 5th
+        level; x3 at 8th).
+  - name: Chameleon
+    _type: Talent
+    source: DATP
+    description: |-
+      _Your body is infused with your magic, and you shape and bend it to your
+      liking._
+  
+      When you cast a sorcerer daily spell on yourself, the spell becomes recharge 16+
+      after battle. When you cast a spell with a recharge roll on yourself, reduce the
+      target number for the roll by 4.
+    feats:
+    - tier: adventurer
+      description: |2-
+         When you target yourself with a spell, gain a temporary 5-point background that
+        represents your skill at using your changed form.
+    - tier: champion
+      description: |2-
+         Gain a bonus spell at 4 levels below your class level. You can choose the spell
+        from any class, but you can only choose spells that target yourself.
+  - name: None
+    _type: Talent
+    source: DATP
+    description: |-
+      Your innate talent has transformed your body. You have a Native Element and
+      Natural Melee Weapons as per the abomination class feature. Your claws have a d6
+      damage die.
+  
+      In addition, you gain one abomination maneuver. Starting at 3rd level, you can
+      switch sorcerer spells for abomination maneuvers with a -2 level penalty.
+    feats:
+    - tier: adventurer
+      description: ' Also gain the abomination spit attack.'
+    - tier: champion
+      description: |2-
+         Gain a +1 bonus to your critical threat range with spells that deal damage of
+        your native element.
+    - tier: epic
+      description:  Increase your claw damage dice to d8s.
+  - name: Exclusive Blood
+    _type: Talent
+    source: DATP
+    description: |-
+      _You’ve had many ancestors with the powers of your sorcerous bloodline. You may
+      have even been bred for it. Or, you are a close descendant of an icon that is
+      the source of sorcerous powers._
+  
+      You gain a bonus _bloodline spell_ slot, which you can use to spontaneously cast
+      spells from your bloodline. You don’t choose the spell to cast in that slot
+      after a full heal-up. Instead, you can use it to cast any spell from your
+      bloodline, at the highest level you can cast. If the spell is a daily spell, the
+      slot is expended until the next full heal-up (although in case of a breath
+      spell, you still recharge it during the battle normally). If the spell has a
+      recharge roll after battle, and you succeed on the roll, you regain the spell
+      slot instead of the individual spell. If the spell is once per battle, you also
+      regain the slot after the battle. In case of an at-will spell, you can cast it
+      at-will that battle, and then regain the slot after the battle.
+  
+      This increased specialization comes at a cost, however, by limiting your overall
+      spell choice. Choose two bloodlines in addition to your own bloodline. You can
+      only cast sorcerer spells of these three bloodlines, as well as any spells
+      gained through your Spell Access class feature. If a spell belongs to multiple
+      bloodlines, you can cast it if you have access to one of them.
+    feats:
+    - tier: adventurer
+      description: |2-
+         You can When casting a rituals based on a spells of your bloodline, withyou
+        have advantage on the skill check.
+    - tier: champion
+      description: |2-
+         You can cast all spells offrom your bloodline as if you had their adventurer
+        feat.
+    - tier: epic
+      description: |-
+         You can cast all spells offrom your bloodline as if you had their champion
+        feat.
+  - name: Metamagic Expertise
+    _type: Talent
+    source: DATP
+    description: |-
+      _You have received the best arcane training available in the Empire. You can
+      perform fine manipulation on your spells as you cast them, shaping them as
+      needed in the given situation._
+  
+      Gain a bonus sorcery point, and the following metamagic abilities. (See the
+      Metamagic and Sorcery Points class feature for details).
+  
+      **Elemental Admixture (1 point):**  You can switch a spell that does acid, fire,
+      cold, or lightning damage to another damage type from that list.
+  
+      **Far Spell (1 point per target):**  Target a far away creature instead of a
+      nearby creature.
+  
+      **Heighten Spell (3 points): ** Cast the spell as if it was 2 levels higher. You
+      cannot heighten a spell above your class level +1.
+  
+      **Lasting Spell (1 point):**  The spell lasts an additional turn. If the spell
+      is a “save ends“ spell, it ends at the end of the target‘s next turn after it
+      succeeded on the saving throw. [champion: 2 points; 2 turns]
+  
+      **Master Spell (1 point per feat):**  Cast the spell with all feat effects up to
+      your tier.
+  
+      **Piercing Spell (1 point):**  If the spell is limited by the hit points of the
+      creature it can affect, increase that limit by 5 times your level. [champion: 2
+      points; 10x your level]
+  
+      **Widen Spell (2 points):**  Increase the spell’s number of targets by 1. This
+      can only be used with spells that target more than one creature. [champion: 3
+      points; Use with spells that target only one creature]
+    feats:
+    - tier: adventurer
+      description: ' You can augment a spell with two different metamagic abilities.'
+    - tier: champion
+      description: ' You can use the champion versions in square brackets above.'
+  - name: Street-fighting Magic (Metamagic)
+    _type: Talent
+    source: DATP
+    description: |-
+      _You’ve trained with your spells in the back alleys of the big city, where a
+      quick blast serves the same purpose as a kick in the nuts — establish authority
+      or make a hasty escape._
+  
+      Gain a bonus sorcery point, and the following metamagic abilities (see the
+      Metamagic and Sorcery Points class feature for details).
+  
+      **Backstabbing Spell (1 point):**  Gain a +2 bonus to your critical threat range
+      with the spell.
+  
+      **Disorienting Spell (1 points):**  The first target you hit with the spell is
+      also dazed until the end of your next turn.
+  
+      **Escape Spell (1 point per enemy):**  Pop free from all enemies before casting
+      the spell.
+  
+      **Feint Spell (3 points):**  Change the defense you attack to MD.
+  
+      **Silent Spell (1 point):**  You cast the spell stealthily, so your spellcasting
+      is not noticed by others. Of course, flashy effects like _Lightning Fork_ are
+      widely visible, but you can conceal that the magic originated from you.
+    feats:
+    - tier: adventurer
+      description: |2-
+         You can spend two points on backstabbing spell for a +4 bonus to the critical
+        threat range, and you can daze multiple enemies with disorienting spell, at a
+        cost of 1 point per enemy.
+    - tier: champion
+      description: ' Reduce the point cost of feint spell to 2 points.'
+  - name: Sword & Sorcery
+    _type: Talent
+    source: DATP
+    description: |
+      _You’ve learned that your innate magic alone is not enough for survival, and
+      you’ve trained yourself in the arts of swordplay._
+  
+      You can wield martial one-handed melee weapons without penalty, and you can
+      choose two additional benefits from the list below.
+  
+      - You can use a true magic item weapon as an implement for your sorcerer spells.
+      - You can use Charisma for attack and damage with one-handed melee weapons.
+      - You can wield two-handed martial melee weapons without penalty.
+      - If you are multiclassed, the sorcerer side is considered a “skillful warrior”
+      and does not reduce your weapon damage die. If you choose this benefit, you have
+      one less sorcerer spell of the highest level you can cast.
+      - You can replace a sorcerer spell with a Swordmage spell two levels lower.
+      - Increase your recovery dice to d8.
+      - Gain the following metamagic ability:**Channel Spell (2 points):**  You
+      deliver the spell through a melee attack. You must be engaged to all targets to
+      do so. You don’t provoke opportunity attacks. The spell targets AC. On a hit,
+      add your WEAPON damage dice to the damage.
+    feats:
+    - tier: adventurer
+      description: ' Gain a third benefit from the list.'
+    - tier: champion
+      description: ' Gain a fourth benefit.'
+    - tier: epic
+      description: ' Gain a fifth benefit.'
+  - name: Wild Magic Heritage
+    _type: Talent
+    source: DATP
+    description: |-
+      _Your innate magical talent is strong, but untamed. It manifests itself in
+      devastating spells, just not always when you want it._
+  
+      **Special:**  This talent requires the Wild bloodline.
+  
+      The damage dice of your sorcerer spells are exploding dice (reroll any die that
+      comes up as the maximum number and add the reroll).
+    feats:
+    - tier: adventurer
+      description: |2-
+         When you miss with a spell that deals damage equal to your level (or less) on a
+        miss, deal 1d2 extra damage. (2nd level: 1d4; 4th level: 1d6; 6th level: 1d8;
+        8th level: 1d10; 10th level: 1d12)
+    - tier: champion
+      description: ' Whenever you roll a natural 1 with a spell attack roll, gain a
+        sorcery point.'
+  - name: Sorcerer Spells
+    _type: Talent
+    source: DATP
+    description: ''
+    feats: []
+  - name: 1st Level Spells
+    _type: Spell 1
+    source: DATP
+    description: ''
+    feats: []
+    level: 1
+    category: Spells
+  - name: Alter Self
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Fey
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  You take on the appearance of another humanoid creature for the
+      next 1d6 x 10 minutes. You can change your hair and skin color, facial features,
+      and body shape. You can even make yourself a head shorter or taller.
+      Impersonating a specific individual requires a skill check, with an increasing
+      difficulty the more familiar the target is with the person you are trying to
+      impersonate.
+  
+      3rd level spell: for 1d6 hours
+  
+      5th level spell: until the next full heal-up
+    feats:
+    - tier: adventurer
+      description: ' The spell also changes the tone of your voice.'
+    - tier: champion
+      description: ' The spell also changes the appearance of clothing and equipment.'
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Angelic Dictum
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Celestial
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. MD
+  
+      **Hit:**  3d8 + Charisma holy damage. If the target makes an attack, it takes 5
+      + your Wisdom modifier holy damage (save ends).
+  
+      **Miss:**  Damage equal to your level
+  
+      3rd level spell: 5d8 damage; 10 + Wisdom mod
+  
+      5th level spell: 7d8 damage; 15 + 2x Wisdom mod
+  
+      7th level spell: 10d8 damage; 20 + 2x Wisdom mod
+  
+      9th level spell: 15d8 damage; 30 + 3x Wisdom mod
+    feats:
+    - tier: adventurer
+      description: |2-
+         If you don’t attack on your turn, the target’s next save against this spell is
+        a hard save.
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Archon’s Trumpet
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Ranged spell; At-will; Celestial
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  1d8 + Charisma thunder damage
+  
+      _Natural even hit:_ Grant a bonus equal to your Wisdom modifier to the next
+      attack roll against the target.
+  
+      **Miss:**  Damage equal to your level
+  
+      3rd level spell: 3d8 damage
+  
+      5th level spell: 5d8 damage
+  
+      7th level spell: 7d8 damage
+  
+      9th level spell: 10d8 damage
+    feats:
+    - tier: adventurer
+      description: |2-
+         On a natural even roll, hit or miss, deal extra damage equal to your Wisdom
+        modifier (2x at 5th level; x3 at 8th).
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Attune Weapon
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action; Any bloodline
+  
+      ---
+  
+  
+      **Target:**  One melee weapon
+  
+      **Effect:**  Until your next full heal-up, you attune the weapon to follow your
+      hand movements, almost like a dancing partner. It gains an attack bonus like an
+      adventurer-tier true magic weapon (+1 to attack and damage). 
+  
+      When you cast the spell, roll on your random energy table to determine the type
+      of damage the weapon does. The weapon also gains an enchantment effect based on
+      your bloodline.
+  
+      _Arcane (or not listed):_ The weapon can fly to make a ranged attack and return
+      to your hand.
+  
+      _Celestial:_ The weapon deals holy damage and ignores damage resistance of
+      undead enemies.
+  
+      _Draconic:_ Each time you cast a daily breath weapon spell this battle, the
+      weapon gains extra damage on a hit equal to the spell level.
+  
+      _Fey:_ When you land a natural even hit with this weapon, you gain a +2 bonus to
+      your next spell attack against the target.
+  
+      _Infernal:_ Your first hit with the weapon in a battle deals an additional 1d6
+      fire damage per spell level. If you roll a natural 1 with a melee attack, you
+      take 1d4 fire damage per spell level.
+  
+      _Umbral:_ Your first hit with the weapon in a battle deals an additional 1d4
+      poison damage per spell level.
+  
+      _Wild Magic:_ On your first miss in a battle, deal 1d4 force damage per spell
+      level to a random nearby enemy.
+  
+      5th level spell: Enchant the weapon as a champion-tier item (+2).
+  
+      9th level spell: Enchant the weapon as an epic-tier item (+3).
+    feats:
+    - tier: adventurer
+      description: |2-
+         If the attuned weapon is already a true magic item of the highest tier you can
+        enchant, increase the bonus by +1.
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Breath of the Brass
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Breath weapon; Draconic
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  3d8 + Charisma fire damage. Increase to 4d8 against a dazed, weakened,
+      or stunned target.
+  
+      _Natural even hit:_ You can pop free from the target.
+  
+      **Miss:**  Half damage
+  
+      3rd level spell: 5d8 / 7d8 damage
+  
+      5th level spell: 5d10 / 7d10 damage
+  
+      7th level spell: 8d12 / 10d12 damage
+  
+      9th level spell: 2d6 x 10 / 2d10 x 10 damage
+  
+      _Breath weapon:_ For the rest of the battle, roll a d20 at the start of each of
+      your turns; on a 16+, you can use _Breath of the Brass_ this turn if you wish.
+  
+      **Brass Babble**
+  
+      Close-quarters spell; Quick action; Draconic
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. MD
+  
+      **Hit:**  The target is dazed until the end of your next turn.
+    feats:
+    - tier: adventurer
+      description: |2-
+         If you fail your roll to recharge _Breath of the Brass_ at the start of your
+        turn, you can use _Brass Babble_ (below) once before the end of your next turn.
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Celestial Resistance
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Ranged spell; Recharge 16+ after battle; Celestial
+  
+      **Target:**  One nearby ally per point of Wisdom modifier (including you)
+  
+      **Effect:**  Until the end of the battle, the target gains _resist negative
+      energy and holy_ 12+.
+  
+      3rd level spell: The resistance is now 14+.
+  
+      5th level spell: The resistance is now 16+.
+  
+      9th level spell: The recharge roll is now 11+.
+    feats: []
+    level: 1
+    category: Spells
+  - name: Chameleon Skin
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Fey / Umbral
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  Until the end of the scene, your outer appearance blends into your
+      surroundings. It‘s not full invisibility, as your physical presence is still
+      there, but if you hold still, you adapt to the colors and patterns of everything
+      around you. You gain a +5 bonus to any skill check to avoid being noticed. If
+      you hold completely still, the bonus increases to +10.
+    feats:
+    - tier: adventurer
+      description: |2-
+         The effect lasts until you cast another spell on yourself, or until your next
+        full heal-up.
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Darkness
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Umbral
+  
+      ---
+  
+  
+      **Effect:**  You dim all illumination in a 30-foot-radius for an hour, making
+      all skill checks to hide within the area one step easier (-5).
+  
+      3rd level spell: You can center the darkness on yourself and make it move with
+      you.
+    feats: []
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Decrepit Eyes
+    _type: Spell 1
+    source: DATP
+    description: |-
+      _You dim your target’s vision._
+  
+      Ranged spell; Once per battle; Umbral
+  
+      ---
+  
+  
+      **Target** **:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  The target has disadvantage on attack rolls against enemies it is not
+      engaged with. Skill checks to sneak or hide have advantage against the target
+      (save ends both).
+  
+      **Miss:**  —
+    feats:
+    - tier: adventurer
+      description: ' Hit or miss, deal negative energy damage equal to your level.'
+    level: 1
+    category: Spells
+    usage: per-battle
+  - name: Dragon Orb
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Ranged spell; At-will; Draconic
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  1d8 + Charisma force damage. If you have cast a _breath weapon_ spell
+      this battle, change the damage type to the same as the breath weapon spell, and
+      increase the damage dice to d12s.
+  
+      **Miss:**  Damage equal to your level
+  
+      3rd level spell: 3d8 damage
+  
+      5th level spell: 5d8 damage
+  
+      7th level spell: 7d8 damage
+  
+      9th level spell: 10d8 damage
+    feats:
+    - tier: adventurer
+      description: |2-
+         If you have cast a _breath weapon_ spell this battle, deal half damage on a
+        miss.
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Elemental Sorcery
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Ranged spell; At-will; Arcane
+  
+      ---
+  
+  
+      **Effect:**  Create a sizable elemental effect, along the lines of the examples
+      below.
+  
+      _Light as Air:_ Make an object as heavy as a human almost weightless, so that
+      you can lift it with little effort.
+  
+      _Gust of Wind (Air):_ Create a strong wind in a room-sized area that flings open
+      doors and windows and knocks over heavy objects.
+  
+      _Full Barrel (Water):_ Create enough water to fill a barrel.
+  
+      _Slippery Puddle (Water):_ Make a few square feet of floor slippery, causing
+      people in the area to trip and fall.
+  
+      _Bonfire:_ Create a larger fire that can warm a small campsite.
+  
+      _Bright as Day (Fire):_ Light up a large area, such as the inside of a
+      cathedral.
+  
+      _Midas Touch (Earth):_ Cover a fist-sized object in a thick layer of gold.
+  
+      _Grasp of the Earth:_ Make an object so heavy that it can only be lifted with
+      extreme effort.
+  
+      You can concentrate on the spell to create an ongoing effect, but you cannot
+      cast other spells while you do so.
+  
+      You can use this spell in combat, but it creates more of a distraction than real
+      harm. Make an attack roll against the target’s PD, and on a hit it has
+      disadvantage on its next attack roll.
+  
+      3rd level spell: You can affect 1d6 objects in one casting.
+  
+      5th level spell: You can create an effect that is ten times larger than the
+      first-level effect.
+  
+      7th level spell: You can combine two effects in one casting, or create one
+      effect that allows you to cast other spells while you concentrate on it.
+    feats: []
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Fey Glamour
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Ranged spell; At-will; Fey
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. MD
+  
+      **Natural Even Hit:**  1d10 + Charisma psychic damage
+  
+      **Natural Odd Hit:**  The target is dazed until the end of your next turn.
+  
+      **Natural Even Miss:**  Teleport to a nearby location you can see.
+  
+      **Natural Odd Miss:**  A random nearby ally gains a +1 bonus to their next
+      attack roll.
+  
+      3rd level spell: (even hit) 3d10 damage
+  
+      5th level spell: (even hit) 5d10 damage
+  
+      7th level spell: (even hit) 7d10 damage
+  
+      9th level spell: (even hit) 10d10 damage
+    feats:
+    - tier: adventurer
+      description: ' If the target is already dazed, treat an odd hit as an even hit
+        instead.'
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Fey Path
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Close-quarter spell; Daily; Fey
+  
+      ---
+  
+  
+      **Effect:**  The spell creates a glimmering path on the ground that only you can
+      see. The path leads toward the nearest fey gate, or toward a location you
+      specify within the fey lands. Fey gates are often mushroom circles, a group of
+      menhirs or hollow trees. The path remains until you reach your destination, or
+      until your next full heal-up.
+    feats: []
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Fireworks
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Wild Magic
+  
+      ---
+  
+  
+      **Special:**  When you empower this spell, it doesn’t do double damage as usual.
+      Determine the additional effect by rolling 1d6 on the table below.
+  
+      1. Deal double the damage
+      2. Double the number of targets
+      3. Enemies you hit are dazed (save ends)
+      4. Deal ongoing fire damage equal to 10 times the spell level
+      5. Deal full damage on a miss
+      6. Repeat the attack at the start of your next turn as a free action
+  
+  
+      **Target:**  1d4+1 random nearby or far away enemies
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  2d8 + Charisma fire damage
+  
+      **Miss:**  Half damage
+  
+      3rd level spell: 4d10 damage
+  
+      5th level spell: 7d10 damage
+  
+      7th level spell: 8d12 damage
+  
+      9th level spell: 2d6 x 10 damage
+    feats:
+    - tier: champion
+      description: ' Roll twice on the empower effects table and gain both.'
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Force Boomerang
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Ranged spell; Once per battle; Chain spell; Arcane / Wild Magic
+  
+      ---
+  
+  
+      **Target:**  One nearby creature
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  1d8 + Charisma force damage.
+  
+      **Miss: ** —
+  
+      _Odd miss on first attack:_ Half damage, and you don’t expend the spell.
+  
+      3rd level spell: 3d8 damage
+  
+      5th level spell: 5d8 damage
+  
+      7th level spell: 7d8 damage
+  
+      9th level spell: 10d8 damage
+  
+      _Chain spell:_ Each time your natural attack roll is even, you can attack a
+      different target with the spell.
+    feats:
+    - tier: adventurer
+      description: |2-
+         (Arcane) Increase the damage dice to d10 OR (Wild Magic) On a natural odd hit,
+        the target is teleported to a random far away location.
+    level: 1
+    category: Spells
+    usage: per-battle
+  - name: Friends
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Close-quarter spell; Recharge 16+; Draconic / Fey / Umbral
+  
+      **Effect:**  Until the end of the scene, you have a +3 bonus to Charisma-based
+      skill checks. If you show hostility towards others, the spell ends.
+  
+      _Draconic:_ Increase the bonus to +5 against dragons.
+  
+      _Fey:_ Increase the bonus to +5 against fey.
+  
+      _Umbral:_ Increase the bonus to +5 against undead.
+    feats:
+    - tier: adventurer
+      description: ' You can see disguised and invisible creatures while the spell is
+        active.'
+    level: 1
+    category: Spells
+  - name: Orb of Wrath
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Ranged spell; At-will; Infernal
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  1d6 + Charisma fire damage
+  
+      **Miss:**  Damage equal to your level
+  
+      **Always:**  Note down the natural attack roll of this spell. Until the end of
+      this battle, if an attack against you has that natural roll, deal 1d6 fire
+      damage to that enemy as a free action. If you cast this spell multiple times in
+      a battle, trigger the effect on any of the rolled numbers. There is no
+      additional effect for rolling the same number more than once.
+  
+      3rd level spell: 3d6 damage (hit and retribution effect)
+  
+      5th level spell: 5d6 damage
+  
+      7th level spell: 7d6 damage
+  
+      9th level spell: 10d6 damage
+    feats:
+    - tier: adventurer
+      description: |2-
+         When you empower this spell, gain advantage on the attack roll and write both
+        dice down for the retribution effect.
+    - tier: champion
+      description: ' You can cast this spell without provoking opportunity attacks.'
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Shadow Bolt
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Ranged spell; At-will; Umbral
+  
+      ---
+  
+  
+      **Special:**  When casting the spell, choose whether you want to cast it against
+      PD or MD.
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD OR MD
+  
+      **Hit:**  1d6 + Charisma cold (PD) OR psychic (MD) damage, and the target takes
+      a -4 penalty to PD OR MD until the end of your next turn.
+  
+      **Miss:**  Damage equal to your level
+  
+      3rd level spell: 3d6 damage
+  
+      5th level spell: 5d6 damage
+  
+      7th level spell: 7d6 damage
+  
+      9th level spell: 10d6 damage
+    feats:
+    - tier: adventurer
+      description: |2-
+         (PD) Increase the damage dice to d8s OR (MD) deal extra damage equal to your
+        Charisma modifier (x2 at 5th level; x3 at 8th) on a miss.
+    - tier: champion
+      description: ' On a natural 19+, the duration of the MD / PD penalty is “save
+        ends.”'
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Skullfire
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Ranged spell; At-will; Infernal / Umbral
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD; if the target has 10 hit points or less,
+      gain a +2 bonus to the attack roll
+  
+      **Hit:**  2d6 + Charisma fire damage. When you empower this spell, don‘t double
+      the damage. Deal additional ongoing fire damage equal to the damage you dealt.
+  
+      **Miss:**  Damage equal to your level
+  
+      3rd level spell: 4d6 damage; attack bonus on 30 hp or less
+  
+      5th level spell: 7d6 damage; 50 hp or less
+  
+      7th level spell: 10d6 damage; 70 hp or less
+  
+      9th level spell: 13d6 damage; 90 hp or less
+    feats:
+    - tier: adventurer
+      description: |2-
+         When you empower this spell, double the hit point threshold for the attack
+        bonus.
+    - tier: champion
+      description: ' Deal half damage on a miss against staggered enemies.'
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Sorcerer’s Shield
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Close-quarters spell; Recharge 16+; Quick action; Any bloodline
+  
+      **Target: ** You
+  
+      **Effect:**  You gain a +1 bonus to AC until the end of the battle. Each time
+      you gather power, increase the bonus by +1, up to a maximum of +4.
+  
+      The spell has an additional effect based on your bloodline.
+  
+      _Arcane (or not listed):_ Also gain the shield’s bonus against PD.
+  
+      _Celestial:_ While you are at full hit points, increase the shield’s bonus by 1.
+  
+      _Draconic:_ Also gain the shield’s bonus against MD.
+  
+      _Fey:_ Enemies who miss you with a natural 1 hit one of their own nearby allies
+      instead.
+  
+      _Infernal:_ When a nearby enemy hits you with an attack, deal fire damage equal
+      to your Charisma modifier (x2 at 5th level; x3 at 8th) to them.
+  
+      _Umbral:_ Nearby enemies who attack you with a natural odd miss must immediately
+      make a save or be struck by fear (-4 to attacks and can’t use the escalation
+      die) until the end of their next turn.
+  
+      _Wild Magic:_ When you gather power, roll 1d6. On 1–2, the AC bonus does not
+      increase, on 3–4 it goes up by 1 as per default, on 5–6 it goes up by 2.
+    feats:
+    - tier: champion
+      description: ' Choose a second bloodline when you take the feat and gain its bonus
+        effect.'
+    - tier: epic
+      description: ' The bonus starts at +2.'
+    level: 1
+    category: Spells
+  - name: Thunderwave
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Close-quarters spell; At-will; Arcane / Draconic / Storm
+  
+      ---
+  
+  
+      **Target:**  1d3 nearby enemies in a group
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  1d6 + Charisma thunder damage. If you are engaged with the target, it
+      is pushed back and pops free from you.
+  
+      **Miss:**  —
+  
+      3rd level spell: 2d4 damage
+  
+      5th level spell: 2d8 damage
+  
+      7th level spell: 2d12 damage
+  
+      9th level spell: 2d20 damage
+    feats:
+    - tier: adventurer
+      description: ' When you empower this spell, increase the number of targets to
+        1d4.'
+    - tier: champion
+      description: ' Add a third damage die.'
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: Touch of the Ice Devil
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action; Infernal
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  Until the end of battle, your unarmed attacks deal cold damage and
+      have a d12 damage die. You can use either Strength or Dexterity for the attack,
+      and you don’t take the normal -2 attack penalty for making an unarmed attack.
+    feats:
+    - tier: adventurer
+      description: ' You gain _resist cold_ 16+.'
+    - tier: champion
+      description: |2-
+         You gain a +2 bonus to your critical threat range with attacks that deal cold
+        damage, including spells.
+    - tier: epic
+      description: |2-
+         You can empower your unarmed attacks (expend gathered power to deal double
+        damage with them) while this spell is active.
+    level: 1
+    category: Spells
+    usage: per-day
+  - name: Wild Surge
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Ranged spell; At-will; Wild Magic
+  
+      ---
+  
+  
+      **Target:**  One random nearby creature
+  
+      When targeting an ally…
+  
+      **Effect:**  The target has advantage on its next attack roll and … (roll 1d4)
+  
+      1. The target gains temporary hit points equal to your Charisma modifier (x2 at
+      5th level; x3 at 8th) + Level.
+      2. The target gains a +2 bonus to PD and MD until the end of your next turn.
+      3. The target teleports to switch location with another random nearby creature.
+      4. You make the attack below against the enemy closest to it.
+  
+  
+      When targeting an enemy…
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  1d6 + Charisma random energy damage.
+  
+      _Natural even hit:_ The target has disadvantage on its next attack roll.
+  
+      **Miss:**  Damage equal to your level
+  
+      3rd level spell: 3d6 damage
+  
+      5th level spell: 5d6 damage
+  
+      7th level spell: 7d6 damage
+  
+      9th level spell: 9d6 damage
+    feats:
+    - tier: adventurer
+      description: |2-
+         If the escalation die is 4+, target two random nearby creatures with this
+        spell.
+    level: 1
+    category: Spells
+    usage: at-will
+  - name: 3rd Level Spells
+    _type: Spell 3
+    source: DATP
+    description: ''
+    feats: []
+    level: 3
+    category: Spells
+  - name: Beast Form
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Fey
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  You take the form of an animal of your choice, which can be of any
+      size between a mouse and an elephant. The spell lasts for 5 minutes or until the
+      end of the battle.
+  
+      You retain your normal stats, although the GM should adjust the difficulty of
+      skill checks based on how difficult the task would be for the chosen animal.
+      Your equipment transforms with you, but you cannot use it actively while in
+      animal form. You cannot speak or cast spells.
+  
+      You can also choose one benefit from the list below to represent your animal’s
+      abilities.
+  
+      _Aquatic:_ You can swim perfectly and breathe under water.
+  
+      _Claws:_ You can make unarmed melee attacks without penalty, with a d8 WEAPON
+      damage die.
+  
+      _Hide:_ Gain a +2 bonus to AC.
+  
+      _Mimicry:_ You can speak.
+  
+      _Mount:_ Someone else can ride on you.
+  
+      _Poisonous:_ When you hit with a melee attack, deal twice your level in ongoing
+      poison damage.
+  
+      _Stalker:_ Gain advantage on skill checks to move silently.
+  
+      _Tough:_ Gain a +2 bonus to PD.
+  
+      _Wall climber:_ You can easily climb most surfaces.
+  
+      _Wings:_ You can fly.
+  
+      5th level spell: Gain two abilities from the list above
+  
+      7th level spell: Gain three abilities from the list above
+  
+      9th level spell: Gain four abilities from the list above
+    feats:
+    - tier: adventurer
+      description: ' You can now remain in beast form for 1d6 hours.'
+    - tier: champion
+      description: ' You can expend a sorcerer point to cast a spell while in beast
+        form.'
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Breath of the Bronze
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Breath weapon; Draconic
+  
+      ---
+  
+  
+      **Target:**  1d3 nearby or far away enemies in a rough line
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  3d10 + Charisma lightning damage. The closest target you hit is also
+      dazed (save ends).
+  
+      **Miss:**  Half damage
+  
+      5th level spell: 5d10 damage
+  
+      7th level spell: 7d10 damage
+  
+      9th level spell: 10d10 damage
+  
+      _Breath weapon:_ For the rest of the battle, roll a d20 at the start of each of
+      your turns; on a 16+, you can use _Breath of the Bronze_ this turn if you wish.
+    feats:
+    - tier: adventurer
+      description: |2-
+         If you fail to recharge _Breath of the Bronze_ at the start of your turn, gain
+        a +2 bonus to all defenses until the end of your next turn.
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Burning Whip
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Close-quarters spell; Once per battle; Infernal
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  4d10 + Charisma fire damage, and you force the target to pop free from
+      all creatures and engage with you or a nearby ally of your choice.
+  
+      _Natural even hit:_ You grab the target until the end of your next turn (it has
+      disadvantage on disengage checks and takes half damage again at the start of
+      your next turn).
+  
+      **Miss:**  Half damage
+  
+      5th level spell: 6d10 damage
+  
+      7th level spell: 8d10 damage
+  
+      9th level spell: 12d10 damage
+    feats: []
+    level: 3
+    category: Spells
+    usage: per-battle
+  - name: Choke Hold
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Umbral
+  
+      ---
+  
+  
+      **Special:**  When casting the spell, choose whether you want to attack the
+      target’s PD or MD with it.
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD or MD
+  
+      **Hit:**  4d8 + Charisma negative energy (PD) or psychic (MD) damage and the
+      target is weakened and stuck until the end of your next turn. Against a
+      staggered target, deal 6d8 damage, and the weaken and stuck effects are “save
+      ends both”.
+  
+      **Miss:**  You regain the spell at the end of the battle.
+  
+      5th level spell: 6d8 / 9d8 damage
+  
+      7th level spell: 8d10 / 12d10 damage
+  
+      9th level spell: 12d10 / 2d8 x 10 damage
+    feats:
+    - tier: adventurer
+      description: ' On a hit, you can pull the target to engage you.'
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Cloak of Lightning
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action; Arcane / Storm
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  Until the end of the battle, you have _resist lightning _16+ and
+      you can change the damage of any spell you cast to lightning damage. When you
+      score a critical hit with a spell, deal lightning damage equal to that spell’s
+      level to all nearby enemies.
+    feats: []
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Conviction
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Free action; Celestial
+  
+      ---
+  
+  
+      **Trigger:**  You roll a d20 and you are unhappy with the roll
+  
+      **Effect:**  Reroll the d20 and take that result. If the reroll is a natural 5
+      or lower, you don’t expend this spell (but you can’t use it again on the same
+      roll).
+    feats:
+    - tier: adventurer
+      description: ' Add your Wisdom modifier to the reroll.'
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Energy Charge
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Close-quarters spell; At-will; Arcane / Wild Magic
+  
+      ---
+  
+  
+      **Targets:**  Up to two enemies you are engaged with
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  3d4 + Charisma random energy damage.
+  
+      **Miss:**  —
+  
+      **Always:**  Until the end of your next turn, if you cast a spell that deals the
+      same type of damage as the random energy you rolled, increase the damage dice by
+      one step.
+  
+      _Wild Magic:_ You gain the effect with spells that deal random energy damage.
+  
+      5th level spell: 5d4 damage
+  
+      7th level spell: 7d4 damage
+  
+      9th level spell: 1d4 x 10 damage
+    feats:
+    - tier: adventurer
+      description: |2-
+         When you empower this spell, you also get a +2 bonus to attack with your next
+        spell, if it qualifies.
+    - tier: champion
+      description: ' You can roll for random energy twice and choose the result you
+        like.'
+    level: 3
+    category: Spells
+    usage: at-will
+  - name: False Life
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action; Celestial / Umbral
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  You gain 10 temporary hit points, which last until the end of the
+      battle. Whenever you Gather Power this battle, gain the same amount of temporary
+      hit points again.
+  
+      5th level spell: 15 temporary hit points
+  
+      7th level spell: 25 temporary hit points
+  
+      9th level spell: 40 temporary hit points
+    feats:
+    - tier: adventurer
+      description: |2-
+         Choose a nearby ally. Whenever you gain temporary hit points from this spell,
+        the ally gains temporary hit points equal to the spell level.
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Flash Freeze
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Close-quarters spell; Once per battle; Free action; Arcane
+  
+      ---
+  
+  
+      **Special:**  You can cast this spell any time during the battle, even on an
+      enemy’s turn.
+  
+      **Target:**  One enemy you are engaged with
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  3d6 + Charisma cold damage
+  
+      _Natural even hit:_ The target is dazed (-4 to attacks) until the end of your
+      next turn.
+  
+      **Miss:**  Half damage
+  
+      5th level spell: 5d6 damage
+  
+      7th level spell: 7d6 damage
+  
+      9th level spell: 10d6 damage
+    feats:
+    - tier: adventurer
+      description: |2-
+         On a natural even hit, the target is weakened (-4 to attacks and defenses)
+        until the end of your next turn.
+    level: 3
+    category: Spells
+    usage: per-battle
+  - name: Flowery Kiss
+    _type: Spell 3
+    source: DATP
+    description: |-
+      _A beautiful flower sprouts in your hand, and you blow its spores to your
+      enemies._
+  
+      Close-quarters spell; Recharge 16+; Fey
+  
+      **Target:**  1d4 nearby enemies in a group
+  
+      **Attack:**  Charisma + Level vs. MD
+  
+      **Natural Even Hit:**  4d6 + Charisma poison damage, and the target is hampered
+      until the end of your next turn.
+  
+      **Natural Odd Hit:**  2d6 + Charisma poison damage, and the target is confused
+      until the end of your next turn.
+  
+      **Natural Even Miss:**  Half damage of an even hit, and the target is dazed
+      until the end of your next turn.
+  
+      **Natural Odd Miss:**  Any ally engaged with the target is dazed until the end
+      of your next turn.
+  
+      5th level spell: 6d8 / 3d8 damage.
+  
+      7th level spell: 8d10 / 4d10 damage.
+  
+      9th level spell: 10d12 / 5d12 damage.
+    feats:
+    - tier: adventurer
+      description: ' You gain a +2 bonus to attack against enemies you are engaged with.'
+    - tier: champion
+      description: |2-
+         If the target has 100 hp or fewer (7th level: 150 hp; 9th level: 225 hp), the
+        hampered / confused effect is “save ends.”
+    level: 3
+    category: Spells
+  - name: Iconic Power
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action; Wild Magic
+  
+      ---
+  
+  
+      **Effect:**  Spend a 5 or 6 on an icon relationship die with an icon. This turn,
+      you can cast one daily spell of that icon from the chaos mage list, at the same
+      level as this spell.
+    feats:
+    - tier: champion
+      description: ' Gain the lowest-tier feat of the iconic spell.'
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Pierce Resistance
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Arcane
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy; when you empower this spell, target two nearby
+      enemies instead.
+  
+      **Attack:**  Charisma + Level vs. the target’s lowest defense
+  
+      **Hit:**  Attacks against the target deal full damage. It cannot reduce the
+      damage through resistances, immunities, or similar abilities (save ends).
+  
+      **Miss:**  The target takes a -2 penalty to a random defense until the end of
+      its next turn.
+    feats:
+    - tier: champion
+      description: ' On a hit, the target also takes a -2 penalty to PD and MD (save
+        ends all).'
+    - tier: epic
+      description: ' The spell is now Recharge 16+ after battle.'
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Protected Perimeter
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Celestial
+  
+      ---
+  
+  
+      **Target:**  A room, or an area up to 100 ft. across
+  
+      **Effect:**  You create a warding perimeter around the protected area until the
+      next sunrise or sundown. If a creature enters the area, the spell will create a
+      silent alarm, and make the following attack.
+  
+      **Target:**  The creature attempting to enter the area
+  
+      **Attack:**  Charisma + Level vs. MD
+  
+      **Hit:**  The target is stuck (save ends).
+  
+      The spell ignores any creature that was already within the perimeter at the time
+      of casting, and anything the size of a rodent or smaller.
+  
+      5th level spell: You can target the alarm more precisely, such as “only undead
+      creatures”.
+    feats:
+    - tier: adventurer
+      description: ' The save against the stuck effect is now a hard save (16+).'
+    level: 3
+    category: Spells
+    usage: per-day
+  - name: Sinner’s Pyre
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Close-quarters spell; Once per battle; Infernal
+  
+      ---
+  
+  
+      **Target:**  You or one nearby ally
+  
+      **Effect:**  The target has _resist fire_ 18+ until the end of your next turn.
+      Deal 3d8 + Charisma fire damage to all enemies engaged with the target.
+  
+      Until the end of your next turn, enemies who attack the target while engaged
+      with it take 3d8 + Charisma fire damage.
+  
+      5th level spell: 5d8 damage
+  
+      7th level spell: 7d8 damage
+  
+      9th level spell: 9d8 damage
+  
+      Adventurer Feat: Increase the damage dice to d10s.
+    feats: []
+    level: 3
+    category: Spells
+    usage: per-battle
+  - name: Wild Spark
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Ranged spell; At-will; Wild Magic
+  
+      ---
+  
+  
+      **Target:**  One random nearby enemy
+  
+      **Attack:**  Charisma + Level vs. MD; if the escalation die is even, you have
+      advantage on the attack roll.
+  
+      **Hit:**  4d4 + Charisma random energy damage; if the escalation die is odd, the
+      target is dazed until the end of your next turn.
+  
+      **Miss:**  Damage equal to your level
+  
+      5th level spell: 6d4 damage
+  
+      7th level spell: 8d4 damage
+  
+      9th level spell: 10d4 damage
+    feats:
+    - tier: adventurer
+      description: ' You can target a far away enemy at a -2 penalty to the attack roll.'
+    level: 3
+    category: Spells
+    usage: at-will
+  - name: 5th Level Spells
+    _type: Spell 5
+    source: DATP
+    description: ''
+    feats: []
+    level: 5
+    category: Spells
+  - name: Breath of the Copper
+    _type: Spell 5
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Breath weapon; Draconic
+  
+      ---
+  
+  
+      **Target:**  1d3 nearby enemies in a group
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  20 + Charisma ongoing acid damage
+  
+      _Natural 18+:_ The target is hampered until the end of your next turn.
+  
+      **Miss:**  5 ongoing acid damage
+  
+      7th level spell: 25 + Charisma ongoing acid damage; 10 ongoing on a miss
+  
+      9th level spell: 40 + Charisma ongoing acid damage; 15 ongoing on a miss
+  
+      _Breath weapon:_ For the rest of the battle, roll a d20 at the start of each of
+      your turns; on a 16+, you can use _Breath of the Copper_ this turn if you wish.
+  
+      Out-think: As a free action when an enemy rolls a natural even hit against you,
+      negate the attack (no damage or effects).
+    feats:
+    - tier: champion
+      description: |2-
+         The first time you fail to recharge _Breath of the Copper_ at the start of your
+        turn, gain one use of the Out-think ability.
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Breath of the Purple
+    _type: Spell 5
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Breath weapon; Draconic
+  
+      ---
+  
+  
+      **Target:**  1d3 nearby enemies
+  
+      **Attack:**  Charisma + Level vs. MD
+  
+      **Hit:**  20 + Charisma ongoing psychic damage and the target is dazed (save
+      ends both).
+  
+      **Miss:**  The target is dazed until the end of its next turn.
+  
+      7th level spell: 25 ongoing damage
+  
+      9th level spell: 40 ongoing damage
+  
+      _Breath Weapon:_ For the rest of the battle, roll a d20 at the start of each of
+      your turns; on a 16+, you can use _Breath of the Purple_ that turn if you wish.
+    feats:
+    - tier: champion
+      description: |-
+        When you succeed on a roll to recharge this spell during a battle, distracting
+        illusions give enemies a -2 penalty to attack you until the end of your next
+        turn.
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Chain Immolation
+    _type: Spell 5
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Chain Spell; Infernal
+  
+      ---
+  
+  
+      **Target:**  One nearby creature
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  40 ongoing fire damage
+  
+      **Miss:**  10 ongoing fire damage
+  
+      7th level spell: 60 ongoing damage; 15 on a miss
+  
+      9th level spell: 80 ongoing damage; 20 on a miss
+  
+      _Chain spell:_ Each time your natural attack roll is even, you can attack a
+      different target with the spell.
+    feats:
+    - tier: champion
+      description: ' Casting this spell does not trigger opportunity attacks.'
+    - tier: epic
+      description: |2-
+         When an enemy dies from the ongoing damage, make another attack with this spell
+        as a free action.
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Faerie Door
+    _type: Spell 5
+    source: DATP
+    description: |-
+      Close-quarter spell; Daily; Fey
+  
+      ---
+  
+  
+      **Effect:**  You create a window or a door on a wall you touch, which lasts
+      until the end of the scene. The door is visible to anyone, but only you and any
+      target designated by you can see or step through.
+    feats:
+    - tier: champion
+      description: ' Only you (or targets designated by you) can see the door.'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Fey Curse
+    _type: Spell 5
+    source: DATP
+    description: |-
+      _Dark whispers and glowing eyes appear at the edge of everyone‘s conscience._
+  
+      Ranged spell; Daily; Fey
+  
+      ---
+  
+  
+      **Target:**  1d4 nearby enemies
+  
+      **Attack:**  Charisma + Level vs. MD
+  
+      **Natural Even Hit:**  6d4 + Charisma psychic damage, and the target has
+      disadvantage on saving throws, except against this spell (save ends).
+  
+      **Natural Odd Hit:**  3d4 + Charisma psychic damage, and the target has
+      disadvantage on attack rolls (save ends).
+  
+      **Natural Even Miss:**  The target is vulnerable to your spells until the end of
+      your next turn.
+  
+      **Natural Odd Miss:**  Psychic damage equal to your level
+  
+      7th level spell: 8d6 / 4d6 psychic damage
+  
+      9th level spell: 10d8 / 5d8 psychic damage
+    feats: []
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Flash of Radiance
+    _type: Spell 5
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Free Action; Celestial
+  
+      ---
+  
+  
+      **Special:**  You can cast this spell any time during battle, even during an
+      enemy’s turn.
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  6d8 + Charisma holy damage
+  
+      _Natural even hit:_ The target has disadvantage on their next attack roll.
+  
+      **Miss:**  Half damage
+  
+      7th level spell: 8d8 damage
+  
+      9th level spell: 12d8 damage
+    feats: []
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Leech Magic
+    _type: Spell 5
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Arcane / Fey / Umbral
+  
+      ---
+  
+  
+      **Target:**  One nearby creature
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  The target is weakened (save ends) and you Gather Power as per your
+      class feature.
+  
+      _Arcane:_ Gain a sorcery point.
+  
+      _Fey:_ Teleport to a nearby location you can see.
+  
+      _Umbral:_ Deal ongoing negative energy damage equal to twice the spell level
+      (save ends both).
+  
+      **Miss:**  —
+    feats:
+    - tier: champion
+      description: |2-
+         If the target is a spellcaster, or a creature with magic abilities, you gain a
+        +2 bonus to the attack roll.
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Merry Go-Round
+    _type: Spell 5
+    source: DATP
+    description: |-
+      Close-quarters spell; Once per battle; Interrupt action; Fey
+  
+      ---
+  
+  
+      **Trigger:**  You successfully save against a save-ends effect.
+  
+      **Target:**  The enemy who caused the effect, or if they are not within nearby
+      range, a random nearby enemy
+  
+      **Attack:**  Charisma + Level vs. MD
+  
+      **Hit: ** The target suffers the same effect you just saved against, with the
+      same save difficulty.
+  
+      **Miss:**  —
+    feats: []
+    level: 5
+    category: Spells
+    usage: per-battle
+  - name: Nasty to Nice
+    _type: Spell 5
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Celestial
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy with a nastier special. The GM should disclose
+      which enemies on the battlefield have a nastier special but doesn’t have to say
+      what it does. When you empower this spell, target two enemies instead.
+  
+      **Attack:**  Charisma + Level vs. MD
+  
+      **Hit:**  5d8 + Charisma holy damage, and the target loses all nastier specials
+      (save ends). If you affect one mook, all mooks from that group lose their
+      nastier specials.
+  
+      **Miss:**  —
+  
+      7th level spell: 7d8 damage
+  
+      9th level spell: 10d8 damage
+    feats:
+    - tier: champion
+      description: |2-
+         The target has a penalty to their saving throw equal to your Wisdom modifier
+        (but a natural 18+ always saves, regardless of the penalty).
+    - tier: epic
+      description: ' The spell is now Recharge 16+ after battle.'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Ooze Form
+    _type: Spell 5
+    source: DATP
+    description: |
+      Close-quarters spell; Daily; Wild Magic
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  You change your shape into an ooze. This transformation lasts for 5
+      minutes or until the end of the battle. As an ooze, you can keep a vaguely
+      humanoid shape or dissolve into a puddle, and you can squeeze through narrow
+      spaces. Your equipment transforms with you, but you cannot use it. You cannot
+      speak or cast spells.
+  
+      As an ooze, you have the following abilities:
+  
+      - You can split off and rejoin parts of you. Split off parts cannot take any
+      other actions than try to merge back.
+      - You gain _resist weapons_ 16+.
+      - Your unarmed attack is replaced with a Charisma + level vs. PD attack that
+      deals 1d10 per level + Charisma acid damage.
+      - When you hit a target with an unarmed attack, you engulf them. Engulfed
+      targets take half damage again at the start of your next turn.
+    feats:
+    - tier: champion
+      description: |2-
+         When you Gather Power while in Ooze form, deal double damage with your first
+        unarmed attack on your next turn.
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Rolling Thunderball
+    _type: Spell 5
+    source: DATP
+    description: |-
+      Close-quarters spell; Once per battle; Chain spell; Storm / Wild Magic
+  
+      ---
+  
+  
+      **Target:**  One random nearby enemy. After the first attack, the spell can also
+      target random far away enemies.
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  6d6 + Charisma modifier lightning damage. If the target is far away,
+      also deal 2d6 thunder damage.
+  
+      **Miss:**  Half damage
+  
+      7th level spell: 7d8 lightning; 2d8 thunder damage
+  
+      9th level spell: 9d10 lightning; 3d10 thunder damage
+  
+      _Chain Spell:_ Each time your natural attack roll is even, you can attack a
+      different target with the spell.
+    feats:
+    - tier: champion
+      description: ' You have a +1 bonus to attack against far away enemies.'
+    level: 5
+    category: Spells
+    usage: per-battle
+  - name: Scare
+    _type: Spell 5
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Free action; Umbral
+  
+      ---
+  
+  
+      **Special:**  You can cast this spell any time during battle, even during an
+      enemy’s turn.
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. MD
+  
+      **Hit:**  20 ongoing psychic damage, and the target loses its next standard
+      action.
+  
+      **Miss:**  Psychic damage equal to your level
+  
+      7th level spell: 30 ongoing
+  
+      9th level spell: 50 ongoing
+    feats:
+    - tier: champion
+      description: ' This spell is now Recharge 16+ after battle.'
+    level: 5
+    category: Spells
+    usage: per-day
+  - name: Wave of Anguish
+    _type: Spell 5
+    source: DATP
+    description: |-
+      Ranged spell; Once per battle; Chain spell; Infernal / Umbral
+  
+      ---
+  
+  
+      **Target:**  One nearby creature
+  
+      **Attack:**  Charisma + Level vs. MD
+  
+      **Hit:**  4d8 + Charisma psychic damage, and the target is dazed (save ends).
+  
+      **Miss:**  Half damage
+  
+      7th level spell: 6d10 damage
+  
+      9th level spell: 9d12 damage
+  
+      _Chain spell:_ Each time your natural attack roll is even, you can attack a
+      different target with the spell.
+    feats:
+    - tier: epic
+      description: ' You can cast this spell without provoking opportunity attacks.'
+    level: 5
+    category: Spells
+    usage: per-battle
+  - name: 7th Level Spells
+    _type: Spell 7
+    source: DATP
+    description: ''
+    feats: []
+    level: 7
+    category: Spells
+  - name: All-Consuming Inferno
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Infernal
+  
+      ---
+  
+  
+      **Always:**  When you cast this spell, you spend a recovery without healing.
+  
+      **Target:**  The nearby or far away enemy with the lowest current hit point
+      total (above zero).
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  2d6 x 10 + Charisma fire damage
+  
+      **Miss:**  Half damage. Your allies engaged with the target take one-fourth
+      damage.
+  
+      _Special chain spell:_ When you reduce a non-mook enemy, or the last mook in a
+      group, to zero hit points with this spell, heal 10 hp and make another attack
+      against the nearby or far away enemy that now has the fewest hit points.
+  
+      9th level spell: 3d6 x 10 damage; heal 15 hp
+    feats:
+    - tier: champion
+      description: ' When you empower this spell, gain advantage on the first attack
+        roll.'
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Breath of the Silver
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Breath weapon; Draconic
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  7d12 + Charisma cold damage
+  
+      Natural 18+: The target is stunned (-4 to defenses and can’t take actions) until
+      the end of your next turn.
+  
+      **Miss:**  Half damage
+  
+      9th level spell: 10d12 damage and stun on natural 16+
+  
+      _Breath Weapon:_ For the rest of the battle, roll a d20 at the start of each of
+      your turns. On a 16+, you can use _Breath of the Silver_ that turn if you wish.
+  
+      _Evasive Turn:_ As a free action when an attack targets you, you can force the
+      attacker to reroll the attack, and you have_ resist damage_ 12+ against that
+      attack.
+    feats:
+    - tier: champion
+      description: |2-
+         The first time you fail to recharge _Breath of the Silver_ at the start of your
+        turn, gain one use of the Evasive Turn ability.
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Celestial Censure
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Celestial
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  Deal damage equal to half the target’s current hit point total
+      (maximum 100 damage; 200 if you empower the spell). Treat the escalation die as
+      6 when attacking the target (save ends).
+  
+      **Miss:**  You regain the spell at the end of the battle.
+  
+      9th level spell: maximum 150 damage; 300 if empowered
+    feats: []
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Draconic Gift
+    _type: Spell 7
+    source: DATP
+    description: |
+      Close-quarters spell; Daily; Quick action; Draconic
+  
+      ---
+  
+  
+      **Special:**  If you are fighting one or more dragons, roll an easy save (6+) at
+      the start of each of your turns. Failure means that you are confused that turn.
+  
+      **Target:**  You
+  
+      **Effect:**  You gain a random dragon-style power for the rest of the battle,
+      similar to the abilities dragons possess but not identical. Roll two d10, then
+      pick one of them to see which power you gain:
+  
+      1. _True seeing:_ You are immune to invisibility and ignore any illusions.
+      2. _Whipping tail:_ When an enemy engaged with you rolls a natural 1 or 2 with
+      an attack roll, you can make an opportunity attack against that creature as a
+      free action.
+      3. _Tough Hide:_ You gain a +1 bonus to AC.
+      4. _Twisted Mind:_ You gain a +2 bonus to MD.
+      5. _Nimble:_ You gain a +2 bonus to PD.
+      6. _Now I’m mad!:_ The first time you are staggered this battle, you can use a
+      breath weapon spell as a free action if you have one available.
+      7. _Serious threat:_ Disengage checks against you take a –5 penalty. When a
+      creature fails to disengage from you, it takes damage equal to twice your level.
+      8. _Raw power:_ Until you are staggered, you have advantage on attack rolls with
+      melee attacks and breath weapon spells.
+      9. _Damage aura:_ When an enemy starts its turn engaged with you, it takes
+      damage equal to twice your level. Choose the damage type from any of your breath
+      weapon spells.
+      10. _More breath:_ Until the end of the battle, you have advantage on d20 rolls
+      to regain your breath weapon spells.
+    feats:
+    - tier: epic
+      description: ' Gain the ability for both d10 rolls.'
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Elemental Form
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Arcane
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  Until the end of the battle, or for the next 5 minutes, you
+      transform your body into a pure element. Choose between air, earth, fire and
+      water.
+  
+      _Air:_ You can fly. You gain _resist non-spell damage_ 16+. You have a +5 bonus
+      to disengage checks. You deal 5 extra damage with all spells that deal lightning
+      or thunder damage.
+  
+      _Earth:_ You gain a +2 bonus to AC. You can choose to ignore effects that would
+      cause you to pop free from enemies. You deal 5 extra damage with all spells that
+      deal acid or poison damage.
+  
+      _Fire:_ At the start of your turn, deal 10 fire damage to all enemies engaged
+      with you. You have _resist fire_ 16+. You deal 5 extra damage with all spells
+      that deal fire damage.
+  
+      _Water:_ You gain _resist weapon damage_ 16+. You deal 5 extra damage with all
+      spells that deal cold damage. You can breathe and move freely under water.
+  
+      9th level spell: Deal 10 extra damage all spells that deal damage of the
+      corresponding element. Increase all resistances to 18+.
+    feats:
+    - tier: epic
+      description: ' You can stay transformed for up to 1d6 hours.'
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Entomb
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Interrupt Action; Celestial / Umbral
+  
+      ---
+  
+  
+      **Trigger:**  A nearby enemy is reduced below zero hit points.
+  
+      **Effect:**  The soul of the slain enemy is sealed away, and it can’t be healed,
+      revived, resurrected, returned from the underworld, or raised as an undead for
+      1d6 days. After that period, it can make a hard save (16+) every day to end the
+      effect. That doesn’t bring the target back, but it is now possible to do so.
+      This spell can be cast as a ritual to bind a target permanently.
+    feats: []
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Memento Mori
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Quick action; Umbral
+  
+      ---
+  
+  
+      **Attack:**  Charisma + Level vs. the highest MD of all nearby enemies
+  
+      **Hit:**  You steal the escalation die and increase it by one. You are the only
+      combatant on the battlefield that can use it until the end of the battle. This
+      negates enemy abilities to use or steal the escalation die. Whenever you are hit
+      by an attack, you must succeed at a normal save (11+) to keep the die, otherwise
+      the spell ends.
+    feats:
+    - tier: champion
+      description: |-
+        While you have the escalation die, you gain 5 times the escalation die in
+        temporary hit points at the end of your turn (8th level: 10x).
+    - tier: epic
+      description: ' Choose one ally who can still use the escalation die while you
+        have stolen it.'
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Pixie Dust
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Fey
+  
+      ---
+  
+  
+      **Special:**  When you empower this spell, increase the number of targets to
+      1d6.
+  
+      **Target:**  1d3 nearby enemies
+  
+      **Attack:**  Charisma + Level vs. MD
+  
+      **Natural Even Hit:**  If the target has 90 hit points or fewer, it falls
+      unconscious (hard save ends; also ends if the target takes 10+ damage). If it
+      has more hit points, it has disadvantage on attacks (hard save ends).
+  
+      **Natural Odd Hit:**  If the target has 90 hit points or fewer, it is confused
+      (hard save ends; also ends if the target takes 10+ damage). If it has more hit
+      points, attacks against it have advantage (hard save ends).
+  
+      **Natural Even Miss:**  You are invisible until the end of your next turn, or
+      until you make an attack.
+  
+      **Natural Odd Miss:**  The next time you roll an odd miss this battle, reroll
+      it.
+  
+      9th level spell: 150 hp or fewer.
+    feats: []
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Reflecting Barrier
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Arcane
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  Until the end of the battle, each ranged and close-quarters attack
+      against you that is a natural odd miss is reflected against the attacker. The
+      attacker rerolls the attack, using it againstusing against their own defense.
+    feats:
+    - tier: epic
+      description: |2-
+         Also reflect the first attack with a natural even roll that falls within the
+        range.
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Shadow Form
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Umbral
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  Until the end of the battle, your body transforms into a living
+      shadow. Once per turn, as a quick action, you can teleport to any nearby
+      location you can see that is not in broad daylight. You have _resist physical
+      damage_ 12+.
+  
+      9th level spell: Increase the resistance to 16+.
+    feats:
+    - tier: epic
+      description: ' The spell is now Recharge 16+ after battle.'
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Sorcerous Wings
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action; Celestial / Fey / Draconic / Infernal
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  You grow wings on your back that reflect your bloodline. Celestial
+      wings are white feathers, fey wings are colorful like a butterfly, draconic
+      wings are scaly, and infernal wings are black and leathery. Until the end of
+      battle, you can fly at your normal speed as a move action. You can hover between
+      turns.
+  
+      9th level spell: The effect now lasts for 2d6 x 10 minutes.
+    feats:
+    - tier: champion
+      description: You target a nearby ally in addition to yourself.
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Touch of Corruption
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Infernal**Target:**  One enemy you are engaged
+      with**Attack:**  Charisma + Level vs. PD**Hit:**  2d6 x 10 negative energy
+      damage, and the target is vulnerable (hard save ends, 16+). In addition, if the
+      target drops to 0 hp from this attack, or drops to 0 hp before it saves against
+      the vulnerable effect of this attack, raise it at the start of your next turn.
+      It gains 100 hit points, and it is now under your control (hard save ends). If
+      the creature was double-strength, its attacks now deal half damage. If it was
+      triple-strength, they deal one third.**Miss:**  Half damage
+  
+      ---
+  
+  
+      9th level spell: 3d6 x 10 damage, and you raise the creature with 150 hp.
+    feats:
+    - tier: champion
+      description: ' The spell can now target a nearby enemy you are not engaged with.'
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Untamed Sorcery
+    _type: Spell 7
+    source: DATP
+    description: |
+      Ranged spell; Daily; Wild Magic
+  
+      ---
+  
+  
+      **Effect:**  Until the end of the battle, as a free action at the start of your
+      turn, roll 1d12 on the table below and gain the corresponding effect until the
+      start of your next turn.
+  
+      **d20**  **Effect**
+  
+      1. _Life:_ Gain temporary hit points equal to three times your level.
+      2. _Blink:_ You can teleport to a nearby location as a quick action.
+      3. _Spikes:_ Enemies who engage you take 1d4 x 10 (9th level: 1d6 x 10) damage.
+      4. _Resistance:_ Gain _resist all damage _18+.
+      5. _Armor:_ Gain a +4 bonus to AC.
+      6. _Evasion:_ Gain a +4 bonus to PD.
+      7. _Calm:_ Gain a +4 bonus to MD.
+      8. _Speed:_ Gain a +4 bonus on disengage checks.
+      9. _Skill:_ Gain advantage on all skill checks.
+      10. _Precision:_ Reroll a natural 1-3 on attack rolls once.
+      11. _Spread:_ When you cast a spell with more than one target, add an extra
+      target.
+      12. _Jackpot:_ Gain two benefits from this table.
+    feats: []
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: Wild Polymorph
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Chain spell; Wild Magic
+  
+      ---
+  
+  
+      **Target:**  One random nearby enemy. When you empower this spell, attack two
+      enemies instead.
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  Roll a d8 to determine the effect placed on the target until the end
+      of your next turn. If the target has 100 hit points or less, the spell‘s effect
+      is “save ends.“
+  
+      1. The target is transformed into a burning fire creature. It is vulnerable to
+      cold, all damage it deals is fire damage, and it has _resist fire_ 18+. It takes
+      25 (9th level: 40) ongoing fire damage while transformed.
+      2. The target is polymorphed into a mouse, duck, cat, or other small animal.
+      3. The target is transformed into the stuff of nightmares. It has a fear aura
+      equal to its level. However, its form shifts too rapidly to make a coordinated
+      attack, and any odd roll is an automatic miss.
+      4. The target‘s skin becomes soft and jelly-like, and it takes a -4 penalty to
+      AC.
+      5. The target‘s appearance changes to you or one of your allies. Attacks against
+      you or that ally have a 50% chance of targeting this enemy instead.
+      6. The target is shrunk to half size. It gains a +2 bonus to AC, but all its
+      attacks deal half damage.
+      7. The target is temporarily turned to stone. It cannot take actions, but it is
+      also immune to all damage except psychic damage.
+      8. The target is transformed into an angry plant version of itself. It is stuck
+      and vulnerable to fire and axes. All its damage is changed to poison damage.
+  
+  
+      **Miss:**  —
+  
+      9th level spell: 150 hit points or less
+  
+      _Chain spell:_ Each time your natural attack roll is even, you can attack a
+      different target with the spell.
+    feats:
+    - tier: champion
+      description: ' Double the hit point range you can affect as “save ends.“'
+    level: 7
+    category: Spells
+    usage: per-day
+  - name: 9th Level Spells
+    _type: Spell 9
+    source: DATP
+    description: ''
+    feats: []
+    level: 9
+    category: Spells
+  - name: Black Blade of Disaster
+    _type: Spell 9
+    source: DATP
+    description: |-
+      _The “blade” summoned by this spell is a dark planar rift stretching out from
+      your hand._
+  
+      Close-quarters spell; Daily; Umbral
+  
+      ---
+  
+  
+      **Effect:**  You create a melee weapon that you can wield without attack
+      penalty. Use your Charisma for the attack roll. Your melee attacks with the
+      blade target PD. It deals exactly 100 negative energy damage on a hit, ignoring
+      any damage bonuses or resistances. If your attack roll is a natural 20, the
+      target starts making last gasp saves (16+) and is disintegrated on the fourth
+      failed save.
+    feats:
+    - tier: epic
+      description: ' You can hurl the blade to make ranged attacks against nearby enemies.'
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Breath of the Golden
+    _type: Spell 9
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Breath weapon; Draconic
+  
+      ---
+  
+  
+      **Target:**  1d4 nearby enemies
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  3d4 x 10 + Charisma fire damage
+  
+      _Natural 20:_ The target is stunned (-4 to defenses and can’t take actions)
+      until the end of your next turn.
+  
+      **Miss:**  Half damage
+  
+      _Breath Weapon:_ For the rest of the battle, roll a d20 at the start of each of
+      your turns. On a 16+, you can use _Breath of the Golden_ that turn if you wish.
+  
+      _Indomitability:_ As a free action, cancel all effects and conditions on you,
+      including ongoing damage. You can cancel these effects even if you are prevented
+      from taking actions, such as by being stunned.
+    feats:
+    - tier: champion
+      description: |2-
+         The first time you fail to recharge _Breath of the Golden_ at the start of your
+        turn, gain one use of the Indomitability ability.
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Breath of the Red
+    _type: Spell 9
+    source: DATP
+    description: |-
+      _The Red does not share his incredible power willingly. You will pay for your
+      insolence._
+  
+      Close-quarters spell; Daily; Breath weapon; Draconic
+  
+      ---
+  
+  
+      **Target:**  1d3 nearby enemies
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  5d6 x 10 + Charisma fire damage
+  
+      **Miss:**  Half damage
+  
+      _Natural odd miss:_ Deal 25 fire damage to an ally engaged with the target.
+  
+      _Natural 1:_ Half of the gold you are carrying, or one of your true magic items
+      is teleported to the closest red dragon lair.
+  
+      _Breath weapon:_ For the rest of the battle, roll a d20 at the start of each of
+      your turns; on a 16+, you can use _Breath of the Red_ this turn if you wish. If
+      you fail the recharge roll, you take 25 fire damage.
+    feats: []
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Celestial Apotheosis
+    _type: Spell 9
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action; Celestial
+  
+      ---
+  
+  
+      **Special:**  You must have the celestial bloodline to cast this spell.
+  
+      **Target:**  You
+  
+      **Effect:**  Until the end of the battle or for the next five minutes, you can
+      fly. You roll saves at the start of your turn instead of at the end, and you
+      have advantage on them. You are immune to fear. When you cast a daily sorcerer
+      spell, you or a nearby ally can heal using a recovery.
+    feats:
+    - tier: epic
+      description: |2-
+         When you cast this spell, gain temporary hit points equal to your maximum hit
+        points.
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Draconic Apotheosis
+    _type: Spell 9
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Shapechange; Draconic
+  
+      ---
+  
+  
+      **Special:**  You must have the draconic bloodline to cast this spell.
+  
+      **Target:**  You
+  
+      **Effect:**  You change your shape into a large dragon for the next 5 minutes or
+      until the end of the battle. You can fly, and you gain a +2 bonus to all
+      defenses.
+  
+      Your claws, bite and tail count as natural weapons with a d10 damage die with
+      the two-weapon fighting benefit (reroll natural 2 on attacks). You can use your
+      Charisma modifier to attack with them.
+  
+      Increase the damage dice of all breath weapon spells you cast while in dragon
+      form by one step.
+    feats:
+    - tier: epic
+      description: ' When you cast a breath weapon spell, you also gain 10 temporary
+        hit points.'
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Infernal  Apotheosis
+    _type: Spell 9
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action; Infernal
+  
+      ---
+  
+  
+      **Special:**  This spell requires the infernal bloodline.
+  
+      **Effect:**  Until the end of the battle, you can fly. You project a fear aura
+      that affects nearby mooks (-4 to attacks and they can’t use the escalation die).
+      When you cast a daily sorcerer spell, enemies have disadvantage on any saves
+      against it. When you successfully save against an effect imposed on you by an
+      enemy, deal 20 fire damage to that enemy.
+    feats:
+    - tier: epic
+      description: |2-
+         When you cast a spell that deals fire or poison damage, the damage dice become
+        exploding dice (roll an additional die for each die that shows the maximum
+        result).
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Prey of the Wild Hunt
+    _type: Spell 9
+    source: DATP
+    description: |-
+      _Faerie nobles on white horses chase the target into the fey realms._
+  
+      Ranged spell; Daily; Fey
+  
+      ---
+  
+  
+      **Special:**  You must have the fey bloodline to cast this spell. If you empower
+      this spell, attack two targets instead of dealing double damage.
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Natural Even Hit:**  The target is whisked away into the fey realms and
+      removed from the battlefield. It starts making last gasp saves (16+). If it
+      succeeds at a save, it returns to where it left, at half its previous hit
+      points. If it fails its fourth save, it is at the mercy of the faerie.
+  
+      **Natural Odd Hit:**  3d6 x 10 + Charisma poison damage, and 50 ongoing poison
+      damage.
+  
+      **Natural Even Miss:**  You can repeat the attack as a standard action at the
+      start of your next turn.
+  
+      **Natural Odd Miss:**  30 poison damage
+    feats: []
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Spell Barrage
+    _type: Spell 9
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Arcane / Wild Magic
+  
+      ---
+  
+  
+      **Target:**  You
+  
+      **Effect:**  Until the end of the battle, you can cast a sorcerer at-will spell
+      as a quick action once per turn.
+    feats:
+    - tier: epic
+      description: |2-
+         If the escalation die is 6+, you can cast three sorcerer at-will spells as a
+        single standard action and end this spell.
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Twilight Travel
+    _type: Spell 9
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Any bloodline
+  
+      ---
+  
+  
+      **Effect:**  Your mind enters an in-between realm, outside of physical reality.
+      You can either step into the realm, or you can use it as a passage, to enter any
+      other location you have visited before. You can perceive the surroundings at
+      your target location before stepping through. Any effects of spells or items
+      cast before entering the realm are dispelled and no longer function on arrival.
+  
+      The type of realm you step into depends on your bloodline.
+  
+      _Arcane, Celestial, Draconic, Other:_ The Overworld
+  
+      _Fey:_ The Fey Realms
+  
+      _Infernal:_ The Abyss
+  
+      _Umbral:_ The Underworld
+  
+      _Wild Magic:_ Determine randomly
+    feats:
+    - tier: epic
+      description: ' You can take one ally per Charisma modifier with you.'
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Void Rift
+    _type: Spell 9
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Umbral
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy of your choice and 1d3 random nearby enemies
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  2d8 x 10 + Charisma negative energy damage
+  
+      _Natural 18+:_ The target is sucked into a pocket dimension. It is removed from
+      the battlefield and takes 50 ongoing negative energy damage (save ends both; on
+      a successful save the target reappears at a random nearby location).
+  
+      **Miss:**  Half damage
+    feats:
+    - tier: epic
+      description: ' The first (chosen) target is sucked into a pocket dimension on
+        any even hit.'
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Unleash Hell
+    _type: Spell 9
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Chain spell; Infernal
+  
+      ---
+  
+  
+      **Effect:**  You open a giant maw to the Abyss, from where fleshy tentacles
+      spread out to seek their victims. Until the end of the battle, make the
+      following attack at the start of your turn:
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Charisma + Level vs. PD
+  
+      **Hit:**  2d6 x 10 damage and the target is stuck and grabbed (deal half damage
+      again next turn) until the end of your next turn.
+  
+      _Natural 20:_ The target is dragged off the battlefield and into the Abyss
+      (double- and triple strength enemies can return with a hard save, 16+; weaker
+      enemies are just gone)
+  
+      **Miss:**  20 damage
+  
+      _Natural 1:_ The tentacles catch a random nearby ally instead. 1d6 x 10 damage
+      and the target is stuck and grabbed until the end of your next turn.
+  
+      _Chain spell:_ Each time your natural attack roll is even, you can attack a
+      different target with the spell.
+    feats: []
+    level: 9
+    category: Spells
+    usage: per-day
+  - name: Errata
+    _type: Spell 9
+    source: DATP
+    description: |-
+      Infernal Curse: The curse can only trigger once, instead of any number of times.
+      (Twice with the adventurer feat.)
+  
+      [P194] Animated Shadow: Added “It benefits from the Escalation die.”
+  
+      [P195] Arcane Overload, Minor Chain Spell: “When your attack roll” -> “When your
+      first attack roll”
+  
+      [P201] Choke Hold: Add “Target: One nearby enemy”
+    feats: []
+    level: 9
+    category: Spells
+  # END DATP ABILITIES
 ---
 
 ## Ability Scores
@@ -856,6 +4663,35 @@ Initiative, AC, PD, MD, Hit Points, Recovery Dice, Feats, and some Talents are l
   abilities={props.getAbilitiesByType("Basic Attack")}
   columns={2}
 />
+
+<If source="DATP">
+## Bloodline
+
+Your bloodline (_which you can pick at the top of this page_) customizes the Access to Wizardry, Gather Power
+(chaotic benefit), Dancing Lights, and Random Energy class features of the Core
+Book sorcerer. If you have a familiar, it also changes the available options.
+
+In _Dark Alleys & Twisted Paths_, each sorcerer spell is now linked to one or more bloodlines.
+You can still choose your sorcerer spells freely from any bloodline, but certain
+effects and benefits will only trigger for spells from your bloodline. The
+bloodlines presented in this book are:
+
+| | |
+|---|---|
+| **Arcane Bloodline** |  Descendants of powerful wizards |
+| **Celestial Bloodline** | Divine casters with angelic blood |
+| **Draconic Bloodline** | The pure gift granted by dragons |
+| **Fey Bloodline** | Progeny of fey creatures |
+| **Infernal Bloodline** | The taint of the Abyss |
+| **Storm Bloodline** | Infusion with raw elemental power |
+| **Umbral Bloodline** |  Engulfed by the shadows of the Underworld |
+| **Wild Magic** | Spontaneously manifested, untamed and chaotic forces |
+
+Your selected bloodline is:
+
+<Vault.AbilityList abilities={props.getAbilitiesByType("Bloodline")} />
+
+</If>
 
 ## Class Features
 
