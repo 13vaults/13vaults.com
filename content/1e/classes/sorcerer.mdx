@@ -183,6 +183,7 @@ abilities:
       | 3         | Lightning   |
       | 4         | Thunder     |
   - name: Arcane Heritage
+    replaced_by: DATP
     _type: Talent
     description: |-
       Although magic is in the blood of every sorcerer, you have a greater understanding of magic than most sorcerers and even some wizards.
@@ -1070,11 +1071,6 @@ abilities:
       The spell usually lasts at least an hour. You can cast it a number of times per
       day equal to your Charisma modifier.
     feats: []
-  - name: Celestial Familiars
-    _type: Talent
-    source: DATP
-    description: |-
-    feats: []
   - name: Draconic Bloodline
     _type: Bloodline
     version: Draconic
@@ -1820,14 +1816,10 @@ abilities:
       until the next full heal-up. The shadow counts as your ally. Summoning rules
       don’t apply to it. It benefits from the default bonus of your items for attacks
       and defenses. It benefits from the escalation die.
-    feats: []
-  - name: Animated Shadow
-    _type: Talent
-    source: DATP
-    description: |-
+      ### Animated Shadow
       _1st level troop_, undead
   
-      **Shadow Choke +4 vs. PD ** — 1d10 cold damage
+      **Shadow Choke +4 vs. PD** — 1d10 cold damage
   
       _Natural even hit:_ The target has disadvantage on disengage saves until the end
       of your next turn.
@@ -1839,8 +1831,27 @@ abilities:
       target the shadow instead.
   
       **Animated Shadow Level Advancement**
-    feats: []
-  - name: None
+      | Level | Attack | Damage | AC | PD | MD | HP  |
+      |-------|--------|--------|----|----|----|-----|
+      | 1     | +4     | 1d10   | 15 | 14 | 12 | 30  |
+      | 2     | +5     | 2d10   | 16 | 15 | 13 | 40  |
+      | 3     | +7     | 3d10   | 17 | 16 | 14 | 50  |
+      | 4     | +8     | 4d10   | 18 | 17 | 15 | 62  |
+      | 5     | +9     | 5d10   | 20 | 19 | 17 | 82  |
+      | 6     | +11    | 6d10   | 21 | 20 | 18 | 102 |
+      | 7     | +12    | 7d10   | 22 | 21 | 19 | 122 |
+      | 8     | +13    | 8d10   | 24 | 23 | 21 | 160 |
+      | 9     | +15    | 9d10   | 25 | 24 | 22 | 198 |
+      | 10    | +16    | 10d10  | 26 | 25 | 23 | 236 |
+
+    feats: 
+      - tier: adventurer
+        description: You can choose to deal negative energy instead of cold damage with your shadow. If you do, change the effect on a natural even hit to “The target’s next attack deals half damage.”
+      - tier: champion
+        description: _Shadow Blur_ is a quick action.
+      - tier: epic
+        description: The first time your shadow is destroyed after a full heal-up, you can animate it again after a quick rest.
+  - name: Arcane Heritage
     _type: Talent
     source: DATP
     description: |-
@@ -1857,13 +1868,10 @@ abilities:
       You also gain a +2 bonus to a background that involves or suggests magical
       knowledge or talent, up to your normal maximum background point limit.
   
-      <<<Begin Sidebar>>>
-  
-      Sorcerers with Access to Wizardry, but without Arcane Heritage, can still choose
+      _Sorcerers with Access to Wizardry, but without Arcane Heritage, can still choose
       wizard utility spells, but they can’t reserve a spell slot to spontaneously cast
-      a utility spell of their choice.
+      a utility spell of their choice._
   
-      <<<End Sidebar>>>
     feats:
     - tier: adventurer
       description: ' Gain three wizard cantrips as at-will bonus spells.'
@@ -1940,9 +1948,9 @@ abilities:
       description: |2-
          Gain a bonus spell at 4 levels below your class level. You can choose the spell
         from any class, but you can only choose spells that target yourself.
-  - name: None
+  - name: Elemental Mutation
     _type: Talent
-    source: DATP
+    source: DPAS
     description: |-
       Your innate talent has transformed your body. You have a Native Element and
       Natural Melee Weapons as per the abomination class feature. Your claws have a d6
@@ -2100,6 +2108,7 @@ abilities:
   - name: Wild Magic Heritage
     _type: Talent
     source: DATP
+    version: Wild
     description: |-
       _Your innate magical talent is strong, but untamed. It manifests itself in
       devastating spells, just not always when you want it._
@@ -2117,18 +2126,6 @@ abilities:
     - tier: champion
       description: ' Whenever you roll a natural 1 with a spell attack roll, gain a
         sorcery point.'
-  - name: Sorcerer Spells
-    _type: Talent
-    source: DATP
-    description: ''
-    feats: []
-  - name: 1st Level Spells
-    _type: Spell 1
-    source: DATP
-    description: ''
-    feats: []
-    level: 1
-    category: Spells
   - name: Alter Self
     _type: Spell 1
     source: DATP
@@ -2309,9 +2306,10 @@ abilities:
       _Breath weapon:_ For the rest of the battle, roll a d20 at the start of each of
       your turns; on a 16+, you can use _Breath of the Brass_ this turn if you wish.
   
-      **Brass Babble**
+      ### Brass Babble (requires feat)
   
       Close-quarters spell; Quick action; Draconic
+      ___
   
       **Target:**  One nearby enemy
   
@@ -2322,15 +2320,17 @@ abilities:
     - tier: adventurer
       description: |2-
          If you fail your roll to recharge _Breath of the Brass_ at the start of your
-        turn, you can use _Brass Babble_ (below) once before the end of your next turn.
+        turn, you can use _Brass Babble_ once before the end of your next turn.
     level: 1
     category: Spells
     usage: per-day
   - name: Celestial Resistance
     _type: Spell 1
     source: DATP
+    usage: recharge
     description: |-
       Ranged spell; Recharge 16+ after battle; Celestial
+      ___
   
       **Target:**  One nearby ally per point of Wisdom modifier (including you)
   
@@ -2608,7 +2608,7 @@ abilities:
   
       **Hit:**  1d8 + Charisma force damage.
   
-      **Miss: ** —
+      **Miss:** —
   
       _Odd miss on first attack:_ Half damage, and you don’t expend the spell.
   
@@ -2632,9 +2632,11 @@ abilities:
     usage: per-battle
   - name: Friends
     _type: Spell 1
+    usage: recharge
     source: DATP
     description: |-
       Close-quarter spell; Recharge 16+; Draconic / Fey / Umbral
+      ___
   
       **Effect:**  Until the end of the scene, you have a +3 bonus to Charisma-based
       skill checks. If you show hostility towards others, the spell ends.
@@ -2767,11 +2769,13 @@ abilities:
     usage: at-will
   - name: Sorcerer’s Shield
     _type: Spell 1
+    usage: recharge
     source: DATP
     description: |-
       Close-quarters spell; Recharge 16+; Quick action; Any bloodline
+      ___
   
-      **Target: ** You
+      **Target:** You
   
       **Effect:**  You gain a +1 bonus to AC until the end of the battle. Each time
       you gather power, increase the bonus by +1, up to a maximum of +4.
@@ -2913,13 +2917,6 @@ abilities:
     level: 1
     category: Spells
     usage: at-will
-  - name: 3rd Level Spells
-    _type: Spell 3
-    source: DATP
-    description: ''
-    feats: []
-    level: 3
-    category: Spells
   - name: Beast Form
     _type: Spell 3
     source: DATP
@@ -3222,12 +3219,14 @@ abilities:
     usage: per-battle
   - name: Flowery Kiss
     _type: Spell 3
+    usage: recharge
     source: DATP
     description: |-
       _A beautiful flower sprouts in your hand, and you blow its spores to your
       enemies._
   
       Close-quarters spell; Recharge 16+; Fey
+      ___
   
       **Target:**  1d4 nearby enemies in a group
   
@@ -3395,13 +3394,6 @@ abilities:
     level: 3
     category: Spells
     usage: at-will
-  - name: 5th Level Spells
-    _type: Spell 5
-    source: DATP
-    description: ''
-    feats: []
-    level: 5
-    category: Spells
   - name: Breath of the Copper
     _type: Spell 5
     source: DATP
@@ -3798,13 +3790,6 @@ abilities:
     level: 5
     category: Spells
     usage: per-battle
-  - name: 7th Level Spells
-    _type: Spell 7
-    source: DATP
-    description: ''
-    feats: []
-    level: 7
-    category: Spells
   - name: All-Consuming Inferno
     _type: Spell 7
     source: DATP
@@ -4233,13 +4218,6 @@ abilities:
     level: 7
     category: Spells
     usage: per-day
-  - name: 9th Level Spells
-    _type: Spell 9
-    source: DATP
-    description: ''
-    feats: []
-    level: 9
-    category: Spells
   - name: Black Blade of Disaster
     _type: Spell 9
     source: DATP
@@ -4559,22 +4537,6 @@ abilities:
     level: 9
     category: Spells
     usage: per-day
-  - name: Errata
-    _type: Spell 9
-    source: DATP
-    description: |-
-      Infernal Curse: The curse can only trigger once, instead of any number of times.
-      (Twice with the adventurer feat.)
-  
-      [P194] Animated Shadow: Added “It benefits from the Escalation die.”
-  
-      [P195] Arcane Overload, Minor Chain Spell: “When your attack roll” -> “When your
-      first attack roll”
-  
-      [P201] Choke Hold: Add “Target: One nearby enemy”
-    feats: []
-    level: 9
-    category: Spells
   # END DATP ABILITIES
 ---
 
