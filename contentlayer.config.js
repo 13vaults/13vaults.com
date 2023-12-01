@@ -131,6 +131,8 @@ const RulesDocument = defineDocumentType(() => ({
   fields: {
     title: { type: "string", required: true },
     source: { type: "string", required: true },
+    versions: { type: "list", of: ClassVersion, required:false },
+    abilities: { type: "list", of: Ability, required: false },
   },
   computedFields: {
     slug: {
