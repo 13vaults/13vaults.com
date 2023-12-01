@@ -31,6 +31,7 @@ export default function AbilityItem({
   description,
   feats,
   usage,
+  source
 }: AbilityItemP): JSX.Element {
   const headerBgMap: Record<NonNullable<Ability["usage"]>, string> = {
     "at-will":
@@ -59,6 +60,11 @@ export default function AbilityItem({
       >
         <Label as="h1" variant="title" className="text-left">
           {name}
+            {source !== undefined && (
+              <Label as="div" variant="title" className="text-gray-400 text-sm">
+                {source}
+              </Label>
+            )}
         </Label>
         <Label variant="label" className="text-right ordinal">
           {type}
