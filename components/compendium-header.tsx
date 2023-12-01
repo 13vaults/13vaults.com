@@ -31,6 +31,11 @@ export default function VaultHeader({
     }
     return currentVersion;
   };
+  const hasMultipleOptions = () => {
+    const options = versions.filter( (version) => 
+      !version.source || isSourceEnabled(bookStore,version.source)) 
+    return options.length > 1;
+  }
   bookStore.setCurrentDocument(primaryLabel);
   return (
     <header className="not-prose">
@@ -44,7 +49,7 @@ export default function VaultHeader({
       {versions && (
         <RadioGroup value={getVersion()} onChange={(value)=>bookStore.setDocumentVV(primaryLabel,"version",value)}>
         <div className="flex flex-row justify-end">
-          {versions && versions.map((version) => {
+          {hasMultipleOptions() &&  versions.map((version) => {
             if(version.source && !isSourceEnabled(bookStore, version.source))
             {
               return null;
