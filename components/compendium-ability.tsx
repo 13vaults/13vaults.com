@@ -28,7 +28,7 @@ export default function AbilityList({
     (ability.replaced_by && isSourceEnabled(bookstore,ability.replaced_by))
   };
 
-  // so far this is the only sourcebook that uses spell schools/bloodlines
+  // so far this is the only sourcebook that uses spell schools
   const displaySchools = isSourceEnabled(bookstore,"DATP");
 
   return (
