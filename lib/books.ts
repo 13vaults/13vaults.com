@@ -74,8 +74,21 @@ export const isVVEnabled = (state:BookState, type:string, vv:string, doc?:string
   {
     doc = state.currentDocument;
   }
-  const elem = state.selectedDocumentVVs.find((elem) => elem[0]==doc && elem[1]==type && elem[2]==vv)
-  if(elem) return true;
+  if(vv.includes("|"))
+  {
+    const alternatives = vv.split("|")
+    const elem = state.selectedDocumentVVs.find(
+      (elem) => elem[0]==doc && elem[1]==type && alternatives.indexOf(elem[2]) >= 0
+    )
+    if(elem) return true;
+  }
+  else
+  {
+    const elem = state.selectedDocumentVVs.find(
+      (elem) => elem[0]==doc && elem[1]==type && elem[2]==vv
+    )
+    if(elem) return true;
+  }
   return false;
 }
 export const getVV = (state:BookState, type:string, doc?:string) => {
