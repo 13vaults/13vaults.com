@@ -98,6 +98,224 @@ abilities:
         description: Increase your animal companion's damage die by one size (for example, from d6s to d8s, or d8s to d10s)
       - tier: epic
         description: Increase your animal companion's AC by +1.
+  - name: Pack Link
+    _type: Spell 1
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  Until the end of the battle, when the target attacks an enemy
+      that is engaged with you, increase the target’s melee attack
+      damage dice for that attack by one size, up to a maximum of d12.
+
+      5th level spell: The target’s basic melee attacks now deal half
+      damage on a natural even miss.
+
+      7th level spell: The target’s basic melee attacks now deal half
+      damage on any miss.
+
+    feats: []
+    usage: per-day
+  - name: Vitality
+    _type: Spell 1
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  The target heals using a free recovery.
+
+        3rd level spell: In addition, the target heals hit points equal to
+        your Wisdom modifier at the start of each of
+        its turns until the end of the battle or until it
+        drops to 0 hit points.
+
+        5th level spell: The healing the target gains at the start of its
+        turn is now double your Wisdom modifier.
+
+        7th level spell: The healing the target gains at the start of its
+        turn is now triple your Wisdom modifier.
+        
+        9th level spell: The first time this battle that the target drops
+        to 0 hit points, you can roll a normal save.
+        If you succeed, the target heals using one of
+        your recoveries.
+
+    feats: []
+    usage: per-day
+  - name: Magic Fang
+    _type: Spell 3
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  If the target already adds the escalation die to its attacks, it
+        gains a +2 attack bonus until the end of the battle. If not, it now
+        adds the escalation die to its attacks until the end of the battle.
+
+        5th level spell: The target’s crit range expands by 2.
+
+        9th level spell: The target’s crit range expands by a total of 4.
+
+    feats: []
+    usage: per-day
+  - name: Armor of Shell & Spirits
+    _type: Spell 5
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+      **Special**: You must spend a recovery to cast this spell.
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  Until the end of the battle, the target gains _resist damage
+        12+_ against attacks that target AC.
+
+        7th level spell: Resistance now includes attacks that target PD.
+
+        9th level spell: Resistance increases to _resist damage 14+_.
+    feats: []
+    usage: per-day
+  - name: Blood is Strong
+    _type: Spell 7
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  : Until the end of the battle, when the target hits with a melee
+        attack, you heal hit points equal to 1d10 + your Wisdom modifier.
+
+        9th level spell: You now heal hit points equal to 2d10 + double
+        your Wisdom modifier.
+    feats: []
+    usage: per-day
+  - name: Spirit Guardian
+    _type: Spell 9
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+      **Special Trigger**: You drop to 0 hp or below while your animal
+        companion is nearby and still above 0 hp.
+      **Effect:** Your spirit trades places with the spirit of your animal
+        companion. You now occupy the body of your animal
+        companion, using its current hit points, defenses, and attacks
+        (and the effects of any spells cast upon it earlier).
+
+        You can’t cast spells or use your normal humanoid powers
+        and class features while in your companion’s body. You can
+        either keep fighting as your animal companion or you can roll
+        a normal save as a quick action once during each of your turns;
+        if you succeed, your body and your animal companion’s body
+        swap places while your spirits return to their proper bodies.
+        You keep the hit points of the animal companion before you
+        rolled the save, but can heal using a recovery when the swap is
+        complete, if you wish. Returning to your own partially-healed
+        body thanks to the successful save ends the spell’s effect.
+
+        While your animal companion is in your body, it can roll
+        death saves and be healed. If it becomes conscious it can attack
+        using its basic melee attacks, but it doesn’t have access to any
+        of your spells or powers. Any failed death saves remain with
+        the spirit that failed them, not the body.
+    feats: []
+    usage: per-day
+# BEGIN DATP ABILITIES
+  - name: Borrow Senses
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One animal companion you touch
+  
+      **Effect:**  Until the end of the scene, you can use the companion’s senses as if they were your own, as long as it stays within about a mile distance. You can still use your own senses while doing so.
+  
+      7th level spell: You perceive the presence of the supernatural, such as lingering magic, invisible creatures or gateways to other planes.
+    feats: []
+    usage: per-day
+  - name: Thicker Leather
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  Until the end of the battle, your animal companion gains a +2 bonus to AC.
+  
+      5th level spell: It also gains the bonus to PD.
+  
+      7th level spell: Convert critical hits against the target into normal hits.
+    feats: []
+    usage: per-day
+  - name: Protective Pounce
+    _type: Spell 5
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Interrupt action
+  
+      ---
+  
+  
+      **Trigger:**  An enemy targets you with a melee attack
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  Your companion pops free, engages the attacker and makes a melee attack against them. If the companion’s attack hits, your attacker has disadvantage on their attack roll.
+    feats: []
+    usage: per-day
+  - name: Call Companion
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  Your current animal companion, regardless of where it is
+  
+      **Effect:**  Your companion appears at your side.
+    feats: []
+    usage: per-day
+  - name: Blink
+    _type: Spell 9
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  A nearby animal companion
+  
+      **Effect:**  Until the end of the battle, your animal companion can teleport to a nearby location once per round as a free action. If it teleports when it is attacked, it rolls a save. On a success, the attack has no effect.
+    feats: []
+    usage: per-day
+# END DATP ABILITIES
 ---
 
 The following rules apply to both the Ranger (_13th Age_) and the Druid (_13 True Ways_) with the corresponding talent.
@@ -150,6 +368,19 @@ limitation applies between full heal-ups, between adventures,
 and even between gaining levels. Consequently, it’s entirely
 possible that you may decide to have your animal companion
 miss two battles in a row.
+
+### Roleplaying the story
+What is your animal companion doing
+when it’s not fighting alongside you? That’s partly up to you. It
+could be that your companion likes to roam, hunting on its own,
+doing its own wild-nature thing until you need it. Or you could
+handle the companion more like some wizard familiars or party
+members who should be present but happen to have stepped out
+of the room or missed a session—the animal companion could
+be around, it’s just not playing a meaningful role in combat every
+battle. Therefore if you wish, you can interact with your animal
+companion in roleplaying terms whenever you like, even during
+battles that it’s not technically fighting in.
 
 ### Death rules
 If your animal companion
@@ -250,8 +481,18 @@ Generally your companion's Physical Defense should be higher than its Mental Def
 <Vault.AbilityList abilities={props.getAbilities(["Animal Companion Feats"])} />
 
 <If version="13 True Ways">
-## Spells
+## Animal Companion Spells
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 1")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 3")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 5")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 7")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 9")} />
 </If>
 <If version="Dark Alleys & Twisted Paths">
-## Spells
+## Circle of the Fang / Animal Companion Spells
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 1")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 3")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 5")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 7")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 9")} />
 </If>
