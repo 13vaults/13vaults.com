@@ -22,10 +22,20 @@ export const useBookStore = create<BookState, [["zustand/immer", never]]>(
       ["DPAS","Dark Pacts & Ancient Secrets",true],
     ];
 
-    // TODO: read flags from local storage, overriding defaults on known books
+    const localBooks = typeof localStorage !== 'undefined' ? JSON.parse(localStorage.getItem("books")) : null;
+    
+    const joinedBooks = localBooks ? 
+      initialBooks.map( (book) => 
+        [ book[0], book[1], 
+          localBooks.find((elem) => elem[0]==book[0]) ?.at(2) ?? book[2]]
+      ) : initialBooks;
+
+    // TODO: setting this properly, lol
+    setTimeout( () => (set(state => { state.enabledBooks = joinedBooks })), 1000 )
+
     // TODO: switch to object literal? maybe
     if (typeof localStorage !== "undefined") {
-      localStorage.setItem("books", JSON.stringify(initialBooks));
+      localStorage.setItem("books", JSON.stringify(joinedBooks));
     }
 
     return {
@@ -33,7 +43,7 @@ export const useBookStore = create<BookState, [["zustand/immer", never]]>(
       toggleEnabledBook: (indexToChange: number) => {
         set((state) => {
          state.enabledBooks[indexToChange][2] = !state.enabledBooks[indexToChange][2];
-          localStorage.setItem("books", JSON.stringify(state.enabledBooks));
+          localStorage?.setItem("books", JSON.stringify(state.enabledBooks));
         })
       },
       selectedDocumentVVs: [],
@@ -58,7 +68,7 @@ export const useBookStore = create<BookState, [["zustand/immer", never]]>(
         },
         currentDocument: null,
         setCurrentDocument: (docName) => set((state) => {state.currentDocument = docName;}),
-        // TODO: update localstorage
+        // TODO: update localstorage with VVs
     };
   })
 );
@@ -96,7 +106,6 @@ export const getVV = (state:BookState, type:string, doc?:string) => {
   {
     doc = state.currentDocument;
   }
-  console.log(state.selectedDocumentVVs)
   const elem = state.selectedDocumentVVs.find((elem) => elem[0]==doc && elem[1]==type);
   return elem ? elem[2] : null;
 }
