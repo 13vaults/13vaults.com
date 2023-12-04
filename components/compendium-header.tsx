@@ -47,15 +47,18 @@ export default function VaultHeader({
         </p>
       </div>
       {versions && (
-        <RadioGroup value={getVersion()} onChange={(value)=>bookStore.setDocumentVV(primaryLabel,"version",value)}>
-        <div className="flex flex-row justify-end">
+        <RadioGroup value={getVersion()} onChange={(value)=>bookStore.setDocumentVV(primaryLabel,"version",value)}
+        as="div" className="max-w-[80%]"
+        >
+        <div className="flex-row justify-end">
           {hasMultipleOptions() &&  versions.map((version) => {
             if(version.source && !isSourceEnabled(bookStore, version.source))
             {
               return null;
             }
             return (
-              <RadioGroup.Option key={version.name} value={version.name}>
+              <RadioGroup.Option key={version.name} value={version.name} 
+                as="div" className="inline-block">
                 {({active, checked}) => (
                   <div className={(checked? 
                     'bg-amber-500 text-black border-amber-500':

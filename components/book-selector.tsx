@@ -13,7 +13,7 @@ export function BookSelector() {
   });
 
   return (
-    <Popover as="div" horizontal>
+    <Popover as="div" horizontal="true">
             <Popover.Button
               className="flex p-2 items-center justify-center shadow-md shadow-black/5 ring-1 bg-stone-800 ring-inset ring-white/5"
               aria-label={t("theme-switcher") as string}
@@ -35,7 +35,7 @@ export function BookSelector() {
                 <>
                 <h3 className="font-serif font-bold text-center p-2">Additional content</h3>
                 {enabledBooks.map( (book, index) => (
-                  <div className="text-stone-400 p-2">
+                  <div className="text-stone-400 p-2" key={book[0]}>
                   <Switch
                     checked={book[2]}
                     onChange={ () => toggleEnabledBook(index) }

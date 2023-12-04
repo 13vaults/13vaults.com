@@ -395,10 +395,8 @@ export default function MegaNav({ navigation }: { navigation: Navigation }) {
                   </Link>
                 </div>
 
-                <div className="lg:hidden relative">
+                <div className="lg:hidden relative flex space-x-2">
                   <BookSelector />
-                </div>
-                <div className="lg:hidden relative">
                   <ThemeSelector />
                 </div>
               </div>
