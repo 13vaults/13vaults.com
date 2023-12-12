@@ -18,6 +18,11 @@ interface AbilityItemP {
   description: Ability["description"];
   feats: Ability["feats"] | PartialFeat[];
   usage: Ability["usage"];
+  version: Ability["version"];
+  variant: Ability["variant"];
+  tier: Ability["tier"];
+  source: Ability["source"];
+  replaced_by: Ability["replaced_by"];
 }
 
 export default function AbilityItem({
@@ -26,6 +31,7 @@ export default function AbilityItem({
   description,
   feats,
   usage,
+  source
 }: AbilityItemP): JSX.Element {
   const headerBgMap: Record<NonNullable<Ability["usage"]>, string> = {
     "at-will":
@@ -38,8 +44,13 @@ export default function AbilityItem({
     recharge: "from-sky-600 to-sky-800 dark:from-sky-700 dark:to-sky-900",
   };
 
+  const isSubItem = type && (type.startsWith("Domain Spell") || type.startsWith("Death Knight Rune") || type.startsWith("Bonus Power") || type.startsWith("Arcane Shot"))
+
   return (
-    <section className="text-base m-0 text-stone-950 dark:text-stone-50 relative">
+    <section className={clsx(
+       isSubItem ? "ml-16": "",
+      "text-base m-0 text-stone-950 dark:text-stone-50 relative"
+    )}>
       <div className="absolute -inset-[2px] border-2 border-stone-100 dark:border-stone-950 pointer-events-none" />
       <header
         className={clsx(
@@ -49,6 +60,11 @@ export default function AbilityItem({
       >
         <Label as="h1" variant="title" className="text-left">
           {name}
+            {source !== undefined && (
+              <Label as="div" variant="title" className="text-gray-400 text-sm">
+                {source}
+              </Label>
+            )}
         </Label>
         <Label variant="label" className="text-right ordinal">
           {type}

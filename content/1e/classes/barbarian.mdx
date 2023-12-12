@@ -77,6 +77,7 @@ abilities:
   - name: Barbaric Cleave
     _type: Talent
     usage: per-battle
+    tier: adventurer
     description: |-
       **Effect:**
       Once per battle, as a free action, you can make a standard melee attack after having dropped any enemy to 0 hp with a standard melee attack.
@@ -91,6 +92,7 @@ abilities:
   - name: Building Frenzy
     _type: Talent
     usage: per-day
+    tier: adventurer
     description: |-
       **Effect:**
       One battle per day, as a free action after you have missed an attack, gain +1d4 damage to each successful melee attack until the end of the battle.
@@ -104,6 +106,7 @@ abilities:
         description: You can use Building Frenzy twice a day.
   - name: Slayer
     _type: Talent
+    tier: adventurer
     description: |-
       **Effect:**
       During your turn, when you attack a staggered enemy you were not engaged with at the start of your turn, deal +1d6 damage per level to that creature if you hit.
@@ -116,6 +119,7 @@ abilities:
         description: Whenever one of your Slayer attacks drops a non-mook enemy to 0 hp, you gain 20 temporary hit points.
   - name: Strongheart
     _type: Talent
+    tier: adventurer
     description: |-
       **Effect:**
       Your recovery dice are d12s instead of d10s.
@@ -128,6 +132,7 @@ abilities:
         description: Increase your total number of recoveries by 1 (making a total of +2 from this talent).
   - name: Whirlwind
     _type: Talent
+    tier: adventurer
     description: |-
       **Effect:**
       You can make a Whirlwind attack as the first action of your turn when you are engaged by two or more enemies.
@@ -145,6 +150,7 @@ abilities:
   - name: Unstoppable
     _type: Talent
     usage: per-battle
+    tier: adventurer
     description: |-
       **Effect:**
       Once per battle, declare you're using Unstoppable before making a barbarian melee attack.
@@ -159,6 +165,7 @@ abilities:
   - name: Natural Will
     _type: Talent
     usage: per-day
+    tier: champion
     description: |-
       **Effect:**
       One battle per day as a quick action, you gain a +2 bonus to your Mental Defense until the end of the battle.
@@ -172,6 +179,7 @@ abilities:
   - name: Violence
     _type: Talent
     usage: per-battle
+    tier: champion
     description: |-
       **Effect:**
       Once per battle, add a +1d4 bonus to a barbarian melee attack roll after finding out whether you hit or missed.
@@ -183,6 +191,7 @@ abilities:
   - name: Ancestral Warband
     _type: Talent
     usage: per-day
+    tier: epic
     description: |-
       **Effect:**
       One battle per day as a quick action, you can call the spirits of your ancestors to fight alongside you.
@@ -197,12 +206,406 @@ abilities:
         description: Your Ancestral Warband spirits are always raging, even if you are not, and continue to fight for a single round while you are unconscious.
   - name: Relentless
     _type: Talent
+    tier: epic
     description: |-
       **Effect:**
       While raging, you have resist damage 12+ (when an attack targets you, the attacker must roll a natural 12 or higher on the attack roll or it only deals half damage).
     feats:
       - tier: epic
         description: Even when not raging, whenever you score a critical hit against an enemy, you have resist damage 12+ until the start of your next turn.
+# BEGIN DATP ABILITIES
+  - name: Bouncer
+    _type: Talent
+    source: DATP
+    description: |
+      Your unarmed attacks take no attack penalty, use d8 damage dice, and benefit
+      from two-weapon fighting (reroll natural 2 on the attack). You can use true
+      magic item bracers like a monk to improve your unarmed attacks.
+  
+      Once per battle, when you hit with an unarmed melee attack, you can declare a
+      wrestling stunt. Choose one of the effects below:
+  
+      - The target is dazed: -4 to attacks; save ends.
+      - Force the target off guard: -4 to AC and PD; save ends.
+      - Choke (or twist) the target: deal 1d6 per level extra damage; this damage is
+      not doubled on a critical hit.
+      - Throw the target: normal size or smaller only; attacks against it have
+      advantage until it takes a move action; you can choose to pop free from it.
+      - Restrain the target: normal size or smaller only; the target has disadvantage
+      on disengage checks and attack rolls (save ends); also ends when you or the
+      target disengages. While restraining an enemy, the only attacks you can make are
+      unarmed melee attacks against that target.
+      - Hold on to the target (large or huge enemies only): when the target moves, you
+      stay engaged with it even if it disengages from other combatants; it can shake
+      you off if it succeeds at an attack against you (this is a different effect from
+      a grab).
+    feats:
+    - tier: adventurer
+      description: |2-
+         When you use your wrestling stunt on a critical hit, you can choose two of the
+        effects.
+    - tier: champion
+      description: ' When you rally during a battle, you gain a second use of a wrestling
+        stunt.'
+    - tier: epic
+      description: ' When the escalation die is 2+, increase your unarmed damage dice
+        to d10s.'
+    tier: adventurer
+  - name: Bulwark
+    _type: Talent
+    source: DATP
+    description: |-
+      _Shields up and into the fray._
+  
+      When you wield a shield, reduce the damage you take from enemy attacks by your
+      level.
+    feats:
+    - tier: adventurer
+      description: |2-
+         When you intercept an enemy or an enemy intercepts you, make a basic melee
+        attack against them as a free action.
+    - tier: champion
+      description: ' While wielding a shield, you gain a +1 bonus to PD.'
+    - tier: epic
+      description: ' Increase the damage reduction to twice your level.'
+    tier: adventurer
+  - name: Deadly Twins
+    _type: Talent
+    source: DATP
+    description: |-
+      When you fight with two melee weapons and you score a critical hit, make a
+      second melee attack against the target. You can use this talent once per round.
+    feats:
+    - tier: adventurer
+      description: |2-
+         You can pop free and engage a different target to make the second Deadly Twins
+        attack. If you do so, you gain a +2 bonus to the attack roll.
+    - tier: champion
+      description: |2-
+         The first time you miss with a Deadly Twins attack in a battle, you can reroll
+        the attack.
+    - tier: epic
+      description: ' When you hit with a Deadly Twins attack, deal 25 ongoing damage
+        to the target.'
+    tier: adventurer
+  - name: Giant Blood
+    _type: Talent
+    source: DATP
+    description: |-
+      Once per battle or scene, as a standard action, you can perform a stunt that
+      uses your massive reserves of brute strength. Smash a hole in a wall, lift a
+      giant monolith, or wrestle an iron golem. While this usually won’t require a
+      skill check, the GM can still call for an attack roll if you try to wrestle down
+      an unwilling target or bury them under something very heavy.
+    feats:
+    - tier: adventurer
+      description: |2-
+         You can wield heavy two-handed (d10) melee weapons in one hand, or wield an
+        oversized heavy two-handed (d12) weapon with both hands.
+    - tier: champion
+      description: ' You have advantage on all Strength-based skill checks.'
+    - tier: epic
+      description: |2-
+         Add four times your Strength modifier to melee weapon damage (instead of three
+        times).
+    tier: adventurer
+  - name: Lycanthrope
+    _type: Talent
+    source: DPAS
+    description: |-
+      When you enter a barbarian rage, you grow natural weapons and armor as per the
+      abomination class features. You also gain one abomination maneuver of up to your
+      level that you can trigger when making a melee attack with your natural weapons.
+    feats:
+    - tier: adventurer
+      description: |2-
+         Choose Carnage, Fueled by Pain, Hardened Plating, Hard to Kill, Monstrous
+        Stunt, Slithering Snake, or Troll Blood. You gain the benefits of this
+        abomination talent while raging.
+    - tier: champion
+      description: ' Gain a second abomination maneuver.'
+    - tier: epic
+      description: ' Gain a third abomination maneuver.'
+    tier: adventurer
+  - name: Primal War Dance
+    _type: Talent
+    source: DATP
+    description: |-
+      When you fight with one-handed melee weapons, you can use Dexterity instead of
+      Strength for attack and damage.
+  
+      While raging, you gain a +2 bonus to AC, PD and disengage checks.
+    feats:
+    - tier: adventurer
+      description: ' While raging, you take no damage from missed enemy attacks.'
+    - tier: champion
+      description: |2-
+         When an enemy misses you with a melee attack while you rage, deal damage to
+        them equal to twice your Dexterity modifier (x3 at 8th level).
+    - tier: epic
+      description: ' Increase the bonuses to +3.'
+    tier: adventurer
+  - name: Raging Revenant
+    _type: Talent
+    source: DATP
+    description: |-
+      **Special:**  You cannot take this talent at character creation. Instead, when
+      your PC dies, resurrect him or her and swap out one barbarian talent for this
+      one.
+  
+      Whenever you face those who killed you, you can rage for free.
+  
+      However, you left a part of your soul down below. You are now Sorta Dead, as per
+      the necromancer talent. If you get killed again, you can return without taking
+      the talent another time. You travel for 1d6 days as you make your way back from
+      the Underworld. Each time you die, you lose a recovery permanently, until you
+      have none left and your soul is trapped in the afterlife eternally. Let’s hope
+      you have found peace by then.
+    feats:
+    - tier: adventurer
+      description: |-
+         You suck the life out of your surroundings to sustain yourself. When you make a
+        recovery roll to heal, and a die comes up as the maximum, deal negative energy
+        damage equal to that die to each enemy engaged with you.
+    - tier: champion
+      description: |-
+         When you are reduced to zero hit points or below while raging, your Rage ends,
+        but you no longer fall unconscious. You can still die after failing death saves,
+        or when you reach negative hit points equal to half your maximum hit points, but
+        until that point, you can act normally.
+    - tier: epic
+      description: |-
+         As per the champion-tier feat, but you keep raging even when at negative hit
+        points.
+    tier: adventurer
+  - name: Red Mist
+    _type: Talent
+    source: DATP
+    description: |-
+      If you are staggered at the start of your turn, you can start raging for free.
+      (It doesn’t count against your normal usage.)
+    feats:
+    - tier: adventurer
+      description:  While raging, you are immune to fear effects.
+    - tier: champion
+      description:  While raging, you are immune to the dazed condition.
+    - tier: epic
+      description:  While raging, you are immune to the weakened condition.
+    tier: adventurer
+  - name: Spirit Guardian
+    _type: Talent
+    source: DATP
+    description: |
+      You’ve bonded with a spirit animal that watches over you and protects you. It’s
+      a privilege that is awarded only to the most honorable warriors of your tribe.
+  
+      You gain a 4-point background that represents the spiritual connection to your
+      spirit guide. You can use it on skill checks to perceive supernatural dangers.
+  
+      You also gain the two special abilities below. Once per day, you can activate
+      one of the abilities as a quick action.
+  
+      - Infuse your body with the power of your spirit. Choose the beast aspect from
+      the druid’s shifter talent that is closest to your spirit animal, and gain its
+      initiate benefit until the end of the battle.
+      - Spend a recovery without healing as a quick action to manifest your spirit.
+      Until the end of the battle, your spirit companion joins the battle as your
+      ally. Create an Animal Companion as per the ranger talent in the core book. As a
+      spirit creature, your companion gains resist physical damage 16+.
+    feats:
+    - tier: adventurer
+      description: |-
+         If you are raging while your spirit companion is manifested, it can make one
+        attack with the benefit of raging that battle.
+    - tier: champion
+      description:  You can use both the infuse and the manifest ability once per day
+        each.
+    - tier: epic
+      description: |-
+         Once per battle, you or your manifested spirit companion can reroll a save with
+        a +4 bonus.
+    tier: adventurer
+  - name: Tribal War Chief
+    _type: Talent
+    source: DATP
+    description: |
+      You gain three points in a background that represents your past or your destiny
+      as a tribal leader. In addition, choose one of the benefits below:
+  
+      - You inherited a treasured set of armor as a sign of your status. You take no
+      penalty for wearing heavy armor.
+      - Your voice rallies the troops. Choose a battle cry of your level or lower from
+      the bard’s list.
+      - You inherited the gift of leadership from your ancestors. Choose a tactic of
+      your level or lower from the commander list.
+      - The icons have taken special interest in the destiny of you and your clan. You
+      gain an additional icon relationship die.
+      - With you in the lead, others expect victory. Once per day, when you score a
+      critical hit, increase the escalation die by 1.
+    feats:
+    - tier: adventurer
+      description:  Choose a second benefit from the list.
+    - tier: champion
+      description:  Choose a third benefit from the list.
+    - tier: epic
+      description:  Choose a fourth benefit from the list.
+    tier: adventurer
+  - name: Awaken the Fury
+    _type: Talent
+    source: DATP
+    description: |-
+      Once per battle, when you enter Barbarian Rage, you can engage a nearby enemy
+      and make a melee attack as a free action.
+    feats:
+    - tier: champion
+      description: |-
+         Also gain 5 times the escalation die in temporary hit points (8th level: 10
+        times).
+    - tier: epic
+      description: |-
+         If you hit with the melee attack granted by this talent, deal 10 times the
+        escalation die in ongoing damage.
+    tier: champion
+  - name: Blood-Soaked Resurgence
+    _type: Talent
+    source: DATP
+    description: |-
+      The first time you are reduced to zero hit points in a battle, you can
+      immediately spend a recovery to heal. If you use this talent while raging, deal
+      three times your level in psychic damage to each enemy you are engaged with.
+    feats:
+    - tier: champion
+      description: |-
+         After using this talent, deal 1d12 (8th level: 2d12) extra psychic damage when
+        you hit with a melee attack, until the end of the battle.
+    - tier: epic
+      description:  Heal additional hit points equal to 20 x the escalation die with
+        the recovery.
+    tier: champion
+  - name: Primitive Strength
+    _type: Talent
+    source: DATP
+    description: |-
+      One battle per day, after succeeding with a melee attack, really put your back
+      into it and deal an additional 1d6 damage.
+    feats:
+    - tier: champion
+      description:  Bonus die is now 1d8.
+    - tier: epic
+      description:  Bonus die is now 1d12.
+    tier: champion
+  - name: Raging Storm
+    _type: Talent
+    source: DATP
+    description: |-
+      When you hit with a melee attack, deal 1d8 extra lightning damage (7th level:
+      1d12; 9th level: 1d20) to the target.
+    feats:
+    - tier: champion
+      description:  While raging, deal the extra damage to all nearby enemies.
+    - tier: epic
+      description:  You gain resist lightning and thunder 16+.
+    tier: champion
+  - name: Rallying Cry
+    _type: Talent
+    source: DATP
+    description: |-
+      When you score a critical hit, all nearby allies gain a +2 bonus to melee attack
+      rolls and saves against effects until the end of your next turn.
+    feats:
+    - tier: champion
+      description:  You grant the bonus to all saves, including saves to disengage and
+        death saves.
+    - tier: epic
+      description:  You grant the bonus to all attack rolls, including ranged and spell
+        attacks.
+    tier: champion
+  - name: Tenacious Grit
+    _type: Talent
+    source: DATP
+    description: |-
+      You gain a +1 bonus to all saves, including death saves. While raging, the bonus
+      is equal to your Constitution modifier instead.
+    feats:
+    - tier: champion
+      description:  When you start raging, you can make a save against all effects.
+    - tier: epic
+      description:  You take half damage from ongoing damage.
+    tier: champion
+  - name: Axe-Crazy Intimidation
+    _type: Talent
+    source: DATP
+    description: While you are engaged with an enemy, they take a -2 penalty to all
+      defenses.
+    feats:
+    - tier: epic
+      description: |-
+         Enemies must always succeed at a disengage check if they want to disengage from
+        you, even if they use abilities that pop free or teleport. If the check fails,
+        the enemy stays engaged.
+    tier: epic
+  - name: Blood Rage
+    _type: Talent
+    source: DATP
+    description: When you score a critical hit, you can heal using a free recovery.
+    feats:
+    - tier: epic
+      description: |2-
+         After you score a critical hit, the next time you are hit by an attack, you
+        take half damage. Multiple half-damage effects don’t stack.
+    tier: epic
+  - name: Fury of the North Wind
+    _type: Talent
+    source: DATP
+    description: |-
+      In battle, you can call on the Fury of the North Wind as a standard action.
+      Until the end of your next turn, you gain a +2 bonus to all defenses and _resist
+      cold_ 16+.
+  
+      On your next turn, you can pop free from all enemies and make a giant leap,
+      carried by the icy winds, to engage a nearby or far away enemy as a move action.
+      Your next melee attack that turn deals double damage, and you always count as
+      raging when making the attack.
+    feats:
+    - tier: epic
+      description: |-
+         When you activate Fury of the North Wind, enemies engaged with you must succeed
+        at a save or take 25 cold damage and be dazed until the end of your next turn.
+    tier: epic
+  - name: Killing Frenzy
+    _type: Talent
+    source: DATP
+    description: Your critical hits deal triple damage.
+    feats:
+    - tier: epic
+      description:  When you are not raging, increase your critical threat range by
+        1.
+    tier: epic
+  - name: Meat Grinder
+    _type: Talent
+    source: DATP
+    description: |-
+      When an enemy misses with a melee attack against you, you can make a melee
+      attack against them as an interrupt action.
+    feats:
+    - tier: epic
+      description: |-
+         Once per battle, use this talent as a free action (ignoring the limit of one
+        interrupt action between your turns).
+    tier: epic
+  - name: Might of the Demigod
+    _type: Talent
+    source: DATP
+    description: |-
+      **Special:**  You can only choose this talent as a single-class barbarian.
+  
+      Increase your Strength and Constitution scores by 4.
+    feats:
+    - tier: epic
+      description:  Increase your Dexterity, Intelligence, Wisdom and Charisma scores
+        by 1.
+    tier: epic
+  # END DATP ABILITIES
 ---
 
 ## Ability Scores
@@ -299,31 +702,18 @@ All barbarians have the Barbarian Rage class feature.
 Choose three of the following adventurer-tier class talents.
 You also get an additional barbarian class talent at 5th level and again at 8th level.
 
-<Vault.AbilityList
-  abilities={props.getAbilities([
-    "Barbaric Cleave",
-    "Building Frenzy",
-    "Slayer",
-    "Strongheart",
-    "Whirlwind",
-    "Unstoppable",
-  ])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByTypeAndTier("Talent", "adventurer")} />
 
 ### Champion Talents
 
 At 5th level, you gain an additional barbarian class talent.
 Choose one of these champion-tier talents or take another adventurer-tier talent.
 
-<Vault.AbilityList
-  abilities={props.getAbilities(["Natural Will", "Violence"])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByTypeAndTier("Talent", "champion")} />
 
 ### Epic Talents
 
 At 8th level, you gain an additional barbarian class talent.
 Choose one of these epic-tier talents, or take another adventurer-tier or champion-tier talent instead.
 
-<Vault.AbilityList
-  abilities={props.getAbilities(["Ancestral Warband", "Relentless"])}
-/>
+<Vault.AbilityList abilities={props.getAbilitiesByTypeAndTier("Talent", "epic")} />

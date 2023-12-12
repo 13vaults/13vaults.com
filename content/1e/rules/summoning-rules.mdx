@@ -1,6 +1,31 @@
 ---
 title: Summoning Rules
 source: 13 True Ways, p.11
+abilities:
+  - name: Summoning Feats
+    description: |
+        The feats below do not need to be taken in order.
+    _type: General Feat
+    source: DATP
+    feats:
+      - tier: adventurer
+        description: |
+            Your summoned creatures can arrive anywhere you can see nearby, instead of needing to appear beside you.
+      - tier: adventurer
+        description: |
+          When you summon a non-mook creature, it gains bonus hit points equal to 1d10 plus your highest ability modifier (5th level: 2d10 + 2x mod; 8th level: 3d10 + 3x mod).
+      - tier: adventurer
+        description: |
+          When a creature you summoned is granted the ability to heal using a recovery, it can use one of your recoveries and your recovery roll.
+      - tier: champion
+        description: |
+          You can cast your summoning spells as a 2d4-minute ritual outside of battle. This summons the creature until your next full heal-up (unless it is brought down to zero hit points).
+      - tier: champion
+        description: |
+          After you summon a creature, the first enemy attack against it has disadvantage.
+      - tier: epic
+        description: |
+          Once per day when you heal using a recovery, a creature you summoned can heal the same amount, ignoring the usual restrictions on limited healing for summoned creatures.
 ---
 
 ## Standard action spells
@@ -113,3 +138,8 @@ _Druid, Necromancer:_ You can dismiss your summoned creature using a quick actio
 _Demonologist:_ Dismissing a demon during combat isn’t that simple: after dismissing the demon, roll a control save as if the demon had dropped to 0 hit points.
 If the demon goes out of control, use its current hit points or the amount it would have if it dropped to 0 and then went out of control, whichever is higher.
 Out of combat, you concentrate fully and dismiss your summoned demon without rolling a control save.
+
+<If source="DATP">
+## General Feats
+<Vault.AbilityList abilities={props.getAbilitiesByType("General Feat")} />
+</If>

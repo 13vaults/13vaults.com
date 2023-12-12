@@ -11,12 +11,14 @@ function NavLink({
   href,
   active = false,
   children,
+  isOriginRendered
 }: {
   href: string;
   active?: boolean;
   children: ReactNode;
+  isOriginRendered: boolean;
 }) {
-  return (
+  return isOriginRendered && (
     <a
       href={href}
       aria-current={active ? "page" : undefined}
@@ -72,7 +74,7 @@ function VisibleSectionHighlight() {
 function NavigationGroup({ section }: any) {
   return (
     <li>
-      <NavLink href={`#${section.id}`}>{section.title}</NavLink>
+      <NavLink href={`#${section.id}`} isOriginRendered={section.rendered}>{section.title}</NavLink>
     </li>
   );
 }

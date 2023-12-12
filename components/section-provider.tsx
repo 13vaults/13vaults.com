@@ -43,10 +43,20 @@ function createSectionStore(sections: Section[]) {
                 ...section,
                 headingRef: ref,
                 offsetRem,
+                rendered:true
               };
             }
             return section;
           }),
+        };
+      }),
+    unregisterHeading: (id:string) =>
+      set((state) => {
+        return {
+          sections: state.sections.map((section) => section.id == id ? {
+                ...section,
+                rendered: false
+          } : section)  
         };
       }),
   }));

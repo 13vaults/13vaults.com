@@ -1,0 +1,773 @@
+---
+title: Animal Companions
+source: 13th Age, p.121
+versions:
+    - name: Core Book
+    - name: 13 True Ways
+    - name: Dark Alleys & Twisted Paths
+      source: DATP
+abilities:
+  - name: Bear
+    _type: Animal Companion
+    description: |-
+      _(also Giant Badger, Wolverine)_
+
+      ---
+
+      **Acts:** After ranger
+
+      **Advantage:** The bear gains temporary hit points equal to its level each time it hits with an attack.
+    feats:
+      - tier: champion
+        description: The temporary hit points increase to double its level.
+  - name: Boar
+    _type: Animal Companion
+    description: |-
+      _(also Spiky Lizard)_
+
+      ---
+
+      **Acts:** Before ranger
+
+      **Advantage:** The boar gains a +1 attack bonus when it moves before its attack during the same turn.
+  - name: Eagle
+    _type: Animal Companion
+    description: |-
+      _(also Falcon, Hawk, Owl, Vulture)_
+
+      ---
+
+      **Acts:** Before ranger
+
+      **Advantage:** It flies! Its melee damage die is dropped by one size (d6 at level 0).
+  - name: Panther
+    _type: Animal Companion
+    description: |-
+      _(also Lion, Tiger)_
+
+      ---
+
+      **Acts:** Before ranger
+
+      **Advantage:** The panther’s crit range expands by 2 against enemies with lower initiative.
+  - name: Snake
+    _type: Animal Companion
+    description: |-
+      _(also Giant Spider, Poison Toad)_
+
+      ---
+
+      **Acts:** After ranger
+
+      **Advantage:** The snake also deals ongoing poison damage equal to twice your level on a natural attack roll of 18+.
+    feats:
+      - tier: champion
+        description: The ongoing damage is three times your level instead.
+      - tier: epic
+        description: The ongoing damage is four times your level instead.
+  - name: Wolf
+    _type: Animal Companion
+    description: |-
+      _(also Big Dog, Coyote, Hyena, Jackal)_
+
+      ---
+
+      **Acts:** After ranger
+
+      **Advantage:** The wolf gains a +1 attack bonus against enemies its master attacked the same turn, or against enemies engaged with its master.
+  - name: Animal Companion Feats
+    description: |-
+      Ranger animal companion feats are designed so that they do not build on each other.
+      Unlike other feats, you don't have to take animal companion feats progressively, one after the other as long as you qualify for the correct tier.
+    feats:
+      - tier: adventurer
+        description: Once per day, your animal companion can attack twice in a round with a standard action.
+      - tier: adventurer
+        description: Once per battle, your animal companion can turn a disengage success by an enemy it is engaged with into a failure.
+      - tier: adventurer
+        description: Once per day, reroll one of your animal companion's missed attack rolls.
+      - tier: adventurer
+        description: Your animal companion adds the escalation die to its attacks.
+      - tier: champion
+        description: Once per day, your animal companion can force an enemy to reroll an attack that hit it.
+      - tier: champion
+        description: Your Lethal Hunter talent also applies to your animal companion.
+      - tier: champion
+        description: Increase your animal companion's Physical Defense and Mental Defense by +1.
+      - tier: epic
+        description: Increase your animal companion's damage die by one size (for example, from d6s to d8s, or d8s to d10s)
+      - tier: epic
+        description: Increase your animal companion's AC by +1.
+  - name: Pack Link
+    _type: Spell 1
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  Until the end of the battle, when the target attacks an enemy
+      that is engaged with you, increase the target’s melee attack
+      damage dice for that attack by one size, up to a maximum of d12.
+
+      5th level spell: The target’s basic melee attacks now deal half
+      damage on a natural even miss.
+
+      7th level spell: The target’s basic melee attacks now deal half
+      damage on any miss.
+
+    feats: []
+    usage: per-day
+  - name: Vitality
+    _type: Spell 1
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  The target heals using a free recovery.
+
+        3rd level spell: In addition, the target heals hit points equal to
+        your Wisdom modifier at the start of each of
+        its turns until the end of the battle or until it
+        drops to 0 hit points.
+
+        5th level spell: The healing the target gains at the start of its
+        turn is now double your Wisdom modifier.
+
+        7th level spell: The healing the target gains at the start of its
+        turn is now triple your Wisdom modifier.
+        
+        9th level spell: The first time this battle that the target drops
+        to 0 hit points, you can roll a normal save.
+        If you succeed, the target heals using one of
+        your recoveries.
+
+    feats: []
+    usage: per-day
+  - name: Magic Fang
+    _type: Spell 3
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  If the target already adds the escalation die to its attacks, it
+        gains a +2 attack bonus until the end of the battle. If not, it now
+        adds the escalation die to its attacks until the end of the battle.
+
+        5th level spell: The target’s crit range expands by 2.
+
+        9th level spell: The target’s crit range expands by a total of 4.
+
+    feats: []
+    usage: per-day
+  - name: Armor of Shell & Spirits
+    _type: Spell 5
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+      **Special**: You must spend a recovery to cast this spell.
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  Until the end of the battle, the target gains _resist damage
+        12+_ against attacks that target AC.
+
+        7th level spell: Resistance now includes attacks that target PD.
+
+        9th level spell: Resistance increases to _resist damage 14+_.
+    feats: []
+    usage: per-day
+  - name: Blood is Strong
+    _type: Spell 7
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  : Until the end of the battle, when the target hits with a melee
+        attack, you heal hit points equal to 1d10 + your Wisdom modifier.
+
+        9th level spell: You now heal hit points equal to 2d10 + double
+        your Wisdom modifier.
+    feats: []
+    usage: per-day
+  - name: Spirit Guardian
+    _type: Spell 9
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+      **Special Trigger**: You drop to 0 hp or below while your animal
+        companion is nearby and still above 0 hp.
+      **Effect:** Your spirit trades places with the spirit of your animal
+        companion. You now occupy the body of your animal
+        companion, using its current hit points, defenses, and attacks
+        (and the effects of any spells cast upon it earlier).
+
+        You can’t cast spells or use your normal humanoid powers
+        and class features while in your companion’s body. You can
+        either keep fighting as your animal companion or you can roll
+        a normal save as a quick action once during each of your turns;
+        if you succeed, your body and your animal companion’s body
+        swap places while your spirits return to their proper bodies.
+        You keep the hit points of the animal companion before you
+        rolled the save, but can heal using a recovery when the swap is
+        complete, if you wish. Returning to your own partially-healed
+        body thanks to the successful save ends the spell’s effect.
+
+        While your animal companion is in your body, it can roll
+        death saves and be healed. If it becomes conscious it can attack
+        using its basic melee attacks, but it doesn’t have access to any
+        of your spells or powers. Any failed death saves remain with
+        the spirit that failed them, not the body.
+    feats: []
+    usage: per-day
+# BEGIN DATP ABILITIES
+  - name: Animal Companion Feats (DATP)
+    source: DATP
+    description: 
+    feats:
+      - tier: adventurer
+        description:  |
+            If you have any of the Ranger talents in the following list, you share their benefits with your animal companion: (Core Book) Favored Enemy, First Strike, Lethal Hunter; (DATP) Camouflage, Survivor.
+      - tier: champion
+        description: Your daily animal companion spells are Recharge 18+ after battle.
+  - name: Animated Plant
+    _type: Animal Companion
+    source: DATP
+    description: |-
+      **Acts:** After druid / ranger
+  
+      **Advantage:**  With a successful easy difficulty skill check (using your ability scores and backgrounds), your companion can disguise itself as a mundane plant. It is also _vulnerable to fire_.
+    feats:
+    - tier: adventurer
+      description: ' On a natural even hit with a melee attack, your companion gives
+        enemies disadvantage on checks to disengage from it until the end of your next
+        turn.'
+  - name: Faerie Spirit
+    _type: Animal Companion
+    source: DATP
+    description: |-
+      **Acts:** Before druid / ranger
+  
+      **Advantage:**  Once per battle, your companion can teleport to a nearby location it can see as a move action.
+    feats: []
+  - name: Giant Toad
+    _type: Animal Companion
+    source: DATP
+    description: |-
+      **Acts:** After druid / ranger
+  
+      **Advantage:**  Your companion can use its tongue to make melee attacks against nearby enemies it is not engaged with. The attack deals normal damage, and on a natural even hit, the target is forced to pop free and engage the toad.
+    feats: []
+  - name: Hellcat (also Hellhound)
+    _type: Animal Companion
+    source: DATP
+    description: |-
+      **Acts:** Before druid / ranger
+  
+      **Advantage:**  On a natural attack roll of 18+, your companion does 1d6 per level extra fire damage to the target.
+    feats: []
+  - name: Shadow Beast
+    _type: Animal Companion
+    source: DATP
+    description: |-
+      **Acts:** Before druid / ranger
+  
+      **Advantage:**  The companion gains _resist negative energy_ 12+, and a +2 bonus to skill checks to hide in dimly lit areas.
+    feats: []
+  - name: Shocker Lizard
+    _type: Animal Companion
+    source: DATP
+    description: |-
+      **Acts:** Before druid / ranger
+  
+      **Advantage:**  The first time your companion hits an enemy in a battle, it deals 1d10 extra lightning damage (2d10 at 5th level; 4d10 at 8th).
+    feats: []
+  - name: Skeletal Animal
+    _type: Animal Companion
+    source: DATP
+    description: |-
+      **Acts:** After druid / ranger
+  
+      **Advantage:**  Your companion gains _resist weapons_ 12+, but it is also _vulnerable to holy damage_.
+    feats:
+    - tier: champion
+      description: ' Increase the resistance to 16+.'
+  - name: Small Rock Elemental
+    _type: Animal Companion
+    source: DATP
+    description: |-
+      **Acts:** After druid / ranger
+  
+      **Advantage:**  Reduce all damage your animal companion takes by half your level (round up).
+    feats:
+    - tier: adventurer
+      description: ' Increase the damage reduction to equal to your level.'
+  - name: Unicorn
+    _type: Animal Companion
+    source: DATP
+    description: |-
+      **Acts:** After druid / ranger
+  
+      **Advantage:**  Once per battle, the unicorn can let an adjacent ally use a recovery to heal as a quick action.
+  - name: Animal Friends
+    _type: Talent
+    source: DATP
+    description: |-
+      _You have a strong connection to all of nature’s creatures, and feel more comfortable around them than the so-called civilized races. The beasts of the surrounding lands flock towards you. Birds, rodents, butterflies, cats and even wild boars provide you with ample company._
+  
+      If you are a ranger, you gain the druid’s Nature Talking class feature. If you are a druid, reduce the difficulty of skill checks to talk to animals from hard to normal (DC 15 at adventurer tier).
+  
+      You gain 3 points towards a background that represents small creatures coming to your aid. They can help you find food, lead the way to a location they know, warn you of impending danger, or even perform small tricks. They can even distract your enemies with the Tiny Claws power below.
+    feats:
+    - tier: adventurer
+      description: ' You can reroll a natural even failure on a skill check related
+        to animals once. This includes Mounted Combat checks (see 13th Age Monthly,
+        Mounted Combat).'
+  - name: Tiny Claws
+    _type: Bonus Power
+    source: DATP
+    description: |-
+      Close-quarters power; Once per battle; Quick action
+  
+      ---
+  
+  
+      **Target:**  One nearby enemy
+  
+      **Attack:**  Wisdom + level vs. PD
+  
+      **Natural even hit:**  The target is hampered until the end of your next turn.
+  
+      **Natural odd hit:**  The target is dazed until the end of your next turn.
+  
+      **Miss:**  —
+    feats:
+    - tier: champion
+      description: ' Deal 1d4 times your level damage on a hit.'
+    usage: per-battle
+  - name: Awakened Companion
+    _type: Talent
+    source: DATP
+    description: |-
+      _Your companion has been granted intelligence by druidic magic._
+  
+      Your companion can speak, and it has the mind of a humanoid child. This makes your companion much smarter at mundane tasks and combat tactics. It also gains a +2 bonus to MD.
+    feats:
+    - tier: adventurer
+      description: ' Your companion gains a fighter maneuver of its level (minimum 1).'
+    - tier: champion
+      description: ' Whenever you are the target of a spell or effect, and your companion
+        is nearby, you can choose to extend the effect to your companion for free. (Note
+        that companions already have the ability to heal for free when you use a recovery
+        while they are adjacent. You can use either that ability or this feat, but not
+        both for the same healing spell.)'
+    - tier: epic
+      description: ' Both you and your companion have a +1 bonus to saves, including
+        death saves, while the other is nearby.'
+  - name: Defensive Instinct
+    _type: Talent
+    source: DATP
+    description: |-
+      _The sharpened senses of your companion let it dodge out of harm’s way._
+  
+      Your companion gains a +1 bonus to AC and PD.
+    feats:
+    - tier: adventurer
+      description: ' Once per battle, when your companion takes damage, it can halve
+        that damage as a free action.'
+    - tier: champion
+      description: ' When you are next to your companion, you gain a +1 bonus to AC
+        and PD.'
+    - tier: epic
+      description: ' Once per battle, your companion can make a melee attack as an interrupt
+        action against an enemy it is engaged with that makes an attack against you
+        or an ally.'
+  - name: Dire Animal Companion
+    _type: Talent
+    source: DATP
+    description: |-
+      _The beasts you call as your companions are larger and more savage than the usual animals of its type._
+  
+      Whenever you call a new companion, roll 1d6 on the dire animal table (_Core Book_ p. 206). Your companion gains that feature.
+  
+      Your companion’s size increases to large, and you can ride it.
+    feats:
+    - tier: adventurer
+      description: ' Your companions hit points increase as if it was one level higher.
+        (For each increase beyond level 10, add 50 hp.)'
+    - tier: champion
+      description: ' After rolling the random feature, gain a second one of your choice.'
+  - name: Draconic Companion
+    _type: Talent
+    source: DATP
+    description: |
+      _Some adventurous young dragons join a party in the search for riches to start off their hoard._
+  
+      Your companion is a small dragon, or a beast with draconic blood. It is smarter than the average companion and can speak, but that also makes it more independent. In addition, if you are an initiate, choose one ability from the list below. As an adept or master, choose two. 
+  
+      - It can fly and hover (without this, it can only make short hops and glide).
+      - It gains a breath weapon spell from the sorcerer list as a bonus power, at two levels below its level (minimum 1). It uses its standard attack bonus to attack with the spell. If you choose this twice, gain the spell at the companion’s level.
+      - It gains _resist element _12+ (choose acid, cold, fire, lightning, poison or thunder). If you choose this ability twice, increase the bonus to 15+. If you choose it three times, increase it to 18+.
+      - Roll 1d8 to give the companion a random dragon ability. See the table on Core Book p. 217. If you choose this twice, roll 1d8 twice and gain both abilities OR roll 1d12 instead.
+      - It can use up to three magic items and activate their powers, which don’t count against your level limit.
+    feats:
+    - tier: adventurer
+      description: ' Gain an additional ability.'
+    - tier: champion
+      description: ' Gain an additional ability.'
+    - tier: epic
+      description: ' Gain an additional ability.'
+  - name: Ferocity
+    _type: Talent
+    source: DATP
+    description: |-
+      _Sharper teeth equal harder bite._
+  
+      Increase your animal companion‘s damage die by one size (d6s to d8s, d8s to d10s).
+    feats:
+    - tier: adventurer
+      description: ' If both you and the companion are engaged with an enemy, it is
+        vulnerable to your companion’s attacks.'
+    - tier: champion
+      description: ' Your companion has a +1 bonus to attack against staggered enemies.'
+  - name: Spirit Companion
+    _type: Talent
+    source: DATP
+    description: |
+      _Your animal companion is not a living animal, it only exists in the spirit realm._
+  
+      As a spirit creature, your companion deals either negative energy or holy damage. You can call it to manifest at your side as a quick action (if it is available this battle). In addition, it gains a number of abilities from the list below, depending on your level of mastery in the circle. Choose one as an initiate, two as an adept and three as a master.
+  
+      - It gains _resist physical damage_ 12+ and Spirit Ward as a bonus spell.
+      - The first time in a battle when your companion is reduced below 0 hp by an attack, it can make a hard save (16+) to negate the damage of that attack.
+      - It can fly and hover.
+      - If your animal companion is killed in battle, roll a d12 at the start of each turn. If the result is equal to the escalation die or lower, your companion rejoins the battle at half his or her total hit points.
+      - It gains Creepy Howl as a bonus spell.
+    feats:
+    - tier: adventurer
+      description: ' Gain an additional ability.'
+    - tier: champion
+      description: ' Gain an additional ability.'
+    - tier: epic
+      description: ' Gain an additional ability.'
+  - name: Spirit Ward
+    _type: Bonus Power
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Special:**  The escalation die must be 2+ to cast this spell.
+  
+      **Effect:**  Until the end of the battle, you have _resist physical damage_ 12+, like your companion.
+    feats: []
+    usage: per-day
+  - name: Creepy Howl
+    _type: Bonus Power
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Special:**  The escalation die must be 2+ to cast this spell.
+  
+      **Target:**  All nearby enemies with fewer current hp than your companion’s maximum hp
+  
+      **Attack:**  Wisdom + Level vs. the highest MD among the targets
+  
+      **Hit:**  All targets are affected by fear (-4 to attacks and can’t benefit from the escalation die; save ends).
+  
+      **Miss:**  —
+    feats: []
+    usage: per-day       
+  - name: Borrow Senses
+    _type: Spell 1
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily
+  
+      ---
+  
+  
+      **Target:**  One animal companion you touch
+  
+      **Effect:**  Until the end of the scene, you can use the companion’s senses as if they were your own, as long as it stays within about a mile distance. You can still use your own senses while doing so.
+  
+      7th level spell: You perceive the presence of the supernatural, such as lingering magic, invisible creatures or gateways to other planes.
+    feats: []
+    usage: per-day
+  - name: Thicker Leather
+    _type: Spell 3
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  Until the end of the battle, your animal companion gains a +2 bonus to AC.
+  
+      5th level spell: It also gains the bonus to PD.
+  
+      7th level spell: Convert critical hits against the target into normal hits.
+    feats: []
+    usage: per-day
+  - name: Protective Pounce
+    _type: Spell 5
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Interrupt action
+  
+      ---
+  
+  
+      **Trigger:**  An enemy targets you with a melee attack
+  
+      **Target:**  One nearby animal companion
+  
+      **Effect:**  Your companion pops free, engages the attacker and makes a melee attack against them. If the companion’s attack hits, your attacker has disadvantage on their attack roll.
+    feats: []
+    usage: per-day
+  - name: Call Companion
+    _type: Spell 7
+    source: DATP
+    description: |-
+      Close-quarters spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  Your current animal companion, regardless of where it is
+  
+      **Effect:**  Your companion appears at your side.
+    feats: []
+    usage: per-day
+  - name: Blink
+    _type: Spell 9
+    source: DATP
+    description: |-
+      Ranged spell; Daily; Quick action
+  
+      ---
+  
+  
+      **Target:**  A nearby animal companion
+  
+      **Effect:**  Until the end of the battle, your animal companion can teleport to a nearby location once per round as a free action. If it teleports when it is attacked, it rolls a save. On a success, the attack has no effect.
+    feats: []
+    usage: per-day
+# END DATP ABILITIES
+---
+
+The following rules apply to both the Ranger (_13th Age_) and the Druid (_13 True Ways_) with the corresponding talent.
+
+<If version="Core Book">
+_The Core Book version of this talent takes two talent slots.<br/> If you want to invest one or three talents in your companion, check other versions of this talent._
+</If>
+
+## Overview
+You have a devoted animal companion who fights alongside you like a member of your adventuring party.
+
+### Stats &amp; Levels
+
+Each animal companion has roughly the same base stats, as listed in the level progression table below.  On top of the base stats, each type of animal has a zoologically appropriate power or advantage.
+
+Your animal companion is always one level lower than you.
+As a 1st level ranger, you'll have a level 0 animal companion.
+Once you gain a level, your animal companion rises to 1st level.
+
+
+### Recoveries
+
+<If version="13 True Ways|Dark Alleys & Twisted Paths">
+Add two recoveries to your total recoveries, or only one recovery if you are an initiate. You can use a recovery on yourself or your animal companion.
+</If>
+<If version="Core Book">
+Add two recoveries to your total recoveries. You can use a recovery on yourself or your animal companion.
+</If>
+
+### Actions
+
+Your animal companion acts on your initiative turn, either immediately before or after you, depending on the animal type.
+
+Your animal companion moves gets a move action and a standard action, but not a quick action.
+
+If you have powers that care about the 'first time you attack an enemy,' an attack by your animal companion counts as your attack.
+
+## Level Progression
+
+Use the following stats as the baseline for your animal companion. Remember that your companion stays a level lower than you.
+Generally your companion's Physical Defense should be higher than its Mental Defense, but you could flip that if you have a good explanation.
+
+| Level | Attack     | Damage | AC  | PD (or MD) | MD (or PD) | HP        |
+| ----- | ---------- | ------ | --- | ---------- | ---------- | --------- |
+| 0     | +5 vs. AC  | d8     | 16  | 14         | 10         | 20 (10)   |
+| 1     | +6 vs. AC  | d10    | 17  | 15         | 11         | 27 (13)   |
+| 2     | +7 vs. AC  | 2d6    | 18  | 16         | 12         | 36 (18)   |
+| 3     | +9 vs. AC  | 3d6    | 19  | 17         | 13         | 45 (22)   |
+| 4     | +10 vs. AC | 4d6    | 21  | 19         | 15         | 54 (27)   |
+| 5     | +11 vs. AC | 5d6    | 22  | 20         | 16         | 72 (36)   |
+| 6     | +13 vs. AC | 6d6    | 23  | 21         | 17         | 90 (45)   |
+| 7     | +14 vs. AC | 7d6    | 25  | 23         | 19         | 108 (54)  |
+| 8     | +15 vs. AC | 8d6    | 26  | 24         | 20         | 144 (72)  |
+| 9     | +17 vs. AC | 9d6    | 27  | 25         | 21         | 180 (90)  |
+| 10    | +18 vs. AC | 10d6   | 28  | 26         | 22         | 216 (108) |
+
+
+<If version="Dark Alleys & Twisted Paths">
+## Initiate, Adept and Master
+
+In _Dark Alleys & Twisted Paths_, druids and rangers
+share the Circle of the Fang as a talent group.
+By picking one, two or three talents from that group, you become
+an Initiate, Adept and Master respectively.
+
+_The Druid's spell progression does not apply to this circle!_
+
+</If>
+
+<If version="13 True Ways|Dark Alleys & Twisted Paths">
+## Animal Companion Initiate
+If you invest a single talent into Animal Companion, you have an
+animal companion that **can only fight by your side every other battle**.
+
+### Calling your companion
+ You can choose whether or not
+you want your animal companion to take part in a battle when
+you roll initiative.
+If you don’t include your companion in a battle and later
+wish to do so, you can call your companion with a quick action.
+At the start of your next turn, your companion either turns up
+at your side, or runs in from some offstage angle if you have a
+convincing story for why it wasn’t alongside you to begin with.
+
+Once you’ve called your animal
+companion to fight alongside you in a battle, it’s not available for
+the next battle after that. Unlike most all our other powers, this
+limitation applies between full heal-ups, between adventures,
+and even between gaining levels. Consequently, it’s entirely
+possible that you may decide to have your animal companion
+miss two battles in a row.
+
+### Roleplaying the story
+What is your animal companion doing
+when it’s not fighting alongside you? That’s partly up to you. It
+could be that your companion likes to roam, hunting on its own,
+doing its own wild-nature thing until you need it. Or you could
+handle the companion more like some wizard familiars or party
+members who should be present but happen to have stepped out
+of the room or missed a session—the animal companion could
+be around, it’s just not playing a meaningful role in combat every
+battle. Therefore if you wish, you can interact with your animal
+companion in roleplaying terms whenever you like, even during
+battles that it’s not technically fighting in.
+
+### Death rules
+If your animal companion
+dies, it’s gone for that battle. You can summon another animal
+companion to the next battle it’s eligible to fight in, or perhaps
+explain how druidic magic returns your original companion to
+life, but that new/returned companion will be one level lower
+than normal (two levels lower than you, in other words) for that
+battle. After that battle, your animal companion returns to its
+normal level (generally one level below you).
+
+## Animal Companion Adept
+If you invest two talents into Animal Companion, you get
+a companion that **fights at your side in every battle**, and you also gain a number
+of spells to help your animal companion fight better.
+
+_If you aren’t comfortable with your ranger
+casting spells, go ahead and reinterpret the spells as the results
+of training or inspiration rather than magic._
+
+| Character Level      | Daily Spells | Level the Spells are Cast At |
+|------------------|--------------|-----------------------------|
+| Level 1 Multiclass | 1          | 1st level                   |
+| Level 1          | 1            | 1st level                   |
+| Level 2          | 2            | 1st level                   |
+| Level 3          | 2            | 3rd level                   |
+| Level 4          | 2            | 3rd level                   |
+| Level 5          | 3            | 5th level                   |
+| Level 6          | 3            | 5th level                   |
+| Level 7          | 3            | 7th level                   |
+| Level 8          | 4            | 7th level                   |
+| Level 9          | 4            | 9th level                   |
+| Level 10         | 4            | 9th level                   |
+
+As usual, multiclass characters are one level behind on this table.
+<If version="Dark Alleys & Twisted Paths">
+## Animal Companion Master
+If you invest three talents into Animal Companion, you gain all the adept's benefits, and your companion is now the same level
+as your character level.
+
+## Animal Companion Talents
+<Vault.AbilityList abilities={props.getAbilitiesByTypes(["Talent","Bonus Power"])} />
+
+</If>
+
+## Multiple Companions
+Druids and rangers don’t necessarily
+have only one animal companion. They just have one companion
+at a time. Druids who also have the Terrain Caster talent are more
+likely to call on an animal companion that suits their current
+adventuring conditions. Depending on your character’s story,
+your animal companion may represent one faithful creature who
+sticks with you or a succession of wild beasts
+
+</If>
+
+## Animal Harm
+
+Your animal companion can be healed like an ally.
+If it gets healed without you being healed, it uses one of your recoveries. When you use a recovery while next to your animal companion (including being engaged with the same enemy), your animal companion is also healed using a free recovery.
+
+Instead of dying like a monster or NPC at 0 hp, your animal companion follows PC rules for falling unconscious at 0 hp and dying after four failed death saves or when its negative hit points equal half its normal hit points.
+If your animal companion dies, you can summon another one.
+If you're still on the same adventure, you can call a new animal companion the next day, but it will be one level lower than an animal companion would normally be.
+At the start of a new adventure, or when you gain a level, bump the companion up to its proper level.
+
+
+## Companion Species
+
+Each type of animal companion is a little different.
+
+<Vault.AbilityList
+  abilities={props.getAbilitiesByType("Animal Companion")}
+/>
+
+## Feats
+
+<Vault.AbilityList abilities={props.getAbilities(["Animal Companion Feats"])} />
+<Vault.AbilityList abilities={props.getAbilities(["Animal Companion Feats (DATP)"])} />
+
+<If version="13 True Ways|Dark Alleys & Twisted Paths">
+## Animal Companion Spells
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 1")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 3")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 5")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 7")} />
+<Vault.AbilityList abilities={props.getAbilitiesByType("Spell 9")} />
+</If>
