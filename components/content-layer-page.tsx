@@ -31,7 +31,6 @@ export default function ContentLayerPage({
   const Content = useMDXComponent(data.body.code);
   const pageDress = get(data, "page_dress");
   const locale = get(data, "locale", defaultLocale);
-  const quote = get(pageDress, "quote");
   const title = `${primaryLabel} - 13 Vaults`;
   const sections = get(data, "sections", []);
   const lead = get(pageDress, "lead");
@@ -89,14 +88,6 @@ export default function ContentLayerPage({
             primaryLabel={primaryLabel}
             secondaryLabel={secondaryLabel}
           />
-          {quote ? (
-            <figure>
-              <blockquote>
-                <p>{quote.text}</p>
-              </blockquote>
-              <figcaption>&ndash; {quote.cite}</figcaption>
-            </figure>
-          ) : null}
           {pageDress ? (
             <hr className="my-8 border-stone-300 dark:border-stone-700" />
           ) : null}

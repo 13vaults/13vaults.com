@@ -1,10 +1,8 @@
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
-import Link from "next/link";
 import heroImage from "@/public/images/camelot-spire-butteredbap.webp";
 import Container from "./container";
 import VaultsLogo from "./vaults-logo";
-import Button from "./button";
 import HomeHeroNavSection from "./home-hero-nav-section";
 
 export default function HomeHeroSection() {
