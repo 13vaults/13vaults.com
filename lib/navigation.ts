@@ -98,16 +98,6 @@ export function buildNav({
     ],
     pages: [
       {
-        labelKey: "blog-label",
-        href: "/blog",
-      },
-      {
-        labelKey: "guides-label",
-      },
-      {
-        labelKey: "encounter-builder-label",
-      },
-      {
         labelKey: "battle-calculator-label",
         href: `/calculator`,
       },

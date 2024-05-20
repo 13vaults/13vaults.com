@@ -13,7 +13,6 @@ import Head from "next/head";
 import { defaultLocale } from "@/lib/locales";
 import { useRouter } from "next/router";
 import { getI18nProperties } from "@/lib/get-static";
-import HomeNewsSection from "@/components/home-news-section";
 import { PickPartial } from "@/utils";
 import HomeHeroSection from "@/components/home-hero-section";
 import HomeHeroNavSection from "@/components/home-hero-nav-section";
@@ -72,8 +71,6 @@ export default function VaultsAppHome({
       </Head>
       <BasicLayout navigation={navigation}>
         <HomeHeroSection />
-        <HomeHeroNavSection />
-        <HomeNewsSection heroPost={heroPost} extraPosts={extraPosts} />
       </BasicLayout>
     </>
   );

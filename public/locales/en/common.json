@@ -99,7 +99,7 @@
   "compendium-label": "Compendium",
   "encounter-builder-label": "Encounter Builder",
   "footer": "Footer",
-  "footer.foss": "13Vaults.com is free and open source software (FOSS).<br /><github>The source code is available here.</github>",
+  "footer.foss": "<github>13Vaults.com is libre software.</github>",
   "footer.legal-link": "<legal>Legal</legal>",
   "footer.license-link": "<license>License</license>",
   "footer.mastodon-link": "<mastodon>Mastodon</mastodon>",

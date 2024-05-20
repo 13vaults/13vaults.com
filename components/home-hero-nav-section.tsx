@@ -6,22 +6,20 @@ import Container from "./container";
 
 const bottomNavItems = [
   {
-    title_label: "compendium",
-    classes:
-      "bg-teal-400/25 hover:bg-teal-400/50 border-teal-400/25 hover:border-teal-400/50",
-    large: true,
-    body_label: "compendium-body",
-    href: "/compendium/",
+    title_label: "character-creation",
+    href: "/compendium/basic-rules/character-creation",
   },
   {
-    title_label: "guides",
-    classes: "bg-blue-400/25 cursor-not-allowed border-blue-400/25",
-    body_label: "guides-body",
+    title_label: "rules",
+    href: "/compendium/basic-rules",
   },
   {
-    title_label: "encounter-builder",
-    classes: "bg-red-400/25 cursor-not-allowed border-red-400/25",
-    body_label: "encounter-builder-body",
+    title_label: "races",
+    href: "/compendium/races",
+  },
+  {
+    title_label: "classes",
+    href: "/compendium/classes",
   },
 ];
 
@@ -29,53 +27,29 @@ export default function HomeHeroNavSection() {
   const { t } = useTranslation("home");
 
   return (
-    <section className="bg-stone-950 text-white">
-      <Container>
-        <nav>
-          <ul role="list" className="grid grid-cols-1 md:grid-cols-2 gap-1 p-1">
-            {map(bottomNavItems, (item) => (
-              <li
-                key={item.title_label}
-                className={clsx({
-                  "md:col-span-2": item.large,
-                  "md:col-span-1": !item.large,
-                })}
-              >
-                {item.href ? (
-                  <Link
-                    className={clsx(
-                      item.classes,
-                      "grid place-content-center border h-40 text-center px-4 lg:px-8 transition-colors"
-                    )}
-                    href={item.href}
-                  >
-                    <h2 className="text-3xl font-display-serif font-semibold">
-                      {t(item.title_label)}
-                    </h2>
-                    <p className="leading-tight font-serif text-align-last-center font-medium text-white/75">
-                      {t(item.body_label)}
-                    </p>
-                  </Link>
-                ) : (
-                  <div
-                    className={clsx(
-                      item.classes,
-                      "grid place-content-center border h-40 text-center px-4 lg:px-8 opacity-30 transition-colors"
-                    )}
-                  >
-                    <h2 className="text-3xl font-display-serif font-semibold">
-                      {t(item.title_label)}
-                    </h2>
-                    <p className="leading-tight font-serif text-align-last-center font-medium text-white/75">
-                      {t(item.body_label)}
-                    </p>
-                  </div>
+    <Container>
+      <nav>
+        <ul
+          role="list"
+          className="grid grid-cols-1 xl:grid-cols-4 gap-4 xl:px-24 text-white"
+        >
+          {map(bottomNavItems, (item) => (
+            <li key={item.title_label}>
+              <Link
+                className={clsx(
+                  "bg-black/25 rounded bg-gradient-to-t from-black/50 to-black/0 outline outline-1 outline-white/5 hover:outline-white/10 transition-colors hover:bg-black/75 focus:outline-white border-0 focus:border focus:border-black border-transparent",
+                  "group grid place-content-center xl:h-96 h-24 text-center px-4 transition-colors"
                 )}
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </Container>
-    </section>
+                href={item.href}
+              >
+                <h2 className="text-3xl font-display-serif font-semibold group-hover:text-white group-focus:text-white text-stone-50/90 transition-colors">
+                  {t(item.title_label)}
+                </h2>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </Container>
   );
 }
