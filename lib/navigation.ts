@@ -99,7 +99,11 @@ export function buildNav({
     pages: [
       {
         labelKey: "battle-calculator-label",
-        href: `/calculator`,
+        href: "/calculator",
+      },
+      {
+        labelKey: "nav.discord-server",
+        href: "https://discord.gg/m9DbPC6RsC",
       },
     ],
   };

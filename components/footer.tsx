@@ -35,6 +35,10 @@ export default function Footer() {
           name: t("nav.buy-13th-age-label"),
           href: "https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/",
         },
+        {
+          name: t("nav.discord-server"),
+          href: "https://discord.gg/m9DbPC6RsC",
+        },
       ],
       vaults: [
         { name: t("nav.13vaults.contact"), href: "mailto:admin@13vaults.com" },
