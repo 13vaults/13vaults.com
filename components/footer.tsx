@@ -31,7 +31,10 @@ export default function Footer() {
       ],
       resources: [
         { name: t("nav.resources.battle-calculator"), href: "/calculator" },
-        { name: t("nav.buy-13th-age-label"), href: "/calculator" },
+        {
+          name: t("nav.buy-13th-age-label"),
+          href: "https://pelgranepress.com/product-category/d20-games/archmage-engine/13th-age/",
+        },
       ],
       vaults: [
         { name: t("nav.13vaults.contact"), href: "mailto:admin@13vaults.com" },
