@@ -9,6 +9,7 @@ export default function EncounterCalculator() {
   const [state, setState] = useState(() => ({
     partyLevel: 1,
     battleLevel: 1,
+    recommendedBattleLevel: 1,
   }));
 
   const { t } = useTranslation("calculator");
@@ -83,6 +84,7 @@ export default function EncounterCalculator() {
                   return setState({
                     ...state,
                     partyLevel,
+                    recommendedBattleLevel: battleLevel,
                     battleLevel,
                   })
                 }}
@@ -94,6 +96,7 @@ export default function EncounterCalculator() {
                 <label htmlFor="battle-level">
                   {t("form-battle-level", {
                     level: state.battleLevel,
+                    recommendedBattleLevel: state.recommendedBattleLevel,
                   })}
                 </label>
               </p>
