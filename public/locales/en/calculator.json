@@ -2,7 +2,7 @@
   "title": "Battle Budget Calculator",
   "encounter-rules-info": "<rules-link>Rules for building encounters can be found here.</rules-link>",
   "form-party-level": "Party Level: {{level}}",
-  "form-battle-level": "Battle Level: {{level}}",
+  "form-battle-level": "Battle Level: {{level}} (recommended: {{recommendedBattleLevel}})",
   "form-daily-battles-label": "Battles before Full Heal-up: {{battles}}",
   "budget-header": "Monster Budget",
   "budget-players-header": "Party Size",
@@ -14,10 +14,9 @@
   "budgetresult_one": "{{count}} Monster Equivalent",
   "budgetresult_other": "{{count}} Monster Equivalents",
   "monsterlevel": "Monster level",
-  "standard": "Standard / {{mooks}} mooks",
-  "elite": "Elite / {{mooks}} mooks",
-  "large": "2x / large / {{mooks}} mooks",
-  "huge": "3x / huge / {{mooks}} mooks",
-  "footnote1": "* Be careful. A monster like this might pack an uncomfortable amount of damage into a single swing.",
-  "footnote2": "** Probably a mistake to build a battle around monsters that dish out damage like these do."
+  "standard": "1 Standard or {{mooks}} Mooks",
+  "elite": "1 Elite or {{mooks}} Mooks",
+  "large": "1 Double-Strength or {{mooks}} Mooks",
+  "huge": "1 Triple-Strength or {{mooks}} Mooks",
+  "footnote1": "* Monsters that are higher level than the party can be too dangerous, especially when they are elite strength or greater."
 }
