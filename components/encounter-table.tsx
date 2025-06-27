@@ -3,18 +3,11 @@ import { Trans, useTranslation } from "next-i18next";
 import Link from "next/link";
 
 interface EncounterTableP {
-  battleCount: number;
-  level: number;
+  battleLevel: number;
 }
 export default function EncounterTable({
-  level,
-  battleCount: battlecount,
+  battleLevel = 1,
 }: EncounterTableP) {
-  let battleLevel = level
-  if (level >= 5) battleLevel++
-  if (level >= 8) battleLevel++
-  if (battlecount === 3) battleLevel++
-
   const { t } = useTranslation("calculator");
 
   return (

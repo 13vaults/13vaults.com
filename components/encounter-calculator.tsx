@@ -7,13 +7,11 @@ import Link from "next/link";
 
 export default function EncounterCalculator() {
   const [state, setState] = useState(() => ({
-    playerCount: 4,
-    battleCount: 4,
-    level: 1,
+    partyLevel: 1,
+    battleLevel: 1,
   }));
 
   const { t } = useTranslation("calculator");
-  const meqBudget = [0, 1, 2, 3, 5, 7, 9, 11][state.playerCount];
 
   return (
     <div className="p-4 lg:p-8">
@@ -64,11 +62,11 @@ export default function EncounterCalculator() {
           </div>
 
           <h3>{t("table-header")}</h3>
-          <div className="p-4 bg-stone-50 dark:bg-stone-800 dark:text-stone-50 shadow rounded flex flex-col md:flex-row gap-4 justify-between" style={{ marginTop: "1rem" }}>
+          <div className="p-4 bg-stone-50 dark:bg-stone-800 dark:text-stone-50 shadow rounded flex flex-col gap-4 justify-between" style={{ marginTop: "1rem" }}>
             <div className="flex flex-col flex-1">
               <p>
                 <label htmlFor="level">
-                  {t("form-level-label", { level: state.level })}
+                  {t("form-party-level", { level: state.partyLevel })}
                 </label>
               </p>
               <input
@@ -76,34 +74,39 @@ export default function EncounterCalculator() {
                 type="range"
                 min="1"
                 max="10"
-                value={state.level}
-                onChange={(event) =>
-                  setState({
+                value={state.partyLevel}
+                onChange={(event) =>{
+                  const partyLevel = Number.parseInt(event.target.value);
+                  let battleLevel = partyLevel;
+                  if (partyLevel >= 5) battleLevel++;
+                  if (partyLevel >= 8) battleLevel++;
+                  return setState({
                     ...state,
-                    level: Number.parseInt(event.target.value),
+                    partyLevel,
+                    battleLevel,
                   })
-                }
+                }}
               />
             </div>
 
             <div className="flex flex-col flex-1">
               <p>
-                <label htmlFor="battle-count">
-                  {t("form-daily-battles-label", {
-                    battles: state.battleCount,
+                <label htmlFor="battle-level">
+                  {t("form-battle-level", {
+                    level: state.battleLevel,
                   })}
                 </label>
               </p>
               <input
-                id="battle-count"
+                id="battle-level"
                 type="range"
-                min="3"
-                max="4"
-                value={state.battleCount}
+                min="1"
+                max="14"
+                value={state.battleLevel}
                 onChange={(event) =>
                   setState({
                     ...state,
-                    battleCount: Number.parseInt(event.target.value),
+                    battleLevel: Number.parseInt(event.target.value),
                   })
                 }
               />
@@ -111,8 +114,7 @@ export default function EncounterCalculator() {
           </div>
 
           <EncounterTable
-            battleCount={state.battleCount}
-            level={state.level}
+            battleLevel={state.battleLevel}
           />
         </Prose>
       </Container>

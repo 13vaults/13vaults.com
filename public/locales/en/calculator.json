@@ -1,7 +1,8 @@
 {
   "title": "Battle Budget Calculator",
   "encounter-rules-info": "<rules-link>Rules for building encounters can be found here.</rules-link>",
-  "form-level-label": "Party Level: {{level}}",
+  "form-party-level": "Party Level: {{level}}",
+  "form-battle-level": "Battle Level: {{level}}",
   "form-daily-battles-label": "Battles before Full Heal-up: {{battles}}",
   "budget-header": "Monster Budget",
   "budget-players-header": "Party Size",
