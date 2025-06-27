@@ -3,16 +3,13 @@ import { Trans, useTranslation } from "next-i18next";
 import Link from "next/link";
 
 interface EncounterTableP {
-  playerCount: number;
   battleCount: number;
   level: number;
 }
 export default function EncounterTable({
-  playerCount,
   level,
   battleCount: battlecount,
 }: EncounterTableP) {
-  const meqBudget = [0, 1, 2, 3, 5, 7, 9, 11][playerCount];
   let battleLevel = level
   if (level >= 5) battleLevel++
   if (level >= 8) battleLevel++
@@ -22,21 +19,6 @@ export default function EncounterTable({
 
   return (
     <>
-      <p>
-        <Trans
-          t={t}
-          i18nKey="encounter-rules-info"
-          components={{
-            "rules-link": (
-              <Link href="/compendium/basic-rules/running-the-game" />
-            ),
-          }}
-        />
-      </p>
-      <p>
-        {t("budget")} <strong>{t("budgetresult", { count: meqBudget })}</strong>
-      </p>
-
       <div className="overflow-auto w-min max-w-full border dark:border-stone-700 rounded shadow bg-white dark:bg-stone-700 border-stone-300 my-2">
         <table>
           <thead>
