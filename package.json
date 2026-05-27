@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"private": true,
 	"packageManager": "pnpm@11.3.0",
+	"engines": {
+		"node": "^26.2"
+	},
 	"scripts": {
 		"dev": "concurrently 'pnpm:dev:*'",
 		"dev:next": "next dev",
