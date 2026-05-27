@@ -1,0 +1,7 @@
+allowBuilds:
+  contentlayer: true
+  core-js: false
+  core-js-pure: false
+  esbuild: false
+  protobufjs: false
+  sharp: false
